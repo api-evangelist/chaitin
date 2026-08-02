@@ -1,0 +1,168 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account system/serverhostconfig/retrieve API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: system/serverhostconfig/retrieve
+  description: 系统配置/服务主机配置/获取
+paths:
+  /system/serverhostconfig/retrieve:
+    post:
+      summary: 查看server地址配置
+      deprecated: false
+      description: ''
+      tags:
+      - system/serverhostconfig/retrieve
+      parameters:
+      - name: priority
+        in: header
+        description: ''
+        required: true
+        example: u=1, i
+        schema:
+          type: string
+      - name: x-cs-header-app
+        in: header
+        description: ''
+        required: true
+        example: qzh
+        schema:
+          type: string
+      - name: x-cs-header-company
+        in: header
+        description: ''
+        required: true
+        example: eeff7c64-5070-4582-8b93-fbcc57db7771
+        schema:
+          type: string
+      - name: x-cs-header-module
+        in: header
+        description: ''
+        required: true
+        example: safety-protect/browser-control/browser-plugin
+        schema:
+          type: string
+      - name: x-cs-header-timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Cookie
+        in: header
+        description: ''
+        required: true
+        example: csrftoken=Pi942VNEP2gusnNinEyv8l3zJlRFnbNp; sid=Fe26.2**4cae0757e52359f1a17e8eb23b1b34c467e927a62a74bee3d61132d876295583*YMOJlirdWSIcliJK9ImtMg*YM5eBt0W6Qs6uQadWaNQ3Q7MMuHmHfIvX47xZ2ohe0RIJKlJZ05LqcsGP3gfxOBZ4JATFrCah4INz4z8PW6-kg4WMdd8lubcER5F3ADRc3DzMYDLrwTi9eHDuyEK3dIoEqIyC36zNOIX7vSbQTJoieflKQNPDHTA-kNHmOy1r8LG-C0Rim8xLkpcXhWMuY5_t76VCVYMRtoi5Z2_-mYX0UkINpRF7m34YdftRiwHRC8**087610b7d1e93e639f44aab457e97b074d7dbf303dfe557d6d9ba83b7a95ab73*5Ugwia8-iEOGhuUyG4pdF_MLVsTnHz86vMrv4F3HAL4
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      addresses:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            port:
+                              type: integer
+                            host:
+                              type: string
+                            is_active:
+                              type: boolean
+                            scheme:
+                              type: string
+                          required:
+                          - port
+                          - host
+                          - is_active
+                          - scheme
+                    required:
+                    - addresses
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  addresses:
+                  - port: 8443
+                    host: example.com
+                    is_active: true
+                    scheme: https
+                  - port: 823380
+                    host: test.example.com
+                    is_active: false
+                    scheme: http
+      security: []

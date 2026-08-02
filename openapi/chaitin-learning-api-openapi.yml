@@ -1,0 +1,121 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account learning API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: learning
+paths:
+  /api/UserModelAPI:
+    get:
+      operationId: UserModelAPI_get
+      summary: GET /api/UserModelAPI
+      tags:
+      - learning
+      parameters:
+      - name: id
+        in: query
+        required: true
+        description: ID
+        schema:
+          type: integer
+          description: ID
+      x-cli-body-fallback: false
+    put:
+      operationId: UserModelAPI_put
+      summary: PUT /api/UserModelAPI
+      tags:
+      - learning
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                strategy_id:
+                  type: integer
+                status:
+                  type: string
+              required:
+              - strategy_id
+              - status
+    delete:
+      operationId: UserModelAPI_delete
+      summary: DELETE /api/UserModelAPI
+      tags:
+      - learning
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                strategy_id:
+                  type: integer
+              required:
+              - strategy_id
+  /api/UserModelStrategyAPI:
+    post:
+      operationId: UserModelStrategyAPI_post
+      summary: POST /api/UserModelStrategyAPI
+      tags:
+      - learning
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                start_time:
+                  type: string
+                end_time:
+                  type: string
+              required:
+              - start_time
+              - end_time
+    put:
+      operationId: UserModelStrategyAPI_put
+      summary: PUT /api/UserModelStrategyAPI
+      tags:
+      - learning
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sites:
+                  type: string
+              required:
+              - sites
+    delete:
+      operationId: UserModelStrategyAPI_delete
+      summary: DELETE /api/UserModelStrategyAPI
+      tags:
+      - learning
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: ID
+              required:
+              - id

@@ -1,0 +1,720 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policylog/channel/{policylog_id}/detail API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policylog/channel/{policylog_id}/detail
+  description: 日志中心/通道/policylog_id 参数/详情
+paths:
+  /policylog/channel/{policylog_id}/detail:
+    post:
+      summary: 渠道管控详情
+      deprecated: false
+      description: ''
+      tags:
+      - policylog/channel/{policylog_id}/detail
+      parameters:
+      - name: policylog_id
+        in: path
+        description: ''
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: page
+        in: query
+        description: ''
+        required: true
+        example: '1'
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: ''
+        required: true
+        example: '10'
+        schema:
+          type: string
+      - name: search
+        in: query
+        description: ''
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      uid:
+                        type: string
+                      status:
+                        type: string
+                      comment:
+                        type: string
+                      created_timestamp:
+                        type: string
+                      expand:
+                        type: object
+                        properties:
+                          compressed_filenames:
+                            type: string
+                          dest:
+                            type: string
+                          file_source:
+                            type: string
+                          screen_recording:
+                            type: boolean
+                          screenshot:
+                            type: boolean
+                        required:
+                        - compressed_filenames
+                        - dest
+                        - file_source
+                        - screen_recording
+                        - screenshot
+                      category:
+                        type: string
+                      device_id:
+                        type: string
+                      device_code:
+                        type: string
+                      ip_address:
+                        type: string
+                      console_user:
+                        type: string
+                      os_name:
+                        type: string
+                      os_friendly_name:
+                        type: string
+                      staff_id:
+                        type: string
+                      staff_name:
+                        type: string
+                      staff_code:
+                        type: string
+                      staff_tag_ids:
+                        type: array
+                        items: {}
+                      staff_tags:
+                        type: array
+                        items: {}
+                      dept_ids:
+                        type: array
+                        items: {}
+                      dept_names:
+                        type: array
+                        items: {}
+                      dept_paths:
+                        type: array
+                        items: {}
+                      time:
+                        type: integer
+                      '@timestamp':
+                        type: integer
+                      timestamp:
+                        type: string
+                      agent_version:
+                        type: string
+                      event_id:
+                        type: string
+                      company_id:
+                        type: string
+                      policy_id:
+                        type: string
+                      policy_name:
+                        type: string
+                      policy_group_id:
+                        type: string
+                      policy_group_name:
+                        type: string
+                      risk_name:
+                        type: string
+                      risk_level:
+                        type: integer
+                      action:
+                        type: string
+                      is_blocked:
+                        type: boolean
+                      is_password_protected:
+                        type: boolean
+                      channel:
+                        type: string
+                      channel_name:
+                        type: string
+                      operation:
+                        type: string
+                      filename:
+                        type: string
+                      filepath:
+                        type: string
+                      filesize:
+                        type: integer
+                      md5_hash:
+                        type: string
+                      is_hidden:
+                        type: boolean
+                      is_compressed:
+                        type: boolean
+                      sha256_hash:
+                        type: string
+                      file_type:
+                        type: string
+                      file_suffix:
+                        type: string
+                      file_created_time:
+                        type: integer
+                      file_created_timestamp:
+                        type: string
+                      file_updated_time:
+                        type: integer
+                      file_updated_timestamp:
+                        type: string
+                      file_type_categories:
+                        type: array
+                        items:
+                          type: string
+                      file_description:
+                        type: string
+                      simhash_value:
+                        type: string
+                      file_policies:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            action:
+                              type: string
+                            classifications:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  data_level:
+                                    type: integer
+                                  data_level_name:
+                                    type: string
+                                  name:
+                                    type: string
+                                  uid:
+                                    type: string
+                            file_created_time:
+                              type: integer
+                            file_created_timestamp:
+                              type: string
+                            file_description:
+                              type: string
+                            file_suffix:
+                              type: string
+                            file_type:
+                              type: string
+                            file_type_categories:
+                              type: array
+                              items:
+                                type: string
+                            file_updated_time:
+                              type: integer
+                            file_updated_timestamp:
+                              type: string
+                            filename:
+                              type: string
+                            filepath:
+                              type: string
+                            filesize:
+                              type: integer
+                            is_compressed:
+                              type: boolean
+                            is_hidden:
+                              type: boolean
+                            is_password_protected:
+                              type: boolean
+                            md5_hash:
+                              type: string
+                            policy_group_id:
+                              type: string
+                            policy_group_name:
+                              type: string
+                            policy_id:
+                              type: string
+                            policy_name:
+                              type: string
+                            risk_level:
+                              type: integer
+                            risk_name:
+                              type: string
+                            action_display_name:
+                              type: string
+                      content_summary_list:
+                        type: array
+                        items: {}
+                      extract_file:
+                        type: boolean
+                      cl_id:
+                        type: string
+                      cl_name:
+                        type: string
+                      data_level:
+                        type: integer
+                      data_level_name:
+                        type: string
+                      cl_ids:
+                        type: array
+                        items:
+                          type: string
+                      cl_names:
+                        type: array
+                        items:
+                          type: string
+                      data_levels:
+                        type: array
+                        items:
+                          type: integer
+                      data_level_names:
+                        type: array
+                        items:
+                          type: string
+                      has_cls:
+                        type: boolean
+                      meta_original:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            process_name:
+                              type: string
+                            urls:
+                              type: array
+                              items:
+                                type: string
+                            hosts:
+                              type: array
+                              items:
+                                type: string
+                          required:
+                          - process_name
+                          - urls
+                          - hosts
+                      metasource:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            original:
+                              type: object
+                              properties:
+                                app:
+                                  type: array
+                                  items:
+                                    type: string
+                                urls:
+                                  type: array
+                                  items: {}
+                              required:
+                              - app
+                              - urls
+                            category:
+                              type: string
+                            source:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  name:
+                                    type: string
+                                  display_name:
+                                    type: string
+                            version:
+                              type: integer
+                      action_display_name:
+                        type: string
+                      file_classifications:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            filename:
+                              type: string
+                            filepath:
+                              type: string
+                            md5_hash:
+                              type: string
+                            filesize:
+                              type: integer
+                            is_password_protected:
+                              type: boolean
+                            is_hidden:
+                              type: boolean
+                            is_compressed:
+                              type: boolean
+                            file_suffix:
+                              type: string
+                            file_type:
+                              type: string
+                            classifications:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  data_level:
+                                    type: integer
+                                  data_level_name:
+                                    type: string
+                                  name:
+                                    type: string
+                                  uid:
+                                    type: string
+                      rule_version:
+                        type: object
+                        properties:
+                          cond_ticket:
+                            type: string
+                          cond_version:
+                            type: integer
+                          dc_ticket:
+                            type: string
+                          dc_version:
+                            type: integer
+                          filetype_version:
+                            type: integer
+                          im_version:
+                            type: integer
+                          policy_ticket:
+                            type: string
+                          policy_version:
+                            type: integer
+                        required:
+                        - cond_ticket
+                        - cond_version
+                        - dc_ticket
+                        - dc_version
+                        - filetype_version
+                        - im_version
+                        - policy_ticket
+                        - policy_version
+                      channel_group:
+                        type: string
+                      extended_data:
+                        type: object
+                        properties: {}
+                    required:
+                    - uid
+                    - status
+                    - comment
+                    - created_timestamp
+                    - expand
+                    - category
+                    - device_id
+                    - device_code
+                    - ip_address
+                    - console_user
+                    - os_name
+                    - os_friendly_name
+                    - staff_id
+                    - staff_name
+                    - staff_code
+                    - staff_tag_ids
+                    - staff_tags
+                    - dept_ids
+                    - dept_names
+                    - dept_paths
+                    - time
+                    - '@timestamp'
+                    - timestamp
+                    - agent_version
+                    - event_id
+                    - company_id
+                    - policy_id
+                    - policy_name
+                    - policy_group_id
+                    - policy_group_name
+                    - risk_name
+                    - risk_level
+                    - action
+                    - is_blocked
+                    - is_password_protected
+                    - channel
+                    - channel_name
+                    - operation
+                    - filename
+                    - filepath
+                    - filesize
+                    - md5_hash
+                    - is_hidden
+                    - is_compressed
+                    - sha256_hash
+                    - file_type
+                    - file_suffix
+                    - file_created_time
+                    - file_created_timestamp
+                    - file_updated_time
+                    - file_updated_timestamp
+                    - file_type_categories
+                    - file_description
+                    - simhash_value
+                    - file_policies
+                    - content_summary_list
+                    - extract_file
+                    - cl_id
+                    - cl_name
+                    - data_level
+                    - data_level_name
+                    - cl_ids
+                    - cl_names
+                    - data_levels
+                    - data_level_names
+                    - has_cls
+                    - meta_original
+                    - metasource
+                    - action_display_name
+                    - file_classifications
+                    - rule_version
+                    - channel_group
+                    - extended_data
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  uid: sl7574sBD63-jl5k42Rl
+                  status: created
+                  comment: ''
+                  created_timestamp: '2023-11-21T03:43:28Z'
+                  expand:
+                    compressed_filenames: ''
+                    dest: ''
+                    file_source: ''
+                    screen_recording: false
+                    screenshot: false
+                  category: channel
+                  device_id: 7b45e606-c7b4-40a2-a08e-4aa9fb0ddcf1
+                  device_code: PC-000006
+                  ip_address: 192.168.96.148
+                  console_user: wenghuangge
+                  os_name: macOS
+                  os_friendly_name: macOS 12.6.5
+                  staff_id: ''
+                  staff_name: ''
+                  staff_code: ''
+                  staff_tag_ids: []
+                  staff_tags: []
+                  dept_ids: []
+                  dept_names: []
+                  dept_paths: []
+                  time: 1700477266000
+                  '@timestamp': 1700477266000
+                  timestamp: '2023-11-20T10:47:46Z'
+                  agent_version: 3.0.228
+                  event_id: 7c708b6c-8e94-4fa3-b71a-9025c26e2a20
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  policy_id: afcf096e-0d7a-4ebf-98f8-6c4aab55bb3f
+                  policy_name: whg_test_01
+                  policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                  policy_group_name: 默认组
+                  risk_name: 高危
+                  risk_level: 1
+                  action: block
+                  is_blocked: true
+                  is_password_protected: false
+                  channel: feishu
+                  channel_name: 飞书
+                  operation: outgoing
+                  filename: file_flow_05.docx
+                  filepath: /Users/wenghuangge/Desktop/文件加解密/file_flow_05.docx
+                  filesize: 12125
+                  md5_hash: a7b0a40dc540c02eb4142e159e7ba39f
+                  is_hidden: false
+                  is_compressed: false
+                  sha256_hash: 1440e0726ef93b80c16d2d06ee6ec6e3fb8feba4c60d18059b52cce6e8e66020
+                  file_type: Microsoft Word 2007+
+                  file_suffix: docx
+                  file_created_time: 1700134309775
+                  file_created_timestamp: '2023-11-16T11:31:49Z'
+                  file_updated_time: 1700475386941
+                  file_updated_timestamp: '2023-11-20T10:16:26Z'
+                  file_type_categories:
+                  - Microsoft Word
+                  - Word
+                  file_description: Microsoft Word 2007+
+                  simhash_value: ''
+                  file_policies:
+                  - action: block
+                    classifications:
+                    - data_level: 3
+                      data_level_name: 保密数据
+                      name: whg_class
+                      uid: f42cba49-cd9a-485f-897a-d118c4b24765
+                    file_created_time: 1700134309000
+                    file_created_timestamp: '2023-11-16T11:31:49Z'
+                    file_description: Microsoft Word 2007+
+                    file_suffix: docx
+                    file_type: docx
+                    file_type_categories:
+                    - Microsoft Word
+                    - Word
+                    file_updated_time: 1700475386000
+                    file_updated_timestamp: '2023-11-20T10:16:26Z'
+                    filename: file_flow_05.docx
+                    filepath: /Users/wenghuangge/Desktop/文件加解密/file_flow_05.docx
+                    filesize: 12125
+                    is_compressed: false
+                    is_hidden: false
+                    is_password_protected: false
+                    md5_hash: a7b0a40dc540c02eb4142e159e7ba39f
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    policy_group_name: 默认组
+                    policy_id: afcf096e-0d7a-4ebf-98f8-6c4aab55bb3f
+                    policy_name: whg_test_01
+                    risk_level: 1
+                    risk_name: 高危
+                    action_display_name: 阻断
+                  content_summary_list: []
+                  extract_file: false
+                  cl_id: f42cba49-cd9a-485f-897a-d118c4b24765
+                  cl_name: whg_class
+                  data_level: 3
+                  data_level_name: 保密数据
+                  cl_ids:
+                  - f42cba49-cd9a-485f-897a-d118c4b24765
+                  cl_names:
+                  - whg_class
+                  data_levels:
+                  - 3
+                  data_level_names:
+                  - 保密数据
+                  has_cls: true
+                  meta_original:
+                  - process_name: google
+                    urls:
+                    - google.com
+                    - google1.com
+                    hosts:
+                    - google.com
+                    - google1.com
+                  - process_name: baidu
+                    urls:
+                    - https://baidu.com?xxxxxx=2
+                    - https://baidu.com?xxxxxx=2
+                    hosts:
+                    - baidu.com
+                  metasource:
+                  - original:
+                      app:
+                      - Feishu
+                      urls: []
+                    category: app
+                    source:
+                    - name: appfeishu
+                      display_name: app_feishu
+                    version: 58
+                  action_display_name: 阻断
+                  file_classifications:
+                  - filename: file_flow_05.docx
+                    filepath: /Users/wenghuangge/Desktop/文件加解密/file_flow_05.docx
+                    md5_hash: a7b0a40dc540c02eb4142e159e7ba39f
+                    filesize: 12125
+                    is_password_protected: false
+                    is_hidden: false
+                    is_compressed: false
+                    file_suffix: docx
+                    file_type: docx
+                    classifications:
+                    - data_level: 3
+                      data_level_name: 保密数据
+                      name: whg_class
+                      uid: f42cba49-cd9a-485f-897a-d118c4b24765
+                  rule_version:
+                    cond_ticket: 2a563efd44b89f56d69e615c8eda4363
+                    cond_version: 15
+                    dc_ticket: 2a563efd44b89f56d69e615c8eda4363
+                    dc_version: 174
+                    filetype_version: 34
+                    im_version: 63
+                    policy_ticket: 027af9e67223aeb02434251c1dc8bc4b
+                    policy_version: 283
+                  channel_group: im
+                  extended_data: {}
+      security: []

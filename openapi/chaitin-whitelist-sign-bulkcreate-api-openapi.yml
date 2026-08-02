@@ -1,0 +1,218 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account whitelist/sign/bulkcreate API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: whitelist/sign/bulkcreate
+  description: 白名单管理/签名/批量创建
+paths:
+  /whitelist/sign/bulkcreate:
+    post:
+      summary: 签名白名单批量创建
+      deprecated: false
+      description: ''
+      tags:
+      - whitelist/sign/bulkcreate
+      parameters:
+      - name: page
+        in: query
+        description: ''
+        required: true
+        example: '1'
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: ''
+        required: true
+        example: '10'
+        schema:
+          type: string
+      - name: search
+        in: query
+        description: ''
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      sign:
+                        type: string
+                      description:
+                        type: string
+                      source:
+                        type: string
+                      sha_hash:
+                        type: string
+                    required:
+                    - sign
+                    - description
+                    - source
+              required:
+              - data
+            example:
+              data:
+              - sign: string3
+                description: string
+                source: av_scan
+              - sign: string4
+                sha_hash: string
+                description: string
+                source: av_scan
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        sha_hash:
+                          type: string
+                          nullable: true
+                        uid:
+                          type: string
+                        company_id:
+                          type: string
+                        update_by_id:
+                          type: string
+                        id:
+                          type: integer
+                        create_by_id:
+                          type: string
+                        description:
+                          type: string
+                        source:
+                          type: string
+                        update_time:
+                          type: string
+                        sign:
+                          type: string
+                        create_time:
+                          type: string
+                      required:
+                      - sha_hash
+                      - uid
+                      - company_id
+                      - update_by_id
+                      - id
+                      - create_by_id
+                      - description
+                      - source
+                      - update_time
+                      - sign
+                      - create_time
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                - sha_hash: null
+                  uid: 58319504-9e27-4b91-af49-4f97838fd0d3
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  update_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  id: 2
+                  create_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  description: string
+                  source: av_scan
+                  update_time: '2024-07-31T07:10:48.154978Z'
+                  sign: string3
+                  create_time: '2024-07-31T07:10:48.154902Z'
+                - sha_hash: string
+                  uid: 4439f14e-ca45-4dd5-b112-4cfe36192441
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  update_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  id: 3
+                  create_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  description: string
+                  source: av_scan
+                  update_time: '2024-07-31T07:10:48.209151Z'
+                  sign: string4
+                  create_time: '2024-07-31T07:10:48.209116Z'
+      security: []

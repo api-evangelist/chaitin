@@ -1,0 +1,366 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account device/uninstalltask/ad454e0c-9156-48ab-bc30-304f638e8ad8/instance API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: device/uninstalltask/ad454e0c-9156-48ab-bc30-304f638e8ad8/instance
+paths:
+  /device/uninstalltask/ad454e0c-9156-48ab-bc30-304f638e8ad8/instance:
+    post:
+      summary: 卸载任务实例详情
+      deprecated: false
+      description: ''
+      tags:
+      - device/uninstalltask/ad454e0c-9156-48ab-bc30-304f638e8ad8/instance
+      parameters:
+      - name: page
+        in: query
+        description: ''
+        required: true
+        example: '1'
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: ''
+        required: true
+        example: '10'
+        schema:
+          type: string
+      - name: search
+        in: query
+        description: ''
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: priority
+        in: header
+        description: ''
+        required: true
+        example: u=1, i
+        schema:
+          type: string
+      - name: x-cs-header-app
+        in: header
+        description: ''
+        required: true
+        example: qzh
+        schema:
+          type: string
+      - name: x-cs-header-company
+        in: header
+        description: ''
+        required: true
+        example: eeff7c64-5070-4582-8b93-fbcc57db7771
+        schema:
+          type: string
+      - name: x-cs-header-module
+        in: header
+        description: ''
+        required: true
+        example: desktop-management/device/uninstall
+        schema:
+          type: string
+      - name: x-cs-header-timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Cookie
+        in: header
+        description: ''
+        required: true
+        example: sid=Fe26.2**8381d1ad983eda74bd39868aa4ddc3ac8b6bfa06a35e41ed0ef174091df26825*jwQXwnlmCIXpJ3K9p_050Q*Gs8kDt-W-64TCWZHHsIuLcz7rrcIMuX9_ePHDz6Di4GNiDI1LXxmv9dma7VHz2WyWRkKtcxb1S2zGsg_PZhz912eyRF4Q_kWce-giTRpk5-2Y4on6xcax7Kd6J0ajxCsMiFbHEVLefVRFjQ0BBgPAeLkVW5AFyNZbb8Ul8kHIh-Ge1KiVqymF_X-dbBQgvcUgKGeG-ynmmoKhv7HiDEQCux37pEtBVnQ5_8j9GWW9PM**b8bbecfef477c572be283e959eb1e02a8124eefff971ec4c2d22d109b68f1a36*VbDaMM6B7JAaC6823vvj2KWOHJCo0wYJruEIXXv_YDA
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example: {}
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      total:
+                        type: integer
+                      pages:
+                        type: object
+                        properties:
+                          page:
+                            type: integer
+                          page_size:
+                            type: integer
+                        required:
+                        - page
+                        - page_size
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            device:
+                              type: object
+                              properties:
+                                uid:
+                                  type: string
+                                name:
+                                  type: string
+                                code:
+                                  type: string
+                                status:
+                                  type: string
+                                life_status:
+                                  type: string
+                                conn_status:
+                                  type: string
+                                family:
+                                  type: string
+                                agent_version:
+                                  type: string
+                                architecture:
+                                  type: string
+                                ip:
+                                  type: string
+                                mac:
+                                  type: string
+                                console_user:
+                                  type: string
+                              required:
+                              - uid
+                              - name
+                              - code
+                              - status
+                              - life_status
+                              - conn_status
+                              - family
+                              - agent_version
+                              - architecture
+                              - ip
+                              - mac
+                              - console_user
+                            staff_info:
+                              type: object
+                              properties:
+                                create_time:
+                                  type: string
+                                email:
+                                  type: string
+                                uid:
+                                  type: string
+                                name:
+                                  type: string
+                                description:
+                                  type: string
+                                code:
+                                  type: string
+                                leader_id:
+                                  type: 'null'
+                                number:
+                                  type: string
+                                mobile:
+                                  type: string
+                                data_category:
+                                  type: integer
+                                depts:
+                                  type: array
+                                  items:
+                                    type: object
+                                    properties:
+                                      uid:
+                                        type: string
+                                      name:
+                                        type: string
+                                      leaders:
+                                        type: array
+                                        items: {}
+                                      path:
+                                        type: string
+                                      paths:
+                                        type: array
+                                        items:
+                                          type: string
+                                      ancestor_ids:
+                                        type: array
+                                        items:
+                                          type: string
+                                direct_dept_leaders:
+                                  type: array
+                                  items: {}
+                                direct_dept_leader:
+                                  type: object
+                                  properties: {}
+                                direct_leader:
+                                  type: object
+                                  properties: {}
+                                dept_paths:
+                                  type: string
+                                tags:
+                                  type: array
+                                  items:
+                                    type: object
+                                    properties:
+                                      uid:
+                                        type: string
+                                      name:
+                                        type: string
+                                    required:
+                                    - uid
+                                    - name
+                              required:
+                              - create_time
+                              - email
+                              - uid
+                              - name
+                              - description
+                              - code
+                              - leader_id
+                              - number
+                              - mobile
+                              - data_category
+                              - depts
+                              - direct_dept_leaders
+                              - direct_dept_leader
+                              - direct_leader
+                              - dept_paths
+                              - tags
+                    required:
+                    - total
+                    - pages
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  total: 1
+                  pages:
+                    page: 1
+                    page_size: 10
+                  results:
+                  - device:
+                      uid: c900fbb1-d4ca-4972-aa82-cf5519064187
+                      name: DNAME7862572f1aff5068
+                      code: PC-000001
+                      status: deactivated
+                      life_status: uninstalled
+                      conn_status: abnormal
+                      family: Windows
+                      agent_version: 3.1.7
+                      architecture: x86_64
+                      ip: 192.168.96.211
+                      mac: A8:64:F1:DC:F0:14
+                      console_user: sou@LAPTOP-8R5257U6
+                    staff_info:
+                      create_time: '2024-04-15T03:55:41.311224Z'
+                      email: beining.wu@cyberserval.cn
+                      uid: eb0f5d99-faad-4831-9d49-a9a5355245e3
+                      name: wbn
+                      description: ''
+                      code: 42448d302c70c3f3
+                      leader_id: null
+                      number: 1604c3028ea1f08c
+                      mobile: '20020228977'
+                      data_category: 1
+                      depts:
+                      - uid: 282cfac5-94a1-4d2c-ade8-f8b0538bde11
+                        name: 测试集团
+                        leaders: []
+                        path: 测试集团
+                        paths:
+                        - 测试集团
+                        ancestor_ids:
+                        - 282cfac5-94a1-4d2c-ade8-f8b0538bde11
+                      direct_dept_leaders: []
+                      direct_dept_leader: {}
+                      direct_leader: {}
+                      dept_paths: 测试集团
+                      tags:
+                      - uid: 766b336e-1c00-48d7-9e9a-77c4ae1da89a
+                        name: 高风险员工
+                      - uid: 31264859-5f8a-4d61-a2ac-ed0cc0451df5
+                        name: 哈哈哈，逗号，
+      security: []

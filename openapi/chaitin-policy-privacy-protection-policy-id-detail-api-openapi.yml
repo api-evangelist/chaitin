@@ -1,0 +1,294 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policy/privacy_protection/{policy_id}/detail API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policy/privacy_protection/{policy_id}/detail
+  description: 策略管理/隐私保护/policy_id 参数/详情
+paths:
+  /policy/privacy_protection/{policy_id}/detail:
+    post:
+      summary: 隐私保护策略详情
+      deprecated: false
+      description: ''
+      tags:
+      - policy/privacy_protection/{policy_id}/detail
+      parameters:
+      - name: policy_id
+        in: path
+        description: ''
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      period_category:
+                        type: 'null'
+                      custom_process:
+                        type: array
+                        items:
+                          type: string
+                      company_id:
+                        type: string
+                      update_time:
+                        type: string
+                      description:
+                        type: 'null'
+                      period_options:
+                        type: object
+                        properties: {}
+                      code:
+                        type: string
+                      id:
+                        type: integer
+                      scope:
+                        type: string
+                      action:
+                        type: string
+                      create_by_id:
+                        type: 'null'
+                      create_time:
+                        type: string
+                      expression:
+                        type: 'null'
+                      mode:
+                        type: string
+                      expression_relation:
+                        type: 'null'
+                      status:
+                        type: string
+                      expression_fields:
+                        type: array
+                        items: {}
+                      source:
+                        type: string
+                      category:
+                        type: string
+                      uid:
+                        type: string
+                      action_template_id:
+                        type: 'null'
+                      watch_process:
+                        type: array
+                        items:
+                          type: string
+                      protect_path:
+                        type: array
+                        items:
+                          type: string
+                      run_model:
+                        type: array
+                        items: {}
+                      update_by_id:
+                        type: 'null'
+                      expand:
+                        type: object
+                        properties: {}
+                      name:
+                        type: string
+                      binding_config:
+                        type: object
+                        properties:
+                          include:
+                            type: object
+                            properties:
+                              devices:
+                                type: array
+                                items: {}
+                              device_tags:
+                                type: array
+                                items: {}
+                              staffs:
+                                type: array
+                                items: {}
+                              staff_tags:
+                                type: array
+                                items: {}
+                              depts:
+                                type: array
+                                items: {}
+                            required:
+                            - devices
+                            - device_tags
+                            - staffs
+                            - staff_tags
+                            - depts
+                          exclude:
+                            type: object
+                            properties:
+                              depts:
+                                type: array
+                                items: {}
+                              staffs:
+                                type: array
+                                items: {}
+                              staff_tags:
+                                type: array
+                                items: {}
+                              devices:
+                                type: array
+                                items: {}
+                              device_tags:
+                                type: array
+                                items: {}
+                            required:
+                            - depts
+                            - staffs
+                            - staff_tags
+                            - devices
+                            - device_tags
+                        required:
+                        - include
+                        - exclude
+                    required:
+                    - period_category
+                    - custom_process
+                    - company_id
+                    - update_time
+                    - description
+                    - period_options
+                    - code
+                    - id
+                    - scope
+                    - action
+                    - create_by_id
+                    - create_time
+                    - expression
+                    - mode
+                    - expression_relation
+                    - status
+                    - expression_fields
+                    - source
+                    - category
+                    - uid
+                    - action_template_id
+                    - watch_process
+                    - protect_path
+                    - run_model
+                    - update_by_id
+                    - expand
+                    - name
+                    - binding_config
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  period_category: null
+                  custom_process:
+                  - we.exe
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  update_time: '2024-05-30T02:37:44.853106Z'
+                  description: null
+                  period_options: {}
+                  code: a8d0e778d3b75e94
+                  id: 2
+                  scope: common
+                  action: notify
+                  create_by_id: null
+                  create_time: '2024-05-30T02:37:44.853084Z'
+                  expression: null
+                  mode: advanced
+                  expression_relation: null
+                  status: activated
+                  expression_fields: []
+                  source: added
+                  category: privacy_protection
+                  uid: 737e0e9b-25d3-4b51-b871-b73cdcca3f22
+                  action_template_id: null
+                  watch_process:
+                  - qq.exe
+                  protect_path:
+                  - C:\Program Files\Intel
+                  run_model: []
+                  update_by_id: null
+                  expand: {}
+                  name: '666666'
+                  binding_config:
+                    include:
+                      devices: []
+                      device_tags: []
+                      staffs: []
+                      staff_tags: []
+                      depts: []
+                    exclude:
+                      depts: []
+                      staffs: []
+                      staff_tags: []
+                      devices: []
+                      device_tags: []
+      security: []

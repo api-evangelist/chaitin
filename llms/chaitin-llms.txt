@@ -1,0 +1,25 @@
+# Chaitin Tech (长亭科技)
+
+> Chaitin Tech is a Chinese cybersecurity company whose flagship product is SafeLine (雷池), a self-hosted, semantic-analysis Web Application Firewall / reverse proxy. Its broader portfolio spans WAF, vulnerability scanning (X-Ray), asset exposure management (Cloud Atlas), container security (VeinMind), host security (CloudWalker), API security (APISec), threat deception (D-Sensor), and AI security tooling. Products expose machine APIs authenticated with a per-instance API token header and are managed through a unified CLI (chaitin-cli). Backed by Qiming Venture Partners.
+
+## APIs
+- [SafeLine WAF Open API](https://docs.waf.chaitin.com/en/tech_docs/OPENAPI): Manage sites, IP groups, custom rules, and attack logs on port 9443 (/api/open/*), auth via X-SLCE-API-TOKEN header.
+- [Cloud Atlas OpenAPI](https://www.chaitin.cn): Asset exposure management API (TOKEN header auth).
+- [APISec Management API](https://www.chaitin.cn): API-security management surface.
+- VeinMind, DDR, D-Sensor: additional product machine APIs bundled in the chaitin-cli.
+
+## Specs
+- [SafeLine Open API (Swagger 2.0)](https://raw.githubusercontent.com/api-evangelist/chaitin/refs/heads/main/openapi/chaitin-safeline-openapi-original.json)
+- [Cloud Atlas OpenAPI 3.0](https://raw.githubusercontent.com/api-evangelist/chaitin/refs/heads/main/openapi/chaitin-cloudatlas-openapi-original.yaml)
+- [APISec Management API 3.0](https://raw.githubusercontent.com/api-evangelist/chaitin/refs/heads/main/openapi/chaitin-apisec-openapi-original.json)
+
+## Tools
+- [chaitin-cli](https://github.com/chaitin/chaitin-cli): Unified CLI for all Chaitin products.
+- [chaitin-cli Agent Skill](https://github.com/chaitin/chaitin-cli/blob/main/skills/chaitin-cli/SKILL.md): npx bzskills add chaitin/chaitin-cli
+- [OctoBus](https://github.com/chaitin/OctoBus): Secure local gateway for AI agents to call enterprise APIs.
+
+## Docs
+- [SafeLine Documentation](https://docs.waf.chaitin.com/)
+- [SafeLine GitHub](https://github.com/chaitin/SafeLine)
+- [Chaitin GitHub Organization](https://github.com/chaitin)
+- [CT Stack Community](https://stack.chaitin.com/)

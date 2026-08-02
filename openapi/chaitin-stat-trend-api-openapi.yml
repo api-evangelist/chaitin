@@ -1,0 +1,93 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account stat/trend API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: stat/trend
+paths:
+  /stat/advance/trend/access:
+    get:
+      produces:
+      - application/json
+      tags:
+      - stat/trend
+      summary: get advanced access trend
+      parameters:
+      - type: integer
+        name: begin_time
+        in: query
+        x-cli-description: 开始时间戳（秒）
+      - type: integer
+        name: end_time
+        in: query
+        x-cli-description: 结束时间戳（秒）
+      - type: integer
+        name: site_id
+        in: query
+        x-cli-description: 站点 ID
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      count:
+                        type: integer
+                      time:
+                        type: integer
+      x-cli-summary: 访问趋势
+  /stat/advance/trend/intercept:
+    get:
+      produces:
+      - application/json
+      tags:
+      - stat/trend
+      summary: get advanced intercept trend
+      parameters:
+      - type: integer
+        name: begin_time
+        in: query
+        x-cli-description: 开始时间戳（秒）
+      - type: integer
+        name: end_time
+        in: query
+        x-cli-description: 结束时间戳（秒）
+      - type: integer
+        name: site_id
+        in: query
+        x-cli-description: 站点 ID
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      count:
+                        type: integer
+                      time:
+                        type: integer
+      x-cli-summary: 拦截趋势
+definitions:
+  response.JSONBody:
+    type: object
+    properties:
+      data: {}
+      err:
+        type: string
+      msg:
+        type: string

@@ -1,0 +1,349 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account ueba/{ueba_id}/detail API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: ueba/{ueba_id}/detail
+  description: UEBA 分析/ueba_id 参数/详情
+paths:
+  /ueba/{ueba_id}/detail:
+    post:
+      summary: UEBA事件策略详情
+      deprecated: false
+      description: ''
+      tags:
+      - ueba/{ueba_id}/detail
+      parameters:
+      - name: ueba_id
+        in: path
+        description: ''
+        required: true
+        example: 54fd8fcb-eae1-47f0-a35a-887810ebf4ba
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      threshold:
+                        type: integer
+                      uid:
+                        type: string
+                      source:
+                        type: string
+                      description:
+                        type: string
+                      expression:
+                        type: string
+                      windows_s:
+                        type: integer
+                      notification_config:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            notification_bot_template_id:
+                              type: string
+                            notification_bot:
+                              type: object
+                              properties:
+                                uid:
+                                  type: string
+                                name:
+                                  type: string
+                                category:
+                                  type: string
+                              required:
+                              - uid
+                              - name
+                              - category
+                            notification_content_template:
+                              type: object
+                              properties:
+                                uid:
+                                  type: string
+                                name:
+                                  type: string
+                                template_model:
+                                  type: string
+                                template_value:
+                                  type: string
+                              required:
+                              - uid
+                              - name
+                              - template_model
+                              - template_value
+                            is_remind:
+                              type: boolean
+                            email_to_list:
+                              type: array
+                              items: {}
+                      score:
+                        type: integer
+                      code:
+                        type: string
+                      create_time:
+                        type: string
+                      expression_fields:
+                        type: object
+                        properties:
+                          body:
+                            type: object
+                            properties:
+                              aggs:
+                                type: object
+                                properties:
+                                  count:
+                                    type: object
+                                    properties:
+                                      cardinality:
+                                        type: object
+                                        properties:
+                                          field:
+                                            type: string
+                                          precision_threshold:
+                                            type: integer
+                                        required:
+                                        - field
+                                        - precision_threshold
+                                    required:
+                                    - cardinality
+                                required:
+                                - count
+                              query:
+                                type: object
+                                properties:
+                                  bool:
+                                    type: object
+                                    properties:
+                                      must:
+                                        type: array
+                                        items:
+                                          type: object
+                                          properties:
+                                            term:
+                                              type: object
+                                              properties:
+                                                staff_name:
+                                                  type: string
+                                                company_id:
+                                                  type: string
+                                              required:
+                                              - company_id
+                                          required:
+                                          - term
+                                    required:
+                                    - must
+                                required:
+                                - bool
+                              collapse:
+                                type: object
+                                properties:
+                                  field:
+                                    type: string
+                                  inner_hits:
+                                    type: object
+                                    properties:
+                                      name:
+                                        type: string
+                                      size:
+                                        type: integer
+                                    required:
+                                    - name
+                                    - size
+                                required:
+                                - field
+                                - inner_hits
+                              track_total_hits:
+                                type: boolean
+                            required:
+                            - aggs
+                            - query
+                            - collapse
+                            - track_total_hits
+                          queries:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                field:
+                                  type: string
+                                value:
+                                  type: string
+                                operator:
+                                  type: string
+                        required:
+                        - body
+                        - queries
+                      create_by_id:
+                        type: string
+                      category:
+                        type: string
+                      expand:
+                        type: object
+                        properties: {}
+                      id:
+                        type: integer
+                      name:
+                        type: string
+                      update_time:
+                        type: string
+                      status:
+                        type: string
+                      company_id:
+                        type: string
+                      update_by_id:
+                        type: string
+                    required:
+                    - threshold
+                    - uid
+                    - source
+                    - description
+                    - expression
+                    - windows_s
+                    - notification_config
+                    - score
+                    - code
+                    - create_time
+                    - expression_fields
+                    - create_by_id
+                    - category
+                    - expand
+                    - id
+                    - name
+                    - update_time
+                    - status
+                    - company_id
+                    - update_by_id
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  threshold: 1
+                  uid: 2cc5f045-d7ac-4a5e-8d71-18459fafdaa7
+                  source: policy_channel_log
+                  description: ''
+                  expression: SELF
+                  windows_s: 30000000
+                  notification_config:
+                  - notification_bot_template_id: ec632333-024e-4dfa-9047-8e6aeb6b2515
+                    notification_bot:
+                      uid: cebe9d6d-5fba-4082-8780-48913d3ebfab
+                      name: 告警通知--26
+                      category: feishu
+                    notification_content_template:
+                      uid: 6497f9e0-6ea7-455c-9e34-02b1ec73d3f4
+                      name: 示例-渠道管控告警通知
+                      template_model: channel_policy
+                      template_value: 渠道管控告警：系统于：{{timestamp}}，检测到{{staff_name}}（{{console_user}}），通过{{channel_name}}发送{{filename}}；触发风险级别：{{risk_name}}的{{policy_name}}策略，点击{{address}}查看。
+                    is_remind: true
+                    email_to_list: []
+                  score: 60
+                  code: 19291cce525c4904
+                  create_time: '2023-12-27T06:01:56.499421Z'
+                  expression_fields:
+                    body:
+                      aggs:
+                        count:
+                          cardinality:
+                            field: device_id
+                            precision_threshold: 40000
+                      query:
+                        bool:
+                          must:
+                          - term:
+                              staff_name: 吴贝宁
+                          - term:
+                              company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                      collapse:
+                        field: device_id
+                        inner_hits:
+                          name: device_id
+                          size: 100
+                      track_total_hits: true
+                    queries:
+                    - field: staff_name
+                      value: 吴贝宁
+                      operator: is
+                  create_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  category: outgoing
+                  expand: {}
+                  id: 1
+                  name: test
+                  update_time: '2023-12-27T06:01:56.499462Z'
+                  status: activated
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  update_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+      security: []

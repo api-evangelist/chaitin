@@ -1,0 +1,434 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account softwaremanager/internalsource/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: softwaremanager/internalsource/list
+  description: 软件管理/内部来源/列表
+paths:
+  /softwaremanager/internalsource/list:
+    post:
+      summary: 内置软件源
+      deprecated: false
+      description: ''
+      tags:
+      - softwaremanager/internalsource/list
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                limit:
+                  type: integer
+                search:
+                  type: string
+                queries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: string
+                    required:
+                    - field
+                    - operator
+                    - value
+              required:
+              - page
+              - limit
+              - search
+              - queries
+            example:
+              page: 1
+              limit: 20
+              search: ''
+              queries:
+              - field: software_type
+                operator: is
+                value: 云存储
+              - field: os_name
+                operator: is
+                value: macOS
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      page:
+                        type: integer
+                      limit:
+                        type: integer
+                      total:
+                        type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            display_name:
+                              type: string
+                            software_name:
+                              type: string
+                            icon_name:
+                              type: string
+                              nullable: true
+                            os_type:
+                              type: string
+                            software_type:
+                              type: string
+                            process_name:
+                              type: 'null'
+                            desc_rule:
+                              type: string
+                              nullable: true
+                            bundle_id:
+                              type: string
+                            signature:
+                              type: 'null'
+                            os_name:
+                              type: string
+                            os_icon:
+                              type: string
+                            uid:
+                              type: string
+                          required:
+                          - display_name
+                          - software_name
+                          - icon_name
+                          - os_type
+                          - software_type
+                          - process_name
+                          - desc_rule
+                          - bundle_id
+                          - signature
+                          - os_name
+                          - os_icon
+                          - uid
+                    required:
+                    - page
+                    - limit
+                    - total
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  page: 1
+                  limit: 20
+                  total: 44
+                  results:
+                  - display_name: 淘云盘
+                    software_name: TaoDrive
+                    icon_name: null
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: null
+                    bundle_id: com.alibaba.AliDrive
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: f6942620-c6d6-4ced-9633-d087437518cc
+                  - display_name: 360云盘
+                    software_name: 360Drive
+                    icon_name: null
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: null
+                    bundle_id: com.360.cloud
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: a01881a9-3771-4a69-a48c-3d27f9ababf1
+                  - display_name: 360云盘
+                    software_name: 360Drive
+                    icon_name: null
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: null
+                    bundle_id: com.360.cloudui
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: 903a1bd4-90ac-42b0-a607-14a8d17dfa13
+                  - display_name: 360云盘
+                    software_name: 360Drive
+                    icon_name: null
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: null
+                    bundle_id: com.360.scloud
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: b68c945e-14aa-4436-bcbe-3c2cd3f32f70
+                  - display_name: 360云盘
+                    software_name: 360Drive
+                    icon_name: null
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: null
+                    bundle_id: com.360.ecloud
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: cbe2abbb-21a4-487c-a2bb-936ad8ddb0b5
+                  - display_name: 360云盘
+                    software_name: 360Drive
+                    icon_name: null
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: null
+                    bundle_id: ^com\.qihoo\.yunpan.*$
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: 049aeff0-bc4a-41d5-a8e8-5db55e0eb335
+                  - display_name: 360云盘
+                    software_name: 360Drive
+                    icon_name: null
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: null
+                    bundle_id: com.qihoo.cloudisk
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: f57b7f88-edd6-4e36-aa41-91abd286c183
+                  - display_name: 天翼云盘
+                    software_name: 189Drive
+                    icon_name: ctyun
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: ^.*$
+                    bundle_id: com.cn21.ecloud
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: 84927e46-93a7-4f0b-a70a-f3b05e83777b
+                  - display_name: 天翼云盘
+                    software_name: 189Drive
+                    icon_name: ctyun
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: ^.*$
+                    bundle_id: 21cn.cloud.dist
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: 129f976f-e75c-4fd6-9474-adf28622077c
+                  - display_name: 阿里云盘
+                    software_name: AliDrive
+                    icon_name: aliyunpan
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: ^.*$
+                    bundle_id: com.alicloud.smartdrive
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: 8e7bddcc-b0d1-4589-a2f5-e5487b076e34
+                  - display_name: 百度网盘
+                    software_name: BaiduDrive
+                    icon_name: baidu_wangpan
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: ^.*$
+                    bundle_id: com.baidu.BaiduNetdisk-mac
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: 5629f874-b119-4b97-a54d-d6bfc8b5196b
+                  - display_name: 百度网盘
+                    software_name: BaiduDrive
+                    icon_name: baidu_wangpan
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: ^.*$
+                    bundle_id: com.baidu.netdiskmac
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: 4f39abde-276a-42d2-b002-060438a8043c
+                  - display_name: 城通网盘
+                    software_name: 400GBDrive
+                    icon_name: null
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: ^.*$
+                    bundle_id: io.ctfile.client
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: 7d420f94-c583-4175-9dd3-11bb8ea9f0ee
+                  - display_name: 城通网盘
+                    software_name: 400GBDrive
+                    icon_name: null
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: ^.*$
+                    bundle_id: com.ctfile.macapp
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: e360ff6f-232f-4bac-a64d-0e7e15002baa
+                  - display_name: 城通网盘
+                    software_name: 400GBDrive
+                    icon_name: null
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: ^.*$
+                    bundle_id: io.nwjs.nwjs
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: b303253a-8536-4383-b8a9-661b7b2c065c
+                  - display_name: 小米云服务
+                    software_name: XiaoMiDrive
+                    icon_name: null
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: ^.*$
+                    bundle_id: micloud.pc.xiaomi
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: ffa9b470-6d35-4346-9f93-5bf8cabec66c
+                  - display_name: 沃家云盘
+                    software_name: WoDrive
+                    icon_name: null
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: ^.*$
+                    bundle_id: com.chinaunicom.wocloud
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: 3a778fab-679e-4f80-b555-aa5c78c682aa
+                  - display_name: 微云
+                    software_name: WCloud
+                    icon_name: weiyun
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: ^.*$
+                    bundle_id: com.tencent.mac.weiyun
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: 652a8473-6ae7-4f01-bc1e-d4277a56e72f
+                  - display_name: 微云
+                    software_name: WCloud
+                    icon_name: weiyun
+                    os_type: macOS
+                    software_type: 云存储
+                    process_name: null
+                    desc_rule: ^.*$
+                    bundle_id: com.tencent.WeiyunMac
+                    signature: null
+                    os_name: macOS
+                    os_icon: macOS
+                    uid: e2a23989-6d76-487c-9d6c-68c21d5a6e7b
+      security: []

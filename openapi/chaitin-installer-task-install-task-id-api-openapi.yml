@@ -1,0 +1,377 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account installer/task/{install_task_id} API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: installer/task/{install_task_id}
+  description: 终端安装包/任务/install_task_id 参数
+paths:
+  /installer/task/{install_task_id}/:
+    post:
+      summary: 修改发布任务
+      deprecated: false
+      description: ''
+      tags:
+      - installer/task/{install_task_id}
+      parameters:
+      - name: install_task_id
+        in: path
+        description: ''
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                period_category:
+                  type: string
+                period_options:
+                  type: object
+                  properties:
+                    period_hours_value:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          begin:
+                            type: string
+                          end:
+                            type: string
+                          week:
+                            type: integer
+                        required:
+                        - begin
+                        - end
+                        - week
+                  required:
+                  - period_hours_value
+              required:
+              - name
+              - period_category
+              - period_options
+            example:
+              name: 全量发布2
+              period_category: permanent
+              period_options:
+                period_hours_value:
+                - begin: 00:00
+                  end: '23:59'
+                  week: 1
+                - begin: 00:00
+                  end: '23:59'
+                  week: 2
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      company_id:
+                        type: string
+                      steps:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            uid:
+                              type: string
+                            step:
+                              type: integer
+                            current:
+                              type: integer
+                            total:
+                              type: integer
+                            stats:
+                              type: string
+                            scope:
+                              type: string
+                            include:
+                              type: object
+                              properties: {}
+                            is_current:
+                              type: boolean
+                            can_modify:
+                              type: boolean
+                          required:
+                          - uid
+                          - step
+                          - current
+                          - total
+                          - stats
+                          - scope
+                          - include
+                          - is_current
+                          - can_modify
+                      id:
+                        type: integer
+                      installer:
+                        type: object
+                        properties:
+                          uid:
+                            type: string
+                          name:
+                            type: string
+                          version:
+                            type: string
+                          architecture:
+                            type: string
+                          family:
+                            type: string
+                          valid_os:
+                            type: array
+                            items:
+                              type: string
+                          update_time:
+                            type: string
+                        required:
+                        - uid
+                        - name
+                        - version
+                        - architecture
+                        - family
+                        - valid_os
+                        - update_time
+                      period_options:
+                        type: object
+                        properties:
+                          period_hours_value:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                end:
+                                  type: string
+                                week:
+                                  type: integer
+                                begin:
+                                  type: string
+                              required:
+                              - end
+                              - week
+                              - begin
+                        required:
+                        - period_hours_value
+                      release_strategy:
+                        type: string
+                      expand:
+                        type: object
+                        properties: {}
+                      uid:
+                        type: string
+                      status:
+                        type: string
+                      name:
+                        type: string
+                      update_time:
+                        type: string
+                      create_time:
+                        type: string
+                      update_by:
+                        type: object
+                        properties:
+                          uid:
+                            type: string
+                          name:
+                            type: string
+                          username:
+                            type: string
+                          email:
+                            type: string
+                        required:
+                        - uid
+                        - name
+                        - username
+                        - email
+                      period_category:
+                        type: string
+                      create_by_id:
+                        type: string
+                      stats:
+                        type: string
+                      next_operations:
+                        type: array
+                        items:
+                          type: string
+                    required:
+                    - company_id
+                    - steps
+                    - id
+                    - installer
+                    - period_options
+                    - release_strategy
+                    - expand
+                    - uid
+                    - status
+                    - name
+                    - update_time
+                    - create_time
+                    - update_by
+                    - period_category
+                    - create_by_id
+                    - stats
+                    - next_operations
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  steps:
+                  - uid: 0d0ec64e-3974-46d7-9d39-cc62e612c4fb
+                    step: 1
+                    current: 0
+                    total: 0
+                    stats: init
+                    scope: common
+                    include: {}
+                    is_current: true
+                    can_modify: false
+                  - uid: aaa6705d-b523-4e5e-9f93-24832ef802e9
+                    step: 2
+                    current: 0
+                    total: 0
+                    stats: init
+                    scope: common
+                    include: {}
+                    is_current: false
+                    can_modify: true
+                  - uid: b84fee30-cd9a-4a05-94a8-b276bc989cd6
+                    step: 3
+                    current: 0
+                    total: 0
+                    stats: init
+                    scope: common
+                    include: {}
+                    is_current: false
+                    can_modify: true
+                  - uid: e14829e0-a419-4958-ab31-4e276e6e73e3
+                    step: 4
+                    current: 0
+                    total: 0
+                    stats: init
+                    scope: global
+                    include: {}
+                    is_current: false
+                    can_modify: true
+                  id: 5
+                  installer:
+                    uid: 07ec5f03-86e9-40fc-91fb-4994da0631ce
+                    name: DDR Windows v3.3.98
+                    version: 3.3.98
+                    architecture: x86_64
+                    family: Windows
+                    valid_os:
+                    - Win11
+                    - Win10
+                    - Win8
+                    - Win7
+                    update_time: '2024-07-13T07:04:25.218373Z'
+                  period_options:
+                    period_hours_value:
+                    - end: '23:59'
+                      week: 1
+                      begin: 00:00
+                    - end: '23:59'
+                      week: 2
+                      begin: 00:00
+                  release_strategy: entity
+                  expand: {}
+                  uid: f3637cc0-4b4f-4186-a38a-3c291fd3476f
+                  status: deactivated
+                  name: 全量发布1
+                  update_time: '2024-07-23T09:59:08.154934Z'
+                  create_time: '2024-07-23T09:59:08.154886Z'
+                  update_by:
+                    uid: 50dcaf08-c0f6-4ffa-8f86-3220e55d4385
+                    name: wly
+                    username: wly
+                    email: wly@wly.com
+                  period_category: permanent
+                  create_by_id: 50dcaf08-c0f6-4ffa-8f86-3220e55d4385
+                  stats: paused
+                  next_operations:
+                  - redo
+                  - restore
+      security: []

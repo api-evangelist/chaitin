@@ -1,0 +1,700 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account device/software/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: device/software/list
+paths:
+  /device/software/list:
+    post:
+      summary: 软件详情
+      deprecated: false
+      description: ''
+      tags:
+      - device/software/list
+      parameters:
+      - name: page
+        in: query
+        description: ''
+        required: true
+        example: '1'
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: ''
+        required: true
+        example: '10'
+        schema:
+          type: string
+      - name: search
+        in: query
+        description: ''
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                device_id:
+                  type: string
+              required:
+              - device_id
+            example:
+              device_id: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      page:
+                        type: integer
+                      limit:
+                        type: integer
+                      search_total:
+                        type: integer
+                      total:
+                        type: integer
+                      search_after:
+                        type: array
+                        items:
+                          type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            total_view_digest:
+                              type: string
+                            source_view_digest:
+                              type: string
+                            software_name:
+                              type: string
+                            publisher:
+                              type: string
+                            os_name:
+                              type: string
+                            os_friendly_name:
+                              type: string
+                            software_version:
+                              type: string
+                            software_type:
+                              type: string
+                            install_path:
+                              type: string
+                            install_time:
+                              type: integer
+                            install_timestamp:
+                              type: string
+                            staff_id:
+                              type: string
+                            staff_name:
+                              type: string
+                            staff_code:
+                              type: string
+                            staff_email:
+                              type: string
+                            staff_description:
+                              type: string
+                            staff_tag_ids:
+                              type: array
+                              items: {}
+                            staff_tags:
+                              type: array
+                              items: {}
+                            dept_ids:
+                              type: array
+                              items: {}
+                            dept_names:
+                              type: array
+                              items: {}
+                            dept_paths:
+                              type: array
+                              items: {}
+                            time:
+                              type: integer
+                            '@timestamp':
+                              type: integer
+                            timestamp:
+                              type: string
+                            device_id:
+                              type: string
+                            device_code:
+                              type: string
+                            company_id:
+                              type: string
+                            bundle_id:
+                              type: string
+                            is_piracy:
+                              type: boolean
+                            event_id:
+                              type: string
+                            cd_hash:
+                              type: string
+                            team_id:
+                              type: string
+                            process_name:
+                              type: string
+                            console_user:
+                              type: string
+                            agent_version:
+                              type: string
+                            ip_address:
+                              type: string
+                            display_name:
+                              type: string
+                            uid:
+                              type: string
+                            _type:
+                              type: string
+                            _index:
+                              type: string
+                          required:
+                          - total_view_digest
+                          - source_view_digest
+                          - software_name
+                          - publisher
+                          - os_name
+                          - os_friendly_name
+                          - software_version
+                          - software_type
+                          - install_path
+                          - install_time
+                          - install_timestamp
+                          - staff_id
+                          - staff_name
+                          - staff_code
+                          - staff_email
+                          - staff_description
+                          - staff_tag_ids
+                          - staff_tags
+                          - dept_ids
+                          - dept_names
+                          - dept_paths
+                          - time
+                          - '@timestamp'
+                          - timestamp
+                          - device_id
+                          - device_code
+                          - company_id
+                          - bundle_id
+                          - is_piracy
+                          - event_id
+                          - cd_hash
+                          - team_id
+                          - process_name
+                          - console_user
+                          - agent_version
+                          - ip_address
+                          - display_name
+                          - uid
+                          - _type
+                          - _index
+                    required:
+                    - index
+                    - page
+                    - limit
+                    - search_total
+                    - total
+                    - search_after
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  index:
+                  - qzhddr_software_manager
+                  page: 1
+                  limit: 10
+                  search_total: 87
+                  total: 87
+                  search_after:
+                  - 1702576608835
+                  results:
+                  - total_view_digest: b9cb42d205237d84aa9fc4bfb651e471
+                    source_view_digest: 4a35965f7403699e7e971c2d9bf25ad6
+                    software_name: LaunchControl
+                    publisher: Copyright © 2013–2022 Robby Pählig. All rights reserved.
+                    os_name: macOS
+                    os_friendly_name: macOS 13.5.1
+                    software_version: 1.52.7
+                    software_type: 其它
+                    install_path: /Applications/LaunchControl.app/Contents/MacOS/LaunchControl
+                    install_time: 1693220902000
+                    install_timestamp: '2023-08-28T11:08:22Z'
+                    staff_id: ''
+                    staff_name: ''
+                    staff_code: ''
+                    staff_email: ''
+                    staff_description: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    time: 1702576608835
+                    '@timestamp': 1702576608835
+                    timestamp: '2023-12-15T01:56:48Z'
+                    device_id: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                    device_code: PC-000005
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    bundle_id: com.soma-zone.LaunchControl
+                    is_piracy: false
+                    event_id: fd443f74-e961-4db4-90bf-5c0c2aaf4422
+                    cd_hash: f8ba41bf185e8ef0c3207ef7a13299580b268310
+                    team_id: ''
+                    process_name: LaunchControl
+                    console_user: jasonlee
+                    agent_version: 3.1.836
+                    ip_address: 192.168.96.50
+                    display_name: LaunchControl
+                    uid: f8f54a9ac364516de3afc2f3a5f2b194
+                    _type: _doc
+                    _index: qzhddr_software_manager
+                  - total_view_digest: aa6ebb29ad93c86dd25b5727c7e77056
+                    source_view_digest: fd288e02c8d108936a839b5ecc0479db
+                    software_name: Wireshark
+                    publisher: 4.0.7, Copyright 1998-2023 Wireshark Development Team
+                    os_name: macOS
+                    os_friendly_name: macOS 13.5.1
+                    software_version: 4.0.7
+                    software_type: 开发工具
+                    install_path: /Applications/Wireshark.app/Contents/MacOS/Wireshark
+                    install_time: 1693220902000
+                    install_timestamp: '2023-08-28T11:08:22Z'
+                    staff_id: ''
+                    staff_name: ''
+                    staff_code: ''
+                    staff_email: ''
+                    staff_description: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    time: 1702576608835
+                    '@timestamp': 1702576608835
+                    timestamp: '2023-12-15T01:56:48Z'
+                    device_id: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                    device_code: PC-000005
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    bundle_id: org.wireshark.Wireshark
+                    is_piracy: false
+                    event_id: fd443f74-e961-4db4-90bf-5c0c2aaf4422
+                    cd_hash: 21ce53c24a6b8b5ebd317d3f2e0d1a7c14013bc4
+                    team_id: ''
+                    process_name: Wireshark
+                    console_user: jasonlee
+                    agent_version: 3.1.836
+                    ip_address: 192.168.96.50
+                    display_name: Wireshark
+                    uid: de25403bc83faa5d88ddcdb085df084d
+                    _type: _doc
+                    _index: qzhddr_software_manager
+                  - total_view_digest: 7a788f165d8734a521d352baca05c5fb
+                    source_view_digest: a160756c94bfe0ba0da9308e0a99d368
+                    software_name: Proxyman
+                    publisher: Copyright © 2022. Proxyman LLC. All rights reserved. https://proxyman.io
+                    os_name: macOS
+                    os_friendly_name: macOS 13.5.1
+                    software_version: 4.5.0
+                    software_type: 其它
+                    install_path: /Applications/Proxyman.app/Contents/MacOS/Proxyman
+                    install_time: 1693220902000
+                    install_timestamp: '2023-08-28T11:08:22Z'
+                    staff_id: ''
+                    staff_name: ''
+                    staff_code: ''
+                    staff_email: ''
+                    staff_description: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    time: 1702576608835
+                    '@timestamp': 1702576608835
+                    timestamp: '2023-12-15T01:56:48Z'
+                    device_id: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                    device_code: PC-000005
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    bundle_id: com.proxyman.NSProxy
+                    is_piracy: false
+                    event_id: fd443f74-e961-4db4-90bf-5c0c2aaf4422
+                    cd_hash: e2e1c5e93cc24bf51520a1ab97b3a719c35b4cc5
+                    team_id: ''
+                    process_name: Proxyman
+                    console_user: jasonlee
+                    agent_version: 3.1.836
+                    ip_address: 192.168.96.50
+                    display_name: Proxyman
+                    uid: b542614c513401ff45f8c16feb7075a6
+                    _type: _doc
+                    _index: qzhddr_software_manager
+                  - total_view_digest: d5be2c46a4034a69cc5002807ec3da99
+                    source_view_digest: 3aae0b34482e2dbb1da08552a2191b40
+                    software_name: PasteNow
+                    publisher: Copyright © 2021-2023 Tualatrix Chou. All rights reserved.
+                    os_name: macOS
+                    os_friendly_name: macOS 13.5.1
+                    software_version: '2.12'
+                    software_type: 其它
+                    install_path: /Applications/PasteNow.app/Contents/MacOS/PasteNow
+                    install_time: 1693220902000
+                    install_timestamp: '2023-08-28T11:08:22Z'
+                    staff_id: ''
+                    staff_name: ''
+                    staff_code: ''
+                    staff_email: ''
+                    staff_description: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    time: 1702576608835
+                    '@timestamp': 1702576608835
+                    timestamp: '2023-12-15T01:56:48Z'
+                    device_id: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                    device_code: PC-000005
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    bundle_id: app.pastenow.PasteNow
+                    is_piracy: false
+                    event_id: fd443f74-e961-4db4-90bf-5c0c2aaf4422
+                    cd_hash: b256d37cf3dbc678caf14f454a77a965680f1ef6
+                    team_id: KAQ3M6FSM7
+                    process_name: PasteNow
+                    console_user: jasonlee
+                    agent_version: 3.1.836
+                    ip_address: 192.168.96.50
+                    display_name: PasteNow
+                    uid: 72f88a0050e5dcd154a12be3cc97070e
+                    _type: _doc
+                    _index: qzhddr_software_manager
+                  - total_view_digest: 28f94345071003034c2f2927a993c58e
+                    source_view_digest: 5640d85eed11a9e119fe9ea278ca7028
+                    software_name: Sophos Scan
+                    publisher: Copyright © 1993-2023 Sophos Ltd. All rights reserved.
+                    os_name: macOS
+                    os_friendly_name: macOS 13.5.1
+                    software_version: 10.5.0
+                    software_type: 其它
+                    install_path: /Applications/Sophos/Sophos Scan.app/Contents/MacOS/Sophos Scan
+                    install_time: 1700558610000
+                    install_timestamp: '2023-11-21T09:23:30Z'
+                    staff_id: ''
+                    staff_name: ''
+                    staff_code: ''
+                    staff_email: ''
+                    staff_description: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    time: 1702576608835
+                    '@timestamp': 1702576608835
+                    timestamp: '2023-12-15T01:56:48Z'
+                    device_id: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                    device_code: PC-000005
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    bundle_id: com.sophos.scan
+                    is_piracy: false
+                    event_id: fd443f74-e961-4db4-90bf-5c0c2aaf4422
+                    cd_hash: ee297eb7d3d41ec6721a46c46e87794d29d39da2
+                    team_id: ''
+                    process_name: Sophos Scan
+                    console_user: jasonlee
+                    agent_version: 3.1.836
+                    ip_address: 192.168.96.50
+                    display_name: Sophos Scan
+                    uid: 11bbb9254afc1420ab0001514e0617b3
+                    _type: _doc
+                    _index: qzhddr_software_manager
+                  - total_view_digest: 9bf7ac6933cde60ad2c1cc6a50b337e8
+                    source_view_digest: 859dc221e4aeedad234cc1c853eafb3f
+                    software_name: Sophos Home
+                    publisher: Copyright © 1993-2023 Sophos Ltd. All rights reserved.
+                    os_name: macOS
+                    os_friendly_name: macOS 13.5.1
+                    software_version: 10.4.19
+                    software_type: 其它
+                    install_path: /Applications/Sophos/Sophos Home.app/Contents/MacOS/Sophos Home
+                    install_time: 1700558607000
+                    install_timestamp: '2023-11-21T09:23:27Z'
+                    staff_id: ''
+                    staff_name: ''
+                    staff_code: ''
+                    staff_email: ''
+                    staff_description: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    time: 1702576608835
+                    '@timestamp': 1702576608835
+                    timestamp: '2023-12-15T01:56:48Z'
+                    device_id: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                    device_code: PC-000005
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    bundle_id: com.sophos.home.ui
+                    is_piracy: false
+                    event_id: fd443f74-e961-4db4-90bf-5c0c2aaf4422
+                    cd_hash: 43aa819aee3c480df11b60131f97f918d297ed59
+                    team_id: ''
+                    process_name: Sophos Home
+                    console_user: jasonlee
+                    agent_version: 3.1.836
+                    ip_address: 192.168.96.50
+                    display_name: Sophos Home
+                    uid: cab186873122bcd5eb53620be79fc0de
+                    _type: _doc
+                    _index: qzhddr_software_manager
+                  - total_view_digest: 2b629b38a73e909eb9b030474fb68fdf
+                    source_view_digest: 8c26cbda29df0b8c39aeb8a93f3599a8
+                    software_name: The Unarchiver
+                    publisher: ''
+                    os_name: macOS
+                    os_friendly_name: macOS 13.5.1
+                    software_version: 4.3.5
+                    software_type: 其它
+                    install_path: /Applications/The Unarchiver.app/Contents/MacOS/The Unarchiver
+                    install_time: 1693220902000
+                    install_timestamp: '2023-08-28T11:08:22Z'
+                    staff_id: ''
+                    staff_name: ''
+                    staff_code: ''
+                    staff_email: ''
+                    staff_description: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    time: 1702576608835
+                    '@timestamp': 1702576608835
+                    timestamp: '2023-12-15T01:56:48Z'
+                    device_id: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                    device_code: PC-000005
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    bundle_id: com.macpaw.site.theunarchiver
+                    is_piracy: false
+                    event_id: fd443f74-e961-4db4-90bf-5c0c2aaf4422
+                    cd_hash: 3d02069ab4eab7356b441f0742b9e4bb6a424c00
+                    team_id: ''
+                    process_name: The Unarchiver
+                    console_user: jasonlee
+                    agent_version: 3.1.836
+                    ip_address: 192.168.96.50
+                    display_name: The Unarchiver
+                    uid: 566428ea99d866576d50121cfd3c65f1
+                    _type: _doc
+                    _index: qzhddr_software_manager
+                  - total_view_digest: 114826c65ab307e9af61c77e748b1bd8
+                    source_view_digest: 27b7e11833cbdef1a06fc65a07864d18
+                    software_name: Microsoft Excel
+                    publisher: © 2023 Microsoft Corporation. All rights reserved.
+                    os_name: macOS
+                    os_friendly_name: macOS 13.5.1
+                    software_version: '16.78'
+                    software_type: 办公类
+                    install_path: /Applications/Microsoft Excel.app/Contents/MacOS/Microsoft Excel
+                    install_time: 1698043433000
+                    install_timestamp: '2023-10-23T06:43:53Z'
+                    staff_id: ''
+                    staff_name: ''
+                    staff_code: ''
+                    staff_email: ''
+                    staff_description: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    time: 1702576608835
+                    '@timestamp': 1702576608835
+                    timestamp: '2023-12-15T01:56:48Z'
+                    device_id: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                    device_code: PC-000005
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    bundle_id: com.microsoft.Excel
+                    is_piracy: false
+                    event_id: fd443f74-e961-4db4-90bf-5c0c2aaf4422
+                    cd_hash: f46122a13070053bebbc17bf4b0f6d81f2693c78
+                    team_id: UBF8T346G9
+                    process_name: Microsoft Excel
+                    console_user: jasonlee
+                    agent_version: 3.1.836
+                    ip_address: 192.168.96.50
+                    display_name: Excel
+                    uid: f3fe47ceb34160f00074efb2972fa7eb
+                    _type: _doc
+                    _index: qzhddr_software_manager
+                  - total_view_digest: 36714a77e5a09bab03d2fc7d2c2199ee
+                    source_view_digest: 39905d590f7c98acaa30e3996512bdce
+                    software_name: Uninstall OpenVPN Connect
+                    publisher: OpenVPN Uninstaller
+                    os_name: macOS
+                    os_friendly_name: macOS 13.5.1
+                    software_version: '0.1'
+                    software_type: 其它
+                    install_path: /Applications/OpenVPN Connect/Uninstall OpenVPN Connect.app/Contents/MacOS/uninstaller
+                    install_time: 1670682527000
+                    install_timestamp: '2022-12-10T14:28:47Z'
+                    staff_id: ''
+                    staff_name: ''
+                    staff_code: ''
+                    staff_email: ''
+                    staff_description: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    time: 1702576608835
+                    '@timestamp': 1702576608835
+                    timestamp: '2023-12-15T01:56:48Z'
+                    device_id: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                    device_code: PC-000005
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    bundle_id: net.openvpn.uninstaller
+                    is_piracy: false
+                    event_id: fd443f74-e961-4db4-90bf-5c0c2aaf4422
+                    cd_hash: 89fb64d63cdc7638230fa81e856041c70f454560
+                    team_id: ''
+                    process_name: uninstaller
+                    console_user: jasonlee
+                    agent_version: 3.1.836
+                    ip_address: 192.168.96.50
+                    display_name: Uninstall OpenVPN Connect
+                    uid: 7a344ee0d38ff016d34f9d63b6f5073a
+                    _type: _doc
+                    _index: qzhddr_software_manager
+                  - total_view_digest: 2c074bd341a40ee0efd05911188bbe83
+                    source_view_digest: e1da12c8af4bdffcc81a1f69b80dd954
+                    software_name: Python Launcher
+                    publisher: 3.8.10, © 2001-2021 Python Software Foundation
+                    os_name: macOS
+                    os_friendly_name: macOS 13.5.1
+                    software_version: 3.8.10
+                    software_type: 其它
+                    install_path: /Applications/Python 3.8/Python Launcher.app/Contents/MacOS/Python Launcher
+                    install_time: 1667200303000
+                    install_timestamp: '2022-10-31T07:11:43Z'
+                    staff_id: ''
+                    staff_name: ''
+                    staff_code: ''
+                    staff_email: ''
+                    staff_description: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    time: 1702576608835
+                    '@timestamp': 1702576608835
+                    timestamp: '2023-12-15T01:56:48Z'
+                    device_id: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                    device_code: PC-000005
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    bundle_id: org.python.PythonLauncher
+                    is_piracy: false
+                    event_id: fd443f74-e961-4db4-90bf-5c0c2aaf4422
+                    cd_hash: be2840a4d8d62bae110c47465f848f767a5df086
+                    team_id: ''
+                    process_name: Python Launcher
+                    console_user: jasonlee
+                    agent_version: 3.1.836
+                    ip_address: 192.168.96.50
+                    display_name: Python Launcher
+                    uid: 1b83513e70ee01c56e1f7c8b4c62cf00
+                    _type: _doc
+                    _index: qzhddr_software_manager
+      security: []

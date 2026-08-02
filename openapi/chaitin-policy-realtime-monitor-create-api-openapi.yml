@@ -1,0 +1,400 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policy/realtime_monitor/create API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policy/realtime_monitor/create
+  description: 策略管理/实时监控/创建
+paths:
+  /policy/realtime_monitor/create:
+    post:
+      summary: 实时监控任务创建
+      deprecated: false
+      description: ''
+      tags:
+      - policy/realtime_monitor/create
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                scope:
+                  type: string
+                period_category:
+                  type: string
+                period_options:
+                  type: object
+                  properties:
+                    period_hours_value:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          begin:
+                            type: string
+                          end:
+                            type: string
+                          week:
+                            type: integer
+                        required:
+                        - begin
+                        - end
+                        - week
+                    period_value:
+                      type: array
+                      items:
+                        type: string
+                  required:
+                  - period_hours_value
+                  - period_value
+                action:
+                  type: string
+                monitor_mode:
+                  type: string
+                monitor_mode_options:
+                  type: object
+                  properties:
+                    interval:
+                      type: object
+                      properties:
+                        value:
+                          type: integer
+                        unit:
+                          type: string
+                      required:
+                      - value
+                      - unit
+                    resolution_ratio:
+                      type: string
+                  required:
+                  - interval
+                  - resolution_ratio
+                storage_time:
+                  type: string
+                storage_time_options:
+                  type: object
+                  properties:
+                    cycles:
+                      type: object
+                      properties:
+                        value:
+                          type: integer
+                        unit:
+                          type: string
+                      required:
+                      - value
+                      - unit
+                  required:
+                  - cycles
+                category:
+                  type: string
+                binding_config:
+                  type: object
+                  properties:
+                    source:
+                      type: string
+                    include:
+                      type: object
+                      properties:
+                        device_ids:
+                          type: array
+                          items:
+                            type: string
+                      required:
+                      - device_ids
+                    exclude:
+                      type: object
+                      properties: {}
+                  required:
+                  - source
+                  - include
+                  - exclude
+              required:
+              - name
+              - description
+              - scope
+              - period_category
+              - period_options
+              - action
+              - monitor_mode
+              - monitor_mode_options
+              - storage_time
+              - storage_time_options
+              - category
+              - binding_config
+            example:
+              name: 任务名称
+              description: 任务描述
+              scope: common
+              period_category: period
+              period_options:
+                period_hours_value:
+                - begin: 02:00
+                  end: 03:59
+                  week: 1
+                - begin: 02:00
+                  end: 03:59
+                  week: 2
+                - begin: 02:00
+                  end: 03:59
+                  week: 3
+                - begin: 02:00
+                  end: 03:59
+                  week: 4
+                - begin: 02:00
+                  end: 03:59
+                  week: 5
+                - begin: 02:00
+                  end: 03:59
+                  week: 6
+                - begin: 02:00
+                  end: 03:59
+                  week: 7
+                period_value:
+                - '2025-03-18T16:00:00Z'
+                - '2025-03-20T15:59:59Z'
+              action: notify
+              monitor_mode: ''
+              monitor_mode_options:
+                interval:
+                  value: 30
+                  unit: s
+                resolution_ratio: compress
+              storage_time: ''
+              storage_time_options:
+                cycles:
+                  value: 30
+                  unit: day
+              category: realtime_monitor
+              binding_config:
+                source: realtime_monitor
+                include:
+                  device_ids:
+                  - d1247921-d4fd-4f6c-9f62-504684f8f288
+                exclude: {}
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      category:
+                        type: string
+                      action_template_id:
+                        type: 'null'
+                      update_time:
+                        type: string
+                      storage_time_options:
+                        type: object
+                        properties: {}
+                      code:
+                        type: string
+                      name:
+                        type: string
+                      status:
+                        type: string
+                      id:
+                        type: integer
+                      expand:
+                        type: object
+                        properties: {}
+                      expression_relation:
+                        type: 'null'
+                      monitor_mode:
+                        type: string
+                      update_by_id:
+                        type: string
+                      period_category:
+                        type: string
+                      storage_time:
+                        type: string
+                      run_model:
+                        type: array
+                        items: {}
+                      action:
+                        type: string
+                      company_id:
+                        type: string
+                      expression:
+                        type: 'null'
+                      create_by_id:
+                        type: string
+                      description:
+                        type: string
+                      expression_fields:
+                        type: array
+                        items: {}
+                      mode:
+                        type: string
+                      uid:
+                        type: string
+                      create_time:
+                        type: string
+                      period_options:
+                        type: object
+                        properties:
+                          period_value:
+                            type: array
+                            items:
+                              type: string
+                          period_tz_offset:
+                            type: integer
+                        required:
+                        - period_value
+                        - period_tz_offset
+                      source:
+                        type: string
+                      monitor_mode_options:
+                        type: object
+                        properties: {}
+                      scope:
+                        type: string
+                    required:
+                    - category
+                    - action_template_id
+                    - update_time
+                    - storage_time_options
+                    - code
+                    - name
+                    - status
+                    - id
+                    - expand
+                    - expression_relation
+                    - monitor_mode
+                    - update_by_id
+                    - period_category
+                    - storage_time
+                    - run_model
+                    - action
+                    - company_id
+                    - expression
+                    - create_by_id
+                    - description
+                    - expression_fields
+                    - mode
+                    - uid
+                    - create_time
+                    - period_options
+                    - source
+                    - monitor_mode_options
+                    - scope
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  category: realtime_monitor
+                  action_template_id: null
+                  update_time: '2025-03-19T03:10:43.810430Z'
+                  storage_time_options: {}
+                  code: 4cfe0eef32322b55
+                  name: 任务名称
+                  status: deactivated
+                  id: 1
+                  expand: {}
+                  expression_relation: null
+                  monitor_mode: general
+                  update_by_id: fc1d36eb-98ce-486c-83e7-4f041e22d164
+                  period_category: period
+                  storage_time: permanent
+                  run_model: []
+                  action: notify
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  expression: null
+                  create_by_id: fc1d36eb-98ce-486c-83e7-4f041e22d164
+                  description: 任务描述
+                  expression_fields: []
+                  mode: advanced
+                  uid: 4fa992b0-c34e-475a-92e5-66a9198f7e3b
+                  create_time: '2025-03-19T03:10:43.810409Z'
+                  period_options:
+                    period_value:
+                    - '2025-03-19 00:00:00'
+                    - '2025-03-20 23:59:59'
+                    period_tz_offset: 28800
+                  source: added
+                  monitor_mode_options: {}
+                  scope: common
+      security: []

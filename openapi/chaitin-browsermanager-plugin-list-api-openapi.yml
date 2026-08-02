@@ -1,0 +1,378 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account browsermanager/plugin/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: browsermanager/plugin/list
+  description: 浏览器管理/插件/列表
+paths:
+  /browsermanager/plugin/list:
+    post:
+      summary: 插件列表
+      deprecated: false
+      description: ''
+      tags:
+      - browsermanager/plugin/list
+      parameters:
+      - name: page
+        in: query
+        description: ''
+        required: true
+        example: '1'
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: ''
+        required: true
+        example: '10'
+        schema:
+          type: string
+      - name: search
+        in: query
+        description: ''
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                use_default_query:
+                  type: boolean
+                search:
+                  type: string
+                queries:
+                  type: array
+                  items: {}
+              required:
+              - use_default_query
+              - search
+              - queries
+            example:
+              use_default_query: false
+              search: ''
+              queries: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      page:
+                        type: integer
+                      limit:
+                        type: integer
+                      search_total:
+                        type: integer
+                      total:
+                        type: integer
+                      search_after:
+                        type: array
+                        items: {}
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            browser_desc:
+                              type: string
+                            install_path:
+                              type: string
+                            bundle_id:
+                              type: string
+                            browser_name:
+                              type: string
+                            publisher:
+                              type: string
+                            is_default:
+                              type: boolean
+                            process_name:
+                              type: string
+                            plugin_status:
+                              type: string
+                            plugin_name:
+                              type: string
+                            plugin_version:
+                              type: string
+                            plugin_desc:
+                              type: string
+                            plugin_id:
+                              type: string
+                            plugin_source:
+                              type: string
+                            permission:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  name:
+                                    type: string
+                                  is_sensitive:
+                                    type: boolean
+                                required:
+                                - name
+                                - is_sensitive
+                            device_id:
+                              type: string
+                            os_name:
+                              type: string
+                            os_friendly_name:
+                              type: string
+                            device_code:
+                              type: string
+                            console_user:
+                              type: string
+                            agent_version:
+                              type: string
+                            ip_address:
+                              type: string
+                            hostname:
+                              type: string
+                            mac:
+                              type: string
+                            time:
+                              type: integer
+                            '@timestamp':
+                              type: integer
+                            timestamp:
+                              type: string
+                            staff_id:
+                              type: string
+                            staff_name:
+                              type: string
+                            staff_email:
+                              type: string
+                            staff_code:
+                              type: string
+                            staff_number:
+                              type: string
+                            staff_tag_ids:
+                              type: array
+                              items: {}
+                            staff_tags:
+                              type: array
+                              items: {}
+                            dept_ids:
+                              type: array
+                              items: {}
+                            dept_names:
+                              type: array
+                              items: {}
+                            dept_paths:
+                              type: array
+                              items: {}
+                            display_name:
+                              type: string
+                            company_id:
+                              type: string
+                            event_id:
+                              type: string
+                            tid:
+                              type: string
+                            uid:
+                              type: string
+                            _type:
+                              type: string
+                            _index:
+                              type: string
+                            inner_hits:
+                              type: array
+                              items: {}
+                            staff_cnt:
+                              type: integer
+                            device_cnt:
+                              type: integer
+                            plugin_cnt:
+                              type: integer
+                            browser_version:
+                              type: array
+                              items: {}
+                            name:
+                              type: string
+                    required:
+                    - index
+                    - page
+                    - limit
+                    - search_total
+                    - total
+                    - search_after
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  index:
+                  - qzhddr_browser_manager
+                  page: 1
+                  limit: 10
+                  search_total: 1
+                  total: 1
+                  search_after: []
+                  results:
+                  - browser_desc: ''
+                    install_path: /Users/cyberserval/Library/Application Support/Google/Chrome/Default
+                    bundle_id: com.google.Chrome
+                    browser_name: Google Chrome
+                    publisher: ''
+                    is_default: false
+                    process_name: chrome
+                    plugin_status: activate
+                    plugin_name: 1Password – Password Manager
+                    plugin_version: 8.10.68.14
+                    plugin_desc: The best way to experience 1Password in your browser. Easily sign in to sites, generate passwords, and store secure information.
+                    plugin_id: ''
+                    plugin_source: external
+                    permission:
+                    - name: alarms
+                      is_sensitive: false
+                    - name: contextMenus
+                      is_sensitive: false
+                    - name: downloads
+                      is_sensitive: false
+                    - name: idle
+                      is_sensitive: false
+                    - name: management
+                      is_sensitive: false
+                    - name: nativeMessaging
+                      is_sensitive: true
+                    - name: notifications
+                      is_sensitive: false
+                    - name: offscreen
+                      is_sensitive: false
+                    - name: privacy
+                      is_sensitive: true
+                    - name: scripting
+                      is_sensitive: false
+                    - name: storage
+                      is_sensitive: false
+                    - name: tabs
+                      is_sensitive: true
+                    - name: webNavigation
+                      is_sensitive: true
+                    - name: webRequest
+                      is_sensitive: true
+                    - name: declarativeNetRequest
+                      is_sensitive: false
+                    - name: webRequestAuthProvider
+                      is_sensitive: false
+                    device_id: 7b45e606-c7b4-40a2-a08e-4aa9fb0ddcf1
+                    os_name: macOS
+                    os_friendly_name: macOS 14.7.4
+                    device_code: PC-000006
+                    console_user: cyberserval
+                    agent_version: 3.4.456
+                    ip_address: 192.168.96.163
+                    hostname: ''
+                    mac: ''
+                    time: 1742543538511
+                    '@timestamp': 1742543538511
+                    timestamp: '2025-03-21T15:52:18+08:00'
+                    staff_id: ''
+                    staff_name: ''
+                    staff_email: ''
+                    staff_code: ''
+                    staff_number: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    display_name: Chrome
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    event_id: cf5ab851-25f0-42dc-b6fa-159f0d414573
+                    tid: 71c24054b939cc988399752973c3e505
+                    uid: 92de90e64e0bb3132ebafb4067763c64
+                    _type: _doc
+                    _index: qzhddr_browser_manager
+                    inner_hits: []
+                    staff_cnt: 0
+                    device_cnt: 1
+                    plugin_cnt: 1
+                    browser_version: []
+                    name: chrome
+      security: []

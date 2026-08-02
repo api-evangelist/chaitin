@@ -1,0 +1,769 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account 资产/种子/域名 WHOIS API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: 资产/种子/域名 WHOIS
+paths:
+  /v1/seed/domain:
+    get:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 空间ID
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      - description: 种子条目，模糊搜索
+        in: query
+        name: name
+        required: false
+        schema:
+          type: string
+      - description: 监控是否启用
+        example: 'true'
+        in: query
+        name: enable
+        required: false
+        schema:
+          type: boolean
+      - description: 置信度
+        example: '100'
+        in: query
+        name: confidence
+        required: false
+        schema:
+          enum:
+          - '60'
+          - '100'
+          type: string
+          x-apifox:
+            enumDescriptions:
+              '60': 模糊线索
+              '100': 精确线索
+      - description: 类型
+        in: query
+        name: type
+        required: false
+        schema:
+          enum:
+          - NS
+          - MX
+          - 注册邮箱
+          type: string
+          x-apifox:
+            enumDescriptions:
+              MX: MX
+              NS: NS
+              注册邮箱: 注册邮箱
+      - description: 排序字段，字段前加-表示降序，默认排序为-id
+        example: id、created_at、updated_at
+        in: query
+        name: sort
+        required: false
+        schema:
+          type: string
+      - description: 页码
+        example: 1
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+      - description: 分页大小
+        example: 20
+        in: query
+        name: size
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  current: 1
+                  items:
+                  - confidence: '100'
+                    created_at: '2023-08-15 14:25:12'
+                    enable: true
+                    id: 1
+                    name: test
+                    type: NS
+                    updated_at: '2023-08-15 14:25:17'
+                  size: 20
+                  total: 1
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      current:
+                        title: 当前页
+                        type: integer
+                      items:
+                        items:
+                          properties:
+                            confidence:
+                              title: 置信度
+                              type: string
+                            created_at:
+                              title: 创建时间
+                              type: string
+                            enable:
+                              title: 监控是否启用
+                              type: boolean
+                            id:
+                              title: id
+                              type: integer
+                            name:
+                              title: 线索条目
+                              type: string
+                            type:
+                              enum:
+                              - NS
+                              - MX
+                              - 注册邮箱
+                              title: 类型
+                              type: string
+                              x-apifox:
+                                enumDescriptions:
+                                  MX: MX
+                                  NS: NS
+                                  注册邮箱: 注册邮箱
+                            updated_at:
+                              title: 更新时间
+                              type: string
+                          type: object
+                          x-apifox-orders:
+                          - id
+                          - name
+                          - type
+                          - enable
+                          - confidence
+                          - updated_at
+                          - created_at
+                        type: array
+                      size:
+                        title: 分页大小
+                        type: integer
+                      total:
+                        title: 总数
+                        type: integer
+                    required:
+                    - current
+                    - size
+                    - total
+                    - items
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - current
+                    - size
+                    - total
+                    - items
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 域名WHOIS列表
+      tags:
+      - 资产/种子/域名 WHOIS
+      x-apifox-folder: 资产/种子/域名 WHOIS
+      x-apifox-status: released
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-179816443-run
+  /v1/seed/domain/batch-create:
+    post:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 空间ID
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                confidence:
+                  enum:
+                  - '60'
+                  - '100'
+                  title: 置信度
+                  type: string
+                  x-apifox:
+                    enumDescriptions:
+                      '60': 模糊线索
+                      '100': 精确线索
+                name:
+                  items:
+                    type: string
+                  title: 种子条目列表
+                  type: array
+                type:
+                  enum:
+                  - NS
+                  - MX
+                  - 注册邮箱
+                  title: 类型
+                  type: string
+                  x-apifox:
+                    enumDescriptions:
+                      MX: MX
+                      NS: NS
+                      注册邮箱: 注册邮箱
+              required:
+              - name
+              - confidence
+              - type
+              type: object
+              x-apifox-orders:
+              - name
+              - confidence
+              - type
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  affected: 1
+                  ignored: 0
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      affected:
+                        title: 成功保存的数量
+                        type: integer
+                      ignored:
+                        title: 忽略的数量，表示有重复数据
+                        type: integer
+                    required:
+                    - affected
+                    - ignored
+                    title: 数据
+                    type: object
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 域名WHOS批量添加
+      tags:
+      - 资产/种子/域名 WHOIS
+      x-apifox-folder: 资产/种子/域名 WHOIS
+      x-apifox-status: released
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-179842699-run
+  /v1/seed/domain/batch-delete:
+    delete:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 空间ID
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                pk:
+                  items:
+                    type: integer
+                  title: ID列表
+                  type: array
+              required:
+              - pk
+              type: object
+              x-apifox-orders:
+              - pk
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  affected: 0
+                  ignored: 1
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      affected:
+                        title: 成功删除的数量
+                        type: integer
+                      ignored:
+                        title: 忽略的数量
+                        type: integer
+                    required:
+                    - affected
+                    - ignored
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - affected
+                    - ignored
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 域名WHOS批量删除
+      tags:
+      - 资产/种子/域名 WHOIS
+      x-apifox-folder: 资产/种子/域名 WHOIS
+      x-apifox-status: released
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-179949136-run
+  /v1/seed/domain/switch:
+    post:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 空间ID
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                enable:
+                  title: 监控是否启用
+                  type: boolean
+                pk:
+                  items:
+                    type: integer
+                  title: ID列表
+                  type: array
+              required:
+              - pk
+              - enable
+              type: object
+              x-apifox-orders:
+              - pk
+              - enable
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  affected: 1
+                  ignored: 0
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      affected:
+                        title: 成功的数量
+                        type: integer
+                      ignored:
+                        title: 忽略的数量
+                        type: integer
+                    required:
+                    - affected
+                    - ignored
+                    title: 数据
+                    type: object
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 域名WHOIS批量修改监控开关
+      tags:
+      - 资产/种子/域名 WHOIS
+      x-apifox-folder: 资产/种子/域名 WHOIS
+      x-apifox-status: released
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-179878443-run
+  /v1/seed/domain/update-confidence:
+    post:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 空间ID
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                confidence:
+                  enum:
+                  - '60'
+                  - '100'
+                  title: 置信度
+                  type: string
+                  x-apifox:
+                    enumDescriptions:
+                      '60': 模糊线索
+                      '100': 精确线索
+                pk:
+                  items:
+                    type: integer
+                  title: ID列表
+                  type: array
+              required:
+              - pk
+              - confidence
+              type: object
+              x-apifox-orders:
+              - pk
+              - confidence
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data: 1
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    title: 修改数据量
+                    type: integer
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 域名WHOIS批量修改置信度
+      tags:
+      - 资产/种子/域名 WHOIS
+      x-apifox-folder: 资产/种子/域名 WHOIS
+      x-apifox-status: released
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-179847563-run
+  /v1/seed/domain/{pk}:
+    get:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 企业主体ID
+        in: path
+        name: pk
+        required: true
+        schema:
+          type: string
+      - description: 空间ID
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  confidence: '100'
+                  created_at: '2023-08-15 14:25:12'
+                  enable: true
+                  id: 1
+                  name: test
+                  type: NS
+                  updated_at: '2023-08-15 14:25:17'
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 状态码
+                    type: integer
+                  data:
+                    properties:
+                      confidence:
+                        enum:
+                        - '60'
+                        - '100'
+                        title: 置信度
+                        type: string
+                        x-apifox:
+                          enumDescriptions:
+                            '60': 模糊种子
+                            '100': 精确种子
+                      created_at:
+                        title: 创建时间
+                        type: string
+                      enable:
+                        title: 监控是否启用
+                        type: boolean
+                      id:
+                        title: ID
+                        type: integer
+                      name:
+                        title: 种子条目
+                        type: string
+                      type:
+                        title: 类型
+                        type: string
+                      updated_at:
+                        title: 更新时间
+                        type: string
+                    required:
+                    - id
+                    - name
+                    - type
+                    - enable
+                    - confidence
+                    - updated_at
+                    - created_at
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - id
+                    - name
+                    - type
+                    - enable
+                    - confidence
+                    - updated_at
+                    - created_at
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 域名WHOS获取
+      tags:
+      - 资产/种子/域名 WHOIS
+      x-apifox-folder: 资产/种子/域名 WHOIS
+      x-apifox-status: released
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-179833205-run
+    put:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 企业主体ID
+        in: path
+        name: pk
+        required: true
+        schema:
+          type: string
+      - description: 空间ID
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                confidence:
+                  enum:
+                  - '60'
+                  - '100'
+                  title: 置信度
+                  type: string
+                  x-apifox:
+                    enumDescriptions:
+                      '60': 模糊种子
+                      '100': 精确种子
+                name:
+                  title: 种子条目
+                  type: string
+              required:
+              - name
+              - confidence
+              type: object
+              x-apifox-orders:
+              - name
+              - confidence
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  confidence: '100'
+                  created_at: '2023-08-15 14:25:12'
+                  enable: true
+                  id: 1
+                  name: test1
+                  type: NS
+                  updated_at: '2024-05-31 14:30:03'
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      confidence:
+                        enum:
+                        - '60'
+                        - '100'
+                        title: 置信度
+                        type: string
+                        x-apifox:
+                          enumDescriptions:
+                            '60': 模糊种子
+                            '100': 精确种子
+                      created_at:
+                        title: 创建时间
+                        type: string
+                      enable:
+                        title: 监控是否启用
+                        type: boolean
+                      id:
+                        title: ID
+                        type: integer
+                      name:
+                        title: 种子条目
+                        type: string
+                      type:
+                        title: 类型
+                        type: string
+                      updated_at:
+                        title: 更新时间
+                        type: string
+                    required:
+                    - id
+                    - name
+                    - type
+                    - enable
+                    - confidence
+                    - updated_at
+                    - created_at
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - id
+                    - name
+                    - type
+                    - enable
+                    - confidence
+                    - updated_at
+                    - created_at
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 域名WHOIS编辑
+      tags:
+      - 资产/种子/域名 WHOIS
+      x-apifox-folder: 资产/种子/域名 WHOIS
+      x-apifox-status: released
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-179838023-run

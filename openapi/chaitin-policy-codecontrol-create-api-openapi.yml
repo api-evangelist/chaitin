@@ -1,0 +1,242 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policy/codecontrol/create API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policy/codecontrol/create
+  description: 策略管理/代码管控/创建
+paths:
+  /policy/codecontrol/create:
+    post:
+      summary: 代码管控策略创建
+      deprecated: false
+      description: ''
+      tags:
+      - policy/codecontrol/create
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                scope:
+                  type: string
+                period_category:
+                  type: string
+                period_options:
+                  type: object
+                  properties:
+                    period_value:
+                      type: array
+                      items:
+                        type: string
+                  required:
+                  - period_value
+                binding_config:
+                  type: object
+                  properties:
+                    include:
+                      type: object
+                      properties:
+                        device_ids:
+                          type: array
+                          items: {}
+                        device_tag_ids:
+                          type: array
+                          items: {}
+                        staff_ids:
+                          type: array
+                          items: {}
+                        staff_tag_ids:
+                          type: array
+                          items: {}
+                        dept_ids:
+                          type: array
+                          items: {}
+                      required:
+                      - device_ids
+                      - device_tag_ids
+                      - staff_ids
+                      - staff_tag_ids
+                      - dept_ids
+                    exclude:
+                      type: object
+                      properties: {}
+                    source:
+                      type: string
+                  required:
+                  - include
+                  - exclude
+                  - source
+                control_action:
+                  type: object
+                  properties:
+                    category:
+                      type: string
+                    expression_fields:
+                      type: object
+                      properties:
+                        git:
+                          type: object
+                          properties:
+                            left:
+                              type: string
+                            operator:
+                              type: string
+                            value:
+                              type: array
+                              items:
+                                type: string
+                          required:
+                          - left
+                          - operator
+                          - value
+                        svn:
+                          type: object
+                          properties:
+                            left:
+                              type: string
+                            operator:
+                              type: string
+                            value:
+                              type: array
+                              items:
+                                type: string
+                          required:
+                          - left
+                          - operator
+                          - value
+                      required:
+                      - git
+                      - svn
+                  required:
+                  - category
+                  - expression_fields
+                action:
+                  type: string
+                action_template_id:
+                  type: string
+              required:
+              - name
+              - description
+              - scope
+              - period_category
+              - period_options
+              - binding_config
+              - control_action
+              - action
+              - action_template_id
+            example:
+              name: <string>
+              description: <string>
+              scope: global
+              period_category: permanent
+              period_options:
+                period_value:
+                - '2023-01-01 00:00:00'
+                - '2023-01-01 00:00:00'
+              binding_config:
+                include:
+                  device_ids: []
+                  device_tag_ids: []
+                  staff_ids: []
+                  staff_tag_ids: []
+                  dept_ids: []
+                exclude: {}
+                source: code_control
+              control_action:
+                category: upload
+                expression_fields:
+                  git:
+                    left: XX
+                    operator: container
+                    value:
+                    - XXXX
+                    - sdasdas
+                  svn:
+                    left: XX
+                    operator: container
+                    value:
+                    - XXXX
+                    - sdasdas
+              action: notify
+              action_template_id: 3326c43103b6435da23b53af072a9d78
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              example: {}
+      security: []

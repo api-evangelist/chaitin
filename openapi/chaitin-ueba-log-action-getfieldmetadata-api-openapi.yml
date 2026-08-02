@@ -1,0 +1,478 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account ueba/log/action/getfieldmetadata API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: ueba/log/action/getfieldmetadata
+  description: UEBA 分析/日志/操作/字段元数据
+paths:
+  /ueba/log/action/getfieldmetadata:
+    post:
+      summary: UEBA事件getfieldmetadata
+      deprecated: false
+      description: ''
+      tags:
+      - ueba/log/action/getfieldmetadata
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        field:
+                          type: string
+                        field_type:
+                          type: string
+                        display_name:
+                          type: string
+                        operators:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                              display_name:
+                                type: string
+                              value_type:
+                                type: string
+                              description:
+                                type: string
+                            required:
+                            - name
+                            - display_name
+                            - value_type
+                            - description
+                        is_commonly_used:
+                          type: boolean
+                        options:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                              display_name:
+                                type: string
+                            required:
+                            - name
+                            - display_name
+                          nullable: true
+                        async_options:
+                          type: boolean
+                        order:
+                          type: integer
+                        group:
+                          type: string
+                        submodule_exclude:
+                          type: array
+                          items:
+                            type: string
+                        chart_options:
+                          type: object
+                          properties:
+                            dimension:
+                              type: object
+                              properties:
+                                status:
+                                  type: boolean
+                                func:
+                                  type: array
+                                  items:
+                                    type: object
+                                    properties:
+                                      op:
+                                        type: string
+                                      name:
+                                        type: string
+                                    required:
+                                    - op
+                                    - name
+                              required:
+                              - status
+                              - func
+                            metric:
+                              type: object
+                              properties:
+                                status:
+                                  type: boolean
+                                func:
+                                  type: array
+                                  items:
+                                    type: object
+                                    properties:
+                                      op:
+                                        type: string
+                                      name:
+                                        type: string
+                                    required:
+                                    - op
+                                    - name
+                              required:
+                              - status
+                              - func
+                          required:
+                          - dimension
+                          - metric
+                      required:
+                      - field
+                      - field_type
+                      - display_name
+                      - operators
+                      - is_commonly_used
+                      - options
+                      - async_options
+                      - order
+                      - group
+                      - submodule_exclude
+                      - chart_options
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                - field: staff_name
+                  field_type: keyword
+                  display_name: 员工姓名
+                  operators:
+                  - name: is
+                    display_name: 等于
+                    value_type: single
+                    description: ==
+                  - name: is_not
+                    display_name: 不等于
+                    value_type: single
+                    description: '!='
+                  - name: contains
+                    display_name: 属于
+                    value_type: multi
+                    description: 在...集合
+                  - name: not_contains
+                    display_name: 不属于
+                    value_type: multi
+                    description: 不在...集合
+                  - name: exists
+                    display_name: 存在
+                    value_type: none
+                    description: exists
+                  - name: not_exists
+                    display_name: 不存在
+                    value_type: none
+                    description: not exists
+                  is_commonly_used: false
+                  options: null
+                  async_options: true
+                  order: 0
+                  group: 员工信息
+                  submodule_exclude:
+                  - ueba_check
+                  chart_options:
+                    dimension:
+                      status: true
+                      func:
+                      - op: terms
+                        name: 分组聚合
+                    metric:
+                      status: true
+                      func:
+                      - op: value_count
+                        name: 计数
+                - field: dept_names
+                  field_type: keyword
+                  display_name: 部门名称
+                  operators:
+                  - name: is
+                    display_name: 等于
+                    value_type: single
+                    description: ==
+                  - name: is_not
+                    display_name: 不等于
+                    value_type: single
+                    description: '!='
+                  - name: contains
+                    display_name: 属于
+                    value_type: multi
+                    description: 在...集合
+                  - name: not_contains
+                    display_name: 不属于
+                    value_type: multi
+                    description: 不在...集合
+                  - name: exists
+                    display_name: 存在
+                    value_type: none
+                    description: exists
+                  - name: not_exists
+                    display_name: 不存在
+                    value_type: none
+                    description: not exists
+                  is_commonly_used: false
+                  options: null
+                  async_options: true
+                  order: 1
+                  group: 员工信息
+                  submodule_exclude: []
+                  chart_options:
+                    dimension:
+                      status: true
+                      func:
+                      - op: terms
+                        name: 分组聚合
+                    metric:
+                      status: true
+                      func:
+                      - op: value_count
+                        name: 计数
+                - field: device_code
+                  field_type: keyword
+                  display_name: 终端ID
+                  operators:
+                  - name: is
+                    display_name: 等于
+                    value_type: single
+                    description: ==
+                  - name: is_not
+                    display_name: 不等于
+                    value_type: single
+                    description: '!='
+                  - name: contains
+                    display_name: 属于
+                    value_type: multi
+                    description: 在...集合
+                  - name: not_contains
+                    display_name: 不属于
+                    value_type: multi
+                    description: 不在...集合
+                  is_commonly_used: false
+                  options: null
+                  async_options: true
+                  order: 2
+                  group: 终端信息
+                  submodule_exclude:
+                  - ueba_check
+                  chart_options:
+                    dimension:
+                      status: true
+                      func:
+                      - op: terms
+                        name: 分组聚合
+                    metric:
+                      status: true
+                      func:
+                      - op: value_count
+                        name: 计数
+                - field: ueba_category
+                  field_type: keyword
+                  display_name: 事件类型
+                  operators:
+                  - name: is
+                    display_name: 等于
+                    value_type: single
+                    description: ==
+                  - name: is_not
+                    display_name: 不等于
+                    value_type: single
+                    description: '!='
+                  - name: contains
+                    display_name: 属于
+                    value_type: multi
+                    description: 在...集合
+                  - name: not_contains
+                    display_name: 不属于
+                    value_type: multi
+                    description: 不在...集合
+                  - name: match
+                    display_name: 包含(字符串)
+                    value_type: single
+                    description: contains
+                  - name: not_match
+                    display_name: 不包含(字符串)
+                    value_type: single
+                    description: not contains
+                  is_commonly_used: false
+                  options:
+                  - name: outgoing
+                    display_name: 外发行为
+                  - name: concealment
+                    display_name: 隐匿行为
+                  - name: download
+                    display_name: 下载行为
+                  - name: confrontation
+                    display_name: 对抗行为
+                  - name: modify
+                    display_name: 修改行为
+                  async_options: false
+                  order: 3
+                  group: 默认分组
+                  submodule_exclude: []
+                  chart_options:
+                    dimension:
+                      status: true
+                      func:
+                      - op: terms
+                        name: 分组聚合
+                    metric:
+                      status: true
+                      func:
+                      - op: value_count
+                        name: 计数
+                - field: ueba_name
+                  field_type: keyword
+                  display_name: 事件名称
+                  operators:
+                  - name: is
+                    display_name: 等于
+                    value_type: single
+                    description: ==
+                  - name: is_not
+                    display_name: 不等于
+                    value_type: single
+                    description: '!='
+                  - name: contains
+                    display_name: 属于
+                    value_type: multi
+                    description: 在...集合
+                  - name: not_contains
+                    display_name: 不属于
+                    value_type: multi
+                    description: 不在...集合
+                  - name: match
+                    display_name: 包含(字符串)
+                    value_type: single
+                    description: contains
+                  - name: not_match
+                    display_name: 不包含(字符串)
+                    value_type: single
+                    description: not contains
+                  is_commonly_used: false
+                  options: null
+                  async_options: true
+                  order: 4
+                  group: 默认分组
+                  submodule_exclude: []
+                  chart_options:
+                    dimension:
+                      status: true
+                      func:
+                      - op: terms
+                        name: 分组聚合
+                    metric:
+                      status: true
+                      func:
+                      - op: value_count
+                        name: 计数
+                - field: ueba_score
+                  field_type: integer
+                  display_name: 威胁分值
+                  operators:
+                  - name: gt
+                    display_name: 大于
+                    value_type: single
+                    description: greater than
+                  - name: lt
+                    display_name: 小于
+                    value_type: single
+                    description: less than
+                  - name: between
+                    display_name: 介于
+                    value_type: range
+                    description: 在...区间
+                  is_commonly_used: false
+                  options: null
+                  async_options: false
+                  order: 5
+                  group: 默认分组
+                  submodule_exclude: []
+                  chart_options:
+                    dimension:
+                      status: true
+                      func:
+                      - op: terms
+                        name: 分组聚合
+                      - op: histogram
+                        name: 数值间隔分组聚合
+                    metric:
+                      status: true
+                      func:
+                      - op: sum
+                        name: 求和
+                      - op: value_count
+                        name: 计数
+                      - op: max
+                        name: 最大值
+                      - op: min
+                        name: 最小值
+                      - op: avg
+                        name: 平均值
+      security: []

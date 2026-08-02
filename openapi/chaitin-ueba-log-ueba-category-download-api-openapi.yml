@@ -1,0 +1,334 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account ueba/log/{ueba_category}/download API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: ueba/log/{ueba_category}/download
+  description: UEBA 分析/日志/ueba_category 参数/下载
+paths:
+  /ueba/log/{ueba_category}/download:
+    post:
+      summary: UEBA事件导出
+      deprecated: false
+      description: ''
+      tags:
+      - ueba/log/{ueba_category}/download
+      parameters:
+      - name: ueba_category
+        in: path
+        description: ''
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sort:
+                  type: array
+                  items:
+                    type: string
+                search:
+                  type: string
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                name:
+                  type: string
+                output:
+                  type: object
+                  properties:
+                    ext:
+                      type: string
+                    fields:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                          display_name:
+                            type: string
+                        required:
+                        - name
+                        - display_name
+                  required:
+                  - ext
+                  - fields
+                queries:
+                  type: array
+                  items: {}
+              required:
+              - sort
+              - search
+              - time_range
+              - name
+              - output
+              - queries
+            example:
+              sort:
+              - timestamp:desc
+              search: ''
+              time_range:
+                begin: '2023-12-20 18:12:21'
+                end: '2023-12-21 18:12:21'
+              name: code
+              output:
+                ext: xlsx
+                fields:
+                - name: device_code
+                  display_name: 终端ID
+                - name: staff_name
+                  display_name: 员工姓名
+                - name: staff_code
+                  display_name: 员工账户
+                - name: staff_tags
+                  display_name: 员工标签
+                - name: repo_addr
+                  display_name: 仓库地址
+                - name: code_path
+                  display_name: 代码路径
+                - name: policy_name
+                  display_name: 策略名称
+                - name: dept_names
+                  display_name: 部门名称
+                - name: dept_paths
+                  display_name: 部门路径
+                - name: os_name
+                  display_name: 操作系统
+                - name: console_user
+                  display_name: 系统账户
+                - name: action
+                  display_name: 处置动作
+                - name: operation
+                  display_name: 管控类型
+                - name: metasource.source.display_name
+                  display_name: 数据来源
+              queries: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      create_by_id:
+                        type: string
+                      compress_category:
+                        type: 'null'
+                      update_by_id:
+                        type: string
+                      create_time:
+                        type: string
+                      uid:
+                        type: string
+                      update_time:
+                        type: string
+                      company_id:
+                        type: string
+                      ext:
+                        type: string
+                      source_fields:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            display_name:
+                              type: string
+                          required:
+                          - name
+                          - display_name
+                      order_category:
+                        type: string
+                      quotechar:
+                        type: string
+                      end_time:
+                        type: string
+                      name:
+                        type: string
+                      state:
+                        type: string
+                      encoding:
+                        type: string
+                      count:
+                        type: integer
+                      begin_time:
+                        type: string
+                      category:
+                        type: string
+                      description:
+                        type: string
+                      query_params:
+                        type: object
+                        properties:
+                          queries:
+                            type: array
+                            items: {}
+                          filters:
+                            type: object
+                            properties: {}
+                          time_range:
+                            type: object
+                            properties:
+                              begin:
+                                type: string
+                              end:
+                                type: string
+                            required:
+                            - begin
+                            - end
+                          search:
+                            type: string
+                        required:
+                        - queries
+                        - filters
+                        - time_range
+                        - search
+                    required:
+                    - create_by_id
+                    - compress_category
+                    - update_by_id
+                    - create_time
+                    - uid
+                    - update_time
+                    - company_id
+                    - ext
+                    - source_fields
+                    - order_category
+                    - quotechar
+                    - end_time
+                    - name
+                    - state
+                    - encoding
+                    - count
+                    - begin_time
+                    - category
+                    - description
+                    - query_params
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  create_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  compress_category: null
+                  update_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  create_time: '2024-01-31T10:33:39.983494Z'
+                  uid: b0d54596-a583-4a2e-90a3-0c28b445ff90
+                  update_time: '2024-01-31T10:33:39.983622Z'
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  ext: xlsx
+                  source_fields:
+                  - name: '@timestamp'
+                    display_name: 发生时间
+                  - name: device_code
+                    display_name: 终端ID
+                  - name: staff_name
+                    display_name: 员工姓名
+                  - name: staff_code
+                    display_name: 员工账户
+                  order_category: desc
+                  quotechar: ''
+                  end_time: '2024-12-21 10:12:21'
+                  name: code
+                  state: created
+                  encoding: utf8
+                  count: 25321
+                  begin_time: '2023-12-20 10:12:21'
+                  category: ueba_event_log
+                  description: ''
+                  query_params:
+                    queries: []
+                    filters: {}
+                    time_range:
+                      begin: '2023-12-20 18:12:21'
+                      end: '2024-12-21 18:12:21'
+                    search: ''
+      security: []

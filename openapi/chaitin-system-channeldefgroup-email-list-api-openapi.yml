@@ -1,0 +1,312 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account system/channeldefgroup/email/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: system/channeldefgroup/email/list
+  description: 系统配置/通道定义组/邮件/列表
+paths:
+  /system/channeldefgroup/email/list:
+    post:
+      summary: 管控源列表
+      deprecated: false
+      description: ''
+      tags:
+      - system/channeldefgroup/email/list
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                limit:
+                  type: integer
+              required:
+              - page
+              - limit
+            example:
+              page: 1
+              limit: 1000
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      total:
+                        type: integer
+                      pages:
+                        type: object
+                        properties:
+                          page:
+                            type: integer
+                          page_size:
+                            type: integer
+                        required:
+                        - page
+                        - page_size
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            display_name:
+                              type: string
+                            channel_defs:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  uid:
+                                    type: string
+                                  name:
+                                    type: string
+                                  display_name:
+                                    type: string
+                                  source:
+                                    type: string
+                                  channel_family:
+                                    type: string
+                                  windows_config_enabled:
+                                    type: boolean
+                                  macos_config_enabled:
+                                    type: boolean
+                                  webapp_config_enabled:
+                                    type: boolean
+                                  linux_config_enabled:
+                                    type: boolean
+                                  kylin_config_enabled:
+                                    type: boolean
+                                  uos_config_enabled:
+                                    type: boolean
+                                  policy_count:
+                                    type: integer
+                                  is_used:
+                                    type: boolean
+                                  only_ref_self_policy_count:
+                                    type: integer
+                                  supported_form:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        name:
+                                          type: string
+                                        display_name:
+                                          type: string
+                                        icon:
+                                          type: string
+                                      required:
+                                      - name
+                                      - icon
+                                      - display_name
+                                  app_category:
+                                    type: string
+                                required:
+                                - uid
+                                - name
+                                - display_name
+                                - source
+                                - channel_family
+                                - windows_config_enabled
+                                - macos_config_enabled
+                                - webapp_config_enabled
+                                - linux_config_enabled
+                                - kylin_config_enabled
+                                - uos_config_enabled
+                                - policy_count
+                                - is_used
+                                - only_ref_self_policy_count
+                                - supported_form
+                                - app_category
+                          required:
+                          - name
+                          - display_name
+                          - channel_defs
+                    required:
+                    - total
+                    - pages
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  total: 15
+                  pages:
+                    page: 1
+                    page_size: 1000
+                  results:
+                  - name: client
+                    display_name: 客户端
+                    channel_defs:
+                    - uid: 867647a1-189e-45a6-ac87-a080877b0263
+                      name: outlook
+                      display_name: Outlook邮件
+                      source: default
+                      channel_family: application
+                      windows_config_enabled: true
+                      macos_config_enabled: false
+                      webapp_config_enabled: false
+                      linux_config_enabled: false
+                      kylin_config_enabled: false
+                      uos_config_enabled: false
+                      policy_count: 10
+                      is_used: true
+                      only_ref_self_policy_count: 0
+                      supported_form:
+                      - name: Windows
+                        display_name: Windows
+                        icon: windows
+                      - name: browser
+                        icon: browser
+                        display_name: 浏览器
+                      - name: macOS
+                        display_name: macOS
+                        icon: macOS
+                      app_category: client
+                    - uid: d5c244a4-dc6a-4450-995b-88bb7892188b
+                      name: foxmail
+                      display_name: Foxmail邮件
+                      source: default
+                      channel_family: application
+                      windows_config_enabled: true
+                      macos_config_enabled: false
+                      webapp_config_enabled: false
+                      linux_config_enabled: false
+                      kylin_config_enabled: false
+                      uos_config_enabled: false
+                      policy_count: 11
+                      is_used: true
+                      only_ref_self_policy_count: 0
+                      supported_form:
+                      - name: Windows
+                        display_name: Windows
+                        icon: windows
+                      - name: macOS
+                        display_name: macOS
+                        icon: macOS
+                      app_category: client
+                  - name: web
+                    display_name: 网页版
+                    channel_defs:
+                    - uid: 5ce36d59-6eaa-4221-9ee7-a3efaefeb928
+                      name: web_gmail
+                      display_name: Gmail网页版
+                      source: default
+                      channel_family: application
+                      windows_config_enabled: false
+                      macos_config_enabled: false
+                      webapp_config_enabled: false
+                      linux_config_enabled: false
+                      kylin_config_enabled: false
+                      uos_config_enabled: false
+                      policy_count: 2
+                      is_used: true
+                      only_ref_self_policy_count: 0
+                      supported_form:
+                      - name: browser
+                        icon: browser
+                        display_name: 浏览器
+                      app_category: web
+                    - uid: 374ab4c0-9ae9-47b8-a9fb-7cd979f49807
+                      name: web_email_naver
+                      display_name: NAVER邮箱网页版
+                      source: default
+                      channel_family: application
+                      windows_config_enabled: false
+                      macos_config_enabled: false
+                      webapp_config_enabled: false
+                      linux_config_enabled: false
+                      kylin_config_enabled: false
+                      uos_config_enabled: false
+                      policy_count: 2
+                      is_used: true
+                      only_ref_self_policy_count: 0
+                      supported_form:
+                      - name: browser
+                        icon: browser
+                        display_name: 浏览器
+                      app_category: web
+      security: []

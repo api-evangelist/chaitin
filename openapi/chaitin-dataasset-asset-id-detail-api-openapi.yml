@@ -1,0 +1,356 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account dataasset/{asset_id}/detail API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: dataasset/{asset_id}/detail
+  description: 数据资产/asset_id 参数/详情
+paths:
+  /dataasset/{asset_id}/detail:
+    post:
+      summary: 资产地图详情
+      deprecated: false
+      description: ''
+      tags:
+      - dataasset/{asset_id}/detail
+      parameters:
+      - name: asset_id
+        in: path
+        description: ''
+        required: true
+        example: FCv2LJIB1BSg0pzjorSY
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      is_compressed:
+                        type: boolean
+                      staff_id:
+                        type: string
+                      file_updated_time:
+                        type: integer
+                      cl_name:
+                        type: string
+                      category:
+                        type: string
+                      is_password_protected:
+                        type: boolean
+                      ip_address:
+                        type: string
+                      cl_id:
+                        type: string
+                      is_hidden:
+                        type: boolean
+                      file_updated_timestamp:
+                        type: string
+                      staff_tags:
+                        type: array
+                        items:
+                          type: string
+                      cl_ids:
+                        type: array
+                        items:
+                          type: string
+                      data_levels:
+                        type: array
+                        items:
+                          type: integer
+                      file_type:
+                        type: string
+                      file_created_time:
+                        type: integer
+                      file_type_categories:
+                        type: array
+                        items:
+                          type: string
+                      staff_tag_ids:
+                        type: array
+                        items:
+                          type: string
+                      dept_ids:
+                        type: array
+                        items:
+                          type: string
+                      expand:
+                        type: object
+                        properties:
+                          rule_version:
+                            type: object
+                            properties:
+                              cond_ticket:
+                                type: string
+                              cond_version:
+                                type: integer
+                              dc_ticket:
+                                type: string
+                              dc_version:
+                                type: integer
+                              filetype_version:
+                                type: integer
+                              policy_ticket:
+                                type: string
+                              policy_version:
+                                type: integer
+                            required:
+                            - cond_ticket
+                            - cond_version
+                            - dc_ticket
+                            - dc_version
+                            - filetype_version
+                            - policy_ticket
+                            - policy_version
+                        required:
+                        - rule_version
+                      has_cls:
+                        type: boolean
+                      data_level:
+                        type: integer
+                      filesize:
+                        type: integer
+                      dept_paths:
+                        type: array
+                        items:
+                          type: string
+                      console_user:
+                        type: string
+                      file_suffix:
+                        type: string
+                      dept_names:
+                        type: array
+                        items:
+                          type: string
+                      filepath:
+                        type: string
+                      file_created_timestamp:
+                        type: string
+                      timestamp:
+                        type: string
+                      file_description:
+                        type: string
+                      device_id:
+                        type: string
+                      filename:
+                        type: string
+                      device_code:
+                        type: string
+                      data_level_names:
+                        type: array
+                        items:
+                          type: string
+                      data_level_name:
+                        type: string
+                      event_id:
+                        type: string
+                      staff_name:
+                        type: string
+                      uid:
+                        type: string
+                      md5_hash:
+                        type: string
+                      cl_names:
+                        type: array
+                        items:
+                          type: string
+                      category_display_name:
+                        type: string
+                    required:
+                    - is_compressed
+                    - staff_id
+                    - file_updated_time
+                    - cl_name
+                    - category
+                    - is_password_protected
+                    - ip_address
+                    - cl_id
+                    - is_hidden
+                    - file_updated_timestamp
+                    - staff_tags
+                    - cl_ids
+                    - data_levels
+                    - file_type
+                    - file_created_time
+                    - file_type_categories
+                    - staff_tag_ids
+                    - dept_ids
+                    - expand
+                    - has_cls
+                    - data_level
+                    - filesize
+                    - dept_paths
+                    - console_user
+                    - file_suffix
+                    - dept_names
+                    - filepath
+                    - file_created_timestamp
+                    - timestamp
+                    - file_description
+                    - device_id
+                    - filename
+                    - device_code
+                    - data_level_names
+                    - data_level_name
+                    - event_id
+                    - staff_name
+                    - uid
+                    - md5_hash
+                    - cl_names
+                    - category_display_name
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: Normal
+                data:
+                  is_compressed: false
+                  staff_id: 727e0d76-24dd-41d9-94c5-7d42cefc6acb
+                  file_updated_time: 1712495687000
+                  cl_name: 数据来源-测试
+                  category: file_scan_task
+                  is_password_protected: false
+                  ip_address: 192.168.96.169
+                  cl_id: e4362cd0-cdd4-4b6b-9010-feb82e4e2853
+                  is_hidden: false
+                  file_updated_timestamp: '2024-04-07T21:14:47+08:00'
+                  staff_tags:
+                  - 高风险员工
+                  - '9'
+                  - '15'
+                  - 某些员工
+                  - EXO,E不发音
+                  cl_ids:
+                  - 47778687-933a-4de7-a736-7698f56a2812
+                  - 481314d8-c028-41b3-a534-32515fcd4e2f
+                  - e4362cd0-cdd4-4b6b-9010-feb82e4e2853
+                  - f8382879-894a-4ddd-8375-ff4be46784cd
+                  data_levels:
+                  - 1
+                  - 1
+                  - 4
+                  - 4
+                  file_type: docx
+                  file_created_time: 1712495687000
+                  file_type_categories:
+                  - ab
+                  - txt
+                  staff_tag_ids:
+                  - 766b336e-1c00-48d7-9e9a-77c4ae1da89a
+                  - 9735c916-d38b-4ca2-9914-26ad9c7fd980
+                  - 12826547-1a89-4176-93b0-1d2b252d9c1d
+                  - 012678c5-7f30-441f-bd9c-2e8f31226a7b
+                  - 4e913b0d-ca48-4dfd-9a19-6d55ae2b98eb
+                  dept_ids:
+                  - 6cbf127d-20f5-4322-93b5-e4a515ae356a
+                  expand:
+                    rule_version:
+                      cond_ticket: ''
+                      cond_version: 155
+                      dc_ticket: ''
+                      dc_version: 1278
+                      filetype_version: 44
+                      policy_ticket: ''
+                      policy_version: 2763
+                  has_cls: true
+                  data_level: 4
+                  filesize: 10039
+                  dept_paths:
+                  - 薮猫大公司/test1
+                  console_user: serval-L410\root
+                  file_suffix: docx
+                  dept_names:
+                  - test1
+                  filepath: /home/serval/桌面/filescan/文件格式/支持格式/办公类型/docx.docx
+                  file_created_timestamp: '2024-04-07T21:14:47+08:00'
+                  timestamp: '2024-09-26T14:13:31+08:00'
+                  file_description: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+                  device_id: 2a919a66-076a-4567-bc9d-fece1d0298a7
+                  filename: docx.docx
+                  device_code: PC-000236
+                  data_level_names:
+                  - 公开数据
+                  - 公开数据
+                  - 机密数据
+                  - 机密数据
+                  data_level_name: 机密数据
+                  event_id: a47e7b71-37b9-44f8-a9c1-d3a4d218f8b7
+                  staff_name: 周周
+                  uid: FCv2LJIB1BSg0pzjorSY
+                  md5_hash: 49cb62ef6d6707208c1efb8952477092
+                  cl_names:
+                  - 测试关键词-内容
+                  - 文件格式1
+                  - 数据来源-测试
+                  - 文件内容-测试
+                  category_display_name: Asset Scan
+      security: []

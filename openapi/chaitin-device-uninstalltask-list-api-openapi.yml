@@ -1,0 +1,522 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account device/uninstalltask/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: device/uninstalltask/list
+paths:
+  /device/uninstalltask/list:
+    post:
+      summary: 卸载任务列表
+      deprecated: false
+      description: ''
+      tags:
+      - device/uninstalltask/list
+      parameters:
+      - name: page
+        in: query
+        description: ''
+        required: true
+        example: '1'
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: ''
+        required: true
+        example: '10'
+        schema:
+          type: string
+      - name: search
+        in: query
+        description: ''
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: priority
+        in: header
+        description: ''
+        required: true
+        example: u=1, i
+        schema:
+          type: string
+      - name: x-cs-header-app
+        in: header
+        description: ''
+        required: true
+        example: qzh
+        schema:
+          type: string
+      - name: x-cs-header-company
+        in: header
+        description: ''
+        required: true
+        example: eeff7c64-5070-4582-8b93-fbcc57db7771
+        schema:
+          type: string
+      - name: x-cs-header-module
+        in: header
+        description: ''
+        required: true
+        example: desktop-management/device/uninstall
+        schema:
+          type: string
+      - name: x-cs-header-timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Cookie
+        in: header
+        description: ''
+        required: true
+        example: sid=Fe26.2**8381d1ad983eda74bd39868aa4ddc3ac8b6bfa06a35e41ed0ef174091df26825*jwQXwnlmCIXpJ3K9p_050Q*Gs8kDt-W-64TCWZHHsIuLcz7rrcIMuX9_ePHDz6Di4GNiDI1LXxmv9dma7VHz2WyWRkKtcxb1S2zGsg_PZhz912eyRF4Q_kWce-giTRpk5-2Y4on6xcax7Kd6J0ajxCsMiFbHEVLefVRFjQ0BBgPAeLkVW5AFyNZbb8Ul8kHIh-Ge1KiVqymF_X-dbBQgvcUgKGeG-ynmmoKhv7HiDEQCux37pEtBVnQ5_8j9GWW9PM**b8bbecfef477c572be283e959eb1e02a8124eefff971ec4c2d22d109b68f1a36*VbDaMM6B7JAaC6823vvj2KWOHJCo0wYJruEIXXv_YDA
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      total:
+                        type: integer
+                      pages:
+                        type: object
+                        properties:
+                          page:
+                            type: integer
+                          page_size:
+                            type: integer
+                        required:
+                        - page
+                        - page_size
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            device_tags:
+                              type: array
+                              items: {}
+                            staff_tags:
+                              type: array
+                              items: {}
+                            create_by:
+                              type: object
+                              properties:
+                                uid:
+                                  type: string
+                                name:
+                                  type: string
+                                username:
+                                  type: string
+                                email:
+                                  type: string
+                              required:
+                              - uid
+                              - name
+                              - username
+                              - email
+                              nullable: true
+                            id:
+                              type: integer
+                            departments:
+                              type: array
+                              items: {}
+                            uid:
+                              type: string
+                            device_ids:
+                              type: array
+                              items:
+                                type: string
+                            staff_ids:
+                              type: array
+                              items: {}
+                            create_time:
+                              type: string
+                            update_time:
+                              type: string
+                            dept_ids:
+                              type: array
+                              items: {}
+                            company_id:
+                              type: string
+                            device_tag_ids:
+                              type: array
+                              items: {}
+                            staffs:
+                              type: array
+                              items: {}
+                            devices:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  uid:
+                                    type: string
+                                  code:
+                                    type: string
+                                  name:
+                                    type: string
+                                  family:
+                                    type: string
+                                  architecture:
+                                    type: string
+                                  life_status:
+                                    type: string
+                                  status:
+                                    type: string
+                                required:
+                                - uid
+                                - code
+                                - name
+                                - family
+                                - architecture
+                                - life_status
+                                - status
+                            staff_tag_ids:
+                              type: array
+                              items: {}
+                            name:
+                              type: string
+                            update_by_id:
+                              type: string
+                              nullable: true
+                            total_uninstall_count:
+                              type: integer
+                          required:
+                          - device_tags
+                          - staff_tags
+                          - create_by
+                          - id
+                          - departments
+                          - uid
+                          - device_ids
+                          - staff_ids
+                          - create_time
+                          - update_time
+                          - dept_ids
+                          - company_id
+                          - device_tag_ids
+                          - staffs
+                          - devices
+                          - staff_tag_ids
+                          - name
+                          - update_by_id
+                          - total_uninstall_count
+                    required:
+                    - total
+                    - pages
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  total: 38
+                  pages:
+                    page: 1
+                    page_size: 10
+                  results:
+                  - device_tags: []
+                    staff_tags: []
+                    create_by:
+                      uid: 2e9dc644-1208-4daa-ac70-ff3774ed0ec6
+                      name: huyajie
+                      username: huyajie
+                      email: 2196900073@qq.com
+                    id: 105
+                    departments: []
+                    uid: 3f9f6a0d-f9a6-46b7-92d7-4ae17e6487ef
+                    device_ids:
+                    - 1c16c892-242c-467c-add4-8ab0f00f26e9
+                    - a531ef8a-c817-41e6-875b-e70da1cd9963
+                    staff_ids: []
+                    create_time: '2025-07-03T08:10:26.071860Z'
+                    update_time: '2025-07-03T08:10:26.071887Z'
+                    dept_ids: []
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    device_tag_ids: []
+                    staffs: []
+                    devices:
+                    - uid: 1c16c892-242c-467c-add4-8ab0f00f26e9
+                      code: PC-000003
+                      name: DNAMEad1ee8a92d1c7eae
+                      family: macOS
+                      architecture: arm64
+                      life_status: uninstalled
+                      status: unknown
+                    - uid: a531ef8a-c817-41e6-875b-e70da1cd9963
+                      code: PC-000183
+                      name: DNAME5c85a5de1de56ab6
+                      family: macOS
+                      architecture: arm64
+                      life_status: uninstalled
+                      status: unknown
+                    staff_tag_ids: []
+                    name: hhh
+                    update_by_id: 2e9dc644-1208-4daa-ac70-ff3774ed0ec6
+                    total_uninstall_count: 2
+                  - device_tags: []
+                    staff_tags: []
+                    create_by:
+                      uid: d3ec3797-079c-436f-9241-8e2bd2f9963e
+                      name: wangshun
+                      username: wangshun
+                      email: shun.wang@cyberserval.cn
+                    id: 104
+                    departments: []
+                    uid: 726786da-3e99-4127-9225-6cea89c48fd1
+                    device_ids:
+                    - 1337db19-bf38-44de-8590-688c2c8b1996
+                    staff_ids: []
+                    create_time: '2025-07-03T06:30:24.418030Z'
+                    update_time: '2025-07-03T06:30:24.418339Z'
+                    dept_ids: []
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    device_tag_ids: []
+                    staffs: []
+                    devices: []
+                    staff_tag_ids: []
+                    name: '1'
+                    update_by_id: d3ec3797-079c-436f-9241-8e2bd2f9963e
+                    total_uninstall_count: 0
+                  - device_tags: []
+                    staff_tags: []
+                    create_by:
+                      uid: d3ec3797-079c-436f-9241-8e2bd2f9963e
+                      name: wangshun
+                      username: wangshun
+                      email: shun.wang@cyberserval.cn
+                    id: 98
+                    departments: []
+                    uid: 9fba142b-d437-45c3-b310-46210e7b5067
+                    device_ids:
+                    - 1337db19-bf38-44de-8590-688c2c8b1996
+                    - ea79fb15-1bca-4fb9-89ff-75c0689b5843
+                    staff_ids: []
+                    create_time: '2025-07-02T10:12:36.099569Z'
+                    update_time: '2025-07-02T10:12:36.099690Z'
+                    dept_ids: []
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    device_tag_ids: []
+                    staffs: []
+                    devices: []
+                    staff_tag_ids: []
+                    name: 测试
+                    update_by_id: d3ec3797-079c-436f-9241-8e2bd2f9963e
+                    total_uninstall_count: 0
+                  - device_tags: []
+                    staff_tags: []
+                    create_by: null
+                    id: 60
+                    departments: []
+                    uid: a9e0d570-84ed-4b08-b758-7a9868e7f943
+                    device_ids:
+                    - 6b3cd1c4-b6ae-4224-bf50-bb83041caf62
+                    staff_ids: []
+                    create_time: '2025-07-02T08:23:16.238343Z'
+                    update_time: '2025-07-02T08:23:16.238381Z'
+                    dept_ids: []
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    device_tag_ids: []
+                    staffs: []
+                    devices: []
+                    staff_tag_ids: []
+                    name: 自动卸载-202507021623_22
+                    update_by_id: null
+                    total_uninstall_count: 0
+                  - device_tags: []
+                    staff_tags: []
+                    create_by: null
+                    id: 59
+                    departments: []
+                    uid: d56cbc4b-1584-4ec2-8a91-28e44e55410a
+                    device_ids:
+                    - 6b3cd1c4-b6ae-4224-bf50-bb83041caf62
+                    staff_ids: []
+                    create_time: '2025-07-02T08:23:16.086629Z'
+                    update_time: '2025-07-02T08:23:16.086657Z'
+                    dept_ids: []
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    device_tag_ids: []
+                    staffs: []
+                    devices: []
+                    staff_tag_ids: []
+                    name: 自动卸载-202507021623_21
+                    update_by_id: null
+                    total_uninstall_count: 0
+                  - device_tags: []
+                    staff_tags: []
+                    create_by: null
+                    id: 58
+                    departments: []
+                    uid: ed59f35e-9a57-4129-97c7-8dd226c2464e
+                    device_ids:
+                    - 6b3cd1c4-b6ae-4224-bf50-bb83041caf62
+                    staff_ids: []
+                    create_time: '2025-07-02T08:23:15.910981Z'
+                    update_time: '2025-07-02T08:23:15.911005Z'
+                    dept_ids: []
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    device_tag_ids: []
+                    staffs: []
+                    devices: []
+                    staff_tag_ids: []
+                    name: 自动卸载-202507021623_20
+                    update_by_id: null
+                    total_uninstall_count: 0
+                  - device_tags: []
+                    staff_tags: []
+                    create_by: null
+                    id: 57
+                    departments: []
+                    uid: 5fe74397-14a6-494a-a4e7-7fe9401a0698
+                    device_ids:
+                    - 6b3cd1c4-b6ae-4224-bf50-bb83041caf62
+                    staff_ids: []
+                    create_time: '2025-07-02T08:23:15.808826Z'
+                    update_time: '2025-07-02T08:23:15.808852Z'
+                    dept_ids: []
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    device_tag_ids: []
+                    staffs: []
+                    devices: []
+                    staff_tag_ids: []
+                    name: 自动卸载-202507021623_19
+                    update_by_id: null
+                    total_uninstall_count: 0
+                  - device_tags: []
+                    staff_tags: []
+                    create_by: null
+                    id: 56
+                    departments: []
+                    uid: 1dbd1bd8-b93b-42bb-88c0-622b4e8a0042
+                    device_ids:
+                    - 6b3cd1c4-b6ae-4224-bf50-bb83041caf62
+                    staff_ids: []
+                    create_time: '2025-07-02T08:23:15.699889Z'
+                    update_time: '2025-07-02T08:23:15.699914Z'
+                    dept_ids: []
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    device_tag_ids: []
+                    staffs: []
+                    devices: []
+                    staff_tag_ids: []
+                    name: 自动卸载-202507021623_18
+                    update_by_id: null
+                    total_uninstall_count: 0
+                  - device_tags: []
+                    staff_tags: []
+                    create_by: null
+                    id: 55
+                    departments: []
+                    uid: 8863493e-3cc6-4982-a153-fe886d57f686
+                    device_ids:
+                    - 6b3cd1c4-b6ae-4224-bf50-bb83041caf62
+                    staff_ids: []
+                    create_time: '2025-07-02T08:23:15.592740Z'
+                    update_time: '2025-07-02T08:23:15.592765Z'
+                    dept_ids: []
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    device_tag_ids: []
+                    staffs: []
+                    devices: []
+                    staff_tag_ids: []
+                    name: 自动卸载-202507021623_17
+                    update_by_id: null
+                    total_uninstall_count: 0
+                  - device_tags: []
+                    staff_tags: []
+                    create_by: null
+                    id: 54
+                    departments: []
+                    uid: 180b75ff-86cd-4daf-b249-83156fabf400
+                    device_ids:
+                    - 6b3cd1c4-b6ae-4224-bf50-bb83041caf62
+                    staff_ids: []
+                    create_time: '2025-07-02T08:23:15.486973Z'
+                    update_time: '2025-07-02T08:23:15.487000Z'
+                    dept_ids: []
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    device_tag_ids: []
+                    staffs: []
+                    devices: []
+                    staff_tag_ids: []
+                    name: 自动卸载-202507021623_16
+                    update_by_id: null
+                    total_uninstall_count: 0
+      security: []

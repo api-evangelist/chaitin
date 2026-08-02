@@ -1,0 +1,143 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account api_log API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: api_log
+paths:
+  /api/ApiIdContextLogAPI:
+    get:
+      operationId: ApiIdContextLogAPI_get
+      summary: GET /api/ApiIdContextLogAPI
+      tags:
+      - api_log
+      parameters:
+      - name: api_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: count
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: event_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: req_start_time
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+  /api/RunStatAPI:
+    get:
+      operationId: RunStatAPI_get
+      summary: GET /api/RunStatAPI
+      tags:
+      - api_log
+      parameters:
+      - name: api_id
+        in: query
+        required: true
+        description: API UUID
+        schema:
+          type: string
+          description: API UUID
+      - name: duration
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+  /api/SrcIPContextLogAPI:
+    get:
+      operationId: SrcIPContextLogAPI_get
+      summary: GET /api/SrcIPContextLogAPI
+      tags:
+      - api_log
+      parameters:
+      - name: count
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: event_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: req_start_time
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: src_ip
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/UserContextLogAPI:
+    get:
+      operationId: UserContextLogAPI_get
+      summary: GET /api/UserContextLogAPI
+      tags:
+      - api_log
+      parameters:
+      - name: count
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: event_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: pii_device_id_value
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: pii_session_value
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: pii_user_id_value
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: pii_username_value
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: req_start_time
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false

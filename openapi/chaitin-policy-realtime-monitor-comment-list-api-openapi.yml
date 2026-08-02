@@ -1,0 +1,209 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policy/realtime_monitor/comment/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policy/realtime_monitor/comment/list
+  description: 策略管理/实时监控/评论/列表
+paths:
+  /policy/realtime_monitor/comment/list:
+    post:
+      summary: 实时监控评论列表
+      deprecated: false
+      description: ''
+      tags:
+      - policy/realtime_monitor/comment/list
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                event_id:
+                  type: array
+                  items:
+                    type: string
+              required:
+              - event_id
+            example:
+              event_id:
+              - 3FDE9C7D-4029-4DE7-AAE6-76004106BBF1
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      total:
+                        type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            event_id:
+                              type: string
+                            create_time:
+                              type: string
+                            company_id:
+                              type: string
+                            comment:
+                              type: string
+                            update_time:
+                              type: string
+                            update_by_id:
+                              type: string
+                            create_by_id:
+                              type: string
+                            uid:
+                              type: string
+                            id:
+                              type: integer
+                            expand:
+                              type: object
+                              properties: {}
+                            user:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                username:
+                                  type: string
+                                dept_name:
+                                  type: string
+                              required:
+                              - name
+                              - username
+                              - dept_name
+                          required:
+                          - event_id
+                          - create_time
+                          - company_id
+                          - comment
+                          - update_time
+                          - update_by_id
+                          - create_by_id
+                          - uid
+                          - id
+                          - expand
+                          - user
+                      page:
+                        type: integer
+                    required:
+                    - total
+                    - results
+                    - page
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  total: 2
+                  results:
+                  - event_id: 3FDE9C7D-4029-4DE7-AAE6-76004106BBF1
+                    create_time: '2025-03-25T02:39:39.281890Z'
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    comment: 这是一个评论测试22
+                    update_time: '2025-03-25T02:39:39.281912Z'
+                    update_by_id: fc1d36eb-98ce-486c-83e7-4f041e22d164
+                    create_by_id: fc1d36eb-98ce-486c-83e7-4f041e22d164
+                    uid: 67030587-1e1f-438b-bd97-9a2f1011f8be
+                    id: 2
+                    expand: {}
+                    user:
+                      name: xuxingwangusername
+                      username: xuxingwang
+                      dept_name: ''
+                  - event_id: 3FDE9C7D-4029-4DE7-AAE6-76004106BBF1
+                    create_time: '2025-03-25T02:38:29.439162Z'
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    comment: 这是一个评论测试
+                    update_time: '2025-03-25T02:38:29.439184Z'
+                    update_by_id: fc1d36eb-98ce-486c-83e7-4f041e22d164
+                    create_by_id: fc1d36eb-98ce-486c-83e7-4f041e22d164
+                    uid: ee3fd528-025e-49dc-a9ac-348b4332c618
+                    id: 1
+                    expand: {}
+                    user:
+                      name: xuxingwangusername
+                      username: xuxingwang
+                      dept_name: ''
+                  page: 1
+      security: []

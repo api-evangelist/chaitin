@@ -1,0 +1,1899 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policylog/channel/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policylog/channel/list
+  description: 日志中心/通道/列表
+paths:
+  /policylog/channel/list:
+    post:
+      summary: 渠道管控列表
+      deprecated: false
+      description: ''
+      tags:
+      - policylog/channel/list
+      parameters:
+      - name: page
+        in: query
+        description: ''
+        required: true
+        example: '1'
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: ''
+        required: true
+        example: '10'
+        schema:
+          type: string
+      - name: search
+        in: query
+        description: ''
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                search:
+                  type: string
+                queries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: string
+              required:
+              - time_range
+              - search
+              - queries
+            example:
+              time_range:
+                begin: '2023-11-28 20:00:00'
+                end: '2023-11-28 21:00:00'
+              search: ''
+              queries:
+              - field: channel
+                operator: is
+                value: feishu
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      page:
+                        type: integer
+                      limit:
+                        type: integer
+                      search_total:
+                        type: integer
+                      total:
+                        type: integer
+                      search_after:
+                        type: array
+                        items:
+                          type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            staff_name:
+                              type: string
+                            md5_hash:
+                              type: string
+                            console_user:
+                              type: string
+                            channel:
+                              type: string
+                            has_cls:
+                              type: boolean
+                            dept_paths:
+                              type: array
+                              items: {}
+                            data_level:
+                              type: integer
+                            sha256_hash:
+                              type: string
+                            dept_names:
+                              type: array
+                              items: {}
+                            filepath:
+                              type: string
+                            staff_tags:
+                              type: array
+                              items: {}
+                            cl_id:
+                              type: string
+                            file_type:
+                              type: string
+                            staff_id:
+                              type: string
+                            action:
+                              type: string
+                            os_friendly_name:
+                              type: string
+                            channel_account:
+                              type: string
+                            file_updated_timestamp:
+                              type: string
+                            file_type_categories:
+                              type: array
+                              items: {}
+                            device_id:
+                              type: string
+                            expand:
+                              type: object
+                              properties:
+                                rule_version:
+                                  type: object
+                                  properties:
+                                    cond_version:
+                                      type: integer
+                                    policy_version:
+                                      type: integer
+                                    filetype_version:
+                                      type: integer
+                                    dc_version:
+                                      type: integer
+                                    dc_ticket:
+                                      type: string
+                                    cond_ticket:
+                                      type: string
+                                    policy_ticket:
+                                      type: string
+                                  required:
+                                  - cond_version
+                                  - policy_version
+                                  - filetype_version
+                                  - dc_version
+                                  - dc_ticket
+                                  - cond_ticket
+                                  - policy_ticket
+                                screen_recording:
+                                  type: boolean
+                                file_source:
+                                  type: string
+                                screenshot:
+                                  type: boolean
+                              required:
+                              - rule_version
+                              - screen_recording
+                              - file_source
+                              - screenshot
+                            filename:
+                              type: string
+                            file_suffix:
+                              type: string
+                            device_code:
+                              type: string
+                            file_policies:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  file_created_timestamp:
+                                    type: string
+                                  file_updated_timestamp:
+                                    type: string
+                                  md5_hash:
+                                    type: string
+                                  policy_id:
+                                    type: string
+                                  is_hidden:
+                                    type: boolean
+                                  policy_name:
+                                    type: string
+                                  filesize:
+                                    type: integer
+                                  policy_group_id:
+                                    type: string
+                                  policy_group_name:
+                                    type: string
+                                  sha256_hash:
+                                    type: string
+                                  risk_level:
+                                    type: integer
+                                  classifications:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        uid:
+                                          type: string
+                                        name:
+                                          type: string
+                                        data_level_name:
+                                          type: string
+                                        data_level:
+                                          type: integer
+                                      required:
+                                      - uid
+                                      - name
+                                      - data_level_name
+                                      - data_level
+                                  filename:
+                                    type: string
+                                  filepath:
+                                    type: string
+                                  is_compressed:
+                                    type: boolean
+                                  file_suffix:
+                                    type: string
+                                  file_type:
+                                    type: string
+                                  file_updated_time:
+                                    type: integer
+                                  is_password_protected:
+                                    type: boolean
+                                  action:
+                                    type: string
+                                  risk_name:
+                                    type: string
+                                  file_created_time:
+                                    type: integer
+                                required:
+                                - file_created_timestamp
+                                - file_updated_timestamp
+                                - md5_hash
+                                - policy_id
+                                - is_hidden
+                                - policy_name
+                                - filesize
+                                - policy_group_id
+                                - policy_group_name
+                                - sha256_hash
+                                - risk_level
+                                - classifications
+                                - filename
+                                - filepath
+                                - is_compressed
+                                - file_suffix
+                                - file_type
+                                - file_updated_time
+                                - is_password_protected
+                                - action
+                                - risk_name
+                                - file_created_time
+                            file_updated_time:
+                              type: integer
+                            file_description:
+                              type: string
+                            extract_file:
+                              type: boolean
+                            data_level_name:
+                              type: string
+                            risk_name:
+                              type: string
+                            staff_email:
+                              type: string
+                            file_created_time:
+                              type: integer
+                            status:
+                              type: string
+                            file_created_timestamp:
+                              type: string
+                            policy_id:
+                              type: string
+                            dept_ids:
+                              type: array
+                              items: {}
+                            data_level_names:
+                              type: array
+                              items:
+                                type: string
+                            is_hidden:
+                              type: boolean
+                            filesize:
+                              type: integer
+                            policy_group_id:
+                              type: string
+                            is_compressed:
+                              type: boolean
+                            data_levels:
+                              type: array
+                              items:
+                                type: integer
+                            timestamp:
+                              type: string
+                            channel_name:
+                              type: string
+                            cl_name:
+                              type: string
+                            company_id:
+                              type: string
+                            policy_name:
+                              type: string
+                            staff_code:
+                              type: string
+                            created_timestamp:
+                              type: string
+                            ip_address:
+                              type: string
+                            cl_ids:
+                              type: array
+                              items:
+                                type: string
+                            policy_group_name:
+                              type: string
+                            risk_level:
+                              type: integer
+                            agent_version:
+                              type: string
+                            is_blocked:
+                              type: boolean
+                            '@timestamp':
+                              type: integer
+                            is_password_protected:
+                              type: boolean
+                            os_name:
+                              type: string
+                            time:
+                              type: integer
+                            category:
+                              type: string
+                            operation:
+                              type: string
+                            staff_tag_ids:
+                              type: array
+                              items: {}
+                            cl_names:
+                              type: array
+                              items:
+                                type: string
+                            event_id:
+                              type: string
+                            uid:
+                              type: string
+                            _type:
+                              type: string
+                            _index:
+                              type: string
+                            action_display_name:
+                              type: string
+                            llm:
+                              type: object
+                              properties:
+                                duration:
+                                  type: integer
+                                msg:
+                                  type: string
+                                summary:
+                                  type: string
+                                cl_name:
+                                  type: string
+                                cl_id:
+                                  type: string
+                                is_company_doc:
+                                  type: boolean
+                                cl_path:
+                                  type: array
+                                  items:
+                                    type: string
+                                has_cls:
+                                  type: boolean
+                                cl_ids:
+                                  type: array
+                                  items:
+                                    oneOf:
+                                    - type: string
+                                    - type: integer
+                                cl_names:
+                                  type: array
+                                  items:
+                                    type: string
+                                status:
+                                  type: string
+                                status_display:
+                                  type: string
+                              required:
+                              - duration
+                              - msg
+                              - cl_name
+                              - cl_id
+                              - is_company_doc
+                              - cl_path
+                              - has_cls
+                              - cl_ids
+                              - cl_names
+                              - status
+                              - status_display
+                          required:
+                          - staff_name
+                          - md5_hash
+                          - console_user
+                          - channel
+                          - has_cls
+                          - dept_paths
+                          - data_level
+                          - sha256_hash
+                          - dept_names
+                          - filepath
+                          - staff_tags
+                          - cl_id
+                          - file_type
+                          - staff_id
+                          - action
+                          - os_friendly_name
+                          - channel_account
+                          - file_updated_timestamp
+                          - file_type_categories
+                          - device_id
+                          - expand
+                          - filename
+                          - file_suffix
+                          - device_code
+                          - file_policies
+                          - file_updated_time
+                          - file_description
+                          - extract_file
+                          - data_level_name
+                          - risk_name
+                          - staff_email
+                          - file_created_time
+                          - status
+                          - file_created_timestamp
+                          - policy_id
+                          - dept_ids
+                          - data_level_names
+                          - is_hidden
+                          - filesize
+                          - policy_group_id
+                          - is_compressed
+                          - data_levels
+                          - timestamp
+                          - channel_name
+                          - cl_name
+                          - company_id
+                          - policy_name
+                          - staff_code
+                          - created_timestamp
+                          - ip_address
+                          - cl_ids
+                          - policy_group_name
+                          - risk_level
+                          - agent_version
+                          - is_blocked
+                          - '@timestamp'
+                          - is_password_protected
+                          - os_name
+                          - time
+                          - category
+                          - operation
+                          - staff_tag_ids
+                          - cl_names
+                          - event_id
+                          - uid
+                          - _type
+                          - _index
+                          - action_display_name
+                          - llm
+                    required:
+                    - index
+                    - page
+                    - limit
+                    - search_total
+                    - total
+                    - search_after
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  index:
+                  - qzhddr_policylog_channel
+                  page: 1
+                  limit: 10
+                  search_total: 10
+                  total: 10
+                  search_after:
+                  - 1714292076771
+                  results:
+                  - staff_name: ''
+                    md5_hash: 68be385fd16e0b811a59e22a669bd7f8
+                    console_user: lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT
+                    channel: feishu
+                    has_cls: true
+                    dept_paths: []
+                    data_level: 2
+                    sha256_hash: ''
+                    dept_names: []
+                    filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                    staff_tags: []
+                    cl_id: 2d693141-a08e-4610-b004-e1670285adfb
+                    file_type: txt
+                    staff_id: ''
+                    action: warning
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    channel_account: '-'
+                    file_updated_timestamp: '2024-04-28T08:14:36Z'
+                    file_type_categories: []
+                    device_id: 76288e5f-2f4c-4825-aea6-28ac0defd7cf
+                    expand:
+                      rule_version:
+                        cond_version: 9
+                        policy_version: 64
+                        filetype_version: 2
+                        dc_version: 48
+                        dc_ticket: 17965cb8eb537e2aeede87676cbb0b17
+                        cond_ticket: eecad0357776fd66653176069a21543d
+                        policy_ticket: 04223cf9b2ee38a2452c4c4a118e1d28
+                      screen_recording: false
+                      file_source: 本地创建
+                      screenshot: false
+                    filename: 通讯录10.docx
+                    file_suffix: txt
+                    device_code: PC-000008
+                    file_policies:
+                    - file_created_timestamp: '2024-04-28T08:14:36Z'
+                      file_updated_timestamp: '2024-04-28T08:14:36Z'
+                      md5_hash: 68be385fd16e0b811a59e22a669bd7f8
+                      policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                      is_hidden: false
+                      policy_name: win
+                      filesize: 102
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      policy_group_name: 默认组
+                      sha256_hash: 5f01540585e9fb48b27880b9612e80f190b551d2f9def1760c83ed3133014002
+                      risk_level: 2
+                      classifications:
+                      - uid: 143721b2-3d65-411c-9f9c-240614ac56f2
+                        name: 关键词组2
+                        data_level_name: 公开数据
+                        data_level: 1
+                      - uid: 2d693141-a08e-4610-b004-e1670285adfb
+                        name: 关键词组3
+                        data_level_name: 内部数据
+                        data_level: 2
+                      - uid: d2e001c3-d95d-40a4-b5d9-266b625025ee
+                        name: 关键词组4
+                        data_level_name: 内部数据
+                        data_level: 2
+                      filename: 关键词组-命中.txt
+                      filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                      is_compressed: false
+                      file_suffix: txt
+                      file_type: txt
+                      file_updated_time: 1714292076771
+                      is_password_protected: false
+                      action: warning
+                      risk_name: 中危
+                      file_created_time: 1714292076771
+                    file_updated_time: 1714292076771
+                    file_description: '-'
+                    extract_file: false
+                    data_level_name: 内部数据
+                    risk_name: 中危
+                    staff_email: ''
+                    file_created_time: 1714292076771
+                    status: created
+                    file_created_timestamp: '2024-04-28T08:14:36Z'
+                    policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                    dept_ids: []
+                    data_level_names:
+                    - 公开数据
+                    - 内部数据
+                    - 内部数据
+                    is_hidden: false
+                    filesize: 102
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    is_compressed: false
+                    data_levels:
+                    - 1
+                    - 2
+                    - 2
+                    timestamp: '2024-04-28T08:14:36Z'
+                    channel_name: 飞书
+                    cl_name: 关键词组3
+                    company_id: f50ef121-b772-474a-903a-622e9ec0e921
+                    policy_name: win
+                    staff_code: ''
+                    created_timestamp: '2024-04-28T08:14:36Z'
+                    ip_address: 192.168.96.142
+                    cl_ids:
+                    - 143721b2-3d65-411c-9f9c-240614ac56f2
+                    - 2d693141-a08e-4610-b004-e1670285adfb
+                    - d2e001c3-d95d-40a4-b5d9-266b625025ee
+                    policy_group_name: 默认组
+                    risk_level: 2
+                    agent_version: 3.1.0
+                    is_blocked: false
+                    '@timestamp': 1714292076771
+                    is_password_protected: false
+                    os_name: Windows
+                    time: 1714292076771
+                    category: channel
+                    operation: outgoing
+                    staff_tag_ids: []
+                    cl_names:
+                    - 关键词组2
+                    - 关键词组3
+                    - 关键词组4
+                    event_id: '1714292076774'
+                    uid: EejFI48Bn-zjSlBFMiKg
+                    _type: _doc
+                    _index: .ds-qzhddr_policylog_channel_s-2024.04.28-000007
+                    action_display_name: 弹窗提醒
+                  - staff_name: ''
+                    md5_hash: d3d928e89d45eca03e1a43fe94a74730
+                    console_user: lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT
+                    channel: feishu
+                    has_cls: true
+                    dept_paths: []
+                    data_level: 2
+                    sha256_hash: ''
+                    dept_names: []
+                    filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                    staff_tags: []
+                    cl_id: 2d693141-a08e-4610-b004-e1670285adfb
+                    file_type: txt
+                    staff_id: ''
+                    action: warning
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    channel_account: '-'
+                    file_updated_timestamp: '2024-04-28T08:14:36Z'
+                    file_type_categories: []
+                    device_id: 76288e5f-2f4c-4825-aea6-28ac0defd7cf
+                    expand:
+                      rule_version:
+                        cond_version: 9
+                        policy_version: 64
+                        filetype_version: 2
+                        dc_version: 48
+                        dc_ticket: 17965cb8eb537e2aeede87676cbb0b17
+                        cond_ticket: eecad0357776fd66653176069a21543d
+                        policy_ticket: 04223cf9b2ee38a2452c4c4a118e1d28
+                      screen_recording: false
+                      file_source: 本地创建
+                      screenshot: false
+                    filename: 医院药品采购合同模板.doc
+                    file_suffix: txt
+                    device_code: PC-000008
+                    file_policies:
+                    - file_created_timestamp: '2024-04-28T08:14:36Z'
+                      file_updated_timestamp: '2024-04-28T08:14:36Z'
+                      md5_hash: d3d928e89d45eca03e1a43fe94a74730
+                      policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                      is_hidden: false
+                      policy_name: win
+                      filesize: 102
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      policy_group_name: 默认组
+                      sha256_hash: 5f01540585e9fb48b27880b9612e80f190b551d2f9def1760c83ed3133014002
+                      risk_level: 2
+                      classifications:
+                      - uid: 143721b2-3d65-411c-9f9c-240614ac56f2
+                        name: 关键词组2
+                        data_level_name: 公开数据
+                        data_level: 1
+                      - uid: 2d693141-a08e-4610-b004-e1670285adfb
+                        name: 关键词组3
+                        data_level_name: 内部数据
+                        data_level: 2
+                      - uid: d2e001c3-d95d-40a4-b5d9-266b625025ee
+                        name: 关键词组4
+                        data_level_name: 内部数据
+                        data_level: 2
+                      filename: 关键词组-命中.txt
+                      filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                      is_compressed: false
+                      file_suffix: txt
+                      file_type: txt
+                      file_updated_time: 1714292076771
+                      is_password_protected: false
+                      action: warning
+                      risk_name: 中危
+                      file_created_time: 1714292076771
+                    file_updated_time: 1714292076771
+                    file_description: '-'
+                    extract_file: false
+                    data_level_name: 内部数据
+                    risk_name: 中危
+                    staff_email: ''
+                    file_created_time: 1714292076771
+                    status: created
+                    file_created_timestamp: '2024-04-28T08:14:36Z'
+                    policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                    dept_ids: []
+                    data_level_names:
+                    - 公开数据
+                    - 内部数据
+                    - 内部数据
+                    is_hidden: false
+                    filesize: 102
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    is_compressed: false
+                    data_levels:
+                    - 1
+                    - 2
+                    - 2
+                    timestamp: '2024-04-28T08:14:36Z'
+                    channel_name: 飞书
+                    cl_name: 关键词组3
+                    company_id: f50ef121-b772-474a-903a-622e9ec0e921
+                    policy_name: win
+                    staff_code: ''
+                    created_timestamp: '2024-04-28T08:14:36Z'
+                    ip_address: 192.168.96.142
+                    cl_ids:
+                    - 143721b2-3d65-411c-9f9c-240614ac56f2
+                    - 2d693141-a08e-4610-b004-e1670285adfb
+                    - d2e001c3-d95d-40a4-b5d9-266b625025ee
+                    policy_group_name: 默认组
+                    risk_level: 2
+                    agent_version: 3.1.0
+                    is_blocked: false
+                    '@timestamp': 1714292076771
+                    is_password_protected: false
+                    os_name: Windows
+                    time: 1714292076771
+                    category: channel
+                    operation: outgoing
+                    staff_tag_ids: []
+                    cl_names:
+                    - 关键词组2
+                    - 关键词组3
+                    - 关键词组4
+                    event_id: '1714292076775'
+                    uid: EujFI48Bn-zjSlBFMiKr
+                    _type: _doc
+                    _index: .ds-qzhddr_policylog_channel_s-2024.04.28-000007
+                    action_display_name: 弹窗提醒
+                  - staff_name: ''
+                    md5_hash: 3173ac9c0ee8266a31d5b6fde37d7bb5
+                    console_user: lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT
+                    channel: feishu
+                    has_cls: true
+                    dept_paths: []
+                    data_level: 2
+                    sha256_hash: ''
+                    dept_names: []
+                    filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                    staff_tags: []
+                    cl_id: 2d693141-a08e-4610-b004-e1670285adfb
+                    file_type: txt
+                    staff_id: ''
+                    action: warning
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    channel_account: '-'
+                    file_updated_timestamp: '2024-04-28T08:14:36Z'
+                    file_type_categories: []
+                    device_id: 76288e5f-2f4c-4825-aea6-28ac0defd7cf
+                    expand:
+                      rule_version:
+                        cond_version: 9
+                        policy_version: 64
+                        filetype_version: 2
+                        dc_version: 48
+                        dc_ticket: 17965cb8eb537e2aeede87676cbb0b17
+                        cond_ticket: eecad0357776fd66653176069a21543d
+                        policy_ticket: 04223cf9b2ee38a2452c4c4a118e1d28
+                      screen_recording: false
+                      file_source: 本地创建
+                      screenshot: false
+                    filename: 人力资源月报表.pdf
+                    file_suffix: txt
+                    device_code: PC-000008
+                    file_policies:
+                    - file_created_timestamp: '2024-04-28T08:14:36Z'
+                      file_updated_timestamp: '2024-04-28T08:14:36Z'
+                      md5_hash: 3173ac9c0ee8266a31d5b6fde37d7bb5
+                      policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                      is_hidden: false
+                      policy_name: win
+                      filesize: 102
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      policy_group_name: 默认组
+                      sha256_hash: 5f01540585e9fb48b27880b9612e80f190b551d2f9def1760c83ed3133014002
+                      risk_level: 2
+                      classifications:
+                      - uid: 143721b2-3d65-411c-9f9c-240614ac56f2
+                        name: 关键词组2
+                        data_level_name: 公开数据
+                        data_level: 1
+                      - uid: 2d693141-a08e-4610-b004-e1670285adfb
+                        name: 关键词组3
+                        data_level_name: 内部数据
+                        data_level: 2
+                      - uid: d2e001c3-d95d-40a4-b5d9-266b625025ee
+                        name: 关键词组4
+                        data_level_name: 内部数据
+                        data_level: 2
+                      filename: 关键词组-命中.txt
+                      filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                      is_compressed: false
+                      file_suffix: txt
+                      file_type: txt
+                      file_updated_time: 1714292076771
+                      is_password_protected: false
+                      action: warning
+                      risk_name: 中危
+                      file_created_time: 1714292076771
+                    file_updated_time: 1714292076771
+                    file_description: '-'
+                    extract_file: false
+                    data_level_name: 内部数据
+                    risk_name: 中危
+                    staff_email: ''
+                    file_created_time: 1714292076771
+                    status: created
+                    file_created_timestamp: '2024-04-28T08:14:36Z'
+                    policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                    dept_ids: []
+                    data_level_names:
+                    - 公开数据
+                    - 内部数据
+                    - 内部数据
+                    is_hidden: false
+                    filesize: 102
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    is_compressed: false
+                    data_levels:
+                    - 1
+                    - 2
+                    - 2
+                    timestamp: '2024-04-28T08:14:36Z'
+                    channel_name: 飞书
+                    cl_name: 关键词组3
+                    company_id: f50ef121-b772-474a-903a-622e9ec0e921
+                    policy_name: win
+                    staff_code: ''
+                    created_timestamp: '2024-04-28T08:14:36Z'
+                    ip_address: 192.168.96.142
+                    cl_ids:
+                    - 143721b2-3d65-411c-9f9c-240614ac56f2
+                    - 2d693141-a08e-4610-b004-e1670285adfb
+                    - d2e001c3-d95d-40a4-b5d9-266b625025ee
+                    policy_group_name: 默认组
+                    risk_level: 2
+                    agent_version: 3.1.0
+                    is_blocked: false
+                    '@timestamp': 1714292076771
+                    is_password_protected: false
+                    os_name: Windows
+                    time: 1714292076771
+                    category: channel
+                    operation: outgoing
+                    staff_tag_ids: []
+                    cl_names:
+                    - 关键词组2
+                    - 关键词组3
+                    - 关键词组4
+                    event_id: '1714292076776'
+                    uid: E-jFI48Bn-zjSlBFMiKx
+                    _type: _doc
+                    _index: .ds-qzhddr_policylog_channel_s-2024.04.28-000007
+                    action_display_name: 弹窗提醒
+                  - staff_name: ''
+                    md5_hash: 18185c1c54bc6e86971565809fafdfe9
+                    console_user: lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT
+                    channel: feishu
+                    has_cls: true
+                    dept_paths: []
+                    data_level: 2
+                    sha256_hash: ''
+                    dept_names: []
+                    filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                    staff_tags: []
+                    cl_id: 2d693141-a08e-4610-b004-e1670285adfb
+                    file_type: txt
+                    staff_id: ''
+                    action: warning
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    channel_account: '-'
+                    file_updated_timestamp: '2024-04-28T08:14:36Z'
+                    file_type_categories: []
+                    device_id: 76288e5f-2f4c-4825-aea6-28ac0defd7cf
+                    expand:
+                      rule_version:
+                        cond_version: 9
+                        policy_version: 64
+                        filetype_version: 2
+                        dc_version: 48
+                        dc_ticket: 17965cb8eb537e2aeede87676cbb0b17
+                        cond_ticket: eecad0357776fd66653176069a21543d
+                        policy_ticket: 04223cf9b2ee38a2452c4c4a118e1d28
+                      screen_recording: false
+                      file_source: 本地创建
+                      screenshot: false
+                    filename: 20XX 年计算机系统托管服务协议【简单版】.pdf
+                    file_suffix: txt
+                    device_code: PC-000008
+                    file_policies:
+                    - file_created_timestamp: '2024-04-28T08:14:36Z'
+                      file_updated_timestamp: '2024-04-28T08:14:36Z'
+                      md5_hash: 18185c1c54bc6e86971565809fafdfe9
+                      policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                      is_hidden: false
+                      policy_name: win
+                      filesize: 102
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      policy_group_name: 默认组
+                      sha256_hash: 5f01540585e9fb48b27880b9612e80f190b551d2f9def1760c83ed3133014002
+                      risk_level: 2
+                      classifications:
+                      - uid: 143721b2-3d65-411c-9f9c-240614ac56f2
+                        name: 关键词组2
+                        data_level_name: 公开数据
+                        data_level: 1
+                      - uid: 2d693141-a08e-4610-b004-e1670285adfb
+                        name: 关键词组3
+                        data_level_name: 内部数据
+                        data_level: 2
+                      - uid: d2e001c3-d95d-40a4-b5d9-266b625025ee
+                        name: 关键词组4
+                        data_level_name: 内部数据
+                        data_level: 2
+                      filename: 关键词组-命中.txt
+                      filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                      is_compressed: false
+                      file_suffix: txt
+                      file_type: txt
+                      file_updated_time: 1714292076771
+                      is_password_protected: false
+                      action: warning
+                      risk_name: 中危
+                      file_created_time: 1714292076771
+                    file_updated_time: 1714292076771
+                    file_description: '-'
+                    extract_file: false
+                    data_level_name: 内部数据
+                    risk_name: 中危
+                    staff_email: ''
+                    file_created_time: 1714292076771
+                    status: created
+                    file_created_timestamp: '2024-04-28T08:14:36Z'
+                    policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                    dept_ids: []
+                    data_level_names:
+                    - 公开数据
+                    - 内部数据
+                    - 内部数据
+                    is_hidden: false
+                    filesize: 102
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    is_compressed: false
+                    data_levels:
+                    - 1
+                    - 2
+                    - 2
+                    timestamp: '2024-04-28T08:14:36Z'
+                    channel_name: 飞书
+                    cl_name: 关键词组3
+                    company_id: f50ef121-b772-474a-903a-622e9ec0e921
+                    policy_name: win
+                    staff_code: ''
+                    created_timestamp: '2024-04-28T08:14:36Z'
+                    ip_address: 192.168.96.142
+                    cl_ids:
+                    - 143721b2-3d65-411c-9f9c-240614ac56f2
+                    - 2d693141-a08e-4610-b004-e1670285adfb
+                    - d2e001c3-d95d-40a4-b5d9-266b625025ee
+                    policy_group_name: 默认组
+                    risk_level: 2
+                    agent_version: 3.1.0
+                    is_blocked: false
+                    '@timestamp': 1714292076771
+                    is_password_protected: false
+                    os_name: Windows
+                    time: 1714292076771
+                    category: channel
+                    operation: outgoing
+                    staff_tag_ids: []
+                    cl_names:
+                    - 关键词组2
+                    - 关键词组3
+                    - 关键词组4
+                    event_id: '1714292076777'
+                    uid: FOjFI48Bn-zjSlBFMiK_
+                    _type: _doc
+                    _index: .ds-qzhddr_policylog_channel_s-2024.04.28-000007
+                    action_display_name: 弹窗提醒
+                  - staff_name: ''
+                    md5_hash: 5e3b28356fc917bfeb0270e32d510146
+                    console_user: lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT
+                    channel: feishu
+                    has_cls: true
+                    dept_paths: []
+                    data_level: 2
+                    sha256_hash: ''
+                    dept_names: []
+                    filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                    staff_tags: []
+                    cl_id: 2d693141-a08e-4610-b004-e1670285adfb
+                    file_type: txt
+                    staff_id: ''
+                    action: warning
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    channel_account: '-'
+                    file_updated_timestamp: '2024-04-28T08:14:36Z'
+                    file_type_categories: []
+                    device_id: 76288e5f-2f4c-4825-aea6-28ac0defd7cf
+                    expand:
+                      rule_version:
+                        cond_version: 9
+                        policy_version: 64
+                        filetype_version: 2
+                        dc_version: 48
+                        dc_ticket: 17965cb8eb537e2aeede87676cbb0b17
+                        cond_ticket: eecad0357776fd66653176069a21543d
+                        policy_ticket: 04223cf9b2ee38a2452c4c4a118e1d28
+                      screen_recording: false
+                      file_source: 本地创建
+                      screenshot: false
+                    filename: 20150324122541755.pdf
+                    file_suffix: txt
+                    device_code: PC-000008
+                    file_policies:
+                    - file_created_timestamp: '2024-04-28T08:14:36Z'
+                      file_updated_timestamp: '2024-04-28T08:14:36Z'
+                      md5_hash: 5e3b28356fc917bfeb0270e32d510146
+                      policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                      is_hidden: false
+                      policy_name: win
+                      filesize: 102
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      policy_group_name: 默认组
+                      sha256_hash: 5f01540585e9fb48b27880b9612e80f190b551d2f9def1760c83ed3133014002
+                      risk_level: 2
+                      classifications:
+                      - uid: 143721b2-3d65-411c-9f9c-240614ac56f2
+                        name: 关键词组2
+                        data_level_name: 公开数据
+                        data_level: 1
+                      - uid: 2d693141-a08e-4610-b004-e1670285adfb
+                        name: 关键词组3
+                        data_level_name: 内部数据
+                        data_level: 2
+                      - uid: d2e001c3-d95d-40a4-b5d9-266b625025ee
+                        name: 关键词组4
+                        data_level_name: 内部数据
+                        data_level: 2
+                      filename: 关键词组-命中.txt
+                      filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                      is_compressed: false
+                      file_suffix: txt
+                      file_type: txt
+                      file_updated_time: 1714292076771
+                      is_password_protected: false
+                      action: warning
+                      risk_name: 中危
+                      file_created_time: 1714292076771
+                    file_updated_time: 1714292076771
+                    file_description: '-'
+                    extract_file: false
+                    data_level_name: 内部数据
+                    risk_name: 中危
+                    staff_email: ''
+                    file_created_time: 1714292076771
+                    status: created
+                    file_created_timestamp: '2024-04-28T08:14:36Z'
+                    policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                    dept_ids: []
+                    data_level_names:
+                    - 公开数据
+                    - 内部数据
+                    - 内部数据
+                    is_hidden: false
+                    filesize: 102
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    is_compressed: false
+                    data_levels:
+                    - 1
+                    - 2
+                    - 2
+                    timestamp: '2024-04-28T08:14:36Z'
+                    channel_name: 飞书
+                    cl_name: 关键词组3
+                    company_id: f50ef121-b772-474a-903a-622e9ec0e921
+                    policy_name: win
+                    staff_code: ''
+                    created_timestamp: '2024-04-28T08:14:36Z'
+                    ip_address: 192.168.96.142
+                    cl_ids:
+                    - 143721b2-3d65-411c-9f9c-240614ac56f2
+                    - 2d693141-a08e-4610-b004-e1670285adfb
+                    - d2e001c3-d95d-40a4-b5d9-266b625025ee
+                    policy_group_name: 默认组
+                    risk_level: 2
+                    agent_version: 3.1.0
+                    is_blocked: false
+                    '@timestamp': 1714292076771
+                    is_password_protected: false
+                    os_name: Windows
+                    time: 1714292076771
+                    category: channel
+                    operation: outgoing
+                    staff_tag_ids: []
+                    cl_names:
+                    - 关键词组2
+                    - 关键词组3
+                    - 关键词组4
+                    event_id: '1714292076778'
+                    uid: FejFI48Bn-zjSlBFMiLF
+                    _type: _doc
+                    _index: .ds-qzhddr_policylog_channel_s-2024.04.28-000007
+                    action_display_name: 弹窗提醒
+                  - staff_name: ''
+                    md5_hash: 6a62e2ebe8236a54de74ae9746ca9c1b
+                    console_user: lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT
+                    channel: feishu
+                    has_cls: true
+                    dept_paths: []
+                    data_level: 2
+                    sha256_hash: ''
+                    dept_names: []
+                    filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                    staff_tags: []
+                    cl_id: 2d693141-a08e-4610-b004-e1670285adfb
+                    file_type: txt
+                    staff_id: ''
+                    action: warning
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    channel_account: '-'
+                    file_updated_timestamp: '2024-04-28T08:14:36Z'
+                    file_type_categories: []
+                    device_id: 76288e5f-2f4c-4825-aea6-28ac0defd7cf
+                    expand:
+                      rule_version:
+                        cond_version: 9
+                        policy_version: 64
+                        filetype_version: 2
+                        dc_version: 48
+                        dc_ticket: 17965cb8eb537e2aeede87676cbb0b17
+                        cond_ticket: eecad0357776fd66653176069a21543d
+                        policy_ticket: 04223cf9b2ee38a2452c4c4a118e1d28
+                      screen_recording: false
+                      file_source: 本地创建
+                      screenshot: false
+                    filename: 节电器销售合同-.docx
+                    file_suffix: txt
+                    device_code: PC-000008
+                    file_policies:
+                    - file_created_timestamp: '2024-04-28T08:14:36Z'
+                      file_updated_timestamp: '2024-04-28T08:14:36Z'
+                      md5_hash: 6a62e2ebe8236a54de74ae9746ca9c1b
+                      policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                      is_hidden: false
+                      policy_name: win
+                      filesize: 102
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      policy_group_name: 默认组
+                      sha256_hash: 5f01540585e9fb48b27880b9612e80f190b551d2f9def1760c83ed3133014002
+                      risk_level: 2
+                      classifications:
+                      - uid: 143721b2-3d65-411c-9f9c-240614ac56f2
+                        name: 关键词组2
+                        data_level_name: 公开数据
+                        data_level: 1
+                      - uid: 2d693141-a08e-4610-b004-e1670285adfb
+                        name: 关键词组3
+                        data_level_name: 内部数据
+                        data_level: 2
+                      - uid: d2e001c3-d95d-40a4-b5d9-266b625025ee
+                        name: 关键词组4
+                        data_level_name: 内部数据
+                        data_level: 2
+                      filename: 关键词组-命中.txt
+                      filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                      is_compressed: false
+                      file_suffix: txt
+                      file_type: txt
+                      file_updated_time: 1714292076771
+                      is_password_protected: false
+                      action: warning
+                      risk_name: 中危
+                      file_created_time: 1714292076771
+                    file_updated_time: 1714292076771
+                    file_description: '-'
+                    extract_file: false
+                    data_level_name: 内部数据
+                    risk_name: 中危
+                    staff_email: ''
+                    file_created_time: 1714292076771
+                    status: created
+                    file_created_timestamp: '2024-04-28T08:14:36Z'
+                    policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                    dept_ids: []
+                    data_level_names:
+                    - 公开数据
+                    - 内部数据
+                    - 内部数据
+                    is_hidden: false
+                    filesize: 102
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    is_compressed: false
+                    data_levels:
+                    - 1
+                    - 2
+                    - 2
+                    timestamp: '2024-04-28T08:14:36Z'
+                    channel_name: 飞书
+                    cl_name: 关键词组3
+                    company_id: f50ef121-b772-474a-903a-622e9ec0e921
+                    policy_name: win
+                    staff_code: ''
+                    created_timestamp: '2024-04-28T08:14:36Z'
+                    ip_address: 192.168.96.142
+                    cl_ids:
+                    - 143721b2-3d65-411c-9f9c-240614ac56f2
+                    - 2d693141-a08e-4610-b004-e1670285adfb
+                    - d2e001c3-d95d-40a4-b5d9-266b625025ee
+                    policy_group_name: 默认组
+                    risk_level: 2
+                    agent_version: 3.1.0
+                    is_blocked: false
+                    '@timestamp': 1714292076771
+                    is_password_protected: false
+                    os_name: Windows
+                    time: 1714292076771
+                    category: channel
+                    operation: outgoing
+                    staff_tag_ids: []
+                    cl_names:
+                    - 关键词组2
+                    - 关键词组3
+                    - 关键词组4
+                    event_id: '1714292076779'
+                    uid: FujFI48Bn-zjSlBFMiLL
+                    _type: _doc
+                    _index: .ds-qzhddr_policylog_channel_s-2024.04.28-000007
+                    action_display_name: 弹窗提醒
+                  - staff_name: ''
+                    md5_hash: fc10b85f896db7a65daffb101e136ba9
+                    console_user: lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT
+                    channel: feishu
+                    has_cls: true
+                    dept_paths: []
+                    data_level: 2
+                    sha256_hash: ''
+                    dept_names: []
+                    filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                    staff_tags: []
+                    cl_id: 2d693141-a08e-4610-b004-e1670285adfb
+                    file_type: txt
+                    staff_id: ''
+                    action: warning
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    channel_account: '-'
+                    file_updated_timestamp: '2024-04-28T08:14:36Z'
+                    file_type_categories: []
+                    device_id: 76288e5f-2f4c-4825-aea6-28ac0defd7cf
+                    expand:
+                      rule_version:
+                        cond_version: 9
+                        policy_version: 64
+                        filetype_version: 2
+                        dc_version: 48
+                        dc_ticket: 17965cb8eb537e2aeede87676cbb0b17
+                        cond_ticket: eecad0357776fd66653176069a21543d
+                        policy_ticket: 04223cf9b2ee38a2452c4c4a118e1d28
+                      screen_recording: false
+                      file_source: 本地创建
+                      screenshot: false
+                    filename: 实习录用通知.pdf
+                    file_suffix: txt
+                    device_code: PC-000008
+                    file_policies:
+                    - file_created_timestamp: '2024-04-28T08:14:36Z'
+                      file_updated_timestamp: '2024-04-28T08:14:36Z'
+                      md5_hash: fc10b85f896db7a65daffb101e136ba9
+                      policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                      is_hidden: false
+                      policy_name: win
+                      filesize: 102
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      policy_group_name: 默认组
+                      sha256_hash: 5f01540585e9fb48b27880b9612e80f190b551d2f9def1760c83ed3133014002
+                      risk_level: 2
+                      classifications:
+                      - uid: 143721b2-3d65-411c-9f9c-240614ac56f2
+                        name: 关键词组2
+                        data_level_name: 公开数据
+                        data_level: 1
+                      - uid: 2d693141-a08e-4610-b004-e1670285adfb
+                        name: 关键词组3
+                        data_level_name: 内部数据
+                        data_level: 2
+                      - uid: d2e001c3-d95d-40a4-b5d9-266b625025ee
+                        name: 关键词组4
+                        data_level_name: 内部数据
+                        data_level: 2
+                      filename: 关键词组-命中.txt
+                      filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                      is_compressed: false
+                      file_suffix: txt
+                      file_type: txt
+                      file_updated_time: 1714292076771
+                      is_password_protected: false
+                      action: warning
+                      risk_name: 中危
+                      file_created_time: 1714292076771
+                    file_updated_time: 1714292076771
+                    file_description: '-'
+                    extract_file: false
+                    data_level_name: 内部数据
+                    risk_name: 中危
+                    staff_email: ''
+                    file_created_time: 1714292076771
+                    status: created
+                    file_created_timestamp: '2024-04-28T08:14:36Z'
+                    policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                    dept_ids: []
+                    data_level_names:
+                    - 公开数据
+                    - 内部数据
+                    - 内部数据
+                    is_hidden: false
+                    filesize: 102
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    is_compressed: false
+                    data_levels:
+                    - 1
+                    - 2
+                    - 2
+                    timestamp: '2024-04-28T08:14:36Z'
+                    channel_name: 飞书
+                    cl_name: 关键词组3
+                    company_id: f50ef121-b772-474a-903a-622e9ec0e921
+                    policy_name: win
+                    staff_code: ''
+                    created_timestamp: '2024-04-28T08:14:36Z'
+                    ip_address: 192.168.96.142
+                    cl_ids:
+                    - 143721b2-3d65-411c-9f9c-240614ac56f2
+                    - 2d693141-a08e-4610-b004-e1670285adfb
+                    - d2e001c3-d95d-40a4-b5d9-266b625025ee
+                    policy_group_name: 默认组
+                    risk_level: 2
+                    agent_version: 3.1.0
+                    is_blocked: false
+                    '@timestamp': 1714292076771
+                    is_password_protected: false
+                    os_name: Windows
+                    time: 1714292076771
+                    category: channel
+                    operation: outgoing
+                    staff_tag_ids: []
+                    cl_names:
+                    - 关键词组2
+                    - 关键词组3
+                    - 关键词组4
+                    event_id: '1714292076780'
+                    uid: F-jFI48Bn-zjSlBFMiLV
+                    _type: _doc
+                    _index: .ds-qzhddr_policylog_channel_s-2024.04.28-000007
+                    action_display_name: 弹窗提醒
+                  - staff_name: ''
+                    md5_hash: 6855047a1b12377ea5ff97c08148ca66
+                    console_user: lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT
+                    channel: feishu
+                    has_cls: true
+                    dept_paths: []
+                    data_level: 2
+                    sha256_hash: ''
+                    dept_names: []
+                    filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                    staff_tags: []
+                    cl_id: 2d693141-a08e-4610-b004-e1670285adfb
+                    file_type: txt
+                    staff_id: ''
+                    action: warning
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    channel_account: '-'
+                    file_updated_timestamp: '2024-04-28T08:14:36Z'
+                    file_type_categories: []
+                    device_id: 76288e5f-2f4c-4825-aea6-28ac0defd7cf
+                    expand:
+                      rule_version:
+                        cond_version: 9
+                        policy_version: 64
+                        filetype_version: 2
+                        dc_version: 48
+                        dc_ticket: 17965cb8eb537e2aeede87676cbb0b17
+                        cond_ticket: eecad0357776fd66653176069a21543d
+                        policy_ticket: 04223cf9b2ee38a2452c4c4a118e1d28
+                      screen_recording: false
+                      file_source: 本地创建
+                      screenshot: false
+                    filename: test5.xls
+                    file_suffix: txt
+                    device_code: PC-000008
+                    file_policies:
+                    - file_created_timestamp: '2024-04-28T08:14:36Z'
+                      file_updated_timestamp: '2024-04-28T08:14:36Z'
+                      md5_hash: 6855047a1b12377ea5ff97c08148ca66
+                      policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                      is_hidden: false
+                      policy_name: win
+                      filesize: 102
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      policy_group_name: 默认组
+                      sha256_hash: 5f01540585e9fb48b27880b9612e80f190b551d2f9def1760c83ed3133014002
+                      risk_level: 2
+                      classifications:
+                      - uid: 143721b2-3d65-411c-9f9c-240614ac56f2
+                        name: 关键词组2
+                        data_level_name: 公开数据
+                        data_level: 1
+                      - uid: 2d693141-a08e-4610-b004-e1670285adfb
+                        name: 关键词组3
+                        data_level_name: 内部数据
+                        data_level: 2
+                      - uid: d2e001c3-d95d-40a4-b5d9-266b625025ee
+                        name: 关键词组4
+                        data_level_name: 内部数据
+                        data_level: 2
+                      filename: 关键词组-命中.txt
+                      filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                      is_compressed: false
+                      file_suffix: txt
+                      file_type: txt
+                      file_updated_time: 1714292076771
+                      is_password_protected: false
+                      action: warning
+                      risk_name: 中危
+                      file_created_time: 1714292076771
+                    file_updated_time: 1714292076771
+                    file_description: '-'
+                    extract_file: false
+                    data_level_name: 内部数据
+                    risk_name: 中危
+                    staff_email: ''
+                    file_created_time: 1714292076771
+                    status: created
+                    file_created_timestamp: '2024-04-28T08:14:36Z'
+                    policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                    dept_ids: []
+                    data_level_names:
+                    - 公开数据
+                    - 内部数据
+                    - 内部数据
+                    is_hidden: false
+                    filesize: 102
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    is_compressed: false
+                    data_levels:
+                    - 1
+                    - 2
+                    - 2
+                    timestamp: '2024-04-28T08:14:36Z'
+                    channel_name: 飞书
+                    cl_name: 关键词组3
+                    company_id: f50ef121-b772-474a-903a-622e9ec0e921
+                    policy_name: win
+                    staff_code: ''
+                    created_timestamp: '2024-04-28T08:14:36Z'
+                    ip_address: 192.168.96.142
+                    cl_ids:
+                    - 143721b2-3d65-411c-9f9c-240614ac56f2
+                    - 2d693141-a08e-4610-b004-e1670285adfb
+                    - d2e001c3-d95d-40a4-b5d9-266b625025ee
+                    llm:
+                      duration: 98
+                      msg: ''
+                      summary: 该损益表列示了房地产公司的经营收入、成本、费用、利润、投资收益、税项、营业外收支等，经过所得税调整后得出净利润。
+                      cl_name: 经营损益表
+                      cl_id: 93450eb6-3724-4040-b093-a06a5f0afadb
+                      is_company_doc: false
+                      cl_path:
+                      - 企业通用分类
+                      - A：管理类数据
+                      - A-4:财务信息类
+                      - A-4-1:财务基础
+                      - 经营损益表
+                      has_cls: true
+                      cl_ids:
+                      - 93450eb6-3724-4040-b093-a06a5f0afadb
+                      cl_names:
+                      - 经营损益表
+                      status: done
+                      status_display: 已完成
+                    policy_group_name: 默认组
+                    risk_level: 2
+                    agent_version: 3.1.0
+                    is_blocked: false
+                    '@timestamp': 1714292076771
+                    event_id: '1714292076771'
+                    is_password_protected: false
+                    os_name: Windows
+                    time: 1714292076771
+                    category: channel
+                    operation: outgoing
+                    staff_tag_ids: []
+                    cl_names:
+                    - 关键词组2
+                    - 关键词组3
+                    - 关键词组4
+                    uid: DujFI48Bn-zjSlBFMiJd
+                    _type: _doc
+                    _index: .ds-qzhddr_policylog_channel_s-2024.04.28-000007
+                    action_display_name: 弹窗提醒
+                  - staff_name: ''
+                    md5_hash: ab6f1a263931f2852d59d07135053a3e
+                    console_user: lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT
+                    channel: feishu
+                    has_cls: true
+                    dept_paths: []
+                    data_level: 2
+                    sha256_hash: ''
+                    dept_names: []
+                    filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                    staff_tags: []
+                    cl_id: 2d693141-a08e-4610-b004-e1670285adfb
+                    file_type: txt
+                    staff_id: ''
+                    action: warning
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    channel_account: '-'
+                    file_updated_timestamp: '2024-04-28T08:14:36Z'
+                    file_type_categories: []
+                    device_id: 76288e5f-2f4c-4825-aea6-28ac0defd7cf
+                    expand:
+                      rule_version:
+                        cond_version: 9
+                        policy_version: 64
+                        filetype_version: 2
+                        dc_version: 48
+                        dc_ticket: 17965cb8eb537e2aeede87676cbb0b17
+                        cond_ticket: eecad0357776fd66653176069a21543d
+                        policy_ticket: 04223cf9b2ee38a2452c4c4a118e1d28
+                      screen_recording: false
+                      file_source: 本地创建
+                      screenshot: false
+                    filename: 001现金流量表.xlsx
+                    file_suffix: txt
+                    device_code: PC-000008
+                    file_policies:
+                    - file_created_timestamp: '2024-04-28T08:14:36Z'
+                      file_updated_timestamp: '2024-04-28T08:14:36Z'
+                      md5_hash: ab6f1a263931f2852d59d07135053a3e
+                      policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                      is_hidden: false
+                      policy_name: win
+                      filesize: 102
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      policy_group_name: 默认组
+                      sha256_hash: 5f01540585e9fb48b27880b9612e80f190b551d2f9def1760c83ed3133014002
+                      risk_level: 2
+                      classifications:
+                      - uid: 143721b2-3d65-411c-9f9c-240614ac56f2
+                        name: 关键词组2
+                        data_level_name: 公开数据
+                        data_level: 1
+                      - uid: 2d693141-a08e-4610-b004-e1670285adfb
+                        name: 关键词组3
+                        data_level_name: 内部数据
+                        data_level: 2
+                      - uid: d2e001c3-d95d-40a4-b5d9-266b625025ee
+                        name: 关键词组4
+                        data_level_name: 内部数据
+                        data_level: 2
+                      filename: 关键词组-命中.txt
+                      filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                      is_compressed: false
+                      file_suffix: txt
+                      file_type: txt
+                      file_updated_time: 1714292076771
+                      is_password_protected: false
+                      action: warning
+                      risk_name: 中危
+                      file_created_time: 1714292076771
+                    file_updated_time: 1714292076771
+                    file_description: '-'
+                    extract_file: false
+                    data_level_name: 内部数据
+                    risk_name: 中危
+                    staff_email: ''
+                    file_created_time: 1714292076771
+                    status: created
+                    file_created_timestamp: '2024-04-28T08:14:36Z'
+                    policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                    dept_ids: []
+                    data_level_names:
+                    - 公开数据
+                    - 内部数据
+                    - 内部数据
+                    is_hidden: false
+                    filesize: 102
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    is_compressed: false
+                    data_levels:
+                    - 1
+                    - 2
+                    - 2
+                    timestamp: '2024-04-28T08:14:36Z'
+                    channel_name: 飞书
+                    cl_name: 关键词组3
+                    company_id: f50ef121-b772-474a-903a-622e9ec0e921
+                    policy_name: win
+                    staff_code: ''
+                    created_timestamp: '2024-04-28T08:14:36Z'
+                    ip_address: 192.168.96.142
+                    cl_ids:
+                    - 143721b2-3d65-411c-9f9c-240614ac56f2
+                    - 2d693141-a08e-4610-b004-e1670285adfb
+                    - d2e001c3-d95d-40a4-b5d9-266b625025ee
+                    llm:
+                      duration: 33
+                      msg: ''
+                      summary: 该现金流量表显示，年度经营活动中现金流入90万元，流出200万元，净额为-110万元；投资活动现金流入29万元，流出36万元，净额为-7万元；筹资活动现金流44万元，净额为11万元，总体导致现金及等价物净减少56万元。
+                      cl_name: 现金流量表
+                      cl_id: 5275e75d-b717-4726-80f5-c74926fe73f5
+                      is_company_doc: false
+                      cl_path:
+                      - 企业通用分类
+                      - A：管理类数据
+                      - A-4:财务信息类
+                      - A-4-1:财务基础
+                      - 现金流量表
+                      has_cls: true
+                      cl_ids:
+                      - 5275e75d-b717-4726-80f5-c74926fe73f5
+                      cl_names:
+                      - 现金流量表
+                      status: done
+                      status_display: 已完成
+                    policy_group_name: 默认组
+                    risk_level: 2
+                    agent_version: 3.1.0
+                    is_blocked: false
+                    '@timestamp': 1714292076771
+                    event_id: '1714292076772'
+                    is_password_protected: false
+                    os_name: Windows
+                    time: 1714292076771
+                    category: channel
+                    operation: outgoing
+                    staff_tag_ids: []
+                    cl_names:
+                    - 关键词组2
+                    - 关键词组3
+                    - 关键词组4
+                    uid: D-jFI48Bn-zjSlBFMiKP
+                    _type: _doc
+                    _index: .ds-qzhddr_policylog_channel_s-2024.04.28-000007
+                    action_display_name: 弹窗提醒
+                  - staff_name: ''
+                    md5_hash: 44b5016ee502792ef70bd6481928e7f1
+                    console_user: lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT
+                    channel: feishu
+                    has_cls: true
+                    dept_paths: []
+                    data_level: 2
+                    sha256_hash: ''
+                    dept_names: []
+                    filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                    staff_tags: []
+                    cl_id: 2d693141-a08e-4610-b004-e1670285adfb
+                    file_type: txt
+                    staff_id: ''
+                    action: warning
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    channel_account: '-'
+                    file_updated_timestamp: '2024-04-28T08:14:36Z'
+                    file_type_categories: []
+                    device_id: 76288e5f-2f4c-4825-aea6-28ac0defd7cf
+                    expand:
+                      rule_version:
+                        cond_version: 9
+                        policy_version: 64
+                        filetype_version: 2
+                        dc_version: 48
+                        dc_ticket: 17965cb8eb537e2aeede87676cbb0b17
+                        cond_ticket: eecad0357776fd66653176069a21543d
+                        policy_ticket: 04223cf9b2ee38a2452c4c4a118e1d28
+                      screen_recording: false
+                      file_source: 本地创建
+                      screenshot: false
+                    filename: 2022年奶酪品类营销竞品分析报告.pdf
+                    file_suffix: txt
+                    device_code: PC-000008
+                    file_policies:
+                    - file_created_timestamp: '2024-04-28T08:14:36Z'
+                      file_updated_timestamp: '2024-04-28T08:14:36Z'
+                      md5_hash: 44b5016ee502792ef70bd6481928e7f1
+                      policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                      is_hidden: false
+                      policy_name: win
+                      filesize: 102
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      policy_group_name: 默认组
+                      sha256_hash: 5f01540585e9fb48b27880b9612e80f190b551d2f9def1760c83ed3133014002
+                      risk_level: 2
+                      classifications:
+                      - uid: 143721b2-3d65-411c-9f9c-240614ac56f2
+                        name: 关键词组2
+                        data_level_name: 公开数据
+                        data_level: 1
+                      - uid: 2d693141-a08e-4610-b004-e1670285adfb
+                        name: 关键词组3
+                        data_level_name: 内部数据
+                        data_level: 2
+                      - uid: d2e001c3-d95d-40a4-b5d9-266b625025ee
+                        name: 关键词组4
+                        data_level_name: 内部数据
+                        data_level: 2
+                      filename: 关键词组-命中.txt
+                      filepath: D:\测试用例数据\敏感词类型\关键词组-命中.txt
+                      is_compressed: false
+                      file_suffix: txt
+                      file_type: txt
+                      file_updated_time: 1714292076771
+                      is_password_protected: false
+                      action: warning
+                      risk_name: 中危
+                      file_created_time: 1714292076771
+                    file_updated_time: 1714292076771
+                    file_description: '-'
+                    extract_file: false
+                    data_level_name: 内部数据
+                    risk_name: 中危
+                    staff_email: ''
+                    file_created_time: 1714292076771
+                    status: created
+                    file_created_timestamp: '2024-04-28T08:14:36Z'
+                    policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                    dept_ids: []
+                    data_level_names:
+                    - 公开数据
+                    - 内部数据
+                    - 内部数据
+                    is_hidden: false
+                    filesize: 102
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    is_compressed: false
+                    data_levels:
+                    - 1
+                    - 2
+                    - 2
+                    timestamp: '2024-04-28T08:14:36Z'
+                    channel_name: 飞书
+                    cl_name: 关键词组3
+                    company_id: f50ef121-b772-474a-903a-622e9ec0e921
+                    policy_name: win
+                    staff_code: ''
+                    created_timestamp: '2024-04-28T08:14:36Z'
+                    ip_address: 192.168.96.142
+                    cl_ids:
+                    - 143721b2-3d65-411c-9f9c-240614ac56f2
+                    - 2d693141-a08e-4610-b004-e1670285adfb
+                    - d2e001c3-d95d-40a4-b5d9-266b625025ee
+                    llm:
+                      duration: 0
+                      msg: ''
+                      cl_name: 未分类
+                      cl_id: 0
+                      is_company_doc: false
+                      cl_path: []
+                      has_cls: false
+                      cl_ids:
+                      - 0
+                      cl_names:
+                      - 未分类
+                      status: working
+                      status_display: 进行中
+                    policy_group_name: 默认组
+                    risk_level: 2
+                    agent_version: 3.1.0
+                    is_blocked: false
+                    '@timestamp': 1714292076771
+                    event_id: '1714292076773'
+                    is_password_protected: false
+                    os_name: Windows
+                    time: 1714292076771
+                    category: channel
+                    operation: outgoing
+                    staff_tag_ids: []
+                    cl_names:
+                    - 关键词组2
+                    - 关键词组3
+                    - 关键词组4
+                    uid: EOjFI48Bn-zjSlBFMiKU
+                    _type: _doc
+                    _index: .ds-qzhddr_policylog_channel_s-2024.04.28-000007
+                    action_display_name: 弹窗提醒
+      security: []

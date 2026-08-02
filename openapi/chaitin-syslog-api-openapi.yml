@@ -1,0 +1,965 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account Syslog 管理与系统日志 API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: Syslog 管理与系统日志
+paths:
+  /api/log/syslog/list:
+    post:
+      operationId: syslog_config_list
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: 可选分页类请求的通用模式
+              properties:
+                limit:
+                  description: 最多返回k个满足条件的数据，为None时表示不限制数量
+                  exclusiveMinimum: true
+                  minimum: 0
+                  title: limit
+                  type: integer
+                offset:
+                  default: 0
+                  description: 跳过前k个满足条件的数据
+                  minimum: 0
+                  title: offset
+                  type: integer
+              title: SyslogConfigListArg
+              type: object
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                description: 分页类响应的通用模式
+                properties:
+                  data:
+                    description: 实际返回的数据
+                    items:
+                      $ref: '#/components/schemas/SyslogConfigDetail'
+                    title: Data
+                    type: array
+                  total:
+                    description: 满足条件的记录总数
+                    minimum: 0
+                    title: Total
+                    type: integer
+                required:
+                - total
+                - data
+                title: SyslogConfigListRet
+                type: object
+          description: ''
+      summary: syslog配置列表
+      tags:
+      - Syslog 管理与系统日志
+  /api/log/syslog/delete:
+    post:
+      operationId: delete_syslog_config
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                ids:
+                  description: 待删除的配置信息ID
+                  items:
+                    type: integer
+                  title: Ids
+                  type: array
+              required:
+              - ids
+              title: DeleteSyslogConfigArg
+              type: object
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                description: '最小化响应的通用模式
+
+
+                  使用该类型作为返回值的API view，一般不会失败(诸如login_required等错误不包含在内)'
+                properties:
+                  success:
+                    default: true
+                    description: 请求成功
+                    title: Success
+                    type: boolean
+                title: MinimumRet
+                type: object
+          description: ''
+      summary: 删除syslog配置信息
+      tags:
+      - Syslog 管理与系统日志
+  /api/log/syslog/add:
+    post:
+      operationId: add_syslog_config
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                agent_status:
+                  description: 是否报告探针连接状态变化
+                  title: Agent Status
+                  type: boolean
+                arp_event:
+                  description: 是否报告ARP攻击
+                  title: Arp Event
+                  type: boolean
+                docker_escape:
+                  description: 是否报告docker逃逸事件
+                  title: Docker Escape
+                  type: boolean
+                encoding:
+                  description: syslog编码方式
+                  enum:
+                  - Unicode
+                  - UTF-8
+                  title: Encoding
+                format:
+                  default: rfc5424
+                  description: syslog格式
+                  enum:
+                  - rfc3164
+                  - rfc5424
+                  title: Format
+                honeypot_event:
+                  description: 是否报告蜜罐事件
+                  title: Honeypot Event
+                  type: boolean
+                host:
+                  description: syslog服务器地址
+                  minLength: 1
+                  title: Host
+                  type: string
+                is_base64_decode:
+                  default: false
+                  description: 是否base64解码日志中的header
+                  title: Is Base64 Decode
+                  type: boolean
+                ping_event:
+                  description: 是否报告ping事件
+                  title: Ping Event
+                  type: boolean
+                port:
+                  description: syslog服务器端口
+                  maximum: 65535
+                  minimum: 1
+                  title: Port
+                  type: integer
+                portrait_event:
+                  description: 是否报告溯源事件
+                  title: Portrait Event
+                  type: boolean
+                scanner_event:
+                  description: 是否报告扫描事件
+                  title: Scanner Event
+                  type: boolean
+                socket_type:
+                  description: syslog的网络传输方式
+                  enum:
+                  - TCP
+                  - UDP
+                  title: Socket Type
+                time_diff:
+                  default: 0
+                  description: 自定义加减整数时间差
+                  title: Time Diff
+                  type: integer
+              required:
+              - host
+              - port
+              - encoding
+              - honeypot_event
+              - scanner_event
+              - ping_event
+              - portrait_event
+              - arp_event
+              - docker_escape
+              - agent_status
+              - socket_type
+              title: AddSyslogConfigArg
+              type: object
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  id:
+                    description: 新创建的配置信息的ID
+                    title: Id
+                    type: integer
+                required:
+                - id
+                title: AddSyslogConfigRet
+                type: object
+          description: ''
+      summary: 添加syslog配置信息
+      tags:
+      - Syslog 管理与系统日志
+  /api/log/syslog/modify:
+    post:
+      operationId: modify_syslog_config
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                agent_status:
+                  description: 是否报告探针连接状态变化
+                  title: Agent Status
+                  type: boolean
+                arp_event:
+                  description: 是否报告ARP攻击
+                  title: Arp Event
+                  type: boolean
+                docker_escape:
+                  description: 是否报告docker逃逸事件
+                  title: Docker Escape
+                  type: boolean
+                encoding:
+                  description: syslog编码方式
+                  enum:
+                  - Unicode
+                  - UTF-8
+                  title: Encoding
+                format:
+                  default: rfc5424
+                  description: syslog格式
+                  enum:
+                  - rfc3164
+                  - rfc5424
+                  title: Format
+                honeypot_event:
+                  description: 是否报告蜜罐事件
+                  title: Honeypot Event
+                  type: boolean
+                host:
+                  description: syslog服务器地址
+                  minLength: 1
+                  title: Host
+                  type: string
+                id:
+                  description: syslog配置的ID
+                  title: Id
+                  type: integer
+                is_base64_decode:
+                  default: false
+                  description: 是否base64解码日志中的header
+                  title: Is Base64 Decode
+                  type: boolean
+                ping_event:
+                  description: 是否报告ping事件
+                  title: Ping Event
+                  type: boolean
+                port:
+                  description: syslog服务器端口
+                  maximum: 65535
+                  minimum: 1
+                  title: Port
+                  type: integer
+                portrait_event:
+                  description: 是否报告溯源事件
+                  title: Portrait Event
+                  type: boolean
+                scanner_event:
+                  description: 是否报告扫描事件
+                  title: Scanner Event
+                  type: boolean
+                socket_type:
+                  description: syslog的网络传输方式
+                  enum:
+                  - TCP
+                  - UDP
+                  title: Socket Type
+                time_diff:
+                  default: 0
+                  description: 自定义加减整数时间差
+                  title: Time Diff
+                  type: integer
+              required:
+              - id
+              - host
+              - port
+              - encoding
+              - socket_type
+              - honeypot_event
+              - scanner_event
+              - portrait_event
+              - ping_event
+              - arp_event
+              - docker_escape
+              - agent_status
+              title: SyslogConfigDetail
+              type: object
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                description: '最小化响应的通用模式
+
+
+                  使用该类型作为返回值的API view，一般不会失败(诸如login_required等错误不包含在内)'
+                properties:
+                  success:
+                    default: true
+                    description: 请求成功
+                    title: Success
+                    type: boolean
+                title: MinimumRet
+                type: object
+          description: ''
+      summary: 修改syslog配置信息
+      tags:
+      - Syslog 管理与系统日志
+  /api/log/kafka/list:
+    post:
+      operationId: kafka_config_list
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: 可选分页类请求的通用模式
+              properties:
+                limit:
+                  description: 最多返回k个满足条件的数据，为None时表示不限制数量
+                  exclusiveMinimum: true
+                  minimum: 0
+                  title: limit
+                  type: integer
+                offset:
+                  default: 0
+                  description: 跳过前k个满足条件的数据
+                  minimum: 0
+                  title: offset
+                  type: integer
+              title: KafkaConfigListArg
+              type: object
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                description: 分页类响应的通用模式
+                properties:
+                  data:
+                    description: 实际返回的数据
+                    items:
+                      $ref: '#/components/schemas/KafkaConfigDetail'
+                    title: Data
+                    type: array
+                  total:
+                    description: 满足条件的记录总数
+                    minimum: 0
+                    title: Total
+                    type: integer
+                required:
+                - total
+                - data
+                title: KafkaConfigListRet
+                type: object
+          description: ''
+      summary: kafka配置列表
+      tags:
+      - Syslog 管理与系统日志
+  /api/log/kafka/delete:
+    post:
+      operationId: delete_kafka_config
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                ids:
+                  description: 待删除的配置信息ID
+                  items:
+                    type: integer
+                  title: Ids
+                  type: array
+              required:
+              - ids
+              title: DeleteKafkaConfigArg
+              type: object
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                description: '最小化响应的通用模式
+
+
+                  使用该类型作为返回值的API view，一般不会失败(诸如login_required等错误不包含在内)'
+                properties:
+                  success:
+                    default: true
+                    description: 请求成功
+                    title: Success
+                    type: boolean
+                title: MinimumRet
+                type: object
+          description: ''
+      summary: 删除kafka配置信息
+      tags:
+      - Syslog 管理与系统日志
+  /api/log/kafka/add:
+    post:
+      operationId: add_kafka_config
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                ack_type:
+                  description: kafka的响应方式
+                  enum:
+                  - none
+                  - wait_leader
+                  - wait_all
+                  title: Ack Type
+                  type: string
+                config:
+                  description: kafka的响应方式，honeypot表示是否报告蜜罐事件, scanner:是否报告扫描事件, portrait表示是否报告溯源事件,ping表示是否报告ping事件, arp表示是否报告ARP攻击, docker_escape表示是否报告docker逃逸事件,agent_status表示是否报告探针连接状态变化
+                  items:
+                    enum:
+                    - honeypot
+                    - scanner
+                    - portrait
+                    - ping
+                    - arp
+                    - docker_escape
+                    - agent_status
+                    type: string
+                  title: Config
+                  type: array
+                encoding:
+                  description: kafka编码方式
+                  enum:
+                  - GBK
+                  - UTF-8
+                  title: Encoding
+                  type: string
+                host:
+                  description: kafka服务器地址
+                  minLength: 1
+                  title: Host
+                  type: string
+                id:
+                  description: 配置的ID
+                  title: Id
+                  type: integer
+                password:
+                  default: ''
+                  description: 密码
+                  title: Password
+                  type: string
+                port:
+                  description: kafka服务器端口
+                  maximum: 65535
+                  minimum: 1
+                  title: Port
+                  type: integer
+                topic_name:
+                  description: topic名称
+                  minLength: 1
+                  title: Topic Name
+                  type: string
+                username:
+                  default: ''
+                  description: 用户名
+                  title: Username
+                  type: string
+              required:
+              - topic_name
+              - host
+              - port
+              - encoding
+              - ack_type
+              - config
+              title: KafkaConfigDetail
+              type: object
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  id:
+                    description: 新创建的配置信息的ID
+                    title: Id
+                    type: integer
+                required:
+                - id
+                title: AddKafkaConfigRet
+                type: object
+          description: ''
+      summary: 添加kafka配置信息
+      tags:
+      - Syslog 管理与系统日志
+  /api/log/kafka/modify:
+    post:
+      operationId: modify_kafka_config
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                ack_type:
+                  description: kafka的响应方式
+                  enum:
+                  - none
+                  - wait_leader
+                  - wait_all
+                  title: Ack Type
+                  type: string
+                config:
+                  description: kafka的响应方式，honeypot表示是否报告蜜罐事件, scanner:是否报告扫描事件, portrait表示是否报告溯源事件,ping表示是否报告ping事件, arp表示是否报告ARP攻击, docker_escape表示是否报告docker逃逸事件,agent_status表示是否报告探针连接状态变化
+                  items:
+                    enum:
+                    - honeypot
+                    - scanner
+                    - portrait
+                    - ping
+                    - arp
+                    - docker_escape
+                    - agent_status
+                    type: string
+                  title: Config
+                  type: array
+                encoding:
+                  description: kafka编码方式
+                  enum:
+                  - GBK
+                  - UTF-8
+                  title: Encoding
+                  type: string
+                host:
+                  description: kafka服务器地址
+                  minLength: 1
+                  title: Host
+                  type: string
+                id:
+                  description: 配置的ID
+                  title: Id
+                  type: integer
+                password:
+                  default: ''
+                  description: 密码
+                  title: Password
+                  type: string
+                port:
+                  description: kafka服务器端口
+                  maximum: 65535
+                  minimum: 1
+                  title: Port
+                  type: integer
+                topic_name:
+                  description: topic名称
+                  minLength: 1
+                  title: Topic Name
+                  type: string
+                username:
+                  default: ''
+                  description: 用户名
+                  title: Username
+                  type: string
+              required:
+              - topic_name
+              - host
+              - port
+              - encoding
+              - ack_type
+              - config
+              title: KafkaConfigDetail
+              type: object
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                description: '最小化响应的通用模式
+
+
+                  使用该类型作为返回值的API view，一般不会失败(诸如login_required等错误不包含在内)'
+                properties:
+                  success:
+                    default: true
+                    description: 请求成功
+                    title: Success
+                    type: boolean
+                title: MinimumRet
+                type: object
+          description: ''
+      summary: 修改kafka配置信息
+      tags:
+      - Syslog 管理与系统日志
+  /api/log/system_log/list:
+    post:
+      operationId: system_log_list
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: 可选分页类请求的通用模式
+              properties:
+                limit:
+                  description: 最多返回k个满足条件的数据，为None时表示不限制数量
+                  exclusiveMinimum: true
+                  minimum: 0
+                  title: limit
+                  type: integer
+                log_types:
+                  default: []
+                  description: 系统日志类型, 1 表示系统负载，2 表示docker状态，3 表示探针状态
+                  items:
+                    enum:
+                    - 1
+                    - 2
+                    - 3
+                    - 4
+                    type: integer
+                  title: Log Types
+                  type: array
+                not_after:
+                  description: 结束时间
+                  format: date-time
+                  title: Not After
+                  type: string
+                not_before:
+                  description: 起始时间
+                  format: date-time
+                  title: Not Before
+                  type: string
+                offset:
+                  default: 0
+                  description: 跳过前k个满足条件的数据
+                  minimum: 0
+                  title: offset
+                  type: integer
+              title: SystemLogListArgs
+              type: object
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    allOf:
+                    - $ref: '#/components/schemas/SystemLogRet'
+                    default: []
+                    description: 系统日志的列表信息
+                    title: Data
+                  err:
+                    default: ''
+                    description: 错误信息
+                    title: Err
+                    type: string
+                  msg:
+                    default: ''
+                    description: 具体错误信息描述
+                    title: Msg
+                    type: string
+                title: ListSystemLogRet
+                type: object
+          description: ''
+      summary: 系统日志的列表信息
+      tags:
+      - Syslog 管理与系统日志
+  /api/log/system_log/delete:
+    post:
+      operationId: system_log_delete
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: 时间筛选类请求的通用模式
+              properties:
+                ids:
+                  default: []
+                  description: 要删除的id列表
+                  items:
+                    type: integer
+                  title: Ids
+                  type: array
+                log_types:
+                  default: []
+                  description: 系统日志类型, 1 表示系统负载，2 表示docker状态，3 表示探针状态
+                  items:
+                    enum:
+                    - 1
+                    - 2
+                    - 3
+                    - 4
+                    type: integer
+                  title: Log Types
+                  type: array
+                not_after:
+                  description: 结束时间
+                  format: date-time
+                  title: Not After
+                  type: string
+                not_before:
+                  description: 起始时间
+                  format: date-time
+                  title: Not Before
+                  type: string
+              title: SystemLogDelArgs
+              type: object
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    allOf:
+                    - $ref: '#/components/schemas/MinimumRet'
+                    description: 删除系统日志返回信息
+                    title: Data
+                  err:
+                    default: ''
+                    description: 错误信息
+                    title: Err
+                    type: string
+                  msg:
+                    default: ''
+                    description: 具体错误信息描述
+                    title: Msg
+                    type: string
+                title: SystemLogDelRet
+                type: object
+          description: ''
+      summary: 删除系统日志的列表信息
+      tags:
+      - Syslog 管理与系统日志
+components:
+  schemas:
+    SystemLogRet:
+      description: 分页类响应的通用模式
+      properties:
+        data:
+          description: 实际返回的数据
+          items:
+            $ref: '#/components/schemas/SystemLogDetail'
+          title: Data
+          type: array
+        total:
+          description: 满足条件的记录总数
+          minimum: 0
+          title: Total
+          type: integer
+      required:
+      - total
+      - data
+      title: SystemLogRet
+      type: object
+    SyslogConfigDetail:
+      properties:
+        agent_status:
+          description: 是否报告探针连接状态变化
+          title: Agent Status
+          type: boolean
+        arp_event:
+          description: 是否报告ARP攻击
+          title: Arp Event
+          type: boolean
+        docker_escape:
+          description: 是否报告docker逃逸事件
+          title: Docker Escape
+          type: boolean
+        encoding:
+          description: syslog编码方式
+          enum:
+          - Unicode
+          - UTF-8
+          title: Encoding
+        format:
+          default: rfc5424
+          description: syslog格式
+          enum:
+          - rfc3164
+          - rfc5424
+          title: Format
+        honeypot_event:
+          description: 是否报告蜜罐事件
+          title: Honeypot Event
+          type: boolean
+        host:
+          description: syslog服务器地址
+          minLength: 1
+          title: Host
+          type: string
+        id:
+          description: syslog配置的ID
+          title: Id
+          type: integer
+        is_base64_decode:
+          default: false
+          description: 是否base64解码日志中的header
+          title: Is Base64 Decode
+          type: boolean
+        ping_event:
+          description: 是否报告ping事件
+          title: Ping Event
+          type: boolean
+        port:
+          description: syslog服务器端口
+          maximum: 65535
+          minimum: 1
+          title: Port
+          type: integer
+        portrait_event:
+          description: 是否报告溯源事件
+          title: Portrait Event
+          type: boolean
+        scanner_event:
+          description: 是否报告扫描事件
+          title: Scanner Event
+          type: boolean
+        socket_type:
+          description: syslog的网络传输方式
+          enum:
+          - TCP
+          - UDP
+          title: Socket Type
+        time_diff:
+          default: 0
+          description: 自定义加减整数时间差
+          title: Time Diff
+          type: integer
+      required:
+      - id
+      - host
+      - port
+      - encoding
+      - socket_type
+      - honeypot_event
+      - scanner_event
+      - portrait_event
+      - ping_event
+      - arp_event
+      - docker_escape
+      - agent_status
+      title: SyslogConfigDetail
+      type: object
+    KafkaConfigDetail:
+      properties:
+        ack_type:
+          description: kafka的响应方式
+          enum:
+          - none
+          - wait_leader
+          - wait_all
+          title: Ack Type
+          type: string
+        config:
+          description: kafka的响应方式，honeypot表示是否报告蜜罐事件, scanner:是否报告扫描事件, portrait表示是否报告溯源事件,ping表示是否报告ping事件, arp表示是否报告ARP攻击, docker_escape表示是否报告docker逃逸事件,agent_status表示是否报告探针连接状态变化
+          items:
+            enum:
+            - honeypot
+            - scanner
+            - portrait
+            - ping
+            - arp
+            - docker_escape
+            - agent_status
+            type: string
+          title: Config
+          type: array
+        encoding:
+          description: kafka编码方式
+          enum:
+          - GBK
+          - UTF-8
+          title: Encoding
+          type: string
+        host:
+          description: kafka服务器地址
+          minLength: 1
+          title: Host
+          type: string
+        id:
+          description: 配置的ID
+          title: Id
+          type: integer
+        password:
+          default: ''
+          description: 密码
+          title: Password
+          type: string
+        port:
+          description: kafka服务器端口
+          maximum: 65535
+          minimum: 1
+          title: Port
+          type: integer
+        topic_name:
+          description: topic名称
+          minLength: 1
+          title: Topic Name
+          type: string
+        username:
+          default: ''
+          description: 用户名
+          title: Username
+          type: string
+      required:
+      - topic_name
+      - host
+      - port
+      - encoding
+      - ack_type
+      - config
+      title: KafkaConfigDetail
+      type: object
+    MinimumRet:
+      description: '最小化响应的通用模式
+
+
+        使用该类型作为返回值的API view，一般不会失败(诸如login_required等错误不包含在内)'
+      properties:
+        success:
+          default: true
+          description: 请求成功
+          title: Success
+          type: boolean
+      title: MinimumRet
+      type: object
+    SystemLogDetail:
+      properties:
+        content:
+          description: 系统日志的内容
+          title: Content
+          type: string
+        crdate:
+          description: 系统日志的时间
+          format: date-time
+          title: Crdate
+          type: string
+        id:
+          description: 系统日志的id
+          title: Id
+          type: integer
+        log_type:
+          description: 系统日志的类型, 1 表示系统负载，2 表示docker状态，3 表示探针状态
+          enum:
+          - 1
+          - 2
+          - 3
+          - 4
+          title: Log Type
+          type: integer
+      required:
+      - id
+      - log_type
+      - content
+      - crdate
+      title: SystemLogDetail
+      type: object

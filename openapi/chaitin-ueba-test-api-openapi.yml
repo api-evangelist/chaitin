@@ -1,0 +1,202 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account ueba/test API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: ueba/test
+  description: UEBA 分析/测试
+paths:
+  /ueba/test:
+    post:
+      summary: 测试事件
+      deprecated: false
+      description: ''
+      tags:
+      - ueba/test
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                category:
+                  type: string
+                description:
+                  type: string
+                source:
+                  type: string
+                queries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: string
+                expression:
+                  type: string
+                windows_s:
+                  type: integer
+                score:
+                  type: integer
+                notification_config:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      is_remind:
+                        type: boolean
+                      notification_bot_id:
+                        type: string
+                      notification_content_template_id:
+                        type: string
+                      notification_bot_template_id:
+                        type: string
+                      email_to_list:
+                        type: array
+                        items: {}
+                threshold:
+                  type: integer
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+              required:
+              - name
+              - category
+              - description
+              - source
+              - queries
+              - expression
+              - windows_s
+              - score
+              - notification_config
+              - threshold
+              - time_range
+            example:
+              name: test
+              category: outgoing
+              description: ''
+              source: policy_channel_log
+              queries:
+              - field: staff_name
+                operator: is
+                value: 吴贝宁
+              expression: ''
+              windows_s: 30000000
+              score: 60
+              notification_config:
+              - is_remind: true
+                notification_bot_id: cebe9d6d-5fba-4082-8780-48913d3ebfab
+                notification_content_template_id: 6497f9e0-6ea7-455c-9e34-02b1ec73d3f4
+                notification_bot_template_id: 9cf22eee-7503-486c-99d0-5d96078b6f02
+                email_to_list: []
+              threshold: 1
+              time_range:
+                begin: '2023-12-26 11:54:09'
+                end: '2023-12-27 11:54:09'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      event_id:
+                        type: string
+                    required:
+                    - event_id
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  event_id: 83c0e34b-8919-45b6-aa97-3df434fa4399
+      security: []

@@ -1,0 +1,57 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account buildin_waf API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: buildin_waf
+paths:
+  /api/BuildinWafConfig:
+    post:
+      operationId: BuildinWafConfig_post
+      summary: POST /api/BuildinWafConfig
+      tags:
+      - buildin_waf
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                uniq_key:
+                  type: string
+                apisec_management_ip:
+                  type: string
+                apisec_management_port:
+                  type: integer
+                apisec_minion_token:
+                  type: string
+                apisec_detector_ip:
+                  type: string
+                apisec_detector_port:
+                  type: integer
+                sampling_rate:
+                  type: integer
+                waf_management_ip:
+                  type: string
+                waf_management_port:
+                  type: integer
+                waf_minion_token:
+                  type: string
+                waf_minion_cert:
+                  type: string
+              required:
+              - uniq_key
+              - apisec_management_ip
+              - apisec_management_port
+              - apisec_minion_token
+              - apisec_detector_ip
+              - apisec_detector_port
+              - sampling_rate
+              - waf_management_ip
+              - waf_management_port
+              - waf_minion_token
+              - waf_minion_cert

@@ -1,0 +1,961 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account clipboardbehavior/stafflist API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: clipboardbehavior/stafflist
+  description: 剪贴板行为/人员列表
+paths:
+  /clipboardbehavior/stafflist:
+    post:
+      summary: 剪切板行为日志员工列表信息
+      deprecated: false
+      description: ''
+      tags:
+      - clipboardbehavior/stafflist
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                search:
+                  type: string
+                queries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: string
+              required:
+              - time_range
+              - search
+              - queries
+            example:
+              time_range:
+                begin: '2023-11-14 10:55:38'
+                end: '2023-11-14 11:55:38'
+              search: ''
+              queries:
+              - field: staff_name
+                operator: is
+                value: 吴贝宁
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      total:
+                        type: integer
+                      search_total:
+                        type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            staff_id:
+                              type: string
+                            staff_name:
+                              type: string
+                            console_user:
+                              type: string
+                            dept_paths:
+                              type: array
+                              items:
+                                type: string
+                            os_list:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  os_icon:
+                                    type: string
+                                  os_name:
+                                    type: string
+                                required:
+                                - os_icon
+                                - os_name
+                            device_list:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  device_id:
+                                    type: string
+                                  device_code:
+                                    type: string
+                                  os_icon:
+                                    type: string
+                                  os_name:
+                                    type: string
+                                  total:
+                                    type: integer
+                                required:
+                                - device_id
+                                - device_code
+                                - os_icon
+                                - os_name
+                                - total
+                            device_cnt:
+                              type: integer
+                          required:
+                          - staff_id
+                          - staff_name
+                          - console_user
+                          - dept_paths
+                          - os_list
+                          - device_list
+                          - device_cnt
+                    required:
+                    - index
+                    - total
+                    - search_total
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  index:
+                  - qzhddr_clipboard_behavior_logs
+                  total: 25250
+                  search_total: 10000
+                  results:
+                  - staff_id: fa1278de-b4e2-419a-a7c3-cd4cbbeec4d2
+                    staff_name: marin
+                    console_user: sou@LAPTOP-8R5257U6
+                    dept_paths:
+                    - 测试公司
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: fcd243ca-00ae-406d-bfbe-522987410906
+                      device_code: PC-000106
+                      os_icon: windows
+                      os_name: Windows
+                      total: 9037
+                    device_cnt: 1
+                  - staff_id: 90534539-028d-40ea-9e8d-68f1a7b1cc88
+                    staff_name: qewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewq
+                    console_user: lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT
+                    dept_paths:
+                    - 测试公司/hu_子部门
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: a05300b7-7b76-4b54-ad25-a16a9c516c29
+                      device_code: PC-000108
+                      os_icon: windows
+                      os_name: Windows
+                      total: 2383
+                    device_cnt: 1
+                  - staff_id: 545fb1a9-41fc-4e67-8c02-683be6b648af
+                    staff_name: wbn
+                    console_user: 27783@SERVAL@SERVAL
+                    dept_paths:
+                    - 测试公司/hu_子部门
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    - os_icon: UOS
+                      os_name: UOS
+                    device_list:
+                    - device_id: 271ec810-7f45-448d-b8cd-593752b2e403
+                      device_code: PC-000129
+                      os_icon: windows
+                      os_name: Windows
+                      total: 812
+                    - device_id: 2c11a1b8-88d6-4cd4-92e3-39f6260555ff
+                      device_code: PC-000051
+                      os_icon: UOS
+                      os_name: UOS
+                      total: 94
+                    device_cnt: 2
+                  - staff_id: 643830f1-0d90-44b5-99d2-88a952f8c73e
+                    staff_name: 李志帅
+                    console_user: jasonlee
+                    dept_paths:
+                    - 测试公司/研发部/macOS终端组
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: c20a94bd-9b23-4f22-bf82-1fa4e20a1242
+                      device_code: PC-000030
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 455
+                    device_cnt: 1
+                  - staff_id: 62a5e0f8-831b-4ca4-ab18-6760d4773111
+                    staff_name: 彭柔
+                    console_user: lianb@DESKTOP-A0L03FT
+                    dept_paths:
+                    - 测试公司/质量保证组
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: a05300b7-7b76-4b54-ad25-a16a9c516c29
+                      device_code: PC-000108
+                      os_icon: windows
+                      os_name: Windows
+                      total: 376
+                    - device_id: 05b7e9a1-4d21-49b8-b3fc-8b06d01d55be
+                      device_code: PC-000086
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 3
+                    device_cnt: 2
+                  - staff_id: b96cf657-c2c1-4174-bf67-27b4f303dfac
+                    staff_name: hyj
+                    console_user: huyajie
+                    dept_paths:
+                    - 测试公司/hu_子部门
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: bae4f6c4-249e-44bf-ad7c-0b8c683e385d
+                      device_code: PC-000082
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 301
+                    - device_id: 3bb3f844-b81c-4f28-b2ec-b24fa667e3f7
+                      device_code: PC-000096
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 14
+                    - device_id: 9f162d3f-731d-44dc-901b-16a9571ab2df
+                      device_code: PC-000075
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 7
+                    - device_id: 28383ea8-5216-4d0b-80f7-17d99fb3d8ab
+                      device_code: PC-000036
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 3
+                    device_cnt: 4
+                  - staff_id: 89a0061b-0ebe-40ec-8bc9-cfd3e9c2d5c5
+                    staff_name: 嘭嘭嘭
+                    console_user: lianb@DESKTOP-A0L03FT
+                    dept_paths:
+                    - 测试公司/技术部
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: d9671d62-f655-4669-ac14-67b2906b1807
+                      device_code: PC-000140
+                      os_icon: windows
+                      os_name: Windows
+                      total: 227
+                    - device_id: 80630800-f741-443f-9039-96826ed9b73e
+                      device_code: PC-000027
+                      os_icon: windows
+                      os_name: Windows
+                      total: 62
+                    device_cnt: 2
+                  - staff_id: 7d1f7e9a-4a47-4f3d-9015-99b2852dec49
+                    staff_name: 周周
+                    console_user: serval-PC\serval
+                    dept_paths:
+                    - 测试公司/测试部门
+                    os_list:
+                    - os_icon: UOS
+                      os_name: UOS
+                    device_list:
+                    - device_id: 6590b381-3a3f-44f9-9e5d-684f2e0670cf
+                      device_code: PC-000134
+                      os_icon: UOS
+                      os_name: UOS
+                      total: 132
+                    - device_id: df5f440d-e7c1-4f40-a9ba-21f9af571f5e
+                      device_code: PC-000064
+                      os_icon: UOS
+                      os_name: UOS
+                      total: 109
+                    device_cnt: 2
+                  - staff_id: ''
+                    staff_name: ''
+                    console_user: jasonlee
+                    dept_paths: []
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    - os_icon: UOS
+                      os_name: UOS
+                    device_list:
+                    - device_id: c20a94bd-9b23-4f22-bf82-1fa4e20a1242
+                      device_code: PC-000030
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 119
+                    - device_id: b33dff9c-6e23-44c6-a914-cc1b1cd04447
+                      device_code: PC-000112
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 54
+                    - device_id: aa40db70-2533-42d0-b1f4-d6f4ec39f749
+                      device_code: PC-000094
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 45
+                    - device_id: b83ac7a2-118f-417d-8c43-de6fa899be68
+                      device_code: PC-000057
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 10
+                    - device_id: 6590b381-3a3f-44f9-9e5d-684f2e0670cf
+                      device_code: PC-000134
+                      os_icon: UOS
+                      os_name: UOS
+                      total: 4
+                    - device_id: 462e932f-2bb5-458a-a47e-f85c0de3c78f
+                      device_code: PC-000135
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 2
+                    device_cnt: 6
+                  - staff_id: 83e5499e-d272-40fa-930e-237ce6eac9d2
+                    staff_name: 彭柔
+                    console_user: lianb@DESKTOP-A0L03FT
+                    dept_paths: []
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: a05300b7-7b76-4b54-ad25-a16a9c516c29
+                      device_code: PC-000108
+                      os_icon: windows
+                      os_name: Windows
+                      total: 210
+                    device_cnt: 1
+                  - staff_id: 3b926e09-676c-47ac-95b5-adc5fe7777c4
+                    staff_name: 彭柔
+                    console_user: lianb@DESKTOP-A0L03FT
+                    dept_paths:
+                    - 测试公司/质量保证组
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: a05300b7-7b76-4b54-ad25-a16a9c516c29
+                      device_code: PC-000108
+                      os_icon: windows
+                      os_name: Windows
+                      total: 206
+                    device_cnt: 1
+                  - staff_id: 529fba21-8321-4c75-b216-48a9c3e9a69e
+                    staff_name: 吴贝宁
+                    console_user: serval@qzh-003
+                    dept_paths:
+                    - 测试公司/质量保证组
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: 5d81e7d3-f6a4-4e1a-9306-654d1e8c77f7
+                      device_code: PC-000116
+                      os_icon: windows
+                      os_name: Windows
+                      total: 199
+                    device_cnt: 1
+                  - staff_id: cf965fd5-a585-4138-8a53-9ff7f7fc00f5
+                    staff_name: 蔡连斌
+                    console_user: lianb@DESKTOP-PNED9SM
+                    dept_paths:
+                    - 测试公司/质量保证组
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: efc6e444-bf84-46d0-9dda-75f0600edcfe
+                      device_code: PC-000107
+                      os_icon: windows
+                      os_name: Windows
+                      total: 126
+                    device_cnt: 1
+                  - staff_id: fea88853-f343-4f37-b02e-d948094cc585
+                    staff_name: 陈花花
+                    console_user: jasonlee
+                    dept_paths:
+                    - 测试公司/交付1
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: c20a94bd-9b23-4f22-bf82-1fa4e20a1242
+                      device_code: PC-000030
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 110
+                    device_cnt: 1
+                  - staff_id: 450a997f-7aef-4df1-816c-ad06e0d051c0
+                    staff_name: sjd
+                    console_user: 薮猫@lenovo@LENOVO
+                    dept_paths: []
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: cea904bf-f182-4f68-8a6d-682ad55f7460
+                      device_code: PC-000123
+                      os_icon: windows
+                      os_name: Windows
+                      total: 105
+                    device_cnt: 1
+                  - staff_id: 45291952-3400-45b8-9e55-3261e6d6b4cd
+                    staff_name: test
+                    console_user: 薮猫@lenovo@LENOVO
+                    dept_paths:
+                    - 测试公司/交付1
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: cea904bf-f182-4f68-8a6d-682ad55f7460
+                      device_code: PC-000123
+                      os_icon: windows
+                      os_name: Windows
+                      total: 90
+                    device_cnt: 1
+                  - staff_id: a01febfb-64e0-48c0-829c-9b5a12f64652
+                    staff_name: 彭柔
+                    console_user: lianb@DESKTOP-A0L03FT
+                    dept_paths:
+                    - 测试公司/cyberserval
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: a05300b7-7b76-4b54-ad25-a16a9c516c29
+                      device_code: PC-000108
+                      os_icon: windows
+                      os_name: Windows
+                      total: 89
+                    device_cnt: 1
+                  - staff_id: 782560d3-5c5e-446d-94cd-b46ca88a6d3f
+                    staff_name: 鹿立学
+                    console_user: nanzhi
+                    dept_paths:
+                    - 测试公司/研发部/macOS终端组
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: b33dff9c-6e23-44c6-a914-cc1b1cd04447
+                      device_code: PC-000112
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 86
+                    device_cnt: 1
+                  - staff_id: aa16ef39-b089-4ee1-b142-92540a2a6ce0
+                    staff_name: 彭柔
+                    console_user: lianb@DESKTOP-A0L03FT
+                    dept_paths:
+                    - 测试公司
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: a05300b7-7b76-4b54-ad25-a16a9c516c29
+                      device_code: PC-000108
+                      os_icon: windows
+                      os_name: Windows
+                      total: 72
+                    device_cnt: 1
+                  - staff_id: 1f31a43f-d73a-4499-8342-356a3ae48ade
+                    staff_name: 蔡连斌
+                    console_user: lianb@DESKTOP-PNED9SM
+                    dept_paths:
+                    - 测试公司/质量保证组
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: efc6e444-bf84-46d0-9dda-75f0600edcfe
+                      device_code: PC-000107
+                      os_icon: windows
+                      os_name: Windows
+                      total: 48
+                    - device_id: de605316-f2b2-43e8-aefd-0dbebff66974
+                      device_code: PC-000110
+                      os_icon: windows
+                      os_name: Windows
+                      total: 13
+                    device_cnt: 2
+                  - staff_id: 81f1335c-2f3b-4747-80c7-ef39a075e1bd
+                    staff_name: 彭柔
+                    console_user: lianb@DESKTOP-A0L03FT
+                    dept_paths: []
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: a05300b7-7b76-4b54-ad25-a16a9c516c29
+                      device_code: PC-000108
+                      os_icon: windows
+                      os_name: Windows
+                      total: 47
+                    device_cnt: 1
+                  - staff_id: 3abf757c-a417-495f-8307-58aef0ad28d0
+                    staff_name: 彭柔
+                    console_user: lianb@DESKTOP-A0L03FT
+                    dept_paths: []
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: a05300b7-7b76-4b54-ad25-a16a9c516c29
+                      device_code: PC-000108
+                      os_icon: windows
+                      os_name: Windows
+                      total: 43
+                    device_cnt: 1
+                  - staff_id: 61b36b31-2ef4-4a6c-b1f7-2fffe2951c32
+                    staff_name: 翁黄格
+                    console_user: wenghuangge
+                    dept_paths:
+                    - 测试公司/研发部/macOS终端组
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: aeffa90b-c467-482f-889c-b79b9a0706b8
+                      device_code: PC-000095
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 43
+                    device_cnt: 1
+                  - staff_id: 8ccd5a8d-34d9-41d3-b988-f2b0fb9b9cdd
+                    staff_name: 周周
+                    console_user: serval-PC\root
+                    dept_paths:
+                    - 测试公司/测试部门
+                    os_list:
+                    - os_icon: UOS
+                      os_name: UOS
+                    device_list:
+                    - device_id: 6590b381-3a3f-44f9-9e5d-684f2e0670cf
+                      device_code: PC-000134
+                      os_icon: UOS
+                      os_name: UOS
+                      total: 35
+                    device_cnt: 1
+                  - staff_id: 64381e35-7ecc-4892-8d90-f7b52da3ed2b
+                    staff_name: pengrou
+                    console_user: lianb@DESKTOP-A0L03FT
+                    dept_paths: []
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: a05300b7-7b76-4b54-ad25-a16a9c516c29
+                      device_code: PC-000108
+                      os_icon: windows
+                      os_name: Windows
+                      total: 21
+                    device_cnt: 1
+                  - staff_id: 62852506-a335-4d9d-a30c-35bfcc5d3c85
+                    staff_name: 周紫莹
+                    console_user: zhouzhou
+                    dept_paths:
+                    - 测试公司/zhunru/zhunru1
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: 89ac0624-3f1c-4f28-b84a-17066b7026d3
+                      device_code: PC-000120
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 20
+                    device_cnt: 1
+                  - staff_id: 95c099a0-941f-42fe-b878-6a31161e5dad
+                    staff_name: zhouzhou123
+                    console_user: zhouzhou
+                    dept_paths:
+                    - 测试公司/zhunru/zhunru1/zhunrutest
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: 89ac0624-3f1c-4f28-b84a-17066b7026d3
+                      device_code: PC-000120
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 18
+                    device_cnt: 1
+                  - staff_id: cd73601e-7896-44b2-8fde-e3c6cd3f0a80
+                    staff_name: 卞桂龙2
+                    console_user: jasonlee
+                    dept_paths: []
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: c20a94bd-9b23-4f22-bf82-1fa4e20a1242
+                      device_code: PC-000030
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 17
+                    device_cnt: 1
+                  - staff_id: b417f0d6-5c33-4513-ba87-b68ada8b97b5
+                    staff_name: 周紫莹
+                    console_user: zhouzhou
+                    dept_paths:
+                    - 测试公司/研发部
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: 6ca5c2c1-c6bc-4f61-b7b8-e52f82deb40f
+                      device_code: PC-000111
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 13
+                    device_cnt: 1
+                  - staff_id: 0eabd92d-5013-4884-9703-e72c09821059
+                    staff_name: 李志帅
+                    console_user: jasonlee
+                    dept_paths:
+                    - 测试公司/产研部/研发部/macOS终端组
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: c20a94bd-9b23-4f22-bf82-1fa4e20a1242
+                      device_code: PC-000030
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 11
+                    device_cnt: 1
+                  - staff_id: 79ad0694-390b-4378-b1b6-a4ef89ee85c9
+                    staff_name: 胡雅杰
+                    console_user: huyajie
+                    dept_paths:
+                    - 测试公司
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: bae4f6c4-249e-44bf-ad7c-0b8c683e385d
+                      device_code: PC-000082
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 9
+                    device_cnt: 1
+                  - staff_id: fbdde482-666f-4b76-9f5d-dfdd518e64f0
+                    staff_name: 胡雅杰
+                    console_user: huyajie
+                    dept_paths:
+                    - 测试公司
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: bae4f6c4-249e-44bf-ad7c-0b8c683e385d
+                      device_code: PC-000082
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 7
+                    device_cnt: 1
+                  - staff_id: 19bc9041-b2e0-48e4-baef-ebd061a77b49
+                    staff_name: 胡雅杰
+                    console_user: huyajie
+                    dept_paths:
+                    - 测试公司/质量保证组
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: bae4f6c4-249e-44bf-ad7c-0b8c683e385d
+                      device_code: PC-000082
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 6
+                    device_cnt: 1
+                  - staff_id: 3b6f5108-7b9d-4e52-8cde-372d47409882
+                    staff_name: 陈诗梦
+                    console_user: vm125
+                    dept_paths:
+                    - 测试公司/cyberserval
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: b83ac7a2-118f-417d-8c43-de6fa899be68
+                      device_code: PC-000057
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 6
+                    device_cnt: 1
+                  - staff_id: da70eafb-cca6-4a4e-b7f5-7cf9c31e1edf
+                    staff_name: zy
+                    console_user: zhouzhou
+                    dept_paths:
+                    - 测试公司/test
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: 89ac0624-3f1c-4f28-b84a-17066b7026d3
+                      device_code: PC-000120
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 4
+                    device_cnt: 1
+                  - staff_id: cf505559-9843-433f-a711-8954686711b1
+                    staff_name: 李志帅
+                    console_user: jasonlee
+                    dept_paths:
+                    - 测试公司/终端组
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: c20a94bd-9b23-4f22-bf82-1fa4e20a1242
+                      device_code: PC-000030
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 3
+                    device_cnt: 1
+                  - staff_id: 064092ab-d2c9-4f1f-b7f7-70c788a6fbb1
+                    staff_name: 彭柔
+                    console_user: lianb@DESKTOP-A0L03FT
+                    dept_paths:
+                    - 测试公司/质量保证组
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: a05300b7-7b76-4b54-ad25-a16a9c516c29
+                      device_code: PC-000108
+                      os_icon: windows
+                      os_name: Windows
+                      total: 2
+                    device_cnt: 1
+                  - staff_id: 4ef20873-982f-4f1f-a4d7-069688956223
+                    staff_name: 胡雅杰
+                    console_user: huyajie
+                    dept_paths:
+                    - 测试公司/质量保证组
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: bae4f6c4-249e-44bf-ad7c-0b8c683e385d
+                      device_code: PC-000082
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 2
+                    device_cnt: 1
+                  - staff_id: 964d60c1-f89b-4e2d-8966-731c0513f5fd
+                    staff_name: 胡雅杰
+                    console_user: zhouzhou
+                    dept_paths:
+                    - 测试公司/cyberserval
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: 6ca5c2c1-c6bc-4f61-b7b8-e52f82deb40f
+                      device_code: PC-000111
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 2
+                    device_cnt: 1
+                  - staff_id: dcf2b8af-ae5f-4657-8be1-82ea4f610dca
+                    staff_name: 胡雅杰
+                    console_user: zhouzhou
+                    dept_paths:
+                    - 测试公司/cyberserval
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: 6ca5c2c1-c6bc-4f61-b7b8-e52f82deb40f
+                      device_code: PC-000111
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 2
+                    device_cnt: 1
+                  - staff_id: 3227c4e3-9afd-475e-aefd-86b1afac7439
+                    staff_name: Mercury
+                    console_user: mercury
+                    dept_paths:
+                    - 测试公司/产品部
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: d78ac208-0ddb-4793-b826-b34d54c44bb0
+                      device_code: PC-000007
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 1
+                    device_cnt: 1
+                  - staff_id: 35964de4-c953-4ad0-bfc3-51fe0f72b4f4
+                    staff_name: 周紫莹
+                    console_user: zhouzhou
+                    dept_paths:
+                    - 测试公司/研发部
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: 89ac0624-3f1c-4f28-b84a-17066b7026d3
+                      device_code: PC-000120
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 1
+                    device_cnt: 1
+                  - staff_id: 7aa5f1c9-0842-4992-bda8-81e7e9d03805
+                    staff_name: 胡雅杰
+                    console_user: zhouzhou
+                    dept_paths:
+                    - 测试公司/cyberserval
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: 89ac0624-3f1c-4f28-b84a-17066b7026d3
+                      device_code: PC-000120
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 1
+                    device_cnt: 1
+                  - staff_id: ddd5f195-69cc-4686-9afa-51ac1f7a68cb
+                    staff_name: 陈诗梦
+                    console_user: mercury
+                    dept_paths:
+                    - 测试公司/产品设计组
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: d78ac208-0ddb-4793-b826-b34d54c44bb0
+                      device_code: PC-000007
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 1
+                    device_cnt: 1
+                  - staff_id: fb01ccbf-5107-49bf-8822-0e0adbb2fd6f
+                    staff_name: 周周周
+                    console_user: zhouzhou
+                    dept_paths:
+                    - 测试公司/test
+                    os_list:
+                    - os_icon: macOS
+                      os_name: macOS
+                    device_list:
+                    - device_id: 89ac0624-3f1c-4f28-b84a-17066b7026d3
+                      device_code: PC-000120
+                      os_icon: macOS
+                      os_name: macOS
+                      total: 1
+                    device_cnt: 1
+      security: []

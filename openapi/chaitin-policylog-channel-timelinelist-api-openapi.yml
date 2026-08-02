@@ -1,0 +1,428 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policylog/channel/timelinelist API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policylog/channel/timelinelist
+  description: 日志中心/通道/时间线列表
+paths:
+  /policylog/channel/timelinelist:
+    post:
+      summary: 渠道管控时间线
+      deprecated: false
+      description: ''
+      tags:
+      - policylog/channel/timelinelist
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                search:
+                  type: string
+                queries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: string
+              required:
+              - time_range
+              - search
+              - queries
+            example:
+              time_range:
+                begin: '2023-11-14 10:55:38'
+                end: '2023-11-14 11:55:38'
+              search: ''
+              queries:
+              - field: staff_name
+                operator: is
+                value: 吴贝宁
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      total:
+                        type: integer
+                      search_total:
+                        type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            start:
+                              type: string
+                            end:
+                              type: string
+                            title:
+                              type: string
+                            title_display:
+                              type: string
+                            list:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  content:
+                                    type: string
+                                  content_display:
+                                    type: string
+                                  cnt:
+                                    type: integer
+                                  icon:
+                                    type: integer
+                                required:
+                                - content
+                                - content_display
+                                - cnt
+                                - icon
+                          required:
+                          - start
+                          - end
+                          - title
+                          - title_display
+                          - list
+                      title_field:
+                        type: string
+                    required:
+                    - index
+                    - total
+                    - search_total
+                    - results
+                    - title_field
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  index:
+                  - qzhddr_policylog_channel
+                  total: 96
+                  search_total: 96
+                  results:
+                  - start: '2023-11-12 11:00:00'
+                    end: '2023-11-12 12:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 0c957b44-a638-47d4-a0c0-7f27e744ccf9
+                      content_display: win
+                      cnt: 5
+                      icon: 2
+                  - start: '2023-11-12 12:00:00'
+                    end: '2023-11-12 13:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 0c957b44-a638-47d4-a0c0-7f27e744ccf9
+                      content_display: win
+                      cnt: 1
+                      icon: 2
+                  - start: '2023-11-12 18:00:00'
+                    end: '2023-11-12 19:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 0c957b44-a638-47d4-a0c0-7f27e744ccf9
+                      content_display: win
+                      cnt: 8
+                      icon: 2
+                  - start: '2023-11-13 09:00:00'
+                    end: '2023-11-13 10:00:00'
+                    title: onedrive
+                    title_display: OneDrive
+                    list:
+                    - content: d202a444-581d-4108-95a6-97d004febd9f
+                      content_display: 嘻嘻哈哈
+                      cnt: 7
+                      icon: 6
+                  - start: '2023-11-13 09:00:00'
+                    end: '2023-11-13 10:00:00'
+                    title: edge
+                    title_display: Edge
+                    list:
+                    - content: d202a444-581d-4108-95a6-97d004febd9f
+                      content_display: 嘻嘻哈哈
+                      cnt: 6
+                      icon: 6
+                  - start: '2023-11-13 10:00:00'
+                    end: '2023-11-13 11:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 0c957b44-a638-47d4-a0c0-7f27e744ccf9
+                      content_display: win
+                      cnt: 5
+                      icon: 2
+                  - start: '2023-11-13 10:00:00'
+                    end: '2023-11-13 11:00:00'
+                    title: edge
+                    title_display: Edge
+                    list:
+                    - content: d202a444-581d-4108-95a6-97d004febd9f
+                      content_display: 嘻嘻哈哈
+                      cnt: 1
+                      icon: 6
+                  - start: '2023-11-13 10:00:00'
+                    end: '2023-11-13 11:00:00'
+                    title: wechat_enterprise
+                    title_display: 企业微信
+                    list:
+                    - content: 1f3a375c-cc73-44c7-bd0a-6614cc033933
+                      content_display: hu分类-审批-全渠道
+                      cnt: 1
+                      icon: 6
+                  - start: '2023-11-13 11:00:00'
+                    end: '2023-11-13 12:00:00'
+                    title: feishu
+                    title_display: 飞书
+                    list:
+                    - content: d202a444-581d-4108-95a6-97d004febd9f
+                      content_display: 嘻嘻哈哈
+                      cnt: 3
+                      icon: 1
+                    - content: 0c957b44-a638-47d4-a0c0-7f27e744ccf9
+                      content_display: win
+                      cnt: 1
+                      icon: 2
+                  - start: '2023-11-13 11:00:00'
+                    end: '2023-11-13 12:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 0c957b44-a638-47d4-a0c0-7f27e744ccf9
+                      content_display: win
+                      cnt: 3
+                      icon: 2
+                  - start: '2023-11-13 11:00:00'
+                    end: '2023-11-13 12:00:00'
+                    title: baidu_wangpan
+                    title_display: 百度网盘
+                    list:
+                    - content: d202a444-581d-4108-95a6-97d004febd9f
+                      content_display: 嘻嘻哈哈
+                      cnt: 1
+                      icon: 7
+                  - start: '2023-11-13 12:00:00'
+                    end: '2023-11-13 13:00:00'
+                    title: onedrive
+                    title_display: OneDrive
+                    list:
+                    - content: d202a444-581d-4108-95a6-97d004febd9f
+                      content_display: 嘻嘻哈哈
+                      cnt: 7
+                      icon: 6
+                  - start: '2023-11-13 14:00:00'
+                    end: '2023-11-13 15:00:00'
+                    title: qq
+                    title_display: QQ
+                    list:
+                    - content: 0c957b44-a638-47d4-a0c0-7f27e744ccf9
+                      content_display: win
+                      cnt: 2
+                      icon: 2
+                  - start: '2023-11-13 14:00:00'
+                    end: '2023-11-13 15:00:00'
+                    title: wechat_enterprise
+                    title_display: 企业微信
+                    list:
+                    - content: e3c8d1dd-a34c-4356-b5af-df431bfc281d
+                      content_display: hu渠道手机号
+                      cnt: 2
+                      icon: 3
+                  - start: '2023-11-13 15:00:00'
+                    end: '2023-11-13 16:00:00'
+                    title: feishu
+                    title_display: 飞书
+                    list:
+                    - content: 1f3a375c-cc73-44c7-bd0a-6614cc033933
+                      content_display: hu分类-审批-全渠道
+                      cnt: 11
+                      icon: 6
+                    - content: 0c957b44-a638-47d4-a0c0-7f27e744ccf9
+                      content_display: win
+                      cnt: 1
+                      icon: 2
+                  - start: '2023-11-13 15:00:00'
+                    end: '2023-11-13 16:00:00'
+                    title: wps
+                    title_display: WPS Office
+                    list:
+                    - content: 0c957b44-a638-47d4-a0c0-7f27e744ccf9
+                      content_display: win
+                      cnt: 4
+                      icon: 2
+                  - start: '2023-11-13 15:00:00'
+                    end: '2023-11-13 16:00:00'
+                    title: qq
+                    title_display: QQ
+                    list:
+                    - content: 0c957b44-a638-47d4-a0c0-7f27e744ccf9
+                      content_display: win
+                      cnt: 3
+                      icon: 2
+                  - start: '2023-11-13 16:00:00'
+                    end: '2023-11-13 17:00:00'
+                    title: qq
+                    title_display: QQ
+                    list:
+                    - content: 0c957b44-a638-47d4-a0c0-7f27e744ccf9
+                      content_display: win
+                      cnt: 3
+                      icon: 2
+                  - start: '2023-11-13 16:00:00'
+                    end: '2023-11-13 17:00:00'
+                    title: wechat_enterprise
+                    title_display: 企业微信
+                    list:
+                    - content: 1f3a375c-cc73-44c7-bd0a-6614cc033933
+                      content_display: hu分类词对-审批-全渠道
+                      cnt: 2
+                      icon: 2
+                    - content: 4d3cc1e9-b85b-488b-b129-3d3d49e5f83d
+                      content_display: hu极速
+                      cnt: 1
+                      icon: 0
+                  - start: '2023-11-13 16:00:00'
+                    end: '2023-11-13 17:00:00'
+                    title: feishu
+                    title_display: 飞书
+                    list:
+                    - content: 1f3a375c-cc73-44c7-bd0a-6614cc033933
+                      content_display: hu分类-审批-全渠道
+                      cnt: 1
+                      icon: 6
+                  - start: '2023-11-13 17:00:00'
+                    end: '2023-11-13 18:00:00'
+                    title: feishu
+                    title_display: 飞书
+                    list:
+                    - content: e3c8d1dd-a34c-4356-b5af-df431bfc281d
+                      content_display: hu渠道手机号
+                      cnt: 13
+                      icon: 6
+                  - start: '2023-11-13 17:00:00'
+                    end: '2023-11-13 18:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: d202a444-581d-4108-95a6-97d004febd9f
+                      content_display: 嘻嘻哈哈
+                      cnt: 2
+                      icon: 3
+                  - start: '2023-11-14 11:00:00'
+                    end: '2023-11-14 12:00:00'
+                    title: feishu
+                    title_display: 飞书
+                    list:
+                    - content: c69e4369-57a9-4c0f-9498-6ab6c55abc9b
+                      content_display: uos-文件内容测试
+                      cnt: 1
+                      icon: 3
+                    - content: e3c8d1dd-a34c-4356-b5af-df431bfc281d
+                      content_display: hu渠道手机号
+                      cnt: 1
+                      icon: 2
+                  title_field: channel
+      security: []

@@ -1,0 +1,59 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/chaitin/chaitin-cli
+name: chaitin-cli
+summary: >-
+  Unified command-line tool for Chaitin security products. Consolidates multiple
+  product APIs, authentication methods, and output formats into a single Go
+  (Cobra) binary. Invocation form: `chaitin-cli <product> <command>`.
+repository: https://github.com/chaitin/chaitin-cli
+releases: https://github.com/chaitin/chaitin-cli/releases
+latest_version: v2607.0.2
+install:
+- method: script
+  command: 'curl -fsSL https://raw.githubusercontent.com/chaitin/chaitin-cli/main/skills/chaitin-cli/scripts/install-chaitin-cli.sh | bash'
+  platforms: [macos, linux]
+- method: binary-release
+  command: Download from GitHub Releases, extract chaitin-cli(.exe), add to PATH
+  platforms: [windows, macos, linux]
+- method: agent-skill
+  command: npx bzskills add chaitin/chaitin-cli
+  platforms: [agent]
+config:
+  sources: [config.yaml, environment variables, .env, root flags]
+  env_override: '<PRODUCT>_<FIELD>'
+  flags: ['-c/--config', '--dry-run', '--json (JSON output)']
+products:
+- product: safeline
+  label: SafeLine WAF
+  commands: [site management, IP blocking, ACL, policy/custom rules, attack logs]
+- product: xray
+  label: X-Ray vulnerability scanner
+  commands: [scan tasks, results, web assets]
+- product: cloudatlas
+  label: Cloud Atlas (asset exposure management)
+  commands: [assets, exposure, tasks]
+- product: cloudwalker
+  label: CloudWalker CWPP (host security)
+  commands: [events, vulnerabilities, assets, agents, modules]
+- product: veinmind
+  label: VeinMind container security
+  commands: [scan, images, containers]
+- product: ddr
+  label: DDR
+  commands: [tasks, findings]
+- product: dsensor
+  label: D-Sensor (threat deception)
+  commands: [sensors, events]
+- product: apisec
+  label: APISec (API security management)
+  commands: [apis, risks, policies]
+- product: codeinsight
+  label: CodeInsight (SAST)
+  commands: [projects, repository configs, scan tasks, reports]
+- product: codeforce
+  label: CodeForce (dev + security)
+  commands: [projects, AI tasks, denoise, repositories]
+- product: tanswer
+  label: T-Answer (traffic threat detection)
+  commands: [firewall rules, blocklists]

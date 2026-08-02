@@ -1,0 +1,60 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/orgs/chaitin/repositories
+packages:
+- language: go
+  registry: github-releases
+  name: chaitin-cli
+  url: https://github.com/chaitin/chaitin-cli
+  install: 'curl -fsSL https://raw.githubusercontent.com/chaitin/chaitin-cli/main/skills/chaitin-cli/scripts/install-chaitin-cli.sh | bash'
+  description: Unified CLI for Chaitin security products (SafeLine, X-Ray, Cloud Atlas, CloudWalker, VeinMind, DDR, CodeInsight, CodeForce, T-Answer).
+  official: true
+- language: javascript
+  registry: npm
+  name: bzskills
+  url: https://www.npmjs.com/package/bzskills
+  install: npx bzskills
+  description: Chaitin's open agent-skills tool ("npx bzskills") used to add product skills such as chaitin/chaitin-cli.
+  official: true
+- language: go
+  registry: pkg.go.dev
+  name: github.com/chaitin/raglite-go-sdk
+  url: https://pkg.go.dev/github.com/chaitin/raglite-go-sdk
+  install: go get github.com/chaitin/raglite-go-sdk
+  description: Go SDK for RAG implementation.
+  official: true
+- language: go
+  registry: pkg.go.dev
+  name: github.com/chaitin/t1k-go
+  url: https://pkg.go.dev/github.com/chaitin/t1k-go
+  install: go get github.com/chaitin/t1k-go
+  description: Go client for the T1K protocol used to integrate with SafeLine WAF detection.
+  official: true
+- language: go
+  registry: pkg.go.dev
+  name: github.com/chaitin/libveinmind
+  url: https://pkg.go.dev/github.com/chaitin/libveinmind
+  install: go get github.com/chaitin/libveinmind
+  description: Intuitive, extensible container-security SDK.
+  official: true
+- language: go
+  registry: github
+  name: github.com/chaitin/ModelKit
+  url: https://github.com/chaitin/ModelKit
+  install: go get github.com/chaitin/ModelKit
+  description: Lightweight utility for AI model discovery and API-key validation across model providers.
+  official: true
+- language: go
+  registry: github
+  name: github.com/chaitin/scaptcha-sdk-golang
+  url: https://github.com/chaitin/scaptcha-sdk-golang
+  install: go get github.com/chaitin/scaptcha-sdk-golang
+  description: Go SDK for Chaitin's SCaptcha behavioral CAPTCHA.
+  official: true
+- language: lua
+  registry: github
+  name: lua-resty-t1k
+  url: https://github.com/chaitin/lua-resty-t1k
+  install: 'opm get chaitin/lua-resty-t1k'
+  description: Lua (OpenResty) implementation of the T1K protocol for SafeLine WAF.
+  official: true

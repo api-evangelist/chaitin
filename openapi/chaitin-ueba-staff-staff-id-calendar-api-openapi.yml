@@ -1,0 +1,3505 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account ueba/staff/{staff_id}/calendar API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: ueba/staff/{staff_id}/calendar
+  description: UEBA 分析/人员/staff_id 参数/日历
+paths:
+  /ueba/staff/{staff_id}/calendar:
+    post:
+      summary: UEBA用户页日历图
+      deprecated: false
+      description: ''
+      tags:
+      - ueba/staff/{staff_id}/calendar
+      parameters:
+      - name: staff_id
+        in: path
+        description: ''
+        required: true
+        example: 100faf26-d362-4ca2-befb-3ac8c22673eb
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_staff:
+                  type: boolean
+              required:
+              - is_staff
+            example:
+              is_staff: true
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      total:
+                        type: integer
+                      search_total:
+                        type: integer
+                      results:
+                        type: object
+                        properties:
+                          date:
+                            type: object
+                            properties:
+                              buckets:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    key_as_string:
+                                      type: string
+                                    key:
+                                      type: integer
+                                    doc_count:
+                                      type: integer
+                                    total_score:
+                                      type: object
+                                      properties:
+                                        value:
+                                          type: integer
+                                      required:
+                                      - value
+                                    category:
+                                      type: object
+                                      properties:
+                                        doc_count_error_upper_bound:
+                                          type: integer
+                                        sum_other_doc_count:
+                                          type: integer
+                                        buckets:
+                                          type: array
+                                          items:
+                                            type: object
+                                            properties:
+                                              key:
+                                                type: string
+                                              doc_count:
+                                                type: integer
+                                              category_score:
+                                                type: object
+                                                properties:
+                                                  value:
+                                                    type: integer
+                                                required:
+                                                - value
+                                              ueba_category_display:
+                                                type: string
+                                      required:
+                                      - doc_count_error_upper_bound
+                                      - sum_other_doc_count
+                                      - buckets
+                                  required:
+                                  - key_as_string
+                                  - key
+                                  - doc_count
+                                  - total_score
+                                  - category
+                            required:
+                            - buckets
+                        required:
+                        - date
+                    required:
+                    - index
+                    - total
+                    - search_total
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  index:
+                  - qzhddr_ueba
+                  total: 12
+                  search_total: 12
+                  results:
+                    date:
+                      buckets:
+                      - key_as_string: '2022-12-29'
+                        key: 1672243200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2022-12-30'
+                        key: 1672329600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2022-12-31'
+                        key: 1672416000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-01'
+                        key: 1672502400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-02'
+                        key: 1672588800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-03'
+                        key: 1672675200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-04'
+                        key: 1672761600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-05'
+                        key: 1672848000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-06'
+                        key: 1672934400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-07'
+                        key: 1673020800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-08'
+                        key: 1673107200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-09'
+                        key: 1673193600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-10'
+                        key: 1673280000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-11'
+                        key: 1673366400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-12'
+                        key: 1673452800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-13'
+                        key: 1673539200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-14'
+                        key: 1673625600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-15'
+                        key: 1673712000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-16'
+                        key: 1673798400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-17'
+                        key: 1673884800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-18'
+                        key: 1673971200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-19'
+                        key: 1674057600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-20'
+                        key: 1674144000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-21'
+                        key: 1674230400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-22'
+                        key: 1674316800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-23'
+                        key: 1674403200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-24'
+                        key: 1674489600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-25'
+                        key: 1674576000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-26'
+                        key: 1674662400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-27'
+                        key: 1674748800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-28'
+                        key: 1674835200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-29'
+                        key: 1674921600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-30'
+                        key: 1675008000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-01-31'
+                        key: 1675094400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-01'
+                        key: 1675180800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-02'
+                        key: 1675267200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-03'
+                        key: 1675353600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-04'
+                        key: 1675440000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-05'
+                        key: 1675526400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-06'
+                        key: 1675612800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-07'
+                        key: 1675699200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-08'
+                        key: 1675785600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-09'
+                        key: 1675872000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-10'
+                        key: 1675958400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-11'
+                        key: 1676044800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-12'
+                        key: 1676131200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-13'
+                        key: 1676217600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-14'
+                        key: 1676304000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-15'
+                        key: 1676390400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-16'
+                        key: 1676476800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-17'
+                        key: 1676563200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-18'
+                        key: 1676649600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-19'
+                        key: 1676736000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-20'
+                        key: 1676822400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-21'
+                        key: 1676908800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-22'
+                        key: 1676995200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-23'
+                        key: 1677081600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-24'
+                        key: 1677168000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-25'
+                        key: 1677254400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-26'
+                        key: 1677340800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-27'
+                        key: 1677427200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-02-28'
+                        key: 1677513600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-01'
+                        key: 1677600000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-02'
+                        key: 1677686400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-03'
+                        key: 1677772800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-04'
+                        key: 1677859200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-05'
+                        key: 1677945600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-06'
+                        key: 1678032000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-07'
+                        key: 1678118400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-08'
+                        key: 1678204800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-09'
+                        key: 1678291200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-10'
+                        key: 1678377600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-11'
+                        key: 1678464000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-12'
+                        key: 1678550400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-13'
+                        key: 1678636800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-14'
+                        key: 1678723200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-15'
+                        key: 1678809600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-16'
+                        key: 1678896000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-17'
+                        key: 1678982400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-18'
+                        key: 1679068800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-19'
+                        key: 1679155200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-20'
+                        key: 1679241600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-21'
+                        key: 1679328000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-22'
+                        key: 1679414400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-23'
+                        key: 1679500800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-24'
+                        key: 1679587200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-25'
+                        key: 1679673600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-26'
+                        key: 1679760000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-27'
+                        key: 1679846400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-28'
+                        key: 1679932800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-29'
+                        key: 1680019200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-30'
+                        key: 1680105600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-03-31'
+                        key: 1680192000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-01'
+                        key: 1680278400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-02'
+                        key: 1680364800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-03'
+                        key: 1680451200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-04'
+                        key: 1680537600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-05'
+                        key: 1680624000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-06'
+                        key: 1680710400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-07'
+                        key: 1680796800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-08'
+                        key: 1680883200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-09'
+                        key: 1680969600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-10'
+                        key: 1681056000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-11'
+                        key: 1681142400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-12'
+                        key: 1681228800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-13'
+                        key: 1681315200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-14'
+                        key: 1681401600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-15'
+                        key: 1681488000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-16'
+                        key: 1681574400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-17'
+                        key: 1681660800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-18'
+                        key: 1681747200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-19'
+                        key: 1681833600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-20'
+                        key: 1681920000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-21'
+                        key: 1682006400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-22'
+                        key: 1682092800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-23'
+                        key: 1682179200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-24'
+                        key: 1682265600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-25'
+                        key: 1682352000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-26'
+                        key: 1682438400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-27'
+                        key: 1682524800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-28'
+                        key: 1682611200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-29'
+                        key: 1682697600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-04-30'
+                        key: 1682784000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-01'
+                        key: 1682870400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-02'
+                        key: 1682956800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-03'
+                        key: 1683043200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-04'
+                        key: 1683129600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-05'
+                        key: 1683216000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-06'
+                        key: 1683302400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-07'
+                        key: 1683388800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-08'
+                        key: 1683475200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-09'
+                        key: 1683561600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-10'
+                        key: 1683648000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-11'
+                        key: 1683734400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-12'
+                        key: 1683820800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-13'
+                        key: 1683907200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-14'
+                        key: 1683993600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-15'
+                        key: 1684080000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-16'
+                        key: 1684166400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-17'
+                        key: 1684252800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-18'
+                        key: 1684339200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-19'
+                        key: 1684425600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-20'
+                        key: 1684512000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-21'
+                        key: 1684598400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-22'
+                        key: 1684684800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-23'
+                        key: 1684771200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-24'
+                        key: 1684857600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-25'
+                        key: 1684944000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-26'
+                        key: 1685030400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-27'
+                        key: 1685116800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-28'
+                        key: 1685203200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-29'
+                        key: 1685289600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-30'
+                        key: 1685376000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-05-31'
+                        key: 1685462400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-01'
+                        key: 1685548800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-02'
+                        key: 1685635200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-03'
+                        key: 1685721600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-04'
+                        key: 1685808000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-05'
+                        key: 1685894400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-06'
+                        key: 1685980800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-07'
+                        key: 1686067200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-08'
+                        key: 1686153600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-09'
+                        key: 1686240000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-10'
+                        key: 1686326400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-11'
+                        key: 1686412800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-12'
+                        key: 1686499200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-13'
+                        key: 1686585600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-14'
+                        key: 1686672000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-15'
+                        key: 1686758400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-16'
+                        key: 1686844800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-17'
+                        key: 1686931200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-18'
+                        key: 1687017600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-19'
+                        key: 1687104000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-20'
+                        key: 1687190400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-21'
+                        key: 1687276800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-22'
+                        key: 1687363200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-23'
+                        key: 1687449600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-24'
+                        key: 1687536000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-25'
+                        key: 1687622400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-26'
+                        key: 1687708800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-27'
+                        key: 1687795200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-28'
+                        key: 1687881600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-29'
+                        key: 1687968000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-06-30'
+                        key: 1688054400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-01'
+                        key: 1688140800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-02'
+                        key: 1688227200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-03'
+                        key: 1688313600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-04'
+                        key: 1688400000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-05'
+                        key: 1688486400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-06'
+                        key: 1688572800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-07'
+                        key: 1688659200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-08'
+                        key: 1688745600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-09'
+                        key: 1688832000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-10'
+                        key: 1688918400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-11'
+                        key: 1689004800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-12'
+                        key: 1689091200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-13'
+                        key: 1689177600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-14'
+                        key: 1689264000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-15'
+                        key: 1689350400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-16'
+                        key: 1689436800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-17'
+                        key: 1689523200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-18'
+                        key: 1689609600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-19'
+                        key: 1689696000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-20'
+                        key: 1689782400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-21'
+                        key: 1689868800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-22'
+                        key: 1689955200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-23'
+                        key: 1690041600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-24'
+                        key: 1690128000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-25'
+                        key: 1690214400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-26'
+                        key: 1690300800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-27'
+                        key: 1690387200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-28'
+                        key: 1690473600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-29'
+                        key: 1690560000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-30'
+                        key: 1690646400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-07-31'
+                        key: 1690732800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-01'
+                        key: 1690819200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-02'
+                        key: 1690905600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-03'
+                        key: 1690992000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-04'
+                        key: 1691078400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-05'
+                        key: 1691164800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-06'
+                        key: 1691251200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-07'
+                        key: 1691337600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-08'
+                        key: 1691424000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-09'
+                        key: 1691510400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-10'
+                        key: 1691596800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-11'
+                        key: 1691683200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-12'
+                        key: 1691769600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-13'
+                        key: 1691856000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-14'
+                        key: 1691942400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-15'
+                        key: 1692028800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-16'
+                        key: 1692115200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-17'
+                        key: 1692201600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-18'
+                        key: 1692288000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-19'
+                        key: 1692374400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-20'
+                        key: 1692460800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-21'
+                        key: 1692547200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-22'
+                        key: 1692633600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-23'
+                        key: 1692720000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-24'
+                        key: 1692806400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-25'
+                        key: 1692892800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-26'
+                        key: 1692979200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-27'
+                        key: 1693065600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-28'
+                        key: 1693152000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-29'
+                        key: 1693238400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-30'
+                        key: 1693324800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-08-31'
+                        key: 1693411200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-01'
+                        key: 1693497600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-02'
+                        key: 1693584000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-03'
+                        key: 1693670400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-04'
+                        key: 1693756800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-05'
+                        key: 1693843200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-06'
+                        key: 1693929600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-07'
+                        key: 1694016000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-08'
+                        key: 1694102400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-09'
+                        key: 1694188800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-10'
+                        key: 1694275200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-11'
+                        key: 1694361600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-12'
+                        key: 1694448000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-13'
+                        key: 1694534400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-14'
+                        key: 1694620800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-15'
+                        key: 1694707200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-16'
+                        key: 1694793600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-17'
+                        key: 1694880000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-18'
+                        key: 1694966400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-19'
+                        key: 1695052800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-20'
+                        key: 1695139200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-21'
+                        key: 1695225600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-22'
+                        key: 1695312000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-23'
+                        key: 1695398400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-24'
+                        key: 1695484800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-25'
+                        key: 1695571200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-26'
+                        key: 1695657600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-27'
+                        key: 1695744000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-28'
+                        key: 1695830400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-29'
+                        key: 1695916800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-09-30'
+                        key: 1696003200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-01'
+                        key: 1696089600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-02'
+                        key: 1696176000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-03'
+                        key: 1696262400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-04'
+                        key: 1696348800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-05'
+                        key: 1696435200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-06'
+                        key: 1696521600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-07'
+                        key: 1696608000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-08'
+                        key: 1696694400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-09'
+                        key: 1696780800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-10'
+                        key: 1696867200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-11'
+                        key: 1696953600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-12'
+                        key: 1697040000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-13'
+                        key: 1697126400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-14'
+                        key: 1697212800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-15'
+                        key: 1697299200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-16'
+                        key: 1697385600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-17'
+                        key: 1697472000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-18'
+                        key: 1697558400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-19'
+                        key: 1697644800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-20'
+                        key: 1697731200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-21'
+                        key: 1697817600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-22'
+                        key: 1697904000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-23'
+                        key: 1697990400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-24'
+                        key: 1698076800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-25'
+                        key: 1698163200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-26'
+                        key: 1698249600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-27'
+                        key: 1698336000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-28'
+                        key: 1698422400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-29'
+                        key: 1698508800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-30'
+                        key: 1698595200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-10-31'
+                        key: 1698681600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-01'
+                        key: 1698768000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-02'
+                        key: 1698854400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-03'
+                        key: 1698940800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-04'
+                        key: 1699027200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-05'
+                        key: 1699113600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-06'
+                        key: 1699200000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-07'
+                        key: 1699286400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-08'
+                        key: 1699372800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-09'
+                        key: 1699459200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-10'
+                        key: 1699545600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-11'
+                        key: 1699632000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-12'
+                        key: 1699718400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-13'
+                        key: 1699804800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-14'
+                        key: 1699891200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-15'
+                        key: 1699977600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-16'
+                        key: 1700064000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-17'
+                        key: 1700150400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-18'
+                        key: 1700236800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-19'
+                        key: 1700323200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-20'
+                        key: 1700409600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-21'
+                        key: 1700496000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-22'
+                        key: 1700582400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-23'
+                        key: 1700668800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-24'
+                        key: 1700755200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-25'
+                        key: 1700841600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-26'
+                        key: 1700928000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-27'
+                        key: 1701014400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-28'
+                        key: 1701100800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-29'
+                        key: 1701187200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-11-30'
+                        key: 1701273600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-01'
+                        key: 1701360000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-02'
+                        key: 1701446400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-03'
+                        key: 1701532800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-04'
+                        key: 1701619200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-05'
+                        key: 1701705600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-06'
+                        key: 1701792000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-07'
+                        key: 1701878400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-08'
+                        key: 1701964800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-09'
+                        key: 1702051200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-10'
+                        key: 1702137600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-11'
+                        key: 1702224000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-12'
+                        key: 1702310400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-13'
+                        key: 1702396800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-14'
+                        key: 1702483200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-15'
+                        key: 1702569600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-16'
+                        key: 1702656000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-17'
+                        key: 1702742400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-18'
+                        key: 1702828800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-19'
+                        key: 1702915200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-20'
+                        key: 1703001600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-21'
+                        key: 1703088000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-22'
+                        key: 1703174400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-23'
+                        key: 1703260800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-24'
+                        key: 1703347200000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-25'
+                        key: 1703433600000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-26'
+                        key: 1703520000000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-27'
+                        key: 1703606400000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-28'
+                        key: 1703692800000
+                        doc_count: 0
+                        total_score:
+                          value: 0
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets: []
+                      - key_as_string: '2023-12-29'
+                        key: 1703779200000
+                        doc_count: 12
+                        total_score:
+                          value: 720
+                        category:
+                          doc_count_error_upper_bound: 0
+                          sum_other_doc_count: 0
+                          buckets:
+                          - key: outgoing
+                            doc_count: 12
+                            category_score:
+                              value: 720
+                            ueba_category_display: 外发行为
+      security: []

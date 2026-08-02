@@ -1,0 +1,1317 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policylog/code/timelinelist API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policylog/code/timelinelist
+  description: 日志中心/代码/时间线列表
+paths:
+  /policylog/code/timelinelist:
+    post:
+      summary: 代码管控时间线
+      deprecated: false
+      description: ''
+      tags:
+      - policylog/code/timelinelist
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                search:
+                  type: string
+                queries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: string
+              required:
+              - time_range
+              - search
+              - queries
+            example:
+              time_range:
+                begin: '2023-11-14 10:55:38'
+                end: '2023-11-14 11:55:38'
+              search: ''
+              queries:
+              - field: staff_name
+                operator: is
+                value: 吴贝宁
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      total:
+                        type: integer
+                      search_total:
+                        type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            start:
+                              type: string
+                            end:
+                              type: string
+                            title:
+                              type: string
+                            title_display:
+                              type: string
+                            list:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  content:
+                                    type: string
+                                  content_display:
+                                    type: string
+                                  cnt:
+                                    type: integer
+                                  icon:
+                                    type: 'null'
+                                required:
+                                - content
+                                - content_display
+                                - cnt
+                                - icon
+                          required:
+                          - start
+                          - end
+                          - title
+                          - title_display
+                          - list
+                      title_field:
+                        type: string
+                    required:
+                    - index
+                    - total
+                    - search_total
+                    - results
+                    - title_field
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  index:
+                  - qzhddr_policy_code_control_logs
+                  total: 558
+                  search_total: 558
+                  results:
+                  - start: '2023-09-01 17:00:00'
+                    end: '2023-09-01 18:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 4
+                      icon: null
+                  - start: '2023-09-04 11:00:00'
+                    end: '2023-09-04 12:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-06 18:00:00'
+                    end: '2023-09-06 19:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 6
+                      icon: null
+                  - start: '2023-09-06 19:00:00'
+                    end: '2023-09-06 20:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 14
+                      icon: null
+                  - start: '2023-09-06 20:00:00'
+                    end: '2023-09-06 21:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 4
+                      icon: null
+                  - start: '2023-09-07 10:00:00'
+                    end: '2023-09-07 11:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-07 11:00:00'
+                    end: '2023-09-07 12:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-07 15:00:00'
+                    end: '2023-09-07 16:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-11 21:00:00'
+                    end: '2023-09-11 22:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-12 09:00:00'
+                    end: '2023-09-12 10:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 4
+                      icon: null
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-12 11:00:00'
+                    end: '2023-09-12 12:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-12 14:00:00'
+                    end: '2023-09-12 15:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 25
+                      icon: null
+                  - start: '2023-09-12 15:00:00'
+                    end: '2023-09-12 16:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 10
+                      icon: null
+                  - start: '2023-09-12 16:00:00'
+                    end: '2023-09-12 17:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 8
+                      icon: null
+                  - start: '2023-09-12 19:00:00'
+                    end: '2023-09-12 20:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-12 20:00:00'
+                    end: '2023-09-12 21:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 8
+                      icon: null
+                  - start: '2023-09-12 21:00:00'
+                    end: '2023-09-12 22:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 10
+                      icon: null
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-13 10:00:00'
+                    end: '2023-09-13 11:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 19
+                      icon: null
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-13 11:00:00'
+                    end: '2023-09-13 12:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 10
+                      icon: null
+                  - start: '2023-09-13 14:00:00'
+                    end: '2023-09-13 15:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 4
+                      icon: null
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-13 15:00:00'
+                    end: '2023-09-13 16:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 8
+                      icon: null
+                  - start: '2023-09-13 16:00:00'
+                    end: '2023-09-13 17:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-13 18:00:00'
+                    end: '2023-09-13 19:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 7
+                      icon: null
+                  - start: '2023-09-13 19:00:00'
+                    end: '2023-09-13 20:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 13
+                      icon: null
+                  - start: '2023-09-13 20:00:00'
+                    end: '2023-09-13 21:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 4
+                      icon: null
+                  - start: '2023-09-13 21:00:00'
+                    end: '2023-09-13 22:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 6
+                      icon: null
+                  - start: '2023-09-14 15:00:00'
+                    end: '2023-09-14 16:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 19
+                      icon: null
+                  - start: '2023-09-14 16:00:00'
+                    end: '2023-09-14 17:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 12
+                      icon: null
+                  - start: '2023-09-14 16:00:00'
+                    end: '2023-09-14 17:00:00'
+                    title: svn
+                    title_display: SVN
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 3
+                      icon: null
+                  - start: '2023-09-14 17:00:00'
+                    end: '2023-09-14 18:00:00'
+                    title: svn
+                    title_display: SVN
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 5
+                      icon: null
+                  - start: '2023-09-14 17:00:00'
+                    end: '2023-09-14 18:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-14 18:00:00'
+                    end: '2023-09-14 19:00:00'
+                    title: svn
+                    title_display: SVN
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-14 21:00:00'
+                    end: '2023-09-14 22:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-14 21:00:00'
+                    end: '2023-09-14 22:00:00'
+                    title: svn
+                    title_display: SVN
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-15 14:00:00'
+                    end: '2023-09-15 15:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 37
+                      icon: null
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-15 16:00:00'
+                    end: '2023-09-15 17:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 5
+                      icon: null
+                  - start: '2023-09-15 17:00:00'
+                    end: '2023-09-15 18:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-16 17:00:00'
+                    end: '2023-09-16 18:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 5
+                      icon: null
+                  - start: '2023-09-16 18:00:00'
+                    end: '2023-09-16 19:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-16 19:00:00'
+                    end: '2023-09-16 20:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-17 11:00:00'
+                    end: '2023-09-17 12:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-18 10:00:00'
+                    end: '2023-09-18 11:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-18 12:00:00'
+                    end: '2023-09-18 13:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-18 13:00:00'
+                    end: '2023-09-18 14:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-18 15:00:00'
+                    end: '2023-09-18 16:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 6
+                      icon: null
+                  - start: '2023-09-18 16:00:00'
+                    end: '2023-09-18 17:00:00'
+                    title: svn
+                    title_display: SVN
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 5
+                      icon: null
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 4
+                      icon: null
+                  - start: '2023-09-18 16:00:00'
+                    end: '2023-09-18 17:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 6
+                      icon: null
+                  - start: '2023-09-18 17:00:00'
+                    end: '2023-09-18 18:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-18 18:00:00'
+                    end: '2023-09-18 19:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 15
+                      icon: null
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-19 10:00:00'
+                    end: '2023-09-19 11:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-19 11:00:00'
+                    end: '2023-09-19 12:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-21 10:00:00'
+                    end: '2023-09-21 11:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 6
+                      icon: null
+                  - start: '2023-09-21 16:00:00'
+                    end: '2023-09-21 17:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 9
+                      icon: null
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-21 17:00:00'
+                    end: '2023-09-21 18:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 7
+                      icon: null
+                  - start: '2023-09-21 18:00:00'
+                    end: '2023-09-21 19:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 17
+                      icon: null
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 3
+                      icon: null
+                  - start: '2023-09-21 19:00:00'
+                    end: '2023-09-21 20:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 3
+                      icon: null
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-21 20:00:00'
+                    end: '2023-09-21 21:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-21 21:00:00'
+                    end: '2023-09-21 22:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-21 22:00:00'
+                    end: '2023-09-21 23:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-21 23:00:00'
+                    end: '2023-09-22 00:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-22 00:00:00'
+                    end: '2023-09-22 01:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-22 02:00:00'
+                    end: '2023-09-22 03:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-22 03:00:00'
+                    end: '2023-09-22 04:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-22 04:00:00'
+                    end: '2023-09-22 05:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-22 05:00:00'
+                    end: '2023-09-22 06:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-22 06:00:00'
+                    end: '2023-09-22 07:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-22 07:00:00'
+                    end: '2023-09-22 08:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-22 08:00:00'
+                    end: '2023-09-22 09:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-22 09:00:00'
+                    end: '2023-09-22 10:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-22 10:00:00'
+                    end: '2023-09-22 11:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 3
+                      icon: null
+                  - start: '2023-09-22 11:00:00'
+                    end: '2023-09-22 12:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 9
+                      icon: null
+                  - start: '2023-09-22 16:00:00'
+                    end: '2023-09-22 17:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 6
+                      icon: null
+                  - start: '2023-09-25 14:00:00'
+                    end: '2023-09-25 15:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 4
+                      icon: null
+                  - start: '2023-09-25 15:00:00'
+                    end: '2023-09-25 16:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-09-25 18:00:00'
+                    end: '2023-09-25 19:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 3
+                      icon: null
+                  - start: '2023-09-26 10:00:00'
+                    end: '2023-09-26 11:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 26
+                      icon: null
+                  - start: '2023-09-26 11:00:00'
+                    end: '2023-09-26 12:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 7
+                      icon: null
+                  - start: '2023-09-26 14:00:00'
+                    end: '2023-09-26 15:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 3
+                      icon: null
+                  - start: '2023-09-26 15:00:00'
+                    end: '2023-09-26 16:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 10
+                      icon: null
+                  - start: '2023-09-27 13:00:00'
+                    end: '2023-09-27 14:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-09-27 14:00:00'
+                    end: '2023-09-27 15:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-07 14:00:00'
+                    end: '2023-10-07 15:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-08 10:00:00'
+                    end: '2023-10-08 11:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-08 11:00:00'
+                    end: '2023-10-08 12:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-09 14:00:00'
+                    end: '2023-10-09 15:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 6
+                      icon: null
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 6
+                      icon: null
+                  - start: '2023-10-10 11:00:00'
+                    end: '2023-10-10 12:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-10 13:00:00'
+                    end: '2023-10-10 14:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-10 14:00:00'
+                    end: '2023-10-10 15:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-11 18:00:00'
+                    end: '2023-10-11 19:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-12 10:00:00'
+                    end: '2023-10-12 11:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-18 23:00:00'
+                    end: '2023-10-19 00:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-20 16:00:00'
+                    end: '2023-10-20 17:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 5
+                      icon: null
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-20 17:00:00'
+                    end: '2023-10-20 18:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-20 18:00:00'
+                    end: '2023-10-20 19:00:00'
+                    title: svn
+                    title_display: svn
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 3
+                      icon: null
+                  - start: '2023-10-20 18:00:00'
+                    end: '2023-10-20 19:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-23 14:00:00'
+                    end: '2023-10-23 15:00:00'
+                    title: svn
+                    title_display: svn
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-23 15:00:00'
+                    end: '2023-10-23 16:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-24 14:00:00'
+                    end: '2023-10-24 15:00:00'
+                    title: svn
+                    title_display: svn
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-24 15:00:00'
+                    end: '2023-10-24 16:00:00'
+                    title: svn
+                    title_display: svn
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 1
+                      icon: null
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-24 17:00:00'
+                    end: '2023-10-24 18:00:00'
+                    title: svn
+                    title_display: svn
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-25 11:00:00'
+                    end: '2023-10-25 12:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 6
+                      icon: null
+                  - start: '2023-10-25 11:00:00'
+                    end: '2023-10-25 12:00:00'
+                    title: svn
+                    title_display: svn
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-25 13:00:00'
+                    end: '2023-10-25 14:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 4
+                      icon: null
+                  - start: '2023-10-25 14:00:00'
+                    end: '2023-10-25 15:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-25 15:00:00'
+                    end: '2023-10-25 16:00:00'
+                    title: svn
+                    title_display: svn
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 9
+                      icon: null
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-25 15:00:00'
+                    end: '2023-10-25 16:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-25 16:00:00'
+                    end: '2023-10-25 17:00:00'
+                    title: svn
+                    title_display: svn
+                    list:
+                    - content: code_control_download
+                      content_display: code_control_download
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-25 20:00:00'
+                    end: '2023-10-25 21:00:00'
+                    title: svn
+                    title_display: svn
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 5
+                      icon: null
+                  - start: '2023-10-25 20:00:00'
+                    end: '2023-10-25 21:00:00'
+                    title: git
+                    title_display: git
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-26 10:00:00'
+                    end: '2023-10-26 11:00:00'
+                    title: svn
+                    title_display: svn
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-26 20:00:00'
+                    end: '2023-10-26 21:00:00'
+                    title: svn
+                    title_display: svn
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-02 16:00:00'
+                    end: '2023-11-02 17:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-06 17:00:00'
+                    end: '2023-11-06 18:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-06 18:00:00'
+                    end: '2023-11-06 19:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 2
+                      icon: null
+                  - start: '2023-11-08 15:00:00'
+                    end: '2023-11-08 16:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-09 10:00:00'
+                    end: '2023-11-09 11:00:00'
+                    title: git
+                    title_display: GIT
+                    list:
+                    - content: code_control_upload
+                      content_display: code_control_upload
+                      cnt: 1
+                      icon: null
+                  title_field: channel
+      security: []

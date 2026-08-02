@@ -1,0 +1,392 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account installer/downloadmeta/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: installer/downloadmeta/list
+  description: 终端安装包/下载元数据/列表
+paths:
+  /installer/downloadmeta/list:
+    post:
+      summary: 公用安装包配置列表
+      deprecated: false
+      description: ''
+      tags:
+      - installer/downloadmeta/list
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                        comment:
+                          type: string
+                        address:
+                          type: object
+                          properties:
+                            scheme:
+                              type: string
+                            port:
+                              type: integer
+                            name:
+                              type: string
+                            env:
+                              type: string
+                            heartbeat_port:
+                              type: integer
+                            is_default:
+                              type: boolean
+                            host:
+                              type: string
+                          required:
+                          - heartbeat_port
+                          - name
+                          - env
+                          - port
+                          - scheme
+                          - host
+                          - is_default
+                        addr_key:
+                          type: string
+                        ext_args:
+                          type: integer
+                        data:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                              version:
+                                type: string
+                                nullable: true
+                              architecture:
+                                type: string
+                                nullable: true
+                              family:
+                                type: string
+                              os_icon:
+                                type: string
+                              meta_id:
+                                type: string
+                            required:
+                            - name
+                            - version
+                            - architecture
+                            - family
+                            - os_icon
+                            - meta_id
+                        check_network:
+                          type: boolean
+                      required:
+                      - title
+                      - comment
+                      - address
+                      - addr_key
+                      - ext_args
+                      - data
+                      - check_network
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                - title: 上海ddr
+                  comment: ''
+                  address:
+                    scheme: https
+                    port: 8443
+                    name: 地址（测试）
+                    env: internal
+                    heartbeat_port: 13125
+                    is_default: false
+                    host: ddr-console.netease.com111
+                  addr_key: 4F47891B22C17F52A83E1E8F403F5A6D
+                  ext_args: 1
+                  data:
+                  - name: DDR Windows v3.2.203
+                    version: 3.2.203
+                    architecture: x86_64
+                    family: Windows
+                    os_icon: windows
+                    meta_id: 5f0ff03c2a8bee798d9f1c645e3ee20e
+                  - name: LinuxGuider
+                    version: null
+                    architecture: null
+                    family: LinuxGuider
+                    os_icon: windows
+                    meta_id: 263e1487a5ac24fb68b2d84f0ea29293
+                  check_network: false
+                - title: 上海ddr
+                  comment: ''
+                  address:
+                    env: external
+                    is_default: false
+                    port: 8443
+                    name: 测试
+                    host: 192.168.89.32
+                    heartbeat_port: 13125
+                    scheme: https
+                  addr_key: 0685FEC5B59D1BA4608EFE8A5911F5FF
+                  ext_args: 1
+                  data:
+                  - name: DDR Windows v3.2.203
+                    version: 3.2.203
+                    architecture: x86_64
+                    family: Windows
+                    os_icon: windows
+                    meta_id: 1373c57d3521b7cb1a8d5d0d81fe3442
+                  - name: LinuxGuider
+                    version: null
+                    architecture: null
+                    family: LinuxGuider
+                    os_icon: windows
+                    meta_id: 2e4c50400d72d725727edc5aaf867da8
+                  check_network: false
+                - title: 上海ddr买买买
+                  comment: ''
+                  address:
+                    name: host
+                    host: ddr.soumaotech.cn
+                    port: 8443
+                    heartbeat_port: 13125
+                    scheme: https
+                    is_default: false
+                    env: internal
+                  addr_key: B261820626F998281325C4FDA13F5F7F
+                  ext_args: 1
+                  data:
+                  - name: DDR Windows v3.2.203
+                    version: 3.2.203
+                    architecture: x86_64
+                    family: Windows
+                    os_icon: windows
+                    meta_id: 205c8d4d73ddc747442028448a5ad16a
+                  - name: LinuxGuider
+                    version: null
+                    architecture: null
+                    family: LinuxGuider
+                    os_icon: windows
+                    meta_id: 5cfd8c46bb6c8a052c9d2154c4006487
+                  check_network: false
+                - title: 上海ddrssd
+                  comment: ''
+                  address:
+                    name: 地址（测试）
+                    host: ddr-console.netease.com
+                    port: 8443
+                    heartbeat_port: 13125
+                    scheme: https
+                    is_default: false
+                    env: internal
+                  addr_key: 769490B6103A04817A30489D3707831D
+                  ext_args: 1
+                  data:
+                  - name: DDR Windows v3.2.203
+                    version: 3.2.203
+                    architecture: x86_64
+                    family: Windows
+                    os_icon: windows
+                    meta_id: 9f23279f196cba1a70741685250de2fd
+                  - name: LinuxGuider
+                    version: null
+                    architecture: null
+                    family: LinuxGuider
+                    os_icon: windows
+                    meta_id: 1516fd79c0387511e0d76abc1133f49b
+                  check_network: false
+                - title: 广州aaaa
+                  comment: ''
+                  address:
+                    heartbeat_port: 13125
+                    host: 192.168.89.26
+                    port: 8443
+                    scheme: https
+                    is_default: true
+                    name: 内置通信地址
+                    env: internal
+                  addr_key: 6DC70FB520C06642FB2AACFE0A6817F4
+                  ext_args: 1
+                  data:
+                  - name: DDR Windows v3.2.203
+                    version: 3.2.203
+                    architecture: x86_64
+                    family: Windows
+                    os_icon: windows
+                    meta_id: 1d890acca03ca86858b6e93be4744b49
+                  - name: LinuxGuider
+                    version: null
+                    architecture: null
+                    family: LinuxGuider
+                    os_icon: windows
+                    meta_id: ea5e555ec824c7deb52564000b78b4f2
+                  check_network: false
+                - title: 广州aaaa
+                  comment: ''
+                  address:
+                    is_default: true
+                    scheme: https
+                    port: 8443
+                    host: 192.168.89.26
+                    heartbeat_port: 13125
+                    env: internal
+                    name: 内置通信地址
+                  ext_args: 3
+                  addr_key: BD4933AEED0FE39657A76A201564AEAB
+                  data:
+                  - name: DDR Windows v3.2.203
+                    version: 3.2.203
+                    architecture: x86_64
+                    family: Windows
+                    os_icon: windows
+                    meta_id: db64e224557d61da40e2157d2549cc0f
+                  - name: LinuxGuider
+                    version: null
+                    architecture: null
+                    family: LinuxGuider
+                    os_icon: windows
+                    meta_id: d75e58b76a5159eae56c1dbdca14470f
+                  check_network: true
+                - title: 啊啊呃呃
+                  comment: 鹅鹅鹅饿
+                  address:
+                    heartbeat_port: 13125
+                    name: 内置通信地址
+                    env: internal
+                    port: 8443
+                    scheme: https
+                    host: 192.168.89.32
+                    is_default: true
+                  ext_args: 3
+                  addr_key: 233893180A0BC96B9FFF8F8D5ED6E195
+                  data:
+                  - name: DDR Linux v3.2.33
+                    version: 3.2.33
+                    architecture: arm64
+                    family: Linux
+                    os_icon: Linux
+                    meta_id: 6d936a931fa13c597855b47c22afb2f0
+                  - name: DDR UOS v3.2.33
+                    version: 3.2.33
+                    architecture: arm64
+                    family: UOS
+                    os_icon: UOS
+                    meta_id: c5f57511f256b77e3464906b19d7edc2
+                  - name: DDR Kylin v3.2.33
+                    version: 3.2.33
+                    architecture: arm64
+                    family: Kylin
+                    os_icon: Kylin
+                    meta_id: eb2b785b09db258c0b8e9fb633f44ecf
+                  - name: DDR Windows v3.2.203
+                    version: 3.2.203
+                    architecture: x86_64
+                    family: Windows
+                    os_icon: windows
+                    meta_id: 5d7beb6237927f896783b0ed9f04ca0e
+                  - name: DDR Kylin v3.2.35
+                    version: 3.2.35
+                    architecture: x86_64
+                    family: Kylin
+                    os_icon: Kylin
+                    meta_id: 9abeffcafac4e629073508e1fdfc12ae
+                  - name: DDR Linux v3.2.35
+                    version: 3.2.35
+                    architecture: x86_64
+                    family: Linux
+                    os_icon: Linux
+                    meta_id: c70fbec2a98390326b68b216c1f2e7ec
+                  - name: DDR UOS v3.2.35
+                    version: 3.2.35
+                    architecture: x86_64
+                    family: UOS
+                    os_icon: UOS
+                    meta_id: 106cf15d55eb759e6872d6d75258a5d7
+                  - name: DDR macOS v3.2.125
+                    version: 3.2.125
+                    architecture: Universal
+                    family: macOS
+                    os_icon: macOS
+                    meta_id: 42d572b8c2ce92fb7bd3dc233dc41c75
+                  - name: LinuxGuider
+                    version: null
+                    architecture: null
+                    family: LinuxGuider
+                    os_icon: windows
+                    meta_id: 910c25c4e3fa1ff6c0aaeb874f71a6c8
+                  check_network: true
+      security: []

@@ -1,0 +1,40 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
+api: openapi/chaitin-safeline-openapi-original.json
+summary: >-
+  Cross-cutting request/response semantics for the SafeLine WAF Open API (the
+  flagship Chaitin machine API). Derived from the harvested Swagger 2.0 spec and
+  the published Open API tutorial.
+authentication:
+  style: api-key-header
+  header: X-SLCE-API-TOKEN
+  min_version: '6.6.0'
+  ref: authentication/chaitin-authentication.yml
+transport:
+  scheme: https
+  default_port: 9443
+  base_path: /api/open
+  example_base: 'https://<safeline_host>:9443/api/open'
+error_envelope:
+  shape: '{ err: string, msg: string, data: object }'
+  success: 'err is null/empty on success; data carries the payload'
+  failure: 'err carries a string error code, msg carries a human message'
+  format: custom-json-envelope
+  not_rfc9457: true
+  ref: errors/chaitin-error-codes.yml
+pagination:
+  style: page-number
+  params: [page, page_size]
+  response_fields: [data.nodes, data.total]
+  notes: List endpoints (sites, ip groups, policies, records) return data.nodes plus a total count.
+idempotency:
+  supported: false
+  notes: No idempotency-key header/param is documented for the Open API; writes are not idempotent by contract.
+request_tracing:
+  request_id_header: null
+rate_limiting:
+  documented: false
+  ref: null
+versioning:
+  ref: lifecycle/chaitin-lifecycle.yml

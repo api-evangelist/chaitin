@@ -1,0 +1,580 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account device/{device_id}/detail API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: device/{device_id}/detail
+paths:
+  /device/{device_id}/detail:
+    post:
+      summary: 终端详情
+      deprecated: false
+      description: ''
+      tags:
+      - device/{device_id}/detail
+      parameters:
+      - name: device_id
+        in: path
+        description: ''
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      network_env:
+                        type: string
+                      last_active_time:
+                        type: string
+                      ip:
+                        type: string
+                      last_update_time:
+                        type: integer
+                      graphical_ui:
+                        type: string
+                      uid:
+                        type: string
+                      is_installed:
+                        type: boolean
+                      device_brand:
+                        type: string
+                      bios:
+                        type: string
+                      os_uptime:
+                        type: integer
+                      health_status:
+                        type: string
+                      display:
+                        type: array
+                        items:
+                          type: string
+                      mac:
+                        type: string
+                      kernel_version:
+                        type: string
+                      dept_name:
+                        type: string
+                      health_info:
+                        type: object
+                        properties:
+                          err_count:
+                            type: integer
+                          err_detail:
+                            type: array
+                            items: {}
+                          display_name:
+                            type: string
+                        required:
+                        - err_count
+                        - err_detail
+                        - display_name
+                      agent_version:
+                        type: string
+                      handled_admin:
+                        type: object
+                        properties:
+                          uid:
+                            type: string
+                          name:
+                            type: string
+                          username:
+                            type: string
+                          avatar:
+                            type: 'null'
+                          phone:
+                            type: 'null'
+                          email:
+                            type: string
+                          is_active:
+                            type: boolean
+                          permission_group:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                avatar:
+                                  type: 'null'
+                                data_category:
+                                  type: string
+                                name:
+                                  type: string
+                                role:
+                                  type: string
+                                uid:
+                                  type: string
+                        required:
+                        - uid
+                        - name
+                        - username
+                        - avatar
+                        - phone
+                        - email
+                        - is_active
+                        - permission_group
+                      motherboard:
+                        type: string
+                      status:
+                        type: string
+                      staff_info:
+                        type: object
+                        properties:
+                          uid:
+                            type: string
+                          create_time:
+                            type: string
+                          mobile:
+                            type: string
+                          code:
+                            type: string
+                          email:
+                            type: string
+                          description:
+                            type: string
+                          data_category:
+                            type: integer
+                          name:
+                            type: string
+                          depts:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                uid:
+                                  type: string
+                                name:
+                                  type: string
+                                leaders:
+                                  type: array
+                                  items: {}
+                                path:
+                                  type: string
+                                paths:
+                                  type: array
+                                  items:
+                                    type: string
+                                ancestor_ids:
+                                  type: array
+                                  items:
+                                    type: string
+                          direct_leaders:
+                            type: array
+                            items: {}
+                          direct_leader:
+                            type: object
+                            properties: {}
+                          dept_paths:
+                            type: string
+                          tags:
+                            type: array
+                            items: {}
+                          bind_time:
+                            type: string
+                          bind_category:
+                            type: string
+                        required:
+                        - uid
+                        - create_time
+                        - mobile
+                        - code
+                        - email
+                        - description
+                        - data_category
+                        - name
+                        - depts
+                        - direct_leaders
+                        - direct_leader
+                        - dept_paths
+                        - tags
+                        - bind_time
+                        - bind_category
+                      visit_net_status:
+                        type: string
+                      hostname:
+                        type: string
+                      ram:
+                        type: string
+                      network_name:
+                        type: string
+                      code:
+                        type: string
+                      conn_status:
+                        type: string
+                      network:
+                        type: array
+                        items:
+                          type: string
+                      os:
+                        type: string
+                      sound:
+                        type: string
+                      device_type:
+                        type: string
+                      staff_name:
+                        type: string
+                      device_optional_data:
+                        type: object
+                        properties:
+                          feishu:
+                            type: object
+                            properties:
+                              username:
+                                type: string
+                              display_name:
+                                type: string
+                            required:
+                            - username
+                            - display_name
+                          dingding:
+                            type: object
+                            properties:
+                              username:
+                                type: string
+                              display_name:
+                                type: string
+                            required:
+                            - username
+                            - display_name
+                          wechat:
+                            type: object
+                            properties:
+                              username:
+                                type: string
+                              display_name:
+                                type: string
+                            required:
+                            - username
+                            - display_name
+                        required:
+                        - feishu
+                        - dingding
+                        - wechat
+                      last_login_account:
+                        type: string
+                      optical_drivers:
+                        type: array
+                        items: {}
+                      company_id:
+                        type: string
+                      machine_id:
+                        type: string
+                      update_time:
+                        type: string
+                      visit_net_way:
+                        type: string
+                      staff_id:
+                        type: string
+                      os_name:
+                        type: string
+                      username:
+                        type: string
+                      device_model:
+                        type: string
+                      compliance_baseline_status:
+                        type: string
+                      gpu:
+                        type: array
+                        items:
+                          type: string
+                      distrib_codename:
+                        type: string
+                      tags:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            uid:
+                              type: string
+                            name:
+                              type: string
+                          required:
+                          - uid
+                          - name
+                      storage:
+                        type: array
+                        items:
+                          type: string
+                      cpu:
+                        type: string
+                      distrib_id:
+                        type: string
+                      life_status:
+                        type: string
+                      asset_class:
+                        type: string
+                      serial_number:
+                        type: string
+                      registered_time:
+                        type: string
+                      dept_id:
+                        type: string
+                      is_virtual:
+                        type: boolean
+                      timezone:
+                        type: string
+                      os_icon:
+                        type: array
+                        items:
+                          type: string
+                    required:
+                    - network_env
+                    - last_active_time
+                    - ip
+                    - last_update_time
+                    - graphical_ui
+                    - uid
+                    - is_installed
+                    - device_brand
+                    - bios
+                    - os_uptime
+                    - health_status
+                    - display
+                    - mac
+                    - kernel_version
+                    - dept_name
+                    - health_info
+                    - agent_version
+                    - handled_admin
+                    - motherboard
+                    - status
+                    - staff_info
+                    - visit_net_status
+                    - hostname
+                    - ram
+                    - network_name
+                    - code
+                    - conn_status
+                    - network
+                    - os
+                    - sound
+                    - device_type
+                    - staff_name
+                    - device_optional_data
+                    - last_login_account
+                    - optical_drivers
+                    - company_id
+                    - machine_id
+                    - update_time
+                    - visit_net_way
+                    - staff_id
+                    - os_name
+                    - username
+                    - device_model
+                    - compliance_baseline_status
+                    - gpu
+                    - distrib_codename
+                    - tags
+                    - storage
+                    - cpu
+                    - distrib_id
+                    - life_status
+                    - asset_class
+                    - serial_number
+                    - registered_time
+                    - dept_id
+                    - is_virtual
+                    - timezone
+                    - os_icon
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  network_env: outer_net
+                  last_active_time: '2023-12-27T06:29:34.732694Z'
+                  ip: 192.168.96.211
+                  last_update_time: 1703629651423
+                  graphical_ui: ''
+                  uid: c900fbb1-d4ca-4972-aa82-cf5519064187
+                  is_installed: true
+                  device_brand: HUAWEI
+                  bios: HUAWEI_3.25_05/24/2023
+                  os_uptime: 518925921
+                  health_status: normal
+                  display:
+                  - ĬȏܠʓƷ(1024x768@60Hz)
+                  - ĬȏܠʓƷ(1024x768@60Hz)
+                  - BOE PnP Monitor(1024x768@60Hz)
+                  mac: A8:64:F1:DC:F0:14
+                  kernel_version: ''
+                  dept_name: ''
+                  health_info:
+                    err_count: 0
+                    err_detail: []
+                    display_name: 正常
+                  agent_version: 3.2.13
+                  handled_admin:
+                    uid: debf9378-ee4f-41bb-92c6-c5f097e3a692
+                    name: sq
+                    username: sq
+                    avatar: null
+                    phone: null
+                    email: 2778341932@qq.com
+                    is_active: true
+                    permission_group:
+                    - avatar: null
+                      data_category: '3'
+                      name: 操作员
+                      role: operator
+                      uid: 9b2f01e1-de45-5328-9745-7842434695d9
+                  motherboard: HUAWEI KLVD-WXX9-PCB-B4 (CPU0)
+                  status: activated
+                  staff_info:
+                    uid: b671a18f-ecaa-47f8-8e74-a0c8350b5a7d
+                    create_time: '2023-12-21T02:32:45.092842Z'
+                    mobile: '12222222222'
+                    code: ''
+                    email: 55555@qq.com
+                    description: test
+                    data_category: 1
+                    name: test
+                    depts:
+                    - uid: 13c43fec-36a2-4b6d-9d8a-c2e76ea4ba0f
+                      name: 研发部更新名称
+                      leaders: []
+                      path: 一家伟大的公司/研发部更新名称
+                      paths:
+                      - 一家伟大的公司
+                      - 研发部更新名称
+                      ancestor_ids:
+                      - 282cfac5-94a1-4d2c-ade8-f8b0538bde11
+                      - 13c43fec-36a2-4b6d-9d8a-c2e76ea4ba0f
+                    direct_leaders: []
+                    direct_leader: {}
+                    dept_paths: 一家伟大的公司/研发部更新名称
+                    tags: []
+                    bind_time: '2023-12-26T07:05:44.460062Z'
+                    bind_category: 管理员手动操作
+                  visit_net_status: access
+                  hostname: LAPTOP-8R5257U6
+                  ram: 16.00 GB Unknown form factor Unknown 3200MHz
+                  network_name: CYBERSERVAL
+                  code: PC-000001
+                  conn_status: online
+                  network:
+                  - TAP-Windows Adapter V9 for OpenVPN Connect/169.254.164.155/00:FF:7B:AD:8F:DC
+                  - Microsoft Wi-Fi Direct Virtual Adapter/169.254.189.89/A8:64:F1:DC:F0:15
+                  - 'Microsoft Wi-Fi Direct Virtual Adapter #2/169.254.118.91/AA:64:F1:DC:F0:14'
+                  - Intel(R) Wi-Fi 6 AX201 160MHz/192.168.96.211/A8:64:F1:DC:F0:14
+                  - Bluetooth Device (Personal Area Network)/169.254.213.131/A8:64:F1:DC:F0:18
+                  os: Windows
+                  sound: 适用于 I2S 音频的英特尔® 智音技术
+                  device_type: Win PC
+                  staff_name: test
+                  device_optional_data:
+                    feishu:
+                      username: ''
+                      display_name: 飞书
+                    dingding:
+                      username: ''
+                      display_name: 钉钉
+                    wechat:
+                      username: ''
+                      display_name: 微信
+                  last_login_account: sou
+                  optical_drivers: []
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  machine_id: 174F9B42E8E1AFF9
+                  update_time: '2023-12-27T06:29:34.732819Z'
+                  visit_net_way: wifi
+                  staff_id: b671a18f-ecaa-47f8-8e74-a0c8350b5a7d
+                  os_name: Windows 11 CoreCountrySpecific (10.0.22621)
+                  username: sou@LAPTOP-8R5257U6
+                  device_model: KLVD-WXX9
+                  compliance_baseline_status: abnormal
+                  gpu:
+                  - OrayIddDriver Device 0 MB
+                  - Virtual Display Device 0 MB
+                  - Intel(R) Iris(R) Xe Graphics 1024 MB
+                  distrib_codename: ''
+                  tags:
+                  - uid: ef87e984-d10e-494c-96a5-7f41dbfbd710
+                    name: rwww
+                  - uid: b311118e-2f8e-43db-964f-6df2e115d3c5
+                    name: Jaychou
+                  storage:
+                  - 476 GB PCIe-8 SSD 512GB
+                  cpu: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+                  distrib_id: ''
+                  life_status: working
+                  asset_class: fixed
+                  serial_number: ''
+                  registered_time: '2023-12-19T09:33:29.770752Z'
+                  dept_id: ''
+                  is_virtual: false
+                  timezone: UTC+8
+                  os_icon:
+                  - windows
+      security: []

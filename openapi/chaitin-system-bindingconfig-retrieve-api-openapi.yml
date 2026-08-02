@@ -1,0 +1,152 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account system/bindingconfig/retrieve API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: system/bindingconfig/retrieve
+  description: 系统配置/绑定配置/获取
+paths:
+  /system/bindingconfig/retrieve:
+    post:
+      summary: 设备绑定配置-获取
+      deprecated: false
+      description: ''
+      tags:
+      - system/bindingconfig/retrieve
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      admin:
+                        type: object
+                        properties:
+                          enable:
+                            type: boolean
+                          should_overwrite:
+                            type: boolean
+                          should_prompt:
+                            type: boolean
+                        required:
+                        - enable
+                        - should_overwrite
+                        - should_prompt
+                      auto:
+                        type: object
+                        properties:
+                          enable:
+                            type: boolean
+                          should_overwrite:
+                            type: boolean
+                          should_prompt:
+                            type: boolean
+                        required:
+                        - enable
+                        - should_overwrite
+                        - should_prompt
+                      staff:
+                        type: object
+                        properties:
+                          enable:
+                            type: boolean
+                          should_overwrite:
+                            type: boolean
+                          should_prompt:
+                            type: boolean
+                        required:
+                        - enable
+                        - should_overwrite
+                        - should_prompt
+                    required:
+                    - admin
+                    - auto
+                    - staff
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  admin:
+                    enable: true
+                    should_overwrite: true
+                    should_prompt: false
+                  auto:
+                    enable: true
+                    should_overwrite: false
+                    should_prompt: false
+                  staff:
+                    enable: true
+                    should_overwrite: false
+                    should_prompt: true
+      security: []

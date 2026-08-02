@@ -1,0 +1,416 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policy/remote_control/{policy_id}/detail API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policy/remote_control/{policy_id}/detail
+  description: 策略管理/远程控制/policy_id 参数/详情
+paths:
+  /policy/remote_control/{policy_id}/detail:
+    post:
+      summary: 详情
+      deprecated: false
+      description: ''
+      tags:
+      - policy/remote_control/{policy_id}/detail
+      parameters:
+      - name: policy_id
+        in: path
+        description: ''
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                binding_config:
+                  type: object
+                  properties:
+                    source:
+                      type: string
+                    include:
+                      type: object
+                      properties:
+                        dept_ids:
+                          type: array
+                          items:
+                            type: string
+                        staff_ids:
+                          type: array
+                          items:
+                            type: string
+                        staff_tag_ids:
+                          type: array
+                          items:
+                            type: string
+                        device_ids:
+                          type: array
+                          items:
+                            type: string
+                        device_tag_ids:
+                          type: array
+                          items:
+                            type: string
+                      required:
+                      - dept_ids
+                      - staff_ids
+                      - staff_tag_ids
+                      - device_ids
+                      - device_tag_ids
+                    exclude:
+                      type: object
+                      properties: {}
+                  required:
+                  - source
+                  - include
+                  - exclude
+              required:
+              - binding_config
+            example:
+              binding_config:
+                source: compliance
+                include:
+                  dept_ids:
+                  - 282cfac5-94a1-4d2c-ade8-f8b0538bde11
+                  staff_ids:
+                  - f38ecdcb-3162-464c-9e56-8102d2c35d0c
+                  staff_tag_ids:
+                  - cfe7ff47-c180-4b88-9e70-b80feea3f913
+                  device_ids:
+                  - d1247921-d4fd-4f6c-9f62-504684f8f288
+                  - 1c16c892242c467cadd48ab0f00f26e9
+                  - 8464a3c6c8054423acbbc0c9cadb273a
+                  device_tag_ids:
+                  - 4733a46b-2d8a-4506-902d-df81c32406c1
+                exclude: {}
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      create_time:
+                        type: string
+                      period_category:
+                        type: string
+                      expression_relation:
+                        type: 'null'
+                      scope:
+                        type: string
+                      id:
+                        type: integer
+                      category:
+                        type: string
+                      code:
+                        type: string
+                      update_time:
+                        type: string
+                      uid:
+                        type: string
+                      period_options:
+                        type: object
+                        properties: {}
+                      mode:
+                        type: string
+                      expression:
+                        type: 'null'
+                      status:
+                        type: string
+                      assistance_category:
+                        type: string
+                      description:
+                        type: 'null'
+                      run_model:
+                        type: array
+                        items:
+                          type: string
+                      source:
+                        type: string
+                      name:
+                        type: string
+                      update_by:
+                        type: object
+                        properties:
+                          uid:
+                            type: string
+                          name:
+                            type: string
+                          username:
+                            type: string
+                          email:
+                            type: string
+                        required:
+                        - uid
+                        - name
+                        - username
+                        - email
+                      expression_fields:
+                        type: array
+                        items: {}
+                      create_by:
+                        type: 'null'
+                      company_id:
+                        type: string
+                      expand:
+                        type: object
+                        properties: {}
+                      binding_config:
+                        type: object
+                        properties:
+                          include:
+                            type: object
+                            properties:
+                              devices:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    uid:
+                                      type: string
+                                    name:
+                                      type: string
+                                    code:
+                                      type: string
+                                  required:
+                                  - uid
+                                  - name
+                                  - code
+                              device_tags:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    uid:
+                                      type: string
+                                    name:
+                                      type: string
+                              staffs:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    uid:
+                                      type: string
+                                    name:
+                                      type: string
+                              staff_tags:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    uid:
+                                      type: string
+                                    name:
+                                      type: string
+                              depts:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    uid:
+                                      type: string
+                                    name:
+                                      type: string
+                            required:
+                            - devices
+                            - device_tags
+                            - staffs
+                            - staff_tags
+                            - depts
+                          exclude:
+                            type: object
+                            properties:
+                              depts:
+                                type: array
+                                items: {}
+                              staffs:
+                                type: array
+                                items: {}
+                              staff_tags:
+                                type: array
+                                items: {}
+                              devices:
+                                type: array
+                                items: {}
+                              device_tags:
+                                type: array
+                                items: {}
+                            required:
+                            - depts
+                            - staffs
+                            - staff_tags
+                            - devices
+                            - device_tags
+                        required:
+                        - include
+                        - exclude
+                    required:
+                    - create_time
+                    - period_category
+                    - expression_relation
+                    - scope
+                    - id
+                    - category
+                    - code
+                    - update_time
+                    - uid
+                    - period_options
+                    - mode
+                    - expression
+                    - status
+                    - assistance_category
+                    - description
+                    - run_model
+                    - source
+                    - name
+                    - update_by
+                    - expression_fields
+                    - create_by
+                    - company_id
+                    - expand
+                    - binding_config
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  create_time: '2024-07-08T09:33:00.074606Z'
+                  period_category: permanent
+                  expression_relation: null
+                  scope: common
+                  id: 6
+                  category: remote_assistance
+                  code: d5580e0fc691a53b
+                  update_time: '2024-07-08T09:34:03.817107Z'
+                  uid: f7724a14-ff91-43f4-8e08-6bbebe77f09c
+                  period_options: {}
+                  mode: advanced
+                  expression: null
+                  status: activated
+                  assistance_category: controlled
+                  description: null
+                  run_model:
+                  - online
+                  - offline
+                  source: default
+                  name: 被控配置
+                  update_by:
+                    uid: 92a20230-f247-453a-ab14-ca40c6c87e96
+                    name: 何睿
+                    username: herui
+                    email: 1234@123.com
+                  expression_fields: []
+                  create_by: null
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  expand: {}
+                  binding_config:
+                    include:
+                      devices:
+                      - uid: 1c16c892-242c-467c-add4-8ab0f00f26e9
+                        name: DNAMEad1ee8a92d1c7eae
+                        code: PC-000003
+                      - uid: 8464a3c6-c805-4423-acbb-c0c9cadb273a
+                        name: DNAMEae305f533d4295cc
+                        code: PC-000004
+                      - uid: d1247921-d4fd-4f6c-9f62-504684f8f288
+                        name: DNAME89c81639591b3814
+                        code: PC-000002
+                      device_tags:
+                      - uid: 4733a46b-2d8a-4506-902d-df81c32406c1
+                        name: pr
+                      staffs:
+                      - uid: f38ecdcb-3162-464c-9e56-8102d2c35d0c
+                        name: 胡雅杰
+                      staff_tags:
+                      - uid: cfe7ff47-c180-4b88-9e70-b80feea3f913
+                        name: test
+                      depts:
+                      - uid: 282cfac5-94a1-4d2c-ade8-f8b0538bde11
+                        name: 薮猫大公司
+                    exclude:
+                      depts: []
+                      staffs: []
+                      staff_tags: []
+                      devices: []
+                      device_tags: []
+      security: []

@@ -1,0 +1,455 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account device/filescantask/results/{task_id}/detail API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: device/filescantask/results/{task_id}/detail
+paths:
+  /device/filescantask/results/{task_id}/detail:
+    post:
+      summary: 扫描详情
+      deprecated: false
+      description: ''
+      tags:
+      - device/filescantask/results/{task_id}/detail
+      parameters:
+      - name: task_id
+        in: path
+        description: ''
+        required: true
+        example: EIXus4gBfeF2-E-afpHu
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      uid:
+                        type: string
+                      device_id:
+                        type: string
+                      device_code:
+                        type: string
+                      ip_address:
+                        type: string
+                      console_user:
+                        type: string
+                      os_name:
+                        type: string
+                      os_friendly_name:
+                        type: string
+                      time:
+                        type: integer
+                      '@timestamp':
+                        type: integer
+                      timestamp:
+                        type: string
+                      agent_version:
+                        type: string
+                      event_id:
+                        type: string
+                      company_id:
+                        type: string
+                      staff_id:
+                        type: string
+                      staff_code:
+                        type: string
+                      staff_name:
+                        type: string
+                      staff_email:
+                        type: string
+                      staff_tag_ids:
+                        type: array
+                        items: {}
+                      staff_tags:
+                        type: array
+                        items: {}
+                      dept_ids:
+                        type: array
+                        items:
+                          type: string
+                      dept_names:
+                        type: array
+                        items:
+                          type: string
+                      dept_paths:
+                        type: array
+                        items:
+                          type: string
+                      filename:
+                        type: string
+                      filepath:
+                        type: string
+                      filesize:
+                        type: integer
+                      md5_hash:
+                        type: string
+                      sha256_hash:
+                        type: string
+                      is_password_protected:
+                        type: boolean
+                      is_hidden:
+                        type: boolean
+                      file_type:
+                        type: string
+                      file_suffix:
+                        type: string
+                      file_created_time:
+                        type: integer
+                      file_created_timestamp:
+                        type: string
+                      file_updated_time:
+                        type: integer
+                      file_updated_timestamp:
+                        type: string
+                      simhash_value:
+                        type: string
+                      classifications:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            data_level:
+                              type: integer
+                            data_level_name:
+                              type: string
+                            name:
+                              type: string
+                            uid:
+                              type: string
+                      cl_ids:
+                        type: array
+                        items:
+                          type: string
+                      cl_names:
+                        type: array
+                        items:
+                          type: string
+                      data_levels:
+                        type: array
+                        items:
+                          type: integer
+                      data_level_names:
+                        type: array
+                        items:
+                          type: string
+                      has_cls:
+                        type: boolean
+                      cl_id:
+                        type: string
+                      cl_name:
+                        type: string
+                      data_level:
+                        type: integer
+                      data_level_name:
+                        type: string
+                      content_summary_list:
+                        type: array
+                        items: {}
+                      task_id:
+                        type: string
+                      task_instance_id:
+                        type: string
+                      scan_version:
+                        type: integer
+                      category:
+                        type: string
+                      audit_method:
+                        type: string
+                      expand:
+                        type: object
+                        properties:
+                          rule_version:
+                            type: object
+                            properties:
+                              cond_version:
+                                type: integer
+                              dc_version:
+                                type: integer
+                              filetype_version:
+                                type: integer
+                            required:
+                            - cond_version
+                            - dc_version
+                            - filetype_version
+                        required:
+                        - rule_version
+                      is_compressed:
+                        type: boolean
+                    required:
+                    - uid
+                    - device_id
+                    - device_code
+                    - ip_address
+                    - console_user
+                    - os_name
+                    - os_friendly_name
+                    - time
+                    - '@timestamp'
+                    - timestamp
+                    - agent_version
+                    - event_id
+                    - company_id
+                    - staff_id
+                    - staff_code
+                    - staff_name
+                    - staff_email
+                    - staff_tag_ids
+                    - staff_tags
+                    - dept_ids
+                    - dept_names
+                    - dept_paths
+                    - filename
+                    - filepath
+                    - filesize
+                    - md5_hash
+                    - sha256_hash
+                    - is_password_protected
+                    - is_hidden
+                    - file_type
+                    - file_suffix
+                    - file_created_time
+                    - file_created_timestamp
+                    - file_updated_time
+                    - file_updated_timestamp
+                    - simhash_value
+                    - classifications
+                    - cl_ids
+                    - cl_names
+                    - data_levels
+                    - data_level_names
+                    - has_cls
+                    - cl_id
+                    - cl_name
+                    - data_level
+                    - data_level_name
+                    - content_summary_list
+                    - task_id
+                    - task_instance_id
+                    - scan_version
+                    - category
+                    - audit_method
+                    - expand
+                    - is_compressed
+                  meta_original:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        process_name:
+                          type: string
+                        urls:
+                          type: array
+                          items:
+                            type: string
+                        hosts:
+                          type: array
+                          items:
+                            type: string
+                      required:
+                      - process_name
+                      - urls
+                      - hosts
+                  metasource:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        original:
+                          type: object
+                          properties:
+                            app:
+                              type: array
+                              items:
+                                type: string
+                            urls:
+                              type: array
+                              items: {}
+                          required:
+                          - app
+                          - urls
+                        category:
+                          type: string
+                        source:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                              display_name:
+                                type: string
+                        version:
+                          type: integer
+                required:
+                - code
+                - msg
+                - data
+                - meta_original
+                - metasource
+              example:
+                code: 0
+                msg: success
+                data:
+                  uid: IIYkHowBKS8M-buB0pq8
+                  device_id: 886196cc-e426-41a2-a349-52208ae190a7
+                  device_code: PC-000156
+                  ip_address: 192.168.96.70
+                  console_user: soumao
+                  os_name: macOS
+                  os_friendly_name: macOS 13.5
+                  time: 1701312776352
+                  '@timestamp': 1701312776352
+                  timestamp: '2023-11-30T02:52:56Z'
+                  agent_version: 3.1.23
+                  event_id: 3B62DD25-0B32-44A0-9CA0-87E0A3A91BCB
+                  company_id: 6b0db7d7-9ddd-4400-b976-2a7c112a4c95
+                  staff_id: b96cf657-c2c1-4174-bf67-27b4f303dfac
+                  staff_code: 75297f56c23286b6
+                  staff_name: hyj
+                  staff_email: 1047783724@qq.com
+                  staff_tag_ids: []
+                  staff_tags: []
+                  dept_ids:
+                  - 1c30cca9-a79b-4da3-8584-f85a2edee3c2
+                  dept_names:
+                  - hu_子部门
+                  dept_paths:
+                  - 测试公司/hu_子部门
+                  filename: 4关键词.xlsx
+                  filepath: /Volumes/NO NAME/新建文件夹--测试/4关键词.xlsx
+                  filesize: 33673571
+                  md5_hash: a92b1ef09e9716db6e5d16fc4132c7e7
+                  sha256_hash: 78f097af5e48c8ddf9e66aacdbb19a0666537e249d82345b99a150341f3d2d3c
+                  is_password_protected: false
+                  is_hidden: false
+                  file_type: xlsx
+                  file_suffix: xlsx
+                  file_created_time: 1685614322000
+                  file_created_timestamp: '2023-06-01T10:12:02Z'
+                  file_updated_time: 1685614322000
+                  file_updated_timestamp: '2023-06-01T10:12:02Z'
+                  simhash_value: ''
+                  classifications:
+                  - data_level: 6
+                    data_level_name: 六级
+                    name: hu测试关键词
+                    uid: 7741d393-d072-4087-97a5-a03f298fdf8a
+                  cl_ids:
+                  - 7741d393-d072-4087-97a5-a03f298fdf8a
+                  cl_names:
+                  - hu测试关键词
+                  data_levels:
+                  - 6
+                  data_level_names:
+                  - 六级
+                  has_cls: true
+                  cl_id: 7741d393-d072-4087-97a5-a03f298fdf8a
+                  cl_name: hu测试关键词
+                  data_level: 6
+                  data_level_name: 六级
+                  content_summary_list: []
+                  task_id: 336d9e3b-57a3-48ea-82c2-ef7a32e9e983
+                  task_instance_id: 7cf21a87-6cb6-4d8b-b7c1-fa6904fcac23
+                  scan_version: 1
+                  category: file_scan_task
+                  audit_method: keywords
+                  expand:
+                    rule_version:
+                      cond_version: 271
+                      dc_version: 829
+                      filetype_version: 25
+                  is_compressed: false
+                meta_original:
+                - process_name: google
+                  urls:
+                  - google.com
+                  - google1.com
+                  hosts:
+                  - google.com
+                  - google1.com
+                - process_name: baidu
+                  urls:
+                  - https://baidu.com?xxxxxx=2
+                  - https://baidu.com?xxxxxx=2
+                  hosts:
+                  - baidu.com
+                metasource:
+                - original:
+                    app:
+                    - Feishu
+                    urls: []
+                  category: app
+                  source:
+                  - name: appfeishu
+                    display_name: app_feishu
+                  version: 58
+      security: []

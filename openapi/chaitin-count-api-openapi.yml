@@ -1,0 +1,536 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account Count API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: Count
+paths:
+  /count:
+    delete:
+      parameters:
+      - description: 扫描器名称
+        example: 扫描器名称
+        in: query
+        name: name
+        schema:
+          description: 扫描器名称
+          example: 扫描器名称
+          format: string
+          properties: {}
+          type: string
+      - description: 扫描器版本号
+        example: 扫描器版本号
+        in: query
+        name: version
+        schema:
+          description: 扫描器版本号
+          example: 扫描器版本号
+          format: string
+          properties: {}
+          type: string
+      - description: 主机名称
+        example: 主机名称
+        in: query
+        name: host_name
+        schema:
+          description: 主机名称
+          example: 主机名称
+          format: string
+          properties: {}
+          type: string
+      - description: 主机IP地址
+        example: 1.1.1
+        in: query
+        name: host_ip
+        schema:
+          description: 主机IP地址
+          example: 1.1.1
+          format: string
+          properties: {}
+          type: string
+      - description: 探针类型列表 2为本地探针
+        example: '[2]'
+        in: query
+        name: type
+        schema:
+          description: 探针类型列表 2为本地探针
+          example: '[2]'
+          format: '[]uint'
+          items:
+            enum:
+            - 2
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 扫描组ID列表
+        example: '[1,2]'
+        in: query
+        name: group_id
+        schema:
+          description: 扫描组ID列表
+          example: '[1,2]'
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 扫描器状态列表 1 注册 2 在线 3 离线 4 异常
+        example: '1'
+        in: query
+        name: state
+        schema:
+          description: 扫描器状态列表 1 注册 2 在线 3 离线 4 异常
+          example: '1'
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 1本地 2旁路 3集群节点 4集群旁路
+        in: query
+        name: source_type
+        schema:
+          description: 1本地 2旁路 3集群节点 4集群旁路
+          format: '[]uint'
+          items:
+            enum:
+            - 1
+            - 2
+            - 3
+            - 4
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 集群ID列表
+        in: query
+        name: cluster_id
+        schema:
+          description: 集群ID列表
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 扫描探针ID
+        example: '[1,2]'
+        in: query
+        name: id
+        schema:
+          description: 扫描探针ID
+          example: '[1,2]'
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 数据启始位置
+        example: '1'
+        in: query
+        name: offset
+        schema:
+          description: 数据启始位置
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      - description: 数据页大小
+        example: '1'
+        in: query
+        name: page_size
+        schema:
+          description: 数据页大小
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountRes'
+          description: ''
+      tags:
+      - Count
+    get:
+      parameters:
+      - description: 扫描器名称
+        example: 扫描器名称
+        in: query
+        name: name
+        schema:
+          description: 扫描器名称
+          example: 扫描器名称
+          format: string
+          properties: {}
+          type: string
+      - description: 扫描器版本号
+        example: 扫描器版本号
+        in: query
+        name: version
+        schema:
+          description: 扫描器版本号
+          example: 扫描器版本号
+          format: string
+          properties: {}
+          type: string
+      - description: 主机名称
+        example: 主机名称
+        in: query
+        name: host_name
+        schema:
+          description: 主机名称
+          example: 主机名称
+          format: string
+          properties: {}
+          type: string
+      - description: 主机IP地址
+        example: 1.1.1
+        in: query
+        name: host_ip
+        schema:
+          description: 主机IP地址
+          example: 1.1.1
+          format: string
+          properties: {}
+          type: string
+      - description: 探针类型列表 2为本地探针
+        example: '[2]'
+        in: query
+        name: type
+        schema:
+          description: 探针类型列表 2为本地探针
+          example: '[2]'
+          format: '[]uint'
+          items:
+            enum:
+            - 2
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 扫描组ID列表
+        example: '[1,2]'
+        in: query
+        name: group_id
+        schema:
+          description: 扫描组ID列表
+          example: '[1,2]'
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 扫描器状态列表 1 注册 2 在线 3 离线 4 异常
+        example: '1'
+        in: query
+        name: state
+        schema:
+          description: 扫描器状态列表 1 注册 2 在线 3 离线 4 异常
+          example: '1'
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 1本地 2旁路 3集群节点 4集群旁路
+        in: query
+        name: source_type
+        schema:
+          description: 1本地 2旁路 3集群节点 4集群旁路
+          format: '[]uint'
+          items:
+            enum:
+            - 1
+            - 2
+            - 3
+            - 4
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 集群ID列表
+        in: query
+        name: cluster_id
+        schema:
+          description: 集群ID列表
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 扫描探针ID
+        example: '[1,2]'
+        in: query
+        name: id
+        schema:
+          description: 扫描探针ID
+          example: '[1,2]'
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 数据启始位置
+        example: '1'
+        in: query
+        name: offset
+        schema:
+          description: 数据启始位置
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      - description: 数据页大小
+        example: '1'
+        in: query
+        name: page_size
+        schema:
+          description: 数据页大小
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountRes'
+          description: ''
+      tags:
+      - Count
+    head:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountReq'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountRes'
+          description: ''
+      tags:
+      - Count
+    options:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountReq'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountRes'
+          description: ''
+      tags:
+      - Count
+    patch:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountReq'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountRes'
+          description: ''
+      tags:
+      - Count
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountReq'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountRes'
+          description: ''
+      tags:
+      - Count
+    put:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountReq'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountRes'
+          description: ''
+      tags:
+      - Count
+    trace:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountReq'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountRes'
+          description: ''
+      tags:
+      - Count
+components:
+  schemas:
+    git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountReq:
+      properties:
+        name:
+          description: 扫描器名称
+          example: 扫描器名称
+          format: string
+          properties: {}
+          type: string
+        version:
+          description: 扫描器版本号
+          example: 扫描器版本号
+          format: string
+          properties: {}
+          type: string
+        host_name:
+          description: 主机名称
+          example: 主机名称
+          format: string
+          properties: {}
+          type: string
+        host_ip:
+          description: 主机IP地址
+          example: 1.1.1
+          format: string
+          properties: {}
+          type: string
+        type:
+          description: 探针类型列表 2为本地探针
+          example: '[2]'
+          format: '[]uint'
+          items:
+            enum:
+            - 2
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+        group_id:
+          description: 扫描组ID列表
+          example: '[1,2]'
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+        state:
+          description: 扫描器状态列表 1 注册 2 在线 3 离线 4 异常
+          example: '1'
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+        source_type:
+          description: 1本地 2旁路 3集群节点 4集群旁路
+          format: '[]uint'
+          items:
+            enum:
+            - 1
+            - 2
+            - 3
+            - 4
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+        cluster_id:
+          description: 集群ID列表
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+        id:
+          description: 扫描探针ID
+          example: '[1,2]'
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+        offset:
+          description: 数据启始位置
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+        page_size:
+          description: 数据页大小
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountRes:
+      properties:
+        total:
+          description: 总数
+          example: 1
+          format: uint
+          properties: {}
+          type: integer
+      type: object

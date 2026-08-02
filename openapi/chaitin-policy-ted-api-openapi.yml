@@ -1,0 +1,398 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policy/ted API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policy/ted
+  description: 策略管理/TED
+paths:
+  /policy/ted:
+    post:
+      summary: 创建
+      deprecated: false
+      description: ''
+      tags:
+      - policy/ted
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                status:
+                  type: string
+                description:
+                  type: string
+                period_category:
+                  type: string
+                period_options:
+                  type: object
+                  properties: {}
+                scope:
+                  type: string
+                binding_config:
+                  type: object
+                  properties:
+                    source:
+                      type: string
+                    include:
+                      type: object
+                      properties:
+                        dept_ids:
+                          type: array
+                          items:
+                            type: string
+                        staff_ids:
+                          type: array
+                          items:
+                            type: string
+                        staff_tag_ids:
+                          type: array
+                          items:
+                            type: string
+                        device_ids:
+                          type: array
+                          items:
+                            type: string
+                        device_tag_ids:
+                          type: array
+                          items:
+                            type: string
+                      required:
+                      - dept_ids
+                      - staff_ids
+                      - staff_tag_ids
+                      - device_ids
+                      - device_tag_ids
+                    exclude:
+                      type: object
+                      properties: {}
+                  required:
+                  - source
+                  - include
+                  - exclude
+                priority:
+                  type: integer
+                encryption_options:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      level:
+                        type: string
+                      open:
+                        type: object
+                        properties:
+                          action:
+                            type: string
+                          action_template_id:
+                            type: string
+                        required:
+                        - action
+                        - action_template_id
+                      action:
+                        type: object
+                        properties:
+                          copy:
+                            type: boolean
+                          drag:
+                            type: boolean
+                          save_as:
+                            type: boolean
+                        required:
+                        - copy
+                        - drag
+                        - save_as
+                      decryption:
+                        type: object
+                        properties:
+                          action:
+                            type: string
+                          action_template_id:
+                            type: string
+                        required:
+                        - action
+                        - action_template_id
+                      backup:
+                        type: object
+                        properties:
+                          local_backup:
+                            type: boolean
+                          local_warning_storage:
+                            type: integer
+                          remote_backup:
+                            type: boolean
+                          period_category:
+                            type: string
+                          period_options:
+                            type: object
+                            properties:
+                              weekday:
+                                type: integer
+                              day:
+                                type: 'null'
+                              hour:
+                                type: integer
+                              minute:
+                                type: integer
+                            required:
+                            - weekday
+                            - day
+                            - hour
+                            - minute
+                          incremental_backup:
+                            type: boolean
+                        required:
+                        - local_backup
+                        - local_warning_storage
+                        - remote_backup
+                        - period_category
+                        - period_options
+                        - incremental_backup
+                action_option:
+                  type: object
+                  properties:
+                    upgrade:
+                      type: object
+                      properties:
+                        action:
+                          type: string
+                        action_template_id:
+                          type: string
+                      required:
+                      - action
+                      - action_template_id
+                    downgrade:
+                      type: object
+                      properties:
+                        action:
+                          type: string
+                        action_template_id:
+                          type: string
+                      required:
+                      - action
+                      - action_template_id
+                  required:
+                  - upgrade
+                  - downgrade
+              required:
+              - name
+              - status
+              - description
+              - period_category
+              - period_options
+              - scope
+              - binding_config
+              - priority
+              - encryption_options
+              - action_option
+            example:
+              name: TED 策略
+              status: ACTIVATED
+              description: 策略描述
+              period_category: PERMANENT
+              period_options: {}
+              scope: common
+              binding_config:
+                source: external_device
+                include:
+                  dept_ids:
+                  - 43a3e1a1-b931-4a82-9480-da8de16047db
+                  staff_ids:
+                  - 100faf26-d362-4ca2-befb-3ac8c22673eb
+                  staff_tag_ids:
+                  - 4ca4e3ce-aebe-46f6-ac67-f2d7acbf0a37
+                  device_ids:
+                  - 8464a3c6-c805-4423-acbb-c0c9cadb273a
+                  device_tag_ids:
+                  - ef87e984-d10e-494c-96a5-7f41dbfbd710
+                exclude: {}
+              priority: 1
+              encryption_options:
+              - level: '1'
+                open:
+                  action: approval
+                  action_template_id: 4905b6aaeeee4e6080ff58fecb89a863
+                action:
+                  copy: true
+                  drag: true
+                  save_as: false
+                decryption:
+                  action: approval
+                  action_template_id: 4905b6aaeeee4e6080ff58fecb89a863
+                backup:
+                  local_backup: true
+                  local_warning_storage: 100
+                  remote_backup: true
+                  period_category: week
+                  period_options:
+                    weekday: 1
+                    day: null
+                    hour: 4
+                    minute: 1
+                  incremental_backup: true
+              action_option:
+                upgrade:
+                  action: approval
+                  action_template_id: 4905b6aaeeee4e6080ff58fecb89a863
+                downgrade:
+                  action: approval
+                  action_template_id: 4905b6aaeeee4e6080ff58fecb89a863
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      family:
+                        type: string
+                      uid:
+                        type: string
+                      directories:
+                        type: array
+                        items: {}
+                      create_time:
+                        type: string
+                      company_id:
+                        type: string
+                      id:
+                        type: integer
+                      update_time:
+                        type: string
+                      update_by_id:
+                        type: string
+                      create_by_id:
+                        type: string
+                      name:
+                        type: string
+                      filenames:
+                        type: array
+                        items:
+                          type: string
+                      additional:
+                        type: object
+                        properties: {}
+                      process_name:
+                        type: 'null'
+                      signatures:
+                        type: 'null'
+                      category:
+                        type: string
+                    required:
+                    - family
+                    - uid
+                    - directories
+                    - create_time
+                    - company_id
+                    - id
+                    - update_time
+                    - update_by_id
+                    - create_by_id
+                    - name
+                    - filenames
+                    - additional
+                    - process_name
+                    - signatures
+                    - category
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  family: nan
+                  uid: 58b89b00-731b-4229-9728-4eab4c0d0ca4
+                  directories: []
+                  create_time: '2024-02-06T07:21:37.727094Z'
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  id: 1
+                  update_time: '2024-02-06T07:21:37.727128Z'
+                  update_by_id: 92a20230-f247-453a-ab14-ca40c6c87e96
+                  create_by_id: 92a20230-f247-453a-ab14-ca40c6c87e96
+                  name: 文件
+                  filenames:
+                  - a.txt
+                  - b.jpeg
+                  additional: {}
+                  process_name: null
+                  signatures: null
+                  category: file
+      security: []

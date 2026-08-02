@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/chaitin-safeline-openapi-original.json
+format: custom-json-envelope
+notes: >-
+  The SafeLine WAF Open API does not use RFC 9457 problem+json. Every response
+  is wrapped in a shared JSON envelope (response.JSONBody). On failure the `err`
+  field carries a string error code and `msg` a human-readable message; the HTTP
+  status is typically 200 with the error surfaced in the envelope. The spec does
+  not enumerate 4xx/5xx responses per operation, so a fixed code registry is not
+  published; the envelope contract below is the derived error model.
+envelope:
+  fields:
+    err: string   # null/empty on success, string error code on failure
+    msg: string   # human-readable message
+    data: object  # payload on success
+  success_condition: err is null or empty
+  failure_condition: err is a non-empty string
+problems: []
+problems_note: >-
+  The published Swagger 2.0 spec does not enumerate discrete error codes; the
+  `err` string is populated at runtime. No fabricated code list is recorded here.

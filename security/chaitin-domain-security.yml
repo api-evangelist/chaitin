@@ -1,0 +1,17 @@
+generated: '2026-07-18'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: chaitin.cn
+  https: true
+  tls_version: TLSv1.2
+  cert_expires: Sep 23 02:55:57 2026 GMT
+  hsts: true
+  hsts_max_age: 5184000
+domains:
+- domain: chaitin.cn
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

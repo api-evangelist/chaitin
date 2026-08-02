@@ -1,0 +1,163 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account whitelist/email/{fw_id}/detail API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: whitelist/email/{fw_id}/detail
+  description: 白名单管理/邮件/fw_id 参数/详情
+paths:
+  /whitelist/email/{fw_id}/detail:
+    post:
+      summary: 邮件白名单详情
+      deprecated: false
+      description: ''
+      tags:
+      - whitelist/email/{fw_id}/detail
+      parameters:
+      - name: fw_id
+        in: path
+        description: ''
+        required: true
+        example: 30681dda-73e9-4217-944d-abd027c8857a
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      update_time:
+                        type: string
+                      uid:
+                        type: string
+                      create_by:
+                        type: object
+                        properties:
+                          uid:
+                            type: string
+                          name:
+                            type: string
+                          username:
+                            type: string
+                          email:
+                            type: string
+                        required:
+                        - uid
+                        - name
+                        - username
+                        - email
+                      name:
+                        type: string
+                      description:
+                        type: string
+                      create_time:
+                        type: string
+                      company_id:
+                        type: string
+                      update_by_id:
+                        type: string
+                      value_list:
+                        type: array
+                        items:
+                          type: string
+                    required:
+                    - update_time
+                    - uid
+                    - create_by
+                    - name
+                    - description
+                    - create_time
+                    - company_id
+                    - update_by_id
+                    - value_list
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  update_time: '2024-08-04T13:17:34.480264Z'
+                  uid: 3693878e-31cf-48b8-b13f-f6dbc104b012
+                  create_by:
+                    uid: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                    name: lbb
+                    username: lbb
+                    email: 123@123.com
+                  name: name2
+                  description: string
+                  create_time: '2024-08-04T13:17:34.480234Z'
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  update_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  value_list:
+                  - av_scan
+                  - qwe
+      security: []

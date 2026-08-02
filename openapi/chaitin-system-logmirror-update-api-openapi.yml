@@ -1,0 +1,181 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account system/logmirror/update API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: system/logmirror/update
+  description: 系统配置/日志镜像/更新
+paths:
+  /system/logmirror/update:
+    post:
+      summary: 更新日志投递
+      deprecated: false
+      description: ''
+      tags:
+      - system/logmirror/update
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                uid:
+                  type: string
+                resource:
+                  type: string
+                delivery:
+                  type: string
+                config:
+                  type: object
+                  properties:
+                    hosts:
+                      type: string
+                    topic:
+                      type: string
+                    advance_config:
+                      type: object
+                      properties:
+                        security.protocol:
+                          type: string
+                        sasl.mechanisms:
+                          type: string
+                        sasl.username:
+                          type: string
+                        sasl.password:
+                          type: string
+                      required:
+                      - security.protocol
+                      - sasl.mechanisms
+                      - sasl.username
+                      - sasl.password
+                  required:
+                  - hosts
+                  - topic
+                  - advance_config
+                expand:
+                  type: object
+                  properties:
+                    notification_config:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          key:
+                            type: string
+                          channelType:
+                            type: string
+                          notification_bot_id:
+                            type: string
+                          notification_content_template_id:
+                            type: string
+                          email_to_list:
+                            type: array
+                            items:
+                              type: string
+                  required:
+                  - notification_config
+              required:
+              - name
+              - uid
+              - resource
+              - delivery
+              - config
+              - expand
+            example:
+              name: 测试
+              uid: d2f98726-3fb6-4785-be68-214b84086827
+              resource: channel
+              delivery: kafka
+              config:
+                hosts: 192.168.89.26:19093
+                topic: test_logmirror_output
+                advance_config:
+                  security.protocol: sasl_plaintext
+                  sasl.mechanisms: SCRAM-SHA-256
+                  sasl.username: qzhkafka
+                  sasl.password: YFIquIV0Zklk5oLQxF
+              expand:
+                notification_config:
+                - key: '0.3203218300213442'
+                  channelType: email
+                  notification_bot_id: 7138c149-3f18-4863-b708-91e1195b4b0f
+                  notification_content_template_id: b34e0d90-6b40-4108-8ab8-e78308823ae9
+                  email_to_list:
+                  - ad71528c-c482-4d84-bd9c-caa2a850586b
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              example: {}
+      security: []

@@ -1,0 +1,1130 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account ueba/test/{event_id} API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: ueba/test/{event_id}
+  description: UEBA 分析/测试/event_id 参数
+paths:
+  /ueba/test/{event_id}:
+    post:
+      summary: 测试事件结果
+      deprecated: false
+      description: ''
+      tags:
+      - ueba/test/{event_id}
+      parameters:
+      - name: event_id
+        in: path
+        description: ''
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      status:
+                        type: string
+                      data:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            status:
+                              type: string
+                            comment:
+                              type: string
+                            created_timestamp:
+                              type: string
+                            expand:
+                              type: object
+                              properties:
+                                compressed_filenames:
+                                  type: array
+                                  items:
+                                    type: string
+                                dest:
+                                  type: string
+                                file_source:
+                                  type: string
+                                rule_version:
+                                  type: object
+                                  properties:
+                                    cond_ticket:
+                                      type: string
+                                    cond_version:
+                                      type: integer
+                                    dc_ticket:
+                                      type: string
+                                    dc_version:
+                                      type: integer
+                                    filetype_version:
+                                      type: integer
+                                    im_version:
+                                      type: integer
+                                    policy_ticket:
+                                      type: string
+                                    policy_version:
+                                      type: integer
+                                    ms_version:
+                                      type: integer
+                                  required:
+                                  - cond_ticket
+                                  - cond_version
+                                  - dc_ticket
+                                  - dc_version
+                                  - filetype_version
+                                  - policy_ticket
+                                  - policy_version
+                                screen_recording:
+                                  type: boolean
+                                screenshot:
+                                  type: boolean
+                              required:
+                              - rule_version
+                            category:
+                              type: string
+                            device_id:
+                              type: string
+                            device_code:
+                              type: string
+                            ip_address:
+                              type: string
+                            console_user:
+                              type: string
+                            os_name:
+                              type: string
+                            os_friendly_name:
+                              type: string
+                            staff_id:
+                              type: string
+                            staff_name:
+                              type: string
+                            staff_code:
+                              type: string
+                            staff_tag_ids:
+                              type: array
+                              items: {}
+                            staff_tags:
+                              type: array
+                              items: {}
+                            dept_ids:
+                              type: array
+                              items: {}
+                            dept_names:
+                              type: array
+                              items: {}
+                            dept_paths:
+                              type: array
+                              items: {}
+                            time:
+                              type: integer
+                            '@timestamp':
+                              type: integer
+                            timestamp:
+                              type: string
+                            agent_version:
+                              type: string
+                            event_id:
+                              type: string
+                            company_id:
+                              type: string
+                            policy_id:
+                              type: string
+                            policy_name:
+                              type: string
+                            policy_group_id:
+                              type: string
+                            policy_group_name:
+                              type: string
+                            risk_name:
+                              type: string
+                            risk_level:
+                              type: integer
+                            action:
+                              type: string
+                            is_blocked:
+                              type: boolean
+                            is_password_protected:
+                              type: boolean
+                            channel:
+                              type: string
+                            channel_name:
+                              type: string
+                            operation:
+                              type: string
+                            filename:
+                              type: string
+                            filepath:
+                              type: string
+                            filesize:
+                              type: integer
+                            md5_hash:
+                              type: string
+                            is_hidden:
+                              type: boolean
+                            is_compressed:
+                              type: boolean
+                            sha256_hash:
+                              type: string
+                            file_type:
+                              type: string
+                            file_suffix:
+                              type: string
+                            file_created_time:
+                              type: integer
+                            file_created_timestamp:
+                              type: string
+                            file_updated_time:
+                              type: integer
+                            file_updated_timestamp:
+                              type: string
+                            file_type_categories:
+                              type: array
+                              items:
+                                type: string
+                            file_description:
+                              type: string
+                            simhash_value:
+                              type: string
+                            file_policies:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  action:
+                                    type: string
+                                  classifications:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        data_level:
+                                          type: integer
+                                        data_level_name:
+                                          type: string
+                                        name:
+                                          type: string
+                                        uid:
+                                          type: string
+                                      required:
+                                      - data_level
+                                      - data_level_name
+                                      - name
+                                      - uid
+                                  file_created_time:
+                                    type: integer
+                                  file_created_timestamp:
+                                    type: string
+                                  file_description:
+                                    type: string
+                                  file_suffix:
+                                    type: string
+                                  file_type:
+                                    type: string
+                                  file_type_categories:
+                                    type: array
+                                    items:
+                                      type: string
+                                  file_updated_time:
+                                    type: integer
+                                  file_updated_timestamp:
+                                    type: string
+                                  filename:
+                                    type: string
+                                  filepath:
+                                    type: string
+                                  filesize:
+                                    type: integer
+                                  is_compressed:
+                                    type: boolean
+                                  is_hidden:
+                                    type: boolean
+                                  is_password_protected:
+                                    type: boolean
+                                  md5_hash:
+                                    type: string
+                                  policy_group_id:
+                                    type: string
+                                  policy_group_name:
+                                    type: string
+                                  policy_id:
+                                    type: string
+                                  policy_name:
+                                    type: string
+                                  risk_level:
+                                    type: integer
+                                  risk_name:
+                                    type: string
+                                  sha256_hash:
+                                    type: string
+                                required:
+                                - file_created_timestamp
+                                - file_updated_timestamp
+                                - md5_hash
+                                - policy_id
+                                - is_hidden
+                                - policy_name
+                                - filesize
+                                - policy_group_id
+                                - policy_group_name
+                                - risk_level
+                                - classifications
+                                - filename
+                                - filepath
+                                - is_compressed
+                                - file_type
+                                - file_suffix
+                                - file_updated_time
+                                - is_password_protected
+                                - file_description
+                                - action
+                                - risk_name
+                                - file_created_time
+                                - sha256_hash
+                                - file_type_categories
+                            content_summary_list:
+                              type: array
+                              items: {}
+                            extract_file:
+                              type: boolean
+                            cl_id:
+                              type: string
+                            cl_name:
+                              type: string
+                            data_level:
+                              type: integer
+                            data_level_name:
+                              type: string
+                            cl_ids:
+                              type: array
+                              items:
+                                type: string
+                            cl_names:
+                              type: array
+                              items:
+                                type: string
+                            data_levels:
+                              type: array
+                              items:
+                                type: integer
+                            data_level_names:
+                              type: array
+                              items:
+                                type: string
+                            has_cls:
+                              type: boolean
+                            metasource:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  original:
+                                    type: object
+                                    properties:
+                                      data:
+                                        type: string
+                                      url:
+                                        type: string
+                                    required:
+                                    - data
+                                    - url
+                                  source:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        name:
+                                          type: string
+                                        display_name:
+                                          type: string
+                                  category:
+                                    type: string
+                            log_cnt:
+                              type: integer
+                            score:
+                              type: integer
+                            cnt:
+                              type: integer
+                            channel_account:
+                              type: string
+                            staff_email:
+                              type: string
+                          required:
+                          - staff_name
+                          - md5_hash
+                          - console_user
+                          - channel
+                          - has_cls
+                          - dept_paths
+                          - data_level
+                          - sha256_hash
+                          - dept_names
+                          - filepath
+                          - staff_tags
+                          - cl_id
+                          - file_type
+                          - staff_id
+                          - action
+                          - os_friendly_name
+                          - file_updated_timestamp
+                          - file_type_categories
+                          - device_id
+                          - expand
+                          - filename
+                          - file_suffix
+                          - file_updated_time
+                          - file_policies
+                          - device_code
+                          - extract_file
+                          - file_description
+                          - data_level_name
+                          - risk_name
+                          - status
+                          - file_created_time
+                          - file_created_timestamp
+                          - policy_id
+                          - dept_ids
+                          - data_level_names
+                          - is_hidden
+                          - filesize
+                          - policy_group_id
+                          - is_compressed
+                          - data_levels
+                          - timestamp
+                          - channel_name
+                          - cl_name
+                          - company_id
+                          - policy_name
+                          - staff_code
+                          - created_timestamp
+                          - ip_address
+                          - cl_ids
+                          - policy_group_name
+                          - risk_level
+                          - agent_version
+                          - is_blocked
+                          - event_id
+                          - '@timestamp'
+                          - is_password_protected
+                          - os_name
+                          - time
+                          - category
+                          - operation
+                          - staff_tag_ids
+                          - cl_names
+                          - log_cnt
+                          - score
+                          - cnt
+                          - channel_account
+                          - staff_email
+                    required:
+                    - status
+                    - data
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  status: succeeded
+                  data:
+                  - status: created
+                    comment: ''
+                    created_timestamp: '2023-11-21T03:43:28Z'
+                    expand:
+                      compressed_filenames: ''
+                      dest: ''
+                      file_source: ''
+                      rule_version:
+                        cond_ticket: 2a563efd44b89f56d69e615c8eda4363
+                        cond_version: 15
+                        dc_ticket: 2a563efd44b89f56d69e615c8eda4363
+                        dc_version: 174
+                        filetype_version: 34
+                        im_version: 63
+                        policy_ticket: 027af9e67223aeb02434251c1dc8bc4b
+                        policy_version: 283
+                      screen_recording: false
+                      screenshot: false
+                    category: channel
+                    device_id: 7b45e606-c7b4-40a2-a08e-4aa9fb0ddcf1
+                    device_code: PC-000006
+                    ip_address: 192.168.96.148
+                    console_user: wenghuangge
+                    os_name: macOS
+                    os_friendly_name: macOS 12.6.5
+                    staff_id: ''
+                    staff_name: ''
+                    staff_code: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    time: 1700477266000
+                    '@timestamp': 1700477266000
+                    timestamp: '2023-11-20T10:47:46Z'
+                    agent_version: 3.0.228
+                    event_id: 7c708b6c-8e94-4fa3-b71a-9025c26e2a20
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    policy_id: afcf096e-0d7a-4ebf-98f8-6c4aab55bb3f
+                    policy_name: whg_test_01
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    policy_group_name: 默认组
+                    risk_name: 高危
+                    risk_level: 1
+                    action: block
+                    is_blocked: true
+                    is_password_protected: false
+                    channel: feishu
+                    channel_name: 飞书
+                    operation: outgoing
+                    filename: file_flow_05.docx
+                    filepath: /Users/wenghuangge/Desktop/文件加解密/file_flow_05.docx
+                    filesize: 12125
+                    md5_hash: a7b0a40dc540c02eb4142e159e7ba39f
+                    is_hidden: false
+                    is_compressed: false
+                    sha256_hash: 1440e0726ef93b80c16d2d06ee6ec6e3fb8feba4c60d18059b52cce6e8e66020
+                    file_type: Microsoft Word 2007+
+                    file_suffix: docx
+                    file_created_time: 1700134309775
+                    file_created_timestamp: '2023-11-16T11:31:49Z'
+                    file_updated_time: 1700475386941
+                    file_updated_timestamp: '2023-11-20T10:16:26Z'
+                    file_type_categories:
+                    - Microsoft Word
+                    - Word
+                    file_description: Microsoft Word 2007+
+                    simhash_value: ''
+                    file_policies:
+                    - action: block
+                      classifications:
+                      - data_level: 3
+                        data_level_name: 保密数据
+                        name: whg_class
+                        uid: f42cba49-cd9a-485f-897a-d118c4b24765
+                      file_created_time: 1700134309000
+                      file_created_timestamp: '2023-11-16T11:31:49Z'
+                      file_description: Microsoft Word 2007+
+                      file_suffix: docx
+                      file_type: docx
+                      file_type_categories:
+                      - Microsoft Word
+                      - Word
+                      file_updated_time: 1700475386000
+                      file_updated_timestamp: '2023-11-20T10:16:26Z'
+                      filename: file_flow_05.docx
+                      filepath: /Users/wenghuangge/Desktop/文件加解密/file_flow_05.docx
+                      filesize: 12125
+                      is_compressed: false
+                      is_hidden: false
+                      is_password_protected: false
+                      md5_hash: a7b0a40dc540c02eb4142e159e7ba39f
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      policy_group_name: 默认组
+                      policy_id: afcf096e-0d7a-4ebf-98f8-6c4aab55bb3f
+                      policy_name: whg_test_01
+                      risk_level: 1
+                      risk_name: 高危
+                    content_summary_list: []
+                    extract_file: false
+                    cl_id: f42cba49-cd9a-485f-897a-d118c4b24765
+                    cl_name: whg_class
+                    data_level: 3
+                    data_level_name: 保密数据
+                    cl_ids:
+                    - f42cba49-cd9a-485f-897a-d118c4b24765
+                    cl_names:
+                    - whg_class
+                    data_levels:
+                    - 3
+                    data_level_names:
+                    - 保密数据
+                    has_cls: true
+                    metasource:
+                    - original:
+                        data: 机密
+                        url: https://twitter.com/
+                      source:
+                      - name: Chrome
+                        display_name: 谷歌浏览器
+                      category: browser
+                    log_cnt: 27
+                    score: 60
+                    cnt: 276
+                  - staff_name: ''
+                    md5_hash: bf9ea12e04e4d549a7f40d7ce7a0c528
+                    console_user: nanzhi
+                    channel: feishu
+                    has_cls: false
+                    dept_paths: []
+                    data_level: 0
+                    sha256_hash: 23cc83f7e81e97e76fb12d95914eda460be3adbf8cc3f043386a4a807a949f84
+                    dept_names: []
+                    filepath: /Users/nanzhi/Downloads/iOS.and.macOS.Performance.Tuning.2017.3.pdf
+                    staff_tags: []
+                    cl_id: ''
+                    file_type: PDF document, version 1.6, 24 pages
+                    staff_id: ''
+                    action: approval
+                    channel_account: ''
+                    os_friendly_name: macOS 12.7
+                    file_updated_timestamp: '2023-10-13T10:34:45Z'
+                    file_type_categories:
+                    - PDF document
+                    device_id: 1c16c892-242c-467c-add4-8ab0f00f26e9
+                    expand:
+                      rule_version:
+                        policy_version: 99
+                        cond_version: 13
+                        filetype_version: 2
+                        dc_version: 64
+                        dc_ticket: ca798651bccd2e673a55d71557084b28
+                        cond_ticket: ca798651bccd2e673a55d71557084b28
+                        policy_ticket: 424ab3962e2c487ef455b709e19d26c3
+                      compressed_filenames: ''
+                      screen_recording: false
+                      file_source: 未知
+                      screenshot: false
+                      dest: ''
+                    filename: iOS.and.macOS.Performance.Tuning.2017.3.pdf
+                    file_suffix: pdf
+                    file_updated_time: 1697193285442
+                    file_policies:
+                    - file_created_timestamp: '2023-10-13T10:34:43Z'
+                      file_updated_timestamp: '2023-10-13T10:34:45Z'
+                      md5_hash: bf9ea12e04e4d549a7f40d7ce7a0c528
+                      policy_id: 21f9c2cb-5c86-47ab-a514-72bcade6facc
+                      is_hidden: false
+                      policy_name: 南测1
+                      filesize: 8357559
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      policy_group_name: 默认组
+                      risk_level: 1
+                      classifications: []
+                      filename: iOS.and.macOS.Performance.Tuning.2017.3.pdf
+                      filepath: /Users/nanzhi/Downloads/iOS.and.macOS.Performance.Tuning.2017.3.pdf
+                      is_compressed: false
+                      file_type: pdf
+                      file_suffix: pdf
+                      file_updated_time: 1697193285000
+                      is_password_protected: false
+                      file_description: ''
+                      action: approval
+                      risk_name: 高危
+                      file_created_time: 1697193283000
+                    device_code: PC-000003
+                    extract_file: false
+                    file_description: PDF document, version 1.6, 24 pages
+                    data_level_name: 未分级
+                    risk_name: 高危
+                    staff_email: ''
+                    status: created
+                    file_created_time: 1697193283938
+                    file_created_timestamp: '2023-10-13T10:34:43Z'
+                    policy_id: 21f9c2cb-5c86-47ab-a514-72bcade6facc
+                    dept_ids: []
+                    data_level_names:
+                    - 未分级
+                    is_hidden: false
+                    filesize: 8357559
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    is_compressed: false
+                    data_levels:
+                    - 0
+                    timestamp: '2023-10-20T05:56:11Z'
+                    channel_name: 飞书
+                    cl_name: 未分类
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    policy_name: 南测1
+                    staff_code: ''
+                    created_timestamp: '2023-10-20T05:56:39Z'
+                    ip_address: 192.168.96.36
+                    cl_ids:
+                    - ''
+                    policy_group_name: 默认组
+                    risk_level: 1
+                    agent_version: 3.0.202
+                    is_blocked: false
+                    event_id: 78B0A060-A809-46A8-A605-B35803F4DE32
+                    '@timestamp': 1697781371000
+                    is_password_protected: false
+                    os_name: macOS
+                    time: 1697781371000
+                    category: channel
+                    operation: outgoing
+                    staff_tag_ids: []
+                    cl_names:
+                    - 未分类
+                    log_cnt: 110
+                    score: 60
+                    cnt: 276
+                  - is_compressed: false
+                    file_type_categories: []
+                    filename: 1-200M.txt
+                    is_hidden: false
+                    file_type: txt
+                    time: 1701743034240
+                    device_code: PC-000024
+                    file_suffix: txt
+                    ip_address: 192.168.96.142
+                    operation: outgoing
+                    status: created
+                    event_id: '1701743029048054'
+                    policy_name: win
+                    file_description: '-'
+                    agent_version: 3.2.12
+                    is_password_protected: false
+                    filesize: 252776000
+                    channel: feishu
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    file_created_time: 1701254357000
+                    file_updated_time: 1678192036000
+                    extract_file: true
+                    risk_name: 中危
+                    policy_group_name: 默认组
+                    file_policies:
+                    - is_compressed: false
+                      filename: 1-200M.txt
+                      is_hidden: false
+                      file_type: txt
+                      file_suffix: txt
+                      policy_name: win
+                      is_password_protected: false
+                      filesize: 252776000
+                      file_created_time: 1701254357000
+                      file_updated_time: 1678192036000
+                      classifications:
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: 关键词组4
+                        uid: f19a4d58-5211-4311-ab03-f4ebbe65ae25
+                      risk_name: 中危
+                      policy_group_name: 默认组
+                      risk_level: 2
+                      policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                      filepath: D:\测试用例数据\文件大小\1-200M.txt
+                      md5_hash: ''
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      action: warning
+                      sha256_hash: ''
+                      file_created_timestamp: '2023-11-29T10:39:17Z'
+                      file_updated_timestamp: '2023-03-07T12:27:16Z'
+                    channel_name: 飞书
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    console_user: lianb@DESKTOP-A0L03FT
+                    is_blocked: false
+                    os_name: Windows
+                    risk_level: 2
+                    policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                    filepath: D:\测试用例数据\文件大小\1-200M.txt
+                    md5_hash: 242219800750a7ebe02f41b932679a0e
+                    device_id: 995458dd-b5eb-4819-b140-be745b6946fa
+                    expand:
+                      rule_version:
+                        cond_ticket: ff7483ea3c4dfc0eeb253bf6ff8b9569
+                        cond_version: 20
+                        dc_ticket: 04ae48da42ecc6e8a66acdc2f181222a
+                        dc_version: 289
+                        filetype_version: 34
+                        ms_version: -1
+                        policy_ticket: 3a154ed85c33307c89b93f642e14e9b1
+                        policy_version: 536
+                      screen_recording: true
+                      screenshot: true
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    action: warning
+                    sha256_hash: ''
+                    channel_account: '-'
+                    '@timestamp': 1701743034240
+                    timestamp: '2023-12-05T02:23:54Z'
+                    created_timestamp: '2023-12-05T02:23:59Z'
+                    file_created_timestamp: '2023-11-29T10:39:17Z'
+                    file_updated_timestamp: '2023-03-07T12:27:16Z'
+                    category: channel
+                    staff_id: ''
+                    staff_name: ''
+                    staff_email: ''
+                    staff_code: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    has_cls: true
+                    cl_ids:
+                    - f19a4d58-5211-4311-ab03-f4ebbe65ae25
+                    cl_names:
+                    - 关键词组4
+                    data_levels:
+                    - 2
+                    data_level_names:
+                    - 内部数据
+                    cl_id: f19a4d58-5211-4311-ab03-f4ebbe65ae25
+                    cl_name: 关键词组4
+                    data_level: 2
+                    data_level_name: 内部数据
+                    log_cnt: 161
+                    score: 60
+                    cnt: 276
+                  - is_compressed: true
+                    file_type_categories: []
+                    filename: 终端相关信息.zip
+                    is_hidden: false
+                    file_type: zip
+                    time: 1701743050937
+                    device_code: PC-000001
+                    file_suffix: zip
+                    ip_address: 192.168.96.211
+                    operation: outgoing
+                    status: created
+                    event_id: '1701743048677325'
+                    policy_name: 高级嘻嘻
+                    file_description: '-'
+                    agent_version: 3.2.12
+                    is_password_protected: false
+                    filesize: 1576
+                    channel: aliyunpan
+                    os_friendly_name: Windows 11 CoreCountrySpecific (10.0.22621)
+                    file_created_time: 1695020202000
+                    file_updated_time: 1695020202000
+                    extract_file: false
+                    risk_name: 高危
+                    policy_group_name: 默认组
+                    file_policies:
+                    - is_compressed: true
+                      filename: 终端相关信息.zip
+                      is_hidden: false
+                      file_type: zip
+                      file_suffix: zip
+                      policy_name: 高级嘻嘻
+                      is_password_protected: false
+                      filesize: 1576
+                      file_created_time: 1695020202000
+                      file_updated_time: 1695020202000
+                      classifications:
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: 常见格式文件
+                        uid: 32b5ec6f-c624-417e-b906-ec10035ac89c
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: 文件名-存在
+                        uid: 5da9980d-4b3d-402e-913a-60e2bb1cec15
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: 压缩文件检测
+                        uid: 80b037dc-f564-439c-9a54-deadb2367949
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 压缩
+                        uid: cb63314b-3a74-43fc-8e16-abd20c52652f
+                      risk_name: 高危
+                      policy_group_name: 默认组
+                      risk_level: 1
+                      policy_id: 4fa1e7d6-fa22-4d95-bdb4-fd1767b3daf2
+                      filepath: C:\Users\sou\Desktop\终端相关信息.zip
+                      md5_hash: 28c9ff76d24133eca19ee7839068af4b
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      action: alert
+                      sha256_hash: c87b12879e535383e0528a95e541c10cc25ac03346bc694ec6eefea796eefcc2
+                      file_created_timestamp: '2023-09-18T06:56:42Z'
+                      file_updated_timestamp: '2023-09-18T06:56:42Z'
+                    - is_compressed: false
+                      filename: 终端相关信息.txt
+                      is_hidden: false
+                      file_type: zip
+                      file_suffix: txt
+                      policy_name: 高级嘻嘻
+                      is_password_protected: false
+                      filesize: 0
+                      file_created_time: 0
+                      file_updated_time: 0
+                      classifications:
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: 常见格式文件
+                        uid: 32b5ec6f-c624-417e-b906-ec10035ac89c
+                      - data_level: 3
+                        data_level_name: 保密数据
+                        name: 个人信息-手机号（>10次）
+                        uid: 3fda0f39-0d5f-4689-a450-3c4978f7976f
+                      - data_level: 1
+                        data_level_name: 公开数据
+                        name: 文件格式
+                        uid: 481314d8-c028-41b3-a534-32515fcd4e2f
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: 文件名-存在
+                        uid: 5da9980d-4b3d-402e-913a-60e2bb1cec15
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: hu关键词
+                        uid: f6c3f768-c436-4891-9f0d-f9eb4aadfcd4
+                      risk_name: 高危
+                      policy_group_name: 默认组
+                      risk_level: 1
+                      policy_id: 4fa1e7d6-fa22-4d95-bdb4-fd1767b3daf2
+                      filepath: C:\Users\sou\Desktop\终端相关信息.zip\终端相关信息.txt
+                      md5_hash: 3c7944d21fb86a26a7561f17ec5f7119
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      action: alert
+                      sha256_hash: b0123cecf60d4a10942b9bba59c0e3d7be6270050b83f57cdab2cad2a2fc3bd1
+                      file_created_timestamp: '1970-01-01T00:00:00Z'
+                      file_updated_timestamp: '1970-01-01T00:00:00Z'
+                    channel_name: 阿里云盘
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    console_user: sou@LAPTOP-8R5257U6
+                    is_blocked: true
+                    os_name: Windows
+                    risk_level: 1
+                    policy_id: 4fa1e7d6-fa22-4d95-bdb4-fd1767b3daf2
+                    filepath: C:\Users\sou\Desktop\终端相关信息.zip
+                    md5_hash: 28c9ff76d24133eca19ee7839068af4b
+                    device_id: c900fbb1-d4ca-4972-aa82-cf5519064187
+                    expand:
+                      compressed_filenames:
+                      - 终端相关信息.txt
+                      rule_version:
+                        cond_ticket: ff7483ea3c4dfc0eeb253bf6ff8b9569
+                        cond_version: 20
+                        dc_ticket: 04ae48da42ecc6e8a66acdc2f181222a
+                        dc_version: 289
+                        filetype_version: 34
+                        ms_version: -1
+                        policy_ticket: ffb5cd791103d69e3cca6b46cb6ddb48
+                        policy_version: 536
+                      screen_recording: false
+                      screenshot: false
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    action: alert
+                    sha256_hash: ''
+                    channel_account: '-'
+                    '@timestamp': 1701743050937
+                    timestamp: '2023-12-05T02:24:10Z'
+                    created_timestamp: '2023-12-05T02:24:15Z'
+                    file_created_timestamp: '2023-09-18T06:56:42Z'
+                    file_updated_timestamp: '2023-09-18T06:56:42Z'
+                    category: channel
+                    staff_id: ''
+                    staff_name: ''
+                    staff_email: ''
+                    staff_code: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    has_cls: true
+                    cl_ids:
+                    - 32b5ec6f-c624-417e-b906-ec10035ac89c
+                    - 3fda0f39-0d5f-4689-a450-3c4978f7976f
+                    - 481314d8-c028-41b3-a534-32515fcd4e2f
+                    - 5da9980d-4b3d-402e-913a-60e2bb1cec15
+                    - f6c3f768-c436-4891-9f0d-f9eb4aadfcd4
+                    cl_names:
+                    - 常见格式文件
+                    - 个人信息-手机号（>10次）
+                    - 文件格式
+                    - 文件名-存在
+                    - hu关键词
+                    data_levels:
+                    - 2
+                    - 3
+                    - 1
+                    - 2
+                    - 2
+                    data_level_names:
+                    - 内部数据
+                    - 保密数据
+                    - 公开数据
+                    - 内部数据
+                    - 内部数据
+                    cl_id: 3fda0f39-0d5f-4689-a450-3c4978f7976f
+                    cl_name: 个人信息-手机号（>10次）
+                    data_level: 3
+                    data_level_name: 保密数据
+                    log_cnt: 119
+                    score: 60
+                    cnt: 276
+                  - file_description: Unicode text, UTF-8 text
+                    file_created_time: 1700911300990
+                    filesize: 3432819
+                    event_id: 4ca9f9ac-9220-49ea-98e4-aa92f7c403cd
+                    status: created
+                    risk_name: 高危
+                    file_policies:
+                    - file_description: Unicode text, UTF-8 text
+                      file_created_time: 0
+                      filesize: 3432819
+                      risk_name: 高危
+                      file_suffix: txt
+                      is_compressed: false
+                      filepath: /home/serval/.config/weixin/wechat/users/2d27d477bfb9f1c8ed5280fee1bacda0/message/cache/31713ee1e8942c61e168094a0ce79ceb/opendata/2023-11/weixin(1).txt
+                      md5_hash: b6234fb2411255c4f078dff448625291
+                      risk_level: 1
+                      action: block
+                      is_hidden: false
+                      policy_group_name: 默认组
+                      file_type: txt
+                      policy_id: ebe7578c-1ca0-4a01-8c72-f61bd6b67ec2
+                      classifications:
+                      - name: 测试关键词-内容
+                        uid: 47778687-933a-4de7-a736-7698f56a2812
+                        data_level_name: 公开数据
+                        data_level: 1
+                      file_updated_time: 0
+                      file_type_categories:
+                      - UTF-8
+                      - Unicode text
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      is_password_protected: false
+                      policy_name: 高级模式
+                      filename: weixin(1).txt
+                      file_created_timestamp: '1970-01-01T00:00:00Z'
+                      file_updated_timestamp: '1970-01-01T00:00:00Z'
+                    console_user: serval-PC\serval
+                    channel_name: 微信
+                    is_compressed: false
+                    file_suffix: txt
+                    filepath: /home/serval/.config/weixin/wechat/users/2d27d477bfb9f1c8ed5280fee1bacda0/message/cache/31713ee1e8942c61e168094a0ce79ceb/opendata/2023-11/weixin(1).txt
+                    md5_hash: b6234fb2411255c4f078dff448625291
+                    expand:
+                      rule_version:
+                        cond_ticket: ''
+                        cond_version: 21
+                        dc_ticket: ''
+                        dc_version: 290
+                        filetype_version: 34
+                        policy_ticket: ''
+                        policy_version: 541
+                    risk_level: 1
+                    action: block
+                    operation: outgoing
+                    is_blocked: true
+                    is_hidden: false
+                    policy_group_name: 默认组
+                    file_type: txt
+                    policy_id: ebe7578c-1ca0-4a01-8c72-f61bd6b67ec2
+                    channel: wechat
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    extract_file: false
+                    os_name: UOS
+                    time: 1700911301000
+                    file_updated_time: 1700911301000
+                    file_type_categories: []
+                    os_friendly_name: UnionTech OS Desktop 20 Pro
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    ip_address: 192.168.96.206
+                    is_password_protected: false
+                    device_id: e7fc419d-1627-4cb1-9ccb-5ea22a2b3e51
+                    device_code: PC-000029
+                    agent_version: 3.0.4
+                    policy_name: 高级模式
+                    filename: weixin(1).txt
+                    '@timestamp': 1700911301000
+                    timestamp: '2023-11-25T11:21:41Z'
+                    created_timestamp: '2023-12-05T05:48:34Z'
+                    file_created_timestamp: '2023-11-25T11:21:40Z'
+                    file_updated_timestamp: '2023-11-25T11:21:41Z'
+                    category: channel
+                    staff_id: ''
+                    staff_name: ''
+                    staff_email: ''
+                    staff_code: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    has_cls: true
+                    cl_ids:
+                    - 47778687-933a-4de7-a736-7698f56a2812
+                    cl_names:
+                    - 测试关键词-内容
+                    data_levels:
+                    - 1
+                    data_level_names:
+                    - 公开数据
+                    cl_id: 47778687-933a-4de7-a736-7698f56a2812
+                    cl_name: 测试关键词-内容
+                    data_level: 1
+                    data_level_name: 公开数据
+                    log_cnt: 44
+                    score: 60
+                    cnt: 276
+      security: []

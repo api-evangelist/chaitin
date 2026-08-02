@@ -1,0 +1,76 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account module API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: module
+paths:
+  /open/global/mode:
+    get:
+      description: Get global semantics
+      produces:
+      - application/json
+      tags:
+      - module
+      summary: Get global semantics
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/skynet.GetGlobalSemanticsRes'
+      x-cli-summary: 获取全局语义配置
+    put:
+      description: Update global semantics
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - module
+      summary: Update global semantics
+      parameters:
+      - description: request params
+        name: request
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/skynet.SemanticsConfigParams'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/response.JSONBody'
+      x-cli-summary: 更新全局语义配置
+definitions:
+  response.JSONBody:
+    type: object
+    properties:
+      data: {}
+      err:
+        type: string
+      msg:
+        type: string
+  skynet.SemanticsConfigParams:
+    type: object
+    required:
+    - semantics
+    properties:
+      semantics:
+        $ref: '#/definitions/model.SemanticConfig'
+      use_global:
+        type: boolean
+  skynet.GetGlobalSemanticsRes:
+    type: object
+    properties:
+      semantics:
+        $ref: '#/definitions/model.SemanticConfig'
+  model.SemanticConfig:
+    type: object
+    additionalProperties:
+      type: string

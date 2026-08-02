@@ -1,0 +1,52 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account sensitive_data API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: sensitive_data
+paths:
+  /api/SensitiveDataCharacteristicAPI:
+    get:
+      operationId: SensitiveDataCharacteristicAPI_get
+      summary: GET /api/SensitiveDataCharacteristicAPI
+      tags:
+      - sensitive_data
+      parameters:
+      - name: api_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: pii_device_id_value
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: pii_session_value
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: pii_user_id_value
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: pii_username_value
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: src_ip
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false

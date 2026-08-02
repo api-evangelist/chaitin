@@ -1,0 +1,152 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account installer/{meta_id}/downloadurl API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: installer/{meta_id}/downloadurl
+  description: 终端安装包/meta_id 参数/下载地址
+paths:
+  /installer/{meta_id}/downloadurl:
+    post:
+      summary: 获取公用安装包信息
+      deprecated: false
+      description: ''
+      tags:
+      - installer/{meta_id}/downloadurl
+      parameters:
+      - name: meta_id
+        in: path
+        description: ''
+        required: true
+        example: d4fdd2ab8a249583dbd72a25193c1a38
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                body:
+                  type: string
+              required:
+              - body
+            example:
+              body: 8028B789E366D1E2B301CE019CBEB50A
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      etag:
+                        type: string
+                      relative_path:
+                        type: string
+                      last_modified:
+                        type: string
+                      size:
+                        type: integer
+                      content_type:
+                        type: string
+                      filename:
+                        type: string
+                      url:
+                        type: string
+                    required:
+                    - etag
+                    - relative_path
+                    - last_modified
+                    - size
+                    - content_type
+                    - filename
+                    - url
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  etag: 3d200004df387fdac829bcfd4fc6adb2
+                  relative_path: eeff7c64-5070-4582-8b93-fbcc57db7771/installer/LinuxGuider/6DC70FB520C06642FB2AACFE0A6817F4_linux_online_installer.sh
+                  last_modified: '2023-11-16T11:39:41Z'
+                  size: 97
+                  content_type: application/octet-stream
+                  filename: LinuxGuider.sh
+                  url: https://192.168.89.26:8443/public-source/eeff7c64-5070-4582-8b93-fbcc57db7771/installer/LinuxGuider/6DC70FB520C06642FB2AACFE0A6817F4_linux_online_installer.sh?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20231116%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231116T131002Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27LinuxGuider.sh&X-Amz-Signature=a4a4a09657cb6bbc2864a91cd06c9f6256eeb229af362216277bb9a5f2967d34
+      security: []

@@ -1,0 +1,289 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policylog/landing/{log_id}/innerfileflow API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policylog/landing/{log_id}/innerfileflow
+  description: 日志中心/落地/log_id 参数/内部文件流转
+paths:
+  /policylog/landing/{log_id}/innerfileflow:
+    post:
+      summary: 单机流转图
+      deprecated: false
+      description: ''
+      tags:
+      - policylog/landing/{log_id}/innerfileflow
+      parameters:
+      - name: log_id
+        in: path
+        description: ''
+        required: true
+        example: PG-rAZQBZcl0n2phb4VM
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          uid:
+                            type: string
+                          xid:
+                            type: string
+                          from:
+                            type: object
+                            properties:
+                              display:
+                                type: string
+                              value:
+                                type: array
+                                items:
+                                  type: string
+                            required:
+                            - display
+                            - value
+                          to:
+                            type: object
+                            properties:
+                              display:
+                                type: string
+                              value:
+                                type: array
+                                items:
+                                  type: string
+                            required:
+                            - display
+                            - value
+                          action:
+                            type: string
+                          action_display_name:
+                            type: string
+                          channel:
+                            type: array
+                            items: {}
+                          channel_display_name:
+                            type: array
+                            items: {}
+                          time:
+                            type: integer
+                          status:
+                            type: string
+                        required:
+                        - uid
+                        - xid
+                        - from
+                        - to
+                        - action
+                        - action_display_name
+                        - channel
+                        - channel_display_name
+                        - time
+                        - status
+                      children:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            data:
+                              type: object
+                              properties:
+                                uid:
+                                  type: string
+                                from:
+                                  type: object
+                                  properties:
+                                    isMeta:
+                                      type: boolean
+                                    display:
+                                      type: string
+                                    value:
+                                      type: array
+                                      items:
+                                        type: object
+                                        properties:
+                                          display:
+                                            type: string
+                                          tags:
+                                            type: array
+                                            items: {}
+                                          value:
+                                            type: array
+                                            items:
+                                              type: object
+                                              properties:
+                                                host:
+                                                  type: string
+                                                tags:
+                                                  type: array
+                                                  items:
+                                                    type: string
+                                                urls:
+                                                  type: array
+                                                  items:
+                                                    type: string
+                                  required:
+                                  - isMeta
+                                  - display
+                                  - value
+                                to:
+                                  type: object
+                                  properties:
+                                    display:
+                                      type: string
+                                    value:
+                                      type: array
+                                      items:
+                                        type: string
+                                  required:
+                                  - display
+                                  - value
+                                action:
+                                  type: string
+                                action_display_name:
+                                  type: string
+                                channel:
+                                  type: array
+                                  items: {}
+                                channel_display_name:
+                                  type: array
+                                  items: {}
+                                time:
+                                  type: string
+                              required:
+                              - uid
+                              - from
+                              - to
+                              - action
+                              - action_display_name
+                              - channel
+                              - channel_display_name
+                              - time
+                            children:
+                              type: array
+                              items: {}
+                    required:
+                    - data
+                    - children
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  data:
+                    uid: 77F50E53-768E-43FA-A1DF-A440A446C2D2
+                    xid: 77F50E53-768E-43FA-A1DF-A440A446C2D2
+                    from:
+                      display: 发送
+                      value:
+                      - crashed_3.4.529.txt
+                    to:
+                      display: 到
+                      value:
+                      - Chrome
+                    action: outgoing
+                    action_display_name: 外发
+                    channel: []
+                    channel_display_name: []
+                    time: 1735194787000
+                    status: created
+                  children:
+                  - data:
+                      uid: ce254057-f987-4419-9b1a-466129c09c33
+                      from:
+                        isMeta: true
+                        display: 从
+                        value:
+                        - display: Google Chrome
+                          tags: []
+                          value:
+                          - host: project.feishu.cn
+                            tags:
+                            - Web
+                            - '11'
+                            urls:
+                            - https://project.feishu.cn/ddr/issue/detail/5241110546?parentUrl=%2Fddr%2FissueView%2FA3PpqKjVR%3Fscope%3Dworkspaces%26node%3D17593992&scope=workspaces&node=17593992
+                            - https://project.feishu.cn/goapi/v1/tos/file/meego-business/checklist/5ab02c1d-b497-4fe8-b789-1402d3190aeb.txt?isSaas=1&download=true
+                      to:
+                        display: 下载
+                        value:
+                        - crashed_3.4.529.txt
+                      action: source
+                      action_display_name: 来源
+                      channel: []
+                      channel_display_name: []
+                      time: '2024-12-26T14:33:07+08:00'
+                    children: []
+      security: []

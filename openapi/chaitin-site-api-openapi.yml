@@ -1,0 +1,348 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account site API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: site
+paths:
+  /open/site:
+    get:
+      produces:
+      - application/json
+      tags:
+      - site
+      summary: list web service
+      parameters:
+      - type: integer
+        name: group_id
+        in: query
+        x-cli-description: 分组 ID
+      - type: string
+        name: site
+        in: query
+        x-cli-description: 站点域名
+      - type: boolean
+        name: sp_enabled
+        in: query
+        x-cli-description: 是否启用语义分析
+      - type: boolean
+        name: stat_enabled
+        in: query
+        x-cli-description: 是否启用统计
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/site.GetWebsiteRes'
+      x-cli-summary: 获取防护站点列表
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - site
+      summary: create web service
+      parameters:
+      - description: request params
+        name: request
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/site.WebsiteReq'
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  type: integer
+      x-cli-summary: 创建防护站点
+    put:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - site
+      summary: update web service
+      parameters:
+      - description: request params
+        name: request
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/site.WebsiteReq'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/response.JSONBody'
+      x-cli-summary: 更新防护站点
+    delete:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - site
+      summary: delete web service
+      parameters:
+      - description: request params
+        name: request
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/site.DeleteWebsiteReq'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/response.JSONBody'
+      x-cli-summary: 删除防护站点
+definitions:
+  response.JSONBody:
+    type: object
+    properties:
+      data: {}
+      err:
+        type: string
+      msg:
+        type: string
+  site.GetWebsiteItem:
+    type: object
+    properties:
+      access_log_limit:
+        type: integer
+      acl_enabled:
+        type: boolean
+      acl_response_html_path:
+        type: string
+      acl_response_status_code:
+        type: integer
+      auth_defense_id:
+        type: integer
+      bad_gateway_html_path:
+        type: string
+      bad_gateway_status_code:
+        type: integer
+      cc_bot:
+        type: boolean
+      cert_filename:
+        description: 3.5.0 存储时废弃，tcd通信时仍使用
+        type: string
+      cert_id:
+        type: integer
+      cert_type:
+        description: '0 -> no cert, 1 -> upload, 2 -> self-signed, 3 -> choose mgt cert
+
+          CertType 3.5.0 存储时废弃'
+        type: integer
+      challenge_id:
+        type: integer
+      chaos_id:
+        type: integer
+      chaos_is_enabled:
+        type: boolean
+      comment:
+        type: string
+      created_at:
+        type: string
+      custom_location:
+        type: array
+        items:
+          type: string
+      denied_value:
+        type: integer
+      email:
+        type: string
+      error_log_limit:
+        type: integer
+      exclude_content_type:
+        type: array
+        items:
+          type: string
+      exclude_paths:
+        type: array
+        items:
+          type: string
+      forbidden_html_path:
+        type: string
+      forbidden_status_code:
+        type: integer
+      forwarding_rules:
+        description: ForwardingRules 转发规则配置（非数据库字段，用于传输到 tcd）
+        type: array
+        items:
+          $ref: '#/definitions/model.ForwardingRuleConfig'
+      gateway_timeout_html_path:
+        type: string
+      gateway_timeout_status_code:
+        type: integer
+      group_id:
+        type: integer
+      health_check:
+        type: boolean
+      health_state:
+        type: object
+        additionalProperties:
+          $ref: '#/definitions/site.HealthState'
+      icon:
+        type: string
+      id:
+        type: integer
+      index:
+        type: string
+      init:
+        type: boolean
+      is_enabled:
+        type: boolean
+      key_filename:
+        type: string
+      load_balance:
+        $ref: '#/definitions/model.LoadBalanceConfig'
+      mode:
+        description: 0 -> defense, 1-> offline, 2 -> dry run
+        type: integer
+      not_found_html_path:
+        type: string
+      not_found_status_code:
+        type: integer
+      offline_html_path:
+        type: string
+      offline_status_code:
+        type: integer
+      portal:
+        type: boolean
+      portal_redirect:
+        type: string
+      ports:
+        type: array
+        items:
+          type: string
+      position:
+        type: integer
+      redirect_status_code:
+        type: integer
+      req_value:
+        type: integer
+      semantics:
+        type: boolean
+      server_names:
+        type: array
+        items:
+          type: string
+      sp_enabled:
+        description: 是否开启安全态势
+        type: boolean
+      stat_enabled:
+        description: 是否开启统计
+        type: boolean
+      static:
+        type: boolean
+      static_default:
+        type: integer
+      tamper_refresh:
+        description: 防篡改刷新时间（毫秒）
+        type: integer
+      tamper_refresh_state:
+        type: string
+      title:
+        type: string
+      type:
+        type: integer
+      updated_at:
+        type: string
+      upstreams:
+        type: array
+        items:
+          type: string
+      wr_id:
+        type: integer
+  model.LoadBalanceConfig:
+    type: object
+    properties:
+      balance_type:
+        type: integer
+  site.GetWebsiteRes:
+    type: object
+    properties:
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/site.GetWebsiteItem'
+      total:
+        type: integer
+  site.HealthState:
+    type: object
+    properties:
+      error:
+        type: string
+      state:
+        type: integer
+  site.DeleteWebsiteReq:
+    type: object
+    properties:
+      ids:
+        type: array
+        items:
+          type: integer
+  model.ForwardingRuleConfig:
+    type: object
+    properties:
+      id:
+        type: integer
+      path_prefix:
+        type: string
+      upstreams:
+        type: array
+        items:
+          type: string
+  site.WebsiteReq:
+    type: object
+    properties:
+      cert_id:
+        type: integer
+      comment:
+        type: string
+      email:
+        type: string
+      group_id:
+        type: integer
+      health_check:
+        type: boolean
+      id:
+        type: integer
+      index:
+        type: string
+      load_balance:
+        $ref: '#/definitions/model.LoadBalanceConfig'
+      ports:
+        type: array
+        items:
+          type: string
+      redirect_status_code:
+        type: integer
+      server_names:
+        type: array
+        items:
+          type: string
+      stat_enabled:
+        type: boolean
+      static_default:
+        type: integer
+      type:
+        type: integer
+      upstreams:
+        type: array
+        items:
+          type: string

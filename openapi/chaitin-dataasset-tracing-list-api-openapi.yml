@@ -1,0 +1,1206 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account dataasset/tracing/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: dataasset/tracing/list
+  description: 数据资产/溯源/列表
+paths:
+  /dataasset/tracing/list:
+    post:
+      summary: tracing文件列表
+      deprecated: false
+      description: ''
+      tags:
+      - dataasset/tracing/list
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                search:
+                  type: string
+                queries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: string
+                file_trace_id:
+                  type: string
+              required:
+              - time_range
+              - search
+              - queries
+              - file_trace_id
+            example:
+              time_range:
+                begin: '2023-11-28 20:00:00'
+                end: '2023-11-28 21:00:00'
+              search: ''
+              queries:
+              - field: channel
+                operator: is
+                value: feishu
+              file_trace_id: a341dfca-1bfcfcbe-000000000000000f-00000194455ccdad
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      page:
+                        type: integer
+                      limit:
+                        type: integer
+                      search_total:
+                        type: integer
+                      total:
+                        type: integer
+                      search_after:
+                        type: array
+                        items:
+                          type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            staff_name:
+                              type: string
+                            console_user:
+                              type: string
+                            md5_hash:
+                              type: string
+                            channel:
+                              type: string
+                            has_cls:
+                              type: boolean
+                            dept_paths:
+                              type: array
+                              items:
+                                type: string
+                            data_level:
+                              type: integer
+                            staff_number:
+                              type: string
+                            dept_names:
+                              type: array
+                              items:
+                                type: string
+                            hostname:
+                              type: string
+                            filepath:
+                              type: string
+                            staff_tags:
+                              type: array
+                              items: {}
+                            cl_id:
+                              type: string
+                            file_type:
+                              type: string
+                            staff_id:
+                              type: string
+                            action:
+                              type: string
+                            app_info:
+                              type: object
+                              properties: {}
+                            file_trace_id:
+                              type: string
+                            os_friendly_name:
+                              type: string
+                            file_updated_timestamp:
+                              type: string
+                            file_type_categories:
+                              type: array
+                              items: {}
+                            device_id:
+                              type: string
+                            meta_original:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  process_name:
+                                    type: string
+                                required:
+                                - process_name
+                            file_trace_flags:
+                              type: string
+                            simhash:
+                              type: integer
+                            expand:
+                              type: object
+                              properties:
+                                rule_version:
+                                  type: object
+                                  properties:
+                                    cond_version:
+                                      type: integer
+                                    policy_version:
+                                      type: integer
+                                    filetype_version:
+                                      type: integer
+                                    dc_version:
+                                      type: integer
+                                    dc_ticket:
+                                      type: string
+                                    cond_ticket:
+                                      type: string
+                                    policy_ticket:
+                                      type: string
+                                    ms_version:
+                                      type: integer
+                                    version:
+                                      type: integer
+                                  required:
+                                  - cond_ticket
+                                  - cond_version
+                                  - dc_ticket
+                                  - dc_version
+                                  - filetype_version
+                                  - ms_version
+                                  - policy_ticket
+                                  - policy_version
+                                  - version
+                                evidence_info:
+                                  type: object
+                                  properties:
+                                    file:
+                                      type: string
+                                      nullable: true
+                                    screen_recording:
+                                      type: 'null'
+                                    screenshot:
+                                      type: string
+                                      nullable: true
+                                  required:
+                                  - file
+                                  - screenshot
+                                  - screen_recording
+                                screen_recording:
+                                  type: boolean
+                                screenshot:
+                                  type: boolean
+                              required:
+                              - rule_version
+                              - screen_recording
+                              - screenshot
+                              - evidence_info
+                            filename:
+                              type: string
+                            file_suffix:
+                              type: string
+                            file_updated_time:
+                              type: integer
+                            file_policies:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  file_created_timestamp:
+                                    type: string
+                                  file_updated_timestamp:
+                                    type: string
+                                  file_type_categories:
+                                    type: array
+                                    items:
+                                      type: string
+                                  policy_id:
+                                    type: string
+                                  md5_hash:
+                                    type: string
+                                  is_hidden:
+                                    type: boolean
+                                  policy_name:
+                                    type: string
+                                  filesize:
+                                    type: integer
+                                  policy_group_id:
+                                    type: string
+                                  policy_group_name:
+                                    type: string
+                                  risk_level:
+                                    type: integer
+                                  classifications:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        uid:
+                                          type: string
+                                        name:
+                                          type: string
+                                        data_level_name:
+                                          type: string
+                                        data_level:
+                                          type: integer
+                                      required:
+                                      - uid
+                                      - name
+                                      - data_level_name
+                                      - data_level
+                                  filename:
+                                    type: string
+                                  filepath:
+                                    type: string
+                                  is_compressed:
+                                    type: boolean
+                                  file_suffix:
+                                    type: string
+                                  file_type:
+                                    type: string
+                                  file_updated_time:
+                                    type: integer
+                                  is_password_protected:
+                                    type: boolean
+                                  file_description:
+                                    type: string
+                                  action:
+                                    type: string
+                                  risk_name:
+                                    type: string
+                                  file_created_time:
+                                    type: integer
+                                required:
+                                - file_created_timestamp
+                                - file_updated_timestamp
+                                - file_type_categories
+                                - md5_hash
+                                - policy_id
+                                - is_hidden
+                                - policy_name
+                                - filesize
+                                - policy_group_id
+                                - policy_group_name
+                                - risk_level
+                                - classifications
+                                - filename
+                                - filepath
+                                - is_compressed
+                                - file_suffix
+                                - file_type
+                                - file_updated_time
+                                - is_password_protected
+                                - file_description
+                                - action
+                                - risk_name
+                                - file_created_time
+                            device_code:
+                              type: string
+                            extract_file:
+                              type: boolean
+                            file_description:
+                              type: string
+                            data_level_name:
+                              type: string
+                            risk_name:
+                              type: string
+                            staff_email:
+                              type: string
+                            status:
+                              type: string
+                            file_created_time:
+                              type: integer
+                            file_created_timestamp:
+                              type: string
+                            policy_id:
+                              type: string
+                            dept_ids:
+                              type: array
+                              items:
+                                type: string
+                            data_level_names:
+                              type: array
+                              items:
+                                type: string
+                            is_hidden:
+                              type: boolean
+                            filesize:
+                              type: integer
+                            mac:
+                              type: string
+                            policy_group_id:
+                              type: string
+                              nullable: true
+                            is_compressed:
+                              type: boolean
+                            pre_file_trace_id:
+                              type: string
+                            data_levels:
+                              type: array
+                              items:
+                                type: integer
+                            timestamp:
+                              type: string
+                            channel_name:
+                              type: string
+                            file_trace_flags_hash:
+                              type: string
+                            cl_name:
+                              type: string
+                            company_id:
+                              type: string
+                            policy_name:
+                              type: string
+                            staff_code:
+                              type: string
+                            created_timestamp:
+                              type: string
+                            ip_address:
+                              type: string
+                            cl_ids:
+                              type: array
+                              items:
+                                type: string
+                            policy_group_name:
+                              type: string
+                              nullable: true
+                            agent_version:
+                              type: string
+                            risk_level:
+                              type: integer
+                            is_blocked:
+                              type: boolean
+                            event_id:
+                              type: string
+                            '@timestamp':
+                              type: integer
+                            is_password_protected:
+                              type: boolean
+                            os_name:
+                              type: string
+                            metasource:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  original:
+                                    type: object
+                                    properties:
+                                      process_name:
+                                        type: string
+                                    required:
+                                    - process_name
+                                  source:
+                                    type: array
+                                    items: {}
+                                  category:
+                                    type: string
+                                  version:
+                                    type: integer
+                                required:
+                                - original
+                                - source
+                                - category
+                                - version
+                            time:
+                              type: integer
+                            category:
+                              type: string
+                            operation:
+                              type: string
+                            staff_tag_ids:
+                              type: array
+                              items: {}
+                            cl_names:
+                              type: array
+                              items:
+                                type: string
+                            uid:
+                              type: string
+                            _type:
+                              type: string
+                            _index:
+                              type: string
+                            _score:
+                              type: 'null'
+                            categories:
+                              type: array
+                              items:
+                                type: string
+                            devices:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  device_id:
+                                    type: string
+                                  device_code:
+                                    type: string
+                                  ip_address:
+                                    type: string
+                                  console_user:
+                                    type: string
+                                  os_name:
+                                    type: string
+                                  os_icon:
+                                    type: array
+                                    items:
+                                      type: string
+                                  staff_id:
+                                    type: string
+                                  staff_name:
+                                    type: string
+                                  dept_names:
+                                    type: array
+                                    items:
+                                      type: string
+                                  dept_paths:
+                                    type: array
+                                    items:
+                                      type: string
+                                required:
+                                - device_id
+                                - device_code
+                                - ip_address
+                                - console_user
+                                - os_name
+                                - os_icon
+                                - staff_id
+                                - staff_name
+                                - dept_names
+                                - dept_paths
+                            classifications:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  uid:
+                                    type: string
+                                  name:
+                                    type: string
+                                  data_level:
+                                    type: integer
+                                  data_level_name:
+                                    type: string
+                                required:
+                                - uid
+                                - name
+                                - data_level
+                                - data_level_name
+                            filenames:
+                              type: array
+                              items:
+                                type: string
+                            filepaths:
+                              type: array
+                              items:
+                                type: string
+                            last_seen:
+                              type: string
+                            first_seen:
+                              type: string
+                            channel_account:
+                              type: string
+                            file_trace_operation:
+                              type: string
+                          required:
+                          - staff_name
+                          - console_user
+                          - md5_hash
+                          - channel
+                          - has_cls
+                          - dept_paths
+                          - data_level
+                          - staff_number
+                          - dept_names
+                          - hostname
+                          - filepath
+                          - staff_tags
+                          - cl_id
+                          - file_type
+                          - staff_id
+                          - action
+                          - app_info
+                          - file_trace_id
+                          - os_friendly_name
+                          - file_updated_timestamp
+                          - file_type_categories
+                          - device_id
+                          - meta_original
+                          - file_trace_flags
+                          - simhash
+                          - expand
+                          - filename
+                          - file_suffix
+                          - device_code
+                          - file_policies
+                          - file_updated_time
+                          - extract_file
+                          - file_description
+                          - data_level_name
+                          - risk_name
+                          - staff_email
+                          - file_created_time
+                          - status
+                          - file_created_timestamp
+                          - policy_id
+                          - dept_ids
+                          - data_level_names
+                          - is_hidden
+                          - filesize
+                          - mac
+                          - policy_group_id
+                          - is_compressed
+                          - pre_file_trace_id
+                          - data_levels
+                          - timestamp
+                          - channel_name
+                          - file_trace_flags_hash
+                          - cl_name
+                          - company_id
+                          - policy_name
+                          - staff_code
+                          - created_timestamp
+                          - ip_address
+                          - cl_ids
+                          - policy_group_name
+                          - risk_level
+                          - agent_version
+                          - is_blocked
+                          - event_id
+                          - '@timestamp'
+                          - is_password_protected
+                          - os_name
+                          - metasource
+                          - time
+                          - category
+                          - operation
+                          - staff_tag_ids
+                          - cl_names
+                          - uid
+                          - _type
+                          - _index
+                          - _score
+                          - categories
+                          - devices
+                          - classifications
+                          - filenames
+                          - filepaths
+                          - last_seen
+                          - first_seen
+                    required:
+                    - index
+                    - page
+                    - limit
+                    - search_total
+                    - total
+                    - search_after
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  index:
+                  - qzhddr_data_assets
+                  page: 1
+                  limit: 100
+                  search_total: 3
+                  total: 3
+                  search_after:
+                  - 1736330497000
+                  results:
+                  - staff_name: 周周
+                    console_user: serval-L410\root
+                    md5_hash: ''
+                    channel: feishu
+                    has_cls: true
+                    dept_paths:
+                    - default/testcase
+                    data_level: 3
+                    staff_number: fff449967e237d65
+                    dept_names:
+                    - testcase
+                    hostname: serval-L410
+                    filepath: /home/serval/下载/http.docx
+                    staff_tags: []
+                    cl_id: 959515cc-75bd-491b-aa4d-083d527233a7
+                    file_type: docx
+                    staff_id: ca20ce1f-8b98-4cb8-ace8-0021e764d9ef
+                    action: alert
+                    app_info: {}
+                    file_trace_id: a341dfca-1bfcfcbe-000000000000000f-00000194455ccdad
+                    os_friendly_name: Kylin V10 SP1
+                    file_updated_timestamp: '2025-01-08T18:01:37+08:00'
+                    file_type_categories: []
+                    device_id: 7093837d-3eb9-4d5a-9ddf-44514e62dcd2
+                    meta_original:
+                    - process_name: baidunetdisk
+                    file_trace_flags: CSdGNxmAXOgtas4LIW-oLEnacVg6jIclg@V2_knMRcuPwlf5z9BWQnWsTfeNF9ioQGN9@5@M9MJaLK1ZkV870_yLAJ6jlqsg@3B3GjKbrEE1mrCvJv2-83
+                    simhash: 4660575572712377000
+                    expand:
+                      rule_version:
+                        cond_version: 37
+                        policy_version: 277
+                        filetype_version: 4
+                        dc_version: 140
+                        dc_ticket: ''
+                        cond_ticket: ''
+                        policy_ticket: ''
+                      evidence_info:
+                        file: oss-qzh/f7007ddf-efb3-4f54-94a7-b440639a4de7/riskwarning/extractfile/7bde4c39-a55b-456c-b572-b5b3d4b3fd1c
+                        screen_recording: null
+                        screenshot: null
+                    filename: http.docx
+                    file_suffix: docx
+                    file_updated_time: 1736330497000
+                    file_policies:
+                    - file_created_timestamp: '1970-01-01T08:00:00+08:00'
+                      file_updated_timestamp: '1970-01-01T08:00:00+08:00'
+                      file_type_categories:
+                      - Microsoft OOXML
+                      policy_id: c7316fec-9d42-4b8b-b3c8-10307a1246a4
+                      md5_hash: 81e4a767e0af6b29ebb14e4409d4897d
+                      is_hidden: false
+                      policy_name: 网盘谷歌下载文件
+                      filesize: 13299
+                      policy_group_id: 9e06ca28-face-4af4-b6dc-da6aab6da087
+                      policy_group_name: 默认组
+                      risk_level: 3
+                      classifications:
+                      - uid: 5ae78043-3789-486e-8a2e-7854a9489833
+                        name: 常见格式文件
+                        data_level_name: 内部数据
+                        data_level: 2
+                      - uid: 959515cc-75bd-491b-aa4d-083d527233a7
+                        name: 测试策略
+                        data_level_name: 保密数据
+                        data_level: 3
+                      filename: http.docx
+                      filepath: /home/serval/下载/http.docx
+                      is_compressed: false
+                      file_suffix: docx
+                      file_type: docx
+                      file_updated_time: 0
+                      is_password_protected: false
+                      file_description: Microsoft OOXML
+                      action: alert
+                      risk_name: 低危
+                      file_created_time: 0
+                    device_code: PC-000015
+                    extract_file: true
+                    file_description: Microsoft OOXML
+                    data_level_name: 保密数据
+                    risk_name: 低危
+                    staff_email: ''
+                    status: created
+                    file_created_time: 1736330496990
+                    file_created_timestamp: '2025-01-08T18:01:36+08:00'
+                    policy_id: c7316fec-9d42-4b8b-b3c8-10307a1246a4
+                    dept_ids:
+                    - c5582274-f489-44b0-8d7e-df28ecba6e46
+                    data_level_names:
+                    - 内部数据
+                    - 保密数据
+                    is_hidden: false
+                    filesize: 13299
+                    mac: 9C:56:36:58:7C:B4
+                    policy_group_id: 9e06ca28-face-4af4-b6dc-da6aab6da087
+                    is_compressed: false
+                    pre_file_trace_id: dc4594c4-8eb41d32-000000000000000c-000001944552c675
+                    data_levels:
+                    - 2
+                    - 3
+                    timestamp: '2025-01-09T18:25:47+08:00'
+                    channel_name: 飞书
+                    file_trace_flags_hash: d18471c8c4d50aa4ccac0bd6cf1029a2
+                    cl_name: 测试策略
+                    company_id: f7007ddf-efb3-4f54-94a7-b440639a4de7
+                    policy_name: 网盘谷歌下载文件
+                    staff_code: 19698314a74d9a8f
+                    created_timestamp: '2025-01-09T18:25:48+08:00'
+                    ip_address: 192.168.96.169
+                    cl_ids:
+                    - 5ae78043-3789-486e-8a2e-7854a9489833
+                    - 959515cc-75bd-491b-aa4d-083d527233a7
+                    policy_group_name: 默认组
+                    agent_version: 3.4.515
+                    risk_level: 3
+                    is_blocked: false
+                    event_id: 7bde4c39-a55b-456c-b572-b5b3d4b3fd1c
+                    '@timestamp': 1736418347000
+                    is_password_protected: false
+                    os_name: Kylin
+                    metasource:
+                    - original:
+                        process_name: baidunetdisk
+                      source: []
+                      category: app
+                      version: 24
+                    time: 1736418347000
+                    category: channel
+                    operation: outgoing
+                    staff_tag_ids: []
+                    cl_names:
+                    - 常见格式文件
+                    - 测试策略
+                    uid: 7mOZSpQBbdgERocfaZ44
+                    _type: _doc
+                    _index: .ds-qzhddr_policylog_channel_s-2025.01.06-000010
+                    _score: null
+                    categories:
+                    - 外发管控
+                    devices:
+                    - device_id: 7093837d-3eb9-4d5a-9ddf-44514e62dcd2
+                      device_code: PC-000015
+                      ip_address: 192.168.96.169
+                      console_user: serval-L410\root
+                      os_name: Kylin
+                      os_icon:
+                      - Kylin
+                      staff_id: ca20ce1f-8b98-4cb8-ace8-0021e764d9ef
+                      staff_name: 周周
+                      dept_names:
+                      - testcase
+                      dept_paths:
+                      - default/testcase
+                    classifications:
+                    - uid: 959515cc-75bd-491b-aa4d-083d527233a7
+                      name: 测试策略
+                      data_level: 3
+                      data_level_name: 保密数据
+                    filenames:
+                    - http.docx
+                    filepaths:
+                    - /home/serval/下载/http.docx
+                    last_seen: '2025-01-09T18:25:47+08:00'
+                    first_seen: '2025-01-09T18:25:47+08:00'
+                  - staff_name: 周周
+                    console_user: serval-L410\root
+                    md5_hash: ''
+                    channel: feishu
+                    has_cls: true
+                    dept_paths:
+                    - default/testcase
+                    data_level: 3
+                    staff_number: fff449967e237d65
+                    dept_names:
+                    - testcase
+                    hostname: serval-L410
+                    filepath: /home/serval/下载/http.docx
+                    staff_tags: []
+                    cl_id: 959515cc-75bd-491b-aa4d-083d527233a7
+                    file_type: docx
+                    staff_id: ca20ce1f-8b98-4cb8-ace8-0021e764d9ef
+                    action: alert
+                    app_info: {}
+                    file_trace_id: a341dfca-1bfcfcbe-000000000000000f-00000194455ccdad
+                    os_friendly_name: Kylin V10 SP1
+                    file_updated_timestamp: '2025-01-08T18:01:37+08:00'
+                    file_type_categories: []
+                    device_id: 7093837d-3eb9-4d5a-9ddf-44514e62dcd2
+                    meta_original:
+                    - process_name: baidunetdisk
+                    file_trace_flags: CSdGNxmAXOgtas4LIW-oLEnacVg6jIclg@V2_knMRcuPwlf5z9BWQnWsTfeNF9ioQGN9@5@M9MJaLK1ZkV870_yLAJ6jlqsg@3B3GjKbrEE1mrCvJv2-83
+                    simhash: 4660575572712377000
+                    expand:
+                      rule_version:
+                        cond_version: 37
+                        policy_version: 275
+                        filetype_version: 4
+                        dc_version: 140
+                        dc_ticket: ''
+                        cond_ticket: ''
+                        policy_ticket: ''
+                      evidence_info:
+                        file: oss-qzh/f7007ddf-efb3-4f54-94a7-b440639a4de7/riskwarning/extractfile/4895b7ee-6240-423d-8078-828c9ac63415
+                        screen_recording: null
+                        screenshot: null
+                    filename: http.docx
+                    file_suffix: docx
+                    device_code: PC-000015
+                    file_policies:
+                    - file_created_timestamp: '1970-01-01T08:00:00+08:00'
+                      file_updated_timestamp: '1970-01-01T08:00:00+08:00'
+                      file_type_categories:
+                      - Microsoft OOXML
+                      md5_hash: 81e4a767e0af6b29ebb14e4409d4897d
+                      policy_id: c7316fec-9d42-4b8b-b3c8-10307a1246a4
+                      is_hidden: false
+                      policy_name: 网盘谷歌下载文件
+                      filesize: 13299
+                      policy_group_id: 9e06ca28-face-4af4-b6dc-da6aab6da087
+                      policy_group_name: 默认组
+                      risk_level: 3
+                      classifications:
+                      - uid: 5ae78043-3789-486e-8a2e-7854a9489833
+                        name: 常见格式文件
+                        data_level_name: 内部数据
+                        data_level: 2
+                      - uid: 959515cc-75bd-491b-aa4d-083d527233a7
+                        name: 测试策略
+                        data_level_name: 保密数据
+                        data_level: 3
+                      filename: http.docx
+                      filepath: /home/serval/下载/http.docx
+                      is_compressed: false
+                      file_suffix: docx
+                      file_type: docx
+                      file_updated_time: 0
+                      is_password_protected: false
+                      file_description: Microsoft OOXML
+                      action: alert
+                      risk_name: 低危
+                      file_created_time: 0
+                    file_updated_time: 1736330497000
+                    extract_file: true
+                    file_description: Microsoft OOXML
+                    data_level_name: 保密数据
+                    risk_name: 低危
+                    staff_email: ''
+                    file_created_time: 1736330496990
+                    status: created
+                    file_created_timestamp: '2025-01-08T18:01:36+08:00'
+                    policy_id: c7316fec-9d42-4b8b-b3c8-10307a1246a4
+                    dept_ids:
+                    - c5582274-f489-44b0-8d7e-df28ecba6e46
+                    data_level_names:
+                    - 内部数据
+                    - 保密数据
+                    is_hidden: false
+                    filesize: 13299
+                    mac: 9C:56:36:58:7C:B4
+                    policy_group_id: 9e06ca28-face-4af4-b6dc-da6aab6da087
+                    is_compressed: false
+                    pre_file_trace_id: dc4594c4-8eb41d32-000000000000000c-000001944552c675
+                    data_levels:
+                    - 2
+                    - 3
+                    timestamp: '2025-01-09T16:33:37+08:00'
+                    channel_name: 飞书
+                    file_trace_flags_hash: d18471c8c4d50aa4ccac0bd6cf1029a2
+                    cl_name: 测试策略
+                    company_id: f7007ddf-efb3-4f54-94a7-b440639a4de7
+                    policy_name: 网盘谷歌下载文件
+                    staff_code: 19698314a74d9a8f
+                    created_timestamp: '2025-01-09T16:33:37+08:00'
+                    ip_address: 192.168.96.169
+                    cl_ids:
+                    - 5ae78043-3789-486e-8a2e-7854a9489833
+                    - 959515cc-75bd-491b-aa4d-083d527233a7
+                    policy_group_name: 默认组
+                    risk_level: 3
+                    agent_version: 3.4.515
+                    is_blocked: true
+                    event_id: 4895b7ee-6240-423d-8078-828c9ac63415
+                    '@timestamp': 1736411617000
+                    is_password_protected: false
+                    os_name: Kylin
+                    metasource:
+                    - original:
+                        process_name: baidunetdisk
+                      source: []
+                      category: app
+                      version: 24
+                    time: 1736411617000
+                    category: channel
+                    operation: outgoing
+                    staff_tag_ids: []
+                    cl_names:
+                    - 常见格式文件
+                    - 测试策略
+                    uid: s2MySpQBbdgERocfo5zx
+                    _type: _doc
+                    _index: .ds-qzhddr_policylog_channel_s-2025.01.06-000010
+                    _score: null
+                    categories:
+                    - 外发管控
+                    devices:
+                    - device_id: 7093837d-3eb9-4d5a-9ddf-44514e62dcd2
+                      device_code: PC-000015
+                      ip_address: 192.168.96.169
+                      console_user: serval-L410\root
+                      os_name: Kylin
+                      os_icon:
+                      - Kylin
+                      staff_id: ca20ce1f-8b98-4cb8-ace8-0021e764d9ef
+                      staff_name: 周周
+                      dept_names:
+                      - testcase
+                      dept_paths:
+                      - default/testcase
+                    classifications:
+                    - uid: 959515cc-75bd-491b-aa4d-083d527233a7
+                      name: 测试策略
+                      data_level: 3
+                      data_level_name: 保密数据
+                    filenames:
+                    - http.docx
+                    filepaths:
+                    - /home/serval/下载/http.docx
+                    last_seen: '2025-01-09T16:33:37+08:00'
+                    first_seen: '2025-01-09T16:33:37+08:00'
+                  - policy_id: 5a87254a-d0ce-4fc7-b7f6-9843894ae9f0
+                    is_password_protected: false
+                    console_user: serval-L410\root
+                    time: 1736330497000
+                    mac: 9C:56:36:58:7C:B4
+                    channel_name: ''
+                    policy_group_name: null
+                    hostname: serval-L410
+                    file_suffix: docx
+                    filesize: 13299
+                    operation: download
+                    file_type: docx
+                    company_id: f7007ddf-efb3-4f54-94a7-b440639a4de7
+                    policy_name: 落盘加水印分类
+                    device_id: 7093837d-3eb9-4d5a-9ddf-44514e62dcd2
+                    filepath: /home/serval/下载/http.docx
+                    agent_version: 3.4.515
+                    is_hidden: false
+                    channel_account: '-'
+                    status: created
+                    os_name: Kylin
+                    file_created_time: 1736330496990
+                    policy_group_id: null
+                    channel: baidunetdisk
+                    is_compressed: false
+                    action: file_trace
+                    md5_hash: ''
+                    file_type_categories: []
+                    file_description: Microsoft OOXML
+                    file_updated_time: 1736330497000
+                    device_code: PC-000015
+                    os_friendly_name: Kylin V10 SP1
+                    filename: http.docx
+                    meta_original:
+                    - process_name: baidunetdisk
+                    file_policies:
+                    - policy_id: 5a87254a-d0ce-4fc7-b7f6-9843894ae9f0
+                      is_password_protected: false
+                      file_suffix: docx
+                      filesize: 13278
+                      file_type: docx
+                      policy_name: 落盘加水印分类
+                      filepath: /home/serval/下载/http.docx
+                      is_hidden: false
+                      file_created_time: 0
+                      is_compressed: false
+                      md5_hash: 81e4a767e0af6b29ebb14e4409d4897d
+                      action: file_trace
+                      file_type_categories:
+                      - Microsoft OOXML
+                      file_description: Microsoft OOXML
+                      file_updated_time: 0
+                      filename: http.docx
+                      classifications:
+                      - data_level_name: 保密数据
+                        name: 测试策略
+                        data_level: 3
+                        uid: 959515cc-75bd-491b-aa4d-083d527233a7
+                      file_created_timestamp: '1970-01-01T08:00:00+08:00'
+                      file_updated_timestamp: '1970-01-01T08:00:00+08:00'
+                    - policy_id: 8dd13b3b-c240-4467-aaef-652a39e23374
+                      is_password_protected: false
+                      file_suffix: docx
+                      filesize: 13278
+                      file_type: docx
+                      policy_name: 审计
+                      filepath: /home/serval/下载/http.docx
+                      is_hidden: false
+                      file_created_time: 0
+                      is_compressed: false
+                      md5_hash: 81e4a767e0af6b29ebb14e4409d4897d
+                      action: notify
+                      file_type_categories:
+                      - Microsoft OOXML
+                      file_description: Microsoft OOXML
+                      file_updated_time: 0
+                      filename: http.docx
+                      classifications: []
+                      file_created_timestamp: '1970-01-01T08:00:00+08:00'
+                      file_updated_timestamp: '1970-01-01T08:00:00+08:00'
+                    ip_address: 192.168.96.169
+                    expand:
+                      rule_version:
+                        cond_ticket: ''
+                        cond_version: 37
+                        dc_ticket: ''
+                        dc_version: 140
+                        filetype_version: 4
+                        ms_version: 24
+                        policy_ticket: ''
+                        policy_version: 165
+                        version: 165
+                      screen_recording: false
+                      screenshot: true
+                      evidence_info:
+                        file: null
+                        screenshot: oss-qzh/f7007ddf-efb3-4f54-94a7-b440639a4de7/riskwarning/screenshot/ed4b8cec-44b9-41e2-8e1a-529f29165c51
+                        screen_recording: null
+                    file_trace_operation: success
+                    metasource:
+                    - category: app
+                      source: []
+                      original:
+                        process_name: baidunetdisk
+                      version: 24
+                    event_id: ed4b8cec-44b9-41e2-8e1a-529f29165c51
+                    '@timestamp': 1736330497000
+                    timestamp: '2025-01-08T18:01:37+08:00'
+                    created_timestamp: '2025-01-08T18:01:37+08:00'
+                    file_created_timestamp: '2025-01-08T18:01:36+08:00'
+                    file_updated_timestamp: '2025-01-08T18:01:37+08:00'
+                    file_trace_flags: CSdGNxmAXOgtas4LIW-oLEnacVg6jIclg@V2_knMRcuPwlf5z9BWQnWsTfeNF9ioQGN9@5@M9MJaLK1ZkV870_yLAJ6jlqsg@3B3GjKbrEE1mrCvJv2-83
+                    file_trace_id: a341dfca-1bfcfcbe-000000000000000f-00000194455ccdad
+                    pre_file_trace_id: dc4594c4-8eb41d32-000000000000000c-000001944552c675
+                    file_trace_flags_hash: d18471c8c4d50aa4ccac0bd6cf1029a2
+                    category: landing
+                    staff_id: ca20ce1f-8b98-4cb8-ace8-0021e764d9ef
+                    staff_name: 周周
+                    staff_email: ''
+                    staff_code: 19698314a74d9a8f
+                    staff_number: fff449967e237d65
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids:
+                    - c5582274-f489-44b0-8d7e-df28ecba6e46
+                    dept_names:
+                    - testcase
+                    dept_paths:
+                    - default/testcase
+                    has_cls: true
+                    cl_ids:
+                    - 959515cc-75bd-491b-aa4d-083d527233a7
+                    cl_names:
+                    - 测试策略
+                    data_levels:
+                    - 3
+                    data_level_names:
+                    - 保密数据
+                    cl_id: 959515cc-75bd-491b-aa4d-083d527233a7
+                    cl_name: 测试策略
+                    data_level: 3
+                    data_level_name: 保密数据
+                    uid: VmNcRZQBbdgERocf_TEW
+                    _type: _doc
+                    _index: .ds-qzhddr_policy_landing_logs_s-2025.01.06-000007
+                    _score: null
+                    categories:
+                    - 落盘管控
+                    devices:
+                    - device_id: 7093837d-3eb9-4d5a-9ddf-44514e62dcd2
+                      device_code: PC-000015
+                      ip_address: 192.168.96.169
+                      console_user: serval-L410\root
+                      os_name: Kylin
+                      os_icon:
+                      - Kylin
+                      staff_id: ca20ce1f-8b98-4cb8-ace8-0021e764d9ef
+                      staff_name: 周周
+                      dept_names:
+                      - testcase
+                      dept_paths:
+                      - default/testcase
+                    classifications:
+                    - uid: 959515cc-75bd-491b-aa4d-083d527233a7
+                      name: 测试策略
+                      data_level: 3
+                      data_level_name: 保密数据
+                    filenames:
+                    - http.docx
+                    filepaths:
+                    - /home/serval/下载/http.docx
+                    last_seen: '2025-01-08T18:01:37+08:00'
+                    first_seen: '2025-01-08T18:01:37+08:00'
+      security: []

@@ -1,0 +1,193 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policy/privacy_protection/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policy/privacy_protection/list
+  description: 策略管理/隐私保护/列表
+paths:
+  /policy/privacy_protection/list:
+    post:
+      summary: 隐私保护策略列表
+      deprecated: false
+      description: ''
+      tags:
+      - policy/privacy_protection/list
+      parameters:
+      - name: page
+        in: query
+        description: ''
+        required: true
+        example: '1'
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: ''
+        required: true
+        example: '20'
+        schema:
+          type: string
+      - name: search
+        in: query
+        description: ''
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                source:
+                  type: array
+                  items:
+                    type: string
+              required:
+              - source
+            example:
+              source:
+              - added
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      total:
+                        type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            disposal_action:
+                              type: string
+                            display_content:
+                              type: string
+                            name:
+                              type: string
+                            update_time:
+                              type: string
+                            company_id:
+                              type: string
+                            uid:
+                              type: string
+                            id:
+                              type: integer
+                            create_time:
+                              type: string
+                            update_by_id:
+                              type: 'null'
+                            create_by_id:
+                              type: 'null'
+                            expand:
+                              type: object
+                              properties: {}
+                            description:
+                              type: string
+                      page:
+                        type: integer
+                    required:
+                    - total
+                    - results
+                    - page
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  total: 1
+                  results:
+                  - disposal_action: block
+                    display_content: 这是一条处置模板内容{{test}}
+                    name: 处置模板测试
+                    update_time: '2024-03-11T09:22:33.363906Z'
+                    company_id: 335dc09b-09d1-441b-83a2-d27ddd414a15
+                    uid: 782d5516-b0e0-4e2c-9154-eacba5fd7d7b
+                    id: 1
+                    create_time: '2024-03-11T09:22:33.363824Z'
+                    update_by_id: null
+                    create_by_id: null
+                    expand: {}
+                    description: 这是一条处置模板描述
+                  page: 1
+      security: []

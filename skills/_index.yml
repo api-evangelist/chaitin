@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/chaitin/chaitin-cli
+notes: >-
+  Provider-published Agent Skills captured verbatim from the chaitin-cli
+  repository. These are first-party skills Chaitin ships for agent use
+  (installable via `npx bzskills add chaitin/chaitin-cli`).
+skills:
+- file: chaitin-cli-SKILL.md
+  name: chaitin-cli
+  description: Run chaitin-cli commands to manage SafeLine WAF, X-Ray, Cloud Atlas, CloudWalker CWPP, VeinMind, DDR, CodeInsight, CodeForce, and T-Answer.
+  source: https://github.com/chaitin/chaitin-cli/blob/main/skills/chaitin-cli/SKILL.md
+  official: true
+- file: chaitin-safeline-agent-skill.md
+  name: safeline
+  description: Provider-published SafeLine agent skill.
+  source: https://github.com/chaitin/chaitin-cli/blob/main/products/safeline3/agent-skill.md
+  official: true
+- file: chaitin-AGENTS.md
+  name: chaitin-cli AGENTS.md
+  description: Repository agent guidelines for the chaitin-cli project.
+  source: https://github.com/chaitin/chaitin-cli/blob/main/AGENTS.md
+  official: true

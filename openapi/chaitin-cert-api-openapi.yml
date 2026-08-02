@@ -1,0 +1,185 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account cert API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: cert
+paths:
+  /open/system:
+    get:
+      produces:
+      - application/json
+      tags:
+      - cert
+      summary: get system info
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/system.AboutRes'
+      x-cli-summary: 获取系统信息
+    put:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - cert
+      summary: update management cert
+      parameters:
+      - description: request params
+        name: requests
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/system.UpdateReq'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/response.JSONBody'
+      x-cli-summary: 更新管理证书
+  /open/system/authorize:
+    get:
+      produces:
+      - application/json
+      tags:
+      - cert
+      summary: get license
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/system.CodeApplyInfoRes'
+      x-cli-summary: 获取授权详情
+    delete:
+      produces:
+      - application/json
+      tags:
+      - cert
+      summary: delete license
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/response.JSONBody'
+      x-cli-summary: 删除授权
+definitions:
+  response.JSONBody:
+    type: object
+    properties:
+      data: {}
+      err:
+        type: string
+      msg:
+        type: string
+  system.CodeApplyInfoRes:
+    type: object
+    properties:
+      expired_at:
+        type: integer
+      org_id:
+        type: string
+      org_name:
+        type: string
+      pwd_updated_at:
+        type: integer
+      river_url:
+        type: string
+      role:
+        $ref: '#/definitions/consts.UserRole'
+      state:
+        type: string
+      timeout:
+        type: boolean
+      user_id:
+        type: integer
+      version:
+        $ref: '#/definitions/river.Edition'
+  system.UpdateReq:
+    type: object
+    properties:
+      cert_id:
+        type: integer
+  system.AboutLicense:
+    type: object
+    properties:
+      valid:
+        type: boolean
+  river.Edition:
+    type: integer
+    format: int32
+    enum:
+    - 0
+    - 1
+    - 2
+    - 3
+    x-enum-comments:
+      Edition_EDITION_ENTERPRISE: 企业版
+      Edition_EDITION_LITE: Lite 版
+      Edition_EDITION_PROFESSIONAL: 专业版
+      Edition_EDITION_UNKOWN: 未知
+    x-enum-descriptions:
+    - 未知
+    - 专业版
+    - 企业版
+    - Lite 版
+    x-enum-varnames:
+    - Edition_EDITION_UNKOWN
+    - Edition_EDITION_PROFESSIONAL
+    - Edition_EDITION_ENTERPRISE
+    - Edition_EDITION_LITE
+  system.AboutRes:
+    type: object
+    properties:
+      cert_id:
+        type: integer
+      created_at:
+        type: integer
+      deprecated:
+        type: boolean
+      license:
+        $ref: '#/definitions/system.AboutLicense'
+      machine_id:
+        type: string
+      outdated:
+        type: boolean
+      oversea:
+        type: boolean
+      password_expire_day:
+        type: integer
+      slave:
+        type: boolean
+      staging:
+        type: boolean
+      time:
+        type: string
+      version:
+        type: string
+  consts.UserRole:
+    type: integer
+    enum:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    x-enum-varnames:
+    - UserRoleUnknown
+    - UserRoleAdmin
+    - UserRoleManager
+    - UserRoleConfig
+    - UserRoleAudit
+    - UserRoleMax

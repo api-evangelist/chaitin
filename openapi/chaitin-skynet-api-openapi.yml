@@ -1,0 +1,103 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account skynet API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: skynet
+paths:
+  /open/skynet/rule:
+    get:
+      produces:
+      - application/json
+      tags:
+      - skynet
+      summary: get enhance rule
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/api.GetSkynetRuleRes'
+      x-cli-summary: 获取加强规则列表
+    put:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - skynet
+      summary: update enhance rule
+      parameters:
+      - description: request params
+        name: request
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/api.PutSkynetRuleReq'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/response.JSONBody'
+      x-cli-summary: 更新加强规则
+definitions:
+  response.JSONBody:
+    type: object
+    properties:
+      data: {}
+      err:
+        type: string
+      msg:
+        type: string
+  detect.Mode:
+    type: string
+    enum:
+    - strict
+    - default
+    - dry_run
+    - disable
+    - deny
+    x-enum-varnames:
+    - StrictMode
+    - DefaultMode
+    - DryRunMode
+    - DisableMode
+    - DenyMode
+  api.PutSkynetRuleReq:
+    type: object
+    properties:
+      global:
+        type: boolean
+      id:
+        type: array
+        items:
+          type: string
+      mode:
+        $ref: '#/definitions/detect.Mode'
+  api.GetSkynetRuleRes:
+    type: object
+    properties:
+      rules:
+        type: object
+        additionalProperties:
+          $ref: '#/definitions/detect.SkynetInfo'
+  detect.SkynetInfo:
+    type: object
+    properties:
+      attack_type:
+        type: integer
+      attack_type_name:
+        type: string
+      id:
+        type: string
+      mode:
+        $ref: '#/definitions/detect.Mode'
+      name:
+        type: string
+      risk_level:
+        type: integer

@@ -1,0 +1,531 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account analyse/expression/classification/batch API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: analyse/expression/classification/batch
+  description: 文件分析/表达式/数据分类分级/批量
+paths:
+  /analyse/expression/classification/batch:
+    post:
+      summary: 文件分类分级表达式批量展示
+      deprecated: false
+      description: ''
+      tags:
+      - analyse/expression/classification/batch
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rule_version:
+                  type: object
+                  properties:
+                    cond_ticket:
+                      type: string
+                    cond_version:
+                      type: integer
+                    dc_ticket:
+                      type: string
+                    dc_version:
+                      type: integer
+                    filetype_version:
+                      type: integer
+                    im_version:
+                      type: integer
+                    policy_ticket:
+                      type: string
+                    policy_version:
+                      type: integer
+                  required:
+                  - cond_ticket
+                  - cond_version
+                  - dc_ticket
+                  - dc_version
+                  - filetype_version
+                  - im_version
+                  - policy_ticket
+                  - policy_version
+                event_id:
+                  type: string
+                dc_ids:
+                  type: array
+                  items:
+                    type: string
+                field:
+                  type: object
+                  properties:
+                    filename:
+                      type: string
+                    filepath:
+                      type: string
+                    md5_hash:
+                      type: string
+                    is_password_protected:
+                      type: boolean
+                    is_hidden:
+                      type: boolean
+                    is_compressed:
+                      type: boolean
+                  required:
+                  - filename
+                  - filepath
+                  - md5_hash
+                  - is_password_protected
+                  - is_hidden
+                  - is_compressed
+              required:
+              - rule_version
+              - event_id
+              - dc_ids
+              - field
+            example:
+              rule_version:
+                cond_ticket: 2a563efd44b89f56d69e615c8eda4363
+                cond_version: 15
+                dc_ticket: 2a563efd44b89f56d69e615c8eda4363
+                dc_version: 174
+                filetype_version: 34
+                im_version: 63
+                policy_ticket: 027af9e67223aeb02434251c1dc8bc4b
+                policy_version: 283
+              event_id: 7c708b6c-8e94-4fa3-b71a-9025c26e2a20
+              dc_ids:
+              - f42cba49-cd9a-485f-897a-d118c4b24765
+              field:
+                filename: file_flow_05.docx
+                filepath: /Users/wenghuangge/Desktop/文件加解密/file_flow_05.docx
+                md5_hash: a7b0a40dc540c02eb4142e159e7ba39f
+                is_password_protected: false
+                is_hidden: false
+                is_compressed: false
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        expression_fields:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              field:
+                                type: string
+                              value:
+                                type: array
+                                items:
+                                  type: string
+                              choice:
+                                type: integer
+                              category:
+                                type: string
+                              operator:
+                                type: string
+                              frequency:
+                                type: integer
+                              operator_display:
+                                type: string
+                              field_display:
+                                type: string
+                              value_display:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    id:
+                                      type: integer
+                                    uid:
+                                      type: string
+                                    name:
+                                      type: string
+                                    category:
+                                      type: string
+                                    ticket:
+                                      type: string
+                                    value:
+                                      type: array
+                                      items:
+                                        type: string
+                                    hit_count:
+                                      type: integer
+                                    left_value:
+                                      type: array
+                                      items:
+                                        type: integer
+                                  required:
+                                  - id
+                                  - uid
+                                  - name
+                                  - category
+                                  - ticket
+                                  - value
+                              is_green:
+                                type: boolean
+                              hit_objects:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    uid:
+                                      type: string
+                                    id:
+                                      type: integer
+                                    name:
+                                      type: string
+                                    category:
+                                      type: string
+                                    ticket:
+                                      type: string
+                                    value:
+                                      type: array
+                                      items:
+                                        type: string
+                              left_value:
+                                type: array
+                                items:
+                                  type: integer
+                              _index:
+                                type: string
+                              content_hits:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    position:
+                                      type: array
+                                      items:
+                                        type: integer
+                                    content:
+                                      type: string
+                                    inner_hits:
+                                      type: array
+                                      items:
+                                        type: object
+                                        properties:
+                                          position:
+                                            type: array
+                                            items:
+                                              type: integer
+                                          context_positions:
+                                            type: array
+                                            items:
+                                              type: integer
+                                          key:
+                                            type: string
+                                          uid:
+                                            type: string
+                                          name:
+                                            type: string
+                                          category:
+                                            type: string
+                                          start:
+                                            type: integer
+                                          end:
+                                            type: integer
+                            required:
+                            - field
+                            - value
+                            - choice
+                            - category
+                            - operator
+                            - frequency
+                            - operator_display
+                            - field_display
+                            - value_display
+                            - is_green
+                            - hit_objects
+                            - left_value
+                            - _index
+                        data_level_name:
+                          type: string
+                        expression_relation:
+                          type: string
+                        expression:
+                          type: string
+                        uid:
+                          type: string
+                        rule_code:
+                          type: string
+                        data_level:
+                          type: integer
+                        inner_hits:
+                          type: array
+                          items:
+                            type: string
+                      required:
+                      - name
+                      - expression_fields
+                      - data_level_name
+                      - expression_relation
+                      - expression
+                      - uid
+                      - rule_code
+                      - data_level
+                      - inner_hits
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                - name: hu格式word/Excel/ppt
+                  expression_fields:
+                  - field: file_type
+                    value:
+                    - ppt
+                    - pot
+                    - pps
+                    - pptm
+                    - potm
+                    - ppsm
+                    - pptx
+                    - potx
+                    - ppsx
+                    - docm
+                    - dotm
+                    - doc
+                    - docx
+                    - dotx
+                    - dot
+                    - xls
+                    - xla
+                    - xlam
+                    - xlt
+                    - xlsm
+                    - xlsb
+                    - xltm
+                    - xlsx
+                    - xltx
+                    choice: 1
+                    category: filetypes
+                    operator: contains
+                    frequency: 1
+                    operator_display: 属于
+                    field_display: 文件格式
+                    value_display:
+                    - id: 32
+                      uid: 78377224-27c6-4578-9ad0-abf155c484f3
+                      name: PPT
+                      category: office
+                      ticket: 1a9a2391ede35860862e8682babbb8b5
+                      value:
+                      - ppt
+                      - pot
+                      - pps
+                    - id: 26
+                      uid: ad69c8af-7b04-4347-821b-fa716cde2c36
+                      name: MS_PPT_Macro
+                      category: office
+                      ticket: af0a4ad08633dc77c1de55a5b969ce7d
+                      value:
+                      - pptm
+                      - potm
+                      - ppsm
+                    - id: 25
+                      uid: 6c5a650c-f95e-4805-88c4-3d620ac62c59
+                      name: MS_PPT
+                      category: office
+                      ticket: e7d184f808a46ddd5b337b7266442b62
+                      value:
+                      - pptx
+                      - potx
+                      - ppsx
+                    - id: 24
+                      uid: 9018f986-b9df-4812-b928-0c1aac261003
+                      name: MS_Word_Macro
+                      category: office
+                      ticket: e434a766d1b4c5480ccfe61162f6fc69
+                      value:
+                      - docm
+                      - dotm
+                    - id: 23
+                      uid: cb2632a9-465b-4561-a89c-9276f969c23f
+                      name: MS_Word
+                      category: office
+                      ticket: 51c5f065a5ffc0c33a59ffcb2dc9d64b
+                      value:
+                      - doc
+                      - docx
+                      - dotx
+                      - dot
+                    - id: 31
+                      uid: 2d6ee258-fa49-46d6-bd40-cdd7da680b6b
+                      name: Excel
+                      category: office
+                      ticket: b0f36449cd4c53140ecafc994979e9a8
+                      value:
+                      - xls
+                      - xla
+                      - xlam
+                      - xlt
+                    - id: 30
+                      uid: f9360cec-c7c0-4b3c-a36b-475470acee46
+                      name: MS_Excel_Macro
+                      category: office
+                      ticket: cc3f8e3cb4dd55fbcbca943e6ca8a393
+                      value:
+                      - xlsm
+                      - xlsb
+                      - xltm
+                    - id: 29
+                      uid: 5beb8ddc-8a3c-45d8-a144-30a903e95276
+                      name: MS_Excel
+                      category: office
+                      ticket: d69de10edd8488460ea128d607ced148
+                      value:
+                      - xlsx
+                      - xltx
+                    is_green: true
+                    hit_objects: []
+                    left_value: docx
+                    _index: A
+                  data_level_name: 内部数据
+                  expression_relation: logic
+                  expression: A
+                  uid: dd94d664-41f8-4207-a6ef-bb356e3a8597
+                  rule_code: rdc_137614
+                  data_level: 2
+                  inner_hits: []
+                - name: hu关键词
+                  expression_fields:
+                  - field: file_content
+                    value:
+                    - 薮猫科技
+                    choice: 1
+                    category: condition
+                    operator: one_cardinality_atleast
+                    frequency: 1
+                    operator_display: 命中至少1项
+                    field_display: 文件内容
+                    value_display:
+                    - id: 1862
+                      uid: 7b990f6e-1475-417e-adb1-2163f5afd653
+                      name: hu关键词
+                      category: keywords
+                      ticket: f436477933f2c884e6a77c0e0b9cbea8
+                      value:
+                      - 薮猫科技
+                      hit_count: 1
+                      left_value:
+                      - 1
+                    is_green: true
+                    hit_objects:
+                    - uid: 7b990f6e-1475-417e-adb1-2163f5afd653
+                      id: 1862
+                      name: hu关键词
+                      category: keywords
+                      ticket: f436477933f2c884e6a77c0e0b9cbea8
+                      value:
+                      - 薮猫科技
+                    left_value:
+                    - 1
+                    content_hits:
+                    - position:
+                      - 0
+                      - 51
+                      content: 这是一个薮猫科技的测试文件关键词334
+                      inner_hits:
+                      - position:
+                        - 12
+                        - 24
+                        context_positions:
+                        - 0
+                        - 51
+                        key: 薮猫科技
+                        uid: 7b990f6e-1475-417e-adb1-2163f5afd653
+                        name: hu关键词
+                        category: keywords
+                        start: 4
+                        end: 8
+                    _index: A
+                  data_level_name: 内部数据
+                  expression_relation: logic
+                  expression: A
+                  uid: 65e774fe-468a-4346-88d9-414f3ee4c49b
+                  rule_code: rdc_138925
+                  data_level: 2
+                  inner_hits:
+                  - 薮猫科技
+      security: []

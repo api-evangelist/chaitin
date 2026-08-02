@@ -1,0 +1,287 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account system/macosauthconfig/modify API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: system/macosauthconfig/modify
+  description: 系统配置/macOS 认证配置/修改
+paths:
+  /system/macosauthconfig/modify:
+    post:
+      summary: 终端配置 - macOS授权
+      deprecated: false
+      description: ''
+      tags:
+      - system/macosauthconfig/modify
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                network_extension_check:
+                  type: boolean
+                screenshot_noauth_check:
+                  type: boolean
+                freq_noauth_alert_measure:
+                  type: string
+                full_disk_access:
+                  type: boolean
+                freq_noauth_alert:
+                  type: integer
+                guide_info:
+                  type: object
+                  properties:
+                    auth_guide:
+                      type: object
+                      properties:
+                        zh-cn:
+                          type: string
+                        en:
+                          type: string
+                        zh-hant:
+                          type: string
+                      required:
+                      - zh-cn
+                      - en
+                      - zh-hant
+                    uninstall_guide:
+                      type: object
+                      properties:
+                        zh-cn:
+                          type: string
+                        en:
+                          type: string
+                        zh-hant:
+                          type: string
+                      required:
+                      - zh-cn
+                      - en
+                      - zh-hant
+                  required:
+                  - auth_guide
+                  - uninstall_guide
+                auth_check_options:
+                  type: object
+                  properties:
+                    network_extension_mode__scope:
+                      type: object
+                      properties:
+                        scope:
+                          type: string
+                        binding_config:
+                          type: object
+                          properties:
+                            source:
+                              type: string
+                            include:
+                              type: object
+                              properties: {}
+                            exclude:
+                              type: object
+                              properties: {}
+                          required:
+                          - source
+                          - include
+                          - exclude
+                      required:
+                      - scope
+                      - binding_config
+                    screenshot_noauth_mode__scope:
+                      type: object
+                      properties:
+                        scope:
+                          type: string
+                        binding_config:
+                          type: object
+                          properties:
+                            source:
+                              type: string
+                            include:
+                              type: object
+                              properties:
+                                device_ids:
+                                  type: array
+                                  items:
+                                    type: string
+                              required:
+                              - device_ids
+                            exclude:
+                              type: object
+                              properties:
+                                device_ids:
+                                  type: array
+                                  items:
+                                    type: string
+                              required:
+                              - device_ids
+                          required:
+                          - source
+                          - include
+                          - exclude
+                      required:
+                      - scope
+                      - binding_config
+                    screenshot_noauth_mode:
+                      type: string
+                    network_extension_mode:
+                      type: string
+                    network_extension_stay:
+                      type: string
+                    full_disk_access_mode:
+                      type: string
+                  required:
+                  - network_extension_mode__scope
+                  - screenshot_noauth_mode__scope
+                  - screenshot_noauth_mode
+                  - network_extension_mode
+                  - network_extension_stay
+                  - full_disk_access_mode
+                noauth_alert_max_count:
+                  type: integer
+                notification_config:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      is_remind:
+                        type: boolean
+                      notification_bot_id:
+                        type: string
+                      notification_content_template_id:
+                        type: string
+                      notification_bot_template_id:
+                        type: string
+                      email_to_list:
+                        type: array
+                        items: {}
+              required:
+              - network_extension_check
+              - screenshot_noauth_check
+              - freq_noauth_alert_measure
+              - full_disk_access
+              - freq_noauth_alert
+              - guide_info
+              - auth_check_options
+              - noauth_alert_max_count
+              - notification_config
+            example:
+              network_extension_check: true
+              screenshot_noauth_check: true
+              freq_noauth_alert_measure: sec
+              full_disk_access: false
+              freq_noauth_alert: 30
+              guide_info:
+                auth_guide:
+                  zh-cn: 遇到问题，请联系IT人员。
+                  en: For any issues, please contact the IT.
+                  zh-hant: 遇到問題，請聯繫IT人員。
+                uninstall_guide:
+                  zh-cn: 卸载前需输入系统登录账户的密码，保证完整卸载。
+                  en: Before uninstalling, you must enter the login password to ensure complete uninstallation.
+                  zh-hant: 卸載前需輸入係統登録賬戶的密碼，保証完整卸載。
+              auth_check_options:
+                network_extension_mode__scope:
+                  scope: global
+                  binding_config:
+                    source: general_config
+                    include: {}
+                    exclude: {}
+                screenshot_noauth_mode__scope:
+                  scope: common
+                  binding_config:
+                    source: general_config
+                    include:
+                      device_ids:
+                      - 1c16c892-242c-467c-add4-8ab0f00f26e9
+                      - d1247921-d4fd-4f6c-9f62-504684f8f288
+                    exclude:
+                      device_ids:
+                      - 7b45e606-c7b4-40a2-a08e-4aa9fb0ddcf1
+                      - 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                screenshot_noauth_mode: partial
+                network_extension_mode: 'on'
+                network_extension_stay: 'off'
+                full_disk_access_mode: 'on'
+              noauth_alert_max_count: 1
+              notification_config:
+              - is_remind: false
+                notification_bot_id: 11171f87-0140-446d-88b1-6918726f91c8
+                notification_content_template_id: 66a67031-d872-48e5-8ee1-9e9e6669fe18
+                notification_bot_template_id: 388f8188-2002-4b3e-b42a-36a2dcbe9705
+                email_to_list: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              example: {}
+      security: []

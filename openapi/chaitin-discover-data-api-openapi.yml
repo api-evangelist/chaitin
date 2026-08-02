@@ -1,0 +1,128 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account discover_data API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: discover_data
+paths:
+  /api/BuildInDiscoverDataTaskAPI:
+    put:
+      operationId: BuildInDiscoverDataTaskAPI_put
+      summary: PUT /api/BuildInDiscoverDataTaskAPI
+      tags:
+      - discover_data
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                apps:
+                  type: string
+                desensitize_view:
+                  type: boolean
+              required:
+              - desensitize_view
+  /api/DiscoverDataTaskAPI:
+    post:
+      operationId: DiscoverDataTaskAPI_post
+      summary: POST /api/DiscoverDataTaskAPI
+      tags:
+      - discover_data
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_enabled:
+                  type: boolean
+                name:
+                  type: string
+                comment:
+                  type: string
+                apps:
+                  type: string
+                tags:
+                  type: string
+                key_list:
+                  type: string
+                value_list:
+                  type: string
+                verify_code:
+                  type: string
+                origin_scope:
+                  type: string
+                desensitize_view:
+                  type: boolean
+              required:
+              - is_enabled
+              - name
+              - tags
+              - key_list
+              - value_list
+              - origin_scope
+              - desensitize_view
+    put:
+      operationId: DiscoverDataTaskAPI_put
+      summary: PUT /api/DiscoverDataTaskAPI
+      tags:
+      - discover_data
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_enabled:
+                  type: boolean
+                name:
+                  type: string
+                comment:
+                  type: string
+                apps:
+                  type: string
+                tags:
+                  type: string
+                key_list:
+                  type: string
+                value_list:
+                  type: string
+                verify_code:
+                  type: string
+                origin_scope:
+                  type: string
+                desensitize_view:
+                  type: boolean
+              required:
+              - desensitize_view
+              - is_enabled
+              - key_list
+              - name
+              - origin_scope
+              - tags
+              - value_list
+  /api/RefreshDesensitizeCacheAPI:
+    post:
+      operationId: RefreshDesensitizeCacheAPI_post
+      summary: POST /api/RefreshDesensitizeCacheAPI
+      tags:
+      - discover_data
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object

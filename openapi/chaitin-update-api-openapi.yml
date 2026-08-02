@@ -1,0 +1,108 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account update API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: update
+paths:
+  /api/DownloadSystemUpgradePackage:
+    get:
+      operationId: DownloadSystemUpgradePackage_get
+      summary: GET /api/DownloadSystemUpgradePackage
+      tags:
+      - update
+      parameters: []
+      x-cli-body-fallback: true
+  /api/FirmwareUpdateTimeAPI:
+    get:
+      operationId: FirmwareUpdateTimeAPI_get
+      summary: GET /api/FirmwareUpdateTimeAPI
+      tags:
+      - update
+      parameters: []
+      x-cli-body-fallback: true
+  /api/SystemUpdateLog:
+    get:
+      operationId: SystemUpdateLog_get
+      summary: GET /api/SystemUpdateLog
+      tags:
+      - update
+      parameters: []
+      x-cli-body-fallback: true
+  /api/SystemUpdateResultLog:
+    get:
+      operationId: SystemUpdateResultLog_get
+      summary: GET /api/SystemUpdateResultLog
+      tags:
+      - update
+      parameters:
+      - name: record_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+  /api/SystemUpgrade:
+    post:
+      operationId: SystemUpgrade_post
+      summary: POST /api/SystemUpgrade
+      tags:
+      - update
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/SystemUpgradePackageAPI:
+    get:
+      operationId: SystemUpgradePackageAPI_get
+      summary: GET /api/SystemUpgradePackageAPI
+      tags:
+      - update
+      parameters:
+      - name: count
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: offset
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+  /api/TransferUpgradePackage:
+    post:
+      operationId: TransferUpgradePackage_post
+      summary: POST /api/TransferUpgradePackage
+      tags:
+      - update
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/UploadSystemUpgradePackage:
+    post:
+      operationId: UploadSystemUpgradePackage_post
+      summary: POST /api/UploadSystemUpgradePackage
+      tags:
+      - update
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object

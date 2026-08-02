@@ -1,0 +1,221 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account analyse/filecut API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: analyse/filecut
+  description: 文件分析/文件切分
+paths:
+  /analyse/filecut:
+    post:
+      summary: 内容摘要
+      deprecated: false
+      description: ''
+      tags:
+      - analyse/filecut
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                md5_hash:
+                  type: string
+                event_id:
+                  type: string
+              required:
+              - md5_hash
+              - event_id
+            example:
+              md5_hash: c9ac51956f4d29b12e7c2dcf1e9dff1d
+              event_id: '1722494981876007'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      md5_hash:
+                        type: string
+                      sha256_hash:
+                        type: string
+                      filesize:
+                        type: integer
+                      is_password_protected:
+                        type: boolean
+                      content:
+                        type: object
+                        properties:
+                          first_line:
+                            type: string
+                          header:
+                            type: string
+                          header_footer:
+                            type: string
+                          tail:
+                            type: string
+                          version:
+                            type: integer
+                        required:
+                        - first_line
+                        - header
+                        - header_footer
+                        - tail
+                        - version
+                      file_type:
+                        type: string
+                      has_content:
+                        type: boolean
+                      time:
+                        type: integer
+                      '@timestamp':
+                        type: integer
+                      timestamp:
+                        type: string
+                      company_id:
+                        type: string
+                      event_id:
+                        type: string
+                      is_compressed:
+                        type: boolean
+                      is_hidden:
+                        type: boolean
+                    required:
+                    - md5_hash
+                    - sha256_hash
+                    - filesize
+                    - is_password_protected
+                    - content
+                    - file_type
+                    - has_content
+                    - time
+                    - '@timestamp'
+                    - timestamp
+                    - company_id
+                    - event_id
+                    - is_compressed
+                    - is_hidden
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  md5_hash: c9ac51956f4d29b12e7c2dcf1e9dff1d
+                  sha256_hash: ''
+                  filesize: 10188
+                  is_password_protected: false
+                  content:
+                    first_line: 紧急Test
+                    header: '
+
+
+                      紧急
+
+
+
+                      Test
+
+
+
+                      '
+                    header_footer: ''
+                    tail: '
+
+
+                      紧急
+
+
+
+                      Test
+
+
+
+                      '
+                    version: 1
+                  file_type: docx
+                  has_content: true
+                  time: 1722466210800
+                  '@timestamp': 1722466210800
+                  timestamp: '2024-08-01T06:49:42Z'
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  event_id: '1722494981876007'
+                  is_compressed: false
+                  is_hidden: false
+      security: []

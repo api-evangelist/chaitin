@@ -1,0 +1,411 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account label API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: label
+paths:
+  /api/BusinessTagAPI:
+    post:
+      operationId: BusinessTagAPI_post
+      summary: POST /api/BusinessTagAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 名称
+                type:
+                  type: string
+                  description: 类型
+                mark_rules:
+                  type: string
+              required:
+              - name
+              - type
+    put:
+      operationId: BusinessTagAPI_put
+      summary: PUT /api/BusinessTagAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 名称
+                type:
+                  type: string
+                  description: 类型
+                mark_rules:
+                  type: string
+              required:
+              - name
+              - type
+  /api/MarkRuleAPI:
+    post:
+      operationId: MarkRuleAPI_post
+      summary: POST /api/MarkRuleAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 名称
+                comment:
+                  type: string
+                  description: 备注
+                is_enabled:
+                  type: boolean
+                  description: 是否可用
+                pattern:
+                  type: array
+                  description: 匹配条件
+                  items:
+                    type: string
+                tags:
+                  type: string
+              required:
+              - name
+              - is_enabled
+              - pattern
+    put:
+      operationId: MarkRuleAPI_put
+      summary: PUT /api/MarkRuleAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 名称
+                comment:
+                  type: string
+                  description: 备注
+                is_enabled:
+                  type: boolean
+                  description: 是否可用
+                pattern:
+                  type: array
+                  description: 匹配条件
+                  items:
+                    type: string
+                tags:
+                  type: string
+              required:
+              - is_enabled
+              - name
+              - pattern
+  /api/SensitiveCategoryAPI:
+    post:
+      operationId: SensitiveCategoryAPI_post
+      summary: POST /api/SensitiveCategoryAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                remark:
+                  type: string
+                template_id:
+                  type: integer
+                parent_id:
+                  type: integer
+              required:
+              - name
+              - remark
+              - template_id
+    put:
+      operationId: SensitiveCategoryAPI_put
+      summary: PUT /api/SensitiveCategoryAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                remark:
+                  type: string
+                template_id:
+                  type: integer
+                parent_id:
+                  type: integer
+              required:
+              - name
+              - remark
+              - template_id
+    delete:
+      operationId: SensitiveCategoryAPI_delete
+      summary: DELETE /api/SensitiveCategoryAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: ID
+              required:
+              - id
+  /api/SensitiveTemplateAPI:
+    get:
+      operationId: SensitiveTemplateAPI_get
+      summary: GET /api/SensitiveTemplateAPI
+      tags:
+      - label
+      parameters:
+      - name: id
+        in: query
+        required: true
+        description: ID
+        schema:
+          type: integer
+          description: ID
+      x-cli-body-fallback: false
+    post:
+      operationId: SensitiveTemplateAPI_post
+      summary: POST /api/SensitiveTemplateAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                remark:
+                  type: string
+              required:
+              - name
+              - remark
+    put:
+      operationId: SensitiveTemplateAPI_put
+      summary: PUT /api/SensitiveTemplateAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                remark:
+                  type: string
+              required:
+              - name
+              - remark
+    delete:
+      operationId: SensitiveTemplateAPI_delete
+      summary: DELETE /api/SensitiveTemplateAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: ID
+              required:
+              - id
+  /api/SensitiveValueBindingAPI:
+    post:
+      operationId: SensitiveValueBindingAPI_post
+      summary: POST /api/SensitiveValueBindingAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                template_id:
+                  type: integer
+                category_id:
+                  type: integer
+                tag_id:
+                  type: integer
+                level:
+                  type: string
+              required:
+              - template_id
+              - category_id
+              - tag_id
+              - level
+    put:
+      operationId: SensitiveValueBindingAPI_put
+      summary: PUT /api/SensitiveValueBindingAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                template_id:
+                  type: integer
+                category_id:
+                  type: integer
+                tag_id:
+                  type: integer
+                level:
+                  type: string
+              required:
+              - category_id
+              - level
+              - tag_id
+              - template_id
+    delete:
+      operationId: SensitiveValueBindingAPI_delete
+      summary: DELETE /api/SensitiveValueBindingAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: ID
+              required:
+              - id
+  /api/ValueCategoryAPI:
+    post:
+      operationId: ValueCategoryAPI_post
+      summary: POST /api/ValueCategoryAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                type:
+                  type: string
+                private:
+                  type: boolean
+                identifiable:
+                  type: boolean
+                unique:
+                  type: boolean
+              required:
+              - name
+              - type
+              - private
+              - identifiable
+              - unique
+    put:
+      operationId: ValueCategoryAPI_put
+      summary: PUT /api/ValueCategoryAPI
+      tags:
+      - label
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                type:
+                  type: string
+                private:
+                  type: boolean
+                identifiable:
+                  type: boolean
+                unique:
+                  type: boolean
+              required:
+              - identifiable
+              - name
+              - private
+              - type
+              - unique

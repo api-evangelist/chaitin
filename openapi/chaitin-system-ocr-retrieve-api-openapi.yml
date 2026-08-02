@@ -1,0 +1,246 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account system/ocr/retrieve API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: system/ocr/retrieve
+  description: 系统配置/OCR/获取
+paths:
+  /system/ocr/retrieve:
+    post:
+      summary: 获取 OCR 引擎配置信息
+      deprecated: false
+      description: ''
+      tags:
+      - system/ocr/retrieve
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      pack:
+                        type: object
+                        properties:
+                          update_time:
+                            type: string
+                          engine:
+                            type: object
+                            properties:
+                              Linux:
+                                type: object
+                                properties:
+                                  engine_url:
+                                    type: string
+                                  engine_md5:
+                                    type: string
+                                required:
+                                - engine_url
+                                - engine_md5
+                              UOS:
+                                type: object
+                                properties:
+                                  engine_url:
+                                    type: string
+                                  engine_md5:
+                                    type: string
+                                required:
+                                - engine_url
+                                - engine_md5
+                              macOS:
+                                type: object
+                                properties:
+                                  engine_url:
+                                    type: string
+                                  engine_md5:
+                                    type: string
+                                required:
+                                - engine_url
+                                - engine_md5
+                              Kylin:
+                                type: object
+                                properties:
+                                  engine_url:
+                                    type: string
+                                  engine_md5:
+                                    type: string
+                                required:
+                                - engine_url
+                                - engine_md5
+                              Windows:
+                                type: object
+                                properties:
+                                  engine_url:
+                                    type: string
+                                  engine_md5:
+                                    type: string
+                                required:
+                                - engine_url
+                                - engine_md5
+                            required:
+                            - Linux
+                            - UOS
+                            - macOS
+                            - Kylin
+                            - Windows
+                          model:
+                            type: object
+                            properties:
+                              arm64:
+                                type: object
+                                properties:
+                                  model_url:
+                                    type: string
+                                  model_md5:
+                                    type: string
+                                required:
+                                - model_url
+                                - model_md5
+                              x86:
+                                type: object
+                                properties:
+                                  model_url:
+                                    type: string
+                                  model_md5:
+                                    type: string
+                                required:
+                                - model_url
+                                - model_md5
+                              x86_64:
+                                type: object
+                                properties:
+                                  model_url:
+                                    type: string
+                                  model_md5:
+                                    type: string
+                                required:
+                                - model_url
+                                - model_md5
+                              Universal:
+                                type: object
+                                properties:
+                                  model_url:
+                                    type: string
+                                  model_md5:
+                                    type: string
+                                required:
+                                - model_url
+                                - model_md5
+                            required:
+                            - arm64
+                            - x86
+                            - x86_64
+                            - Universal
+                        required:
+                        - update_time
+                        - engine
+                        - model
+                    required:
+                    - pack
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  pack:
+                    update_time: '2024-11-18T17:44:25+08:00'
+                    engine:
+                      Linux:
+                        engine_url: ''
+                        engine_md5: ''
+                      UOS:
+                        engine_url: ''
+                        engine_md5: ''
+                      macOS:
+                        engine_url: ''
+                        engine_md5: ''
+                      Kylin:
+                        engine_url: ''
+                        engine_md5: ''
+                      Windows:
+                        engine_url: ''
+                        engine_md5: ''
+                    model:
+                      arm64:
+                        model_url: ''
+                        model_md5: ''
+                      x86:
+                        model_url: ''
+                        model_md5: ''
+                      x86_64:
+                        model_url: ''
+                        model_md5: ''
+                      Universal:
+                        model_url: ''
+                        model_md5: ''
+      security: []

@@ -1,0 +1,207 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account website API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: website
+paths:
+  /api/CertAPI:
+    get:
+      operationId: CertAPI_get
+      summary: GET /api/CertAPI
+      tags:
+      - website
+      parameters: []
+      x-cli-body-fallback: true
+    put:
+      operationId: CertAPI_put
+      summary: PUT /api/CertAPI
+      tags:
+      - website
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: ID
+                name:
+                  type: string
+                  description: 证书名称
+              required:
+              - id
+              - name
+    delete:
+      operationId: CertAPI_delete
+      summary: DELETE /api/CertAPI
+      tags:
+      - website
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+                delete_all_resources:
+                  type: boolean
+                  description: 是否使用所有资源
+              required:
+              - delete_all_resources
+  /api/EditSSLCertAPI:
+    post:
+      operationId: EditSSLCertAPI_post
+      summary: POST /api/EditSSLCertAPI
+      tags:
+      - website
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/UploadSSLCertAPI:
+    post:
+      operationId: UploadSSLCertAPI_post
+      summary: POST /api/UploadSSLCertAPI
+      tags:
+      - website
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/WebsiteAPI:
+    post:
+      operationId: WebsiteAPI_post
+      summary: POST /api/WebsiteAPI
+      tags:
+      - website
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_enabled:
+                  type: boolean
+                  description: 站点状态
+                name:
+                  type: string
+                  description: 站点名称
+                server_names:
+                  type: string
+                  description: 域名
+                ports:
+                  type: array
+                  description: 监听端口
+                  items:
+                    type: string
+                ssl_cert:
+                  type: integer
+                  description: SSL 证书 ID
+                servers:
+                  type: array
+                  description: 业务服务器地址
+                  items:
+                    type: string
+                remark:
+                  type: string
+                  description: 备注信息
+              required:
+              - is_enabled
+              - is_enabled
+              - name
+              - server_names
+              - ports
+              - servers
+    put:
+      operationId: WebsiteAPI_put
+      summary: PUT /api/WebsiteAPI
+      tags:
+      - website
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: ID
+                is_enabled:
+                  type: boolean
+                  description: 站点状态
+                name:
+                  type: string
+                  description: 站点名称
+                server_names:
+                  type: string
+                  description: 域名
+                ports:
+                  type: array
+                  description: 监听端口
+                  items:
+                    type: string
+                ssl_cert:
+                  type: integer
+                  description: SSL 证书 ID
+                servers:
+                  type: array
+                  description: 业务服务器地址
+                  items:
+                    type: string
+                remark:
+                  type: string
+                  description: 备注信息
+              required:
+              - id
+              - is_enabled
+              - name
+              - ports
+              - server_names
+              - servers
+    delete:
+      operationId: WebsiteAPI_delete
+      summary: DELETE /api/WebsiteAPI
+      tags:
+      - website
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+                delete_all_resources:
+                  type: boolean
+                  description: 是否使用所有资源
+              required:
+              - delete_all_resources

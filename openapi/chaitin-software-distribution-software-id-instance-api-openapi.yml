@@ -1,0 +1,154 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account software/distribution/{software_id}/instance API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: software/distribution/{software_id}/instance
+  description: 软件分发与卸载/分布/software_id 参数/实例
+paths:
+  /software/distribution/{software_id}/instance:
+    post:
+      summary: 分发
+      deprecated: false
+      description: ''
+      tags:
+      - software/distribution/{software_id}/instance
+      parameters:
+      - name: software_id
+        in: path
+        description: ''
+        required: true
+        example: e3276b93-6032-45b5-9b98-c6ff0281b270
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                scope:
+                  type: string
+                begin_mode:
+                  type: string
+                end_mode:
+                  type: string
+                retry_mode:
+                  type: string
+                scope_options:
+                  type: object
+                  properties:
+                    device_ids:
+                      type: array
+                      items:
+                        type: string
+                    device_tag_ids:
+                      type: array
+                      items: {}
+                    staff_tag_ids:
+                      type: array
+                      items: {}
+                    staff_ids:
+                      type: array
+                      items: {}
+                    department_ids:
+                      type: array
+                      items: {}
+                  required:
+                  - device_ids
+                  - device_tag_ids
+                  - staff_tag_ids
+                  - staff_ids
+                  - department_ids
+              required:
+              - scope
+              - begin_mode
+              - end_mode
+              - retry_mode
+              - scope_options
+            example:
+              scope: common
+              begin_mode: immediately
+              end_mode: permanent
+              retry_mode: intelligent
+              scope_options:
+                device_ids:
+                - 28383ea8-5216-4d0b-80f7-17d99fb3d8ab
+                device_tag_ids: []
+                staff_tag_ids: []
+                staff_ids: []
+                department_ids: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              example: {}
+      security: []

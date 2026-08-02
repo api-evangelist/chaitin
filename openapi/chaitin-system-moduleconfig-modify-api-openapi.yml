@@ -1,0 +1,591 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account system/moduleconfig/modify API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: system/moduleconfig/modify
+  description: 系统配置/模块配置/修改
+paths:
+  /system/moduleconfig/modify:
+    post:
+      summary: 模块管理
+      deprecated: false
+      description: ''
+      tags:
+      - system/moduleconfig/modify
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                enable_general:
+                  type: boolean
+                sub_module_config:
+                  type: object
+                  properties:
+                    enable_db_scan:
+                      type: boolean
+                    enable_block_agent:
+                      type: boolean
+                    enable_log_behavior:
+                      type: boolean
+                    enable_policy_email:
+                      type: boolean
+                    enable_access_control:
+                      type: boolean
+                    enable_policy_channel:
+                      type: boolean
+                    enable_policy_network:
+                      type: boolean
+                    enable_policy_process:
+                      type: boolean
+                    enable_asset_discovery:
+                      type: boolean
+                    enable_watermark_screen:
+                      type: boolean
+                    enable_watermark_printing:
+                      type: boolean
+                    enable_policy_external_device:
+                      type: boolean
+                    enable_ueba_check:
+                      type: boolean
+                    enable_browser:
+                      type: boolean
+                  required:
+                  - enable_db_scan
+                  - enable_block_agent
+                  - enable_log_behavior
+                  - enable_policy_email
+                  - enable_access_control
+                  - enable_policy_channel
+                  - enable_policy_network
+                  - enable_policy_process
+                  - enable_asset_discovery
+                  - enable_watermark_screen
+                  - enable_watermark_printing
+                  - enable_policy_external_device
+                  - enable_ueba_check
+                  - enable_browser
+              required:
+              - enable_general
+              - sub_module_config
+            example:
+              enable_general: true
+              sub_module_config:
+                enable_db_scan: false
+                enable_block_agent: false
+                enable_log_behavior: true
+                enable_policy_email: true
+                enable_access_control: true
+                enable_policy_channel: true
+                enable_policy_network: true
+                enable_policy_process: true
+                enable_asset_discovery: true
+                enable_watermark_screen: true
+                enable_watermark_printing: true
+                enable_policy_external_device: true
+                enable_ueba_check: true
+                enable_browser: true
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      uid:
+                        type: string
+                      company_id:
+                        type: string
+                      name:
+                        type: string
+                      display_name:
+                        type: string
+                      description:
+                        type: string
+                      create_time:
+                        type: string
+                      update_time:
+                        type: string
+                      config:
+                        type: object
+                        properties:
+                          enable_general:
+                            type: boolean
+                          sub_module_config:
+                            type: object
+                            properties:
+                              enable_av_scan:
+                                type: boolean
+                              enable_remote_control:
+                                type: boolean
+                              enable_policy_external_device:
+                                type: boolean
+                              enable_browser:
+                                type: boolean
+                              enable_ueba_check:
+                                type: boolean
+                              enable_ai_content_recognition:
+                                type: boolean
+                              enable_db_scan:
+                                type: boolean
+                              enable_network_driver:
+                                type: boolean
+                              enable_privacy_protection:
+                                type: boolean
+                              enable_policy_channel:
+                                type: boolean
+                              enable_policy_software:
+                                type: boolean
+                              enable_watermark_screen:
+                                type: boolean
+                              enable_file_encrypt:
+                                type: boolean
+                              enable_phishing_protection:
+                                type: boolean
+                              enable_policy_access_control:
+                                type: boolean
+                              enable_app_driver:
+                                type: boolean
+                              enable_asset_discovery:
+                                type: boolean
+                              enable_policy_compliance:
+                                type: boolean
+                              enable_policy_network:
+                                type: boolean
+                              enable_block_agent:
+                                type: boolean
+                              enable_log_behavior:
+                                type: boolean
+                            required:
+                            - enable_av_scan
+                            - enable_remote_control
+                            - enable_policy_external_device
+                            - enable_browser
+                            - enable_ueba_check
+                            - enable_ai_content_recognition
+                            - enable_db_scan
+                            - enable_network_driver
+                            - enable_privacy_protection
+                            - enable_policy_channel
+                            - enable_policy_software
+                            - enable_watermark_screen
+                            - enable_file_encrypt
+                            - enable_phishing_protection
+                            - enable_policy_access_control
+                            - enable_app_driver
+                            - enable_asset_discovery
+                            - enable_policy_compliance
+                            - enable_policy_network
+                            - enable_block_agent
+                            - enable_log_behavior
+                        required:
+                        - enable_general
+                        - sub_module_config
+                      _old_data:
+                        type: object
+                        properties:
+                          description:
+                            type: string
+                          config:
+                            type: object
+                            properties:
+                              enable_general:
+                                type: boolean
+                              sub_module_config:
+                                type: object
+                                properties:
+                                  enable_av_scan:
+                                    type: boolean
+                                  enable_db_scan:
+                                    type: boolean
+                                  enable_app_driver:
+                                    type: boolean
+                                  enable_ueba_check:
+                                    type: boolean
+                                  enable_file_encrypt:
+                                    type: boolean
+                                  enable_log_behavior:
+                                    type: boolean
+                                  enable_network_driver:
+                                    type: boolean
+                                  enable_policy_channel:
+                                    type: boolean
+                                  enable_policy_network:
+                                    type: boolean
+                                  enable_remote_control:
+                                    type: boolean
+                                  enable_asset_discovery:
+                                    type: boolean
+                                  enable_policy_software:
+                                    type: boolean
+                                  enable_watermark_screen:
+                                    type: boolean
+                                  enable_policy_compliance:
+                                    type: boolean
+                                  enable_privacy_protection:
+                                    type: boolean
+                                  enable_phishing_protection:
+                                    type: boolean
+                                  enable_policy_external_device:
+                                    type: boolean
+                                required:
+                                - enable_av_scan
+                                - enable_db_scan
+                                - enable_app_driver
+                                - enable_ueba_check
+                                - enable_file_encrypt
+                                - enable_log_behavior
+                                - enable_network_driver
+                                - enable_policy_channel
+                                - enable_policy_network
+                                - enable_remote_control
+                                - enable_asset_discovery
+                                - enable_policy_software
+                                - enable_watermark_screen
+                                - enable_policy_compliance
+                                - enable_privacy_protection
+                                - enable_phishing_protection
+                                - enable_policy_external_device
+                            required:
+                            - enable_general
+                            - sub_module_config
+                          display_name:
+                            type: string
+                          create_time:
+                            type: string
+                          id:
+                            type: integer
+                          company_id:
+                            type: string
+                          update_time:
+                            type: string
+                          category:
+                            type: string
+                          create_by_id:
+                            type: 'null'
+                          uid:
+                            type: string
+                          name:
+                            type: string
+                          update_by_id:
+                            type: 'null'
+                        required:
+                        - description
+                        - config
+                        - display_name
+                        - create_time
+                        - id
+                        - company_id
+                        - update_time
+                        - category
+                        - create_by_id
+                        - uid
+                        - name
+                        - update_by_id
+                      _new_data:
+                        type: object
+                        properties:
+                          description:
+                            type: string
+                          config:
+                            type: object
+                            properties:
+                              enable_general:
+                                type: boolean
+                              sub_module_config:
+                                type: object
+                                properties:
+                                  enable_av_scan:
+                                    type: boolean
+                                  enable_remote_control:
+                                    type: boolean
+                                  enable_policy_external_device:
+                                    type: boolean
+                                  enable_browser:
+                                    type: boolean
+                                  enable_ueba_check:
+                                    type: boolean
+                                  enable_ai_content_recognition:
+                                    type: boolean
+                                  enable_db_scan:
+                                    type: boolean
+                                  enable_network_driver:
+                                    type: boolean
+                                  enable_privacy_protection:
+                                    type: boolean
+                                  enable_policy_channel:
+                                    type: boolean
+                                  enable_policy_software:
+                                    type: boolean
+                                  enable_watermark_screen:
+                                    type: boolean
+                                  enable_file_encrypt:
+                                    type: boolean
+                                  enable_phishing_protection:
+                                    type: boolean
+                                  enable_policy_access_control:
+                                    type: boolean
+                                  enable_app_driver:
+                                    type: boolean
+                                  enable_asset_discovery:
+                                    type: boolean
+                                  enable_policy_compliance:
+                                    type: boolean
+                                  enable_policy_network:
+                                    type: boolean
+                                  enable_block_agent:
+                                    type: boolean
+                                  enable_log_behavior:
+                                    type: boolean
+                                required:
+                                - enable_av_scan
+                                - enable_remote_control
+                                - enable_policy_external_device
+                                - enable_browser
+                                - enable_ueba_check
+                                - enable_ai_content_recognition
+                                - enable_db_scan
+                                - enable_network_driver
+                                - enable_privacy_protection
+                                - enable_policy_channel
+                                - enable_policy_software
+                                - enable_watermark_screen
+                                - enable_file_encrypt
+                                - enable_phishing_protection
+                                - enable_policy_access_control
+                                - enable_app_driver
+                                - enable_asset_discovery
+                                - enable_policy_compliance
+                                - enable_policy_network
+                                - enable_block_agent
+                                - enable_log_behavior
+                            required:
+                            - enable_general
+                            - sub_module_config
+                          display_name:
+                            type: string
+                          create_time:
+                            type: string
+                          id:
+                            type: integer
+                          company_id:
+                            type: string
+                          update_time:
+                            type: string
+                          category:
+                            type: string
+                          create_by_id:
+                            type: 'null'
+                          uid:
+                            type: string
+                          name:
+                            type: string
+                          update_by_id:
+                            type: 'null'
+                        required:
+                        - description
+                        - config
+                        - display_name
+                        - create_time
+                        - id
+                        - company_id
+                        - update_time
+                        - category
+                        - create_by_id
+                        - uid
+                        - name
+                        - update_by_id
+                    required:
+                    - uid
+                    - company_id
+                    - name
+                    - display_name
+                    - description
+                    - create_time
+                    - update_time
+                    - config
+                    - _old_data
+                    - _new_data
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  uid: 4ddcd4c1-bdd3-4b44-aff1-5624da58efb3
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  name: module_config
+                  display_name: 模块配置
+                  description: 模块配置
+                  create_time: '2024-08-30T19:04:11Z'
+                  update_time: '2025-04-10T06:42:18.018398Z'
+                  config:
+                    enable_general: true
+                    sub_module_config:
+                      enable_av_scan: false
+                      enable_remote_control: false
+                      enable_policy_external_device: true
+                      enable_browser: false
+                      enable_ueba_check: true
+                      enable_ai_content_recognition: false
+                      enable_db_scan: false
+                      enable_network_driver: true
+                      enable_privacy_protection: false
+                      enable_policy_channel: true
+                      enable_policy_software: true
+                      enable_watermark_screen: true
+                      enable_file_encrypt: false
+                      enable_phishing_protection: false
+                      enable_policy_access_control: false
+                      enable_app_driver: true
+                      enable_asset_discovery: true
+                      enable_policy_compliance: true
+                      enable_policy_network: true
+                      enable_block_agent: false
+                      enable_log_behavior: true
+                  _old_data:
+                    description: 模块配置
+                    config:
+                      enable_general: true
+                      sub_module_config:
+                        enable_av_scan: false
+                        enable_db_scan: false
+                        enable_app_driver: true
+                        enable_ueba_check: true
+                        enable_file_encrypt: true
+                        enable_log_behavior: true
+                        enable_network_driver: true
+                        enable_policy_channel: true
+                        enable_policy_network: true
+                        enable_remote_control: false
+                        enable_asset_discovery: true
+                        enable_policy_software: false
+                        enable_watermark_screen: true
+                        enable_policy_compliance: true
+                        enable_privacy_protection: true
+                        enable_phishing_protection: true
+                        enable_policy_external_device: true
+                    display_name: 模块配置
+                    create_time: '2024-08-30T19:04:11Z'
+                    id: 30
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    update_time: '2025-04-10T03:35:24.248650Z'
+                    category: module_config
+                    create_by_id: null
+                    uid: 4ddcd4c1-bdd3-4b44-aff1-5624da58efb3
+                    name: module_config
+                    update_by_id: null
+                  _new_data:
+                    description: 模块配置
+                    config:
+                      enable_general: true
+                      sub_module_config:
+                        enable_av_scan: false
+                        enable_remote_control: false
+                        enable_policy_external_device: true
+                        enable_browser: false
+                        enable_ueba_check: true
+                        enable_ai_content_recognition: false
+                        enable_db_scan: false
+                        enable_network_driver: true
+                        enable_privacy_protection: false
+                        enable_policy_channel: true
+                        enable_policy_software: true
+                        enable_watermark_screen: true
+                        enable_file_encrypt: false
+                        enable_phishing_protection: false
+                        enable_policy_access_control: false
+                        enable_app_driver: true
+                        enable_asset_discovery: true
+                        enable_policy_compliance: true
+                        enable_policy_network: true
+                        enable_block_agent: false
+                        enable_log_behavior: true
+                    display_name: 模块配置
+                    create_time: '2024-08-30T19:04:11Z'
+                    id: 30
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    update_time: '2025-04-10T06:42:18.018398Z'
+                    category: module_config
+                    create_by_id: null
+                    uid: 4ddcd4c1-bdd3-4b44-aff1-5624da58efb3
+                    name: module_config
+                    update_by_id: null
+      security: []

@@ -1,0 +1,888 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account dataasset/md5/{md5}/taskinfo API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: dataasset/md5/{md5}/taskinfo
+  description: 数据资产/MD5/md5 参数/任务信息
+paths:
+  /dataasset/md5/{md5}/taskinfo:
+    post:
+      summary: 资产扫描文件追溯
+      deprecated: false
+      description: ''
+      tags:
+      - dataasset/md5/{md5}/taskinfo
+      parameters:
+      - name: md5
+        in: path
+        description: ''
+        required: true
+        example: f87b0979251b97f3ae09f829016237e0
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      total:
+                        type: integer
+                      search_total:
+                        type: integer
+                      results:
+                        type: object
+                        properties:
+                          first_task:
+                            type: object
+                            properties:
+                              device_id:
+                                type: string
+                              device_code:
+                                type: string
+                              ip_address:
+                                type: string
+                              console_user:
+                                type: string
+                              os_name:
+                                type: string
+                              os_friendly_name:
+                                type: string
+                              time:
+                                type: integer
+                              '@timestamp':
+                                type: integer
+                              timestamp:
+                                type: string
+                              agent_version:
+                                type: string
+                              event_id:
+                                type: string
+                              company_id:
+                                type: string
+                              staff_id:
+                                type: string
+                              staff_code:
+                                type: string
+                              staff_name:
+                                type: string
+                              staff_tag_ids:
+                                type: array
+                                items: {}
+                              staff_tags:
+                                type: array
+                                items: {}
+                              dept_ids:
+                                type: array
+                                items: {}
+                              dept_names:
+                                type: array
+                                items: {}
+                              dept_paths:
+                                type: array
+                                items: {}
+                              filename:
+                                type: string
+                              filepath:
+                                type: string
+                              filesize:
+                                type: integer
+                              md5_hash:
+                                type: string
+                              sha256_hash:
+                                type: string
+                              is_password_protected:
+                                type: boolean
+                              is_hidden:
+                                type: boolean
+                              file_type:
+                                type: string
+                              file_suffix:
+                                type: string
+                              file_created_time:
+                                type: integer
+                              file_created_timestamp:
+                                type: string
+                              file_updated_time:
+                                type: integer
+                              file_updated_timestamp:
+                                type: string
+                              simhash_value:
+                                type: string
+                              classifications:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    data_level:
+                                      type: integer
+                                    data_level_name:
+                                      type: string
+                                    name:
+                                      type: string
+                                    uid:
+                                      type: string
+                                  required:
+                                  - data_level
+                                  - data_level_name
+                                  - name
+                                  - uid
+                              cl_ids:
+                                type: array
+                                items:
+                                  type: string
+                              cl_names:
+                                type: array
+                                items:
+                                  type: string
+                              data_levels:
+                                type: array
+                                items:
+                                  type: integer
+                              data_level_names:
+                                type: array
+                                items:
+                                  type: string
+                              has_cls:
+                                type: boolean
+                              cl_id:
+                                type: string
+                              cl_name:
+                                type: string
+                              data_level:
+                                type: integer
+                              data_level_name:
+                                type: string
+                              content_summary_list:
+                                type: array
+                                items: {}
+                              task_id:
+                                type: string
+                              task_instance_id:
+                                type: string
+                              scan_version:
+                                type: integer
+                              category:
+                                type: string
+                              audit_method:
+                                type: string
+                              expand:
+                                type: object
+                                properties:
+                                  compressed_filenames:
+                                    type: array
+                                    items:
+                                      type: string
+                                  rule_version:
+                                    type: object
+                                    properties:
+                                      cond_version:
+                                        type: integer
+                                      dc_version:
+                                        type: integer
+                                      filetype_version:
+                                        type: integer
+                                    required:
+                                    - cond_version
+                                    - dc_version
+                                    - filetype_version
+                                required:
+                                - compressed_filenames
+                                - rule_version
+                              is_compressed:
+                                type: boolean
+                            required:
+                            - device_id
+                            - device_code
+                            - ip_address
+                            - console_user
+                            - os_name
+                            - os_friendly_name
+                            - time
+                            - '@timestamp'
+                            - timestamp
+                            - agent_version
+                            - event_id
+                            - company_id
+                            - staff_id
+                            - staff_code
+                            - staff_name
+                            - staff_tag_ids
+                            - staff_tags
+                            - dept_ids
+                            - dept_names
+                            - dept_paths
+                            - filename
+                            - filepath
+                            - filesize
+                            - md5_hash
+                            - sha256_hash
+                            - is_password_protected
+                            - is_hidden
+                            - file_type
+                            - file_suffix
+                            - file_created_time
+                            - file_created_timestamp
+                            - file_updated_time
+                            - file_updated_timestamp
+                            - simhash_value
+                            - classifications
+                            - cl_ids
+                            - cl_names
+                            - data_levels
+                            - data_level_names
+                            - has_cls
+                            - cl_id
+                            - cl_name
+                            - data_level
+                            - data_level_name
+                            - content_summary_list
+                            - task_id
+                            - task_instance_id
+                            - scan_version
+                            - category
+                            - audit_method
+                            - expand
+                            - is_compressed
+                          last_task:
+                            type: object
+                            properties:
+                              device_id:
+                                type: string
+                              device_code:
+                                type: string
+                              ip_address:
+                                type: string
+                              console_user:
+                                type: string
+                              os_name:
+                                type: string
+                              os_friendly_name:
+                                type: string
+                              time:
+                                type: integer
+                              '@timestamp':
+                                type: integer
+                              timestamp:
+                                type: string
+                              agent_version:
+                                type: string
+                              event_id:
+                                type: string
+                              company_id:
+                                type: string
+                              staff_id:
+                                type: string
+                              staff_code:
+                                type: string
+                              staff_name:
+                                type: string
+                              staff_email:
+                                type: string
+                              staff_tag_ids:
+                                type: array
+                                items: {}
+                              staff_tags:
+                                type: array
+                                items: {}
+                              dept_ids:
+                                type: array
+                                items:
+                                  type: string
+                              dept_names:
+                                type: array
+                                items:
+                                  type: string
+                              dept_paths:
+                                type: array
+                                items:
+                                  type: string
+                              filename:
+                                type: string
+                              filepath:
+                                type: string
+                              filesize:
+                                type: integer
+                              md5_hash:
+                                type: string
+                              sha256_hash:
+                                type: string
+                              is_password_protected:
+                                type: boolean
+                              is_hidden:
+                                type: boolean
+                              file_type:
+                                type: string
+                              file_suffix:
+                                type: string
+                              file_created_time:
+                                type: integer
+                              file_created_timestamp:
+                                type: string
+                              file_updated_time:
+                                type: integer
+                              file_updated_timestamp:
+                                type: string
+                              simhash_value:
+                                type: string
+                              classifications:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    data_level:
+                                      type: integer
+                                    data_level_name:
+                                      type: string
+                                    name:
+                                      type: string
+                                    uid:
+                                      type: string
+                                  required:
+                                  - data_level
+                                  - data_level_name
+                                  - name
+                                  - uid
+                              cl_ids:
+                                type: array
+                                items:
+                                  type: string
+                              cl_names:
+                                type: array
+                                items:
+                                  type: string
+                              data_levels:
+                                type: array
+                                items:
+                                  type: integer
+                              data_level_names:
+                                type: array
+                                items:
+                                  type: string
+                              has_cls:
+                                type: boolean
+                              cl_id:
+                                type: string
+                              cl_name:
+                                type: string
+                              data_level:
+                                type: integer
+                              data_level_name:
+                                type: string
+                              content_summary_list:
+                                type: array
+                                items: {}
+                              task_id:
+                                type: string
+                              task_instance_id:
+                                type: string
+                              scan_version:
+                                type: integer
+                              category:
+                                type: string
+                              audit_method:
+                                type: string
+                              expand:
+                                type: object
+                                properties:
+                                  rule_version:
+                                    type: object
+                                    properties:
+                                      cond_version:
+                                        type: integer
+                                      dc_version:
+                                        type: integer
+                                      filetype_version:
+                                        type: integer
+                                    required:
+                                    - cond_version
+                                    - dc_version
+                                    - filetype_version
+                                required:
+                                - rule_version
+                              is_compressed:
+                                type: boolean
+                            required:
+                            - device_id
+                            - device_code
+                            - ip_address
+                            - console_user
+                            - os_name
+                            - os_friendly_name
+                            - time
+                            - '@timestamp'
+                            - timestamp
+                            - agent_version
+                            - event_id
+                            - company_id
+                            - staff_id
+                            - staff_code
+                            - staff_name
+                            - staff_email
+                            - staff_tag_ids
+                            - staff_tags
+                            - dept_ids
+                            - dept_names
+                            - dept_paths
+                            - filename
+                            - filepath
+                            - filesize
+                            - md5_hash
+                            - sha256_hash
+                            - is_password_protected
+                            - is_hidden
+                            - file_type
+                            - file_suffix
+                            - file_created_time
+                            - file_created_timestamp
+                            - file_updated_time
+                            - file_updated_timestamp
+                            - simhash_value
+                            - classifications
+                            - cl_ids
+                            - cl_names
+                            - data_levels
+                            - data_level_names
+                            - has_cls
+                            - cl_id
+                            - cl_name
+                            - data_level
+                            - data_level_name
+                            - content_summary_list
+                            - task_id
+                            - task_instance_id
+                            - scan_version
+                            - category
+                            - audit_method
+                            - expand
+                            - is_compressed
+                        required:
+                        - first_task
+                        - last_task
+                    required:
+                    - index
+                    - total
+                    - search_total
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  index:
+                  - qzhddr_file_scan_res
+                  total: 11
+                  search_total: 11
+                  results:
+                    first_task:
+                      device_id: 7b45e606-c7b4-40a2-a08e-4aa9fb0ddcf1
+                      device_code: PC-000006
+                      ip_address: 192.168.96.148
+                      console_user: wenghuangge
+                      os_name: macOS
+                      os_friendly_name: macOS 12.6.5
+                      time: 1701952378551
+                      '@timestamp': 1701952378551
+                      timestamp: '2023-12-07T12:32:58Z'
+                      agent_version: 3.1.821
+                      event_id: F28F407E-C362-42E1-8876-F15957D0397E
+                      company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                      staff_id: ''
+                      staff_code: ''
+                      staff_name: ''
+                      staff_tag_ids: []
+                      staff_tags: []
+                      dept_ids: []
+                      dept_names: []
+                      dept_paths: []
+                      filename: DDR+macOS+v3.1.821 (2).zip
+                      filepath: /Users/wenghuangge/Desktop/temp/ggg/DDR+macOS+v3.1.821 (2).zip
+                      filesize: 84516869
+                      md5_hash: f87b0979251b97f3ae09f829016237e0
+                      sha256_hash: 30bb4628e644d6e77d57617c806790cfec4ee184270ec61c831055c051c595ba
+                      is_password_protected: false
+                      is_hidden: false
+                      file_type: 1.zip
+                      file_suffix: zip
+                      file_created_time: 1701944671000
+                      file_created_timestamp: '2023-12-07T10:24:31Z'
+                      file_updated_time: 1701944673000
+                      file_updated_timestamp: '2023-12-07T10:24:33Z'
+                      simhash_value: ''
+                      classifications:
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: f00c37d2-33ea-44d4-98e4-660bc37e1e9a
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: 541dd2db-160b-46be-bb91-f9b6e30bf810
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: 931b2e69-1ffa-40a5-ace9-63391d0ac54b
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: 压缩文件检测
+                        uid: 9f7a9cfe-a415-4dfd-ae3e-b561ec92ea24
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: 362bf01d-21f6-4db9-a174-ca471582d915
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: bea6d659-955d-4442-bb90-cda6a8322a9e
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: 压缩文件检测
+                        uid: fd8846e6-e6a1-4ed0-ab3b-30266b8c4eeb
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: 2ed80c94-24f9-4511-8a2c-4884818fe964
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: 51f2f41e-9924-4ede-8e6a-c075f8e5f145
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: 压缩文件检测
+                        uid: 80b037dc-f564-439c-9a54-deadb2367949
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: 1e90a089-d6a3-42a2-b3fd-89254e1ea47a
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 压缩
+                        uid: cb63314b-3a74-43fc-8e16-abd20c52652f
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: 文件名-存在
+                        uid: 5da9980d-4b3d-402e-913a-60e2bb1cec15
+                      cl_ids:
+                      - f00c37d2-33ea-44d4-98e4-660bc37e1e9a
+                      - 541dd2db-160b-46be-bb91-f9b6e30bf810
+                      - 931b2e69-1ffa-40a5-ace9-63391d0ac54b
+                      - 9f7a9cfe-a415-4dfd-ae3e-b561ec92ea24
+                      - 362bf01d-21f6-4db9-a174-ca471582d915
+                      - bea6d659-955d-4442-bb90-cda6a8322a9e
+                      - fd8846e6-e6a1-4ed0-ab3b-30266b8c4eeb
+                      - 2ed80c94-24f9-4511-8a2c-4884818fe964
+                      - 51f2f41e-9924-4ede-8e6a-c075f8e5f145
+                      - 80b037dc-f564-439c-9a54-deadb2367949
+                      - 1e90a089-d6a3-42a2-b3fd-89254e1ea47a
+                      - cb63314b-3a74-43fc-8e16-abd20c52652f
+                      - 5da9980d-4b3d-402e-913a-60e2bb1cec15
+                      cl_names:
+                      - 分类分级次数
+                      - 分类分级次数
+                      - 分类分级次数
+                      - 压缩文件检测
+                      - 分类分级次数
+                      - 分类分级次数
+                      - 压缩文件检测
+                      - 分类分级次数
+                      - 分类分级次数
+                      - 压缩文件检测
+                      - 分类分级次数
+                      - 压缩
+                      - 文件名-存在
+                      data_levels:
+                      - 4
+                      - 4
+                      - 4
+                      - 2
+                      - 4
+                      - 4
+                      - 2
+                      - 4
+                      - 4
+                      - 2
+                      - 4
+                      - 4
+                      - 2
+                      data_level_names:
+                      - 机密数据
+                      - 机密数据
+                      - 机密数据
+                      - 内部数据
+                      - 机密数据
+                      - 机密数据
+                      - 内部数据
+                      - 机密数据
+                      - 机密数据
+                      - 内部数据
+                      - 机密数据
+                      - 机密数据
+                      - 内部数据
+                      has_cls: true
+                      cl_id: f00c37d2-33ea-44d4-98e4-660bc37e1e9a
+                      cl_name: 分类分级次数
+                      data_level: 4
+                      data_level_name: 机密数据
+                      content_summary_list: []
+                      task_id: 56566d15-2077-463d-8ea2-a64c87de69ce
+                      task_instance_id: 8a2ed813-a1b8-4955-ad40-da614d7f5232
+                      scan_version: 1
+                      category: file_scan_task
+                      audit_method: keywords
+                      expand:
+                        compressed_filenames:
+                        - Config.json
+                        - DDR macOS v3.1.821.pkg
+                        rule_version:
+                          cond_version: 21
+                          dc_version: 301
+                          filetype_version: 34
+                      is_compressed: true
+                    last_task:
+                      device_id: 7b45e606-c7b4-40a2-a08e-4aa9fb0ddcf1
+                      device_code: PC-000006
+                      ip_address: 192.168.96.149
+                      console_user: wenghuangge
+                      os_name: macOS
+                      os_friendly_name: macOS 12.6.5
+                      time: 1702277297798
+                      '@timestamp': 1702277297798
+                      timestamp: '2023-12-11T06:48:17Z'
+                      agent_version: 3.1.821
+                      event_id: EB5F76C1-9B82-4528-A1EF-AF6B24968B0A
+                      company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                      staff_id: 58f89e69-c352-4272-ac47-592f91af32c6
+                      staff_code: '+8615658575629'
+                      staff_name: 翁黄格
+                      staff_email: huangge.weng@cyberserval.cn
+                      staff_tag_ids: []
+                      staff_tags: []
+                      dept_ids:
+                      - 6c59e9bc-d186-4af0-a235-67c01a3f9277
+                      dept_names:
+                      - macOS终端组
+                      dept_paths:
+                      - default/产研部/研发部/macOS终端组
+                      filename: DDR+macOS+v3.1.821 (2).zip
+                      filepath: /Users/wenghuangge/Desktop/temp/ggg/DDR+macOS+v3.1.821 (2).zip
+                      filesize: 84516869
+                      md5_hash: f87b0979251b97f3ae09f829016237e0
+                      sha256_hash: 30bb4628e644d6e77d57617c806790cfec4ee184270ec61c831055c051c595ba
+                      is_password_protected: false
+                      is_hidden: false
+                      file_type: 1.zip
+                      file_suffix: zip
+                      file_created_time: 1701944671000
+                      file_created_timestamp: '2023-12-07T10:24:31Z'
+                      file_updated_time: 1701944673000
+                      file_updated_timestamp: '2023-12-07T10:24:33Z'
+                      simhash_value: ''
+                      classifications:
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: f00c37d2-33ea-44d4-98e4-660bc37e1e9a
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: 541dd2db-160b-46be-bb91-f9b6e30bf810
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: 931b2e69-1ffa-40a5-ace9-63391d0ac54b
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: 压缩文件检测
+                        uid: 9f7a9cfe-a415-4dfd-ae3e-b561ec92ea24
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: 362bf01d-21f6-4db9-a174-ca471582d915
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: bea6d659-955d-4442-bb90-cda6a8322a9e
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: 压缩文件检测
+                        uid: fd8846e6-e6a1-4ed0-ab3b-30266b8c4eeb
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: 2ed80c94-24f9-4511-8a2c-4884818fe964
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: 51f2f41e-9924-4ede-8e6a-c075f8e5f145
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: 压缩文件检测
+                        uid: 80b037dc-f564-439c-9a54-deadb2367949
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 分类分级次数
+                        uid: 1e90a089-d6a3-42a2-b3fd-89254e1ea47a
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 数据来源
+                        uid: 49ca85a6-c8b0-4fbb-a63c-13a270d33a7d
+                      - data_level: 4
+                        data_level_name: 机密数据
+                        name: 压缩
+                        uid: cb63314b-3a74-43fc-8e16-abd20c52652f
+                      - data_level: 2
+                        data_level_name: 内部数据
+                        name: 文件名-存在
+                        uid: 5da9980d-4b3d-402e-913a-60e2bb1cec15
+                      cl_ids:
+                      - f00c37d2-33ea-44d4-98e4-660bc37e1e9a
+                      - 541dd2db-160b-46be-bb91-f9b6e30bf810
+                      - 931b2e69-1ffa-40a5-ace9-63391d0ac54b
+                      - 9f7a9cfe-a415-4dfd-ae3e-b561ec92ea24
+                      - 362bf01d-21f6-4db9-a174-ca471582d915
+                      - bea6d659-955d-4442-bb90-cda6a8322a9e
+                      - fd8846e6-e6a1-4ed0-ab3b-30266b8c4eeb
+                      - 2ed80c94-24f9-4511-8a2c-4884818fe964
+                      - 51f2f41e-9924-4ede-8e6a-c075f8e5f145
+                      - 80b037dc-f564-439c-9a54-deadb2367949
+                      - 1e90a089-d6a3-42a2-b3fd-89254e1ea47a
+                      - 49ca85a6-c8b0-4fbb-a63c-13a270d33a7d
+                      - cb63314b-3a74-43fc-8e16-abd20c52652f
+                      - 5da9980d-4b3d-402e-913a-60e2bb1cec15
+                      cl_names:
+                      - 分类分级次数
+                      - 分类分级次数
+                      - 分类分级次数
+                      - 压缩文件检测
+                      - 分类分级次数
+                      - 分类分级次数
+                      - 压缩文件检测
+                      - 分类分级次数
+                      - 分类分级次数
+                      - 压缩文件检测
+                      - 分类分级次数
+                      - 数据来源
+                      - 压缩
+                      - 文件名-存在
+                      data_levels:
+                      - 4
+                      - 4
+                      - 4
+                      - 2
+                      - 4
+                      - 4
+                      - 2
+                      - 4
+                      - 4
+                      - 2
+                      - 4
+                      - 4
+                      - 4
+                      - 2
+                      data_level_names:
+                      - 机密数据
+                      - 机密数据
+                      - 机密数据
+                      - 内部数据
+                      - 机密数据
+                      - 机密数据
+                      - 内部数据
+                      - 机密数据
+                      - 机密数据
+                      - 内部数据
+                      - 机密数据
+                      - 机密数据
+                      - 机密数据
+                      - 内部数据
+                      has_cls: true
+                      cl_id: f00c37d2-33ea-44d4-98e4-660bc37e1e9a
+                      cl_name: 分类分级次数
+                      data_level: 4
+                      data_level_name: 机密数据
+                      content_summary_list: []
+                      task_id: e0fc3452-b24a-4239-8241-5e02285d5be7
+                      task_instance_id: 737278a7-6f10-452f-b0ea-3f903907d578
+                      scan_version: 1
+                      category: file_scan_task
+                      audit_method: keywords
+                      expand:
+                        rule_version:
+                          cond_version: 23
+                          dc_version: 303
+                          filetype_version: 34
+                      is_compressed: true
+      security: []

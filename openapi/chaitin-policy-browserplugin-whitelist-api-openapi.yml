@@ -1,0 +1,173 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policy/browserplugin/whitelist API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policy/browserplugin/whitelist
+  description: 策略管理/浏览器插件/白名单管理
+paths:
+  /policy/browserplugin/whitelist:
+    post:
+      summary: 管控白名单创建
+      deprecated: false
+      description: ''
+      tags:
+      - policy/browserplugin/whitelist
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                browser:
+                  type: string
+                plugin_id:
+                  type: string
+                plugin_name:
+                  type: string
+                description:
+                  type: string
+              required:
+              - browser
+              - plugin_id
+              - plugin_name
+              - description
+            example:
+              browser: chrome
+              plugin_id: plugin id
+              plugin_name: plugin name
+              description: test
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      plugin_id:
+                        type: string
+                      company_id:
+                        type: string
+                      uid:
+                        type: string
+                      update_by_id:
+                        type: string
+                      description:
+                        type: string
+                      create_time:
+                        type: string
+                      id:
+                        type: integer
+                      browser:
+                        type: string
+                      plugin_name:
+                        type: string
+                      create_by_id:
+                        type: string
+                      update_time:
+                        type: string
+                    required:
+                    - plugin_id
+                    - company_id
+                    - uid
+                    - update_by_id
+                    - description
+                    - create_time
+                    - id
+                    - browser
+                    - plugin_name
+                    - create_by_id
+                    - update_time
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  plugin_id: plugin id
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  uid: 7e4fa697-2181-4e33-a04e-a4c2bd08190e
+                  update_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  description: test
+                  create_time: '2025-03-20T10:27:40.532145Z'
+                  id: 1
+                  browser: Chrome
+                  plugin_name: plugin name
+                  create_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  update_time: '2025-03-20T10:27:40.532200Z'
+      security: []

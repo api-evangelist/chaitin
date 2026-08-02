@@ -1,0 +1,2920 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account 任务/任务实例v2 API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: 任务/任务实例v2
+paths:
+  /v1/task/{task_type}/instance:
+    get:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        example: asset
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: true
+        schema:
+          type: integer
+      - description: 页码
+        example: 1
+        in: query
+        name: page
+        required: false
+        schema:
+          enum:
+          - waiting
+          - running
+          - aborted
+          - finished
+          - deleting
+          type: string
+          x-apifox-enum:
+          - description: 等待调度
+            name: ''
+            value: waiting
+          - description: 运行中
+            name: ''
+            value: running
+          - description: 已暂停
+            name: ''
+            value: aborted
+          - description: 已完成
+            name: ''
+            value: finished
+          - description: 已终止
+            name: ''
+            value: deleting
+      - description: 分页大小
+        example: 20
+        in: query
+        name: size
+        required: false
+        schema:
+          type: integer
+      - description: 任务状态
+        example: ''
+        in: query
+        name: task_status
+        required: false
+        schema:
+          enum:
+          - waiting
+          - running
+          - aborted
+          - finished
+          - deleting
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 等待运行
+            value: waiting
+          - description: ''
+            name: 运行中
+            value: running
+          - description: ''
+            name: 已暂停
+            value: aborted
+          - description: ''
+            name: 已完成
+            value: finished
+          - description: ''
+            name: 已终止
+            value: deleting
+      - description: 搜索任务信息，任务名称、集群模糊搜索
+        example: ''
+        in: query
+        name: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  current: 1
+                  items:
+                  - cluster:
+                      cluster: default
+                      description: 默认集群
+                    created_at: '2026-03-17 14:02:10'
+                    done: 17
+                    finished_at: '2026-03-17 14:15:10'
+                    remaining_time: 0
+                    schedule_id: 0
+                    scope: all
+                    scope_data: []
+                    task_id: 33
+                    task_name: 人工运行
+                    task_status: finished
+                    total: 17
+                    xapp: []
+                    xpoc: []
+                  size: 10
+                  total: 1
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      current:
+                        title: 当前页码
+                        type: integer
+                      items:
+                        items:
+                          properties:
+                            cluster:
+                              properties:
+                                cluster:
+                                  title: 集群名称
+                                  type: string
+                                description:
+                                  title: 集群描述
+                                  type: string
+                              required:
+                              - cluster
+                              - description
+                              title: 集群
+                              type: object
+                              x-apifox-orders:
+                              - cluster
+                              - description
+                            created_at:
+                              title: 创建时间
+                              type: string
+                            done:
+                              title: 完成编排数量
+                              type: integer
+                            finished_at:
+                              title: 更新时间
+                              type: string
+                            remaining_time:
+                              title: 任务剩余时间
+                              type: integer
+                            schedule_id:
+                              description: 手动执行任务为0
+                              title: 周期任务ID
+                              type: integer
+                            scope:
+                              description: 资产发现任务固定为all
+                              title: 扫描资产范围
+                              type: string
+                            scope_data:
+                              description: 如果选择资产分组或者资产标签，这里保存对应ID列表
+                              items:
+                                type: integer
+                              title: 扫描资产范围值列表
+                              type: array
+                            task_id:
+                              title: 任务ID
+                              type: integer
+                            task_name:
+                              title: 任务名称
+                              type: string
+                            task_status:
+                              enum:
+                              - waiting
+                              - running
+                              - aborted
+                              - finished
+                              - deleting
+                              type: string
+                              x-apifox-enum:
+                              - description: ''
+                                name: 等待运行
+                                value: waiting
+                              - description: ''
+                                name: 运行中
+                                value: running
+                              - description: ''
+                                name: 已暂停
+                                value: aborted
+                              - description: ''
+                                name: 已完成
+                                value: finished
+                              - description: ''
+                                name: 已终止
+                                value: deleting
+                            total:
+                              title: 编排总数量
+                              type: integer
+                            xapp:
+                              description: 只暴露面识别任务使用
+                              items:
+                                type: string
+                              title: 指纹分组列表
+                              type: array
+                            xpoc:
+                              description: 只风险评估任务使用
+                              items:
+                                type: string
+                              title: 漏洞分组列表
+                              type: array
+                          type: object
+                          x-apifox-orders:
+                          - task_id
+                          - task_name
+                          - schedule_id
+                          - cluster
+                          - scope
+                          - scope_data
+                          - xapp
+                          - xpoc
+                          - done
+                          - total
+                          - remaining_time
+                          - task_status
+                          - created_at
+                          - finished_at
+                        type: array
+                      size:
+                        title: 分页大小
+                        type: integer
+                      total:
+                        title: 总数
+                        type: integer
+                    required:
+                    - current
+                    - size
+                    - total
+                    - items
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - current
+                    - size
+                    - total
+                    - items
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 任务实例列表
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/任务实例v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430416697-run
+    post:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        example: asset
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            examples: {}
+            schema:
+              properties:
+                cluster:
+                  title: 集群
+                  type: string
+                scope:
+                  description: 资产发现任务默认为all，不支持选择
+                  enum:
+                  - all
+                  - bu
+                  - tag
+                  title: 扫描资产范围
+                  type: string
+                  x-apifox-enum:
+                  - description: ''
+                    name: 全部资产
+                    value: all
+                  - description: ''
+                    name: 资产分组
+                    value: bu
+                  - description: ''
+                    name: 资产标签
+                    value: tag
+                scope_data:
+                  description: 资产分组或资产标签ID列表
+                  items:
+                    type: integer
+                  title: 扫描资产范围ID列表
+                  type: array
+                task_name:
+                  title: 任务名称
+                  type: string
+                xapp:
+                  description: 只暴露面识别任务使用
+                  items:
+                    type: string
+                  title: 指纹分组ID列表
+                  type: array
+                xpoc:
+                  description: 只风险评估任务使用
+                  items:
+                    type: string
+                  title: 漏洞分组ID列表
+                  type: array
+              required:
+              - task_name
+              - cluster
+              - scope
+              - scope_data
+              type: object
+              x-apifox-orders:
+              - task_name
+              - cluster
+              - scope
+              - scope_data
+              - xapp
+              - xpoc
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  scope: all
+                  scope_data: []
+                  task_flow: assets-probe
+                  task_id: 42
+                  xapp: []
+                  xpoc: []
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      scope:
+                        description: 资产发现任务固定为all
+                        title: 扫描范围
+                        type: string
+                      scope_data:
+                        description: 如果选择资产分组或者资产标签，这里保存对应ID列表
+                        items:
+                          type: integer
+                        title: 扫描范围值列表
+                        type: array
+                      task_flow:
+                        title: 任务编排
+                        type: string
+                      task_id:
+                        title: 任务ID
+                        type: integer
+                      xapp:
+                        description: 只暴露面识别任务使用
+                        items:
+                          type: string
+                        title: 指纹分组列表
+                        type: array
+                      xpoc:
+                        description: 只风险评估任务使用
+                        items:
+                          type: string
+                        title: 漏洞分组列表
+                        type: array
+                    required:
+                    - task_flow
+                    - xpoc
+                    - scope
+                    - xapp
+                    - task_id
+                    - scope_data
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - task_id
+                    - task_flow
+                    - scope
+                    - scope_data
+                    - xapp
+                    - xpoc
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 任务实例创建（立即运行）
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/任务实例v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430443635-run
+  /v1/task/{task_type}/instance/batch-delete:
+    delete:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        example: asset
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            examples: {}
+            schema:
+              properties:
+                pk:
+                  items:
+                    type: integer
+                  title: ID列表
+                  type: array
+              required:
+              - pk
+              type: object
+              x-apifox-orders:
+              - pk
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  affected: 2
+                  ignored: 0
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      affected:
+                        title: 成功数量
+                        type: integer
+                      ignored:
+                        title: 忽略数量
+                        type: integer
+                    required:
+                    - affected
+                    - ignored
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - affected
+                    - ignored
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 任务实例批量删除
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/任务实例v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430442238-run
+  /v1/task/{task_type}/instance/status:
+    post:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        example: asset
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            examples: {}
+            schema:
+              properties:
+                pk:
+                  items:
+                    type: integer
+                  title: ID列表
+                  type: array
+                status:
+                  enum:
+                  - waiting
+                  - aborted
+                  title: 操作状态
+                  type: string
+                  x-apifox-enum:
+                  - description: ''
+                    name: 重跑
+                    value: waiting
+                  - description: ''
+                    name: 暂停
+                    value: aborted
+              required:
+              - pk
+              - status
+              type: object
+              x-apifox-orders:
+              - pk
+              - status
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  affected: 1
+                  ignored: 0
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      affected:
+                        title: 成功数量
+                        type: integer
+                      ignored:
+                        title: 忽略数量
+                        type: integer
+                    required:
+                    - affected
+                    - ignored
+                    title: 数据
+                    type: object
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 任务实例批量重跑、暂停
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/任务实例v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430458617-run
+  /v1/task/{task_type}/instance/status/count:
+    get:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        example: asset
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  aborted: 0
+                  deleting: 0
+                  finished: 1
+                  running: 0
+                  waiting: 0
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      aborted:
+                        title: 已暂停
+                        type: integer
+                      deleting:
+                        title: 已终止
+                        type: integer
+                      finished:
+                        title: 已完成
+                        type: integer
+                      running:
+                        title: 运行中
+                        type: integer
+                      waiting:
+                        title: 等待调度
+                        type: integer
+                    required:
+                    - waiting
+                    - running
+                    - aborted
+                    - finished
+                    - deleting
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - waiting
+                    - running
+                    - aborted
+                    - finished
+                    - deleting
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 任务实例状态数量
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/任务实例v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430397358-run
+  /v1/task/{task_type}/instance/{id}:
+    get:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        example: asset
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 任务ID
+        example: 1
+        in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  cluster:
+                    cluster: default
+                    description: 默认集群
+                  created_at: '2026-03-19 15:35:37'
+                  done: 9
+                  finished_at: null
+                  remaining_time: 1
+                  schedule_id: 0
+                  scope: all
+                  scope_data: []
+                  task_id: 42
+                  task_name: 测试
+                  task_status: aborted
+                  total: 17
+                  xapp: []
+                  xpoc: []
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      cluster:
+                        properties:
+                          cluster:
+                            title: 集群名称
+                            type: string
+                          description:
+                            title: 集群描述
+                            type: string
+                        required:
+                        - cluster
+                        - description
+                        title: 集群
+                        type: object
+                        x-apifox-orders:
+                        - cluster
+                        - description
+                      created_at:
+                        title: 创建时间
+                        type: string
+                      done:
+                        title: 完成编排数量
+                        type: integer
+                      finished_at:
+                        nullable: true
+                        title: 完成时间
+                        type: string
+                      remaining_time:
+                        title: 任务剩余时间
+                        type: integer
+                      schedule_id:
+                        description: 手动执行任务为0
+                        title: 周期任务ID
+                        type: integer
+                      scope:
+                        description: 资产发现任务固定为all
+                        title: 扫描资产范围
+                        type: string
+                      scope_data:
+                        description: 如果选择资产分组或者资产标签，这里保存对应ID列表
+                        items:
+                          type: string
+                        title: 扫描资产范围值列表
+                        type: array
+                      task_id:
+                        title: 任务ID
+                        type: integer
+                      task_name:
+                        title: 任务名称
+                        type: string
+                      task_status:
+                        enum:
+                        - waiting
+                        - running
+                        - aborted
+                        - finished
+                        - deleting
+                        title: 任务状态
+                        type: string
+                        x-apifox-enum:
+                        - description: ''
+                          name: 等待运行
+                          value: waiting
+                        - description: ''
+                          name: 运行中
+                          value: running
+                        - description: ''
+                          name: 已暂停
+                          value: aborted
+                        - description: ''
+                          name: 已完成
+                          value: finished
+                        - description: ''
+                          name: 已终止
+                          value: deleting
+                      total:
+                        title: 编排总数量
+                        type: integer
+                      xapp:
+                        description: 只暴露面识别任务使用
+                        items:
+                          type: string
+                        title: 指纹分组列表
+                        type: array
+                      xpoc:
+                        description: 只风险评估任务使用
+                        items:
+                          type: string
+                        title: 漏洞分组列表
+                        type: array
+                    required:
+                    - task_id
+                    - task_name
+                    - schedule_id
+                    - cluster
+                    - scope
+                    - scope_data
+                    - xapp
+                    - xpoc
+                    - done
+                    - total
+                    - remaining_time
+                    - task_status
+                    - created_at
+                    - finished_at
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - task_id
+                    - task_name
+                    - schedule_id
+                    - cluster
+                    - scope
+                    - scope_data
+                    - xapp
+                    - xpoc
+                    - done
+                    - total
+                    - remaining_time
+                    - task_status
+                    - created_at
+                    - finished_at
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 任务实例查看
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/任务实例v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430496683-run
+  /v1/task/attack/schedule/xapp/options:
+    get:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                - name: 勒索挖矿
+                  pk: 124bc30c-d94d-43f6-af86-59d17a34a09b
+                - name: 护网行动
+                  pk: 2d598441-29cf-4c28-9d23-8e4adcf2fdc8
+                - name: 代理服务
+                  pk: 4d412f7a-8ed0-490f-96d2-1873dfda256d
+                - name: 信创与国产化
+                  pk: 7b6ed73a-7fca-4e11-bc5c-e5f3a6ef5cce
+                - name: 文件服务
+                  pk: ad05bc0e-ab57-4472-b477-94f57ef83cde
+                - name: AI-人工智能
+                  pk: b01acbb7-df79-4184-8654-513cbc558406
+                - name: 数据库服务
+                  pk: b2bf6e3c-bafb-4bab-a7c5-15ce7d630da0
+                - name: 两高一弱
+                  pk: c3f3ab62-57c6-43b9-af83-98178f23b0a5
+                - name: 关键产品
+                  pk: d670e878-f389-459a-9259-c39b5b6b1f50
+                - name: 实战攻防
+                  pk: eb0b6f32-5b50-4989-915e-eb503511b55e
+                - name: 调试服务
+                  pk: ec7b06e4-4e48-4c29-ae41-7c849b1fb130
+                - name: 运维管控
+                  pk: faefd146-9db5-4691-af6b-9a2d383f371d
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    items:
+                      properties:
+                        name:
+                          type: string
+                        pk:
+                          type: string
+                      required:
+                      - pk
+                      - name
+                      type: object
+                    type: array
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 指纹分组选项
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/周期任务v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430377396-run
+  /v1/task/risk/schedule/xpoc/options:
+    get:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                - name: 护网实战
+                  pk: 00000000-0000-0000-0000-000000000001
+                - name: 弱口令
+                  pk: 00000000-0000-0000-0000-000000000002
+                - name: 勒索挖矿
+                  pk: 00000000-0000-0000-0000-000000000003
+                - name: 关键漏洞
+                  pk: 0ed8b36c-a1af-4790-8d1f-39172dd17a1d
+                - name: 信创与国产化
+                  pk: 5035a73e-fa72-4652-8629-9efd6e44c67e
+                - name: 2025-两高一弱
+                  pk: ed779525-a0db-4086-b6a7-4df76dc0aefc
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    items:
+                      properties:
+                        name:
+                          type: string
+                        pk:
+                          type: string
+                      required:
+                      - pk
+                      - name
+                      type: object
+                    type: array
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 漏洞分组选项
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/周期任务v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430383737-run
+  /v1/task/{task_type}/schedule:
+    get:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        example: asset
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: true
+        schema:
+          type: integer
+      - description: 页码
+        example: 1
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+      - description: 分页大小
+        example: 20
+        in: query
+        name: size
+        required: false
+        schema:
+          type: integer
+      - description: 状态
+        example: enabled
+        in: query
+        name: status
+        required: false
+        schema:
+          enum:
+          - enabled
+          - disabled
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 启用中
+            value: enabled
+          - description: ''
+            name: 未启用
+            value: disabled
+      - description: 任务名称，模糊搜索
+        example: ''
+        in: query
+        name: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  current: 1
+                  items:
+                  - cluster:
+                      cluster: default
+                      description: 默认集群
+                    created_at: '2026-03-19 10:25:07'
+                    crontype: week
+                    id: 14
+                    next_runtime: '2026-03-21 00:00:00'
+                    scope: all
+                    scope_data: []
+                    start_datetime: 00:00:00
+                    start_day: 6
+                    status: enabled
+                    task_flow: assets-probe
+                    task_name: 周期任务-0319
+                    xapp: []
+                    xpoc: []
+                  size: 20
+                  total: 1
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      current:
+                        title: 当前页码
+                        type: integer
+                      items:
+                        items:
+                          properties:
+                            cluster:
+                              properties:
+                                cluster:
+                                  title: 集群
+                                  type: string
+                                description:
+                                  title: 描述
+                                  type: string
+                              required:
+                              - cluster
+                              - description
+                              title: 集群信息
+                              type: object
+                              x-apifox-orders:
+                              - cluster
+                              - description
+                            created_at:
+                              title: 创建时间
+                              type: string
+                            crontype:
+                              enum:
+                              - day
+                              - week
+                              - month
+                              title: 周期类型
+                              type: string
+                              x-apifox-enum:
+                              - description: ''
+                                name: 每天
+                                value: day
+                              - description: ''
+                                name: 每周
+                                value: week
+                              - description: ''
+                                name: 每月
+                                value: month
+                            id:
+                              title: ID
+                              type: integer
+                            next_runtime:
+                              title: 下次运行时间
+                              type: string
+                            scope:
+                              description: 资产发现任务固定为all
+                              enum:
+                              - all
+                              - bu
+                              - tag
+                              title: 扫描资产范围
+                              type: string
+                              x-apifox-enum:
+                              - description: ''
+                                name: 全部资产
+                                value: all
+                              - description: ''
+                                name: 资产分组
+                                value: bu
+                              - description: ''
+                                name: 资产标签
+                                value: tag
+                            scope_data:
+                              description: 如果选择资产分组或者资产标签，这里保存对应ID列表
+                              items:
+                                type: integer
+                              title: 扫描资产范围值列表
+                              type: array
+                            start_datetime:
+                              title: 周期-开始时间
+                              type: string
+                            start_day:
+                              title: 周期-第几天
+                              type: integer
+                            status:
+                              enum:
+                              - enabled
+                              - disabled
+                              title: 状态
+                              type: string
+                              x-apifox-enum:
+                              - description: ''
+                                name: 启用
+                                value: enabled
+                              - description: ''
+                                name: 停用
+                                value: disabled
+                            task_flow:
+                              enum:
+                              - surface-probe
+                              - assets-probe
+                              - risk-inspect
+                              title: 任务编排
+                              type: string
+                              x-apifox-enum:
+                              - description: ''
+                                name: 暴露面识别
+                                value: surface-probe
+                              - description: ''
+                                name: 资产发现
+                                value: assets-probe
+                              - description: ''
+                                name: 风险评估
+                                value: risk-inspect
+                            task_name:
+                              title: 任务名称
+                              type: string
+                            xapp:
+                              description: 只暴露面识别任务使用
+                              items:
+                                type: string
+                              title: 指纹分组列表
+                              type: array
+                            xpoc:
+                              description: 只风险评估任务使用
+                              items:
+                                type: string
+                              title: 漏洞分组列表
+                              type: array
+                          type: object
+                          x-apifox-orders:
+                          - id
+                          - task_name
+                          - task_flow
+                          - cluster
+                          - scope
+                          - scope_data
+                          - xapp
+                          - xpoc
+                          - next_runtime
+                          - crontype
+                          - start_day
+                          - start_datetime
+                          - status
+                          - created_at
+                        type: array
+                      size:
+                        title: 分页大小
+                        type: integer
+                      total:
+                        title: 数据数量
+                        type: integer
+                    required:
+                    - current
+                    - size
+                    - total
+                    - items
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - current
+                    - size
+                    - total
+                    - items
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 周期任务列表
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/周期任务v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430138885-run
+    post:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        example: asset
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            examples: {}
+            schema:
+              properties:
+                cluster:
+                  title: 集群
+                  type: string
+                crontype:
+                  enum:
+                  - day
+                  - week
+                  - month
+                  title: 周期类型
+                  type: string
+                  x-apifox-enum:
+                  - description: ''
+                    name: 每天
+                    value: day
+                  - description: ''
+                    name: 每周
+                    value: week
+                  - description: ''
+                    name: 每月
+                    value: month
+                scope:
+                  description: 资产发现任务默认为all，不支持选择
+                  enum:
+                  - all
+                  - bu
+                  - tag
+                  title: 扫描资产范围
+                  type: string
+                  x-apifox-enum:
+                  - description: ''
+                    name: 全部资产
+                    value: all
+                  - description: ''
+                    name: 资产分组
+                    value: bu
+                  - description: ''
+                    name: 资产标签
+                    value: tag
+                scope_data:
+                  description: 资产分组或资产标签ID列表
+                  items:
+                    type: integer
+                  title: 扫描资产范围ID列表
+                  type: array
+                start_datetime:
+                  format: time
+                  title: 周期-开始时间
+                  type: string
+                start_day:
+                  maximum: 31
+                  minimum: 1
+                  title: 周期-第几天
+                  type: integer
+                status:
+                  enum:
+                  - enabled
+                  - disabled
+                  type: string
+                  x-apifox-enum:
+                  - description: ''
+                    name: 启用
+                    value: enabled
+                  - description: ''
+                    name: 停用
+                    value: disabled
+                task_name:
+                  title: 任务名称
+                  type: string
+                xapp:
+                  description: 只暴露面识别任务使用
+                  items:
+                    type: string
+                  title: 指纹分组ID列表
+                  type: array
+                xpoc:
+                  description: 只风险评估任务使用
+                  items:
+                    type: string
+                  title: 漏洞分组ID列表
+                  type: array
+              required:
+              - task_name
+              - cluster
+              - scope
+              - scope_data
+              - crontype
+              - start_day
+              - start_datetime
+              - status
+              type: object
+              x-apifox-orders:
+              - task_name
+              - cluster
+              - scope
+              - scope_data
+              - crontype
+              - start_day
+              - start_datetime
+              - status
+              - xapp
+              - xpoc
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  cluster:
+                    cluster: default
+                    description: 默认集群
+                  created_at: '2026-03-19 14:27:58'
+                  crontype: month
+                  id: 20
+                  next_runtime: '2026-04-11 00:00:00'
+                  scope: all
+                  scope_data: []
+                  start_datetime: 00:00:00
+                  start_day: 11
+                  status: enabled
+                  task_flow: assets-probe
+                  task_name: 测试
+                  xapp: []
+                  xpoc: []
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      cluster:
+                        properties:
+                          cluster:
+                            title: 集群名称
+                            type: string
+                          description:
+                            title: 集群描述
+                            type: string
+                        required:
+                        - cluster
+                        - description
+                        title: 集群
+                        type: object
+                        x-apifox-orders:
+                        - cluster
+                        - description
+                      created_at:
+                        title: 创建时间
+                        type: string
+                      crontype:
+                        title: 周期类型
+                        type: string
+                      id:
+                        title: ID
+                        type: integer
+                      next_runtime:
+                        title: 下次运行时间
+                        type: string
+                      scope:
+                        description: 资产发现任务固定为all
+                        title: 扫描范围
+                        type: string
+                      scope_data:
+                        description: 如果选择资产分组或者资产标签，这里保存对应ID列表
+                        items:
+                          type: string
+                        title: 扫描范围值列表
+                        type: array
+                      start_datetime:
+                        title: 周期-开始时间
+                        type: string
+                      start_day:
+                        title: 周期-第几天
+                        type: integer
+                      status:
+                        title: 状态
+                        type: string
+                      task_flow:
+                        title: 任务编排
+                        type: string
+                      task_name:
+                        title: 任务名称
+                        type: string
+                      xapp:
+                        description: 只暴露面识别任务使用
+                        items:
+                          type: string
+                        title: 指纹分组列表
+                        type: array
+                      xpoc:
+                        description: 只风险评估任务使用
+                        items:
+                          type: string
+                        title: 漏洞分组列表
+                        type: array
+                    required:
+                    - id
+                    - task_name
+                    - task_flow
+                    - cluster
+                    - scope
+                    - scope_data
+                    - xapp
+                    - xpoc
+                    - next_runtime
+                    - crontype
+                    - start_day
+                    - start_datetime
+                    - status
+                    - created_at
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - id
+                    - task_name
+                    - task_flow
+                    - cluster
+                    - scope
+                    - scope_data
+                    - xapp
+                    - xpoc
+                    - next_runtime
+                    - crontype
+                    - start_day
+                    - start_datetime
+                    - status
+                    - created_at
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 周期任务创建
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/周期任务v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430260833-run
+  /v1/task/{task_type}/schedule/batch-delete:
+    delete:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        example: asset
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            examples: {}
+            schema:
+              properties:
+                pk:
+                  items:
+                    type: integer
+                  title: ID列表
+                  type: array
+              required:
+              - pk
+              type: object
+              x-apifox-orders:
+              - pk
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  affected: 2
+                  ignored: 0
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      affected:
+                        title: 成功数量
+                        type: integer
+                      ignored:
+                        title: 忽略数量
+                        type: integer
+                    required:
+                    - affected
+                    - ignored
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - affected
+                    - ignored
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 周期任务批量删除
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/周期任务v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430362172-run
+  /v1/task/{task_type}/schedule/status:
+    post:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        example: asset
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            examples: {}
+            schema:
+              properties:
+                pk:
+                  items:
+                    type: integer
+                  title: ID列表
+                  type: array
+                status:
+                  enum:
+                  - enabled
+                  - disabled
+                  type: string
+                  x-apifox-enum:
+                  - description: ''
+                    name: 启用
+                    value: enabled
+                  - description: ''
+                    name: 停用
+                    value: disabled
+              required:
+              - pk
+              - status
+              type: object
+              x-apifox-orders:
+              - pk
+              - status
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  affected: 1
+                  ignored: 0
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      affected:
+                        title: 成功数量
+                        type: integer
+                      ignored:
+                        title: 忽略数量
+                        type: integer
+                    required:
+                    - affected
+                    - ignored
+                    title: 数据
+                    type: object
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 周期任务批量切换状态
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/周期任务v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430366048-run
+  /v1/task/{task_type}/schedule/{id}:
+    get:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 任务ID
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  cluster: default
+                  created_at: '2026-03-19 10:25:07'
+                  crontype: week
+                  id: 14
+                  next_runtime: '2026-03-21 00:00:00'
+                  scope: all
+                  scope_data: []
+                  start_datetime: 00:00:00
+                  start_day: 6
+                  status: enabled
+                  task_flow: assets-probe
+                  task_name: 周期任务-0319
+                  xapp: []
+                  xpoc: []
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      cluster:
+                        title: 集群
+                        type: string
+                      created_at:
+                        title: 创建时间
+                        type: string
+                      crontype:
+                        title: 周期类型
+                        type: string
+                      id:
+                        title: ID
+                        type: integer
+                      next_runtime:
+                        title: 下次运行时间
+                        type: string
+                      scope:
+                        description: 资产发现任务固定为all
+                        enum:
+                        - all
+                        title: 扫描范围
+                        type: string
+                        x-apifox-enum:
+                        - description: ''
+                          name: 全部
+                          value: all
+                      scope_data:
+                        description: 如果选择资产分组或者资产标签，这里保存对应ID列表
+                        items:
+                          type: string
+                        title: 扫描范围值列表
+                        type: array
+                      start_datetime:
+                        title: 周期-开始时间
+                        type: string
+                      start_day:
+                        title: 周期-第几天
+                        type: integer
+                      status:
+                        enum:
+                        - enabled
+                        - disabled
+                        title: 状态
+                        type: string
+                        x-apifox-enum:
+                        - description: ''
+                          name: 启用
+                          value: enabled
+                        - description: ''
+                          name: 停用
+                          value: disabled
+                      task_flow:
+                        title: 任务编排
+                        type: string
+                      task_name:
+                        title: 任务名称
+                        type: string
+                      xapp:
+                        description: 只暴露面识别任务使用
+                        items:
+                          type: string
+                        title: 指纹分组列表
+                        type: array
+                      xpoc:
+                        description: 只风险评估任务使用
+                        items:
+                          type: string
+                        title: 漏洞分组列表
+                        type: array
+                    required:
+                    - id
+                    - task_name
+                    - task_flow
+                    - cluster
+                    - scope
+                    - scope_data
+                    - xapp
+                    - xpoc
+                    - next_runtime
+                    - crontype
+                    - start_day
+                    - start_datetime
+                    - status
+                    - created_at
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - id
+                    - task_name
+                    - task_flow
+                    - cluster
+                    - scope
+                    - scope_data
+                    - xapp
+                    - xpoc
+                    - next_runtime
+                    - crontype
+                    - start_day
+                    - start_datetime
+                    - status
+                    - created_at
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 周期任务查看
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/周期任务v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430190470-run
+    patch:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        example: asset
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 任务ID
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            examples: {}
+            schema:
+              properties:
+                cluster:
+                  title: 集群
+                  type: string
+                crontype:
+                  enum:
+                  - day
+                  - week
+                  - month
+                  title: 周期类型
+                  type: string
+                  x-apifox-enum:
+                  - description: ''
+                    name: 每天
+                    value: day
+                  - description: ''
+                    name: 每周
+                    value: week
+                  - description: ''
+                    name: 每月
+                    value: month
+                scope:
+                  enum:
+                  - all
+                  - bu
+                  - tag
+                  title: 扫描资产范围
+                  type: string
+                  x-apifox-enum:
+                  - description: ''
+                    name: 全部资产
+                    value: all
+                  - description: ''
+                    name: 资产分组
+                    value: bu
+                  - description: ''
+                    name: 资产标签
+                    value: tag
+                scope_data:
+                  description: 资产分组或资产标签ID列表
+                  items:
+                    type: integer
+                  title: 扫描资产范围ID列表
+                  type: array
+                start_datetime:
+                  format: time
+                  title: 周期-开始时间
+                  type: string
+                start_day:
+                  maximum: 31
+                  minimum: 1
+                  title: 周期-第几天
+                  type: integer
+                status:
+                  enum:
+                  - enabled
+                  - disabled
+                  type: string
+                  x-apifox-enum:
+                  - description: ''
+                    name: 启用
+                    value: enabled
+                  - description: ''
+                    name: 停用
+                    value: disabled
+                task_name:
+                  title: 任务名称
+                  type: string
+                xapp:
+                  description: 只暴露面识别任务使用
+                  items:
+                    type: string
+                  title: 指纹分组ID列表
+                  type: array
+                xpoc:
+                  description: 只风险评估任务使用
+                  items:
+                    type: string
+                  title: 漏洞分组列表
+                  type: array
+              required:
+              - task_name
+              - cluster
+              - scope
+              - scope_data
+              - crontype
+              - start_day
+              - start_datetime
+              - status
+              type: object
+              x-apifox-orders:
+              - task_name
+              - cluster
+              - scope
+              - scope_data
+              - crontype
+              - start_day
+              - start_datetime
+              - status
+              - xapp
+              - xpoc
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  cluster:
+                    cluster: default
+                    description: 默认集群
+                  created_at: '2026-03-19 14:18:47'
+                  crontype: month
+                  id: 18
+                  next_runtime: '2026-04-11 00:00:00'
+                  scope: all
+                  scope_data: []
+                  start_datetime: 00:00:00
+                  start_day: 11
+                  status: enabled
+                  task_flow: assets-probe
+                  task_name: 测试1
+                  xapp: []
+                  xpoc: []
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      cluster:
+                        properties:
+                          cluster:
+                            title: 集群名称
+                            type: string
+                          description:
+                            title: 集群描述
+                            type: string
+                        required:
+                        - cluster
+                        - description
+                        title: 集群
+                        type: object
+                        x-apifox-orders:
+                        - cluster
+                        - description
+                      created_at:
+                        title: 创建时间
+                        type: string
+                      crontype:
+                        title: 周期类型
+                        type: string
+                      id:
+                        title: ID
+                        type: integer
+                      next_runtime:
+                        title: 下次运行时间
+                        type: string
+                      scope:
+                        description: 资产发现任务固定为all
+                        title: 扫描范围
+                        type: string
+                      scope_data:
+                        description: 如果选择资产分组或者资产标签，这里保存对应ID列表
+                        items:
+                          type: string
+                        title: 扫描范围值列表
+                        type: array
+                      start_datetime:
+                        title: 周期-开始时间
+                        type: string
+                      start_day:
+                        title: 周期-第几天
+                        type: integer
+                      status:
+                        title: 状态
+                        type: string
+                      task_flow:
+                        title: 任务编排
+                        type: string
+                      task_name:
+                        title: 任务名称
+                        type: string
+                      xapp:
+                        description: 只暴露面识别任务使用
+                        items:
+                          type: string
+                        title: 指纹分组列表
+                        type: array
+                      xpoc:
+                        description: 只风险评估任务使用
+                        items:
+                          type: string
+                        title: 漏洞分组列表
+                        type: array
+                    required:
+                    - id
+                    - task_name
+                    - task_flow
+                    - cluster
+                    - scope
+                    - scope_data
+                    - xapp
+                    - xpoc
+                    - next_runtime
+                    - crontype
+                    - start_day
+                    - start_datetime
+                    - status
+                    - created_at
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - id
+                    - task_name
+                    - task_flow
+                    - cluster
+                    - scope
+                    - scope_data
+                    - xapp
+                    - xpoc
+                    - next_runtime
+                    - crontype
+                    - start_day
+                    - start_datetime
+                    - status
+                    - created_at
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 周期任务编辑
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/周期任务v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430351092-run
+  /v1/task/{task_type}/flow:
+    get:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        example: asset
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: true
+        schema:
+          type: integer
+      - description: 任务ID
+        example: 42
+        in: query
+        name: task_id
+        required: true
+        schema:
+          type: integer
+      - description: 运行状态
+        in: query
+        name: status
+        required: false
+        schema:
+          enum:
+          - waiting
+          - running
+          - finished
+          - failed
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 等待运行
+            value: waiting
+          - description: ''
+            name: 运行中
+            value: running
+          - description: ''
+            name: 已完成
+            value: finished
+          - description: ''
+            name: 运行失败
+            value: failed
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  current: 1
+                  items:
+                  - created_at: '2026-03-19 15:35:38'
+                    id: 575
+                    module: root_domain_icp_zt
+                    name: 备案数据发现主域名-企业主体
+                    order_no: 10
+                    progress: 0
+                    status: finished
+                    task_flow: assets-probe
+                    task_id: 42
+                    updated_at: '2026-03-19 15:35:41'
+                  - created_at: '2026-03-19 15:35:38'
+                    id: 576
+                    module: root_domain_whois
+                    name: WHOIS-数据发现主域名
+                    order_no: 10
+                    progress: 0
+                    status: finished
+                    task_flow: assets-probe
+                    task_id: 42
+                    updated_at: '2026-03-19 15:35:41'
+                  - created_at: '2026-03-19 15:35:38'
+                    id: 577
+                    module: root_domain_icp_ym
+                    name: 备案数据发现主域名-域名
+                    order_no: 20
+                    progress: 0
+                    status: finished
+                    task_flow: assets-probe
+                    task_id: 42
+                    updated_at: '2026-03-19 15:35:43'
+                  - created_at: '2026-03-19 15:35:38'
+                    id: 578
+                    module: sslcert_from_sonar
+                    name: Sonar-数据发现归属客户证书-SSL
+                    order_no: 20
+                    progress: 0
+                    status: finished
+                    task_flow: assets-probe
+                    task_id: 42
+                    updated_at: '2026-03-19 15:35:43'
+                  - created_at: '2026-03-19 15:35:38'
+                    id: 579
+                    module: root_domain_meta_data
+                    name: API-获取主域名实时数据-META
+                    order_no: 20
+                    progress: 0
+                    status: finished
+                    task_flow: assets-probe
+                    task_id: 42
+                    updated_at: '2026-03-19 15:35:44'
+                  - created_at: '2026-03-19 15:35:38'
+                    id: 580
+                    module: database.assets_filter_status
+                    name: 数据一致性校准-已排除、已删除主域名和子域名
+                    order_no: 30
+                    progress: 0
+                    status: finished
+                    task_flow: assets-probe
+                    task_id: 42
+                    updated_at: '2026-03-19 15:35:46'
+                  - created_at: '2026-03-19 15:35:38'
+                    id: 581
+                    module: resolver_root_domain
+                    name: 主域名解析记录（NS/MX）
+                    order_no: 40
+                    progress: 0
+                    status: finished
+                    task_flow: assets-probe
+                    task_id: 42
+                    updated_at: '2026-03-19 15:35:50'
+                  - created_at: '2026-03-19 15:35:38'
+                    id: 582
+                    module: subdomain_finder
+                    name: 子域名发现任务组
+                    order_no: 50
+                    progress: 0
+                    status: finished
+                    task_flow: assets-probe
+                    task_id: 42
+                    updated_at: '2026-03-19 15:39:16'
+                  - created_at: '2026-03-19 15:35:38'
+                    id: 583
+                    module: resolver_subdomain
+                    name: 子域名解析记录（A/AAAA）
+                    order_no: 60
+                    progress: 0
+                    status: finished
+                    task_flow: assets-probe
+                    task_id: 42
+                    updated_at: '2026-03-19 15:40:59'
+                  - created_at: '2026-03-19 15:35:38'
+                    id: 584
+                    module: subdomain_developer
+                    name: 开发、测试、预发、生产环境的子域名资产发现
+                    order_no: 70
+                    progress: 0
+                    status: running
+                    task_flow: assets-probe
+                    task_id: 42
+                    updated_at: '2026-03-19 15:40:59'
+                  size: 10
+                  total: 17
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      current:
+                        type: integer
+                      items:
+                        items:
+                          properties:
+                            created_at:
+                              title: 创建时间
+                              type: string
+                            id:
+                              title: ID
+                              type: integer
+                            module:
+                              title: 组件
+                              type: string
+                            name:
+                              title: 名称
+                              type: string
+                            order_no:
+                              title: 顺序
+                              type: integer
+                            progress:
+                              title: 任务数
+                              type: integer
+                            status:
+                              title: 状态
+                              type: string
+                            task_flow:
+                              title: 任务编排
+                              type: string
+                            task_id:
+                              title: 任务ID
+                              type: integer
+                            updated_at:
+                              title: 更新时间
+                              type: string
+                          required:
+                          - id
+                          - task_id
+                          - task_flow
+                          - name
+                          - module
+                          - progress
+                          - order_no
+                          - status
+                          - created_at
+                          - updated_at
+                          type: object
+                          x-apifox-orders:
+                          - id
+                          - task_id
+                          - task_flow
+                          - name
+                          - module
+                          - progress
+                          - order_no
+                          - status
+                          - created_at
+                          - updated_at
+                        type: array
+                      size:
+                        type: integer
+                      total:
+                        type: integer
+                    required:
+                    - current
+                    - size
+                    - total
+                    - items
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - current
+                    - size
+                    - total
+                    - items
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 编排实例列表
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/编排实例v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430476056-run
+  /v1/task/{task_type}/flow/reboot:
+    post:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        example: asset
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: false
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            examples: {}
+            schema:
+              properties:
+                pk:
+                  items:
+                    type: integer
+                  title: ID列表
+                  type: array
+              required:
+              - pk
+              type: object
+              x-apifox-orders:
+              - pk
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  affected: 1
+                  ignored: 0
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      affected:
+                        title: 成功数量
+                        type: integer
+                      ignored:
+                        title: 忽略数量
+                        type: integer
+                    required:
+                    - affected
+                    - ignored
+                    title: 数据
+                    type: object
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 编排实例批量重跑
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/编排实例v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430482598-run
+  /v1/task/{task_type}/flow/status/count:
+    get:
+      deprecated: false
+      description: ''
+      parameters:
+      - description: 任务类型
+        example: asset
+        in: path
+        name: task_type
+        required: true
+        schema:
+          enum:
+          - asset
+          - attack
+          - risk
+          type: string
+          x-apifox-enum:
+          - description: ''
+            name: 资产发现
+            value: asset
+          - description: ''
+            name: 暴露面识别
+            value: attack
+          - description: ''
+            name: 风险评估
+            value: risk
+      - description: 空间ID
+        example: 1
+        in: query
+        name: space
+        required: true
+        schema:
+          type: integer
+      - description: 任务ID
+        example: 42
+        in: query
+        name: task_id
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              example:
+                code: 200
+                data:
+                  failed: 0
+                  finished: 9
+                  running: 1
+                  waiting: 7
+                message: ''
+              schema:
+                properties:
+                  code:
+                    title: 响应码
+                    type: integer
+                  data:
+                    properties:
+                      failed:
+                        title: 运行失败数量
+                        type: integer
+                      finished:
+                        title: 已完成数量
+                        type: integer
+                      running:
+                        title: 运行中数量
+                        type: integer
+                      waiting:
+                        title: 等待调度数量
+                        type: integer
+                    required:
+                    - waiting
+                    - running
+                    - finished
+                    - failed
+                    title: 数据
+                    type: object
+                    x-apifox-orders:
+                    - waiting
+                    - running
+                    - finished
+                    - failed
+                  message:
+                    title: 消息
+                    type: string
+                required:
+                - code
+                - message
+                - data
+                type: object
+                x-apifox-orders:
+                - code
+                - message
+                - data
+          description: ''
+          headers: {}
+          x-apifox-name: 成功
+      security:
+      - apikey-header-TOKEN: []
+      summary: 编排实例状态数量
+      tags:
+      - 任务/任务实例v2
+      x-apifox-folder: 任务/编排实例v2
+      x-apifox-status: developing
+      x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430484591-run

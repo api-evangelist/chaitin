@@ -1,0 +1,137 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account exportrecord/{task_id}/download API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: exportrecord/{task_id}/download
+  description: 导出记录/task_id 参数/下载
+paths:
+  /exportrecord/{task_id}/download:
+    post:
+      summary: 导出结果下载
+      deprecated: false
+      description: ''
+      tags:
+      - exportrecord/{task_id}/download
+      parameters:
+      - name: task_id
+        in: path
+        description: ''
+        required: true
+        example: 4854d81d-8cc5-48cf-b092-1a4ade6e6636
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      etag:
+                        type: string
+                      relative_path:
+                        type: string
+                      last_modified:
+                        type: string
+                      size:
+                        type: integer
+                      content_type:
+                        type: string
+                      filename:
+                        type: string
+                      url:
+                        type: string
+                      url_path:
+                        type: string
+                    required:
+                    - etag
+                    - relative_path
+                    - last_modified
+                    - size
+                    - content_type
+                    - filename
+                    - url
+                    - url_path
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  etag: 698854dc9cdecab0af1dc62f66dadd94
+                  relative_path: eeff7c64-5070-4582-8b93-fbcc57db7771/{company_id}/download_tmp/ueba/测试-46ef4574aa134f3b80959583ea18794a.zip
+                  last_modified: '2024-02-23T02:52:09Z'
+                  size: 4925
+                  content_type: application/octet-stream
+                  filename: 测试-46ef4574aa134f3b80959583ea18794a.zip
+                  url: https://192.168.89.26:8443/oss-qzh/eeff7c64-5070-4582-8b93-fbcc57db7771/%7Bcompany_id%7D/download_tmp/ueba/%E6%B5%8B%E8%AF%95-46ef4574aa134f3b80959583ea18794a.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20240226%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240226T063930Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27%25E6%25B5%258B%25E8%25AF%2595-46ef4574aa134f3b80959583ea18794a.zip&X-Amz-Signature=d2f439786b0fae73e11b7b954e932747eaa8b8e39e8edbe39b3fe08871180f3d
+                  url_path: /oss-qzh/eeff7c64-5070-4582-8b93-fbcc57db7771/%7Bcompany_id%7D/download_tmp/ueba/%E6%B5%8B%E8%AF%95-46ef4574aa134f3b80959583ea18794a.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20240226%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240226T063930Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27%25E6%25B5%258B%25E8%25AF%2595-46ef4574aa134f3b80959583ea18794a.zip&X-Amz-Signature=d2f439786b0fae73e11b7b954e932747eaa8b8e39e8edbe39b3fe08871180f3d
+      security: []

@@ -1,0 +1,509 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account ueba/index/rank API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: ueba/index/rank
+  description: UEBA 分析/索引/排行
+paths:
+  /ueba/index/rank:
+    post:
+      summary: UEBA首页排行
+      deprecated: false
+      description: ''
+      tags:
+      - ueba/index/rank
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                field:
+                  type: string
+                is_fav:
+                  type: boolean
+              required:
+              - field
+              - is_fav
+            example:
+              field: device_id
+              is_fav: false
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      total:
+                        type: integer
+                      search_total:
+                        type: integer
+                      results:
+                        type: object
+                        properties:
+                          bucket:
+                            type: object
+                            properties:
+                              doc_count_error_upper_bound:
+                                type: integer
+                              sum_other_doc_count:
+                                type: integer
+                              buckets:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    key:
+                                      type: string
+                                    doc_count:
+                                      type: integer
+                                    total_score:
+                                      type: object
+                                      properties:
+                                        value:
+                                          type: integer
+                                      required:
+                                      - value
+                                    info:
+                                      type: object
+                                      properties:
+                                        hits:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: object
+                                              properties:
+                                                value:
+                                                  type: integer
+                                                relation:
+                                                  type: string
+                                              required:
+                                              - value
+                                              - relation
+                                            max_score:
+                                              type: number
+                                            hits:
+                                              type: array
+                                              items:
+                                                type: object
+                                                properties:
+                                                  _index:
+                                                    type: string
+                                                  _type:
+                                                    type: string
+                                                  _id:
+                                                    type: string
+                                                  _score:
+                                                    type: number
+                                                  _source:
+                                                    type: object
+                                                    properties:
+                                                      status:
+                                                        type: string
+                                                      category:
+                                                        type: string
+                                                      device_id:
+                                                        type: string
+                                                      device_code:
+                                                        type: string
+                                                      ip_address:
+                                                        type: string
+                                                      console_user:
+                                                        type: string
+                                                      os_name:
+                                                        type: string
+                                                      os_friendly_name:
+                                                        type: string
+                                                      staff_id:
+                                                        type: string
+                                                      staff_name:
+                                                        type: string
+                                                      staff_code:
+                                                        type: string
+                                                      staff_email:
+                                                        type: string
+                                                      staff_description:
+                                                        type: string
+                                                      staff_tag_ids:
+                                                        type: array
+                                                        items: {}
+                                                      staff_tags:
+                                                        type: array
+                                                        items: {}
+                                                      dept_ids:
+                                                        type: array
+                                                        items:
+                                                          type: string
+                                                      dept_names:
+                                                        type: array
+                                                        items:
+                                                          type: string
+                                                      dept_paths:
+                                                        type: array
+                                                        items:
+                                                          type: string
+                                                      event_id:
+                                                        type: string
+                                                      agent_version:
+                                                        type: string
+                                                      company_id:
+                                                        type: string
+                                                      policy_id:
+                                                        type: string
+                                                      log_cnt:
+                                                        type: integer
+                                                      timestamp:
+                                                        type: string
+                                                      '@timestamp':
+                                                        type: integer
+                                                      ueba_id:
+                                                        type: string
+                                                      ueba_status:
+                                                        type: string
+                                                      ueba_source:
+                                                        type: string
+                                                      ueba_category:
+                                                        type: string
+                                                      ueba_description:
+                                                        type: string
+                                                      ueba_expression_fields:
+                                                        type: object
+                                                        properties:
+                                                          body:
+                                                            type: object
+                                                            properties:
+                                                              aggs:
+                                                                type: object
+                                                                properties:
+                                                                  count:
+                                                                    type: object
+                                                                    properties:
+                                                                      cardinality:
+                                                                        type: object
+                                                                        properties:
+                                                                          field:
+                                                                            type: string
+                                                                          precision_threshold:
+                                                                            type: integer
+                                                                        required:
+                                                                        - field
+                                                                        - precision_threshold
+                                                                    required:
+                                                                    - cardinality
+                                                                required:
+                                                                - count
+                                                              query:
+                                                                type: object
+                                                                properties:
+                                                                  bool:
+                                                                    type: object
+                                                                    properties:
+                                                                      must:
+                                                                        type: array
+                                                                        items:
+                                                                          type: object
+                                                                          properties:
+                                                                            term:
+                                                                              type: object
+                                                                              properties:
+                                                                                company_id:
+                                                                                  type: string
+                                                                              required:
+                                                                              - company_id
+                                                                    required:
+                                                                    - must
+                                                                required:
+                                                                - bool
+                                                              collapse:
+                                                                type: object
+                                                                properties:
+                                                                  field:
+                                                                    type: string
+                                                                  inner_hits:
+                                                                    type: object
+                                                                    properties:
+                                                                      name:
+                                                                        type: string
+                                                                      size:
+                                                                        type: integer
+                                                                    required:
+                                                                    - name
+                                                                    - size
+                                                                required:
+                                                                - field
+                                                                - inner_hits
+                                                              track_total_hits:
+                                                                type: boolean
+                                                            required:
+                                                            - aggs
+                                                            - query
+                                                            - collapse
+                                                            - track_total_hits
+                                                          queries:
+                                                            type: array
+                                                            items: {}
+                                                        required:
+                                                        - body
+                                                        - queries
+                                                      ueba_expression:
+                                                        type: string
+                                                      ueba_score:
+                                                        type: integer
+                                                      ueba_windows_s:
+                                                        type: integer
+                                                      ueba_threshold:
+                                                        type: integer
+                                                      time:
+                                                        type: integer
+                                                      begin_timestamp:
+                                                        type: integer
+                                                      end_timestamp:
+                                                        type: integer
+                                                      begin:
+                                                        type: string
+                                                      end:
+                                                        type: string
+                                                      ueba_category_display:
+                                                        type: string
+                                                      score_diff:
+                                                        type: integer
+                                                      score_diff_rate:
+                                                        type: string
+                                                    required:
+                                                    - status
+                                                    - category
+                                                    - device_id
+                                                    - device_code
+                                                    - ip_address
+                                                    - console_user
+                                                    - os_name
+                                                    - os_friendly_name
+                                                    - staff_id
+                                                    - staff_name
+                                                    - staff_code
+                                                    - staff_email
+                                                    - staff_description
+                                                    - staff_tag_ids
+                                                    - staff_tags
+                                                    - dept_ids
+                                                    - dept_names
+                                                    - dept_paths
+                                                    - event_id
+                                                    - agent_version
+                                                    - company_id
+                                                    - policy_id
+                                                    - log_cnt
+                                                    - timestamp
+                                                    - '@timestamp'
+                                                    - ueba_id
+                                                    - ueba_status
+                                                    - ueba_source
+                                                    - ueba_category
+                                                    - ueba_description
+                                                    - ueba_expression_fields
+                                                    - ueba_expression
+                                                    - ueba_score
+                                                    - ueba_windows_s
+                                                    - ueba_threshold
+                                                    - time
+                                                    - begin_timestamp
+                                                    - end_timestamp
+                                                    - begin
+                                                    - end
+                                                    - ueba_category_display
+                                                    - score_diff
+                                                    - score_diff_rate
+                                          required:
+                                          - total
+                                          - max_score
+                                          - hits
+                                      required:
+                                      - hits
+                            required:
+                            - doc_count_error_upper_bound
+                            - sum_other_doc_count
+                            - buckets
+                        required:
+                        - bucket
+                    required:
+                    - index
+                    - total
+                    - search_total
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  index:
+                  - qzhddr_ueba
+                  total: 213
+                  search_total: 213
+                  results:
+                    bucket:
+                      doc_count_error_upper_bound: 0
+                      sum_other_doc_count: 0
+                      buckets:
+                      - key: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                        doc_count: 213
+                        total_score:
+                          value: 12780
+                        info:
+                          hits:
+                            total:
+                              value: 213
+                              relation: eq
+                            max_score: 1.0001235
+                            hits:
+                            - _index: .ds-qzhddr_ueba_s-2023.12.27-000001
+                              _type: _doc
+                              _id: DJNcr4wBNV4rKln5v5Wc
+                              _score: 1.0001235
+                              _source:
+                                status: created
+                                category: channel
+                                device_id: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                                device_code: PC-000005
+                                ip_address: 192.168.96.46
+                                console_user: jasonlee
+                                os_name: macOS
+                                os_friendly_name: macOS 13.5.1
+                                staff_id: 100faf26-d362-4ca2-befb-3ac8c22673eb
+                                staff_name: 何睿
+                                staff_code: e480e229f4fa3a21
+                                staff_email: ''
+                                staff_description: ''
+                                staff_tag_ids: []
+                                staff_tags: []
+                                dept_ids:
+                                - 6cbf127d-20f5-4322-93b5-e4a515ae356a
+                                dept_names:
+                                - test
+                                dept_paths:
+                                - default/test
+                                event_id: 51C58702-0213-462E-951B-1B96388C0325
+                                agent_version: 3.0.303
+                                company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                policy_id: 21f9c2cb-5c86-47ab-a514-72bcade6facc
+                                log_cnt: 8
+                                timestamp: '2023-12-28T07:39:00Z'
+                                '@timestamp': 1703749140332
+                                ueba_id: 332d91f9-c264-4192-a6cb-46fdedb3292e
+                                ueba_status: activated
+                                ueba_source: policy_channel_log
+                                ueba_category: outgoing
+                                ueba_description: ''
+                                ueba_expression_fields:
+                                  body:
+                                    aggs:
+                                      count:
+                                        cardinality:
+                                          field: device_id
+                                          precision_threshold: 40000
+                                    query:
+                                      bool:
+                                        must:
+                                        - term:
+                                            company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                    collapse:
+                                      field: device_id
+                                      inner_hits:
+                                        name: device_id
+                                        size: 100
+                                    track_total_hits: true
+                                  queries: []
+                                ueba_expression: SELF
+                                ueba_score: 60
+                                ueba_windows_s: 90000000
+                                ueba_threshold: 1
+                                time: 1703749140332
+                                begin_timestamp: 1700114112000
+                                end_timestamp: 1698988709000
+                                begin: '2023-11-16T05:55:12Z'
+                                end: '2023-11-03T05:18:29Z'
+                                ueba_category_display: 外发行为
+                                score_diff: 12780
+                                score_diff_rate: '-'
+      security: []

@@ -1,0 +1,225 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account statistic/device_info_summary API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: statistic/device_info_summary
+  description: 统计分析/设备信息汇总
+paths:
+  /statistic/device_info_summary:
+    post:
+      summary: 终端信息统计
+      deprecated: false
+      description: ''
+      tags:
+      - statistic/device_info_summary
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      agent_version_distribution:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            family:
+                              type: string
+                            agent_versions:
+                              type: object
+                              properties:
+                                3.3.4:
+                                  type: integer
+                                3.2.62:
+                                  type: integer
+                                3.3.1:
+                                  type: integer
+                                3.3.16:
+                                  type: integer
+                                3.3.15:
+                                  type: integer
+                                3.3.7:
+                                  type: integer
+                                3.3.6:
+                                  type: integer
+                              required:
+                              - 3.3.4
+                            other:
+                              type: integer
+                            other_version:
+                              type: array
+                              items: {}
+                            agent_versions_order:
+                              type: object
+                              properties:
+                                3.3.4:
+                                  type: integer
+                                3.3.1:
+                                  type: integer
+                                3.2.62:
+                                  type: integer
+                                3.3.7:
+                                  type: integer
+                                3.3.16:
+                                  type: integer
+                                3.3.15:
+                                  type: integer
+                                3.3.6:
+                                  type: integer
+                              required:
+                              - 3.3.4
+                          required:
+                          - family
+                          - agent_versions
+                          - other
+                          - other_version
+                          - agent_versions_order
+                      device_summary:
+                        type: object
+                        properties:
+                          unbind_device:
+                            type: integer
+                          invalid_device:
+                            type: integer
+                          uncompliance_device:
+                            type: integer
+                          unhealth_device:
+                            type: integer
+                          deactivated_deivce:
+                            type: integer
+                        required:
+                        - unbind_device
+                        - invalid_device
+                        - uncompliance_device
+                        - unhealth_device
+                        - deactivated_deivce
+                    required:
+                    - agent_version_distribution
+                    - device_summary
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  agent_version_distribution:
+                  - family: macOS
+                    agent_versions:
+                      3.3.4: 8
+                      3.2.62: 1
+                      3.3.1: 1
+                    other: 0
+                    other_version: []
+                    agent_versions_order:
+                      3.3.4: 8
+                      3.3.1: 1
+                      3.2.62: 1
+                  - family: Windows
+                    agent_versions:
+                      3.3.16: 4
+                      3.3.15: 3
+                      3.3.7: 1
+                    other: 0
+                    other_version: []
+                    agent_versions_order:
+                      3.3.7: 1
+                      3.3.16: 4
+                      3.3.15: 3
+                  - family: UOS
+                    agent_versions:
+                      3.3.6: 1
+                    other: 0
+                    other_version: []
+                    agent_versions_order:
+                      3.3.6: 1
+                  - family: Kylin
+                    agent_versions:
+                      3.3.4: 1
+                    other: 0
+                    other_version: []
+                    agent_versions_order:
+                      3.3.4: 1
+                  - family: Linux
+                    agent_versions:
+                      3.3.4: 1
+                    other: 0
+                    other_version: []
+                    agent_versions_order:
+                      3.3.4: 1
+                  device_summary:
+                    unbind_device: 12
+                    invalid_device: 2
+                    uncompliance_device: 18
+                    unhealth_device: 6
+                    deactivated_deivce: 1
+      security: []

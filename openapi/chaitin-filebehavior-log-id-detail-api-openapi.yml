@@ -1,0 +1,446 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account filebehavior/{log_id}/detail API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: filebehavior/{log_id}/detail
+  description: 文件行为/log_id 参数/详情
+paths:
+  /filebehavior/{log_id}/detail:
+    post:
+      summary: 数据行为详情
+      deprecated: false
+      description: ''
+      tags:
+      - filebehavior/{log_id}/detail
+      parameters:
+      - name: log_id
+        in: path
+        description: ''
+        required: true
+        example: Ku_2nJEB4rYwLyMOKdyZ
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      uid:
+                        type: string
+                      pp_id:
+                        type: string
+                      mac:
+                        type: string
+                      app_account:
+                        type: string
+                      p_user:
+                        type: string
+                      app:
+                        type: string
+                      time:
+                        type: integer
+                      p_sha256:
+                        type: string
+                      company_id:
+                        type: string
+                      p_md5:
+                        type: string
+                      p_path:
+                        type: string
+                      pp_name:
+                        type: string
+                      is_sign_valid:
+                        type: boolean
+                      p_name:
+                        type: string
+                      p_cmdline:
+                        type: 'null'
+                      operation:
+                        type: string
+                      os_name:
+                        type: string
+                      event_id:
+                        type: string
+                      p_id:
+                        type: string
+                      device_code:
+                        type: string
+                      agent_version:
+                        type: string
+                      p_sign:
+                        type: string
+                      src_files:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            md5_hash:
+                              type: string
+                            file_suffix:
+                              type: string
+                            file_loc_id:
+                              type: string
+                            meta_original:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  process_name:
+                                    type: string
+                                  urls:
+                                    type: array
+                                    items: {}
+                            filesize:
+                              type: integer
+                            file_updated_time:
+                              type: integer
+                            is_compressed:
+                              type: boolean
+                            is_hidden:
+                              type: boolean
+                            is_password_protected:
+                              type: boolean
+                            filename:
+                              type: string
+                            file_created_time:
+                              type: integer
+                            filepath:
+                              type: string
+                            metasource:
+                              type: array
+                              items: {}
+                            file_type:
+                              type: string
+                            file_created_timestamp:
+                              type: string
+                            file_updated_timestamp:
+                              type: string
+                      hostname:
+                        type: string
+                      permission:
+                        type: object
+                        properties:
+                          screen_record:
+                            type: boolean
+                          disk:
+                            type: boolean
+                          network:
+                            type: boolean
+                        required:
+                        - screen_record
+                        - disk
+                        - network
+                      app_version:
+                        type: string
+                      app_name:
+                        type: string
+                      console_user:
+                        type: string
+                      os_friendly_name:
+                        type: string
+                      ip_address:
+                        type: string
+                      bundle_id:
+                        type: string
+                      dst_files:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            md5_hash:
+                              type: string
+                            file_suffix:
+                              type: string
+                            file_loc_id:
+                              type: string
+                            meta_original:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  process_name:
+                                    type: string
+                                  urls:
+                                    type: array
+                                    items: {}
+                            filesize:
+                              type: integer
+                            file_updated_time:
+                              type: integer
+                            is_compressed:
+                              type: boolean
+                            is_hidden:
+                              type: boolean
+                            is_password_protected:
+                              type: boolean
+                            filename:
+                              type: string
+                            file_created_time:
+                              type: integer
+                            filepath:
+                              type: string
+                            metasource:
+                              type: array
+                              items: {}
+                            file_type:
+                              type: string
+                            file_created_timestamp:
+                              type: string
+                            file_updated_timestamp:
+                              type: string
+                      status:
+                        type: string
+                      device_id:
+                        type: string
+                      '@timestamp':
+                        type: integer
+                      timestamp:
+                        type: string
+                      created_timestamp:
+                        type: string
+                      category:
+                        type: string
+                      staff_id:
+                        type: string
+                      staff_name:
+                        type: string
+                      staff_email:
+                        type: string
+                      staff_code:
+                        type: string
+                      staff_tag_ids:
+                        type: array
+                        items: {}
+                      staff_tags:
+                        type: array
+                        items: {}
+                      dept_ids:
+                        type: array
+                        items:
+                          type: string
+                      dept_names:
+                        type: array
+                        items:
+                          type: string
+                      dept_paths:
+                        type: array
+                        items:
+                          type: string
+                      action_display_name:
+                        type: string
+                    required:
+                    - uid
+                    - pp_id
+                    - mac
+                    - app_account
+                    - p_user
+                    - app
+                    - time
+                    - p_sha256
+                    - company_id
+                    - p_md5
+                    - p_path
+                    - pp_name
+                    - is_sign_valid
+                    - p_name
+                    - p_cmdline
+                    - operation
+                    - os_name
+                    - event_id
+                    - p_id
+                    - device_code
+                    - agent_version
+                    - p_sign
+                    - src_files
+                    - hostname
+                    - permission
+                    - app_version
+                    - app_name
+                    - console_user
+                    - os_friendly_name
+                    - ip_address
+                    - bundle_id
+                    - dst_files
+                    - status
+                    - device_id
+                    - '@timestamp'
+                    - timestamp
+                    - created_timestamp
+                    - category
+                    - staff_id
+                    - staff_name
+                    - staff_email
+                    - staff_code
+                    - staff_tag_ids
+                    - staff_tags
+                    - dept_ids
+                    - dept_names
+                    - dept_paths
+                    - action_display_name
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  uid: Ku_2nJEB4rYwLyMOKdyZ
+                  pp_id: '1279'
+                  mac: C8:89:F3:AB:A3:8E
+                  app_account: ''
+                  p_user: erevus
+                  app: IPNExtension
+                  time: 1724915258000
+                  p_sha256: ''
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  p_md5: '-'
+                  p_path: /Applications/Tailscale.app/Contents/PlugIns/IPNExtension.appex/Contents/MacOS/IPNExtension
+                  pp_name: IPNExtension
+                  is_sign_valid: true
+                  p_name: IPNExtension
+                  p_cmdline: null
+                  operation: edit
+                  os_name: macOS
+                  event_id: 665C4FFA-B822-48B0-A433-62F4F776463C
+                  p_id: '26327'
+                  device_code: PC-000007
+                  agent_version: 3.4.50
+                  p_sign: io.tailscale.ipn.macos.network-extension
+                  src_files:
+                  - md5_hash: '-'
+                    file_suffix: txt
+                    file_loc_id: '16777232_86853112'
+                    meta_original:
+                    - process_name: IPNExtension
+                      urls: []
+                    filesize: 771
+                    file_updated_time: 1724915257000
+                    is_compressed: false
+                    is_hidden: false
+                    is_password_protected: false
+                    filename: ipn.log..log2.txt
+                    file_created_time: 1703078137448
+                    filepath: /Users/erevus/Library/Group Containers/W5364U7YZB.group.io.tailscale.ipn.macos/ipn.log..log2.txt
+                    metasource: []
+                    file_type: '-'
+                    file_created_timestamp: '2023-12-20T21:15:37+08:00'
+                    file_updated_timestamp: '2024-08-29T15:07:37+08:00'
+                  hostname: erevusdeMacBook-Pro.local
+                  permission:
+                    screen_record: false
+                    disk: true
+                    network: false
+                  app_version: '1.0'
+                  app_name: IPNExtension
+                  console_user: erevus
+                  os_friendly_name: macOS 14.1.2
+                  ip_address: 192.168.96.9
+                  bundle_id: io.tailscale.ipn.macos.network-extension
+                  dst_files:
+                  - md5_hash: '-'
+                    file_suffix: txt
+                    file_loc_id: '16777232_86853112'
+                    meta_original:
+                    - process_name: IPNExtension
+                      urls: []
+                    filesize: 771
+                    file_updated_time: 1724915257000
+                    is_compressed: false
+                    is_hidden: false
+                    is_password_protected: false
+                    filename: ipn.log..log2.txt
+                    file_created_time: 1703078137448
+                    filepath: /Users/erevus/Library/Group Containers/W5364U7YZB.group.io.tailscale.ipn.macos/ipn.log..log2.txt
+                    metasource: []
+                    file_type: '-'
+                    file_created_timestamp: '2023-12-20T21:15:37+08:00'
+                    file_updated_timestamp: '2024-08-29T15:07:37+08:00'
+                  status: created
+                  device_id: 4131a0de-46ee-4ae6-8003-ded416ed2f86
+                  '@timestamp': 1724915258000
+                  timestamp: '2024-08-29T15:07:38+08:00'
+                  created_timestamp: '2024-08-29T15:07:41+08:00'
+                  category: behavior_log_file
+                  staff_id: 7b5f38b8-8864-43bb-983c-b065c9f092d3
+                  staff_name: 吴文灏
+                  staff_email: wenhao.wu@cyberserval.cn
+                  staff_code: '+8618515992048'
+                  staff_tag_ids: []
+                  staff_tags: []
+                  dept_ids:
+                  - 9ff46a4b-6fe9-4375-a4db-4fca06cec417
+                  dept_names:
+                  - 产品设计组
+                  dept_paths:
+                  - 薮猫大公司/产研部/产品设计组
+                  action_display_name: 未知处置
+      security: []

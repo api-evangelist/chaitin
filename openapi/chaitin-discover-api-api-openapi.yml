@@ -1,0 +1,343 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account discover_api API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: discover_api
+paths:
+  /api/ApplicationAPI:
+    get:
+      operationId: ApplicationAPI_get
+      summary: GET /api/ApplicationAPI
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: true
+    post:
+      operationId: ApplicationAPI_post
+      summary: POST /api/ApplicationAPI
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                comment:
+                  type: string
+                data_sampling_rate:
+                  type: integer
+                move_in_rules:
+                  type: array
+                  items:
+                    type: string
+                is_default:
+                  type: boolean
+                static_file_handle:
+                  type: boolean
+                business_upload_handle:
+                  type: boolean
+                business_upload_store:
+                  type: boolean
+                business_download_handle:
+                  type: boolean
+                business_download_store:
+                  type: boolean
+                new_api_interval_hours:
+                  type: integer
+                inactive_interval_hours:
+                  type: integer
+              required:
+              - name
+              - static_file_handle
+              - business_upload_handle
+              - business_upload_store
+              - business_download_handle
+              - business_download_store
+              - new_api_interval_hours
+              - inactive_interval_hours
+    put:
+      operationId: ApplicationAPI_put
+      summary: PUT /api/ApplicationAPI
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                comment:
+                  type: string
+                data_sampling_rate:
+                  type: integer
+                move_in_rules:
+                  type: array
+                  items:
+                    type: string
+                is_default:
+                  type: boolean
+                static_file_handle:
+                  type: boolean
+                business_upload_handle:
+                  type: boolean
+                business_upload_store:
+                  type: boolean
+                business_download_handle:
+                  type: boolean
+                business_download_store:
+                  type: boolean
+                new_api_interval_hours:
+                  type: integer
+                inactive_interval_hours:
+                  type: integer
+              required:
+              - business_download_handle
+              - business_download_store
+              - business_upload_handle
+              - business_upload_store
+              - inactive_interval_hours
+              - name
+              - new_api_interval_hours
+              - static_file_handle
+    delete:
+      operationId: ApplicationAPI_delete
+      summary: DELETE /api/ApplicationAPI
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/ApplicationPriorityAPI:
+    put:
+      operationId: ApplicationPriorityAPI_put
+      summary: PUT /api/ApplicationPriorityAPI
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                priority:
+                  type: integer
+              required:
+              - priority
+  /api/DownloadCSVTemplate:
+    get:
+      operationId: DownloadCSVTemplate_get
+      summary: GET /api/DownloadCSVTemplate
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: true
+  /api/ImportApplication:
+    get:
+      operationId: ImportApplication_get
+      summary: GET /api/ImportApplication
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: true
+    post:
+      operationId: ImportApplication_post
+      summary: POST /api/ImportApplication
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+    put:
+      operationId: ImportApplication_put
+      summary: PUT /api/ImportApplication
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                comment:
+                  type: string
+                data_sampling_rate:
+                  type: integer
+                move_in_rules:
+                  type: array
+                  items:
+                    type: string
+                is_default:
+                  type: boolean
+                static_file_handle:
+                  type: boolean
+                business_upload_handle:
+                  type: boolean
+                business_upload_store:
+                  type: boolean
+                business_download_handle:
+                  type: boolean
+                business_download_store:
+                  type: boolean
+                new_api_interval_hours:
+                  type: integer
+                inactive_interval_hours:
+                  type: integer
+              required:
+              - business_download_handle
+              - business_download_store
+              - business_upload_handle
+              - business_upload_store
+              - inactive_interval_hours
+              - name
+              - new_api_interval_hours
+              - static_file_handle
+    delete:
+      operationId: ImportApplication_delete
+      summary: DELETE /api/ImportApplication
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/RelocateSiteAPI:
+    post:
+      operationId: RelocateSiteAPI_post
+      summary: POST /api/RelocateSiteAPI
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sources:
+                  type: array
+                  items:
+                    type: string
+                target:
+                  type: integer
+                include_no_app:
+                  type: boolean
+              required:
+              - sources
+              - target
+              - include_no_app
+  /api/ScannerFilterAPI:
+    put:
+      operationId: ScannerFilterAPI_put
+      summary: PUT /api/ScannerFilterAPI
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+                id:
+                  type: integer
+                status:
+                  type: string
+              required:
+              - status
+  /api/ScannerFilterTriggerUpdateAPI:
+    post:
+      operationId: ScannerFilterTriggerUpdateAPI_post
+      summary: POST /api/ScannerFilterTriggerUpdateAPI
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/SimpleApplicationAPI:
+    get:
+      operationId: SimpleApplicationAPI_get
+      summary: GET /api/SimpleApplicationAPI
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: true
+  /api/WebsiteEnableDisableAPI:
+    get:
+      operationId: WebsiteEnableDisableAPI_get
+      summary: GET /api/WebsiteEnableDisableAPI
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: true
+    put:
+      operationId: WebsiteEnableDisableAPI_put
+      summary: PUT /api/WebsiteEnableDisableAPI
+      tags:
+      - discover_api
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_enabled:
+                  type: boolean
+              required:
+              - is_enabled

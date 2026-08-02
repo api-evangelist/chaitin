@@ -1,0 +1,751 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account device/filescantask API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: device/filescantask
+  description: 终端管理/文件扫描任务
+paths:
+  /device/filescantask:
+    post:
+      summary: 创建
+      deprecated: false
+      description: ''
+      tags:
+      - device/filescantask
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: 'null'
+                file_scan_mode:
+                  type: string
+                frequency:
+                  type: string
+                frequency_options:
+                  type: object
+                  properties:
+                    effect_type:
+                      type: string
+                    effect_time:
+                      type: string
+                  required:
+                  - effect_type
+                  - effect_time
+                effect_mode:
+                  type: string
+                effect_options:
+                  type: object
+                  properties: {}
+                scan_mode:
+                  type: string
+                dirs_scan_options:
+                  type: object
+                  properties:
+                    Windows:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          disk:
+                            type: string
+                          path:
+                            type: string
+                    macOS:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          path:
+                            type: string
+                    Linux:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          path:
+                            type: string
+                    Kylin:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          path:
+                            type: string
+                    UOS:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          path:
+                            type: string
+                  required:
+                  - Windows
+                  - macOS
+                  - Linux
+                  - Kylin
+                  - UOS
+                scan_all_das:
+                  type: boolean
+                file_size_lower_measure:
+                  type: string
+                file_size_lower:
+                  type: integer
+                file_size_upper_measure:
+                  type: string
+                file_size_upper:
+                  type: integer
+                advanced_option:
+                  type: boolean
+                expire_mode:
+                  type: string
+                expire_options:
+                  type: object
+                  properties:
+                    term:
+                      type: integer
+                    unit:
+                      type: string
+                  required:
+                  - term
+                  - unit
+                action:
+                  type: string
+                notification_config:
+                  type: array
+                  items: {}
+                da_ids:
+                  type: array
+                  items:
+                    type: string
+                device_ids:
+                  type: array
+                  items:
+                    type: string
+                device_tag_ids:
+                  type: array
+                  items: {}
+                staff_tag_ids:
+                  type: array
+                  items: {}
+                staff_ids:
+                  type: array
+                  items:
+                    type: string
+                dept_ids:
+                  type: array
+                  items: {}
+                file_exclude_ids:
+                  type: array
+                  items: {}
+                file_include_ids:
+                  type: array
+                  items: {}
+                custom_whitelist:
+                  type: array
+                  items: {}
+                scope:
+                  type: string
+                binding_config:
+                  type: object
+                  properties:
+                    source:
+                      type: string
+                    include:
+                      type: object
+                      properties:
+                        device_ids:
+                          type: array
+                          items:
+                            type: string
+                        device_tag_ids:
+                          type: array
+                          items: {}
+                        staff_tag_ids:
+                          type: array
+                          items: {}
+                        staff_ids:
+                          type: array
+                          items: {}
+                        dept_ids:
+                          type: array
+                          items: {}
+                      required:
+                      - device_ids
+                      - device_tag_ids
+                      - staff_tag_ids
+                      - staff_ids
+                      - dept_ids
+                    exclude:
+                      type: object
+                      properties: {}
+                  required:
+                  - source
+                  - include
+                  - exclude
+                device:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      id:
+                        type: string
+                      type:
+                        type: string
+                      tooltip:
+                        type: string
+                      others:
+                        type: object
+                        properties:
+                          ip:
+                            type: string
+                          code:
+                            type: string
+                          console_user:
+                            type: string
+                          os_icon:
+                            type: array
+                            items:
+                              type: string
+                        required:
+                        - ip
+                        - code
+                        - console_user
+                        - os_icon
+                    required:
+                    - name
+                    - id
+                    - type
+                governance_id:
+                  type: 'null'
+              required:
+              - name
+              - description
+              - file_scan_mode
+              - frequency
+              - frequency_options
+              - effect_mode
+              - effect_options
+              - scan_mode
+              - dirs_scan_options
+              - scan_all_das
+              - file_size_lower_measure
+              - file_size_lower
+              - file_size_upper_measure
+              - file_size_upper
+              - advanced_option
+              - expire_mode
+              - expire_options
+              - action
+              - notification_config
+              - da_ids
+              - device_ids
+              - device_tag_ids
+              - staff_tag_ids
+              - staff_ids
+              - dept_ids
+              - file_exclude_ids
+              - file_include_ids
+              - custom_whitelist
+              - scope
+              - binding_config
+              - device
+              - governance_id
+            example:
+              name: once-custom-21
+              description: null
+              file_scan_mode: intelligent
+              frequency: once
+              frequency_options:
+                effect_type: immediately
+                effect_time: '2023-09-25 00:00:00'
+              effect_mode: immediately
+              effect_options: {}
+              scan_mode: custom
+              dirs_scan_options:
+                Windows:
+                - disk: c
+                  path: data
+                macOS:
+                - path: data
+                Linux:
+                - path: data
+                Kylin:
+                - path: data
+                UOS:
+                - path: data
+              scan_all_das: true
+              file_size_lower_measure: MB
+              file_size_lower: 0
+              file_size_upper_measure: MB
+              file_size_upper: 2100000000
+              advanced_option: true
+              expire_mode: intelligent
+              expire_options:
+                term: 3
+                unit: hour
+              action: notify
+              notification_config: []
+              da_ids:
+              - 41b13202-9714-4303-adc9-da5a07d33cfb
+              - ccdd1f16-417e-4ebf-9767-0d7c8ecbdbd7
+              device_ids:
+              - 750c5bddd40c4fea97673dd32f816164
+              device_tag_ids: []
+              staff_tag_ids: []
+              staff_ids:
+              - 98f6a92e-a0db-4d44-b972-844b8e1b7877
+              dept_ids: []
+              file_exclude_ids: []
+              file_include_ids: []
+              custom_whitelist: []
+              scope: common
+              binding_config:
+                source: file_scan
+                include:
+                  device_ids:
+                  - 043a7337-d26c-473f-a09e-4819c77cb364
+                  device_tag_ids: []
+                  staff_tag_ids: []
+                  staff_ids: []
+                  dept_ids: []
+                exclude: {}
+              device:
+              - name: 傅雅卿
+                id: 98f6a92e-a0db-4d44-b972-844b8e1b7877
+                type: staff
+                tooltip: 哈哈公司1/产品
+              - name: PC-000006
+                id: b2df17a3-c018-4899-8ec1-7c59465d0e35
+                type: device
+                others:
+                  ip: 192.168.233.141
+                  code: PC-000006
+                  console_user: pengyan@Win11test
+                  os_icon:
+                  - windows
+              governance_id: null
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      file_exclude_ids:
+                        type: array
+                        items: {}
+                      scan_mode:
+                        type: string
+                      advanced_option:
+                        type: boolean
+                      expire_time:
+                        type: 'null'
+                      frequency:
+                        type: string
+                      worktime_point:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            begin:
+                              type: string
+                            end:
+                              type: string
+                            week:
+                              type: integer
+                          required:
+                          - begin
+                          - end
+                          - week
+                      create_by_id:
+                        type: string
+                      expand:
+                        type: object
+                        properties: {}
+                      scope:
+                        type: string
+                      global_whitelist:
+                        type: boolean
+                      enable_custom_whitelist:
+                        type: boolean
+                      action:
+                        type: string
+                      effect_options:
+                        type: object
+                        properties: {}
+                      description:
+                        type: 'null'
+                      extract_options:
+                        type: object
+                        properties: {}
+                      file_size_lower_measure:
+                        type: string
+                      file_exts_excluded:
+                        type: array
+                        items: {}
+                      file_update_time_category:
+                        type: string
+                      clustering:
+                        type: boolean
+                      action_options:
+                        type: object
+                        properties: {}
+                      custom_whitelist:
+                        type: array
+                        items: {}
+                      da_ids:
+                        type: array
+                        items: {}
+                      uid:
+                        type: string
+                      update_by_id:
+                        type: string
+                      expire_mode:
+                        type: string
+                      update_time:
+                        type: string
+                      id:
+                        type: integer
+                      expire_options:
+                        type: object
+                        properties:
+                          term:
+                            type: integer
+                          unit:
+                            type: string
+                        required:
+                        - term
+                        - unit
+                      file_exts_included:
+                        type: array
+                        items: {}
+                      file_size_upper:
+                        type: integer
+                      file_include_ids:
+                        type: array
+                        items: {}
+                      unclassified_action:
+                        type: string
+                      file_size_lower:
+                        type: integer
+                      file_update_time:
+                        type: string
+                      file_scan_mode:
+                        type: string
+                      dirs_scan_options:
+                        type: object
+                        properties:
+                          Windows:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                path:
+                                  type: string
+                                dirs:
+                                  type: string
+                          macOS:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                path:
+                                  type: string
+                                dirs:
+                                  type: string
+                          Linux:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                path:
+                                  type: string
+                                dirs:
+                                  type: string
+                          Kylin:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                path:
+                                  type: string
+                                dirs:
+                                  type: string
+                          UOS:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                path:
+                                  type: string
+                                dirs:
+                                  type: string
+                        required:
+                        - Windows
+                        - macOS
+                        - Linux
+                        - Kylin
+                        - UOS
+                      frequency_options:
+                        type: object
+                        properties:
+                          effect_type:
+                            type: string
+                          effect_time:
+                            type: string
+                        required:
+                        - effect_type
+                        - effect_time
+                      name:
+                        type: string
+                      governance_id:
+                        type: 'null'
+                      full_scan:
+                        type: boolean
+                      unclassified_upload:
+                        type: boolean
+                      scan_all_das:
+                        type: boolean
+                      effect_mode:
+                        type: string
+                      extract_mode:
+                        type: string
+                      company_id:
+                        type: string
+                      begin_time:
+                        type: 'null'
+                      create_time:
+                        type: string
+                      file_size_upper_measure:
+                        type: string
+                      status:
+                        type: string
+                    required:
+                    - file_exclude_ids
+                    - scan_mode
+                    - advanced_option
+                    - expire_time
+                    - frequency
+                    - worktime_point
+                    - create_by_id
+                    - expand
+                    - scope
+                    - global_whitelist
+                    - enable_custom_whitelist
+                    - action
+                    - effect_options
+                    - description
+                    - extract_options
+                    - file_size_lower_measure
+                    - file_exts_excluded
+                    - file_update_time_category
+                    - clustering
+                    - action_options
+                    - custom_whitelist
+                    - da_ids
+                    - uid
+                    - update_by_id
+                    - expire_mode
+                    - update_time
+                    - id
+                    - expire_options
+                    - file_exts_included
+                    - file_size_upper
+                    - file_include_ids
+                    - unclassified_action
+                    - file_size_lower
+                    - file_update_time
+                    - file_scan_mode
+                    - dirs_scan_options
+                    - frequency_options
+                    - name
+                    - governance_id
+                    - full_scan
+                    - unclassified_upload
+                    - scan_all_das
+                    - effect_mode
+                    - extract_mode
+                    - company_id
+                    - begin_time
+                    - create_time
+                    - file_size_upper_measure
+                    - status
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  file_exclude_ids: []
+                  scan_mode: custom
+                  advanced_option: true
+                  expire_time: null
+                  frequency: once
+                  worktime_point:
+                  - begin: 00:00
+                    end: '23:59'
+                    week: 0
+                  - begin: 00:00
+                    end: '23:59'
+                    week: 1
+                  - begin: 00:00
+                    end: '23:59'
+                    week: 2
+                  - begin: 00:00
+                    end: '23:59'
+                    week: 3
+                  - begin: 00:00
+                    end: '23:59'
+                    week: 4
+                  - begin: 00:00
+                    end: '23:59'
+                    week: 5
+                  - begin: 00:00
+                    end: '23:59'
+                    week: 6
+                  create_by_id: 6c06f781-9b74-4059-8673-7581df5c66de
+                  expand: {}
+                  scope: common
+                  global_whitelist: true
+                  enable_custom_whitelist: false
+                  action: notify
+                  effect_options: {}
+                  description: null
+                  extract_options: {}
+                  file_size_lower_measure: MB
+                  file_exts_excluded: []
+                  file_update_time_category: after
+                  clustering: false
+                  action_options: {}
+                  custom_whitelist: []
+                  da_ids: []
+                  uid: 260e7674-a1a1-4dad-a452-d264bb292618
+                  update_by_id: 6c06f781-9b74-4059-8673-7581df5c66de
+                  expire_mode: intelligent
+                  update_time: '2024-05-07T12:56:12.229423Z'
+                  id: 1513
+                  expire_options:
+                    term: 48
+                    unit: hour
+                  file_exts_included: []
+                  file_size_upper: 2100000000
+                  file_include_ids: []
+                  unclassified_action: write
+                  file_size_lower: 0
+                  file_update_time: '2023-09-24T16:00:00Z'
+                  file_scan_mode: intelligent
+                  dirs_scan_options:
+                    Windows:
+                    - path: data
+                      dirs: data
+                    macOS:
+                    - path: data
+                      dirs: data
+                    Linux:
+                    - path: data
+                      dirs: data
+                    Kylin:
+                    - path: data
+                      dirs: data
+                    UOS:
+                    - path: data
+                      dirs: data
+                  frequency_options:
+                    effect_type: immediately
+                    effect_time: '2023-09-24T16:00:00Z'
+                  name: once-custom-43
+                  governance_id: null
+                  full_scan: false
+                  unclassified_upload: false
+                  scan_all_das: true
+                  effect_mode: immediately
+                  extract_mode: simplify
+                  company_id: 6b0db7d7-9ddd-4400-b976-2a7c112a4c95
+                  begin_time: null
+                  create_time: '2024-05-07T12:56:12.229372Z'
+                  file_size_upper_measure: MB
+                  status: activated
+      security: []

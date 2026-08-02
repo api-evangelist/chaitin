@@ -1,0 +1,254 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account intranet API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: intranet
+paths:
+  /api/EditIntranetGroupItem:
+    post:
+      operationId: EditIntranetGroupItem_post
+      summary: POST /api/EditIntranetGroupItem
+      tags:
+      - intranet
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+    delete:
+      operationId: EditIntranetGroupItem_delete
+      summary: DELETE /api/EditIntranetGroupItem
+      tags:
+      - intranet
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/FilterRuleAPI:
+    post:
+      operationId: FilterRuleAPI_post
+      summary: POST /api/FilterRuleAPI
+      tags:
+      - intranet
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_enabled:
+                  type: boolean
+                  description: 是否可用
+                pattern:
+                  type: object
+                  description: 匹配条件
+                drop:
+                  type: boolean
+                  description: 过滤流量
+                comment:
+                  type: string
+                  description: 备注
+                expire_time:
+                  type: string
+                  description: 过期时间
+              required:
+              - is_enabled
+              - pattern
+              - drop
+              - comment
+              - expire_time
+    put:
+      operationId: FilterRuleAPI_put
+      summary: PUT /api/FilterRuleAPI
+      tags:
+      - intranet
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_enabled:
+                  type: boolean
+                  description: 是否可用
+                pattern:
+                  type: object
+                  description: 匹配条件
+                drop:
+                  type: boolean
+                  description: 过滤流量
+                comment:
+                  type: string
+                  description: 备注
+                expire_time:
+                  type: string
+                  description: 过期时间
+              required:
+              - comment
+              - drop
+              - expire_time
+              - is_enabled
+              - pattern
+  /api/FilterRulePositionAPI:
+    put:
+      operationId: FilterRulePositionAPI_put
+      summary: PUT /api/FilterRulePositionAPI
+      tags:
+      - intranet
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: 规则 ID
+                position:
+                  type: integer
+                  description: 位置
+              required:
+              - id
+              - position
+  /api/IntranetGroupConfig:
+    get:
+      operationId: IntranetGroupConfig_get
+      summary: GET /api/IntranetGroupConfig
+      tags:
+      - intranet
+      parameters:
+      - name: cidr
+        in: query
+        required: false
+        description: CIDR
+        schema:
+          type: string
+          description: CIDR
+      - name: comment
+        in: query
+        required: false
+        description: 备注
+        schema:
+          type: string
+          description: 备注
+      - name: host
+        in: query
+        required: false
+        description: 域名
+        schema:
+          type: string
+          description: 域名
+      - name: name
+        in: query
+        required: false
+        description: 名称
+        schema:
+          type: string
+          description: 名称
+      - name: network_type
+        in: query
+        required: false
+        description: 网络属性
+        schema:
+          type: string
+          description: 网络属性
+      x-cli-body-fallback: false
+    post:
+      operationId: IntranetGroupConfig_post
+      summary: POST /api/IntranetGroupConfig
+      tags:
+      - intranet
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                cidrs:
+                  type: string
+                name:
+                  type: string
+                  description: 名称
+                comment:
+                  type: string
+                  description: 备注
+                ip_list:
+                  type: string
+                  description: IP 列表
+                host_list:
+                  type: string
+                  description: 域名列表
+                address_type:
+                  type: string
+                  description: 地址类型
+                network_type:
+                  type: string
+                  description: 网络类型
+              required:
+              - cidrs
+              - name
+              - ip_list
+              - host_list
+    put:
+      operationId: IntranetGroupConfig_put
+      summary: PUT /api/IntranetGroupConfig
+      tags:
+      - intranet
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 名称
+                comment:
+                  type: string
+                  description: 备注
+                network_type:
+                  type: string
+                  description: 网络类型
+              required:
+              - name
+    delete:
+      operationId: IntranetGroupConfig_delete
+      summary: DELETE /api/IntranetGroupConfig
+      tags:
+      - intranet
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表

@@ -1,0 +1,1026 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policylog/im/timelinelist API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policylog/im/timelinelist
+  description: 日志中心/即时通讯/时间线列表
+paths:
+  /policylog/im/timelinelist:
+    post:
+      summary: IM管控时间线
+      deprecated: false
+      description: ''
+      tags:
+      - policylog/im/timelinelist
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                search:
+                  type: string
+                queries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: string
+              required:
+              - time_range
+              - search
+              - queries
+            example:
+              time_range:
+                begin: '2023-11-14 10:55:38'
+                end: '2023-11-14 11:55:38'
+              search: ''
+              queries:
+              - field: staff_name
+                operator: is
+                value: 吴贝宁
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      total:
+                        type: integer
+                      search_total:
+                        type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            start:
+                              type: string
+                            end:
+                              type: string
+                            title:
+                              type: string
+                            title_display:
+                              type: string
+                            list:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  content:
+                                    type: string
+                                  content_display:
+                                    type: string
+                                  cnt:
+                                    type: integer
+                                  icon:
+                                    type: 'null'
+                                required:
+                                - content
+                                - content_display
+                                - cnt
+                                - icon
+                          required:
+                          - start
+                          - end
+                          - title
+                          - title_display
+                          - list
+                      title_field:
+                        type: string
+                    required:
+                    - index
+                    - total
+                    - search_total
+                    - results
+                    - title_field
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  index:
+                  - qzhddr_policy_im_logs
+                  total: 502
+                  search_total: 502
+                  results:
+                  - start: '2023-10-16 21:00:00'
+                    end: '2023-10-16 22:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-17 10:00:00'
+                    end: '2023-10-17 11:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 5
+                      icon: null
+                  - start: '2023-10-17 11:00:00'
+                    end: '2023-10-17 12:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 3
+                      icon: null
+                  - start: '2023-10-17 13:00:00'
+                    end: '2023-10-17 14:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 4
+                      icon: null
+                  - start: '2023-10-17 16:00:00'
+                    end: '2023-10-17 17:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-17 17:00:00'
+                    end: '2023-10-17 18:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-17 18:00:00'
+                    end: '2023-10-17 19:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-18 10:00:00'
+                    end: '2023-10-18 11:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 3
+                      icon: null
+                  - start: '2023-10-18 17:00:00'
+                    end: '2023-10-18 18:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 4
+                      icon: null
+                  - start: '2023-10-18 18:00:00'
+                    end: '2023-10-18 19:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 4
+                      icon: null
+                  - start: '2023-10-18 18:00:00'
+                    end: '2023-10-18 19:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 3
+                      icon: null
+                  - start: '2023-10-18 19:00:00'
+                    end: '2023-10-18 20:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-18 23:00:00'
+                    end: '2023-10-19 00:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 13
+                      icon: null
+                  - start: '2023-10-19 00:00:00'
+                    end: '2023-10-19 01:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-19 01:00:00'
+                    end: '2023-10-19 02:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-19 02:00:00'
+                    end: '2023-10-19 03:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-19 03:00:00'
+                    end: '2023-10-19 04:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-19 04:00:00'
+                    end: '2023-10-19 05:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-19 05:00:00'
+                    end: '2023-10-19 06:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-19 06:00:00'
+                    end: '2023-10-19 07:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-19 07:00:00'
+                    end: '2023-10-19 08:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-19 08:00:00'
+                    end: '2023-10-19 09:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-19 09:00:00'
+                    end: '2023-10-19 10:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-19 10:00:00'
+                    end: '2023-10-19 11:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 16
+                      icon: null
+                  - start: '2023-10-19 10:00:00'
+                    end: '2023-10-19 11:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-19 11:00:00'
+                    end: '2023-10-19 12:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 4
+                      icon: null
+                  - start: '2023-10-19 12:00:00'
+                    end: '2023-10-19 13:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-19 13:00:00'
+                    end: '2023-10-19 14:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-19 14:00:00'
+                    end: '2023-10-19 15:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-19 15:00:00'
+                    end: '2023-10-19 16:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-19 16:00:00'
+                    end: '2023-10-19 17:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 6
+                      icon: null
+                  - start: '2023-10-19 17:00:00'
+                    end: '2023-10-19 18:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-19 18:00:00'
+                    end: '2023-10-19 19:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-19 20:00:00'
+                    end: '2023-10-19 21:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-19 21:00:00'
+                    end: '2023-10-19 22:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-19 22:00:00'
+                    end: '2023-10-19 23:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-19 23:00:00'
+                    end: '2023-10-20 00:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-20 00:00:00'
+                    end: '2023-10-20 01:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-20 01:00:00'
+                    end: '2023-10-20 02:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-20 02:00:00'
+                    end: '2023-10-20 03:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-20 03:00:00'
+                    end: '2023-10-20 04:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-20 04:00:00'
+                    end: '2023-10-20 05:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 6
+                      icon: null
+                  - start: '2023-10-20 05:00:00'
+                    end: '2023-10-20 06:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-20 06:00:00'
+                    end: '2023-10-20 07:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-20 07:00:00'
+                    end: '2023-10-20 08:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-20 08:00:00'
+                    end: '2023-10-20 09:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 7
+                      icon: null
+                  - start: '2023-10-20 09:00:00'
+                    end: '2023-10-20 10:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-20 10:00:00'
+                    end: '2023-10-20 11:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 5
+                      icon: null
+                  - start: '2023-10-20 11:00:00'
+                    end: '2023-10-20 12:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 6
+                      icon: null
+                  - start: '2023-10-20 12:00:00'
+                    end: '2023-10-20 13:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-20 13:00:00'
+                    end: '2023-10-20 14:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 8
+                      icon: null
+                  - start: '2023-10-20 14:00:00'
+                    end: '2023-10-20 15:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 6
+                      icon: null
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-20 14:00:00'
+                    end: '2023-10-20 15:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 6
+                      icon: null
+                  - start: '2023-10-20 15:00:00'
+                    end: '2023-10-20 16:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 4
+                      icon: null
+                  - start: '2023-10-20 16:00:00'
+                    end: '2023-10-20 17:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-20 18:00:00'
+                    end: '2023-10-20 19:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 5
+                      icon: null
+                  - start: '2023-10-21 09:00:00'
+                    end: '2023-10-21 10:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 6
+                      icon: null
+                  - start: '2023-10-21 10:00:00'
+                    end: '2023-10-21 11:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 085ac60c-c17c-419f-93aa-31a69ce02cb5
+                      content_display: IMٜߘ
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-24 10:00:00'
+                    end: '2023-10-24 11:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-24 11:00:00'
+                    end: '2023-10-24 12:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-24 13:00:00'
+                    end: '2023-10-24 14:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 3
+                      icon: null
+                  - start: '2023-10-24 20:00:00'
+                    end: '2023-10-24 21:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-25 10:00:00'
+                    end: '2023-10-25 11:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 10
+                      icon: null
+                  - start: '2023-10-26 13:00:00'
+                    end: '2023-10-26 14:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-27 16:00:00'
+                    end: '2023-10-27 17:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: ae5d76a3-69d9-4cff-a3d3-323c49078f11
+                      content_display: 九月IM
+                      cnt: 10
+                      icon: null
+                  - start: '2023-10-27 16:00:00'
+                    end: '2023-10-27 17:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 6
+                      icon: null
+                    - content: ae5d76a3-69d9-4cff-a3d3-323c49078f11
+                      content_display: 九月IM
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-27 17:00:00'
+                    end: '2023-10-27 18:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-27 18:00:00'
+                    end: '2023-10-27 19:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: ae5d76a3-69d9-4cff-a3d3-323c49078f11
+                      content_display: 九月IM
+                      cnt: 1
+                      icon: null
+                  - start: '2023-10-30 15:00:00'
+                    end: '2023-10-30 16:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-30 15:00:00'
+                    end: '2023-10-30 16:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: ae5d76a3-69d9-4cff-a3d3-323c49078f11
+                      content_display: 九月IM
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-30 17:00:00'
+                    end: '2023-10-30 18:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 2
+                      icon: null
+                  - start: '2023-10-31 17:00:00'
+                    end: '2023-10-31 18:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: ae5d76a3-69d9-4cff-a3d3-323c49078f11
+                      content_display: 九月IM
+                      cnt: 3
+                      icon: null
+                  - start: '2023-10-31 17:00:00'
+                    end: '2023-10-31 18:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: ae5d76a3-69d9-4cff-a3d3-323c49078f11
+                      content_display: 九月IM
+                      cnt: 3
+                      icon: null
+                  - start: '2023-11-01 17:00:00'
+                    end: '2023-11-01 18:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-02 11:00:00'
+                    end: '2023-11-02 12:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 4
+                      icon: null
+                  - start: '2023-11-02 11:00:00'
+                    end: '2023-11-02 12:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-02 14:00:00'
+                    end: '2023-11-02 15:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-06 18:00:00'
+                    end: '2023-11-06 19:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-10 10:00:00'
+                    end: '2023-11-10 11:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 2
+                      icon: null
+                    - content: ae5d76a3-69d9-4cff-a3d3-323c49078f11
+                      content_display: 九月IM
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-10 10:00:00'
+                    end: '2023-11-10 11:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 2
+                      icon: null
+                    - content: ae5d76a3-69d9-4cff-a3d3-323c49078f11
+                      content_display: 九月IM
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-13 13:00:00'
+                    end: '2023-11-13 14:00:00'
+                    title: qq
+                    title_display: QQ
+                    list:
+                    - content: aaeb6426-2f34-4959-af0e-36050e95be32
+                      content_display: 热热热
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-13 14:00:00'
+                    end: '2023-11-13 15:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-13 15:00:00'
+                    end: '2023-11-13 16:00:00'
+                    title: qq
+                    title_display: QQ
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 8
+                      icon: null
+                    - content: 4d346d49-5583-438f-9dcd-d6c2f76e04af
+                      content_display: QQ
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-13 15:00:00'
+                    end: '2023-11-13 16:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-13 16:00:00'
+                    end: '2023-11-13 17:00:00'
+                    title: qq
+                    title_display: QQ
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 39
+                      icon: null
+                  - start: '2023-11-13 16:00:00'
+                    end: '2023-11-13 17:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 3
+                      icon: null
+                  - start: '2023-11-13 16:00:00'
+                    end: '2023-11-13 17:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-13 17:00:00'
+                    end: '2023-11-13 18:00:00'
+                    title: qq
+                    title_display: QQ
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 16
+                      icon: null
+                  - start: '2023-11-13 17:00:00'
+                    end: '2023-11-13 18:00:00'
+                    title: wechat
+                    title_display: 微信
+                    list:
+                    - content: 416d72ee-2ee7-4ca2-915a-f0111a86c112
+                      content_display: win
+                      cnt: 1
+                      icon: null
+                  title_field: channel
+      security: []

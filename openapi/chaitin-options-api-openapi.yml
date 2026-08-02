@@ -1,0 +1,16 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account options API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: options
+paths:
+  /api/ServerControlledConfigAPI:
+    get:
+      operationId: ServerControlledConfigAPI_get
+      summary: GET /api/ServerControlledConfigAPI
+      tags:
+      - options
+      parameters: []
+      x-cli-body-fallback: true

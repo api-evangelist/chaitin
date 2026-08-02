@@ -1,0 +1,292 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account software/uninstall/instance/{instance_id}/detail API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: software/uninstall/instance/{instance_id}/detail
+  description: 软件分发与卸载/uninstall 接口/实例/instance_id 参数/详情
+paths:
+  /software/uninstall/instance/{instance_id}/detail:
+    post:
+      summary: 实例详情
+      deprecated: false
+      description: ''
+      tags:
+      - software/uninstall/instance/{instance_id}/detail
+      parameters:
+      - name: instance_id
+        in: path
+        description: ''
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      update_time:
+                        type: string
+                      status:
+                        type: string
+                      update_by_id:
+                        type: string
+                      scope:
+                        type: string
+                      create_time:
+                        type: string
+                      name:
+                        type: string
+                      display_status:
+                        type: string
+                      uid:
+                        type: string
+                      create_by_id:
+                        type: string
+                      uninstall_source_list:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            family:
+                              type: string
+                            pkg_id:
+                              type: 'null'
+                            category:
+                              type: string
+                            bundle_id:
+                              type: 'null'
+                            registry_id:
+                              type: string
+                            display_name:
+                              type: string
+                            uninstall_command:
+                              type: string
+                            display_category:
+                              type: string
+                          required:
+                          - family
+                          - pkg_id
+                          - category
+                          - bundle_id
+                          - registry_id
+                          - display_name
+                          - uninstall_command
+                          - display_category
+                      company_id:
+                        type: string
+                      binding_config:
+                        type: object
+                        properties:
+                          include:
+                            type: object
+                            properties:
+                              devices:
+                                type: array
+                                items: {}
+                              device_tags:
+                                type: array
+                                items: {}
+                              staffs:
+                                type: array
+                                items: {}
+                              staff_tags:
+                                type: array
+                                items: {}
+                              depts:
+                                type: array
+                                items: {}
+                            required:
+                            - devices
+                            - device_tags
+                            - staffs
+                            - staff_tags
+                            - depts
+                          exclude:
+                            type: object
+                            properties:
+                              depts:
+                                type: array
+                                items: {}
+                              staffs:
+                                type: array
+                                items: {}
+                              staff_tags:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    uid:
+                                      type: string
+                                    name:
+                                      type: string
+                              devices:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    uid:
+                                      type: string
+                                    name:
+                                      type: string
+                                    code:
+                                      type: string
+                              device_tags:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    uid:
+                                      type: string
+                                    name:
+                                      type: string
+                            required:
+                            - depts
+                            - staffs
+                            - staff_tags
+                            - devices
+                            - device_tags
+                        required:
+                        - include
+                        - exclude
+                    required:
+                    - id
+                    - update_time
+                    - status
+                    - update_by_id
+                    - scope
+                    - create_time
+                    - name
+                    - display_status
+                    - uid
+                    - create_by_id
+                    - uninstall_source_list
+                    - company_id
+                    - binding_config
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: Normal
+                data:
+                  id: 7
+                  update_time: '2024-10-24T09:00:34.194872Z'
+                  status: inprogress
+                  update_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  scope: global
+                  create_time: '2024-10-24T09:00:33.540448Z'
+                  name: 测试8
+                  display_status: 执行中
+                  uid: f6831713-9fb4-44fd-a3ae-597982f114b1
+                  create_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  uninstall_source_list:
+                  - family: Windows
+                    pkg_id: null
+                    category: im
+                    bundle_id: null
+                    registry_id: registry_id1
+                    display_name: 测试软件1
+                    uninstall_command: 删除命令
+                    display_category: IM即时通讯
+                  - family: Windows
+                    pkg_id: null
+                    category: im
+                    bundle_id: null
+                    registry_id: registry_id2
+                    display_name: 测试软件2
+                    uninstall_command: 删除命令
+                    display_category: IM即时通讯
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  binding_config:
+                    include:
+                      devices: []
+                      device_tags: []
+                      staffs: []
+                      staff_tags: []
+                      depts: []
+                    exclude:
+                      depts: []
+                      staffs: []
+                      staff_tags:
+                      - uid: 4e913b0d-ca48-4dfd-9a19-6d55ae2b98eb
+                        name: EXO,E不发音
+                      devices:
+                      - uid: da9ea823-3b0b-4d9f-a745-2aad58e0af89
+                        name: DNAME87e037c780250d79
+                        code: PC-000009
+                      device_tags:
+                      - uid: d3250bbf-906e-4773-807a-e998ef2db207
+                        name: '5'
+      security: []

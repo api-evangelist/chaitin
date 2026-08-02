@@ -1,0 +1,301 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policy/ted/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policy/ted/list
+  description: 策略管理/TED/列表
+paths:
+  /policy/ted/list:
+    post:
+      summary: 列表
+      deprecated: false
+      description: ''
+      tags:
+      - policy/ted/list
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example: {}
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      total:
+                        type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            id:
+                              type: integer
+                            display_name:
+                              type: string
+                            description:
+                              type: string
+                            options:
+                              type: object
+                              properties:
+                                app:
+                                  type: array
+                                  items:
+                                    type: object
+                                    properties:
+                                      family:
+                                        type: string
+                                      options:
+                                        type: array
+                                        items:
+                                          type: object
+                                          properties:
+                                            field:
+                                              type: string
+                                            value:
+                                              type: string
+                                          required:
+                                          - field
+                                          - value
+                                      software_name:
+                                        type: string
+                                      software_type:
+                                        type: string
+                                browser:
+                                  type: array
+                                  items:
+                                    type: object
+                                    properties:
+                                      field:
+                                        type: string
+                                      value:
+                                        type: array
+                                        items:
+                                          type: string
+                                    required:
+                                    - field
+                                    - value
+                                code_repo:
+                                  type: object
+                                  properties:
+                                    git:
+                                      type: object
+                                      properties:
+                                        left:
+                                          type: string
+                                        value:
+                                          type: array
+                                          items:
+                                            type: string
+                                        operator:
+                                          type: string
+                                      required:
+                                      - left
+                                      - value
+                                      - operator
+                                    svn:
+                                      type: object
+                                      properties:
+                                        left:
+                                          type: string
+                                        value:
+                                          type: array
+                                          items:
+                                            type: string
+                                        operator:
+                                          type: string
+                                      required:
+                                      - left
+                                      - value
+                                      - operator
+                                  required:
+                                  - git
+                                  - svn
+                              required:
+                              - app
+                              - browser
+                              - code_repo
+                            expand:
+                              type: object
+                              properties: {}
+                            code:
+                              type: string
+                            company_id:
+                              type: string
+                            status:
+                              type: string
+                            update_by_id:
+                              type: string
+                            update_time:
+                              type: string
+                            create_time:
+                              type: string
+                            classification:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  uid:
+                                    type: string
+                                  name:
+                                    type: string
+                            category:
+                              type: string
+                            create_by_id:
+                              type: string
+                            uid:
+                              type: string
+                            source:
+                              type: 'null'
+                      page:
+                        type: integer
+                    required:
+                    - total
+                    - results
+                    - page
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  total: 1
+                  results:
+                  - name: migncheng4
+                    id: 6
+                    display_name: 名称4
+                    description: ''
+                    options:
+                      app:
+                      - family: Windows
+                        options:
+                        - field: process_name
+                          value: xxxx
+                        - field: bundle_id
+                          value: xxxxxxxx
+                        software_name: aaa_software_name
+                        software_type: aaa_software_type
+                      browser:
+                      - field: domain
+                        value:
+                        - www.baidu.com
+                      - field: ip_address
+                        value:
+                        - 192.168.10.26
+                      - field: ip_range
+                        value:
+                        - 192.168.32.23-192.168.32.32
+                      - field: cidr
+                        value:
+                        - 192.168.32.23/32
+                      code_repo:
+                        git:
+                          left: XX
+                          value:
+                          - XXXX
+                          - sdasdas
+                          operator: contains/not_contains
+                        svn:
+                          left: XX
+                          value:
+                          - XXXX
+                          - sdasdas
+                          operator: str_contains/str_not_contains
+                    expand: {}
+                    code: 3b39bda8774f9e6d
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    status: deactivated
+                    update_by_id: 92a20230-f247-453a-ab14-ca40c6c87e96
+                    update_time: '2023-11-07T02:27:40.533634Z'
+                    create_time: '2023-11-07T02:27:40.533590Z'
+                    classification:
+                    - uid: b15397a9-4938-4b82-8606-9a8a2b88c734
+                      name: 账户基础信息4
+                    category: code_repo
+                    create_by_id: 92a20230-f247-453a-ab14-ca40c6c87e96
+                    uid: d4901f23-29f4-4825-a60a-8cd9fb85f6d1
+                    source: null
+                  page: 1
+      security: []

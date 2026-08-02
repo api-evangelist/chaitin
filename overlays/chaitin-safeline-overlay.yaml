@@ -1,0 +1,17 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for SafeLine WAF Open API
+  version: 1.0.0
+extends: openapi/chaitin-safeline-openapi-original.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: chaitin
+    x-apievangelist-product: SafeLine WAF (Community Edition)
+    x-apievangelist-auth: X-SLCE-API-TOKEN header (apiKey), SafeLine >= 6.6.0
+    x-apievangelist-base: 'https://<safeline_host>:9443/api/open'
+    x-apievangelist-docs: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
+    x-apievangelist-error-envelope: '{ err, msg, data }'
+- target: $.info
+  update:
+    x-agentic-access: candidate-write-operations-require-audit

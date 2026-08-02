@@ -1,0 +1,622 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policylog/log_file_similarity/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policylog/log_file_similarity/list
+  description: 日志中心/日志文件相似度/列表
+paths:
+  /policylog/log_file_similarity/list:
+    post:
+      summary: 相似文件列表
+      deprecated: false
+      description: ''
+      tags:
+      - policylog/log_file_similarity/list
+      parameters:
+      - name: page
+        in: query
+        description: ''
+        required: true
+        example: '1'
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: ''
+        required: true
+        example: '10'
+        schema:
+          type: string
+      - name: search
+        in: query
+        description: ''
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                search:
+                  type: string
+                queries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: string
+                min_score:
+                  type: integer
+                simhash:
+                  type: string
+                img_only:
+                  type: boolean
+              required:
+              - time_range
+              - search
+              - queries
+              - min_score
+              - simhash
+              - img_only
+            example:
+              time_range:
+                begin: '2023-11-28 20:00:00'
+                end: '2023-11-28 21:00:00'
+              search: ''
+              queries:
+              - field: channel
+                operator: is
+                value: feishu
+              min_score: 0
+              simhash: '18446744073709551615'
+              img_only: true
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      page:
+                        type: integer
+                      limit:
+                        type: integer
+                      search_total:
+                        type: integer
+                      total:
+                        type: integer
+                      search_after:
+                        type: 'null'
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            staff_name:
+                              type: string
+                            md5_hash:
+                              type: string
+                            console_user:
+                              type: string
+                            channel:
+                              type: string
+                            has_cls:
+                              type: boolean
+                            dept_paths:
+                              type: array
+                              items:
+                                type: string
+                            data_level:
+                              type: integer
+                            sha256_hash:
+                              type: string
+                            dept_names:
+                              type: array
+                              items:
+                                type: string
+                            hostname:
+                              type: string
+                            filepath:
+                              type: string
+                            staff_tags:
+                              type: array
+                              items: {}
+                            cl_id:
+                              type: string
+                            file_type:
+                              type: string
+                            staff_id:
+                              type: string
+                            action:
+                              type: string
+                            app_info:
+                              type: object
+                              properties: {}
+                            channel_account:
+                              type: string
+                            os_friendly_name:
+                              type: string
+                            file_updated_timestamp:
+                              type: string
+                            file_type_categories:
+                              type: array
+                              items: {}
+                            device_id:
+                              type: string
+                            meta_original:
+                              type: array
+                              items: {}
+                            simhash:
+                              type: integer
+                            expand:
+                              type: object
+                              properties:
+                                rule_version:
+                                  type: object
+                                  properties:
+                                    cond_version:
+                                      type: integer
+                                    policy_version:
+                                      type: integer
+                                    filetype_version:
+                                      type: integer
+                                    dc_version:
+                                      type: integer
+                                    dc_ticket:
+                                      type: string
+                                    cond_ticket:
+                                      type: string
+                                    ms_version:
+                                      type: integer
+                                    policy_ticket:
+                                      type: string
+                                  required:
+                                  - cond_version
+                                  - policy_version
+                                  - filetype_version
+                                  - dc_version
+                                  - dc_ticket
+                                  - cond_ticket
+                                  - ms_version
+                                  - policy_ticket
+                                screen_recording:
+                                  type: boolean
+                                evidence_info:
+                                  type: object
+                                  properties:
+                                    file:
+                                      type: string
+                                    screen_recording:
+                                      type: 'null'
+                                    screenshot:
+                                      type: 'null'
+                                  required:
+                                  - file
+                                  - screen_recording
+                                  - screenshot
+                                screenshot:
+                                  type: boolean
+                              required:
+                              - rule_version
+                              - screen_recording
+                              - evidence_info
+                              - screenshot
+                            filename:
+                              type: string
+                            file_suffix:
+                              type: string
+                            device_code:
+                              type: string
+                            file_policies:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  file_created_timestamp:
+                                    type: string
+                                  file_updated_timestamp:
+                                    type: string
+                                  md5_hash:
+                                    type: string
+                                  policy_id:
+                                    type: string
+                                  is_hidden:
+                                    type: boolean
+                                  policy_name:
+                                    type: string
+                                  filesize:
+                                    type: integer
+                                  policy_group_id:
+                                    type: string
+                                  policy_group_name:
+                                    type: string
+                                  sha256_hash:
+                                    type: string
+                                  classifications:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        uid:
+                                          type: string
+                                        name:
+                                          type: string
+                                        data_level_name:
+                                          type: string
+                                        data_level:
+                                          type: integer
+                                  risk_level:
+                                    type: integer
+                                  filename:
+                                    type: string
+                                  filepath:
+                                    type: string
+                                  is_compressed:
+                                    type: boolean
+                                  file_type:
+                                    type: string
+                                  file_suffix:
+                                    type: string
+                                  file_updated_time:
+                                    type: integer
+                                  is_password_protected:
+                                    type: boolean
+                                  action:
+                                    type: string
+                                  risk_name:
+                                    type: string
+                                  file_created_time:
+                                    type: integer
+                                  action_display_name:
+                                    type: string
+                            file_updated_time:
+                              type: integer
+                            extract_file:
+                              type: boolean
+                            file_description:
+                              type: string
+                            data_level_name:
+                              type: string
+                            risk_name:
+                              type: string
+                            staff_email:
+                              type: string
+                            file_created_time:
+                              type: integer
+                            status:
+                              type: string
+                            file_created_timestamp:
+                              type: string
+                            policy_id:
+                              type: string
+                            dept_ids:
+                              type: array
+                              items:
+                                type: string
+                            data_level_names:
+                              type: array
+                              items:
+                                type: string
+                            is_hidden:
+                              type: boolean
+                            filesize:
+                              type: integer
+                            mac:
+                              type: string
+                            policy_group_id:
+                              type: string
+                            is_compressed:
+                              type: boolean
+                            data_levels:
+                              type: array
+                              items:
+                                type: integer
+                            timestamp:
+                              type: string
+                            channel_name:
+                              type: string
+                            cl_name:
+                              type: string
+                            company_id:
+                              type: string
+                            policy_name:
+                              type: string
+                            staff_code:
+                              type: string
+                            created_timestamp:
+                              type: string
+                            ip_address:
+                              type: string
+                            cl_ids:
+                              type: array
+                              items:
+                                type: string
+                            policy_group_name:
+                              type: string
+                            risk_level:
+                              type: integer
+                            agent_version:
+                              type: string
+                            is_blocked:
+                              type: boolean
+                            event_id:
+                              type: string
+                            '@timestamp':
+                              type: integer
+                            is_password_protected:
+                              type: boolean
+                            os_name:
+                              type: string
+                            metasource:
+                              type: array
+                              items: {}
+                            time:
+                              type: integer
+                            category:
+                              type: string
+                            operation:
+                              type: string
+                            staff_tag_ids:
+                              type: array
+                              items: {}
+                            cl_names:
+                              type: array
+                              items:
+                                type: string
+                            uid:
+                              type: string
+                            _type:
+                              type: string
+                            _index:
+                              type: string
+                            _score:
+                              type: number
+                            action_display_name:
+                              type: string
+                    required:
+                    - index
+                    - page
+                    - limit
+                    - search_total
+                    - total
+                    - search_after
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  index:
+                  - qzhddr_policylog_channel
+                  page: 1
+                  limit: 10
+                  search_total: 1
+                  total: 1
+                  search_after: null
+                  results:
+                  - staff_name: '3333'
+                    md5_hash: f5b35ac1615c82c20656b8ea1f759029
+                    console_user: lianb@DESKTOP-PNED9SM
+                    channel: feishu
+                    has_cls: true
+                    dept_paths:
+                    - 薮猫大公司/dddd/111
+                    - 薮猫大公司/dddd/111/2222
+                    data_level: 3
+                    sha256_hash: ''
+                    dept_names:
+                    - '111'
+                    - '2222'
+                    hostname: DESKTOP-PNED9SM
+                    filepath: D:\测试\529份 电商运营计划考核资料\WORD文件资料\网络销售部部门规划.docx
+                    staff_tags: []
+                    cl_id: 7ae6ddd1-3217-49cc-b32d-c16eef1d242c
+                    file_type: docx
+                    staff_id: 223fd966-9dd9-42ea-8613-ccd9a920a48d
+                    action: block
+                    app_info: {}
+                    channel_account: '-'
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    file_updated_timestamp: '2024-08-06T03:40:34Z'
+                    file_type_categories: []
+                    device_id: 84f26e52-bc42-4b7b-88f5-97ed276c554e
+                    meta_original: []
+                    simhash: 10989428850985626000
+                    expand:
+                      rule_version:
+                        cond_version: 106
+                        policy_version: 2170
+                        filetype_version: 42
+                        dc_version: 985
+                        dc_ticket: 1b7c1445a1699ca6278bd98f542da5d8
+                        cond_ticket: 18475dc125d42e1fb9e1b6ad2e93b5dc
+                        ms_version: 162
+                        policy_ticket: 9bc27722f2c6e172d1acf63ca3e7cb83
+                      screen_recording: false
+                      evidence_info:
+                        file: oss-qzh/eeff7c64-5070-4582-8b93-fbcc57db7771/riskwarning/extractfile/1722915644059713
+                        screen_recording: null
+                        screenshot: null
+                      screenshot: false
+                    filename: 网络销售部部门规划.docx
+                    file_suffix: docx
+                    device_code: PC-000201
+                    file_policies:
+                    - file_created_timestamp: '2022-06-25T03:12:37Z'
+                      file_updated_timestamp: '2024-08-06T03:40:34Z'
+                      md5_hash: f5b35ac1615c82c20656b8ea1f759029
+                      policy_id: eed80e14-cf9b-4587-9a28-6d52e10dd4f1
+                      is_hidden: false
+                      policy_name: 本地测试111
+                      filesize: 60240
+                      policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                      policy_group_name: 默认组
+                      sha256_hash: ''
+                      classifications:
+                      - uid: 7ae6ddd1-3217-49cc-b32d-c16eef1d242c
+                        name: 测试111
+                        data_level_name: 保密数据
+                        data_level: 3
+                      risk_level: 3
+                      filename: 网络销售部部门规划.docx
+                      filepath: D:\测试\529份 电商运营计划考核资料\WORD文件资料\网络销售部部门规划.docx
+                      is_compressed: false
+                      file_type: docx
+                      file_suffix: docx
+                      file_updated_time: 1722915634000
+                      is_password_protected: false
+                      action: block
+                      risk_name: 低危
+                      file_created_time: 1656126757000
+                      action_display_name: 阻断
+                    file_updated_time: 1722915634000
+                    extract_file: true
+                    file_description: '-'
+                    data_level_name: 保密数据
+                    risk_name: 低危
+                    staff_email: lianbin.cai@cyberserval.cn
+                    file_created_time: 1656126757000
+                    status: created
+                    file_created_timestamp: '2022-06-25T03:12:37Z'
+                    policy_id: eed80e14-cf9b-4587-9a28-6d52e10dd4f1
+                    dept_ids:
+                    - de5ac24d-308a-4ba1-96bc-691644cf0dbe
+                    - c8e885c6-1760-4758-b152-d37147dfec5e
+                    data_level_names:
+                    - 保密数据
+                    is_hidden: false
+                    filesize: 60240
+                    mac: 80:B6:55:F5:94:7F
+                    policy_group_id: ea581dad-40f7-45e0-b37a-f92878876cc9
+                    is_compressed: false
+                    data_levels:
+                    - 3
+                    timestamp: '2024-08-06T03:40:44Z'
+                    channel_name: 飞书
+                    cl_name: 测试111
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    policy_name: 本地测试111
+                    staff_code: 674b2cdc16b5edfc
+                    created_timestamp: '2024-08-06T03:40:47Z'
+                    ip_address: 192.168.96.201
+                    cl_ids:
+                    - 7ae6ddd1-3217-49cc-b32d-c16eef1d242c
+                    policy_group_name: 默认组
+                    risk_level: 3
+                    agent_version: 3.4.3
+                    is_blocked: true
+                    event_id: '1722915644059713'
+                    '@timestamp': 1722915644135
+                    is_password_protected: false
+                    os_name: Windows
+                    metasource: []
+                    time: 1722915644135
+                    category: channel
+                    operation: outgoing
+                    staff_tag_ids: []
+                    cl_names:
+                    - 测试111
+                    uid: ANvGJZEB4rYwLyMOi-ay
+                    _type: _doc
+                    _index: .ds-qzhddr_policylog_channel_s-2024.08.05-000033
+                    _score: 90.625
+                    action_display_name: 阻断
+      security: []

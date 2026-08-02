@@ -1,0 +1,109 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account machinelearning/{ml_id}/action/perform API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: machinelearning/{ml_id}/action/perform
+  description: 机器学习/ml_id 参数/操作/执行
+paths:
+  /machinelearning/{ml_id}/action/perform:
+    post:
+      summary: 开始机器学习/文件指纹
+      deprecated: false
+      description: ''
+      tags:
+      - machinelearning/{ml_id}/action/perform
+      parameters:
+      - name: ml_id
+        in: path
+        description: ''
+        required: true
+        example: 7995071d-602d-469d-a6ca-3cd4cadc5dc2
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: multipart/form-data
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  example: 'null'
+                  type: string
+                  format: binary
+              required:
+              - file
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              example: {}
+      security: []

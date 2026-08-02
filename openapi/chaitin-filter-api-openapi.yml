@@ -1,0 +1,86 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account filter API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: filter
+paths:
+  /api/CSVHeaderAPI:
+    get:
+      operationId: CSVHeaderAPI_get
+      summary: GET /api/CSVHeaderAPI
+      tags:
+      - filter
+      parameters: []
+      x-cli-body-fallback: true
+  /api/FilterAPI:
+    get:
+      operationId: FilterAPI_get
+      summary: GET /api/FilterAPI
+      tags:
+      - filter
+      parameters: []
+      x-cli-body-fallback: true
+    delete:
+      operationId: FilterAPI_delete
+      summary: DELETE /api/FilterAPI
+      tags:
+      - filter
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/FilterDownloadAPI:
+    get:
+      operationId: FilterDownloadAPI_get
+      summary: GET /api/FilterDownloadAPI
+      tags:
+      - filter
+      parameters: []
+      x-cli-body-fallback: true
+    post:
+      operationId: FilterDownloadAPI_post
+      summary: POST /api/FilterDownloadAPI
+      tags:
+      - filter
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/FilterEnableDisableAPI:
+    put:
+      operationId: FilterEnableDisableAPI_put
+      summary: PUT /api/FilterEnableDisableAPI
+      tags:
+      - filter
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/RemoteFilterableChoiceAPI:
+    get:
+      operationId: RemoteFilterableChoiceAPI_get
+      summary: GET /api/RemoteFilterableChoiceAPI
+      tags:
+      - filter
+      parameters:
+      - name: query_field
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false

@@ -1,0 +1,117 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account report API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: report
+paths:
+  /api/ReportTaskPreview:
+    get:
+      operationId: ReportTaskPreview_get
+      summary: GET /api/ReportTaskPreview
+      tags:
+      - report
+      parameters:
+      - name: app_ids
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: array
+          items:
+            type: string
+      - name: custom
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: desensitize_enabled
+        in: query
+        required: true
+        description: 脱敏开关
+        schema:
+          type: boolean
+          description: 脱敏开关
+      - name: end_time
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: site_re
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: start_time
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+  /api/ReportTemplateAPI:
+    get:
+      operationId: ReportTemplateAPI_get
+      summary: GET /api/ReportTemplateAPI
+      tags:
+      - report
+      parameters: []
+      x-cli-body-fallback: true
+    put:
+      operationId: ReportTemplateAPI_put
+      summary: PUT /api/ReportTemplateAPI
+      tags:
+      - report
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                remark:
+                  type: string
+              required:
+              - name
+              - remark
+    delete:
+      operationId: ReportTemplateAPI_delete
+      summary: DELETE /api/ReportTemplateAPI
+      tags:
+      - report
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: ID
+              required:
+              - id
+  /api/UploadReportTemplateAPI:
+    post:
+      operationId: UploadReportTemplateAPI_post
+      summary: POST /api/UploadReportTemplateAPI
+      tags:
+      - report
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object

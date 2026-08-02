@@ -1,0 +1,215 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policylog/channel/download API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policylog/channel/download
+  description: 日志中心/通道/下载
+paths:
+  /policylog/channel/download:
+    post:
+      summary: 导出
+      deprecated: false
+      description: ''
+      tags:
+      - policylog/channel/download
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                search:
+                  type: string
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                name:
+                  type: string
+                output:
+                  type: object
+                  properties:
+                    ext:
+                      type: string
+                    fields:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                          display_name:
+                            type: string
+                        required:
+                        - name
+                        - display_name
+                  required:
+                  - ext
+                  - fields
+                queries:
+                  type: array
+                  items: {}
+              required:
+              - search
+              - time_range
+              - name
+              - output
+              - queries
+            example:
+              search: ''
+              time_range:
+                begin: '2024-01-01 00:00:00'
+                end: '2024-08-15 13:55:20'
+              name: vvv
+              output:
+                ext: xlsx
+                fields:
+                - name: channel_name
+                  display_name: 渠道名称
+                - name: staff_name
+                  display_name: 员工姓名
+                - name: device_code
+                  display_name: 终端ID
+                - name: filename
+                  display_name: 文件名
+                - name: cl_name
+                  display_name: 数据分类
+                - name: uid
+                  display_name: 日志ID
+                - name: file_suffix
+                  display_name: 文件后缀
+                - name: data_level
+                  display_name: 数据分级
+                - name: risk_name
+                  display_name: 风险等级
+                - name: staff_code
+                  display_name: 员工账户
+                - name: staff_tags
+                  display_name: 员工标签
+                - name: dept_names
+                  display_name: 部门名称
+                - name: dept_paths
+                  display_name: 部门路径
+                - name: ip_address
+                  display_name: IP地址
+                - name: console_user
+                  display_name: 系统账户
+                - name: os_name
+                  display_name: 操作系统
+                - name: policy_name
+                  display_name: 策略名称
+                - name: action
+                  display_name: 处置动作
+                - name: status
+                  display_name: 事件状态
+                - name: is_blocked
+                  display_name: 是否阻断
+                - name: filepath
+                  display_name: 文件路径
+                - name: md5_hash
+                  display_name: 文件MD5
+                - name: file_type
+                  display_name: 文件类型
+                - name: filesize
+                  display_name: 文件大小(Bytes)
+                - name: is_password_protected
+                  display_name: 是否加密
+                - name: extract_file
+                  display_name: 是否上传固证
+                - name: data_level_name
+                  display_name: 数据分级名称
+                - name: metasource.source.display_name
+                  display_name: 数据来源
+                - name: hostname
+                  display_name: 主机名
+                - name: mac
+                  display_name: MAC地址
+                - name: meta_original.process_name
+                  display_name: 文件来源进程名
+                - name: meta_original.urls
+                  display_name: 文件来源URL
+                - name: llm.has_cls
+                  display_name: AI 分类
+              queries: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              example: {}
+      security: []

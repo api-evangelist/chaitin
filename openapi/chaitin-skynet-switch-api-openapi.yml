@@ -1,0 +1,61 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account skynet/switch API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: skynet/switch
+paths:
+  /open/skynet/rule/switch:
+    get:
+      produces:
+      - application/json
+      tags:
+      - skynet/switch
+      summary: get enhance rule global status
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  type: boolean
+      x-cli-summary: 获取加强规则全局开关
+    put:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - skynet/switch
+      summary: update enhance rule global status
+      parameters:
+      - description: request params
+        name: request
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/api.PutSkynetRuleSwitchReq'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/response.JSONBody'
+      x-cli-summary: 设置加强规则全局开关
+definitions:
+  response.JSONBody:
+    type: object
+    properties:
+      data: {}
+      err:
+        type: string
+      msg:
+        type: string
+  api.PutSkynetRuleSwitchReq:
+    type: object
+    properties:
+      enable:
+        type: boolean

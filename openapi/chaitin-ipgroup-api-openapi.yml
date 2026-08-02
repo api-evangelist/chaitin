@@ -1,0 +1,204 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account ipgroup API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: ipgroup
+paths:
+  /open/ipgroup:
+    get:
+      produces:
+      - application/json
+      tags:
+      - ipgroup
+      summary: list ip group
+      parameters:
+      - type: integer
+        name: top
+        in: query
+        x-cli-description: 返回前 N 条
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/api.GetIPGroupRes'
+      x-cli-summary: 获取 IP Group 列表
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - ipgroup
+      summary: create ip group
+      parameters:
+      - description: request params
+        name: request
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/ipg.IPGroupVO'
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  type: integer
+      x-cli-summary: 创建 IP Group
+    put:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - ipgroup
+      summary: update ip group
+      parameters:
+      - description: request params
+        name: request
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/ipg.IPGroupVO'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/response.JSONBody'
+      x-cli-summary: 更新 IP Group
+    delete:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - ipgroup
+      summary: delete ip group
+      parameters:
+      - description: request params
+        name: request
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/api.DeleteIPGroupReq'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/response.JSONBody'
+      x-cli-summary: 删除 IP Group
+  /open/ipgroup/append:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - ipgroup
+      summary: add ip to ip group
+      parameters:
+      - description: request params
+        name: request
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/api.PostAppendIPGroupRequest'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/response.JSONBody'
+      x-cli-summary: 添加 IP 到 IP Group
+  /open/ipgroup/detail:
+    get:
+      produces:
+      - application/json
+      tags:
+      - ipgroup
+      summary: get ip group detail
+      parameters:
+      - type: integer
+        name: id
+        in: query
+        x-cli-description: 资源 ID
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/api.GetIPGroupDetailRes'
+      x-cli-summary: 获取 IP Group 详情
+definitions:
+  response.JSONBody:
+    type: object
+    properties:
+      data: {}
+      err:
+        type: string
+      msg:
+        type: string
+  api.GetIPGroupRes:
+    type: object
+    properties:
+      nodes:
+        type: array
+        items:
+          $ref: '#/definitions/ipg.IPGroupVO'
+      total:
+        type: integer
+  api.GetIPGroupDetailRes:
+    type: object
+    properties:
+      data:
+        $ref: '#/definitions/ipg.IPGroupVO'
+  api.PostAppendIPGroupRequest:
+    type: object
+    properties:
+      ip_group_ids:
+        type: array
+        items:
+          type: integer
+      ips:
+        type: array
+        items:
+          type: string
+  api.DeleteIPGroupReq:
+    type: object
+    properties:
+      ids:
+        type: array
+        items:
+          type: integer
+  ipg.IPGroupVO:
+    type: object
+    properties:
+      builtin:
+        type: boolean
+      comment:
+        type: string
+      id:
+        type: integer
+      ips:
+        type: array
+        items:
+          type: string
+      reference:
+        type: string
+      total:
+        type: integer
+      updated_at:
+        type: string

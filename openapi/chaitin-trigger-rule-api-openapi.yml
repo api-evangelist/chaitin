@@ -1,0 +1,253 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account trigger_rule API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: trigger_rule
+paths:
+  /api/BuildinRuleTemplateAPI:
+    get:
+      operationId: BuildinRuleTemplateAPI_get
+      summary: GET /api/BuildinRuleTemplateAPI
+      tags:
+      - trigger_rule
+      parameters: []
+      x-cli-body-fallback: true
+  /api/PushTriggerRuleAPI:
+    put:
+      operationId: PushTriggerRuleAPI_put
+      summary: PUT /api/PushTriggerRuleAPI
+      tags:
+      - trigger_rule
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/RuleTemplateAPI:
+    post:
+      operationId: RuleTemplateAPI_post
+      summary: POST /api/RuleTemplateAPI
+      tags:
+      - trigger_rule
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                remark:
+                  type: string
+                device_ids:
+                  type: string
+                  description: 目标设备
+                strategy_id:
+                  type: integer
+                template:
+                  type: object
+                is_enabled:
+                  type: boolean
+              required:
+              - remark
+              - device_ids
+              - strategy_id
+              - template
+              - is_enabled
+    put:
+      operationId: RuleTemplateAPI_put
+      summary: PUT /api/RuleTemplateAPI
+      tags:
+      - trigger_rule
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                remark:
+                  type: string
+                device_ids:
+                  type: string
+                  description: 目标设备
+                strategy_id:
+                  type: integer
+                template:
+                  type: object
+                is_enabled:
+                  type: boolean
+              required:
+              - device_ids
+              - is_enabled
+              - remark
+              - strategy_id
+              - template
+    delete:
+      operationId: RuleTemplateAPI_delete
+      summary: DELETE /api/RuleTemplateAPI
+      tags:
+      - trigger_rule
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                delete_rules:
+                  type: boolean
+                  description: 删除联动规则
+                delete_device_rules:
+                  type: boolean
+                  description: 删除目标设备上生成的规则
+              required:
+              - delete_rules
+              - delete_device_rules
+  /api/TargetDeviceAPI:
+    get:
+      operationId: TargetDeviceAPI_get
+      summary: GET /api/TargetDeviceAPI
+      tags:
+      - trigger_rule
+      parameters: []
+      x-cli-body-fallback: true
+    post:
+      operationId: TargetDeviceAPI_post
+      summary: POST /api/TargetDeviceAPI
+      tags:
+      - trigger_rule
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                type:
+                  type: string
+                address:
+                  type: string
+                enabled:
+                  type: boolean
+                api_token:
+                  type: string
+              required:
+              - address
+              - enabled
+              - name
+              - type
+    put:
+      operationId: TargetDeviceAPI_put
+      summary: PUT /api/TargetDeviceAPI
+      tags:
+      - trigger_rule
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                type:
+                  type: string
+                address:
+                  type: string
+                enabled:
+                  type: boolean
+                api_token:
+                  type: string
+              required:
+              - address
+              - enabled
+              - name
+              - type
+    delete:
+      operationId: TargetDeviceAPI_delete
+      summary: DELETE /api/TargetDeviceAPI
+      tags:
+      - trigger_rule
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                delete_device_rules:
+                  type: boolean
+                  description: 删除目标设备上生成的规则
+              required:
+              - delete_device_rules
+  /api/TriggerRuleAPI:
+    post:
+      operationId: TriggerRuleAPI_post
+      summary: POST /api/TriggerRuleAPI
+      tags:
+      - trigger_rule
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                device_id:
+                  type: integer
+                  description: 联动设备
+                strategy_id:
+                  type: integer
+                  description: 风险策略
+                remark:
+                  type: string
+                template:
+                  type: object
+              required:
+              - device_id
+              - remark
+              - template
+    delete:
+      operationId: TriggerRuleAPI_delete
+      summary: DELETE /api/TriggerRuleAPI
+      tags:
+      - trigger_rule
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                delete_device_rule:
+                  type: boolean
+                  description: 删除生成的规则
+              required:
+              - delete_device_rule

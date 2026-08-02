@@ -1,0 +1,175 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account plugin API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: plugin
+paths:
+  /api/EnableDisablePreprocessPluginAPI:
+    put:
+      operationId: EnableDisablePreprocessPluginAPI_put
+      summary: PUT /api/EnableDisablePreprocessPluginAPI
+      tags:
+      - plugin
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+              required:
+              - status
+  /api/PluginPredictResultAPI:
+    get:
+      operationId: PluginPredictResultAPI_get
+      summary: GET /api/PluginPredictResultAPI
+      tags:
+      - plugin
+      parameters:
+      - name: plugin_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+    post:
+      operationId: PluginPredictResultAPI_post
+      summary: POST /api/PluginPredictResultAPI
+      tags:
+      - plugin
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties: {}
+  /api/PreprocessPluginAPI:
+    get:
+      operationId: PreprocessPluginAPI_get
+      summary: GET /api/PreprocessPluginAPI
+      tags:
+      - plugin
+      parameters:
+      - name: name__like
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+    post:
+      operationId: PreprocessPluginAPI_post
+      summary: POST /api/PreprocessPluginAPI
+      tags:
+      - plugin
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                comment:
+                  type: string
+                code:
+                  type: string
+                  description: lua 脚本
+                status:
+                  type: string
+                plugin_type:
+                  type: string
+              required:
+              - name
+              - code
+              - status
+              - plugin_type
+    put:
+      operationId: PreprocessPluginAPI_put
+      summary: PUT /api/PreprocessPluginAPI
+      tags:
+      - plugin
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                comment:
+                  type: string
+                code:
+                  type: string
+                  description: lua 脚本
+                status:
+                  type: string
+                plugin_type:
+                  type: string
+              required:
+              - code
+              - name
+              - plugin_type
+              - status
+    delete:
+      operationId: PreprocessPluginAPI_delete
+      summary: DELETE /api/PreprocessPluginAPI
+      tags:
+      - plugin
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/PreprocessPluginStateUpdateAPI:
+    post:
+      operationId: PreprocessPluginStateUpdateAPI_post
+      summary: POST /api/PreprocessPluginStateUpdateAPI
+      tags:
+      - plugin
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  timestamp:
+                    type: number
+                  id:
+                    type: string
+                  state:
+                    type: string
+                required:
+                - timestamp
+                - id
+                - state

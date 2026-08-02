@@ -1,0 +1,440 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policy/email API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policy/email
+  description: 策略管理/邮件
+paths:
+  /policy/email:
+    post:
+      summary: 创建
+      deprecated: false
+      description: ''
+      tags:
+      - policy/email
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                scope:
+                  type: string
+                binding_config:
+                  type: object
+                  properties:
+                    source:
+                      type: string
+                    include:
+                      type: object
+                      properties: {}
+                    exclude:
+                      type: object
+                      properties: {}
+                  required:
+                  - source
+                  - include
+                  - exclude
+                action:
+                  type: string
+                expression:
+                  type: string
+                expression_relation:
+                  type: string
+                expression_fields:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: array
+                        items:
+                          type: string
+              required:
+              - name
+              - description
+              - scope
+              - binding_config
+              - action
+              - expression
+              - expression_relation
+              - expression_fields
+            example:
+              name: 邮件策略
+              description: 策略描述
+              scope: global
+              binding_config:
+                source: email
+                include: {}
+                exclude: {}
+              action: notify
+              expression: N/A
+              expression_relation: all
+              expression_fields:
+              - field: channel
+                operator: contains
+                value:
+                - all_channels
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      id:
+                        type: integer
+                      create_time:
+                        type: string
+                      name:
+                        type: string
+                      status:
+                        type: string
+                      category:
+                        type: string
+                      source:
+                        type: string
+                      uid:
+                        type: string
+                      encryption_options:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            level:
+                              type: integer
+                            open:
+                              type: object
+                              properties:
+                                action_template_id:
+                                  type: string
+                                action:
+                                  type: string
+                              required:
+                              - action_template_id
+                              - action
+                            action:
+                              type: object
+                              properties:
+                                copy:
+                                  type: boolean
+                                drag:
+                                  type: boolean
+                                save_as:
+                                  type: boolean
+                              required:
+                              - copy
+                              - drag
+                              - save_as
+                            decryption:
+                              type: object
+                              properties:
+                                action_template_id:
+                                  type: string
+                                action:
+                                  type: string
+                              required:
+                              - action_template_id
+                              - action
+                            backup:
+                              type: object
+                              properties:
+                                local_backup:
+                                  type: boolean
+                                local_warning_storage:
+                                  type: integer
+                                remote_backup:
+                                  type: boolean
+                                period_category:
+                                  type: string
+                                period_options:
+                                  type: object
+                                  properties:
+                                    day:
+                                      type: 'null'
+                                    weekday:
+                                      type: integer
+                                    hour:
+                                      type: integer
+                                    minute:
+                                      type: integer
+                                  required:
+                                  - day
+                                  - weekday
+                                  - hour
+                                  - minute
+                                incremental_backup:
+                                  type: boolean
+                              required:
+                              - local_backup
+                              - local_warning_storage
+                              - remote_backup
+                              - period_category
+                              - period_options
+                              - incremental_backup
+                          required:
+                          - level
+                          - open
+                          - action
+                          - decryption
+                          - backup
+                      run_model:
+                        type: array
+                        items:
+                          type: string
+                      company_id:
+                        type: string
+                      period_category:
+                        type: string
+                      expression_fields:
+                        type: array
+                        items:
+                          type: string
+                      update_by_id:
+                        type: string
+                      action_option:
+                        type: object
+                        properties:
+                          upgrade:
+                            type: object
+                            properties:
+                              action_template_id:
+                                type: string
+                              action:
+                                type: string
+                            required:
+                            - action_template_id
+                            - action
+                          downgrade:
+                            type: object
+                            properties:
+                              action_template_id:
+                                type: string
+                              action:
+                                type: string
+                            required:
+                            - action_template_id
+                            - action
+                        required:
+                        - upgrade
+                        - downgrade
+                      priority:
+                        type: integer
+                      expression:
+                        type: 'null'
+                      description:
+                        type: string
+                      period_options:
+                        type: object
+                        properties: {}
+                      update_time:
+                        type: string
+                      create_by_id:
+                        type: string
+                      expand:
+                        type: object
+                        properties: {}
+                      expression_relation:
+                        type: 'null'
+                      mode:
+                        type: string
+                      scope:
+                        type: string
+                    required:
+                    - code
+                    - id
+                    - create_time
+                    - name
+                    - status
+                    - category
+                    - source
+                    - uid
+                    - encryption_options
+                    - run_model
+                    - company_id
+                    - period_category
+                    - expression_fields
+                    - update_by_id
+                    - action_option
+                    - priority
+                    - expression
+                    - description
+                    - period_options
+                    - update_time
+                    - create_by_id
+                    - expand
+                    - expression_relation
+                    - mode
+                    - scope
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 7116
+                msg: string
+                data:
+                  code: string
+                  id: 367
+                  create_time: string
+                  name: string
+                  status: string
+                  category: string
+                  source: string
+                  uid: string
+                  encryption_options:
+                  - level: 6706
+                    open:
+                      action_template_id: string
+                      action: string
+                    action:
+                      copy: false
+                      drag: false
+                      save_as: true
+                    decryption:
+                      action_template_id: string
+                      action: string
+                    backup:
+                      local_backup: false
+                      local_warning_storage: 9885
+                      remote_backup: true
+                      period_category: string
+                      period_options:
+                        day: null
+                        weekday: 9270
+                        hour: 9825
+                        minute: 3483
+                      incremental_backup: false
+                  - level: 233
+                    open:
+                      action_template_id: string
+                      action: string
+                    action:
+                      copy: true
+                      drag: true
+                      save_as: false
+                    decryption:
+                      action_template_id: string
+                      action: string
+                    backup:
+                      local_backup: true
+                      local_warning_storage: 2803
+                      remote_backup: false
+                      period_category: string
+                      period_options:
+                        day: null
+                        weekday: 5710
+                        hour: 851
+                        minute: 5185
+                      incremental_backup: true
+                  run_model:
+                  - string
+                  - string
+                  company_id: string
+                  period_category: string
+                  expression_fields:
+                  - string
+                  - string
+                  update_by_id: string
+                  action_option:
+                    upgrade:
+                      action_template_id: string
+                      action: string
+                    downgrade:
+                      action_template_id: string
+                      action: string
+                  priority: 5202
+                  expression: null
+                  description: string
+                  period_options: {}
+                  update_time: string
+                  create_by_id: string
+                  expand: {}
+                  expression_relation: null
+                  mode: string
+                  scope: string
+      security: []

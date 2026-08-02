@@ -1,0 +1,340 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account browsermanager/{tid}/detail API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: browsermanager/{tid}/detail
+  description: 浏览器管理/tid 参数/详情
+paths:
+  /browsermanager/{tid}/detail:
+    post:
+      summary: 浏览器/插件详情
+      deprecated: false
+      description: ''
+      tags:
+      - browsermanager/{tid}/detail
+      parameters:
+      - name: tid
+        in: path
+        description: ''
+        required: true
+        example: 77318ee91f4ec7177bf5f12e43202380
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                plugin_id:
+                  type: string
+              required:
+              - plugin_id
+            example:
+              plugin_id: plugin1 id
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      publisher:
+                        type: string
+                      process_name:
+                        type: string
+                      install_path:
+                        type: string
+                      browser_desc:
+                        type: string
+                      is_default:
+                        type: boolean
+                      bundle_id:
+                        type: string
+                      browser_version:
+                        type: array
+                        items:
+                          type: string
+                      browser_name:
+                        type: string
+                      plugin_status:
+                        type: string
+                      plugin_version:
+                        type: string
+                      plugin_name:
+                        type: string
+                      plugin_source:
+                        type: string
+                      plugin_desc:
+                        type: string
+                      plugin_id:
+                        type: string
+                      permission:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            is_sensitive:
+                              type: boolean
+                          required:
+                          - name
+                          - is_sensitive
+                      device_id:
+                        type: string
+                      os_name:
+                        type: string
+                      os_friendly_name:
+                        type: string
+                      device_code:
+                        type: string
+                      console_user:
+                        type: string
+                      agent_version:
+                        type: string
+                      ip_address:
+                        type: string
+                      hostname:
+                        type: string
+                      mac:
+                        type: string
+                      time:
+                        type: integer
+                      '@timestamp':
+                        type: integer
+                      timestamp:
+                        type: string
+                      staff_id:
+                        type: string
+                      staff_name:
+                        type: string
+                      staff_email:
+                        type: string
+                      staff_code:
+                        type: string
+                      staff_number:
+                        type: string
+                      staff_tag_ids:
+                        type: array
+                        items: {}
+                      staff_tags:
+                        type: array
+                        items: {}
+                      dept_ids:
+                        type: array
+                        items:
+                          type: string
+                      dept_names:
+                        type: array
+                        items:
+                          type: string
+                      dept_paths:
+                        type: array
+                        items:
+                          type: string
+                      display_name:
+                        type: string
+                      company_id:
+                        type: string
+                      event_id:
+                        type: string
+                      tid:
+                        type: string
+                      uid:
+                        type: string
+                      _type:
+                        type: string
+                      _index:
+                        type: string
+                      _score:
+                        type: 'null'
+                      plugin_activate_cnt:
+                        type: integer
+                      os_icon:
+                        type: string
+                    required:
+                    - publisher
+                    - process_name
+                    - install_path
+                    - browser_desc
+                    - is_default
+                    - bundle_id
+                    - browser_version
+                    - browser_name
+                    - plugin_status
+                    - plugin_version
+                    - plugin_name
+                    - plugin_source
+                    - plugin_desc
+                    - plugin_id
+                    - permission
+                    - device_id
+                    - os_name
+                    - os_friendly_name
+                    - device_code
+                    - console_user
+                    - agent_version
+                    - ip_address
+                    - hostname
+                    - mac
+                    - time
+                    - '@timestamp'
+                    - timestamp
+                    - staff_id
+                    - staff_name
+                    - staff_email
+                    - staff_code
+                    - staff_number
+                    - staff_tag_ids
+                    - staff_tags
+                    - dept_ids
+                    - dept_names
+                    - dept_paths
+                    - display_name
+                    - company_id
+                    - event_id
+                    - tid
+                    - uid
+                    - _type
+                    - _index
+                    - _score
+                    - plugin_activate_cnt
+                    - os_icon
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  publisher: Microsoft Corporation
+                  process_name: msedge.exe
+                  install_path: c:\program files (x86)\microsoft\edge\application
+                  browser_desc: browser_desc
+                  is_default: true
+                  bundle_id: aaa
+                  browser_version:
+                  - 120.0.2210.144
+                  browser_name: Microsoft Edge
+                  plugin_status: activate
+                  plugin_version: plugin version
+                  plugin_name: plugin1
+                  plugin_source: external
+                  plugin_desc: plugin desc
+                  plugin_id: plugin1 id
+                  permission:
+                  - name: clipboardRead
+                    is_sensitive: true
+                  - name: audio
+                    is_sensitive: false
+                  device_id: b6b80bb2-d8b3-4d04-acd4-490ed606421d
+                  os_name: Windows
+                  os_friendly_name: Windows 10 Professional (10.0.19045)
+                  device_code: PC-000041
+                  console_user: happy@DESKTOP-3QQ22QN
+                  agent_version: 1.6.26
+                  ip_address: 192.168.96.168
+                  hostname: ''
+                  mac: ''
+                  time: 1743147689168
+                  '@timestamp': 1743147689168
+                  timestamp: '2025-03-28T15:41:29+08:00'
+                  staff_id: 9c830d69-fe2f-4a75-b17d-94dfa9dda958
+                  staff_name: hyj
+                  staff_email: 2196900073@qq.com
+                  staff_code: 80e9854fdd406dc0
+                  staff_number: 5a8bbec2c949dfd2
+                  staff_tag_ids: []
+                  staff_tags: []
+                  dept_ids:
+                  - 5073b0bd-d80b-450f-ac72-22ffc074f29f
+                  dept_names:
+                  - default
+                  dept_paths:
+                  - default
+                  display_name: Edge
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  event_id: b9ab7a16-c761-4f0b-82d7-9e9eb4c8a49f
+                  tid: 77318ee91f4ec7177bf5f12e43202380
+                  uid: e864f6fe0bf0ebf0ef35300fc3221924
+                  _type: _doc
+                  _index: qzhddr_browser_manager
+                  _score: null
+                  plugin_activate_cnt: 1
+                  os_icon: windows
+      security: []

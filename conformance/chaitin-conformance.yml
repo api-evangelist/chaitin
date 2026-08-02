@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/chaitin-safeline-openapi-original.json, openapi/chaitin-cloudatlas-openapi-original.yaml
+standards:
+- id: openapi-3.0
+  conforms: true
+  evidence: cloudatlas, apisec, veinmind, ddr, dsensor specs are OpenAPI 3.0.x
+- id: swagger-2.0
+  conforms: true
+  evidence: SafeLine mgt/Open API published as Swagger 2.0
+- id: api-key-auth
+  conforms: true
+  evidence: apiKey-in-header schemes (X-SLCE-API-TOKEN, TOKEN)
+- id: oauth2
+  conforms: false
+  evidence: no oauth2 securityScheme in any harvested spec
+- id: oidc
+  conforms: false
+  evidence: OIDC present only for SafeLine console SSO, not the machine API
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: responses use a custom { err, msg, data } JSON envelope, not application/problem+json
+- id: rest-json
+  conforms: true
+  evidence: JSON request/response bodies over HTTPS
+- id: pagination
+  conforms: true
+  evidence: page / page_size query params on list operations

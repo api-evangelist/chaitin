@@ -1,0 +1,268 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account dataasset/{asset_id}/hitdetail API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: dataasset/{asset_id}/hitdetail
+  description: 数据资产/asset_id 参数/hitdetail 接口
+paths:
+  /dataasset/{asset_id}/hitdetail:
+    post:
+      summary: 资产地图内容摘要
+      deprecated: false
+      description: ''
+      tags:
+      - dataasset/{asset_id}/hitdetail
+      parameters:
+      - name: asset_id
+        in: path
+        description: ''
+        required: true
+        example: FCv2LJIB1BSg0pzjorSY
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rule_version:
+                  type: object
+                  properties:
+                    cond_ticket:
+                      type: string
+                    cond_version:
+                      type: integer
+                    dc_ticket:
+                      type: string
+                    dc_version:
+                      type: integer
+                    filetype_version:
+                      type: integer
+                    policy_ticket:
+                      type: string
+                    policy_version:
+                      type: integer
+                  required:
+                  - cond_ticket
+                  - cond_version
+                  - dc_ticket
+                  - dc_version
+                  - filetype_version
+                  - policy_ticket
+                  - policy_version
+              required:
+              - rule_version
+            example:
+              rule_version:
+                cond_ticket: ''
+                cond_version: 155
+                dc_ticket: ''
+                dc_version: 1278
+                filetype_version: 44
+                policy_ticket: ''
+                policy_version: 2763
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        position:
+                          type: array
+                          items:
+                            type: integer
+                        content:
+                          type: string
+                        inner_hits:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              position:
+                                type: array
+                                items:
+                                  type: integer
+                              context_positions:
+                                type: array
+                                items:
+                                  type: integer
+                              key:
+                                type: string
+                              uid:
+                                type: string
+                              name:
+                                type: string
+                              category:
+                                type: string
+                              start:
+                                type: integer
+                              end:
+                                type: integer
+                            required:
+                            - position
+                            - context_positions
+                            - key
+                            - uid
+                            - name
+                            - category
+                            - start
+                            - end
+                        cl_id:
+                          type: string
+                        cl_name:
+                          type: string
+                        cl_level:
+                          type: integer
+                      required:
+                      - position
+                      - content
+                      - inner_hits
+                      - cl_id
+                      - cl_name
+                      - cl_level
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: Normal
+                data:
+                - position:
+                  - 0
+                  - 6
+                  content: 测试
+                  inner_hits:
+                  - position:
+                    - 0
+                    - 6
+                    context_positions:
+                    - 0
+                    - 6
+                    key: 测试
+                    uid: db7cce2e-ee93-403b-9d8b-a8ecd648c208
+                    name: 测试
+                    category: keywords
+                    start: 0
+                    end: 2
+                  cl_id: 47778687-933a-4de7-a736-7698f56a2812
+                  cl_name: 测试关键词-内容
+                  cl_level: 1
+                - position:
+                  - 0
+                  - 6
+                  content: 测试
+                  inner_hits:
+                  - position:
+                    - 0
+                    - 6
+                    context_positions:
+                    - 0
+                    - 6
+                    key: 测试
+                    uid: db7cce2e-ee93-403b-9d8b-a8ecd648c208
+                    name: 测试
+                    category: keywords
+                    start: 0
+                    end: 2
+                  cl_id: f8382879-894a-4ddd-8375-ff4be46784cd
+                  cl_name: 文件内容-测试
+                  cl_level: 4
+                - position:
+                  - 0
+                  - 6
+                  content: 测试
+                  inner_hits:
+                  - position:
+                    - 0
+                    - 6
+                    context_positions:
+                    - 0
+                    - 6
+                    key: 测试
+                    uid: db7cce2e-ee93-403b-9d8b-a8ecd648c208
+                    name: 测试
+                    category: keywords
+                    start: 0
+                    end: 2
+                  cl_id: f8382879-894a-4ddd-8375-ff4be46784cd
+                  cl_name: 文件内容-测试
+                  cl_level: 4
+      security: []

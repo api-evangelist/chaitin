@@ -1,0 +1,596 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account filebehavior/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: filebehavior/list
+  description: 文件行为/列表
+paths:
+  /filebehavior/list:
+    post:
+      summary: 数据行为列表
+      deprecated: false
+      description: ''
+      tags:
+      - filebehavior/list
+      parameters:
+      - name: page
+        in: query
+        description: ''
+        required: true
+        example: '1'
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: ''
+        required: true
+        example: '10'
+        schema:
+          type: string
+      - name: search
+        in: query
+        description: ''
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                use_default_query:
+                  type: boolean
+                search:
+                  type: string
+                queries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: string
+              required:
+              - time_range
+              - use_default_query
+              - search
+              - queries
+            example:
+              time_range:
+                begin: '2023-11-29 00:00:00'
+                end: '2023-11-29 01:00:00'
+              use_default_query: false
+              search: ''
+              queries:
+              - field: app
+                operator: is
+                value: smb
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      page:
+                        type: integer
+                      limit:
+                        type: integer
+                      search_total:
+                        type: integer
+                      total:
+                        type: integer
+                      search_after:
+                        type: array
+                        items:
+                          type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            device_id:
+                              type: string
+                            os_name:
+                              type: string
+                            app_version:
+                              type: string
+                            p_user:
+                              type: string
+                            src_files:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  filepath:
+                                    type: string
+                                  is_hidden:
+                                    type: boolean
+                                  file_updated_time:
+                                    type: integer
+                                  filename:
+                                    type: string
+                                  file_created_time:
+                                    type: integer
+                                  sha256_hash:
+                                    type: 'null'
+                                  is_password_protected:
+                                    type: boolean
+                                  meta_original:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        app:
+                                          type: string
+                                        urls:
+                                          type: array
+                                          items:
+                                            type: string
+                                        hosts:
+                                          type: array
+                                          items:
+                                            type: string
+                                      required:
+                                      - app
+                                      - urls
+                                      - hosts
+                                  metasource:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        original:
+                                          type: object
+                                          properties:
+                                            app:
+                                              type: array
+                                              items:
+                                                type: string
+                                            urls:
+                                              type: array
+                                              items: {}
+                                          required:
+                                          - app
+                                          - urls
+                                        category:
+                                          type: string
+                                        source:
+                                          type: array
+                                          items:
+                                            type: object
+                                            properties:
+                                              name:
+                                                type: string
+                                              display_name:
+                                                type: string
+                                        version:
+                                          type: integer
+                                  md5_hash:
+                                    type: string
+                                  file_type:
+                                    type: string
+                                  filesize:
+                                    type: integer
+                                  is_compressed:
+                                    type: boolean
+                                  file_suffix:
+                                    type: string
+                                  file_created_timestamp:
+                                    type: string
+                                  file_updated_timestamp:
+                                    type: string
+                            app_account:
+                              type: string
+                            agent_version:
+                              type: string
+                            p_path:
+                              type: string
+                            ip_address:
+                              type: string
+                            is_sign_valid:
+                              type: boolean
+                            bundle_id:
+                              type: string
+                            operation:
+                              type: string
+                            p_sha256:
+                              type: string
+                            status:
+                              type: string
+                            p_md5:
+                              type: string
+                            time:
+                              type: integer
+                            app:
+                              type: string
+                            p_id:
+                              type: string
+                            pp_id:
+                              type: string
+                            device_code:
+                              type: string
+                            event_id:
+                              type: string
+                            dst_files:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  filepath:
+                                    type: string
+                                  is_hidden:
+                                    type: boolean
+                                  file_updated_time:
+                                    type: integer
+                                  filename:
+                                    type: string
+                                  file_created_time:
+                                    type: integer
+                                  sha256_hash:
+                                    type: 'null'
+                                  is_password_protected:
+                                    type: boolean
+                                  meta_original:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        app:
+                                          type: string
+                                        urls:
+                                          type: array
+                                          items:
+                                            type: string
+                                        hosts:
+                                          type: array
+                                          items:
+                                            type: string
+                                      required:
+                                      - app
+                                      - urls
+                                      - hosts
+                                  metasource:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        original:
+                                          type: object
+                                          properties:
+                                            app:
+                                              type: array
+                                              items:
+                                                type: string
+                                            urls:
+                                              type: array
+                                              items: {}
+                                          required:
+                                          - app
+                                          - urls
+                                        category:
+                                          type: string
+                                        source:
+                                          type: array
+                                          items:
+                                            type: object
+                                            properties:
+                                              name:
+                                                type: string
+                                              display_name:
+                                                type: string
+                                        version:
+                                          type: integer
+                                  md5_hash:
+                                    type: string
+                                  file_type:
+                                    type: string
+                                  filesize:
+                                    type: integer
+                                  is_compressed:
+                                    type: boolean
+                                  file_suffix:
+                                    type: string
+                                  file_created_timestamp:
+                                    type: string
+                                  file_updated_timestamp:
+                                    type: string
+                            p_sign:
+                              type: string
+                            pp_name:
+                              type: string
+                            p_cmdline:
+                              type: 'null'
+                            os_friendly_name:
+                              type: string
+                            console_user:
+                              type: string
+                            p_name:
+                              type: string
+                            company_id:
+                              type: string
+                            app_name:
+                              type: string
+                            '@timestamp':
+                              type: integer
+                            timestamp:
+                              type: string
+                            created_timestamp:
+                              type: string
+                            staff_id:
+                              type: string
+                            staff_name:
+                              type: string
+                            staff_email:
+                              type: string
+                            staff_code:
+                              type: string
+                            staff_tag_ids:
+                              type: array
+                              items: {}
+                            staff_tags:
+                              type: array
+                              items: {}
+                            dept_ids:
+                              type: array
+                              items:
+                                type: string
+                            dept_names:
+                              type: array
+                              items:
+                                type: string
+                            dept_paths:
+                              type: array
+                              items:
+                                type: string
+                            uid:
+                              type: string
+                            _type:
+                              type: string
+                            _index:
+                              type: string
+                            operation_name:
+                              type: string
+                    required:
+                    - index
+                    - page
+                    - limit
+                    - search_total
+                    - total
+                    - search_after
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  index:
+                  - qzhddr_behaviors_file
+                  page: 1
+                  limit: 10
+                  search_total: 10000
+                  total: 11013
+                  search_after:
+                  - 1701684149000
+                  results:
+                  - device_id: da9ea823-3b0b-4d9f-a745-2aad58e0af89
+                    os_name: macOS
+                    app_version: '1.0'
+                    p_user: soumao
+                    src_files:
+                    - filepath: /Users/soumao/Library/Application Support/LarkShell/sdk_storage/log/netlog/apollo_net_main_20231204.log
+                      is_hidden: false
+                      file_updated_time: 1701684373529
+                      filename: apollo_net_main_20231204.log
+                      file_created_time: 1701675509086
+                      sha256_hash: null
+                      is_password_protected: false
+                      meta_original:
+                      - app: google
+                        urls:
+                        - google.com
+                        - google1.com
+                        hosts:
+                        - google.com
+                        - google1.com
+                      - app: baidu
+                        urls:
+                        - https://baidu.com?xxxxxx=2
+                        - https://baidu.com?xxxxxx=2
+                        hosts:
+                        - baidu.com
+                      metasource:
+                      - original:
+                          app:
+                          - Feishu
+                          urls: []
+                        category: app
+                        source:
+                        - name: appfeishu
+                          display_name: app_feishu
+                        version: 58
+                      md5_hash: 624e88dcf5381240f12083057efaafd0
+                      file_type: data
+                      filesize: 2626757
+                      is_compressed: false
+                      file_suffix: log
+                      file_created_timestamp: '2023-12-04T07:38:29Z'
+                      file_updated_timestamp: '2023-12-04T10:06:13Z'
+                    app_account: ''
+                    agent_version: 3.1.812
+                    p_path: /Applications/Lark.app/Contents/MacOS/Feishu
+                    ip_address: 192.168.96.241
+                    is_sign_valid: true
+                    bundle_id: com.electron.lark
+                    operation: edit
+                    p_sha256: 202c660d0ba9bfb4bd00dd99fcef6b3bc338c335c35de7ab8248cf68bb56bcc1
+                    status: created
+                    p_md5: 694ed5c857811b2cd3a8299382099bef
+                    time: 1701684373000
+                    app: Feishu
+                    p_id: '1105'
+                    pp_id: '1'
+                    device_code: PC-000009
+                    event_id: 8634AD0A-F869-4DF1-9104-8F715AFB6910
+                    dst_files:
+                    - filepath: /Users/soumao/Library/Application Support/LarkShell/sdk_storage/log/netlog/apollo_net_main_20231204.log
+                      is_hidden: false
+                      file_updated_time: 1701684373529
+                      filename: apollo_net_main_20231204.log
+                      file_created_time: 1701675509086
+                      sha256_hash: null
+                      is_password_protected: false
+                      meta_original:
+                      - app: google
+                        urls:
+                        - google.com
+                        - google1.com
+                        hosts:
+                        - google.com
+                        - google1.com
+                      - app: baidu
+                        urls:
+                        - https://baidu.com?xxxxxx=2
+                        - https://baidu.com?xxxxxx=2
+                        hosts:
+                        - baidu.com
+                      metasource:
+                      - original:
+                          app:
+                          - Feishu
+                          urls: []
+                        category: app
+                        source:
+                        - name: appfeishu
+                          display_name: app_feishu
+                        version: 58
+                      md5_hash: ba8d59b71b2fcc682df5cf7da71554cd
+                      file_type: data
+                      filesize: 2626757
+                      is_compressed: false
+                      file_suffix: log
+                      file_created_timestamp: '2023-12-04T07:38:29Z'
+                      file_updated_timestamp: '2023-12-04T10:06:13Z'
+                    p_sign: com.electron.lark
+                    pp_name: launchd
+                    p_cmdline: null
+                    os_friendly_name: macOS 14.1.1
+                    console_user: soumao
+                    p_name: Feishu
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    app_name: Feishu
+                    '@timestamp': 1701684373000
+                    timestamp: '2023-12-04T10:06:13Z'
+                    created_timestamp: '2023-12-04T10:07:34Z'
+                    staff_id: 6d2f2c9a-7f13-4d00-b597-ebfc4bc4dbe9
+                    staff_name: hyj
+                    staff_email: ''
+                    staff_code: 7e2360d8e2d5dff3
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids:
+                    - 6cbf127d-20f5-4322-93b5-e4a515ae356a
+                    dept_names:
+                    - test
+                    dept_paths:
+                    - default/test
+                    uid: 12BMNIwBT5wU9gY2LQJP
+                    _type: _doc
+                    _index: .ds-qzhddr_behaviors_file_s-2023.11.15-000003
+                    operation_name: 编辑
+      security: []

@@ -1,0 +1,288 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policylog/browserplugin/download API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policylog/browserplugin/download
+  description: 日志中心/浏览器插件/下载
+paths:
+  /policylog/browserplugin/download:
+    post:
+      summary: 浏览器插件日志导出
+      deprecated: false
+      description: ''
+      tags:
+      - policylog/browserplugin/download
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                search:
+                  type: string
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                name:
+                  type: string
+                output:
+                  type: object
+                  properties:
+                    ext:
+                      type: string
+                    fields:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                          display_name:
+                            type: string
+                        required:
+                        - name
+                        - display_name
+                  required:
+                  - ext
+                  - fields
+                queries:
+                  type: array
+                  items: {}
+              required:
+              - search
+              - time_range
+              - name
+              - output
+              - queries
+            example:
+              search: ''
+              time_range:
+                begin: '2025-03-20T09:37:38Z'
+                end: '2025-03-21T09:37:38Z'
+              name: xzcxzc
+              output:
+                ext: xlsx
+                fields:
+                - name: timestamp
+                  display_name: 发生时间
+                - name: uid
+                  display_name: 日志ID
+              queries: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      company_id:
+                        type: string
+                      create_time:
+                        type: string
+                      state:
+                        type: string
+                      category:
+                        type: string
+                      name:
+                        type: string
+                      update_time:
+                        type: string
+                      uid:
+                        type: string
+                      count:
+                        type: integer
+                      compress_category:
+                        type: 'null'
+                      encoding:
+                        type: string
+                      update_by_id:
+                        type: string
+                      ext:
+                        type: string
+                      create_by_id:
+                        type: string
+                      begin_time:
+                        type: string
+                      description:
+                        type: string
+                      end_time:
+                        type: string
+                      order_category:
+                        type: string
+                      source_fields:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            display_name:
+                              type: string
+                          required:
+                          - name
+                          - display_name
+                      quotechar:
+                        type: string
+                      query_params:
+                        type: object
+                        properties:
+                          queries:
+                            type: array
+                            items: {}
+                          filters:
+                            type: object
+                            properties: {}
+                          time_range:
+                            type: object
+                            properties:
+                              begin:
+                                type: string
+                              end:
+                                type: string
+                            required:
+                            - begin
+                            - end
+                        required:
+                        - queries
+                        - filters
+                        - time_range
+                    required:
+                    - company_id
+                    - create_time
+                    - state
+                    - category
+                    - name
+                    - update_time
+                    - uid
+                    - count
+                    - compress_category
+                    - encoding
+                    - update_by_id
+                    - ext
+                    - create_by_id
+                    - begin_time
+                    - description
+                    - end_time
+                    - order_category
+                    - source_fields
+                    - quotechar
+                    - query_params
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  create_time: '2025-03-21T09:38:55.099270Z'
+                  state: created
+                  category: browser_plugin
+                  name: xzcxzc
+                  update_time: '2025-03-21T09:38:55.099323Z'
+                  uid: 75c39287-9459-4495-88d7-f58f74dc6594
+                  count: 0
+                  compress_category: null
+                  encoding: utf8
+                  update_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  ext: xlsx
+                  create_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  begin_time: '2025-03-20T09:37:38Z'
+                  description: ''
+                  end_time: '2025-03-21T09:37:38Z'
+                  order_category: desc
+                  source_fields:
+                  - name: timestamp
+                    display_name: 发生时间
+                  - name: uid
+                    display_name: 日志ID
+                  quotechar: ''
+                  query_params:
+                    queries: []
+                    filters: {}
+                    time_range:
+                      begin: '2025-03-20T09:37:38Z'
+                      end: '2025-03-21T09:37:38Z'
+      security: []

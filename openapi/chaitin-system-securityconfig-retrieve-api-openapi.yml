@@ -1,0 +1,819 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account system/securityconfig/retrieve API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: system/securityconfig/retrieve
+  description: 系统配置/安全配置/获取
+paths:
+  /system/securityconfig/retrieve:
+    post:
+      summary: 安全防护配置
+      deprecated: false
+      description: '[原接口文档](https://servaltech.feishu.cn/docx/NCxMdKr4moDlABxulxicMrItnpb)'
+      tags:
+      - system/securityconfig/retrieve
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      im_policy_config:
+                        type: object
+                        properties:
+                          dingding:
+                            type: object
+                            properties:
+                              enabled:
+                                type: boolean
+                            required:
+                            - enabled
+                          wechat:
+                            type: object
+                            properties:
+                              enable:
+                                type: boolean
+                            required:
+                            - enable
+                          wechat_enterprise:
+                            type: object
+                            properties:
+                              enable:
+                                type: boolean
+                            required:
+                            - enable
+                          qq:
+                            type: object
+                            properties:
+                              enable:
+                                type: boolean
+                            required:
+                            - enable
+                        required:
+                        - dingding
+                        - wechat
+                        - wechat_enterprise
+                        - qq
+                      browser_scan_config:
+                        type: object
+                        properties:
+                          enable_cycle_scan:
+                            type: boolean
+                          window_warning_interval:
+                            type: integer
+                        required:
+                        - enable_cycle_scan
+                        - window_warning_interval
+                      advanced_config:
+                        type: object
+                        properties:
+                          file_analyse_options:
+                            type: object
+                            properties:
+                              summary_size_unit:
+                                type: string
+                              summary_size:
+                                type: integer
+                              summary_size_in_bytes:
+                                type: integer
+                            required:
+                            - summary_size_unit
+                            - summary_size
+                            - summary_size_in_bytes
+                          enable_hide_agent:
+                            type: boolean
+                          enable_macos_self_protection:
+                            type: boolean
+                          enable_macos_hide_menubar:
+                            type: boolean
+                          enable_file_classification_big_model:
+                            type: boolean
+                          enable_binary_scan:
+                            type: boolean
+                          enable_clipboard:
+                            type: boolean
+                          agent_temporary_exit_code:
+                            type: object
+                            properties:
+                              exit_code:
+                                type: string
+                              enable:
+                                type: boolean
+                            required:
+                            - exit_code
+                            - enable
+                          port_str:
+                            type: string
+                          enable_hook_all_mode:
+                            type: boolean
+                          login_auth_remind:
+                            type: object
+                            properties:
+                              enabled:
+                                type: boolean
+                              measure:
+                                type: string
+                              value:
+                                type: integer
+                              interval_s:
+                                type: integer
+                            required:
+                            - enabled
+                            - measure
+                            - value
+                            - interval_s
+                          enable_embedded_image_scan:
+                            type: boolean
+                          enable_nac_auth_gui:
+                            type: boolean
+                          compress_options:
+                            type: object
+                            properties:
+                              content_analysis_mode:
+                                type: string
+                              enable_decompress_encrypted:
+                                type: boolean
+                              compress_level:
+                                type: integer
+                              file_count_limit:
+                                type: integer
+                              file_size_limit_in_mb:
+                                type: integer
+                            required:
+                            - content_analysis_mode
+                            - enable_decompress_encrypted
+                            - compress_level
+                            - file_count_limit
+                            - file_size_limit_in_mb
+                          compress_mode:
+                            type: string
+                          ocr_options:
+                            type: object
+                            properties:
+                              scan_mode:
+                                type: string
+                              agent_engine_options:
+                                type: object
+                                properties:
+                                  run_mode:
+                                    type: string
+                                  det_db_use_dilate:
+                                    type: boolean
+                                  det_db_threshold:
+                                    type: number
+                                  thread_num:
+                                    type: integer
+                                  max_side_len:
+                                    type: integer
+                                  det_db_unclip_ratio:
+                                    type: number
+                                  det_db_box_thresh:
+                                    type: number
+                                  rec_image_height:
+                                    type: integer
+                                required:
+                                - run_mode
+                                - det_db_use_dilate
+                                - det_db_threshold
+                                - thread_num
+                                - max_side_len
+                                - det_db_unclip_ratio
+                                - det_db_box_thresh
+                                - rec_image_height
+                              agent_engine_pack:
+                                type: object
+                                properties:
+                                  engine:
+                                    type: object
+                                    properties:
+                                      Linux:
+                                        type: object
+                                        properties:
+                                          engine_md5:
+                                            type: string
+                                          engine_url:
+                                            type: string
+                                        required:
+                                        - engine_md5
+                                        - engine_url
+                                      Kylin:
+                                        type: object
+                                        properties:
+                                          engine_md5:
+                                            type: string
+                                          engine_url:
+                                            type: string
+                                        required:
+                                        - engine_md5
+                                        - engine_url
+                                      UOS:
+                                        type: object
+                                        properties:
+                                          engine_md5:
+                                            type: string
+                                          engine_url:
+                                            type: string
+                                        required:
+                                        - engine_md5
+                                        - engine_url
+                                      macOS:
+                                        type: object
+                                        properties:
+                                          engine_md5:
+                                            type: string
+                                          engine_url:
+                                            type: string
+                                        required:
+                                        - engine_md5
+                                        - engine_url
+                                      Windows:
+                                        type: object
+                                        properties:
+                                          engine_md5:
+                                            type: string
+                                          engine_url:
+                                            type: string
+                                        required:
+                                        - engine_md5
+                                        - engine_url
+                                    required:
+                                    - Linux
+                                    - Kylin
+                                    - UOS
+                                    - macOS
+                                    - Windows
+                                  update_time:
+                                    type: string
+                                  model:
+                                    type: object
+                                    properties:
+                                      x86_64:
+                                        type: object
+                                        properties:
+                                          model_md5:
+                                            type: string
+                                          model_url:
+                                            type: string
+                                        required:
+                                        - model_md5
+                                        - model_url
+                                      arm64:
+                                        type: object
+                                        properties:
+                                          model_md5:
+                                            type: string
+                                          model_url:
+                                            type: string
+                                        required:
+                                        - model_md5
+                                        - model_url
+                                      x86:
+                                        type: object
+                                        properties:
+                                          model_md5:
+                                            type: string
+                                          model_url:
+                                            type: string
+                                        required:
+                                        - model_md5
+                                        - model_url
+                                      Universal:
+                                        type: object
+                                        properties:
+                                          model_md5:
+                                            type: string
+                                          model_url:
+                                            type: string
+                                        required:
+                                        - model_md5
+                                        - model_url
+                                    required:
+                                    - x86_64
+                                    - arm64
+                                    - x86
+                                    - Universal
+                                required:
+                                - engine
+                                - update_time
+                                - model
+                            required:
+                            - scan_mode
+                            - agent_engine_options
+                            - agent_engine_pack
+                          enable_js_sdk:
+                            type: boolean
+                          enable_hide_process:
+                            type: boolean
+                          enable_win_safe_mode:
+                            type: boolean
+                          enable_ocr:
+                            type: boolean
+                          ocr_service_enable:
+                            type: boolean
+                        required:
+                        - file_analyse_options
+                        - enable_hide_agent
+                        - enable_macos_self_protection
+                        - enable_macos_hide_menubar
+                        - enable_file_classification_big_model
+                        - enable_binary_scan
+                        - enable_clipboard
+                        - agent_temporary_exit_code
+                        - port_str
+                        - enable_hook_all_mode
+                        - login_auth_remind
+                        - enable_embedded_image_scan
+                        - enable_nac_auth_gui
+                        - compress_options
+                        - compress_mode
+                        - ocr_options
+                        - enable_js_sdk
+                        - enable_hide_process
+                        - enable_win_safe_mode
+                        - enable_ocr
+                        - ocr_service_enable
+                      clipboard_config:
+                        type: object
+                        properties:
+                          enable_scan_image:
+                            type: boolean
+                          content_size_less:
+                            type: object
+                            properties:
+                              size_in_bytes:
+                                type: integer
+                              unit:
+                                type: string
+                              size:
+                                type: integer
+                            required:
+                            - size_in_bytes
+                            - unit
+                            - size
+                          enable_full_log:
+                            type: boolean
+                        required:
+                        - enable_scan_image
+                        - content_size_less
+                        - enable_full_log
+                      channel_policy_config:
+                        type: object
+                        properties:
+                          enable_screen_recording:
+                            type: boolean
+                          window_warning_interval:
+                            type: integer
+                          disable_full_recording:
+                            type: boolean
+                          screen_recording_options:
+                            type: object
+                            properties:
+                              record_duration:
+                                type: integer
+                              freq_in_ms:
+                                type: integer
+                              compressed:
+                                type: boolean
+                            required:
+                            - record_duration
+                            - freq_in_ms
+                            - compressed
+                          compress_options:
+                            type: object
+                            properties:
+                              content_analysis_mode:
+                                type: string
+                              enable_decompress_encrypted:
+                                type: boolean
+                              compress_level:
+                                type: integer
+                              file_count_limit:
+                                type: integer
+                              file_size_limit_in_mb:
+                                type: integer
+                            required:
+                            - content_analysis_mode
+                            - enable_decompress_encrypted
+                            - compress_level
+                            - file_count_limit
+                            - file_size_limit_in_mb
+                          compress_mode:
+                            type: string
+                          enable_screenshot:
+                            type: boolean
+                          enable_browser_control:
+                            type: boolean
+                          enable_background_outgoing_control:
+                            type: boolean
+                          screenshot_options:
+                            type: object
+                            properties:
+                              freq_in_ms:
+                                type: integer
+                              back_screenshot_num:
+                                type: integer
+                              front_screenshot_num:
+                                type: integer
+                              compressed:
+                                type: boolean
+                            required:
+                            - freq_in_ms
+                            - back_screenshot_num
+                            - front_screenshot_num
+                            - compressed
+                          enable_browser_ext:
+                            type: boolean
+                          enable_open_scan:
+                            type: boolean
+                          check_timeout_pass:
+                            type: integer
+                          parsing_large_file:
+                            type: integer
+                        required:
+                        - enable_screen_recording
+                        - window_warning_interval
+                        - disable_full_recording
+                        - screen_recording_options
+                        - compress_options
+                        - compress_mode
+                        - enable_screenshot
+                        - enable_browser_control
+                        - enable_background_outgoing_control
+                        - screenshot_options
+                        - enable_browser_ext
+                        - enable_open_scan
+                        - check_timeout_pass
+                        - parsing_large_file
+                      network_policy_config:
+                        type: object
+                        properties:
+                          enable_host_control:
+                            type: boolean
+                          window_warning_interval:
+                            type: integer
+                        required:
+                        - enable_host_control
+                        - window_warning_interval
+                      compliance_config:
+                        type: object
+                        properties:
+                          period_scan:
+                            type: object
+                            properties:
+                              type:
+                                type: string
+                              period_time:
+                                type: integer
+                            required:
+                            - type
+                            - period_time
+                          display:
+                            type: boolean
+                        required:
+                        - period_scan
+                        - display
+                      software_scan_config:
+                        type: object
+                        properties:
+                          enable_cycle_scan:
+                            type: boolean
+                          pirated_software_check:
+                            type: boolean
+                          window_warning_interval:
+                            type: integer
+                          cycle_duration:
+                            type: integer
+                        required:
+                        - enable_cycle_scan
+                        - pirated_software_check
+                        - window_warning_interval
+                        - cycle_duration
+                      db_scan_config:
+                        type: object
+                        properties:
+                          task_timeout:
+                            type: string
+                          task_timeout_options:
+                            type: object
+                            properties: {}
+                          scan_batch_options:
+                            type: object
+                            properties: {}
+                          table_timeout:
+                            type: string
+                          scan_mode:
+                            type: string
+                          scan_batch_mode:
+                            type: string
+                          table_timeout_options:
+                            type: object
+                            properties: {}
+                        required:
+                        - task_timeout
+                        - task_timeout_options
+                        - scan_batch_options
+                        - table_timeout
+                        - scan_mode
+                        - scan_batch_mode
+                        - table_timeout_options
+                      ted_policy_config:
+                        type: object
+                        properties:
+                          log_first_time:
+                            type: boolean
+                          log_every_time:
+                            type: boolean
+                        required:
+                        - log_first_time
+                        - log_every_time
+                      file_scan_config:
+                        type: object
+                        properties:
+                          task_timeout:
+                            type: string
+                          task_timeout_in_sec:
+                            type: integer
+                          compress_options:
+                            type: object
+                            properties:
+                              content_analysis_mode:
+                                type: string
+                              enable_decompress_encrypted:
+                                type: boolean
+                              compress_level:
+                                type: integer
+                              file_count_limit:
+                                type: integer
+                              file_size_limit_in_mb:
+                                type: integer
+                            required:
+                            - content_analysis_mode
+                            - enable_decompress_encrypted
+                            - compress_level
+                            - file_count_limit
+                            - file_size_limit_in_mb
+                          display:
+                            type: boolean
+                          compress_mode:
+                            type: string
+                          scan_batch_size:
+                            type: integer
+                          scan_batch_mode:
+                            type: string
+                        required:
+                        - task_timeout
+                        - task_timeout_in_sec
+                        - compress_options
+                        - display
+                        - compress_mode
+                        - scan_batch_size
+                        - scan_batch_mode
+                    required:
+                    - im_policy_config
+                    - browser_scan_config
+                    - advanced_config
+                    - clipboard_config
+                    - channel_policy_config
+                    - network_policy_config
+                    - compliance_config
+                    - software_scan_config
+                    - db_scan_config
+                    - ted_policy_config
+                    - file_scan_config
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  im_policy_config:
+                    dingding:
+                      enabled: false
+                    wechat:
+                      enable: false
+                    wechat_enterprise:
+                      enable: false
+                    qq:
+                      enable: false
+                  browser_scan_config:
+                    enable_cycle_scan: true
+                    window_warning_interval: 60
+                  advanced_config:
+                    file_analyse_options:
+                      summary_size_unit: B
+                      summary_size: 120
+                      summary_size_in_bytes: 120
+                    enable_hide_agent: false
+                    enable_macos_self_protection: true
+                    enable_macos_hide_menubar: false
+                    enable_file_classification_big_model: false
+                    enable_binary_scan: false
+                    enable_clipboard: true
+                    agent_temporary_exit_code:
+                      exit_code: ''
+                      enable: false
+                    port_str: 31234,32456,33567
+                    enable_hook_all_mode: false
+                    login_auth_remind:
+                      enabled: false
+                      measure: min
+                      value: 10
+                      interval_s: 600
+                    enable_embedded_image_scan: true
+                    enable_nac_auth_gui: false
+                    compress_options:
+                      content_analysis_mode: intelligent
+                      enable_decompress_encrypted: false
+                      compress_level: 10
+                      file_count_limit: 200
+                      file_size_limit_in_mb: 15
+                    compress_mode: decompress
+                    ocr_options:
+                      scan_mode: agent
+                      agent_engine_options:
+                        run_mode: pipeline
+                        det_db_use_dilate: true
+                        det_db_threshold: 0.3
+                        thread_num: 1
+                        max_side_len: 960
+                        det_db_unclip_ratio: 1.6
+                        det_db_box_thresh: 0.5
+                        rec_image_height: 32
+                      agent_engine_pack:
+                        engine:
+                          Linux:
+                            engine_md5: ''
+                            engine_url: ''
+                          Kylin:
+                            engine_md5: ''
+                            engine_url: ''
+                          UOS:
+                            engine_md5: ''
+                            engine_url: ''
+                          macOS:
+                            engine_md5: ''
+                            engine_url: ''
+                          Windows:
+                            engine_md5: c7d12afa69177edf52d0a8bd25188e89
+                            engine_url: http://127.0.0.1:8443/public-source/ocr/engine/Windows/x64/engine.zip
+                        update_time: '2025-03-13T09:44:08Z'
+                        model:
+                          x86_64:
+                            model_md5: ''
+                            model_url: ''
+                          arm64:
+                            model_md5: ''
+                            model_url: ''
+                          x86:
+                            model_md5: 0fb60b724525d67e698c14b2cf5bc165
+                            model_url: http://127.0.0.1:8443/public-source/ocr/model/speed.zip
+                          Universal:
+                            model_md5: ''
+                            model_url: ''
+                    enable_js_sdk: false
+                    enable_hide_process: false
+                    enable_win_safe_mode: false
+                    enable_ocr: true
+                    ocr_service_enable: true
+                  clipboard_config:
+                    enable_scan_image: false
+                    content_size_less:
+                      size_in_bytes: 10240
+                      unit: KB
+                      size: 10
+                    enable_full_log: false
+                  channel_policy_config:
+                    enable_screen_recording: false
+                    window_warning_interval: 60
+                    disable_full_recording: false
+                    screen_recording_options:
+                      record_duration: 10
+                      freq_in_ms: 250
+                      compressed: true
+                    compress_options:
+                      content_analysis_mode: intelligent
+                      enable_decompress_encrypted: false
+                      compress_level: 10
+                      file_count_limit: 200
+                      file_size_limit_in_mb: 15
+                    compress_mode: skip
+                    enable_screenshot: true
+                    enable_browser_control: false
+                    enable_background_outgoing_control: false
+                    screenshot_options:
+                      freq_in_ms: 1000
+                      back_screenshot_num: 2
+                      front_screenshot_num: 2
+                      compressed: true
+                    enable_browser_ext: false
+                    enable_open_scan: true
+                    check_timeout_pass: 20
+                    parsing_large_file: 120
+                  network_policy_config:
+                    enable_host_control: true
+                    window_warning_interval: 300
+                  compliance_config:
+                    period_scan:
+                      type: intelligent
+                      period_time: 1440
+                    display: true
+                  software_scan_config:
+                    enable_cycle_scan: true
+                    pirated_software_check: false
+                    window_warning_interval: 60
+                    cycle_duration: 720
+                  db_scan_config:
+                    task_timeout: intelligent
+                    task_timeout_options: {}
+                    scan_batch_options: {}
+                    table_timeout: intelligent
+                    scan_mode: moderate
+                    scan_batch_mode: intelligent
+                    table_timeout_options: {}
+                  ted_policy_config:
+                    log_first_time: false
+                    log_every_time: false
+                  file_scan_config:
+                    task_timeout: intelligent
+                    task_timeout_in_sec: 86400
+                    compress_options:
+                      content_analysis_mode: intelligent
+                      enable_decompress_encrypted: false
+                      compress_level: 10
+                      file_count_limit: 200
+                      file_size_limit_in_mb: 15
+                    display: true
+                    compress_mode: decompress
+                    scan_batch_size: 50
+                    scan_batch_mode: intelligent
+      security: []

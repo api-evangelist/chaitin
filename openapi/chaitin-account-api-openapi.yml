@@ -1,0 +1,638 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: account
+paths:
+  /api/APITokenLoginAPI:
+    post:
+      operationId: APITokenLoginAPI_post
+      summary: POST /api/APITokenLoginAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/CSRFTokenAPI:
+    get:
+      operationId: CSRFTokenAPI_get
+      summary: GET /api/CSRFTokenAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: true
+  /api/CertLoginAPI:
+    get:
+      operationId: CertLoginAPI_get
+      summary: GET /api/CertLoginAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: true
+    post:
+      operationId: CertLoginAPI_post
+      summary: POST /api/CertLoginAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tfa_token:
+                  type: string
+                  description: 两步验证验证码
+  /api/ChangePasswordWithoutLoginAPI:
+    put:
+      operationId: ChangePasswordWithoutLoginAPI_put
+      summary: PUT /api/ChangePasswordWithoutLoginAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                old_password:
+                  type: string
+                new_password:
+                  type: string
+              required:
+              - username
+              - old_password
+              - new_password
+  /api/ChangeUserCredentialAPI:
+    put:
+      operationId: ChangeUserCredentialAPI_put
+      summary: PUT /api/ChangeUserCredentialAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                authentication_method:
+                  type: string
+                old_password:
+                  type: string
+                new_password:
+                  type: string
+                tfa_token:
+                  type: string
+              required:
+              - authentication_method
+  /api/DesensitizeUserAPI:
+    put:
+      operationId: DesensitizeUserAPI_put
+      summary: PUT /api/DesensitizeUserAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                desensitize:
+                  type: boolean
+              required:
+              - desensitize
+  /api/DownloadUserCertAPI:
+    get:
+      operationId: DownloadUserCertAPI_get
+      summary: GET /api/DownloadUserCertAPI
+      tags:
+      - account
+      parameters:
+      - name: token
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/LoginAPI:
+    post:
+      operationId: LoginAPI_post
+      summary: POST /api/LoginAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tfa_token:
+                  type: string
+                  description: 两步验证验证码
+                username:
+                  type: string
+                  description: 用户名
+                password:
+                  type: string
+                  description: 密码
+              required:
+              - username
+              - password
+  /api/LoginDisplacementAPI:
+    get:
+      operationId: LoginDisplacementAPI_get
+      summary: GET /api/LoginDisplacementAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: true
+    put:
+      operationId: LoginDisplacementAPI_put
+      summary: PUT /api/LoginDisplacementAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                enabled:
+                  type: boolean
+              required:
+              - enabled
+  /api/LogoutAPI:
+    post:
+      operationId: LogoutAPI_post
+      summary: POST /api/LogoutAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/PasswordConfigAPI:
+    get:
+      operationId: PasswordConfigAPI_get
+      summary: GET /api/PasswordConfigAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: true
+    put:
+      operationId: PasswordConfigAPI_put
+      summary: PUT /api/PasswordConfigAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                update:
+                  type: string
+                check:
+                  type: string
+              required:
+              - update
+              - check
+  /api/ProfileAPI:
+    get:
+      operationId: ProfileAPI_get
+      summary: GET /api/ProfileAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: true
+  /api/RADIUSConfigAPI:
+    get:
+      operationId: RADIUSConfigAPI_get
+      summary: GET /api/RADIUSConfigAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: true
+    put:
+      operationId: RADIUSConfigAPI_put
+      summary: PUT /api/RADIUSConfigAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                config:
+                  type: array
+                  items:
+                    type: string
+              required:
+              - config
+  /api/ResetUserCredentialAPI:
+    put:
+      operationId: ResetUserCredentialAPI_put
+      summary: PUT /api/ResetUserCredentialAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: ID
+              required:
+              - id
+  /api/RoleAPI:
+    get:
+      operationId: RoleAPI_get
+      summary: GET /api/RoleAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: true
+    post:
+      operationId: RoleAPI_post
+      summary: POST /api/RoleAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                comment:
+                  type: string
+                permissions:
+                  type: string
+                user_ids:
+                  type: string
+              required:
+              - name
+              - permissions
+    put:
+      operationId: RoleAPI_put
+      summary: PUT /api/RoleAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                comment:
+                  type: string
+                permissions:
+                  type: string
+                user_ids:
+                  type: string
+    delete:
+      operationId: RoleAPI_delete
+      summary: DELETE /api/RoleAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/UnlockUserAPI:
+    put:
+      operationId: UnlockUserAPI_put
+      summary: PUT /api/UnlockUserAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: ID
+              required:
+              - id
+  /api/UserAPI:
+    get:
+      operationId: UserAPI_get
+      summary: GET /api/UserAPI
+      tags:
+      - account
+      parameters:
+      - name: username
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+    post:
+      operationId: UserAPI_post
+      summary: POST /api/UserAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  description: 用户名
+                comment:
+                  type: string
+                authentication_method:
+                  type: string
+                ip_policy:
+                  type: string
+              required:
+              - username
+              - comment
+              - authentication_method
+    put:
+      operationId: UserAPI_put
+      summary: PUT /api/UserAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                comment:
+                  type: string
+                authentication_method:
+                  type: string
+                ip_policy:
+                  type: string
+                is_enabled:
+                  type: boolean
+              required:
+              - comment
+              - authentication_method
+              - ip_policy
+              - is_enabled
+    delete:
+      operationId: UserAPI_delete
+      summary: DELETE /api/UserAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/UserAPITokenAPI:
+    get:
+      operationId: UserAPITokenAPI_get
+      summary: GET /api/UserAPITokenAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: true
+    post:
+      operationId: UserAPITokenAPI_post
+      summary: POST /api/UserAPITokenAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 用户名
+                expire_time:
+                  type: string
+                  description: 为 null 时, 表示永不过期
+                ip_policy:
+                  type: string
+                  description: IP 白名单
+              required:
+              - name
+              - ip_policy
+    put:
+      operationId: UserAPITokenAPI_put
+      summary: PUT /api/UserAPITokenAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 用户名
+                expire_time:
+                  type: string
+                  description: 为 null 时, 表示永不过期
+                ip_policy:
+                  type: string
+                  description: IP 白名单
+    delete:
+      operationId: UserAPITokenAPI_delete
+      summary: DELETE /api/UserAPITokenAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: ID
+              required:
+              - id
+  /api/UserLoginThrottlingAPI:
+    get:
+      operationId: UserLoginThrottlingAPI_get
+      summary: GET /api/UserLoginThrottlingAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: true
+    put:
+      operationId: UserLoginThrottlingAPI_put
+      summary: PUT /api/UserLoginThrottlingAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                enabled:
+                  type: boolean
+                period:
+                  type: integer
+                threshold:
+                  type: integer
+              required:
+              - enabled
+              - period
+              - threshold
+  /api/UserRoleBindingAPI:
+    post:
+      operationId: UserRoleBindingAPI_post
+      summary: POST /api/UserRoleBindingAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_ids:
+                  type: string
+                role_ids:
+                  type: string
+  /api/UserTFAConfigAPI:
+    get:
+      operationId: UserTFAConfigAPI_get
+      summary: GET /api/UserTFAConfigAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: true
+    post:
+      operationId: UserTFAConfigAPI_post
+      summary: POST /api/UserTFAConfigAPI
+      tags:
+      - account
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tfa_token:
+                  type: string
+                  description: 两步验证验证码
+                action:
+                  type: string
+              required:
+              - action
+  /api/UsernameExistsCheckAPI:
+    get:
+      operationId: UsernameExistsCheckAPI_get
+      summary: GET /api/UsernameExistsCheckAPI
+      tags:
+      - account
+      parameters:
+      - name: username
+        in: query
+        required: true
+        description: 用户名
+        schema:
+          type: string
+          description: 用户名
+      x-cli-body-fallback: false

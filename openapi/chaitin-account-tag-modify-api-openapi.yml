@@ -1,0 +1,123 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account account/tag/modify API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: account/tag/modify
+  description: 员工管理/标签/修改
+paths:
+  /account/tag/modify:
+    post:
+      summary: 员工改tag
+      deprecated: false
+      description: ''
+      tags:
+      - account/tag/modify
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      uid:
+                        type: string
+                      tag_ids:
+                        type: array
+                        items:
+                          type: string
+                    required:
+                    - uid
+                    - tag_ids
+              required:
+              - items
+            example:
+              items:
+              - uid: c900fbb1-d4ca-4972-aa82-cf5519064187
+                tag_ids:
+                - b311118e-2f8e-43db-964f-6df2e115d3c5
+              - uid: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                tag_ids:
+                - b311118e-2f8e-43db-964f-6df2e115d3c5
+              - uid: e7fc419d-1627-4cb1-9ccb-5ea22a2b3e51
+                tag_ids:
+                - b311118e-2f8e-43db-964f-6df2e115d3c5
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              example: {}
+      security: []

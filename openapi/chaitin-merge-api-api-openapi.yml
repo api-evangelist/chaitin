@@ -1,0 +1,141 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account merge_api API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: merge_api
+paths:
+  /api/MergeConfigAPI:
+    get:
+      operationId: MergeConfigAPI_get
+      summary: GET /api/MergeConfigAPI
+      tags:
+      - merge_api
+      parameters:
+      - name: order_by
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: page
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+    post:
+      operationId: MergeConfigAPI_post
+      summary: POST /api/MergeConfigAPI
+      tags:
+      - merge_api
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_enabled:
+                  type: boolean
+                  description: 启用状态
+                name:
+                  type: string
+                  description: 任务名称
+                comment:
+                  type: string
+                  description: 任务备注
+                pattern:
+                  type: string
+                  description: 聚合规则
+                merge:
+                  type: boolean
+                  description: 是否聚合
+                site_id:
+                  type: string
+                  description: 应用的站点
+              required:
+              - is_enabled
+              - name
+              - pattern
+              - merge
+              - site_id
+    put:
+      operationId: MergeConfigAPI_put
+      summary: PUT /api/MergeConfigAPI
+      tags:
+      - merge_api
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  is_enabled:
+                    type: boolean
+                    description: 启用状态
+                  name:
+                    type: string
+                    description: 任务名称
+                  comment:
+                    type: string
+                    description: 任务备注
+                  pattern:
+                    type: string
+                    description: 聚合规则
+                  merge:
+                    type: boolean
+                    description: 是否聚合
+                  site_id:
+                    type: string
+                    description: 应用的站点
+                  api_list:
+                    type: array
+                    description: API 列表
+                    items:
+                      type: string
+                  uuid:
+                    type: string
+                    description: UUID
+                  auto:
+                    type: boolean
+                    description: 自动生成
+                  merge_type:
+                    type: integer
+                    description: 聚合类型
+                  strict_length:
+                    type: integer
+                    description: 固定长度
+                required:
+                - is_enabled
+                - merge
+                - name
+                - pattern
+                - site_id
+                - uuid
+                - auto
+                - merge_type
+                - strict_length
+  /api/MergeConfigStatsAPI:
+    get:
+      operationId: MergeConfigStatsAPI_get
+      summary: GET /api/MergeConfigStatsAPI
+      tags:
+      - merge_api
+      parameters: []
+      x-cli-body-fallback: true

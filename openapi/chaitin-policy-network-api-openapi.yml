@@ -1,0 +1,202 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policy/network API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policy/network
+  description: 策略管理/网络
+paths:
+  /policy/network:
+    post:
+      summary: 全局联网策略创建
+      deprecated: false
+      description: ''
+      tags:
+      - policy/network
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                policy_group_ids:
+                  type: array
+                  items:
+                    type: string
+                risk_level:
+                  type: integer
+                scope:
+                  type: string
+                period_category:
+                  type: string
+                run_model:
+                  type: array
+                  items:
+                    type: string
+                expression_fields:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: array
+                        items:
+                          type: string
+                      expression_relation:
+                        type: string
+                action:
+                  type: string
+                notification_config:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      notification_bot_id:
+                        type: string
+                      notification_content_template_id:
+                        type: string
+                      email_to_list:
+                        type: array
+                        items:
+                          type: string
+                category:
+                  type: string
+                binding_config:
+                  type: object
+                  properties:
+                    source:
+                      type: string
+                    include:
+                      type: object
+                      properties: {}
+                    exclude:
+                      type: object
+                      properties: {}
+                  required:
+                  - source
+                  - include
+                  - exclude
+                expression_relation:
+                  type: string
+              required:
+              - name
+              - policy_group_ids
+              - risk_level
+              - scope
+              - period_category
+              - run_model
+              - expression_fields
+              - action
+              - notification_config
+              - category
+              - binding_config
+              - expression_relation
+            example:
+              name: 大大大大大大
+              policy_group_ids:
+              - ea581dad-40f7-45e0-b37a-f92878876cc9
+              risk_level: 1
+              scope: global
+              period_category: permanent
+              run_model:
+              - online
+              - offline
+              expression_fields:
+              - field: ip
+                operator: contains
+                value:
+                - 172.1.1.1
+                expression_relation: all
+              action: notify
+              notification_config:
+              - notification_bot_id: b6d22e36-d2e4-4ee8-9e13-6b42864e80d9
+                notification_content_template_id: 1cea86d4-803e-49c2-8edb-397f830720ec
+                email_to_list:
+                - 5a4315d1-791b-478a-b76f-a8cec37d4c26
+              category: network
+              binding_config:
+                source: network
+                include: {}
+                exclude: {}
+              expression_relation: all
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              example: {}
+      security: []

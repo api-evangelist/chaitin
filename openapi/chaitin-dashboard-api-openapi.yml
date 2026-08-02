@@ -1,0 +1,832 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account dashboard API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: dashboard
+paths:
+  /api/AssetDashboardDetectEventsAPI:
+    get:
+      operationId: AssetDashboardDetectEventsAPI_get
+      summary: GET /api/AssetDashboardDetectEventsAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: site_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/AssetDashboardInterfaceTagAPI:
+    get:
+      operationId: AssetDashboardInterfaceTagAPI_get
+      summary: GET /api/AssetDashboardInterfaceTagAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: site_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/AssetDashboardLowFrequencyAPI:
+    get:
+      operationId: AssetDashboardLowFrequencyAPI_get
+      summary: GET /api/AssetDashboardLowFrequencyAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: site_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/AssetDashboardReqFailedAPI:
+    get:
+      operationId: AssetDashboardReqFailedAPI_get
+      summary: GET /api/AssetDashboardReqFailedAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: site_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/AssetDashboardRequestTrendAPI:
+    get:
+      operationId: AssetDashboardRequestTrendAPI_get
+      summary: GET /api/AssetDashboardRequestTrendAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: site_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/AssetDashboardRiskVulnerableAPI:
+    get:
+      operationId: AssetDashboardRiskVulnerableAPI_get
+      summary: GET /api/AssetDashboardRiskVulnerableAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: site_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/AssetDashboardSameUrlAPI:
+    get:
+      operationId: AssetDashboardSameUrlAPI_get
+      summary: GET /api/AssetDashboardSameUrlAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: site_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/AssetDashboardSensitiveDataAPI:
+    get:
+      operationId: AssetDashboardSensitiveDataAPI_get
+      summary: GET /api/AssetDashboardSensitiveDataAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: site_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/AssetDashboardSiteInterfaceAPI:
+    get:
+      operationId: AssetDashboardSiteInterfaceAPI_get
+      summary: GET /api/AssetDashboardSiteInterfaceAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: site_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/AssetDashboardTrafficCodeAPI:
+    get:
+      operationId: AssetDashboardTrafficCodeAPI_get
+      summary: GET /api/AssetDashboardTrafficCodeAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: site_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/AssetDashboardTrafficMethodAPI:
+    get:
+      operationId: AssetDashboardTrafficMethodAPI_get
+      summary: GET /api/AssetDashboardTrafficMethodAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: site_id
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/HomeDashBoardOwaspAPI:
+    get:
+      operationId: HomeDashBoardOwaspAPI_get
+      summary: GET /api/HomeDashBoardOwaspAPI
+      tags:
+      - dashboard
+      parameters: []
+      x-cli-body-fallback: true
+  /api/HomeDashBoardQPSAPI:
+    get:
+      operationId: HomeDashBoardQPSAPI_get
+      summary: GET /api/HomeDashBoardQPSAPI
+      tags:
+      - dashboard
+      parameters: []
+      x-cli-body-fallback: true
+  /api/HomeDashBoardQPSTrendAPI:
+    get:
+      operationId: HomeDashBoardQPSTrendAPI_get
+      summary: GET /api/HomeDashBoardQPSTrendAPI
+      tags:
+      - dashboard
+      parameters: []
+      x-cli-body-fallback: true
+  /api/HomeDashBoardRequestHistory:
+    get:
+      operationId: HomeDashBoardRequestHistory_get
+      summary: GET /api/HomeDashBoardRequestHistory
+      tags:
+      - dashboard
+      parameters: []
+      x-cli-body-fallback: true
+  /api/HomeDashBoardRequestTrendAPI:
+    get:
+      operationId: HomeDashBoardRequestTrendAPI_get
+      summary: GET /api/HomeDashBoardRequestTrendAPI
+      tags:
+      - dashboard
+      parameters: []
+      x-cli-body-fallback: true
+  /api/HomeDashBoardSensitiveData:
+    get:
+      operationId: HomeDashBoardSensitiveData_get
+      summary: GET /api/HomeDashBoardSensitiveData
+      tags:
+      - dashboard
+      parameters: []
+      x-cli-body-fallback: true
+  /api/HomeDashBoardSiteInterfaceAPI:
+    get:
+      operationId: HomeDashBoardSiteInterfaceAPI_get
+      summary: GET /api/HomeDashBoardSiteInterfaceAPI
+      tags:
+      - dashboard
+      parameters: []
+      x-cli-body-fallback: true
+  /api/HomeDashBoardTotalRequestAPI:
+    get:
+      operationId: HomeDashBoardTotalRequestAPI_get
+      summary: GET /api/HomeDashBoardTotalRequestAPI
+      tags:
+      - dashboard
+      parameters: []
+      x-cli-body-fallback: true
+  /api/RiskEventDashBoardHistoryInfoAPI:
+    get:
+      operationId: RiskEventDashBoardHistoryInfoAPI_get
+      summary: GET /api/RiskEventDashBoardHistoryInfoAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: app
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: detection_module
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: event_description
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: req_start_time
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: risk_model
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: risk_strategy
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: site
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/RiskEventDashBoardInterfaceInfoAPI:
+    get:
+      operationId: RiskEventDashBoardInterfaceInfoAPI_get
+      summary: GET /api/RiskEventDashBoardInterfaceInfoAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: app
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: detection_module
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: event_description
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: req_start_time
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: risk_model
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: risk_strategy
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: site
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/RiskEventDashBoardRiskNumAPI:
+    get:
+      operationId: RiskEventDashBoardRiskNumAPI_get
+      summary: GET /api/RiskEventDashBoardRiskNumAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: app
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: detection_module
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: event_description
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: req_start_time
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: risk_model
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: risk_strategy
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: site
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/RiskEventDashBoardSiteInfoAPI:
+    get:
+      operationId: RiskEventDashBoardSiteInfoAPI_get
+      summary: GET /api/RiskEventDashBoardSiteInfoAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: api
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: app
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: app_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: detection_module
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: event_description
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: req_start_time
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: risk_model
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: risk_strategy
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: site
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/SensitiveDataTypeAPI:
+    get:
+      operationId: SensitiveDataTypeAPI_get
+      summary: GET /api/SensitiveDataTypeAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: desensitization
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: boolean
+      - name: stage_type
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: tag_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: array
+          items:
+            type: string
+      x-cli-body-fallback: false
+  /api/SensitiveInterfaceInfoAPI:
+    get:
+      operationId: SensitiveInterfaceInfoAPI_get
+      summary: GET /api/SensitiveInterfaceInfoAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: desensitization
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: boolean
+      - name: stage_type
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: tag_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: array
+          items:
+            type: string
+      x-cli-body-fallback: false
+  /api/SensitiveNewInterfaceAPI:
+    get:
+      operationId: SensitiveNewInterfaceAPI_get
+      summary: GET /api/SensitiveNewInterfaceAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: desensitization
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: boolean
+      - name: stage_type
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: tag_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: array
+          items:
+            type: string
+      x-cli-body-fallback: false
+  /api/SensitiveRequestInfoAPI:
+    get:
+      operationId: SensitiveRequestInfoAPI_get
+      summary: GET /api/SensitiveRequestInfoAPI
+      tags:
+      - dashboard
+      parameters:
+      - name: datetime
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: desensitization
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: boolean
+      - name: stage_type
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: tag_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: array
+          items:
+            type: string
+      x-cli-body-fallback: false
+  /api/StrategyAndEventAPI:
+    get:
+      operationId: StrategyAndEventAPI_get
+      summary: GET /api/StrategyAndEventAPI
+      tags:
+      - dashboard
+      parameters: []
+      x-cli-body-fallback: true
+  /api/StrategyOwaspInfoAPI:
+    get:
+      operationId: StrategyOwaspInfoAPI_get
+      summary: GET /api/StrategyOwaspInfoAPI
+      tags:
+      - dashboard
+      parameters: []
+      x-cli-body-fallback: true
+  /api/StrategyRunningStateAPI:
+    get:
+      operationId: StrategyRunningStateAPI_get
+      summary: GET /api/StrategyRunningStateAPI
+      tags:
+      - dashboard
+      parameters: []
+      x-cli-body-fallback: true

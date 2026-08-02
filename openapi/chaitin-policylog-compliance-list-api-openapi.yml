@@ -1,0 +1,926 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policylog/compliance/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policylog/compliance/list
+  description: 日志中心/合规/列表
+paths:
+  /policylog/compliance/list:
+    post:
+      summary: 列表
+      deprecated: false
+      description: ''
+      tags:
+      - policylog/compliance/list
+      parameters:
+      - name: page
+        in: query
+        description: ''
+        required: true
+        example: '1'
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: ''
+        required: true
+        example: '10'
+        schema:
+          type: string
+      - name: search
+        in: query
+        description: ''
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                search:
+                  type: string
+                queries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: string
+                      is_order_used:
+                        type: boolean
+                      field_type:
+                        type: string
+                      is_filter_used:
+                        type: boolean
+              required:
+              - time_range
+              - search
+              - queries
+            example:
+              time_range:
+                begin: '2024-10-15T10:15:49Z'
+                end: '2024-10-16T10:15:49Z'
+              search: ''
+              queries:
+              - field: policy_name
+                operator: is
+                value: win
+                is_order_used: false
+                field_type: keyword
+                is_filter_used: true
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      page:
+                        type: integer
+                      limit:
+                        type: integer
+                      search_total:
+                        type: integer
+                      total:
+                        type: integer
+                      search_after:
+                        type: array
+                        items:
+                          type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            mac:
+                              type: string
+                            compliance_check_detail:
+                              type: object
+                              properties:
+                                result:
+                                  type: array
+                                  items:
+                                    type: string
+                                detail:
+                                  type: object
+                                  properties:
+                                    port_list:
+                                      type: array
+                                      items:
+                                        type: object
+                                        properties:
+                                          start:
+                                            type: integer
+                                          comment:
+                                            type: string
+                                    software:
+                                      type: array
+                                      items:
+                                        type: object
+                                        properties:
+                                          name:
+                                            type: string
+                                          process_id_list:
+                                            type: array
+                                            items:
+                                              type: string
+                                        required:
+                                        - name
+                                        - process_id_list
+                                    domains:
+                                      type: array
+                                      items:
+                                        type: string
+                                  required:
+                                  - software
+                                error_message:
+                                  type: string
+                              required:
+                              - detail
+                              - result
+                              - error_message
+                            device_code:
+                              type: string
+                            console_user:
+                              type: string
+                            company_id:
+                              type: string
+                            ip_address:
+                              type: string
+                            policy_category:
+                              type: string
+                            action:
+                              type: string
+                            event_id:
+                              type: string
+                            compliance_check_display_name:
+                              type: string
+                            scan_time:
+                              type: integer
+                            os_name:
+                              type: string
+                            device_id:
+                              type: string
+                            time:
+                              type: integer
+                            agent_version:
+                              type: string
+                            risk_level:
+                              type: integer
+                            status:
+                              type: string
+                            policy_name:
+                              type: string
+                            compliance_check_name:
+                              type: string
+                            hostname:
+                              type: string
+                            policy_id:
+                              type: string
+                            os_friendly_name:
+                              type: string
+                            '@timestamp':
+                              type: integer
+                            timestamp:
+                              type: string
+                            created_timestamp:
+                              type: string
+                            compliance_check_result:
+                              type: string
+                            risk_name:
+                              type: string
+                            category:
+                              type: string
+                            staff_id:
+                              type: string
+                            staff_name:
+                              type: string
+                            staff_email:
+                              type: string
+                            staff_code:
+                              type: string
+                            staff_tag_ids:
+                              type: array
+                              items: {}
+                            staff_tags:
+                              type: array
+                              items: {}
+                            dept_ids:
+                              type: array
+                              items:
+                                type: string
+                            dept_names:
+                              type: array
+                              items:
+                                type: string
+                            dept_paths:
+                              type: array
+                              items:
+                                type: string
+                            file_suffix:
+                              type: string
+                            uid:
+                              type: string
+                            _type:
+                              type: string
+                            _index:
+                              type: string
+                            _score:
+                              type: 'null'
+                            action_display_name:
+                              type: string
+                          required:
+                          - device_code
+                          - action
+                          - ip_address
+                          - scan_time
+                          - console_user
+                          - mac
+                          - event_id
+                          - compliance_check_name
+                          - status
+                          - policy_id
+                          - compliance_check_detail
+                          - os_friendly_name
+                          - agent_version
+                          - os_name
+                          - risk_level
+                          - policy_name
+                          - hostname
+                          - time
+                          - device_id
+                          - company_id
+                          - compliance_check_display_name
+                          - policy_category
+                          - '@timestamp'
+                          - timestamp
+                          - created_timestamp
+                          - compliance_check_result
+                          - risk_name
+                          - category
+                          - staff_id
+                          - staff_name
+                          - staff_email
+                          - staff_code
+                          - staff_tag_ids
+                          - staff_tags
+                          - dept_ids
+                          - dept_names
+                          - dept_paths
+                          - file_suffix
+                          - uid
+                          - _type
+                          - _index
+                          - _score
+                          - action_display_name
+                    required:
+                    - index
+                    - page
+                    - limit
+                    - search_total
+                    - total
+                    - search_after
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: Normal
+                data:
+                  index:
+                  - qzhddr_policy_compliance_logs
+                  page: 1
+                  limit: 10
+                  search_total: 365
+                  total: 365
+                  search_after:
+                  - 1729072418922
+                  results:
+                  - mac: 00:0C:29:D7:76:FD
+                    compliance_check_detail:
+                      result:
+                      - 1. 3306 远程桌面
+                      detail:
+                        port_list:
+                        - start: 3306
+                          comment: 远程桌面
+                    device_code: PC-000208
+                    console_user: chenlei@DESKTOP-JC9DPIH
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    ip_address: 192.168.109.131
+                    policy_category: basic
+                    action: warning
+                    event_id: '1729073633372037'
+                    compliance_check_display_name: 操作系统版本检查
+                    scan_time: 1729073633372
+                    os_name: Windows
+                    device_id: 53984d54-fcb1-4834-81bf-b19a3013c425
+                    time: 1729073633372
+                    agent_version: 3.4.99
+                    risk_level: 3
+                    status: created
+                    policy_name: win-os
+                    compliance_check_name: os_version
+                    hostname: DESKTOP-JC9DPIH
+                    policy_id: 90f41d2f-afd2-428b-bb3b-fd27fb1cb21d
+                    os_friendly_name: Windows 10 EnterpriseS (10.0.19044)
+                    '@timestamp': 1729073633372
+                    timestamp: '2024-10-16T18:13:53+08:00'
+                    created_timestamp: '2024-10-16T18:13:59+08:00'
+                    compliance_check_result: fail
+                    risk_name: 低危
+                    category: compliance
+                    staff_id: 93ca6f53-d9df-4cc9-a9ad-c78d23ca8b18
+                    staff_name: 陈磊
+                    staff_email: chenlei@soumao.com
+                    staff_code: 60d4100c843e5bd7
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids:
+                    - 93f009fb-0759-47aa-86c8-f257329ed7e7
+                    - 70628140-a776-4101-9e1a-21b5b98fc30d
+                    dept_names:
+                    - 网商银行
+                    - 信息科技部
+                    dept_paths:
+                    - 薮猫大公司/网商银行
+                    - 薮猫大公司/网商银行/信息科技部
+                    file_suffix: ''
+                    uid: sEPSlJIB1BSg0pzjCvkN
+                    _type: _doc
+                    _index: .ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012
+                    _score: null
+                    action_display_name: Endpoint Reminder
+                  - device_code: PC-000208
+                    action: notify
+                    ip_address: 192.168.109.131
+                    scan_time: 0
+                    console_user: chenlei@DESKTOP-JC9DPIH
+                    mac: 00:0C:29:D7:76:FD
+                    event_id: '1729073633371022'
+                    compliance_check_name: antivirus
+                    status: created
+                    policy_id: 9e9c422e-4f55-4247-9b79-d195d9e20a04
+                    compliance_check_detail:
+                      detail:
+                        software:
+                        - name: Windows Defender
+                          process_id_list:
+                          - msmpeng.exe
+                      result:
+                      - 未安装"Windows Defender"杀毒软件
+                      error_message: Antivirus Software Not Meeting Requirements
+                    os_friendly_name: Windows 10 EnterpriseS (10.0.19044)
+                    agent_version: 3.4.99
+                    os_name: Windows
+                    risk_level: 2
+                    policy_name: chenle_test
+                    hostname: DESKTOP-JC9DPIH
+                    time: 1729073633371
+                    device_id: 53984d54-fcb1-4834-81bf-b19a3013c425
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    compliance_check_display_name: 杀毒软件检查
+                    policy_category: basic
+                    '@timestamp': 1729073633371
+                    timestamp: '2024-10-16T18:13:53+08:00'
+                    created_timestamp: '2024-10-16T18:13:58+08:00'
+                    compliance_check_result: fail
+                    risk_name: 中危
+                    category: compliance
+                    staff_id: 93ca6f53-d9df-4cc9-a9ad-c78d23ca8b18
+                    staff_name: 陈磊
+                    staff_email: chenlei@soumao.com
+                    staff_code: 60d4100c843e5bd7
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids:
+                    - 93f009fb-0759-47aa-86c8-f257329ed7e7
+                    - 70628140-a776-4101-9e1a-21b5b98fc30d
+                    dept_names:
+                    - 网商银行
+                    - 信息科技部
+                    dept_paths:
+                    - 薮猫大公司/网商银行
+                    - 薮猫大公司/网商银行/信息科技部
+                    file_suffix: ''
+                    uid: qUPSlJIB1BSg0pzjCvkN
+                    _type: _doc
+                    _index: .ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012
+                    _score: null
+                    action_display_name: Audit
+                  - device_code: PC-000208
+                    action: warning
+                    ip_address: 192.168.109.131
+                    scan_time: 1729073633315
+                    console_user: chenlei@DESKTOP-JC9DPIH
+                    mac: 00:0C:29:D7:76:FD
+                    event_id: '1729073633371026'
+                    compliance_check_name: ad_domain
+                    status: created
+                    policy_id: 9e9c422e-4f55-4247-9b79-d195d9e20a04
+                    compliance_check_detail:
+                      detail:
+                        domains:
+                        - hello
+                      result:
+                      - 未加入"hello"AD域
+                      error_message: Not Joined Required Active Directory
+                    os_friendly_name: Windows 10 EnterpriseS (10.0.19044)
+                    agent_version: 3.4.99
+                    os_name: Windows
+                    risk_level: 2
+                    policy_name: chenle_test
+                    hostname: DESKTOP-JC9DPIH
+                    time: 1729073633371
+                    device_id: 53984d54-fcb1-4834-81bf-b19a3013c425
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    compliance_check_display_name: AD域检查
+                    policy_category: basic
+                    '@timestamp': 1729073633371
+                    timestamp: '2024-10-16T18:13:53+08:00'
+                    created_timestamp: '2024-10-16T18:13:58+08:00'
+                    compliance_check_result: fail
+                    risk_name: 中危
+                    category: compliance
+                    staff_id: 93ca6f53-d9df-4cc9-a9ad-c78d23ca8b18
+                    staff_name: 陈磊
+                    staff_email: chenlei@soumao.com
+                    staff_code: 60d4100c843e5bd7
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids:
+                    - 93f009fb-0759-47aa-86c8-f257329ed7e7
+                    - 70628140-a776-4101-9e1a-21b5b98fc30d
+                    dept_names:
+                    - 网商银行
+                    - 信息科技部
+                    dept_paths:
+                    - 薮猫大公司/网商银行
+                    - 薮猫大公司/网商银行/信息科技部
+                    file_suffix: ''
+                    uid: rEPSlJIB1BSg0pzjCvkN
+                    _type: _doc
+                    _index: .ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012
+                    _score: null
+                    action_display_name: Endpoint Reminder
+                  - device_code: PC-000208
+                    action: warning
+                    ip_address: 192.168.109.131
+                    scan_time: 1729073633370
+                    console_user: chenlei@DESKTOP-JC9DPIH
+                    mac: 00:0C:29:D7:76:FD
+                    event_id: '1729073633371027'
+                    compliance_check_name: system_lock_screen
+                    status: created
+                    policy_id: 9e9c422e-4f55-4247-9b79-d195d9e20a04
+                    compliance_check_detail:
+                      detail: '{}'
+                      result:
+                      - 未设置锁屏密码
+                      - 锁屏时间不符合"1"分钟要求
+                      error_message: Screen Lock Check Not Meeting Requirements
+                    os_friendly_name: Windows 10 EnterpriseS (10.0.19044)
+                    agent_version: 3.4.99
+                    os_name: Windows
+                    risk_level: 2
+                    policy_name: chenle_test
+                    hostname: DESKTOP-JC9DPIH
+                    time: 1729073633371
+                    device_id: 53984d54-fcb1-4834-81bf-b19a3013c425
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    compliance_check_display_name: 系统锁屏检查
+                    policy_category: basic
+                    '@timestamp': 1729073633371
+                    timestamp: '2024-10-16T18:13:53+08:00'
+                    created_timestamp: '2024-10-16T18:13:58+08:00'
+                    compliance_check_result: fail
+                    risk_name: 中危
+                    category: compliance
+                    staff_id: 93ca6f53-d9df-4cc9-a9ad-c78d23ca8b18
+                    staff_name: 陈磊
+                    staff_email: chenlei@soumao.com
+                    staff_code: 60d4100c843e5bd7
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids:
+                    - 93f009fb-0759-47aa-86c8-f257329ed7e7
+                    - 70628140-a776-4101-9e1a-21b5b98fc30d
+                    dept_names:
+                    - 网商银行
+                    - 信息科技部
+                    dept_paths:
+                    - 薮猫大公司/网商银行
+                    - 薮猫大公司/网商银行/信息科技部
+                    file_suffix: ''
+                    uid: rUPSlJIB1BSg0pzjCvkN
+                    _type: _doc
+                    _index: .ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012
+                    _score: null
+                    action_display_name: Endpoint Reminder
+                  - device_code: PC-000208
+                    action: warning
+                    ip_address: 192.168.109.131
+                    scan_time: 1729073633371
+                    console_user: chenlei@DESKTOP-JC9DPIH
+                    mac: 00:0C:29:D7:76:FD
+                    event_id: '1729073633371029'
+                    compliance_check_name: os_version
+                    status: created
+                    policy_id: 9e9c422e-4f55-4247-9b79-d195d9e20a04
+                    compliance_check_detail:
+                      detail: '{}'
+                      result:
+                      - 操作系统最低要求为Windows 11，当前运行为Windows 10
+                      error_message: 操作系统版本未达最低配置标准
+                    os_friendly_name: Windows 10 EnterpriseS (10.0.19044)
+                    agent_version: 3.4.99
+                    os_name: Windows
+                    risk_level: 2
+                    policy_name: chenle_test
+                    hostname: DESKTOP-JC9DPIH
+                    time: 1729073633371
+                    device_id: 53984d54-fcb1-4834-81bf-b19a3013c425
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    compliance_check_display_name: 操作系统版本检查
+                    policy_category: basic
+                    '@timestamp': 1729073633371
+                    timestamp: '2024-10-16T18:13:53+08:00'
+                    created_timestamp: '2024-10-16T18:13:58+08:00'
+                    compliance_check_result: fail
+                    risk_name: 中危
+                    category: compliance
+                    staff_id: 93ca6f53-d9df-4cc9-a9ad-c78d23ca8b18
+                    staff_name: 陈磊
+                    staff_email: chenlei@soumao.com
+                    staff_code: 60d4100c843e5bd7
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids:
+                    - 93f009fb-0759-47aa-86c8-f257329ed7e7
+                    - 70628140-a776-4101-9e1a-21b5b98fc30d
+                    dept_names:
+                    - 网商银行
+                    - 信息科技部
+                    dept_paths:
+                    - 薮猫大公司/网商银行
+                    - 薮猫大公司/网商银行/信息科技部
+                    file_suffix: ''
+                    uid: r0PSlJIB1BSg0pzjCvkN
+                    _type: _doc
+                    _index: .ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012
+                    _score: null
+                    action_display_name: Endpoint Reminder
+                  - device_code: PC-000044
+                    action: notify
+                    ip_address: 192.168.96.141
+                    scan_time: 1729072418923
+                    console_user: lianb@DESKTOP-A0L03FT
+                    mac: 64:6E:E0:74:CC:8C
+                    event_id: '1729072418924053'
+                    compliance_check_name: ad_domain
+                    status: created
+                    policy_id: 9303fa90-0b83-418f-bc47-278b93884fcd
+                    compliance_check_detail:
+                      detail:
+                        domains:
+                        - '111111'
+                      result:
+                      - 未加入"111111"AD域
+                      error_message: Not Joined Required Active Directory
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    agent_version: 3.4.306
+                    os_name: Windows
+                    risk_level: 2
+                    policy_name: '2222'
+                    hostname: DESKTOP-A0L03FT
+                    time: 1729072418924
+                    device_id: b425f160-dd59-4469-9b06-f6f419193518
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    compliance_check_display_name: AD域检查
+                    policy_category: basic
+                    '@timestamp': 1729072418924
+                    timestamp: '2024-10-16T17:53:38+08:00'
+                    created_timestamp: '2024-10-16T17:53:42+08:00'
+                    compliance_check_result: fail
+                    risk_name: 中危
+                    category: compliance
+                    staff_id: ''
+                    staff_name: ''
+                    staff_email: ''
+                    staff_code: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    file_suffix: ''
+                    uid: e0O_lJIB1BSg0pzjf-Ss
+                    _type: _doc
+                    _index: .ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012
+                    _score: null
+                    action_display_name: Audit
+                  - device_code: PC-000044
+                    action: warning
+                    ip_address: 192.168.96.141
+                    scan_time: 1729072418924
+                    console_user: lianb@DESKTOP-A0L03FT
+                    mac: 64:6E:E0:74:CC:8C
+                    event_id: '1729072418924064'
+                    compliance_check_name: os_version
+                    status: created
+                    policy_id: 90f41d2f-afd2-428b-bb3b-fd27fb1cb21d
+                    compliance_check_detail:
+                      detail: '{}'
+                      result:
+                      - 操作系统最低要求为Windows 11，当前运行为Windows 10
+                      error_message: 操作系统版本未达最低配置标准
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    agent_version: 3.4.306
+                    os_name: Windows
+                    risk_level: 3
+                    policy_name: win-os
+                    hostname: DESKTOP-A0L03FT
+                    time: 1729072418924
+                    device_id: b425f160-dd59-4469-9b06-f6f419193518
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    compliance_check_display_name: 操作系统版本检查
+                    policy_category: basic
+                    '@timestamp': 1729072418924
+                    timestamp: '2024-10-16T17:53:38+08:00'
+                    created_timestamp: '2024-10-16T17:53:42+08:00'
+                    compliance_check_result: fail
+                    risk_name: 低危
+                    category: compliance
+                    staff_id: ''
+                    staff_name: ''
+                    staff_email: ''
+                    staff_code: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    file_suffix: ''
+                    uid: fEO_lJIB1BSg0pzjf-Ss
+                    _type: _doc
+                    _index: .ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012
+                    _score: null
+                    action_display_name: Endpoint Reminder
+                  - device_code: PC-000044
+                    action: warning
+                    ip_address: 192.168.96.141
+                    scan_time: 0
+                    console_user: lianb@DESKTOP-A0L03FT
+                    mac: 64:6E:E0:74:CC:8C
+                    event_id: '1729072418922041'
+                    compliance_check_name: antivirus
+                    status: created
+                    policy_id: d6576955-3fdb-4a06-ba70-808dab4fb9ce
+                    compliance_check_detail:
+                      detail:
+                        software:
+                        - name: Windows Defender
+                          process_id_list:
+                          - msmpeng.exe
+                        - name: McAfee
+                          process_id_list:
+                          - Mcshield.exe
+                      result:
+                      - 未安装"Windows Defender"杀毒软件
+                      - 未安装"McAfee"杀毒软件
+                      error_message: Antivirus Software Not Meeting Requirements
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    agent_version: 3.4.306
+                    os_name: Windows
+                    risk_level: 1
+                    policy_name: win
+                    hostname: DESKTOP-A0L03FT
+                    time: 1729072418922
+                    device_id: b425f160-dd59-4469-9b06-f6f419193518
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    compliance_check_display_name: 杀毒软件检查
+                    policy_category: basic
+                    '@timestamp': 1729072418922
+                    timestamp: '2024-10-16T17:53:38+08:00'
+                    created_timestamp: '2024-10-16T17:53:41+08:00'
+                    compliance_check_result: fail
+                    risk_name: 高危
+                    category: compliance
+                    staff_id: ''
+                    staff_name: ''
+                    staff_email: ''
+                    staff_code: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    file_suffix: ''
+                    uid: dEO_lJIB1BSg0pzjf-Ss
+                    _type: _doc
+                    _index: .ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012
+                    _score: null
+                    action_display_name: Endpoint Reminder
+                  - device_code: PC-000044
+                    action: warning
+                    ip_address: 192.168.96.141
+                    scan_time: 1729072418921
+                    console_user: lianb@DESKTOP-A0L03FT
+                    mac: 64:6E:E0:74:CC:8C
+                    event_id: '1729072418922042'
+                    compliance_check_name: must_run_process
+                    status: created
+                    policy_id: d6576955-3fdb-4a06-ba70-808dab4fb9ce
+                    compliance_check_detail:
+                      detail:
+                        software:
+                        - name: GitHub Desktop
+                          process_id_list:
+                          - githubdesktop.exe
+                      result:
+                      - 未运行要求的"GitHub Desktop"应用
+                      error_message: Key Software Not Running
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    agent_version: 3.4.306
+                    os_name: Windows
+                    risk_level: 1
+                    policy_name: win
+                    hostname: DESKTOP-A0L03FT
+                    time: 1729072418922
+                    device_id: b425f160-dd59-4469-9b06-f6f419193518
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    compliance_check_display_name: 必须运行进程检查
+                    policy_category: basic
+                    '@timestamp': 1729072418922
+                    timestamp: '2024-10-16T17:53:38+08:00'
+                    created_timestamp: '2024-10-16T17:53:41+08:00'
+                    compliance_check_result: fail
+                    risk_name: 高危
+                    category: compliance
+                    staff_id: ''
+                    staff_name: ''
+                    staff_email: ''
+                    staff_code: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    file_suffix: ''
+                    uid: dUO_lJIB1BSg0pzjf-Ss
+                    _type: _doc
+                    _index: .ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012
+                    _score: null
+                    action_display_name: Endpoint Reminder
+                  - device_code: PC-000044
+                    action: warning
+                    ip_address: 192.168.96.141
+                    scan_time: 1729072418895
+                    console_user: lianb@DESKTOP-A0L03FT
+                    mac: 64:6E:E0:74:CC:8C
+                    event_id: '1729072418922043'
+                    compliance_check_name: forbid_run_process
+                    status: created
+                    policy_id: d6576955-3fdb-4a06-ba70-808dab4fb9ce
+                    compliance_check_detail:
+                      detail:
+                        software:
+                        - name: ToDesk
+                          process_id_list:
+                          - todesk.exe
+                        - name: WeChat
+                          process_id_list:
+                          - WeChat.exe
+                      result:
+                      - 运行了禁止的"ToDesk"应用
+                      - 运行了禁止的"WeChat"应用
+                      error_message: Using Non-compliant Software
+                    os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                    agent_version: 3.4.306
+                    os_name: Windows
+                    risk_level: 1
+                    policy_name: win
+                    hostname: DESKTOP-A0L03FT
+                    time: 1729072418922
+                    device_id: b425f160-dd59-4469-9b06-f6f419193518
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    compliance_check_display_name: 禁止运行进程检查
+                    policy_category: basic
+                    '@timestamp': 1729072418922
+                    timestamp: '2024-10-16T17:53:38+08:00'
+                    created_timestamp: '2024-10-16T17:53:41+08:00'
+                    compliance_check_result: fail
+                    risk_name: 高危
+                    category: compliance
+                    staff_id: ''
+                    staff_name: ''
+                    staff_email: ''
+                    staff_code: ''
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids: []
+                    dept_names: []
+                    dept_paths: []
+                    file_suffix: ''
+                    uid: dkO_lJIB1BSg0pzjf-Ss
+                    _type: _doc
+                    _index: .ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012
+                    _score: null
+                    action_display_name: Endpoint Reminder
+      security: []

@@ -1,0 +1,69 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account log/audit API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: log/audit
+paths:
+  /business/audit_log:
+    get:
+      produces:
+      - application/json
+      tags:
+      - log/audit
+      summary: get audit logs
+      parameters:
+      - minimum: 1
+        type: integer
+        name: page
+        in: query
+        x-cli-description: 页码
+      - maximum: 100
+        minimum: 1
+        type: integer
+        name: page_size
+        in: query
+        x-cli-description: 每页数量
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/audit_log.ListAuditLogRes'
+      x-cli-summary: 查看审计日志列表
+definitions:
+  audit_log.ListAuditLogItem:
+    type: object
+    properties:
+      content:
+        type: string
+      created_at:
+        type: integer
+      id:
+        type: integer
+      ip:
+        type: string
+      username:
+        type: string
+  audit_log.ListAuditLogRes:
+    type: object
+    properties:
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/audit_log.ListAuditLogItem'
+      total:
+        type: integer
+  response.JSONBody:
+    type: object
+    properties:
+      data: {}
+      err:
+        type: string
+      msg:
+        type: string

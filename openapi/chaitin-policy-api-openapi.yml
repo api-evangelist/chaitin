@@ -1,0 +1,305 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policy API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policy
+paths:
+  /api/PolicyRuleAPI:
+    post:
+      operationId: PolicyRuleAPI_post
+      summary: POST /api/PolicyRuleAPI
+      tags:
+      - policy
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                pattern:
+                  type: object
+                  description: 匹配条件
+                percentage:
+                  type: integer
+                  description: 触发概率
+                action:
+                  type: string
+                  description: 动作
+                risk_level:
+                  type: string
+                  description: 危险等级
+                attack_type:
+                  type: string
+                  description: 攻击类型
+                delay:
+                  type: integer
+                  description: 延迟处理
+                log_option:
+                  type: string
+                  description: 日志记录设置
+                forbidden_page_config:
+                  type: string
+                  description: null 代表不指定，使用继承的配置；规则无法设置拦截页面
+                is_enabled:
+                  type: boolean
+                  description: 是否可用
+                comment:
+                  type: string
+                  description: 备注
+                expire_time:
+                  type: string
+                  description: 过期时间
+                is_global:
+                  type: boolean
+                  description: 是否是全局策略
+                sites:
+                  type: object
+                  description: 站点
+                cron_config:
+                  type: string
+                  description: 定时方式配置
+              required:
+              - pattern
+              - percentage
+              - action
+              - risk_level
+              - attack_type
+              - delay
+              - log_option
+              - forbidden_page_config
+              - is_enabled
+              - comment
+              - expire_time
+              - is_global
+              - sites
+    put:
+      operationId: PolicyRuleAPI_put
+      summary: PUT /api/PolicyRuleAPI
+      tags:
+      - policy
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                pattern:
+                  type: object
+                  description: 匹配条件
+                percentage:
+                  type: integer
+                  description: 触发概率
+                action:
+                  type: string
+                  description: 动作
+                risk_level:
+                  type: string
+                  description: 危险等级
+                attack_type:
+                  type: string
+                  description: 攻击类型
+                delay:
+                  type: integer
+                  description: 延迟处理
+                log_option:
+                  type: string
+                  description: 日志记录设置
+                forbidden_page_config:
+                  type: string
+                  description: null 代表不指定，使用继承的配置；规则无法设置拦截页面
+                is_enabled:
+                  type: boolean
+                  description: 是否可用
+                comment:
+                  type: string
+                  description: 备注
+                expire_time:
+                  type: string
+                  description: 过期时间
+                is_global:
+                  type: boolean
+                  description: 是否是全局策略
+                sites:
+                  type: object
+                  description: 站点
+                cron_config:
+                  type: string
+                  description: 定时方式配置
+              required:
+              - action
+              - attack_type
+              - comment
+              - delay
+              - expire_time
+              - forbidden_page_config
+              - is_enabled
+              - is_global
+              - log_option
+              - pattern
+              - percentage
+              - risk_level
+              - sites
+  /api/PolicyRulePositionAPI:
+    put:
+      operationId: PolicyRulePositionAPI_put
+      summary: PUT /api/PolicyRulePositionAPI
+      tags:
+      - policy
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: 规则 ID
+                position:
+                  type: integer
+                  description: 位置
+              required:
+              - id
+              - position
+  /api/PolicyRulePriorityAPI:
+    put:
+      operationId: PolicyRulePriorityAPI_put
+      summary: PUT /api/PolicyRulePriorityAPI
+      tags:
+      - policy
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                site:
+                  type: integer
+                  description: 应用的站点
+                policy_rule_ids:
+                  type: array
+                  description: 规则 ID 列表
+                  items:
+                    type: string
+              required:
+              - policy_rule_ids
+  /api/PolicyRuleSiteBindingAPI:
+    post:
+      operationId: PolicyRuleSiteBindingAPI_post
+      summary: POST /api/PolicyRuleSiteBindingAPI
+      tags:
+      - policy
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                site:
+                  type: integer
+                  description: 应用的站点
+                policy_rule_ids:
+                  type: array
+                  description: 规则 ID 列表
+                  items:
+                    type: string
+              required:
+              - site
+              - policy_rule_ids
+    delete:
+      operationId: PolicyRuleSiteBindingAPI_delete
+      summary: DELETE /api/PolicyRuleSiteBindingAPI
+      tags:
+      - policy
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                site:
+                  type: integer
+                  description: 应用的站点
+                policy_rule:
+                  type: integer
+                  description: 规则 ID
+              required:
+              - site
+              - policy_rule
+  /api/SkynetModuleAPI:
+    get:
+      operationId: SkynetModuleAPI_get
+      summary: GET /api/SkynetModuleAPI
+      tags:
+      - policy
+      parameters: []
+      x-cli-body-fallback: true
+    put:
+      operationId: SkynetModuleAPI_put
+      summary: PUT /api/SkynetModuleAPI
+      tags:
+      - policy
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                high_risk_enable_log:
+                  type: integer
+                medium_risk_enable_log:
+                  type: integer
+                low_risk_enable_log:
+                  type: integer
+              required:
+              - high_risk_enable_log
+              - medium_risk_enable_log
+              - low_risk_enable_log
+  /api/SkynetRuleAPI:
+    put:
+      operationId: SkynetRuleAPI_put
+      summary: PUT /api/SkynetRuleAPI
+      tags:
+      - policy
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                comment:
+                  type: string
+                  description: 备注
+                risk_level:
+                  type: string
+                  description: 危险等级
+                enable_log:
+                  type: boolean
+                  description: 是否记录日志
+              required:
+              - enable_log

@@ -1,0 +1,34 @@
+generated: '2026-07-18'
+method: searched
+source: openapi/chaitin-cloudatlas-openapi-original.yaml
+docs: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+  notes: >-
+    Chaitin products are self-hosted / cloud appliances that authenticate API
+    clients with a per-instance API token passed in a request header. SafeLine
+    WAF uses the X-SLCE-API-TOKEN header against the Open API on port 9443
+    (/api/open/*); Cloud Atlas uses a TOKEN header. Tokens are minted in each
+    product's System / API Token console. No OAuth2 / OIDC surface is exposed on
+    the machine APIs (OIDC in SafeLine is console SSO, not API auth).
+schemes:
+- name: X-SLCE-API-TOKEN
+  type: apiKey
+  in: header
+  parameter: X-SLCE-API-TOKEN
+  product: SafeLine WAF
+  min_version: '6.6.0'
+  token_endpoint: SafeLine console -> System Management -> API Token
+  docs: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
+  sources:
+  - openapi/chaitin-safeline-openapi-original.json
+- name: apikey-header-TOKEN
+  type: apiKey
+  in: header
+  parameter: TOKEN
+  product: Cloud Atlas
+  sources:
+  - openapi/chaitin-cloudatlas-openapi-original.yaml

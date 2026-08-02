@@ -1,0 +1,136 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account stat API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: stat
+paths:
+  /stat/advance/access:
+    get:
+      produces:
+      - application/json
+      tags:
+      - stat
+      summary: get advanced access
+      parameters:
+      - type: integer
+        name: begin_time
+        in: query
+        x-cli-description: 开始时间戳（秒）
+      - type: integer
+        name: end_time
+        in: query
+        x-cli-description: 结束时间戳（秒）
+      - type: integer
+        name: site_id
+        in: query
+        x-cli-description: 站点 ID
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/stat.AdvanceAccessRes'
+      x-cli-summary: 访问统计
+  /stat/advance/attack:
+    get:
+      produces:
+      - application/json
+      tags:
+      - stat
+      summary: get advanced intercept
+      parameters:
+      - type: integer
+        name: begin_time
+        in: query
+        x-cli-description: 开始时间戳（秒）
+      - type: integer
+        name: end_time
+        in: query
+        x-cli-description: 结束时间戳（秒）
+      - type: integer
+        name: site_id
+        in: query
+        x-cli-description: 站点 ID
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/stat.AdvanceAttackRes'
+      x-cli-summary: 拦截统计
+  /stat/qps:
+    get:
+      produces:
+      - application/json
+      tags:
+      - stat
+      summary: get qps
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/api.QpsRes'
+      x-cli-summary: QPS 统计
+definitions:
+  response.JSONBody:
+    type: object
+    properties:
+      data: {}
+      err:
+        type: string
+      msg:
+        type: string
+  stat.AdvanceAccessRes:
+    type: object
+    properties:
+      access:
+        type: integer
+      ip:
+        type: integer
+      pv:
+        type: integer
+      session:
+        type: integer
+  api.QpsRes:
+    type: object
+    properties:
+      nodes:
+        type: array
+        items:
+          type: object
+          additionalProperties: {}
+  stat.AdvanceAttackRes:
+    type: object
+    properties:
+      attack_ip:
+        type: integer
+      intercept:
+        type: object
+        properties:
+          auth_defense:
+            type: integer
+          blacklist:
+            type: integer
+          block:
+            type: integer
+          challenge:
+            type: integer
+          offline:
+            type: integer
+          rate_limit:
+            type: integer

@@ -1,0 +1,408 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policylog/im/stafflist API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policylog/im/stafflist
+  description: 日志中心/即时通讯/人员列表
+paths:
+  /policylog/im/stafflist:
+    post:
+      summary: IM管控员工列表信息
+      deprecated: false
+      description: ''
+      tags:
+      - policylog/im/stafflist
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                search:
+                  type: string
+                queries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: string
+              required:
+              - time_range
+              - search
+              - queries
+            example:
+              time_range:
+                begin: '2023-11-14 10:55:38'
+                end: '2023-11-14 11:55:38'
+              search: ''
+              queries:
+              - field: staff_name
+                operator: is
+                value: 吴贝宁
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      total:
+                        type: integer
+                      search_total:
+                        type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            staff_id:
+                              type: string
+                            staff_name:
+                              type: string
+                            console_user:
+                              type: string
+                            dept_paths:
+                              type: array
+                              items:
+                                type: string
+                            os_list:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  os_icon:
+                                    type: string
+                                  os_name:
+                                    type: string
+                                required:
+                                - os_icon
+                                - os_name
+                            device_list:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  device_id:
+                                    type: string
+                                  device_code:
+                                    type: string
+                                  os_icon:
+                                    type: string
+                                  os_name:
+                                    type: string
+                                  total:
+                                    type: integer
+                                required:
+                                - device_id
+                                - device_code
+                                - os_icon
+                                - os_name
+                                - total
+                            device_cnt:
+                              type: integer
+                          required:
+                          - staff_id
+                          - staff_name
+                          - console_user
+                          - dept_paths
+                          - os_list
+                          - device_list
+                          - device_cnt
+                    required:
+                    - index
+                    - total
+                    - search_total
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  index:
+                  - qzhddr_policy_im_logs
+                  total: 502
+                  search_total: 502
+                  results:
+                  - staff_id: ''
+                    staff_name: ''
+                    console_user: lianb@DESKTOP-A0L03FT
+                    dept_paths: []
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: d9671d62-f655-4669-ac14-67b2906b1807
+                      device_code: PC-000140
+                      os_icon: windows
+                      os_name: Windows
+                      total: 24
+                    - device_id: a05300b7-7b76-4b54-ad25-a16a9c516c29
+                      device_code: PC-000108
+                      os_icon: windows
+                      os_name: Windows
+                      total: 11
+                    - device_id: 4f56fd8f-411f-4d96-b01f-122fa4a98b97
+                      device_code: PC-000126
+                      os_icon: windows
+                      os_name: Windows
+                      total: 8
+                    - device_id: 2dfd92cd-5a9e-4571-afad-b04ff379bef1
+                      device_code: PC-000139
+                      os_icon: windows
+                      os_name: Windows
+                      total: 5
+                    - device_id: 7385fd21-bbcc-4562-89fc-4abf8150c462
+                      device_code: PC-000088
+                      os_icon: windows
+                      os_name: Windows
+                      total: 5
+                    - device_id: 80630800-f741-443f-9039-96826ed9b73e
+                      device_code: PC-000027
+                      os_icon: windows
+                      os_name: Windows
+                      total: 4
+                    - device_id: 5d81e7d3-f6a4-4e1a-9306-654d1e8c77f7
+                      device_code: PC-000116
+                      os_icon: windows
+                      os_name: Windows
+                      total: 2
+                    - device_id: 5f46677b-d939-4f28-8209-ffdf14d7316c
+                      device_code: PC-000045
+                      os_icon: windows
+                      os_name: Windows
+                      total: 1
+                    - device_id: bcc990f1-5050-4470-b11d-528246623831
+                      device_code: PC-000099
+                      os_icon: windows
+                      os_name: Windows
+                      total: 1
+                    device_cnt: 9
+                  - staff_id: 90534539-028d-40ea-9e8d-68f1a7b1cc88
+                    staff_name: qewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewq
+                    console_user: lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT
+                    dept_paths:
+                    - 测试公司/hu_子部门
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: a05300b7-7b76-4b54-ad25-a16a9c516c29
+                      device_code: PC-000108
+                      os_icon: windows
+                      os_name: Windows
+                      total: 58
+                    device_cnt: 1
+                  - staff_id: 17f92df1-5f33-445f-a86b-dc506f9baf2e
+                    staff_name: 陈半仙
+                    console_user: lianb@DESKTOP-A0L03FT
+                    dept_paths: []
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: d9671d62-f655-4669-ac14-67b2906b1807
+                      device_code: PC-000140
+                      os_icon: windows
+                      os_name: Windows
+                      total: 49
+                    device_cnt: 1
+                  - staff_id: 2491cc30-2f72-418d-8415-4f88fb7f946b
+                    staff_name: 程灿亮
+                    console_user: 薮猫@@LAPTOP-JTMQ1VG2
+                    dept_paths: []
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: 2dfd92cd-5a9e-4571-afad-b04ff379bef1
+                      device_code: PC-000139
+                      os_icon: windows
+                      os_name: Windows
+                      total: 13
+                    device_cnt: 1
+                  - staff_id: fea88853-f343-4f37-b02e-d948094cc585
+                    staff_name: 陈花花
+                    console_user: 薮猫@LAPTOP-JTMQ1VG2
+                    dept_paths:
+                    - 测试公司
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: 2dfd92cd-5a9e-4571-afad-b04ff379bef1
+                      device_code: PC-000139
+                      os_icon: windows
+                      os_name: Windows
+                      total: 6
+                    device_cnt: 1
+                  - staff_id: 2df26a2d-4b37-4e21-894b-8bf076f175d1
+                    staff_name: clb
+                    console_user: lianb@DESKTOP-PNED9SM@DESKTOP-PNED9SM
+                    dept_paths: []
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: 5f46677b-d939-4f28-8209-ffdf14d7316c
+                      device_code: PC-000045
+                      os_icon: windows
+                      os_name: Windows
+                      total: 4
+                    device_cnt: 1
+                  - staff_id: bf9522a3-82b0-4288-b48e-72791c4afeb5
+                    staff_name: 嘭嘭嘭
+                    console_user: lianb@DESKTOP-A0L03FT
+                    dept_paths:
+                    - 测试公司/技术部
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: d9671d62-f655-4669-ac14-67b2906b1807
+                      device_code: PC-000140
+                      os_icon: windows
+                      os_name: Windows
+                      total: 4
+                    device_cnt: 1
+                  - staff_id: a5b78aa6-dd84-46d9-ab25-aeef14949b1c
+                    staff_name: 陈夏天
+                    console_user: 薮猫@LAPTOP-JTMQ1VG2
+                    dept_paths:
+                    - 测试公司/技术部
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: 7ab1a532-9a11-4b12-84c1-8a6f32a8b3ce
+                      device_code: PC-000144
+                      os_icon: windows
+                      os_name: Windows
+                      total: 2
+                    device_cnt: 1
+                  - staff_id: 89a0061b-0ebe-40ec-8bc9-cfd3e9c2d5c5
+                    staff_name: 嘭嘭嘭
+                    console_user: cailianbin@WIN-46Q2HD9NB5N
+                    dept_paths:
+                    - 测试公司/技术部
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: 80630800-f741-443f-9039-96826ed9b73e
+                      device_code: PC-000027
+                      os_icon: windows
+                      os_name: Windows
+                      total: 1
+                    device_cnt: 1
+                  - staff_id: b2c11e4a-9b41-46b8-83c6-73353bcdea63
+                    staff_name: 连彬
+                    console_user: lianb@@DESKTOP-A0L03FT
+                    dept_paths:
+                    - 测试公司/SANY/三一重工股份有限公司/工程车辆事业部/泵送公司/研究院/国际产品研究所
+                    os_list:
+                    - os_icon: windows
+                      os_name: Windows
+                    device_list:
+                    - device_id: a05300b7-7b76-4b54-ad25-a16a9c516c29
+                      device_code: PC-000108
+                      os_icon: windows
+                      os_name: Windows
+                      total: 1
+                    device_cnt: 1
+      security: []

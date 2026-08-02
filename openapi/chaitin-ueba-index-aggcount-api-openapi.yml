@@ -1,0 +1,1164 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account ueba/index/aggcount API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: ueba/index/aggcount
+  description: UEBA 分析/索引/聚合计数
+paths:
+  /ueba/index/aggcount:
+    post:
+      summary: UEBA首页聚合统计
+      deprecated: false
+      description: ''
+      tags:
+      - ueba/index/aggcount
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                field:
+                  type: string
+                is_fav:
+                  type: boolean
+              required:
+              - field
+              - is_fav
+            example:
+              field: dept_ids
+              is_fav: false
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      total:
+                        type: integer
+                      search_total:
+                        type: integer
+                      results:
+                        type: object
+                        properties:
+                          bucket:
+                            type: object
+                            properties:
+                              doc_count_error_upper_bound:
+                                type: integer
+                              sum_other_doc_count:
+                                type: integer
+                              buckets:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    key:
+                                      type: string
+                                    doc_count:
+                                      type: integer
+                                    info:
+                                      type: object
+                                      properties:
+                                        hits:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: object
+                                              properties:
+                                                value:
+                                                  type: integer
+                                                relation:
+                                                  type: string
+                                              required:
+                                              - value
+                                              - relation
+                                            max_score:
+                                              type: number
+                                            hits:
+                                              type: array
+                                              items:
+                                                type: object
+                                                properties:
+                                                  _index:
+                                                    type: string
+                                                  _type:
+                                                    type: string
+                                                  _id:
+                                                    type: string
+                                                  _score:
+                                                    type: number
+                                                  _source:
+                                                    type: object
+                                                    properties:
+                                                      status:
+                                                        type: string
+                                                      category:
+                                                        type: string
+                                                      device_id:
+                                                        type: string
+                                                      device_code:
+                                                        type: string
+                                                      ip_address:
+                                                        type: string
+                                                      console_user:
+                                                        type: string
+                                                      os_name:
+                                                        type: string
+                                                      os_friendly_name:
+                                                        type: string
+                                                      staff_id:
+                                                        type: string
+                                                      staff_name:
+                                                        type: string
+                                                      staff_code:
+                                                        type: string
+                                                      staff_email:
+                                                        type: string
+                                                      staff_description:
+                                                        type: string
+                                                      staff_tag_ids:
+                                                        type: array
+                                                        items: {}
+                                                      staff_tags:
+                                                        type: array
+                                                        items: {}
+                                                      dept_ids:
+                                                        type: array
+                                                        items:
+                                                          type: string
+                                                      dept_names:
+                                                        type: array
+                                                        items:
+                                                          type: string
+                                                      dept_paths:
+                                                        type: array
+                                                        items:
+                                                          type: string
+                                                      event_id:
+                                                        type: string
+                                                      agent_version:
+                                                        type: string
+                                                      company_id:
+                                                        type: string
+                                                      policy_id:
+                                                        type: string
+                                                      log_cnt:
+                                                        type: integer
+                                                      timestamp:
+                                                        type: string
+                                                      '@timestamp':
+                                                        type: integer
+                                                      ueba_id:
+                                                        type: string
+                                                      ueba_status:
+                                                        type: string
+                                                      ueba_source:
+                                                        type: string
+                                                      ueba_category:
+                                                        type: string
+                                                      ueba_description:
+                                                        type: string
+                                                      ueba_expression_fields:
+                                                        type: object
+                                                        properties:
+                                                          body:
+                                                            type: object
+                                                            properties:
+                                                              aggs:
+                                                                type: object
+                                                                properties:
+                                                                  count:
+                                                                    type: object
+                                                                    properties:
+                                                                      cardinality:
+                                                                        type: object
+                                                                        properties:
+                                                                          field:
+                                                                            type: string
+                                                                          precision_threshold:
+                                                                            type: integer
+                                                                        required:
+                                                                        - field
+                                                                        - precision_threshold
+                                                                    required:
+                                                                    - cardinality
+                                                                required:
+                                                                - count
+                                                              query:
+                                                                type: object
+                                                                properties:
+                                                                  bool:
+                                                                    type: object
+                                                                    properties:
+                                                                      must:
+                                                                        type: array
+                                                                        items:
+                                                                          type: object
+                                                                          properties:
+                                                                            term:
+                                                                              type: object
+                                                                              properties:
+                                                                                company_id:
+                                                                                  type: string
+                                                                              required:
+                                                                              - company_id
+                                                                          required:
+                                                                          - term
+                                                                    required:
+                                                                    - must
+                                                                required:
+                                                                - bool
+                                                              collapse:
+                                                                type: object
+                                                                properties:
+                                                                  field:
+                                                                    type: string
+                                                                  inner_hits:
+                                                                    type: object
+                                                                    properties:
+                                                                      name:
+                                                                        type: string
+                                                                      size:
+                                                                        type: integer
+                                                                    required:
+                                                                    - name
+                                                                    - size
+                                                                required:
+                                                                - field
+                                                                - inner_hits
+                                                              track_total_hits:
+                                                                type: boolean
+                                                            required:
+                                                            - aggs
+                                                            - query
+                                                            - collapse
+                                                            - track_total_hits
+                                                          queries:
+                                                            type: array
+                                                            items: {}
+                                                        required:
+                                                        - body
+                                                        - queries
+                                                      ueba_expression:
+                                                        type: string
+                                                      ueba_score:
+                                                        type: integer
+                                                      ueba_windows_s:
+                                                        type: integer
+                                                      ueba_threshold:
+                                                        type: integer
+                                                      time:
+                                                        type: integer
+                                                      begin_timestamp:
+                                                        type: integer
+                                                      end_timestamp:
+                                                        type: integer
+                                                      begin:
+                                                        type: string
+                                                      end:
+                                                        type: string
+                                                      ueba_category_display:
+                                                        type: string
+                                                    required:
+                                                    - status
+                                                    - category
+                                                    - device_id
+                                                    - device_code
+                                                    - ip_address
+                                                    - console_user
+                                                    - os_name
+                                                    - os_friendly_name
+                                                    - staff_id
+                                                    - staff_name
+                                                    - staff_code
+                                                    - staff_email
+                                                    - staff_description
+                                                    - staff_tag_ids
+                                                    - staff_tags
+                                                    - dept_ids
+                                                    - dept_names
+                                                    - dept_paths
+                                                    - event_id
+                                                    - agent_version
+                                                    - company_id
+                                                    - policy_id
+                                                    - log_cnt
+                                                    - timestamp
+                                                    - '@timestamp'
+                                                    - ueba_id
+                                                    - ueba_status
+                                                    - ueba_source
+                                                    - ueba_category
+                                                    - ueba_description
+                                                    - ueba_expression_fields
+                                                    - ueba_expression
+                                                    - ueba_score
+                                                    - ueba_windows_s
+                                                    - ueba_threshold
+                                                    - time
+                                                    - begin_timestamp
+                                                    - end_timestamp
+                                                    - begin
+                                                    - end
+                                                    - ueba_category_display
+                                                required:
+                                                - _index
+                                                - _type
+                                                - _id
+                                                - _score
+                                                - _source
+                                          required:
+                                          - total
+                                          - max_score
+                                          - hits
+                                      required:
+                                      - hits
+                                  required:
+                                  - key
+                                  - doc_count
+                                  - info
+                            required:
+                            - doc_count_error_upper_bound
+                            - sum_other_doc_count
+                            - buckets
+                        required:
+                        - bucket
+                    required:
+                    - index
+                    - total
+                    - search_total
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  index:
+                  - qzhddr_ueba
+                  total: 2166
+                  search_total: 2166
+                  results:
+                    bucket:
+                      doc_count_error_upper_bound: 0
+                      sum_other_doc_count: 1026
+                      buckets:
+                      - key: 115f0484-1802-484c-a53e-a70cd9ca550e
+                        doc_count: 114
+                        info:
+                          hits:
+                            total:
+                              value: 114
+                              relation: eq
+                            max_score: 0.00023076034
+                            hits:
+                            - _index: .ds-qzhddr_ueba_s-2023.12.27-000001
+                              _type: _doc
+                              _id: xZMXr4wBNV4rKln5K44R
+                              _score: 0.00023076034
+                              _source:
+                                status: created
+                                category: channel
+                                device_id: 115f0484-1802-484c-a53e-a70cd9ca550e
+                                device_code: PC-000022
+                                ip_address: 192.168.109.129
+                                console_user: chenlei@@DESKTOP-JC9DPIH
+                                os_name: Windows
+                                os_friendly_name: Windows 10 EnterpriseS (10.0.19044)
+                                staff_id: ''
+                                staff_name: ''
+                                staff_code: ''
+                                staff_email: ''
+                                staff_description: ''
+                                staff_tag_ids: []
+                                staff_tags: []
+                                dept_ids: []
+                                dept_names: []
+                                dept_paths: []
+                                event_id: '1700452520760013'
+                                agent_version: 3.1.8
+                                company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                policy_id: ec792680-f6e9-4028-af52-fbd864315e00
+                                log_cnt: 73
+                                timestamp: '2023-12-28T06:23:00Z'
+                                '@timestamp': 1703744580257
+                                ueba_id: 332d91f9-c264-4192-a6cb-46fdedb3292e
+                                ueba_status: activated
+                                ueba_source: policy_channel_log
+                                ueba_category: outgoing
+                                ueba_description: ''
+                                ueba_expression_fields:
+                                  body:
+                                    aggs:
+                                      count:
+                                        cardinality:
+                                          field: device_id
+                                          precision_threshold: 40000
+                                    query:
+                                      bool:
+                                        must:
+                                        - term:
+                                            company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                    collapse:
+                                      field: device_id
+                                      inner_hits:
+                                        name: device_id
+                                        size: 100
+                                    track_total_hits: true
+                                  queries: []
+                                ueba_expression: SELF
+                                ueba_score: 60
+                                ueba_windows_s: 90000000
+                                ueba_threshold: 1
+                                time: 1703744580257
+                                begin_timestamp: 1701228197030
+                                end_timestamp: 1700452525006
+                                begin: '2023-11-29T03:23:17Z'
+                                end: '2023-11-20T03:55:25Z'
+                                ueba_category_display: 外发行为
+                      - key: 1c16c892-242c-467c-add4-8ab0f00f26e9
+                        doc_count: 114
+                        info:
+                          hits:
+                            total:
+                              value: 114
+                              relation: eq
+                            max_score: 0.00023076034
+                            hits:
+                            - _index: .ds-qzhddr_ueba_s-2023.12.27-000001
+                              _type: _doc
+                              _id: uZMXr4wBNV4rKln5Ko7L
+                              _score: 0.00023076034
+                              _source:
+                                status: created
+                                category: channel
+                                device_id: 1c16c892-242c-467c-add4-8ab0f00f26e9
+                                device_code: PC-000003
+                                ip_address: 192.168.96.36
+                                console_user: nanzhi
+                                os_name: macOS
+                                os_friendly_name: macOS 12.7
+                                staff_id: ''
+                                staff_name: ''
+                                staff_code: ''
+                                staff_email: ''
+                                staff_description: ''
+                                staff_tag_ids: []
+                                staff_tags: []
+                                dept_ids: []
+                                dept_names: []
+                                dept_paths: []
+                                event_id: 78B0A060-A809-46A8-A605-B35803F4DE32
+                                agent_version: 3.0.202
+                                company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                policy_id: 21f9c2cb-5c86-47ab-a514-72bcade6facc
+                                log_cnt: 110
+                                timestamp: '2023-12-28T06:23:00Z'
+                                '@timestamp': 1703744580181
+                                ueba_id: 332d91f9-c264-4192-a6cb-46fdedb3292e
+                                ueba_status: activated
+                                ueba_source: policy_channel_log
+                                ueba_category: outgoing
+                                ueba_description: ''
+                                ueba_expression_fields:
+                                  body:
+                                    aggs:
+                                      count:
+                                        cardinality:
+                                          field: device_id
+                                          precision_threshold: 40000
+                                    query:
+                                      bool:
+                                        must:
+                                        - term:
+                                            company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                    collapse:
+                                      field: device_id
+                                      inner_hits:
+                                        name: device_id
+                                        size: 100
+                                    track_total_hits: true
+                                  queries: []
+                                ueba_expression: SELF
+                                ueba_score: 60
+                                ueba_windows_s: 90000000
+                                ueba_threshold: 1
+                                time: 1703744580181
+                                begin_timestamp: 1701154082000
+                                end_timestamp: 1697680462000
+                                begin: '2023-11-28T06:48:02Z'
+                                end: '2023-10-19T01:54:22Z'
+                                ueba_category_display: 外发行为
+                      - key: 4131a0de-46ee-4ae6-8003-ded416ed2f86
+                        doc_count: 114
+                        info:
+                          hits:
+                            total:
+                              value: 114
+                              relation: eq
+                            max_score: 0.00023076034
+                            hits:
+                            - _index: .ds-qzhddr_ueba_s-2023.12.27-000001
+                              _type: _doc
+                              _id: vpMXr4wBNV4rKln5Ko7k
+                              _score: 0.00023076034
+                              _source:
+                                status: created
+                                category: channel
+                                device_id: 4131a0de-46ee-4ae6-8003-ded416ed2f86
+                                device_code: PC-000007
+                                ip_address: 10.101.4.41
+                                console_user: erevus
+                                os_name: macOS
+                                os_friendly_name: macOS 13.3
+                                staff_id: ''
+                                staff_name: ''
+                                staff_code: ''
+                                staff_email: ''
+                                staff_description: ''
+                                staff_tag_ids: []
+                                staff_tags: []
+                                dept_ids: []
+                                dept_names: []
+                                dept_paths: []
+                                event_id: 3735EE9C-7549-4C92-ADD4-970F3C09EF73
+                                agent_version: 3.0.13
+                                company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                policy_id: 9dd975c2-a3db-4c78-9212-980fff979f32
+                                log_cnt: 2
+                                timestamp: '2023-12-28T06:23:00Z'
+                                '@timestamp': 1703744580213
+                                ueba_id: 332d91f9-c264-4192-a6cb-46fdedb3292e
+                                ueba_status: activated
+                                ueba_source: policy_channel_log
+                                ueba_category: outgoing
+                                ueba_description: ''
+                                ueba_expression_fields:
+                                  body:
+                                    aggs:
+                                      count:
+                                        cardinality:
+                                          field: device_id
+                                          precision_threshold: 40000
+                                    query:
+                                      bool:
+                                        must:
+                                        - term:
+                                            company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                    collapse:
+                                      field: device_id
+                                      inner_hits:
+                                        name: device_id
+                                        size: 100
+                                    track_total_hits: true
+                                  queries: []
+                                ueba_expression: SELF
+                                ueba_score: 60
+                                ueba_windows_s: 90000000
+                                ueba_threshold: 1
+                                time: 1703744580213
+                                begin_timestamp: 1697421560000
+                                end_timestamp: 1697421484000
+                                begin: '2023-10-16T01:59:20Z'
+                                end: '2023-10-16T01:58:04Z'
+                                ueba_category_display: 外发行为
+                      - key: 44089618-2db4-4bbf-83b7-2bffb35c3b59
+                        doc_count: 114
+                        info:
+                          hits:
+                            total:
+                              value: 114
+                              relation: eq
+                            max_score: 0.00023076034
+                            hits:
+                            - _index: .ds-qzhddr_ueba_s-2023.12.27-000001
+                              _type: _doc
+                              _id: yJMXr4wBNV4rKln5K44i
+                              _score: 0.00023076034
+                              _source:
+                                status: created
+                                category: channel
+                                device_id: 44089618-2db4-4bbf-83b7-2bffb35c3b59
+                                device_code: PC-000030
+                                ip_address: 192.168.96.92
+                                console_user: serval-PC\serval
+                                os_name: UOS
+                                os_friendly_name: UnionTech OS Desktop 20 Pro
+                                staff_id: ''
+                                staff_name: ''
+                                staff_code: ''
+                                staff_email: ''
+                                staff_description: ''
+                                staff_tag_ids: []
+                                staff_tags: []
+                                dept_ids: []
+                                dept_names: []
+                                dept_paths: []
+                                event_id: ac1c382e-9b93-4d1b-8edc-8f3c0a89302c
+                                agent_version: 3.1.8
+                                company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                policy_id: ebe7578c-1ca0-4a01-8c72-f61bd6b67ec2
+                                log_cnt: 573
+                                timestamp: '2023-12-28T06:23:00Z'
+                                '@timestamp': 1703744580273
+                                ueba_id: 332d91f9-c264-4192-a6cb-46fdedb3292e
+                                ueba_status: activated
+                                ueba_source: policy_channel_log
+                                ueba_category: outgoing
+                                ueba_description: ''
+                                ueba_expression_fields:
+                                  body:
+                                    aggs:
+                                      count:
+                                        cardinality:
+                                          field: device_id
+                                          precision_threshold: 40000
+                                    query:
+                                      bool:
+                                        must:
+                                        - term:
+                                            company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                    collapse:
+                                      field: device_id
+                                      inner_hits:
+                                        name: device_id
+                                        size: 100
+                                    track_total_hits: true
+                                  queries: []
+                                ueba_expression: SELF
+                                ueba_score: 60
+                                ueba_windows_s: 90000000
+                                ueba_threshold: 1
+                                time: 1703744580273
+                                begin_timestamp: 1701849259000
+                                end_timestamp: 1701156274000
+                                begin: '2023-12-06T07:54:19Z'
+                                end: '2023-11-28T07:24:34Z'
+                                ueba_category_display: 外发行为
+                      - key: 5165ba82-3b00-4d5e-9c2f-86b3818e3538
+                        doc_count: 114
+                        info:
+                          hits:
+                            total:
+                              value: 114
+                              relation: eq
+                            max_score: 0.00023076034
+                            hits:
+                            - _index: .ds-qzhddr_ueba_s-2023.12.27-000001
+                              _type: _doc
+                              _id: v5MXr4wBNV4rKln5Ko7p
+                              _score: 0.00023076034
+                              _source:
+                                status: created
+                                category: channel
+                                device_id: 5165ba82-3b00-4d5e-9c2f-86b3818e3538
+                                device_code: PC-000008
+                                ip_address: 192.168.96.142
+                                console_user: lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT
+                                os_name: Windows
+                                os_friendly_name: Windows 10 CoreCountrySpecific (10.0.19045)
+                                staff_id: ''
+                                staff_name: ''
+                                staff_code: ''
+                                staff_email: ''
+                                staff_description: ''
+                                staff_tag_ids: []
+                                staff_tags: []
+                                dept_ids: []
+                                dept_names: []
+                                dept_paths: []
+                                event_id: '1697435857579264'
+                                agent_version: 3.1.0
+                                company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                                log_cnt: 17
+                                timestamp: '2023-12-28T06:23:00Z'
+                                '@timestamp': 1703744580218
+                                ueba_id: 332d91f9-c264-4192-a6cb-46fdedb3292e
+                                ueba_status: activated
+                                ueba_source: policy_channel_log
+                                ueba_category: outgoing
+                                ueba_description: ''
+                                ueba_expression_fields:
+                                  body:
+                                    aggs:
+                                      count:
+                                        cardinality:
+                                          field: device_id
+                                          precision_threshold: 40000
+                                    query:
+                                      bool:
+                                        must:
+                                        - term:
+                                            company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                    collapse:
+                                      field: device_id
+                                      inner_hits:
+                                        name: device_id
+                                        size: 100
+                                    track_total_hits: true
+                                  queries: []
+                                ueba_expression: SELF
+                                ueba_score: 60
+                                ueba_windows_s: 90000000
+                                ueba_threshold: 1
+                                time: 1703744580218
+                                begin_timestamp: 1697452023406
+                                end_timestamp: 1697435254755
+                                begin: '2023-10-16T10:27:03Z'
+                                end: '2023-10-16T05:47:34Z'
+                                ueba_category_display: 外发行为
+                      - key: 5c6a339d-b667-465c-ac35-b2ecdb26bc1f
+                        doc_count: 114
+                        info:
+                          hits:
+                            total:
+                              value: 114
+                              relation: eq
+                            max_score: 0.00023076034
+                            hits:
+                            - _index: .ds-qzhddr_ueba_s-2023.12.27-000001
+                              _type: _doc
+                              _id: x5MXr4wBNV4rKln5K44d
+                              _score: 0.00023076034
+                              _source:
+                                status: created
+                                category: channel
+                                device_id: 5c6a339d-b667-465c-ac35-b2ecdb26bc1f
+                                device_code: PC-000028
+                                ip_address: 192.168.96.94
+                                console_user: autotest@AUTOTEST
+                                os_name: Windows
+                                os_friendly_name: Windows 11 CoreCountrySpecific (10.0.22621)
+                                staff_id: ''
+                                staff_name: ''
+                                staff_code: ''
+                                staff_email: ''
+                                staff_description: ''
+                                staff_tag_ids: []
+                                staff_tags: []
+                                dept_ids: []
+                                dept_names: []
+                                dept_paths: []
+                                event_id: '1700795323741301'
+                                agent_version: 3.2.0
+                                company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                policy_id: bcddf48c-9b3f-4d00-99bf-9055c9169c83
+                                log_cnt: 2
+                                timestamp: '2023-12-28T06:23:00Z'
+                                '@timestamp': 1703744580268
+                                ueba_id: 332d91f9-c264-4192-a6cb-46fdedb3292e
+                                ueba_status: activated
+                                ueba_source: policy_channel_log
+                                ueba_category: outgoing
+                                ueba_description: ''
+                                ueba_expression_fields:
+                                  body:
+                                    aggs:
+                                      count:
+                                        cardinality:
+                                          field: device_id
+                                          precision_threshold: 40000
+                                    query:
+                                      bool:
+                                        must:
+                                        - term:
+                                            company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                    collapse:
+                                      field: device_id
+                                      inner_hits:
+                                        name: device_id
+                                        size: 100
+                                    track_total_hits: true
+                                  queries: []
+                                ueba_expression: SELF
+                                ueba_score: 60
+                                ueba_windows_s: 90000000
+                                ueba_threshold: 1
+                                time: 1703744580268
+                                begin_timestamp: 1700807420514
+                                end_timestamp: 1700795327013
+                                begin: '2023-11-24T06:30:20Z'
+                                end: '2023-11-24T03:08:47Z'
+                                ueba_category_display: 外发行为
+                      - key: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                        doc_count: 114
+                        info:
+                          hits:
+                            total:
+                              value: 114
+                              relation: eq
+                            max_score: 0.00023076034
+                            hits:
+                            - _index: .ds-qzhddr_ueba_s-2023.12.27-000001
+                              _type: _doc
+                              _id: w5MXr4wBNV4rKln5K44E
+                              _score: 0.00023076034
+                              _source:
+                                status: created
+                                category: channel
+                                device_id: 676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1
+                                device_code: PC-000005
+                                ip_address: 192.168.96.46
+                                console_user: jasonlee
+                                os_name: macOS
+                                os_friendly_name: macOS 13.5.1
+                                staff_id: 100faf26-d362-4ca2-befb-3ac8c22673eb
+                                staff_name: 何睿
+                                staff_code: e480e229f4fa3a21
+                                staff_email: ''
+                                staff_description: ''
+                                staff_tag_ids: []
+                                staff_tags: []
+                                dept_ids:
+                                - 6cbf127d-20f5-4322-93b5-e4a515ae356a
+                                dept_names:
+                                - test
+                                dept_paths:
+                                - default/test
+                                event_id: 51C58702-0213-462E-951B-1B96388C0325
+                                agent_version: 3.0.303
+                                company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                policy_id: 21f9c2cb-5c86-47ab-a514-72bcade6facc
+                                log_cnt: 8
+                                timestamp: '2023-12-28T06:23:00Z'
+                                '@timestamp': 1703744580245
+                                ueba_id: 332d91f9-c264-4192-a6cb-46fdedb3292e
+                                ueba_status: activated
+                                ueba_source: policy_channel_log
+                                ueba_category: outgoing
+                                ueba_description: ''
+                                ueba_expression_fields:
+                                  body:
+                                    aggs:
+                                      count:
+                                        cardinality:
+                                          field: device_id
+                                          precision_threshold: 40000
+                                    query:
+                                      bool:
+                                        must:
+                                        - term:
+                                            company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                    collapse:
+                                      field: device_id
+                                      inner_hits:
+                                        name: device_id
+                                        size: 100
+                                    track_total_hits: true
+                                  queries: []
+                                ueba_expression: SELF
+                                ueba_score: 60
+                                ueba_windows_s: 90000000
+                                ueba_threshold: 1
+                                time: 1703744580245
+                                begin_timestamp: 1700114112000
+                                end_timestamp: 1698988709000
+                                begin: '2023-11-16T05:55:12Z'
+                                end: '2023-11-03T05:18:29Z'
+                                ueba_category_display: 外发行为
+                      - key: 7899ac9b-b9f2-4f99-85b0-ad4a0b773a15
+                        doc_count: 114
+                        info:
+                          hits:
+                            total:
+                              value: 114
+                              relation: eq
+                            max_score: 0.00023076034
+                            hits:
+                            - _index: .ds-qzhddr_ueba_s-2023.12.27-000001
+                              _type: _doc
+                              _id: vZMXr4wBNV4rKln5Ko7f
+                              _score: 0.00023076034
+                              _source:
+                                status: created
+                                category: channel
+                                device_id: 7899ac9b-b9f2-4f99-85b0-ad4a0b773a15
+                                device_code: PC-000025
+                                ip_address: 192.168.96.210
+                                console_user: huyajie
+                                os_name: macOS
+                                os_friendly_name: macOS 12.1
+                                staff_id: 6d2f2c9a-7f13-4d00-b597-ebfc4bc4dbe9
+                                staff_name: hyj
+                                staff_code: 7e2360d8e2d5dff3
+                                staff_email: ''
+                                staff_description: ''
+                                staff_tag_ids: []
+                                staff_tags: []
+                                dept_ids:
+                                - 6cbf127d-20f5-4322-93b5-e4a515ae356a
+                                dept_names:
+                                - test
+                                dept_paths:
+                                - default/test
+                                event_id: A947F137-D9AE-4FCD-99D6-97CE9FAD60D0
+                                agent_version: 3.2.904
+                                company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                policy_id: bddaacb9-b804-41ec-ab8f-6db17be0b157
+                                log_cnt: 34
+                                timestamp: '2023-12-28T06:23:00Z'
+                                '@timestamp': 1703744580204
+                                ueba_id: 332d91f9-c264-4192-a6cb-46fdedb3292e
+                                ueba_status: activated
+                                ueba_source: policy_channel_log
+                                ueba_category: outgoing
+                                ueba_description: ''
+                                ueba_expression_fields:
+                                  body:
+                                    aggs:
+                                      count:
+                                        cardinality:
+                                          field: device_id
+                                          precision_threshold: 40000
+                                    query:
+                                      bool:
+                                        must:
+                                        - term:
+                                            company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                    collapse:
+                                      field: device_id
+                                      inner_hits:
+                                        name: device_id
+                                        size: 100
+                                    track_total_hits: true
+                                  queries: []
+                                ueba_expression: SELF
+                                ueba_score: 60
+                                ueba_windows_s: 90000000
+                                ueba_threshold: 1
+                                time: 1703744580204
+                                begin_timestamp: 1703232393000
+                                end_timestamp: 1700466270000
+                                begin: '2023-12-22T08:06:33Z'
+                                end: '2023-11-20T07:44:30Z'
+                                ueba_category_display: 外发行为
+                      - key: 79667ab6-33ff-4d9f-b53f-a69bef613971
+                        doc_count: 114
+                        info:
+                          hits:
+                            total:
+                              value: 114
+                              relation: eq
+                            max_score: 0.00023076034
+                            hits:
+                            - _index: .ds-qzhddr_ueba_s-2023.12.27-000001
+                              _type: _doc
+                              _id: yZMXr4wBNV4rKln5K44q
+                              _score: 0.00023076034
+                              _source:
+                                status: created
+                                category: channel
+                                device_id: 79667ab6-33ff-4d9f-b53f-a69bef613971
+                                device_code: PC-000032
+                                ip_address: 192.168.96.247
+                                console_user: soumao-ZhaoYangN4620Z\soumao
+                                os_name: Kylin
+                                os_friendly_name: Kylin V10 SP1
+                                staff_id: ''
+                                staff_name: ''
+                                staff_code: ''
+                                staff_email: ''
+                                staff_description: ''
+                                staff_tag_ids: []
+                                staff_tags: []
+                                dept_ids: []
+                                dept_names: []
+                                dept_paths: []
+                                event_id: 83de3789-5bbc-49c6-820a-4792b9879afa
+                                agent_version: 3.1.7
+                                company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                policy_id: ebe7578c-1ca0-4a01-8c72-f61bd6b67ec2
+                                log_cnt: 2
+                                timestamp: '2023-12-28T06:23:00Z'
+                                '@timestamp': 1703744580280
+                                ueba_id: 332d91f9-c264-4192-a6cb-46fdedb3292e
+                                ueba_status: activated
+                                ueba_source: policy_channel_log
+                                ueba_category: outgoing
+                                ueba_description: ''
+                                ueba_expression_fields:
+                                  body:
+                                    aggs:
+                                      count:
+                                        cardinality:
+                                          field: device_id
+                                          precision_threshold: 40000
+                                    query:
+                                      bool:
+                                        must:
+                                        - term:
+                                            company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                    collapse:
+                                      field: device_id
+                                      inner_hits:
+                                        name: device_id
+                                        size: 100
+                                    track_total_hits: true
+                                  queries: []
+                                ueba_expression: SELF
+                                ueba_score: 60
+                                ueba_windows_s: 90000000
+                                ueba_threshold: 1
+                                time: 1703744580280
+                                begin_timestamp: 1701225885000
+                                end_timestamp: 1701225775000
+                                begin: '2023-11-29T02:44:45Z'
+                                end: '2023-11-29T02:42:55Z'
+                                ueba_category_display: 外发行为
+                      - key: 7b45e606-c7b4-40a2-a08e-4aa9fb0ddcf1
+                        doc_count: 114
+                        info:
+                          hits:
+                            total:
+                              value: 114
+                              relation: eq
+                            max_score: 0.00023076034
+                            hits:
+                            - _index: .ds-qzhddr_ueba_s-2023.12.27-000001
+                              _type: _doc
+                              _id: uJMXr4wBNV4rKln5Ko7C
+                              _score: 0.00023076034
+                              _source:
+                                status: created
+                                category: channel
+                                device_id: 7b45e606-c7b4-40a2-a08e-4aa9fb0ddcf1
+                                device_code: PC-000006
+                                ip_address: 192.168.96.148
+                                console_user: wenghuangge
+                                os_name: macOS
+                                os_friendly_name: macOS 12.6.5
+                                staff_id: ''
+                                staff_name: ''
+                                staff_code: ''
+                                staff_email: ''
+                                staff_description: ''
+                                staff_tag_ids: []
+                                staff_tags: []
+                                dept_ids: []
+                                dept_names: []
+                                dept_paths: []
+                                event_id: 7c708b6c-8e94-4fa3-b71a-9025c26e2a20
+                                agent_version: 3.0.228
+                                company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                policy_id: afcf096e-0d7a-4ebf-98f8-6c4aab55bb3f
+                                log_cnt: 27
+                                timestamp: '2023-12-28T06:23:00Z'
+                                '@timestamp': 1703744580177
+                                ueba_id: 332d91f9-c264-4192-a6cb-46fdedb3292e
+                                ueba_status: activated
+                                ueba_source: policy_channel_log
+                                ueba_category: outgoing
+                                ueba_description: ''
+                                ueba_expression_fields:
+                                  body:
+                                    aggs:
+                                      count:
+                                        cardinality:
+                                          field: device_id
+                                          precision_threshold: 40000
+                                    query:
+                                      bool:
+                                        must:
+                                        - term:
+                                            company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                                    collapse:
+                                      field: device_id
+                                      inner_hits:
+                                        name: device_id
+                                        size: 100
+                                    track_total_hits: true
+                                  queries: []
+                                ueba_expression: SELF
+                                ueba_score: 60
+                                ueba_windows_s: 90000000
+                                ueba_threshold: 1
+                                time: 1703744580177
+                                begin_timestamp: 1701943073000
+                                end_timestamp: 1697766632000
+                                begin: '2023-12-07T09:57:53Z'
+                                end: '2023-10-20T01:50:32Z'
+                                ueba_category_display: 外发行为
+      security: []

@@ -1,0 +1,134 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account whitelist/browserplugin/template API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: whitelist/browserplugin/template
+  description: 白名单管理/浏览器插件/模板
+paths:
+  /whitelist/browserplugin/template:
+    post:
+      summary: 管控白名单模版下载
+      deprecated: false
+      description: ''
+      tags:
+      - whitelist/browserplugin/template
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      etag:
+                        type: string
+                      relative_path:
+                        type: string
+                      last_modified:
+                        type: string
+                      size:
+                        type: integer
+                      content_type:
+                        type: string
+                      filename:
+                        type: string
+                      url:
+                        type: string
+                      file_system:
+                        type: string
+                      url_path:
+                        type: string
+                    required:
+                    - etag
+                    - relative_path
+                    - last_modified
+                    - size
+                    - content_type
+                    - filename
+                    - url
+                    - file_system
+                    - url_path
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  etag: 6b9e4f72af0b9e2f58afc79aced3a48d
+                  relative_path: eeff7c64-5070-4582-8b93-fbcc57db7771/qzh/browser_plugin_whitelist/3.5.0/浏览器插件白名单.xlsx
+                  last_modified: '2025-03-21T02:22:11Z'
+                  size: 5510
+                  content_type: application/octet-stream
+                  filename: 浏览器插件白名单.xlsx
+                  url: https://192.168.89.26:8443/oss-qzh/eeff7c64-5070-4582-8b93-fbcc57db7771/qzh/browser_plugin_whitelist/3.5.0/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E7%99%BD%E5%90%8D%E5%8D%95.xlsx?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20250321%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250321T022211Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27%25E6%25B5%258F%25E8%25A7%2588%25E5%2599%25A8%25E6%258F%2592%25E4%25BB%25B6%25E7%2599%25BD%25E5%2590%258D%25E5%258D%2595.xlsx&X-Amz-Signature=dcf44e64738c2a58703fc852bd1cb4fab7f9e02888504313c689513ce8425f3f
+                  file_system: local
+                  url_path: /oss-qzh/eeff7c64-5070-4582-8b93-fbcc57db7771/qzh/browser_plugin_whitelist/3.5.0/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E7%99%BD%E5%90%8D%E5%8D%95.xlsx?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20250321%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250321T022211Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27%25E6%25B5%258F%25E8%25A7%2588%25E5%2599%25A8%25E6%258F%2592%25E4%25BB%25B6%25E7%2599%25BD%25E5%2590%258D%25E5%258D%2595.xlsx&X-Amz-Signature=dcf44e64738c2a58703fc852bd1cb4fab7f9e02888504313c689513ce8425f3f
+      security: []

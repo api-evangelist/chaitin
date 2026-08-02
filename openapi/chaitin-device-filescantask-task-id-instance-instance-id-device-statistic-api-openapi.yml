@@ -1,0 +1,139 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account device/filescantask/{task_id}/instance/{instance_id}/device/statistic API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: device/filescantask/{task_id}/instance/{instance_id}/device/statistic
+paths:
+  /device/filescantask/{task_id}/instance/{instance_id}/device/statistic/:
+    post:
+      summary: 统计
+      deprecated: false
+      description: ''
+      tags:
+      - device/filescantask/{task_id}/instance/{instance_id}/device/statistic
+      parameters:
+      - name: task_id
+        in: path
+        description: ''
+        required: true
+        example: f397ad6d-874e-458a-985d-06c781237bfc
+        schema:
+          type: string
+      - name: instance_id
+        in: path
+        description: ''
+        required: true
+        example: ec40ccec-a1d1-41a4-80f8-619d25e809aa
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      total:
+                        type: integer
+                      cost_time:
+                        type: string
+                      data:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            total:
+                              type: integer
+                            display_status:
+                              type: string
+                          required:
+                          - total
+                          - display_status
+                    required:
+                    - total
+                    - cost_time
+                    - data
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  total: 1
+                  cost_time: ''
+                  data:
+                  - total: 0
+                    display_status: 已完成
+                  - total: 0
+                    display_status: 未完成
+                  - total: 1
+                    display_status: 失败
+      security: []

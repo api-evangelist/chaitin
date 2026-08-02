@@ -1,0 +1,335 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account rule API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: rule
+paths:
+  /open/policy:
+    get:
+      produces:
+      - application/json
+      tags:
+      - rule
+      summary: list customized rule
+      parameters:
+      - maximum: 3
+        minimum: -1
+        type: integer
+        name: action
+        in: query
+        x-cli-description: 动作类型：0-放行 1-阻断 2-挑战 3-认证防护 4-混淆 5-等待室
+      - minimum: 1
+        type: integer
+        name: page
+        in: query
+        x-cli-description: 页码
+      - maximum: 100
+        minimum: 1
+        type: integer
+        name: page_size
+        in: query
+        x-cli-description: 每页数量
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/policy.ListPolicyRes'
+      x-cli-summary: 获取自定义规则列表
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - rule
+      summary: create customized rule
+      parameters:
+      - description: request params
+        name: request
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/policy.PostPolicyReq'
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  type: integer
+      x-cli-summary: 创建自定义规则
+    put:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - rule
+      summary: update customized rule
+      parameters:
+      - description: request params
+        name: request
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/policy.PutPolicyReq'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/response.JSONBody'
+      x-cli-summary: 更新自定义规则
+    delete:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - rule
+      summary: delete customized rule
+      parameters:
+      - description: request params
+        name: request
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/policy.DeletePolicyReq'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/response.JSONBody'
+      x-cli-summary: 删除自定义规则
+  /open/policy/detail:
+    get:
+      produces:
+      - application/json
+      tags:
+      - rule
+      summary: get customized rule detail
+      parameters:
+      - type: integer
+        name: id
+        in: query
+        x-cli-description: 资源 ID
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/policy.GetPolicyRes'
+      x-cli-summary: 获取自定义规则详情
+  /open/policy/switch:
+    put:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - rule
+      summary: enable/disable customized rule
+      parameters:
+      - description: request params
+        name: request
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/policy.PutPolicySwitchReq'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/response.JSONBody'
+      x-cli-summary: 启用/禁用自定义规则
+definitions:
+  response.JSONBody:
+    type: object
+    properties:
+      data: {}
+      err:
+        type: string
+      msg:
+        type: string
+  model.PolicyReview:
+    type: integer
+    enum:
+    - 0
+    - 1
+    x-enum-varnames:
+    - PolicyReviewRequired
+    - PolicyReviewNone
+  model.RulePattern:
+    type: object
+    properties:
+      k:
+        type: string
+      op:
+        type: string
+      sub_k:
+        type: string
+      v:
+        type: array
+        items:
+          type: string
+  model.PolicyAction:
+    type: integer
+    enum:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 999
+    - 999
+    x-enum-varnames:
+    - PolicyActionAllow
+    - PolicyActionDeny
+    - PolicyActionChallenge
+    - PolicyActionAuthDefense
+    - PolicyActionChaos
+    - PolicyActionWaitingRoom
+    - PolicyActionMix
+    - PolicyActionMax
+  policy.ListPolicyRes:
+    type: object
+    properties:
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/policy.GetPolicyRes'
+      total:
+        type: integer
+  policy.PostPolicyReq:
+    type: object
+    properties:
+      action:
+        $ref: '#/definitions/model.PolicyAction'
+      expire:
+        type: integer
+      is_enabled:
+        type: boolean
+      level:
+        type: integer
+      log:
+        type: boolean
+      name:
+        type: string
+      pattern:
+        type: array
+        items:
+          type: array
+          items:
+            $ref: '#/definitions/model.RulePattern'
+  policy.PutPolicySwitchReq:
+    type: object
+    properties:
+      id:
+        type: integer
+      is_enabled:
+        type: boolean
+  policy.GetPolicyRes:
+    type: object
+    properties:
+      action:
+        description: 0 -> allow, 1 -> deny
+        allOf:
+        - $ref: '#/definitions/model.PolicyAction'
+      auth_callback:
+        type: string
+      auth_rule:
+        type: integer
+      auth_source_ids:
+        type: array
+        items:
+          type: integer
+      black_rule:
+        type: integer
+      builtin:
+        type: boolean
+      captcha_rule:
+        type: integer
+      cloud_id:
+        type: integer
+      cloud_total:
+        type: integer
+      compatible:
+        type: integer
+      created_at:
+        type: string
+      expire:
+        type: integer
+      id:
+        type: integer
+      is_enabled:
+        type: boolean
+      level:
+        type: integer
+      log:
+        type: boolean
+      name:
+        type: string
+      negate:
+        type: boolean
+      pass_count:
+        type: integer
+      pattern:
+        type: array
+        items:
+          type: array
+          items:
+            $ref: '#/definitions/model.RulePattern'
+      replay:
+        type: boolean
+      req_count:
+        type: integer
+      review:
+        $ref: '#/definitions/model.PolicyReview'
+      tfa_enabled:
+        type: boolean
+      updated_at:
+        type: string
+      white_rule:
+        type: integer
+  policy.DeletePolicyReq:
+    type: object
+    properties:
+      id:
+        type: integer
+  policy.PutPolicyReq:
+    type: object
+    properties:
+      action:
+        $ref: '#/definitions/model.PolicyAction'
+      expire:
+        type: integer
+      id:
+        type: integer
+      is_enabled:
+        type: boolean
+      level:
+        type: integer
+      log:
+        type: boolean
+      name:
+        type: string
+      pattern:
+        type: array
+        items:
+          type: array
+          items:
+            $ref: '#/definitions/model.RulePattern'

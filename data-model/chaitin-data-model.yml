@@ -1,0 +1,44 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/chaitin-safeline-openapi-original.json
+notes: >-
+  Entity graph derived from the SafeLine WAF Open API (/api/open/*) resource set.
+  Self-hosted appliance; identifiers are integer ids, not prefixed strings.
+entities:
+- name: site
+  path: /open/site
+  description: A protected web service (upstream + listen + certificate binding).
+  relationships:
+  - type: belongs_to
+    target: ipgroup
+    via: group_id
+- name: ipgroup
+  path: /open/ipgroup
+  description: A named set of IPs used by allow/deny custom rules.
+  relationships:
+  - type: has_many
+    target: ip
+    via: append
+- name: policy
+  path: /open/policy
+  description: A customized (allow/deny) rule, toggleable via /open/policy/switch.
+  relationships:
+  - type: references
+    target: ipgroup
+    via: ipgroup
+- name: record
+  path: /open/records
+  description: An attack log / detection record produced by the WAF.
+  relationships:
+  - type: belongs_to
+    target: site
+    via: site
+- name: skynet_rule
+  path: /open/skynet/rule
+  description: Enhanced (Skynet) protection rule with a global on/off switch.
+- name: system
+  path: /open/system
+  description: System info, management certificate, and license (authorize).
+- name: global_mode
+  path: /open/global/mode
+  description: Global semantic-analysis detection mode.

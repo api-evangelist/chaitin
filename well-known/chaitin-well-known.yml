@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: searched
+host: https://chaitin.cn
+notes: >-
+  Probed the /.well-known/ discovery surface on the corporate host and the
+  SafeLine docs host. No documents returned 200 (root redirects 301, docs 404).
+  Recorded for auditability; no WellKnown/SecurityTxt pointer is emitted.
+documents:
+- path: /.well-known/security.txt
+  host: https://chaitin.cn
+  status: 301
+- path: /.well-known/security.txt
+  host: https://www.chaitin.cn
+  status: 404
+- path: /.well-known/security.txt
+  host: https://docs.waf.chaitin.com
+  status: 404
+- path: /.well-known/openid-configuration
+  host: https://chaitin.cn
+  status: 301
+- path: /.well-known/api-catalog
+  host: https://chaitin.cn
+  status: 301
+- path: /.well-known/ai-plugin.json
+  host: https://chaitin.cn
+  status: 301

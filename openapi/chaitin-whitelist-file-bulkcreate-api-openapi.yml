@@ -1,0 +1,234 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account whitelist/file/bulkcreate API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: whitelist/file/bulkcreate
+  description: 白名单管理/文件/批量创建
+paths:
+  /whitelist/file/bulkcreate:
+    post:
+      summary: 文件白名单批量创建
+      deprecated: false
+      description: ''
+      tags:
+      - whitelist/file/bulkcreate
+      parameters:
+      - name: page
+        in: query
+        description: ''
+        required: true
+        example: '1'
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: ''
+        required: true
+        example: '10'
+        schema:
+          type: string
+      - name: search
+        in: query
+        description: ''
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      file_key:
+                        type: string
+                      description:
+                        type: string
+                      source:
+                        type: string
+                    required:
+                    - file_key
+                    - description
+                    - source
+                quarantine_list:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      device_id:
+                        type: string
+                      digest:
+                        type: string
+                    required:
+                    - device_id
+                    - digest
+                ids:
+                  type: array
+                  items:
+                    type: string
+              required:
+              - data
+              - quarantine_list
+              - ids
+            example:
+              data:
+              - file_key: strziasccdng
+                description: string
+                source: av_scan
+              - file_key: stsrdsazzing
+                description: string
+                source: av_scan
+              quarantine_list:
+              - device_id: da9ea823-3b0b-4d9f-a745-2aad58e0af89
+                digest: d1
+              - device_id: da9ea823-3b0b-4d9f-a745-2aad58e0af89
+                digest: d2
+              ids:
+              - GuNuWpEB4rYwLyMOMZrP
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        company_id:
+                          type: string
+                        uid:
+                          type: string
+                        create_time:
+                          type: string
+                        create_by_id:
+                          type: string
+                        update_by_id:
+                          type: string
+                        description:
+                          type: string
+                        update_time:
+                          type: string
+                        source:
+                          type: string
+                        id:
+                          type: integer
+                        file_key:
+                          type: string
+                      required:
+                      - company_id
+                      - uid
+                      - create_time
+                      - create_by_id
+                      - update_by_id
+                      - description
+                      - update_time
+                      - source
+                      - id
+                      - file_key
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                - company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  uid: 8c1c5c06-80e8-4d3a-9d80-4b823a666a9f
+                  create_time: '2024-07-07T08:54:55.208222Z'
+                  create_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  update_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  description: string
+                  update_time: '2024-07-07T08:54:55.208283Z'
+                  source: av_scan
+                  id: 2
+                  file_key: string1
+                - company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  uid: a0b2fd85-6402-4be5-92c5-f245c7e10362
+                  create_time: '2024-07-07T08:54:55.234234Z'
+                  create_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  update_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  description: string
+                  update_time: '2024-07-07T08:54:55.234262Z'
+                  source: av_scan
+                  id: 3
+                  file_key: string2
+      security: []

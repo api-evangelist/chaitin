@@ -1,0 +1,414 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account risk API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: risk
+paths:
+  /api/EnableDisableRiskStrategyAPI:
+    put:
+      operationId: EnableDisableRiskStrategyAPI_put
+      summary: PUT /api/EnableDisableRiskStrategyAPI
+      tags:
+      - risk
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/EventWhiteListAPI:
+    post:
+      operationId: EventWhiteListAPI_post
+      summary: POST /api/EventWhiteListAPI
+      tags:
+      - risk
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                effective_scope:
+                  type: string
+                effective_uuids:
+                  type: string
+                strategy_id:
+                  type: integer
+                remark:
+                  type: string
+              required:
+              - effective_scope
+              - strategy_id
+    put:
+      operationId: EventWhiteListAPI_put
+      summary: PUT /api/EventWhiteListAPI
+      tags:
+      - risk
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                effective_scope:
+                  type: string
+                effective_uuids:
+                  type: string
+                strategy_id:
+                  type: integer
+                remark:
+                  type: string
+              required:
+              - effective_scope
+              - strategy_id
+    delete:
+      operationId: EventWhiteListAPI_delete
+      summary: DELETE /api/EventWhiteListAPI
+      tags:
+      - risk
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/RiskEventAPI:
+    get:
+      operationId: RiskEventAPI_get
+      summary: GET /api/RiskEventAPI
+      tags:
+      - risk
+      parameters:
+      - name: event_aggr_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: strategy_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: strategy_type
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: strategy_version
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+  /api/RiskEventGroupAPI:
+    get:
+      operationId: RiskEventGroupAPI_get
+      summary: GET /api/RiskEventGroupAPI
+      tags:
+      - risk
+      parameters:
+      - name: id
+        in: query
+        required: true
+        description: ID
+        schema:
+          type: integer
+          description: ID
+      x-cli-body-fallback: false
+    post:
+      operationId: RiskEventGroupAPI_post
+      summary: POST /api/RiskEventGroupAPI
+      tags:
+      - risk
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  group_aggr_id:
+                    type: string
+                  vuln_aggr_id:
+                    type: string
+                  app_id:
+                    type: integer
+                  site_id:
+                    type: string
+                  api_id:
+                    type: string
+                  strategy_id:
+                    type: integer
+                  strategy_version:
+                    type: integer
+                  type:
+                    type: integer
+                  risk_level:
+                    type: integer
+                  risk_event_status:
+                    type: integer
+                  create_time:
+                    type: integer
+                  update_time:
+                    type: integer
+                required:
+                - group_aggr_id
+                - vuln_aggr_id
+                - strategy_id
+                - strategy_version
+                - type
+                - risk_level
+                - risk_event_status
+                - create_time
+                - update_time
+    put:
+      operationId: RiskEventGroupAPI_put
+      summary: PUT /api/RiskEventGroupAPI
+      tags:
+      - risk
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+                status:
+                  type: string
+              required:
+              - filters
+              - status
+  /api/RiskEventGroupStatistics:
+    get:
+      operationId: RiskEventGroupStatistics_get
+      summary: GET /api/RiskEventGroupStatistics
+      tags:
+      - risk
+      parameters: []
+      x-cli-body-fallback: true
+  /api/RiskEventStatistics:
+    get:
+      operationId: RiskEventStatistics_get
+      summary: GET /api/RiskEventStatistics
+      tags:
+      - risk
+      parameters:
+      - name: group_aggr_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/RiskFunctionStatusAPI:
+    get:
+      operationId: RiskFunctionStatusAPI_get
+      summary: GET /api/RiskFunctionStatusAPI
+      tags:
+      - risk
+      parameters: []
+      x-cli-body-fallback: true
+  /api/RiskModelConfigAPI:
+    get:
+      operationId: RiskModelConfigAPI_get
+      summary: GET /api/RiskModelConfigAPI
+      tags:
+      - risk
+      parameters: []
+      x-cli-body-fallback: true
+    put:
+      operationId: RiskModelConfigAPI_put
+      summary: PUT /api/RiskModelConfigAPI
+      tags:
+      - risk
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                risk_model_is_enabled:
+                  type: boolean
+                  description: 风险事件判断功能
+                baseline_is_enabled:
+                  type: boolean
+                  description: 基线风险事件判断功能
+              required:
+              - risk_model_is_enabled
+              - baseline_is_enabled
+  /api/RiskStrategyAPI:
+    post:
+      operationId: RiskStrategyAPI_post
+      summary: POST /api/RiskStrategyAPI
+      tags:
+      - risk
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                effective_scope:
+                  type: string
+                uuids:
+                  type: string
+                name:
+                  type: string
+                comment:
+                  type: string
+                is_enabled:
+                  type: boolean
+                type:
+                  type: string
+                risk_level:
+                  type: string
+                pattern:
+                  type: object
+                  description: 模型字段
+                risk_event_status:
+                  type: string
+                log_storage:
+                  type: boolean
+              required:
+              - effective_scope
+              - name
+              - type
+              - pattern
+    put:
+      operationId: RiskStrategyAPI_put
+      summary: PUT /api/RiskStrategyAPI
+      tags:
+      - risk
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                effective_scope:
+                  type: string
+                uuids:
+                  type: string
+                name:
+                  type: string
+                comment:
+                  type: string
+                is_enabled:
+                  type: boolean
+                type:
+                  type: string
+                risk_level:
+                  type: string
+                pattern:
+                  type: object
+                  description: 模型字段
+                risk_event_status:
+                  type: string
+                log_storage:
+                  type: boolean
+              required:
+              - effective_scope
+              - name
+              - pattern
+              - type
+  /api/RiskStrategyAuxiliaryInfoAPI:
+    get:
+      operationId: RiskStrategyAuxiliaryInfoAPI_get
+      summary: GET /api/RiskStrategyAuxiliaryInfoAPI
+      tags:
+      - risk
+      parameters:
+      - name: asset_uuids
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: effective_scope
+        in: query
+        required: true
+        description: 生效范围
+        schema:
+          type: string
+          description: 生效范围
+      - name: type
+        in: query
+        required: true
+        description: 风险类型
+        schema:
+          type: string
+          description: 风险类型
+      x-cli-body-fallback: false
+  /api/WeakerCipherAPI:
+    post:
+      operationId: WeakerCipherAPI_post
+      summary: POST /api/WeakerCipherAPI
+      tags:
+      - risk
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                passwords:
+                  type: string
+              required:
+              - passwords
+    delete:
+      operationId: WeakerCipherAPI_delete
+      summary: DELETE /api/WeakerCipherAPI
+      tags:
+      - risk
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表

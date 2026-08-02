@@ -1,0 +1,1006 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account web框架 API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: web框架
+paths:
+  /web_framework/count:
+    get:
+      parameters:
+      - description: 排序字段
+        in: query
+        name: order_by
+        schema:
+          description: 排序字段
+          enum:
+          - discovery_time
+          format: string
+          properties: {}
+          type: string
+      - description: 框架名
+        in: query
+        name: name
+        schema:
+          description: 框架名
+          format: '[]string'
+          items:
+            format: string
+            properties: {}
+            type: string
+          properties: {}
+          type: array
+      - description: 容器名称（完全匹配）
+        in: query
+        name: container_name
+        schema:
+          description: 容器名称（完全匹配）
+          format: '[]string'
+          items:
+            format: string
+            properties: {}
+            type: string
+          properties: {}
+          type: array
+      - description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC 19: java'
+        in: query
+        name: service_type
+        schema:
+          description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC 19: java'
+          format: '[]uint'
+          items:
+            enum:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 11
+            - 12
+            - 13
+            - 14
+            - 15
+            - 16
+            - 17
+            - 18
+            - 19
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 容器资产id
+        in: query
+        name: c_id
+        schema:
+          description: 容器资产id
+          format: uint64
+          properties: {}
+          type: integer
+      - description: 容器id
+        in: query
+        name: container_id
+        schema:
+          description: 容器id
+          format: string
+          properties: {}
+          type: string
+      - description: web框架资产id集合
+        in: query
+        name: ids
+        schema:
+          description: web框架资产id集合
+          format: '[]uint64'
+          items:
+            format: uint64
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 排序:1-增;2-减
+        in: query
+        name: order
+        schema:
+          description: 排序:1-增;2-减
+          enum:
+          - 1
+          - 2
+          format: uint8
+          properties: {}
+          type: integer
+      - description: 数据启始位置
+        example: '1'
+        in: query
+        name: offset
+        schema:
+          description: 数据启始位置
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      - description: 数据页大小
+        example: '1'
+        in: query
+        name: page_size
+        schema:
+          description: 数据页大小
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkCountRes'
+          description: ''
+      summary: web框架-获取web框架总数
+      tags:
+      - web框架
+  /web_framework/info:
+    get:
+      parameters:
+      - description: web框架资产id
+        in: query
+        name: id
+        required: true
+        schema:
+          description: web框架资产id
+          format: uint64
+          properties: {}
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkInfoRes'
+          description: ''
+      summary: web框架-获取web框架详情
+      tags:
+      - web框架
+  /web_framework/list:
+    get:
+      parameters:
+      - description: 排序字段
+        in: query
+        name: order_by
+        schema:
+          description: 排序字段
+          enum:
+          - discovery_time
+          format: string
+          properties: {}
+          type: string
+      - description: 框架名
+        in: query
+        name: name
+        schema:
+          description: 框架名
+          format: '[]string'
+          items:
+            format: string
+            properties: {}
+            type: string
+          properties: {}
+          type: array
+      - description: 容器名称（完全匹配）
+        in: query
+        name: container_name
+        schema:
+          description: 容器名称（完全匹配）
+          format: '[]string'
+          items:
+            format: string
+            properties: {}
+            type: string
+          properties: {}
+          type: array
+      - description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC 19: java'
+        in: query
+        name: service_type
+        schema:
+          description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC 19: java'
+          format: '[]uint'
+          items:
+            enum:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 11
+            - 12
+            - 13
+            - 14
+            - 15
+            - 16
+            - 17
+            - 18
+            - 19
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 容器资产id
+        in: query
+        name: c_id
+        schema:
+          description: 容器资产id
+          format: uint64
+          properties: {}
+          type: integer
+      - description: 容器id
+        in: query
+        name: container_id
+        schema:
+          description: 容器id
+          format: string
+          properties: {}
+          type: string
+      - description: web框架资产id集合
+        in: query
+        name: ids
+        schema:
+          description: web框架资产id集合
+          format: '[]uint64'
+          items:
+            format: uint64
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 排序:1-增;2-减
+        in: query
+        name: order
+        schema:
+          description: 排序:1-增;2-减
+          enum:
+          - 1
+          - 2
+          format: uint8
+          properties: {}
+          type: integer
+      - description: 数据启始位置
+        example: '1'
+        in: query
+        name: offset
+        schema:
+          description: 数据启始位置
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      - description: 数据页大小
+        example: '1'
+        in: query
+        name: page_size
+        schema:
+          description: 数据页大小
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkListRes'
+          description: ''
+      summary: web框架-获取web框架列表
+      tags:
+      - web框架
+  /web_framework/list_export:
+    get:
+      parameters:
+      - description: 排序字段
+        in: query
+        name: order_by
+        schema:
+          description: 排序字段
+          enum:
+          - discovery_time
+          format: string
+          properties: {}
+          type: string
+      - description: 框架名
+        in: query
+        name: name
+        schema:
+          description: 框架名
+          format: '[]string'
+          items:
+            format: string
+            properties: {}
+            type: string
+          properties: {}
+          type: array
+      - description: 容器名称（完全匹配）
+        in: query
+        name: container_name
+        schema:
+          description: 容器名称（完全匹配）
+          format: '[]string'
+          items:
+            format: string
+            properties: {}
+            type: string
+          properties: {}
+          type: array
+      - description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC 19: java'
+        in: query
+        name: service_type
+        schema:
+          description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC 19: java'
+          format: '[]uint'
+          items:
+            enum:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 11
+            - 12
+            - 13
+            - 14
+            - 15
+            - 16
+            - 17
+            - 18
+            - 19
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 容器资产id
+        in: query
+        name: c_id
+        schema:
+          description: 容器资产id
+          format: uint64
+          properties: {}
+          type: integer
+      - description: 容器id
+        in: query
+        name: container_id
+        schema:
+          description: 容器id
+          format: string
+          properties: {}
+          type: string
+      - description: web框架资产id集合
+        in: query
+        name: ids
+        schema:
+          description: web框架资产id集合
+          format: '[]uint64'
+          items:
+            format: uint64
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 排序:1-增;2-减
+        in: query
+        name: order
+        schema:
+          description: 排序:1-增;2-减
+          enum:
+          - 1
+          - 2
+          format: uint8
+          properties: {}
+          type: integer
+      - description: 数据启始位置
+        example: '1'
+        in: query
+        name: offset
+        schema:
+          description: 数据启始位置
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      - description: 数据页大小
+        example: '1'
+        in: query
+        name: page_size
+        schema:
+          description: 数据页大小
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkListExportRes'
+          description: ''
+      summary: web框架-导出web框架列表
+      tags:
+      - web框架
+  /website/info:
+    get:
+      parameters:
+      - description: web站点资产id
+        in: query
+        name: id
+        required: true
+        schema:
+          description: web站点资产id
+          format: uint64
+          properties: {}
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteInfoRes'
+          description: ''
+      summary: web站点-获取web站点详情
+      tags:
+      - web框架
+  /website/list:
+    get:
+      parameters:
+      - description: 容器id
+        in: query
+        name: container_id
+        schema:
+          description: 容器id
+          format: string
+          properties: {}
+          type: string
+      - description: 容器名称
+        in: query
+        name: container_name
+        schema:
+          description: 容器名称
+          format: string
+          properties: {}
+          type: string
+      - description: 排序字段
+        in: query
+        name: order_by
+        schema:
+          description: 排序字段
+          enum:
+          - discovery_time
+          format: string
+          properties: {}
+          type: string
+      - description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC'
+        in: query
+        name: service_type
+        schema:
+          description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC'
+          format: '[]uint'
+          items:
+            enum:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 11
+            - 12
+            - 13
+            - 14
+            - 15
+            - 16
+            - 17
+            - 18
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 排序:1-增;2-减
+        in: query
+        name: order
+        schema:
+          description: 排序:1-增;2-减
+          enum:
+          - 1
+          - 2
+          format: uint8
+          properties: {}
+          type: integer
+      - description: 数据启始位置
+        example: '1'
+        in: query
+        name: offset
+        schema:
+          description: 数据启始位置
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      - description: 数据页大小
+        example: '1'
+        in: query
+        name: page_size
+        schema:
+          description: 数据页大小
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListRes'
+          description: ''
+      summary: web站点-获取web站点列表
+      tags:
+      - web框架
+  /website/list_count:
+    get:
+      parameters:
+      - description: 容器id
+        in: query
+        name: container_id
+        schema:
+          description: 容器id
+          format: string
+          properties: {}
+          type: string
+      - description: 容器名称
+        in: query
+        name: container_name
+        schema:
+          description: 容器名称
+          format: string
+          properties: {}
+          type: string
+      - description: 排序字段
+        in: query
+        name: order_by
+        schema:
+          description: 排序字段
+          enum:
+          - discovery_time
+          format: string
+          properties: {}
+          type: string
+      - description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC'
+        in: query
+        name: service_type
+        schema:
+          description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC'
+          format: '[]uint'
+          items:
+            enum:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 11
+            - 12
+            - 13
+            - 14
+            - 15
+            - 16
+            - 17
+            - 18
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 排序:1-增;2-减
+        in: query
+        name: order
+        schema:
+          description: 排序:1-增;2-减
+          enum:
+          - 1
+          - 2
+          format: uint8
+          properties: {}
+          type: integer
+      - description: 数据启始位置
+        example: '1'
+        in: query
+        name: offset
+        schema:
+          description: 数据启始位置
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      - description: 数据页大小
+        example: '1'
+        in: query
+        name: page_size
+        schema:
+          description: 数据页大小
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListCountRes'
+          description: ''
+      summary: web站点-获取web站点总数
+      tags:
+      - web框架
+  /website/list_export:
+    get:
+      parameters:
+      - description: 点选导出的Website ID列表
+        in: query
+        name: ids
+        schema:
+          description: 点选导出的Website ID列表
+          format: '[]uint64'
+          items:
+            format: uint64
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      - description: 容器id
+        in: query
+        name: container_id
+        schema:
+          description: 容器id
+          format: string
+          properties: {}
+          type: string
+      - description: 容器名称
+        in: query
+        name: container_name
+        schema:
+          description: 容器名称
+          format: string
+          properties: {}
+          type: string
+      - description: 服务类型
+        in: query
+        name: service_type
+        schema:
+          description: 服务类型
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListExportRes'
+          description: ''
+      summary: web站点-导出web站点列表
+      tags:
+      - web框架
+components:
+  schemas:
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListCountRes:
+      properties:
+        total:
+          format: int
+          properties: {}
+          type: integer
+        last_task_success_time:
+          description: 发现时间
+          format: uint
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteBaseInfo:
+      properties:
+        dir:
+          description: 路径
+          format: '[]string'
+          items:
+            format: string
+            properties: {}
+            type: string
+          properties: {}
+          type: array
+        domain:
+          description: 域名
+          format: '[]string'
+          items:
+            format: string
+            properties: {}
+            type: string
+          properties: {}
+          type: array
+        ports:
+          description: 端口信息
+          format: '[]model.WebsitePortInfo'
+          items:
+            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePortInfo'
+          properties: {}
+          type: array
+        discovery_time:
+          description: 发现时间
+          format: uint64
+          properties: {}
+          type: integer
+        service_type:
+          description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC'
+          format: uint
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListExportRes:
+      properties: {}
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkListRes:
+      properties:
+        data:
+          description: web框架列表
+          format: '[]model.WebFrameworkListOne'
+          items:
+            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkListOne'
+          properties: {}
+          type: array
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteContainerInfo:
+      properties:
+        container_name:
+          description: 容器名称
+          format: string
+          properties: {}
+          type: string
+        container_id:
+          description: 容器id
+          format: string
+          properties: {}
+          type: string
+        cid:
+          description: 主键id
+          format: uint64
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkListExportRes:
+      properties: {}
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteListOutItem:
+      properties:
+        container_name:
+          description: 容器名称
+          format: string
+          properties: {}
+          type: string
+        container_id:
+          description: 容器id
+          format: string
+          properties: {}
+          type: string
+        domain:
+          description: 域名
+          format: '[]string'
+          items:
+            format: string
+            properties: {}
+            type: string
+          properties: {}
+          type: array
+        id:
+          description: 主键id
+          format: uint64
+          properties: {}
+          type: integer
+        service_type:
+          description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC'
+          format: uint
+          properties: {}
+          type: integer
+        discovery_time:
+          description: 发现时间，秒
+          format: uint
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteInfoOut:
+      properties:
+        pod_info:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePodInfo'
+        container_info:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteContainerInfo'
+        base_info:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteBaseInfo'
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePortInfo:
+      properties:
+        protocol:
+          description: 协议
+          format: string
+          properties: {}
+          type: string
+        ip:
+          description: 绑定ip
+          format: string
+          properties: {}
+          type: string
+        host_port:
+          description: 主机端口
+          format: uint64
+          properties: {}
+          type: integer
+        container_port:
+          description: 容器端口
+          format: uint64
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePodInfo:
+      properties:
+        namespace:
+          description: 命名空间
+          format: string
+          properties: {}
+          type: string
+        pod_name:
+          description: pod名称
+          format: string
+          properties: {}
+          type: string
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListRes:
+      properties:
+        list:
+          format: '[]model.WebsiteListOutItem'
+          items:
+            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteListOutItem'
+          properties: {}
+          type: array
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkInfo:
+      properties:
+        name:
+          description: 框架名
+          format: string
+          properties: {}
+          type: string
+        language:
+          description: 框架语言
+          format: string
+          properties: {}
+          type: string
+        version:
+          description: 框架版本
+          format: string
+          properties: {}
+          type: string
+        dir:
+          description: 框架路径
+          format: string
+          properties: {}
+          type: string
+        container_name:
+          description: 容器名称
+          format: string
+          properties: {}
+          type: string
+        container_id:
+          description: 容器id
+          format: string
+          properties: {}
+          type: string
+        discovery_time:
+          description: 发现时间时间戳
+          format: uint
+          properties: {}
+          type: integer
+        service_type:
+          description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC'
+          format: uint
+          properties: {}
+          type: integer
+        cid:
+          description: 容器主键id
+          format: uint64
+          properties: {}
+          type: integer
+        id:
+          description: web框架资产id
+          format: uint64
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkCountRes:
+      properties:
+        total:
+          format: int
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteInfoRes:
+      properties:
+        data:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteInfoOut'
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkListOne:
+      properties:
+        name:
+          description: 框架名称
+          format: string
+          properties: {}
+          type: string
+        language:
+          description: 框架语言
+          format: string
+          properties: {}
+          type: string
+        container_name:
+          description: 容器名称
+          format: string
+          properties: {}
+          type: string
+        container_id:
+          description: 容器id
+          format: string
+          properties: {}
+          type: string
+        discovery_time:
+          description: 发现时间时间戳
+          format: uint
+          properties: {}
+          type: integer
+        service_type:
+          description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC'
+          format: uint
+          properties: {}
+          type: integer
+        id:
+          description: web框架资产id
+          format: uint64
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkInfoRes:
+      properties:
+        data:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkInfo'
+      type: object

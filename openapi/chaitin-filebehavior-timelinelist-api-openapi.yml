@@ -1,0 +1,410 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account filebehavior/timelinelist API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: filebehavior/timelinelist
+  description: 文件行为/时间线列表
+paths:
+  /filebehavior/timelinelist:
+    post:
+      summary: 数据行为日志时间线
+      deprecated: false
+      description: ''
+      tags:
+      - filebehavior/timelinelist
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                search:
+                  type: string
+                queries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: string
+              required:
+              - time_range
+              - search
+              - queries
+            example:
+              time_range:
+                begin: '2023-11-14 10:55:38'
+                end: '2023-11-14 11:55:38'
+              search: ''
+              queries:
+              - field: staff_name
+                operator: is
+                value: 吴贝宁
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      total:
+                        type: integer
+                      search_total:
+                        type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            start:
+                              type: string
+                            end:
+                              type: string
+                            title:
+                              type: string
+                            title_display:
+                              type: string
+                            list:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  content:
+                                    type: string
+                                  content_display:
+                                    type: string
+                                  cnt:
+                                    type: integer
+                                  icon:
+                                    type: 'null'
+                                required:
+                                - content
+                                - content_display
+                                - cnt
+                                - icon
+                          required:
+                          - start
+                          - end
+                          - title
+                          - title_display
+                          - list
+                      title_field:
+                        type: string
+                    required:
+                    - index
+                    - total
+                    - search_total
+                    - results
+                    - title_field
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  index:
+                  - qzhddr_behaviors_file
+                  total: 1070
+                  search_total: 1070
+                  results:
+                  - start: '2023-11-14 10:00:00'
+                    end: '2023-11-14 11:00:00'
+                    title: feishu
+                    title_display: 飞书
+                    list:
+                    - content: outgoing
+                      content_display: 外发
+                      cnt: 79
+                      icon: null
+                    - content: rename
+                      content_display: 重命名
+                      cnt: 3
+                      icon: null
+                    - content: create
+                      content_display: 创建
+                      cnt: 2
+                      icon: null
+                  - start: '2023-11-14 10:00:00'
+                    end: '2023-11-14 11:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: create
+                      content_display: 创建
+                      cnt: 5
+                      icon: null
+                  - start: '2023-11-14 10:00:00'
+                    end: '2023-11-14 11:00:00'
+                    title: teams
+                    title_display: Microsoft Teams
+                    list:
+                    - content: create
+                      content_display: 创建
+                      cnt: 3
+                      icon: null
+                    - content: rename
+                      content_display: 重命名
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-14 10:00:00'
+                    end: '2023-11-14 11:00:00'
+                    title: HipsTray
+                    title_display: HipsTray.exe
+                    list:
+                    - content: create
+                      content_display: 创建
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-14 10:00:00'
+                    end: '2023-11-14 11:00:00'
+                    title: chrome
+                    title_display: Chrome
+                    list:
+                    - content: outgoing
+                      content_display: 外发
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-14 10:00:00'
+                    end: '2023-11-14 11:00:00'
+                    title: infoflow
+                    title_display: 如流
+                    list:
+                    - content: create
+                      content_display: 创建
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-14 10:00:00'
+                    end: '2023-11-14 11:00:00'
+                    title: onedrive
+                    title_display: OneDrive
+                    list:
+                    - content: create
+                      content_display: 创建
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-14 11:00:00'
+                    end: '2023-11-14 12:00:00'
+                    title: feishu
+                    title_display: 飞书
+                    list:
+                    - content: outgoing
+                      content_display: 外发
+                      cnt: 688
+                      icon: null
+                    - content: rename
+                      content_display: 重命名
+                      cnt: 63
+                      icon: null
+                    - content: create
+                      content_display: 创建
+                      cnt: 6
+                      icon: null
+                    - content: download
+                      content_display: 下载
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-14 11:00:00'
+                    end: '2023-11-14 12:00:00'
+                    title: dingding
+                    title_display: 钉钉
+                    list:
+                    - content: create
+                      content_display: 创建
+                      cnt: 63
+                      icon: null
+                  - start: '2023-11-14 11:00:00'
+                    end: '2023-11-14 12:00:00'
+                    title: chrome
+                    title_display: Chrome
+                    list:
+                    - content: rename
+                      content_display: 重命名
+                      cnt: 18
+                      icon: null
+                    - content: move
+                      content_display: 移动
+                      cnt: 11
+                      icon: null
+                    - content: download
+                      content_display: 下载
+                      cnt: 5
+                      icon: null
+                  - start: '2023-11-14 11:00:00'
+                    end: '2023-11-14 12:00:00'
+                    title: edge
+                    title_display: Edge
+                    list:
+                    - content: move
+                      content_display: 移动
+                      cnt: 18
+                      icon: null
+                    - content: create
+                      content_display: 创建
+                      cnt: 5
+                      icon: null
+                  - start: '2023-11-14 11:00:00'
+                    end: '2023-11-14 12:00:00'
+                    title: teams
+                    title_display: Microsoft Teams
+                    list:
+                    - content: create
+                      content_display: 创建
+                      cnt: 19
+                      icon: null
+                    - content: rename
+                      content_display: 重命名
+                      cnt: 2
+                      icon: null
+                  - start: '2023-11-14 11:00:00'
+                    end: '2023-11-14 12:00:00'
+                    title: HipsTray
+                    title_display: HipsTray.exe
+                    list:
+                    - content: create
+                      content_display: 创建
+                      cnt: 16
+                      icon: null
+                  - start: '2023-11-14 11:00:00'
+                    end: '2023-11-14 12:00:00'
+                    title: infoflow
+                    title_display: 如流
+                    list:
+                    - content: create
+                      content_display: 创建
+                      cnt: 11
+                      icon: null
+                  - start: '2023-11-14 11:00:00'
+                    end: '2023-11-14 12:00:00'
+                    title: Aliworkbench
+                    title_display: Aliworkbench.exe
+                    list:
+                    - content: rename
+                      content_display: 重命名
+                      cnt: 9
+                      icon: null
+                  - start: '2023-11-14 11:00:00'
+                    end: '2023-11-14 12:00:00'
+                    title: SGTool
+                    title_display: SGTool.exe
+                    list:
+                    - content: create
+                      content_display: 创建
+                      cnt: 5
+                      icon: null
+                    - content: move
+                      content_display: 移动
+                      cnt: 1
+                      icon: null
+                    - content: rename
+                      content_display: 重命名
+                      cnt: 1
+                      icon: null
+                  - start: '2023-11-14 11:00:00'
+                    end: '2023-11-14 12:00:00'
+                    title: onedrive
+                    title_display: OneDrive
+                    list:
+                    - content: rename
+                      content_display: 重命名
+                      cnt: 5
+                      icon: null
+                    - content: create
+                      content_display: 创建
+                      cnt: 1
+                      icon: null
+                  title_field: app
+      security: []

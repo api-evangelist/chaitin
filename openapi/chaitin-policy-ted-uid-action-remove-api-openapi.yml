@@ -1,0 +1,159 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policy/ted/{uid}/action/remove API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policy/ted/{uid}/action/remove
+  description: 策略管理/TED/uid 参数/操作/移除
+paths:
+  /policy/ted/{uid}/action/remove:
+    post:
+      summary: 删除
+      deprecated: false
+      description: ''
+      tags:
+      - policy/ted/{uid}/action/remove
+      parameters:
+      - name: uid
+        in: path
+        description: ''
+        required: true
+        example: 79b77aceb66a4e6dbd6a92d5e9d0cdb6
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                category:
+                  type: string
+                options:
+                  type: object
+                  properties:
+                    git:
+                      type: object
+                      properties:
+                        repo:
+                          type: object
+                          properties:
+                            contains:
+                              type: array
+                              items:
+                                type: string
+                          required:
+                          - contains
+                      required:
+                      - repo
+                    svn:
+                      type: object
+                      properties:
+                        repo:
+                          type: object
+                          properties:
+                            str_contains:
+                              type: array
+                              items:
+                                type: string
+                          required:
+                          - str_contains
+                      required:
+                      - repo
+                  required:
+                  - git
+                  - svn
+              required:
+              - name
+              - category
+              - options
+            example:
+              name: 名称
+              category: code_repository
+              options:
+                git:
+                  repo:
+                    contains:
+                    - XXXX
+                    - sdasdas
+                svn:
+                  repo:
+                    str_contains:
+                    - XXXX
+                    - sdasdas
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              example: {}
+      security: []

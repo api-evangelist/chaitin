@@ -1,0 +1,352 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account ueba/{ueba_id} API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: ueba/{ueba_id}
+  description: UEBA 分析/ueba_id 参数
+paths:
+  /ueba/{ueba_id}:
+    post:
+      summary: UEBA修改事件策略
+      deprecated: false
+      description: ''
+      tags:
+      - ueba/{ueba_id}
+      parameters:
+      - name: ueba_id
+        in: path
+        description: ''
+        required: true
+        example: 99f2e8c705d34ee4870da99da417f340
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                category:
+                  type: string
+                description:
+                  type: string
+                source:
+                  type: string
+                queries:
+                  type: array
+                  items: {}
+                expression:
+                  type: string
+                windows_s:
+                  type: integer
+                score:
+                  type: integer
+                notification_config:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      is_remind:
+                        type: boolean
+                      notification_bot_id:
+                        type: string
+                      notification_content_template_id:
+                        type: string
+                      email_to_list:
+                        type: array
+                        items: {}
+                      notification_bot_template_id:
+                        type: string
+                threshold:
+                  type: integer
+              required:
+              - name
+              - category
+              - description
+              - source
+              - queries
+              - expression
+              - windows_s
+              - score
+              - notification_config
+              - threshold
+            example:
+              name: test
+              category: outgoing
+              description: ''
+              source: policy_channel_log
+              queries: []
+              expression: SELF
+              windows_s: 100000000
+              score: 60
+              notification_config:
+              - is_remind: true
+                notification_bot_id: dda0e80b-e706-4da2-9470-7b1246593ecd
+                notification_content_template_id: 461f0024-2474-4ff2-9718-1690f21db7ee
+                email_to_list: []
+                notification_bot_template_id: 401f6898-c55b-4848-8a2f-7ce610f18e22
+              threshold: 1
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      uid:
+                        type: string
+                      category:
+                        type: string
+                      id:
+                        type: integer
+                      windows_s:
+                        type: integer
+                      company_id:
+                        type: string
+                      expression_fields:
+                        type: object
+                        properties:
+                          body:
+                            type: object
+                            properties:
+                              aggs:
+                                type: object
+                                properties:
+                                  count:
+                                    type: object
+                                    properties:
+                                      cardinality:
+                                        type: object
+                                        properties:
+                                          field:
+                                            type: string
+                                          precision_threshold:
+                                            type: integer
+                                        required:
+                                        - field
+                                        - precision_threshold
+                                    required:
+                                    - cardinality
+                                required:
+                                - count
+                              query:
+                                type: object
+                                properties:
+                                  bool:
+                                    type: object
+                                    properties:
+                                      must:
+                                        type: array
+                                        items:
+                                          type: object
+                                          properties:
+                                            term:
+                                              type: object
+                                              properties:
+                                                company_id:
+                                                  type: string
+                                              required:
+                                              - company_id
+                                    required:
+                                    - must
+                                required:
+                                - bool
+                              collapse:
+                                type: object
+                                properties:
+                                  field:
+                                    type: string
+                                  inner_hits:
+                                    type: object
+                                    properties:
+                                      name:
+                                        type: string
+                                      size:
+                                        type: integer
+                                    required:
+                                    - name
+                                    - size
+                                required:
+                                - field
+                                - inner_hits
+                              track_total_hits:
+                                type: boolean
+                            required:
+                            - aggs
+                            - query
+                            - collapse
+                            - track_total_hits
+                          queries:
+                            type: array
+                            items: {}
+                        required:
+                        - body
+                        - queries
+                      create_time:
+                        type: string
+                      name:
+                        type: string
+                      expression:
+                        type: string
+                      score:
+                        type: integer
+                      update_time:
+                        type: string
+                      create_by_id:
+                        type: string
+                      threshold:
+                        type: integer
+                      code:
+                        type: string
+                      description:
+                        type: string
+                      update_by_id:
+                        type: string
+                      expand:
+                        type: object
+                        properties: {}
+                      source:
+                        type: string
+                      status:
+                        type: string
+                    required:
+                    - uid
+                    - category
+                    - id
+                    - windows_s
+                    - company_id
+                    - expression_fields
+                    - create_time
+                    - name
+                    - expression
+                    - score
+                    - update_time
+                    - create_by_id
+                    - threshold
+                    - code
+                    - description
+                    - update_by_id
+                    - expand
+                    - source
+                    - status
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: success
+                data:
+                  uid: 99f2e8c7-05d3-4ee4-870d-a99da417f340
+                  category: outgoing
+                  id: 2
+                  windows_s: 100000000
+                  company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                  expression_fields:
+                    body:
+                      aggs:
+                        count:
+                          cardinality:
+                            field: device_id
+                            precision_threshold: 40000
+                      query:
+                        bool:
+                          must:
+                          - term:
+                              company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                      collapse:
+                        field: device_id
+                        inner_hits:
+                          name: device_id
+                          size: 100
+                      track_total_hits: true
+                    queries: []
+                  create_time: '2024-01-02T09:01:23.828955Z'
+                  name: test
+                  expression: SELF
+                  score: 60
+                  update_time: '2024-01-02T11:27:57.194787Z'
+                  create_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  threshold: 1
+                  code: 363e49189c182ed5
+                  description: ''
+                  update_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
+                  expand: {}
+                  source: policy_channel_log
+                  status: activated
+      security: []

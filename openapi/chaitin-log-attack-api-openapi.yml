@@ -1,0 +1,210 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account log/attack API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: log/attack
+paths:
+  /open/record/:id:
+    get:
+      produces:
+      - application/json
+      tags:
+      - log/attack
+      summary: get attack log detail
+      parameters:
+      - type: string
+        description: log id
+        name: id
+        in: path
+        required: true
+        x-cli-description: 资源 ID
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/model.DetectLog'
+      x-cli-summary: 查看攻击日志详情
+  /open/records:
+    get:
+      produces:
+      - application/json
+      tags:
+      - log/attack
+      summary: get attack logs
+      parameters:
+      - type: string
+        name: action
+        in: query
+        x-cli-description: 动作类型：0-放行 1-阻断 2-挑战 3-认证防护 4-混淆 5-等待室
+      - type: string
+        name: attack_type
+        in: query
+        x-cli-description: 攻击类型
+      - type: integer
+        name: end
+        in: query
+        x-cli-description: 结束时间戳（秒）
+      - type: string
+        name: event_id
+        in: query
+        x-cli-description: 事件 ID
+      - type: string
+        name: host
+        in: query
+        x-cli-description: 域名
+      - type: string
+        name: ip
+        in: query
+        x-cli-description: IP 地址
+      - type: string
+        name: ja4_fingerprint
+        in: query
+        x-cli-description: JA4 指纹
+      - minimum: 1
+        type: integer
+        name: page
+        in: query
+        x-cli-description: 页码
+      - maximum: 100
+        minimum: 1
+        type: integer
+        name: page_size
+        in: query
+        x-cli-description: 每页数量
+      - type: string
+        name: port
+        in: query
+        x-cli-description: 端口
+      - type: integer
+        name: start
+        in: query
+        x-cli-description: 开始时间戳（秒）
+      - type: string
+        name: url
+        in: query
+        x-cli-description: URL 路径
+      responses:
+        '200':
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.JSONBody'
+            - type: object
+              properties:
+                data:
+                  $ref: '#/definitions/record.GetDetectLogListRes'
+      x-cli-summary: 查看攻击日志列表
+definitions:
+  response.JSONBody:
+    type: object
+    properties:
+      data: {}
+      err:
+        type: string
+      msg:
+        type: string
+  record.GetDetectLogListRes:
+    type: object
+    properties:
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/model.DetectLog'
+      total:
+        type: integer
+  model.DetectLog:
+    type: object
+    properties:
+      action:
+        description: '0: 放行, 1: 阻断'
+        type: integer
+      attack_type:
+        type: integer
+      city:
+        type: string
+      country:
+        type: string
+      created_at:
+        type: string
+      decode_path:
+        type: string
+      dst_ip:
+        type: string
+      dst_port:
+        type: integer
+      eventId:
+        type: string
+      event_id:
+        description: to eliminate ambiguous
+        type: string
+      host:
+        type: string
+      id:
+        type: integer
+      ja4_fingerprint:
+        type: string
+      lat:
+        type: string
+      lng:
+        type: string
+      location:
+        type: string
+      method:
+        type: string
+      module:
+        type: string
+      payload:
+        type: string
+      policy_name:
+        type: string
+      protocol:
+        type: integer
+      province:
+        type: string
+      query_string:
+        type: string
+      reason:
+        type: string
+      req_body:
+        type: string
+      req_header:
+        type: string
+      risk_level:
+        type: integer
+      rsp_body:
+        type: string
+      rsp_header:
+        type: string
+      rule_id:
+        type: string
+      rule_id_list:
+        type: array
+        items:
+          type: string
+      short_rule_id:
+        type: string
+      site_uuid:
+        type: string
+      socket_ip:
+        type: string
+      src_ip:
+        type: string
+      src_port:
+        type: integer
+      status_code:
+        type: integer
+      timestamp:
+        type: integer
+      updated_at:
+        type: string
+      url_path:
+        type: string
+      website:
+        type: string

@@ -1,0 +1,34 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account third_party API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: third_party
+paths:
+  /api/SiteFingerprintBindingAPI:
+    put:
+      operationId: SiteFingerprintBindingAPI_put
+      summary: PUT /api/SiteFingerprintBindingAPI
+      tags:
+      - third_party
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  site_id:
+                    type: string
+                  bindings:
+                    type: array
+                    items:
+                      type: string
+                required:
+                - site_id
+                - bindings

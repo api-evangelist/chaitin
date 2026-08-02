@@ -1,0 +1,46 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: openapi/chaitin-safeline-openapi-original.json
+notes: >-
+  Chaitin ships no official hosted MCP server. It does publish an agent-native
+  surface: the chaitin-cli Agent Skill (npx bzskills add chaitin/chaitin-cli)
+  and OctoBus (github.com/chaitin/OctoBus), "a secure local gateway for AI
+  agents to reliably call approved enterprise APIs, tools, and services." The
+  tool list below is a candidate derived from the SafeLine WAF Open API
+  operations (one tool per operation) as a starting point for an MCP server.
+related:
+  agent_skill: skills/chaitin-cli-SKILL.md
+  octobus: https://github.com/chaitin/OctoBus
+server:
+  name: chaitin-safeline
+  transport: http
+  url: null
+tools:
+- name: list_sites
+  description: List protected web services (sites).
+  source_operation: openapi/chaitin-safeline-openapi-original.json#GET /open/site
+- name: create_site
+  description: Create a protected web service.
+  source_operation: openapi/chaitin-safeline-openapi-original.json#POST /open/site
+- name: update_site
+  description: Update a protected web service.
+  source_operation: openapi/chaitin-safeline-openapi-original.json#PUT /open/site
+- name: delete_site
+  description: Delete a protected web service.
+  source_operation: openapi/chaitin-safeline-openapi-original.json#DELETE /open/site
+- name: list_ip_groups
+  description: List IP groups (allow/deny sets).
+  source_operation: openapi/chaitin-safeline-openapi-original.json#GET /open/ipgroup
+- name: append_ip_to_group
+  description: Add an IP to an IP group (e.g. blacklist automation).
+  source_operation: openapi/chaitin-safeline-openapi-original.json#POST /open/ipgroup/append
+- name: list_policies
+  description: List customized rules.
+  source_operation: openapi/chaitin-safeline-openapi-original.json#GET /open/policy
+- name: switch_policy
+  description: Enable or disable a customized rule.
+  source_operation: openapi/chaitin-safeline-openapi-original.json#PUT /open/policy/switch
+- name: get_attack_logs
+  description: Retrieve attack logs / detection records.
+  source_operation: openapi/chaitin-safeline-openapi-original.json#GET /open/records

@@ -1,0 +1,203 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account system/storagechannel/modify API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: system/storagechannel/modify
+  description: 系统配置/存储通道/修改
+paths:
+  /system/storagechannel/modify:
+    post:
+      summary: 修改固证配置
+      deprecated: false
+      description: ''
+      tags:
+      - system/storagechannel/modify
+      parameters:
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                storage_class:
+                  type: string
+                endpoint:
+                  type: string
+                access_key:
+                  type: string
+                secret_key:
+                  type: string
+                bucket:
+                  type: string
+                tls_enable:
+                  type: boolean
+                tls_ca_certificate_pem:
+                  type: string
+              required:
+              - storage_class
+              - endpoint
+              - access_key
+              - secret_key
+              - bucket
+              - tls_enable
+              - tls_ca_certificate_pem
+            example:
+              storage_class: huawei_oss
+              endpoint: string
+              access_key: string
+              secret_key: string
+              bucket: string
+              tls_enable: false
+              tls_ca_certificate_pem: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      uid:
+                        type: string
+                      company_id:
+                        type: string
+                      name:
+                        type: string
+                      display_name:
+                        type: string
+                      description:
+                        type: string
+                      create_time:
+                        type: string
+                      update_time:
+                        type: string
+                      config:
+                        type: object
+                        properties:
+                          endpoint:
+                            type: string
+                          access_key:
+                            type: string
+                          tls_enable:
+                            type: boolean
+                          secret_key:
+                            type: string
+                          storage_class:
+                            type: string
+                          tls_ca_certificate_pem:
+                            type: string
+                          bucket:
+                            type: string
+                        required:
+                        - endpoint
+                        - access_key
+                        - tls_enable
+                        - secret_key
+                        - storage_class
+                        - tls_ca_certificate_pem
+                        - bucket
+                    required:
+                    - uid
+                    - company_id
+                    - name
+                    - display_name
+                    - description
+                    - create_time
+                    - update_time
+                    - config
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 763
+                msg: string
+                data:
+                  uid: string
+                  company_id: string
+                  name: string
+                  display_name: string
+                  description: string
+                  create_time: string
+                  update_time: string
+                  config:
+                    endpoint: string
+                    access_key: string
+                    tls_enable: true
+                    secret_key: string
+                    storage_class: string
+                    tls_ca_certificate_pem: string
+                    bucket: string
+      security: []

@@ -1,0 +1,41 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/chaitin/SafeLine/releases
+product: SafeLine WAF (Community Edition)
+scheme: semver
+current_version: v9.3.10
+releases_url: https://github.com/chaitin/SafeLine/releases
+notes: >-
+  SafeLine CE is the flagship Chaitin open-source product; its GitHub Releases
+  are the dated changelog. The chaitin-cli tool ships on a separate CalVer track
+  (current v2607.0.2). Entries below are the recent SafeLine CE window.
+entries:
+- version: v9.3.10
+  date: '2026-07-10'
+  breaking: false
+  additions:
+  - Added a read-only role for the console.
+  highlights:
+  - Improved license authentication and management mechanisms.
+  - Fixed custom-rule ordering reset after service restart and incorrect human-verification URLs.
+- version: v9.3.9
+  date: '2026-06-17'
+  breaking: false
+  highlights:
+  - Security hardening (mitigated CVE-2026-49975 via Nginx component upgrade; hardened static file path handling).
+  - Upgraded Threat Intelligence Sharing program; updated IP geolocation database.
+  - Optimized certificate synchronization and configuration reload logic.
+- version: v9.3.8
+  date: '2026-06-04'
+  breaking: false
+  highlights:
+  - Fixed incorrect Settings / System Log icons.
+- version: v9.3.7
+  date: '2026-05-11'
+  breaking: false
+  additions:
+  - Round-robin scheduling supports custom weights; added active-standby scheduling algorithm.
+  - Added "Author" field to custom rule list.
+  - System Log feature added to Lite/Pro editions.
+  highlights:
+  - Fixed OIDC authentication failure.

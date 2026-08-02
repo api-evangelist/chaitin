@@ -1,0 +1,403 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account policylog/browserplugin/list API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: policylog/browserplugin/list
+  description: 日志中心/浏览器插件/列表
+paths:
+  /policylog/browserplugin/list:
+    post:
+      summary: 浏览器插件日志列表
+      deprecated: false
+      description: ''
+      tags:
+      - policylog/browserplugin/list
+      parameters:
+      - name: page
+        in: query
+        description: ''
+        required: true
+        example: '1'
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: ''
+        required: true
+        example: '10'
+        schema:
+          type: string
+      - name: search
+        in: query
+        description: ''
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: X-CS-Header-App
+        in: header
+        description: 应用id
+        required: true
+        example: '{{app}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Company
+        in: header
+        description: 公司id
+        required: true
+        example: '{{company_id}}'
+        schema:
+          type: string
+      - name: X-CS-Header-Crypt
+        in: header
+        description: 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb
+        required: true
+        example: ''
+        schema:
+          type: string
+      - name: If-None-Match
+        in: header
+        description: 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag
+        required: true
+        example: string
+        schema:
+          type: string
+      - name: X-CS-Header-Debug
+        in: header
+        description: ''
+        required: true
+        example: '{{debug}}'
+        schema:
+          type: string
+      - name: Accept-Language
+        in: header
+        description: ''
+        required: true
+        example: zh
+        schema:
+          type: string
+      - name: X-Cs-Header-Timezone
+        in: header
+        description: ''
+        required: true
+        example: Asia/Shanghai
+        schema:
+          type: string
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        example: application/json
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                time_range:
+                  type: object
+                  properties:
+                    begin:
+                      type: string
+                    end:
+                      type: string
+                  required:
+                  - begin
+                  - end
+                search:
+                  type: string
+                queries:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      field:
+                        type: string
+                      operator:
+                        type: string
+                      value:
+                        type: string
+                      is_order_used:
+                        type: boolean
+                      field_type:
+                        type: string
+                      is_filter_used:
+                        type: boolean
+              required:
+              - time_range
+              - search
+              - queries
+            example:
+              time_range:
+                begin: '2025-03-20T09:02:00Z'
+                end: '2025-03-21T09:02:59Z'
+              search: ''
+              queries:
+              - field: plugin_name
+                operator: match
+                value: plugin1
+                is_order_used: false
+                field_type: keyword
+                is_filter_used: true
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  msg:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      index:
+                        type: array
+                        items:
+                          type: string
+                      page:
+                        type: integer
+                      limit:
+                        type: integer
+                      search_total:
+                        type: integer
+                      total:
+                        type: integer
+                      search_after:
+                        type: array
+                        items:
+                          type: integer
+                      results:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            plugin_desc:
+                              type: string
+                            browser_plugin_policies:
+                              type: array
+                              items:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    policy_name:
+                                      type: string
+                                    policy_id:
+                                      type: string
+                                    action:
+                                      type: string
+                            publisher:
+                              type: string
+                            device_code:
+                              type: string
+                            plugin_status:
+                              type: string
+                            browser_name:
+                              type: string
+                            ip_address:
+                              type: string
+                            hostname:
+                              type: string
+                            install_path:
+                              type: string
+                            os_name:
+                              type: string
+                            agent_version:
+                              type: string
+                            plugin_source:
+                              type: string
+                            action:
+                              type: string
+                            time:
+                              type: integer
+                            bundle_id:
+                              type: string
+                            plugin_name:
+                              type: string
+                            process_name:
+                              type: string
+                            is_blocked:
+                              type: boolean
+                            plugin_version:
+                              type: string
+                            browser_desc:
+                              type: string
+                            console_user:
+                              type: string
+                            is_default:
+                              type: boolean
+                            plugin_id:
+                              type: string
+                            device_id:
+                              type: string
+                            mac:
+                              type: string
+                            company_id:
+                              type: string
+                            event_id:
+                              type: string
+                            os_friendly_name:
+                              type: string
+                            status:
+                              type: string
+                            '@timestamp':
+                              type: integer
+                            timestamp:
+                              type: string
+                            created_timestamp:
+                              type: string
+                            permission:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  name:
+                                    type: string
+                                  is_sensitive:
+                                    type: boolean
+                                required:
+                                - name
+                                - is_sensitive
+                            staff_id:
+                              type: string
+                            staff_name:
+                              type: string
+                            staff_email:
+                              type: string
+                            staff_code:
+                              type: string
+                            staff_number:
+                              type: string
+                            staff_tag_ids:
+                              type: array
+                              items: {}
+                            staff_tags:
+                              type: array
+                              items: {}
+                            dept_ids:
+                              type: array
+                              items:
+                                type: string
+                            dept_names:
+                              type: array
+                              items:
+                                type: string
+                            dept_paths:
+                              type: array
+                              items:
+                                type: string
+                            display_name:
+                              type: string
+                            category:
+                              type: string
+                            uid:
+                              type: string
+                            _type:
+                              type: string
+                            _index:
+                              type: string
+                            _score:
+                              type: 'null'
+                            action_display_name:
+                              type: string
+                    required:
+                    - index
+                    - page
+                    - limit
+                    - search_total
+                    - total
+                    - search_after
+                    - results
+                required:
+                - code
+                - msg
+                - data
+              example:
+                code: 0
+                msg: 正常
+                data:
+                  index:
+                  - qzhddr_policy_browser_plugin_logs
+                  page: 1
+                  limit: 10
+                  search_total: 1
+                  total: 1
+                  search_after:
+                  - 1742536928882
+                  results:
+                  - plugin_desc: plugin desc
+                    browser_plugin_policies:
+                    - - policy_name: huQQ音乐
+                        policy_id: b1c3b4f1-865d-4e54-9188-0d804cd9d8b0
+                        action: block
+                    publisher: Microsoft Corporation
+                    device_code: PC-000041
+                    plugin_status: activate
+                    browser_name: Microsoft Edge
+                    ip_address: 192.168.96.168
+                    hostname: ''
+                    install_path: c:\program files (x86)\microsoft\edge\application
+                    os_name: Windows
+                    agent_version: 1.6.26
+                    plugin_source: external
+                    action: block
+                    time: 1742536928882
+                    bundle_id: aaa
+                    plugin_name: plugin1
+                    process_name: msedge.exe
+                    is_blocked: true
+                    plugin_version: plugin version
+                    browser_desc: browser_desc
+                    console_user: happy@DESKTOP-3QQ22QN
+                    is_default: true
+                    plugin_id: plugin1 id
+                    device_id: b6b80bb2-d8b3-4d04-acd4-490ed606421d
+                    mac: ''
+                    company_id: eeff7c64-5070-4582-8b93-fbcc57db7771
+                    event_id: 6CF02629-B4B8-4838-8E39-7B38C093D0DB
+                    os_friendly_name: Windows 10 Professional (10.0.19045)
+                    status: created
+                    '@timestamp': 1742536928882
+                    timestamp: '2025-03-21T14:02:08+08:00'
+                    created_timestamp: '2025-03-21T14:07:13+08:00'
+                    permission:
+                    - name: clipboardRead
+                      is_sensitive: true
+                    - name: audio
+                      is_sensitive: false
+                    staff_id: 9c830d69-fe2f-4a75-b17d-94dfa9dda958
+                    staff_name: hyj
+                    staff_email: 2196900073@qq.com
+                    staff_code: 80e9854fdd406dc0
+                    staff_number: 5a8bbec2c949dfd2
+                    staff_tag_ids: []
+                    staff_tags: []
+                    dept_ids:
+                    - 5073b0bd-d80b-450f-ac72-22ffc074f29f
+                    dept_names:
+                    - default
+                    dept_paths:
+                    - default
+                    display_name: Edge
+                    category: browser_plugin
+                    uid: EcBQt5UBZcl0n2phMZkA
+                    _type: _doc
+                    _index: .ds-qzhddr_policy_browser_plugin_logs_s-2025.03.20-000001
+                    _score: null
+                    action_display_name: 阻断运行
+      security: []

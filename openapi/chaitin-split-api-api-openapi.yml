@@ -1,0 +1,161 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account split_api API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: split_api
+paths:
+  /api/EnableSplitAPI:
+    put:
+      operationId: EnableSplitAPI_put
+      summary: PUT /api/EnableSplitAPI
+      tags:
+      - split_api
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+                action:
+                  type: string
+                  description: 启用状态
+              required:
+              - action
+  /api/SplitConfigAPI:
+    get:
+      operationId: SplitConfigAPI_get
+      summary: GET /api/SplitConfigAPI
+      tags:
+      - split_api
+      parameters:
+      - name: order_by
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      - name: page
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+    post:
+      operationId: SplitConfigAPI_post
+      summary: POST /api/SplitConfigAPI
+      tags:
+      - split_api
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_enabled:
+                  type: boolean
+                  description: 启用状态
+                name:
+                  type: string
+                  description: 规则名称
+                comment:
+                  type: string
+                  description: 规则备注
+                origin:
+                  type: string
+                key:
+                  type: string
+                  description: 拆分字段
+                original_api_id:
+                  type: string
+                  description: 应用的 API
+              required:
+              - is_enabled
+              - name
+              - origin
+              - key
+              - original_api_id
+    put:
+      operationId: SplitConfigAPI_put
+      summary: PUT /api/SplitConfigAPI
+      tags:
+      - split_api
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  is_enabled:
+                    type: boolean
+                    description: 启用状态
+                  name:
+                    type: string
+                    description: 规则名称
+                  comment:
+                    type: string
+                    description: 规则备注
+                  origin:
+                    type: string
+                  key:
+                    type: string
+                    description: 拆分字段
+                  original_api_id:
+                    type: string
+                    description: 应用的 API
+                  api_list:
+                    type: array
+                    description: API 列表
+                    items:
+                      type: string
+                  site_id:
+                    type: string
+                    description: 应用的站点
+                  url:
+                    type: string
+                    description: URL
+                  method:
+                    type: string
+                    description: 方法
+                  uuid:
+                    type: string
+                    description: UUID
+                  auto:
+                    type: boolean
+                    description: 自动生成
+                  sample:
+                    type: object
+                    description: 样例
+                required:
+                - is_enabled
+                - key
+                - name
+                - origin
+                - original_api_id
+                - site_id
+                - url
+                - method
+                - uuid
+                - auto

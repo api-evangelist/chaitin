@@ -1,0 +1,1772 @@
+openapi: 3.0.3
+info:
+  title: APISec Management account api_assets API
+  version: '26.05'
+  description: Generated from APISec skyview APIView classes.
+tags:
+- name: api_assets
+paths:
+  /api/AssociateUserAccountAPI:
+    put:
+      operationId: AssociateUserAccountAPI_put
+      summary: PUT /api/AssociateUserAccountAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/AttackTagsAPI:
+    get:
+      operationId: AttackTagsAPI_get
+      summary: GET /api/AttackTagsAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: filters
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: object
+      x-cli-body-fallback: false
+    put:
+      operationId: AttackTagsAPI_put
+      summary: PUT /api/AttackTagsAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+                status:
+                  type: integer
+              required:
+              - filters
+              - status
+    delete:
+      operationId: AttackTagsAPI_delete
+      summary: DELETE /api/AttackTagsAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+  /api/BatchSchemaFieldAPI:
+    put:
+      operationId: BatchSchemaFieldAPI_put
+      summary: PUT /api/BatchSchemaFieldAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                formats:
+                  type: array
+                  items:
+                    type: string
+              required:
+              - formats
+  /api/DataTagsAPI:
+    get:
+      operationId: DataTagsAPI_get
+      summary: GET /api/DataTagsAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: page
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+    post:
+      operationId: DataTagsAPI_post
+      summary: POST /api/DataTagsAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+    put:
+      operationId: DataTagsAPI_put
+      summary: PUT /api/DataTagsAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+    delete:
+      operationId: DataTagsAPI_delete
+      summary: DELETE /api/DataTagsAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/DetectorConfigAPI:
+    get:
+      operationId: DetectorConfigAPI_get
+      summary: GET /api/DetectorConfigAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+    put:
+      operationId: DetectorConfigAPI_put
+      summary: PUT /api/DetectorConfigAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ip_source:
+                  type: string
+                  description: 源 IP 获取方式
+              required:
+              - ip_source
+  /api/EffectiveScopeAPI:
+    get:
+      operationId: EffectiveScopeAPI_get
+      summary: GET /api/EffectiveScopeAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: effective_scope
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/IdentityAPI:
+    get:
+      operationId: IdentityAPI_get
+      summary: GET /api/IdentityAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+    post:
+      operationId: IdentityAPI_post
+      summary: POST /api/IdentityAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                uuids:
+                  type: string
+                effective_scope:
+                  type: string
+                identity_type:
+                  type: string
+                pattern:
+                  type: string
+                status:
+                  type: string
+              required:
+              - uuids
+              - effective_scope
+              - identity_type
+              - pattern
+    put:
+      operationId: IdentityAPI_put
+      summary: PUT /api/IdentityAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                uuids:
+                  type: string
+                effective_scope:
+                  type: string
+                identity_type:
+                  type: string
+                pattern:
+                  type: string
+                status:
+                  type: string
+              required:
+              - effective_scope
+              - identity_type
+              - pattern
+              - uuids
+    delete:
+      operationId: IdentityAPI_delete
+      summary: DELETE /api/IdentityAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/IdentityMatchedAPI:
+    put:
+      operationId: IdentityMatchedAPI_put
+      summary: PUT /api/IdentityMatchedAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  identity_group_id:
+                    type: integer
+                  identity:
+                    type: string
+                  effective_scope:
+                    type: integer
+                  create_time:
+                    type: string
+                required:
+                - identity_group_id
+                - identity
+                - effective_scope
+  /api/IgnoredInterfaceAPI:
+    post:
+      operationId: IgnoredInterfaceAPI_post
+      summary: POST /api/IgnoredInterfaceAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                api_id:
+                  type: string
+                status:
+                  type: string
+                reason:
+                  type: string
+              required:
+              - api_id
+              - status
+              - reason
+    put:
+      operationId: IgnoredInterfaceAPI_put
+      summary: PUT /api/IgnoredInterfaceAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+              required:
+              - status
+  /api/InterfaceAPI:
+    get:
+      operationId: InterfaceAPI_get
+      summary: GET /api/InterfaceAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: page
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+    post:
+      operationId: InterfaceAPI_post
+      summary: POST /api/InterfaceAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+    put:
+      operationId: InterfaceAPI_put
+      summary: PUT /api/InterfaceAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+    delete:
+      operationId: InterfaceAPI_delete
+      summary: DELETE /api/InterfaceAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/InterfaceDetailsAPI:
+    get:
+      operationId: InterfaceDetailsAPI_get
+      summary: GET /api/InterfaceDetailsAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: id
+        in: query
+        required: false
+        description: ID
+        schema:
+          type: integer
+          description: ID
+      - name: uuid
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/InterfaceDetailsParamAPI:
+    get:
+      operationId: InterfaceDetailsParamAPI_get
+      summary: GET /api/InterfaceDetailsParamAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: api_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: count
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: is_req
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: boolean
+      - name: offset
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+  /api/InterfaceGroupAPI:
+    get:
+      operationId: InterfaceGroupAPI_get
+      summary: GET /api/InterfaceGroupAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+  /api/InterfaceIdentityAPI:
+    put:
+      operationId: InterfaceIdentityAPI_put
+      summary: PUT /api/InterfaceIdentityAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                asset_uuid:
+                  type: string
+                user_id:
+                  type: string
+                session:
+                  type: string
+                device_id:
+                  type: string
+                username:
+                  type: string
+              required:
+              - asset_uuid
+  /api/InterfaceIdentityConfirmAPI:
+    put:
+      operationId: InterfaceIdentityConfirmAPI_put
+      summary: PUT /api/InterfaceIdentityConfirmAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+                status:
+                  type: string
+              required:
+              - status
+  /api/InterfaceIdentityImportAPI:
+    post:
+      operationId: InterfaceIdentityImportAPI_post
+      summary: POST /api/InterfaceIdentityImportAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/InterfaceRemarkAPI:
+    get:
+      operationId: InterfaceRemarkAPI_get
+      summary: GET /api/InterfaceRemarkAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: page
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+    post:
+      operationId: InterfaceRemarkAPI_post
+      summary: POST /api/InterfaceRemarkAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+    put:
+      operationId: InterfaceRemarkAPI_put
+      summary: PUT /api/InterfaceRemarkAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                remark:
+                  type: string
+    delete:
+      operationId: InterfaceRemarkAPI_delete
+      summary: DELETE /api/InterfaceRemarkAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/InterfaceResourceAPI:
+    post:
+      operationId: InterfaceResourceAPI_post
+      summary: POST /api/InterfaceResourceAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                api_id:
+                  type: string
+                origin:
+                  type: string
+                key:
+                  type: string
+                status:
+                  type: string
+                comment:
+                  type: string
+              required:
+              - api_id
+              - origin
+              - key
+              - status
+  /api/InterfaceResourceRecognitionAPI:
+    put:
+      operationId: InterfaceResourceRecognitionAPI_put
+      summary: PUT /api/InterfaceResourceRecognitionAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+                status:
+                  type: string
+                comment:
+                  type: string
+              required:
+              - filters
+    delete:
+      operationId: InterfaceResourceRecognitionAPI_delete
+      summary: DELETE /api/InterfaceResourceRecognitionAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/InterfaceResourceRecognitionEnableDisableAPI:
+    put:
+      operationId: InterfaceResourceRecognitionEnableDisableAPI_put
+      summary: PUT /api/InterfaceResourceRecognitionEnableDisableAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_enabled:
+                  type: boolean
+                uuid:
+                  type: string
+              required:
+              - is_enabled
+              - uuid
+  /api/InterfaceSlimAPI:
+    get:
+      operationId: InterfaceSlimAPI_get
+      summary: GET /api/InterfaceSlimAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+  /api/InterfaceStatAPI:
+    get:
+      operationId: InterfaceStatAPI_get
+      summary: GET /api/InterfaceStatAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+  /api/InterfaceStatusAPI:
+    get:
+      operationId: InterfaceStatusAPI_get
+      summary: GET /api/InterfaceStatusAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: api_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+    put:
+      operationId: InterfaceStatusAPI_put
+      summary: PUT /api/InterfaceStatusAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+                status:
+                  type: string
+              required:
+              - status
+  /api/InterfaceSuccessSignAPI:
+    put:
+      operationId: InterfaceSuccessSignAPI_put
+      summary: PUT /api/InterfaceSuccessSignAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                asset_uuid:
+                  type: string
+                success_sign:
+                  type: string
+              required:
+              - asset_uuid
+              - success_sign
+  /api/InterfaceSuccessSignConfirmAPI:
+    put:
+      operationId: InterfaceSuccessSignConfirmAPI_put
+      summary: PUT /api/InterfaceSuccessSignConfirmAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+                status:
+                  type: string
+              required:
+              - status
+  /api/InterfaceSuccessSignImportAPI:
+    post:
+      operationId: InterfaceSuccessSignImportAPI_post
+      summary: POST /api/InterfaceSuccessSignImportAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/InterfaceSwaggerImportAPI:
+    post:
+      operationId: InterfaceSwaggerImportAPI_post
+      summary: POST /api/InterfaceSwaggerImportAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/LockInterfaceAPI:
+    put:
+      operationId: LockInterfaceAPI_put
+      summary: PUT /api/LockInterfaceAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                locked:
+                  type: boolean
+                  description: 锁定
+                filters:
+                  type: object
+                all:
+                  type: boolean
+              required:
+              - locked
+              - all
+  /api/MultipleInterfaceSuccessSignAPI:
+    put:
+      operationId: MultipleInterfaceSuccessSignAPI_put
+      summary: PUT /api/MultipleInterfaceSuccessSignAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+                success_sign:
+                  type: string
+              required:
+              - success_sign
+  /api/RemoveTagAPI:
+    put:
+      operationId: RemoveTagAPI_put
+      summary: PUT /api/RemoveTagAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tag_id:
+                  type: integer
+                  description: 标签 ID
+                type:
+                  type: string
+                  description: 标签类型
+              required:
+              - tag_id
+              - type
+  /api/ResetAttackTagsModelAPI:
+    put:
+      operationId: ResetAttackTagsModelAPI_put
+      summary: PUT /api/ResetAttackTagsModelAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+              required:
+              - filters
+  /api/ResourceRecognitionBindingAPI:
+    get:
+      operationId: ResourceRecognitionBindingAPI_get
+      summary: GET /api/ResourceRecognitionBindingAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+    put:
+      operationId: ResourceRecognitionBindingAPI_put
+      summary: PUT /api/ResourceRecognitionBindingAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                uuids:
+                  type: array
+                  items:
+                    type: string
+              required:
+              - uuids
+  /api/ResourceRecognitionEnableDisableAPI:
+    get:
+      operationId: ResourceRecognitionEnableDisableAPI_get
+      summary: GET /api/ResourceRecognitionEnableDisableAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+    put:
+      operationId: ResourceRecognitionEnableDisableAPI_put
+      summary: PUT /api/ResourceRecognitionEnableDisableAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is_enabled:
+                  type: boolean
+              required:
+              - is_enabled
+  /api/SchemaAPI:
+    get:
+      operationId: SchemaAPI_get
+      summary: GET /api/SchemaAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: page
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+    post:
+      operationId: SchemaAPI_post
+      summary: POST /api/SchemaAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+    put:
+      operationId: SchemaAPI_put
+      summary: PUT /api/SchemaAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+    delete:
+      operationId: SchemaAPI_delete
+      summary: DELETE /api/SchemaAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/SchemaFieldAPI:
+    get:
+      operationId: SchemaFieldAPI_get
+      summary: GET /api/SchemaFieldAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: is_req
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: boolean
+      x-cli-body-fallback: false
+    put:
+      operationId: SchemaFieldAPI_put
+      summary: PUT /api/SchemaFieldAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                api_id:
+                  type: string
+                key:
+                  type: string
+                is_req:
+                  type: boolean
+                format:
+                  type: string
+                manual_input:
+                  type: boolean
+                format_learning_status:
+                  type: string
+                model_learning_enable:
+                  type: boolean
+                model_detect_enable:
+                  type: boolean
+                model_learning_status:
+                  type: string
+              required:
+              - is_req
+              - manual_input
+              - format_learning_status
+              - model_learning_enable
+              - model_detect_enable
+              - model_learning_status
+    delete:
+      operationId: SchemaFieldAPI_delete
+      summary: DELETE /api/SchemaFieldAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                schema_id:
+                  type: string
+                all_schema:
+                  type: boolean
+                is_req:
+                  type: boolean
+              required:
+              - id
+              - all_schema
+              - is_req
+  /api/SiteAPI:
+    get:
+      operationId: SiteAPI_get
+      summary: GET /api/SiteAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: page
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+    post:
+      operationId: SiteAPI_post
+      summary: POST /api/SiteAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+    put:
+      operationId: SiteAPI_put
+      summary: PUT /api/SiteAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+    delete:
+      operationId: SiteAPI_delete
+      summary: DELETE /api/SiteAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/SiteIdentityAPI:
+    put:
+      operationId: SiteIdentityAPI_put
+      summary: PUT /api/SiteIdentityAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                asset_uuid:
+                  type: string
+                user_id:
+                  type: string
+                session:
+                  type: string
+                device_id:
+                  type: string
+                username:
+                  type: string
+              required:
+              - asset_uuid
+  /api/SiteIdentityConfirmAPI:
+    put:
+      operationId: SiteIdentityConfirmAPI_put
+      summary: PUT /api/SiteIdentityConfirmAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+                status:
+                  type: string
+              required:
+              - status
+  /api/SiteInfoAPI:
+    get:
+      operationId: SiteInfoAPI_get
+      summary: GET /api/SiteInfoAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: page
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      x-cli-body-fallback: false
+    post:
+      operationId: SiteInfoAPI_post
+      summary: POST /api/SiteInfoAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+    put:
+      operationId: SiteInfoAPI_put
+      summary: PUT /api/SiteInfoAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                static_file_handle:
+                  type: string
+                business_upload_handle:
+                  type: string
+                business_upload_store:
+                  type: string
+                business_download_handle:
+                  type: string
+                business_download_store:
+                  type: string
+                remark:
+                  type: string
+              required:
+              - static_file_handle
+              - business_upload_handle
+              - business_upload_store
+              - business_download_handle
+              - business_download_store
+    delete:
+      operationId: SiteInfoAPI_delete
+      summary: DELETE /api/SiteInfoAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/SiteSuccessSignAPI:
+    put:
+      operationId: SiteSuccessSignAPI_put
+      summary: PUT /api/SiteSuccessSignAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                asset_uuid:
+                  type: string
+                success_sign:
+                  type: string
+              required:
+              - asset_uuid
+              - success_sign
+  /api/SiteSuccessSignConfirmAPI:
+    put:
+      operationId: SiteSuccessSignConfirmAPI_put
+      summary: PUT /api/SiteSuccessSignConfirmAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  type: object
+                status:
+                  type: string
+              required:
+              - status
+  /api/StaticInfoOcrDetect:
+    post:
+      operationId: StaticInfoOcrDetect_post
+      summary: POST /api/StaticInfoOcrDetect
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                fid:
+                  type: string
+              required:
+              - fid
+  /api/SuccessSignAPI:
+    get:
+      operationId: SuccessSignAPI_get
+      summary: GET /api/SuccessSignAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+    post:
+      operationId: SuccessSignAPI_post
+      summary: POST /api/SuccessSignAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                uuids:
+                  type: string
+                effective_scope:
+                  type: string
+                pattern:
+                  type: string
+                status:
+                  type: string
+              required:
+              - uuids
+              - effective_scope
+              - pattern
+    put:
+      operationId: SuccessSignAPI_put
+      summary: PUT /api/SuccessSignAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                uuids:
+                  type: string
+                effective_scope:
+                  type: string
+                pattern:
+                  type: string
+                status:
+                  type: string
+              required:
+              - effective_scope
+              - pattern
+              - uuids
+    delete:
+      operationId: SuccessSignAPI_delete
+      summary: DELETE /api/SuccessSignAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id__in:
+                  type: string
+                  description: ID 列表
+  /api/SuccessSignMatchedAPI:
+    put:
+      operationId: SuccessSignMatchedAPI_put
+      summary: PUT /api/SuccessSignMatchedAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  success_sign_group_id:
+                    type: integer
+                  success_sign:
+                    type: string
+                  effective_scope:
+                    type: integer
+                  create_time:
+                    type: string
+                required:
+                - success_sign_group_id
+                - success_sign
+                - effective_scope
+  /api/UserAccountAPI:
+    post:
+      operationId: UserAccountAPI_post
+      summary: POST /api/UserAccountAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  username:
+                    type: string
+                  site_id:
+                    type: string
+                  api_id:
+                    type: string
+                  phone:
+                    type: string
+                  email:
+                    type: string
+                  nickname:
+                    type: string
+                  org_info:
+                    type: object
+                  login_info:
+                    type: object
+                  user_id:
+                    type: string
+                  sessions:
+                    type: array
+                    items:
+                      type: string
+                  devices:
+                    type: array
+                    items:
+                      type: string
+                  pattern:
+                    type: object
+                required:
+                - username
+                - site_id
+                - api_id
+    put:
+      operationId: UserAccountAPI_put
+      summary: PUT /api/UserAccountAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                comment:
+                  type: string
+                phone:
+                  type: string
+                email:
+                  type: string
+                nickname:
+                  type: string
+                org_info:
+                  type: object
+                sessions:
+                  type: array
+                  items:
+                    type: string
+                devices:
+                  type: array
+                  items:
+                    type: string
+                other_user_accounts:
+                  type: string
+  /api/UserAccountStatisticsAPI:
+    get:
+      operationId: UserAccountStatisticsAPI_get
+      summary: GET /api/UserAccountStatisticsAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: duration
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: integer
+      - name: site_id
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: username
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/UserSrcIpApiRequestTop5API:
+    get:
+      operationId: UserSrcIpApiRequestTop5API_get
+      summary: GET /api/UserSrcIpApiRequestTop5API
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+  /api/UserSrcIpAsRequesterAPI:
+    get:
+      operationId: UserSrcIpAsRequesterAPI_get
+      summary: GET /api/UserSrcIpAsRequesterAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: ip
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: request_time_tsrange
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/UserSrcIpAsResponserAPI:
+    get:
+      operationId: UserSrcIpAsResponserAPI_get
+      summary: GET /api/UserSrcIpAsResponserAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: ip
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: request_time_tsrange
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/UserSrcIpCountryDistributionPI:
+    get:
+      operationId: UserSrcIpCountryDistributionPI_get
+      summary: GET /api/UserSrcIpCountryDistributionPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+  /api/UserSrcIpDstIpResponseTop10API:
+    get:
+      operationId: UserSrcIpDstIpResponseTop10API_get
+      summary: GET /api/UserSrcIpDstIpResponseTop10API
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+  /api/UserSrcIpDstNodeRelationshipGraphTop20API:
+    get:
+      operationId: UserSrcIpDstNodeRelationshipGraphTop20API_get
+      summary: GET /api/UserSrcIpDstNodeRelationshipGraphTop20API
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+  /api/UserSrcIpFlowChartAPI:
+    get:
+      operationId: UserSrcIpFlowChartAPI_get
+      summary: GET /api/UserSrcIpFlowChartAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: ip
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: request_time_tsrange
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/UserSrcIpGroupAPI:
+    get:
+      operationId: UserSrcIpGroupAPI_get
+      summary: GET /api/UserSrcIpGroupAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+  /api/UserSrcIpInfoQueryAPI:
+    get:
+      operationId: UserSrcIpInfoQueryAPI_get
+      summary: GET /api/UserSrcIpInfoQueryAPI
+      tags:
+      - api_assets
+      parameters:
+      - name: ip
+        in: query
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: request_time_tsrange
+        in: query
+        required: false
+        description: ''
+        schema:
+          type: string
+      x-cli-body-fallback: false
+  /api/UserSrcIpListAPI:
+    get:
+      operationId: UserSrcIpListAPI_get
+      summary: GET /api/UserSrcIpListAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+  /api/UserSrcIpNetworkSegmentPieChartAPI:
+    get:
+      operationId: UserSrcIpNetworkSegmentPieChartAPI_get
+      summary: GET /api/UserSrcIpNetworkSegmentPieChartAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+  /api/UserSrcIpNetworkSegmentRequestTop5API:
+    get:
+      operationId: UserSrcIpNetworkSegmentRequestTop5API_get
+      summary: GET /api/UserSrcIpNetworkSegmentRequestTop5API
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+  /api/UserSrcIpPerDayRequestInfoAPI:
+    get:
+      operationId: UserSrcIpPerDayRequestInfoAPI_get
+      summary: GET /api/UserSrcIpPerDayRequestInfoAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+  /api/UserSrcIpPerHourRequestInfoPI:
+    get:
+      operationId: UserSrcIpPerHourRequestInfoPI_get
+      summary: GET /api/UserSrcIpPerHourRequestInfoPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: true
+  /api/WebsiteMoveInAppAPI:
+    put:
+      operationId: WebsiteMoveInAppAPI_put
+      summary: PUT /api/WebsiteMoveInAppAPI
+      tags:
+      - api_assets
+      parameters: []
+      x-cli-body-fallback: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                website_ids:
+                  type: array
+                  items:
+                    type: string
+                filters:
+                  type: object
+                app_id:
+                  type: integer
+                all:
+                  type: boolean
+              required:
+              - all
