@@ -1,0 +1,91 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account split_api API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "split_api",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "PUT /api/EnableSplitAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/EnableSplitAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/EnableSplitAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/SplitConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SplitConfigAPI",
+            "params": [
+              {
+                "name": "order_by",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/SplitConfigAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/SplitConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/SplitConfigAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/SplitConfigAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SplitConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SplitConfigAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SplitConfigAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,195 @@
+{
+  "item": [
+    {
+      "id": "8d66d556-5324-4cc6-9d46-782dae0419b0",
+      "name": "browsermanager/action/getfieldmetadata",
+      "description": {
+        "content": "浏览器管理/操作/字段元数据",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9441fea9-20e5-4d58-a028-1d5c2b4e9709",
+          "name": "浏览器fieldmeta",
+          "request": {
+            "name": "浏览器fieldmeta",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "browsermanager",
+                "action",
+                "getfieldmetadata"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a0b07aa2-cdd5-418e-87cb-87322cf5052c",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "browsermanager",
+                    "action",
+                    "getfieldmetadata"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"正常\",\n  \"data\": [\n    {\n      \"field\": \"timestamp\",\n      \"field_type\": \"date\",\n      \"display_name\": \"最新更新\",\n      \"operators\": null,\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": null,\n      \"order\": 0,\n      \"group\": \"默认分组\",\n      \"submodule_exclude\": [],\n      \"is_order_used\": true,\n      \"is_filter_used\": false,\n      \"sort_options\": [\n        {\n          \"name\": \"desc\",\n          \"display_name\": \"降序\"\n        },\n        {\n          \"name\": \"asc\",\n          \"display_name\": \"升序\"\n        }\n      ],\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            },\n            {\n              \"op\": \"date_histogram\",\n              \"name\": \"时间间隔分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"staff_name\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"员工姓名\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        },\n        {\n          \"name\": \"exists\",\n          \"display_name\": \"存在\",\n          \"value_type\": \"none\",\n          \"description\": \"exists\"\n        },\n        {\n          \"name\": \"not_exists\",\n          \"display_name\": \"不存在\",\n          \"value_type\": \"none\",\n          \"description\": \"not exists\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 1,\n      \"group\": \"员工信息\",\n      \"submodule_exclude\": [\n        \"ueba_check\"\n      ],\n      \"is_order_used\": false,\n      \"is_filter_used\": true,\n      \"sort_options\": null,\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"staff_number\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"员工工号\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 2,\n      \"group\": \"员工信息\",\n      \"submodule_exclude\": [\n        \"ueba_check\"\n      ],\n      \"is_order_used\": false,\n      \"is_filter_used\": true,\n      \"sort_options\": null,\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"dept_names\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"部门名称\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        },\n        {\n          \"name\": \"exists\",\n          \"display_name\": \"存在\",\n          \"value_type\": \"none\",\n          \"description\": \"exists\"\n        },\n        {\n          \"name\": \"not_exists\",\n          \"display_name\": \"不存在\",\n          \"value_type\": \"none\",\n          \"description\": \"not exists\"\n        },\n        {\n          \"name\": \"multi_wildcard\",\n          \"display_name\": \"多项模糊匹配\",\n          \"value_type\": \"multi\",\n          \"description\": \"multi match\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 3,\n      \"group\": \"员工信息\",\n      \"submodule_exclude\": [],\n      \"is_order_used\": false,\n      \"is_filter_used\": true,\n      \"sort_options\": null,\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"os_name\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"操作系统\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 4,\n      \"group\": \"终端信息\",\n      \"submodule_exclude\": [],\n      \"is_order_used\": false,\n      \"is_filter_used\": true,\n      \"sort_options\": null,\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"device_code\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"终端ID\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 5,\n      \"group\": \"终端信息\",\n      \"submodule_exclude\": [\n        \"ueba_check\"\n      ],\n      \"is_order_used\": false,\n      \"is_filter_used\": true,\n      \"sort_options\": null,\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"console_user\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"系统账户\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        },\n        {\n          \"name\": \"match\",\n          \"display_name\": \"包含(字符串)\",\n          \"value_type\": \"single\",\n          \"description\": \"contains\"\n        },\n        {\n          \"name\": \"not_match\",\n          \"display_name\": \"不包含(字符串)\",\n          \"value_type\": \"single\",\n          \"description\": \"not contains\"\n        },\n        {\n          \"name\": \"multi_wildcard\",\n          \"display_name\": \"多项模糊匹配\",\n          \"value_type\": \"multi\",\n          \"description\": \"multi match\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 6,\n      \"group\": \"终端信息\",\n      \"submodule_exclude\": [\n        \"ueba_check\"\n      ],\n      \"is_order_used\": false,\n      \"is_filter_used\": true,\n      \"sort_options\": null,\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"browser_name\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"浏览器名称\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        },\n        {\n          \"name\": \"match\",\n          \"display_name\": \"包含(字符串)\",\n          \"value_type\": \"single\",\n          \"description\": \"contains\"\n        },\n        {\n          \"name\": \"not_match\",\n          \"display_name\": \"不包含(字符串)\",\n          \"value_type\": \"single\",\n          \"description\": \"not contains\"\n        },\n        {\n          \"name\": \"exists\",\n          \"display_name\": \"存在\",\n          \"value_type\": \"none\",\n          \"description\": \"exists\"\n        },\n        {\n          \"name\": \"not_exists\",\n          \"display_name\": \"不存在\",\n          \"value_type\": \"none\",\n          \"description\": \"not exists\"\n        },\n        {\n          \"name\": \"multi_wildcard\",\n          \"display_name\": \"多项模糊匹配\",\n          \"value_type\": \"multi\",\n          \"description\": \"multi match\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 7,\n      \"group\": \"浏览器信息\",\n      \"submodule_exclude\": [],\n      \"is_order_used\": false,\n      \"is_filter_used\": true,\n      \"sort_options\": null,\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"process_name\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"进程名\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        },\n        {\n          \"name\": \"match\",\n          \"display_name\": \"包含(字符串)\",\n          \"value_type\": \"single\",\n          \"description\": \"contains\"\n        },\n        {\n          \"name\": \"not_match\",\n          \"display_name\": \"不包含(字符串)\",\n          \"value_type\": \"single\",\n          \"description\": \"not contains\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 8,\n      \"group\": \"浏览器信息\",\n      \"submodule_exclude\": [],\n      \"is_order_used\": false,\n      \"is_filter_used\": true,\n      \"sort_options\": null,\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"bundle_id\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"BundleID\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        },\n        {\n          \"name\": \"match\",\n          \"display_name\": \"包含(字符串)\",\n          \"value_type\": \"single\",\n          \"description\": \"contains\"\n        },\n        {\n          \"name\": \"not_match\",\n          \"display_name\": \"不包含(字符串)\",\n          \"value_type\": \"single\",\n          \"description\": \"not contains\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 9,\n      \"group\": \"浏览器信息\",\n      \"submodule_exclude\": [],\n      \"is_order_used\": false,\n      \"is_filter_used\": true,\n      \"sort_options\": null,\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"publisher\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"发布厂商\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        },\n        {\n          \"name\": \"exists\",\n          \"display_name\": \"存在\",\n          \"value_type\": \"none\",\n          \"description\": \"exists\"\n        },\n        {\n          \"name\": \"not_exists\",\n          \"display_name\": \"不存在\",\n          \"value_type\": \"none\",\n          \"description\": \"not exists\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 10,\n      \"group\": \"浏览器信息\",\n      \"submodule_exclude\": [],\n      \"is_order_used\": false,\n      \"is_filter_used\": true,\n      \"sort_options\": null,\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"browser_version\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"浏览器版本\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        },\n        {\n          \"name\": \"exists\",\n          \"display_name\": \"存在\",\n          \"value_type\": \"none\",\n          \"description\": \"exists\"\n        },\n        {\n          \"name\": \"not_exists\",\n          \"display_name\": \"不存在\",\n          \"value_type\": \"none\",\n          \"description\": \"not exists\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 11,\n      \"group\": \"浏览器信息\",\n      \"submodule_exclude\": [],\n      \"is_order_used\": false,\n      \"is_filter_used\": true,\n      \"sort_options\": [\n        {\n          \"name\": \"desc\",\n          \"display_name\": \"降序\"\n        },\n        {\n          \"name\": \"asc\",\n          \"display_name\": \"升序\"\n        }\n      ],\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"display_name\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"浏览器显示名称\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        },\n        {\n          \"name\": \"match\",\n          \"display_name\": \"包含(字符串)\",\n          \"value_type\": \"single\",\n          \"description\": \"contains\"\n        },\n        {\n          \"name\": \"not_match\",\n          \"display_name\": \"不包含(字符串)\",\n          \"value_type\": \"single\",\n          \"description\": \"not contains\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 12,\n      \"group\": \"浏览器信息\",\n      \"submodule_exclude\": [],\n      \"is_order_used\": false,\n      \"is_filter_used\": true,\n      \"sort_options\": null,\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "50b5488b-4b40-418b-85e5-3ecb7019d74c",
+    "name": "APISec Management account browsermanager/action/getfieldmetadata API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "item": [
+    {
+      "id": "fd5f27a8-f516-4061-916c-b8fa29cf0241",
+      "name": "classification/init_data/info",
+      "description": {
+        "content": "数据分类分级/初始化数据/信息",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f41871b2-51f5-4c0e-833e-bcbad85dce5d",
+          "name": "获取模块信息",
+          "request": {
+            "name": "获取模块信息",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "classification",
+                "init_data",
+                "info"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Module",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "24e5269c-b0c8-40b6-8c3b-acccdf702da9",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "classification",
+                    "init_data",
+                    "info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Module",
+                    "value": "system/config/backup"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "multipart/form-data"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "null",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f0dc4ddc-409c-4f35-8bea-a79293715e2b",
+    "name": "APISec Management account classification/init_data/info API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

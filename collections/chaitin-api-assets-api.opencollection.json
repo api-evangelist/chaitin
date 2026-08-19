@@ -1,0 +1,1523 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account api_assets API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "api_assets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "PUT /api/AssociateUserAccountAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/AssociateUserAccountAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/AssociateUserAccountAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/AttackTagsAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/AttackTagsAPI",
+            "params": [
+              {
+                "name": "filters",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/AttackTagsAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/AttackTagsAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/AttackTagsAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/AttackTagsAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/AttackTagsAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/AttackTagsAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/AttackTagsAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/BatchSchemaFieldAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/BatchSchemaFieldAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/BatchSchemaFieldAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/DataTagsAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/DataTagsAPI",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/DataTagsAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/DataTagsAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/DataTagsAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/DataTagsAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/DataTagsAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/DataTagsAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/DataTagsAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/DataTagsAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/DataTagsAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/DataTagsAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/DetectorConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/DetectorConfigAPI"
+          },
+          "docs": "GET /api/DetectorConfigAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/DetectorConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/DetectorConfigAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/DetectorConfigAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/EffectiveScopeAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/EffectiveScopeAPI",
+            "params": [
+              {
+                "name": "effective_scope",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/EffectiveScopeAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/IdentityAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/IdentityAPI"
+          },
+          "docs": "GET /api/IdentityAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/IdentityAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/IdentityAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/IdentityAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/IdentityAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/IdentityAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/IdentityAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/IdentityAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/IdentityAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/IdentityAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/IdentityMatchedAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/IdentityMatchedAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/IdentityMatchedAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/IgnoredInterfaceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/IgnoredInterfaceAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/IgnoredInterfaceAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/IgnoredInterfaceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/IgnoredInterfaceAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/IgnoredInterfaceAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/InterfaceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/InterfaceAPI",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/InterfaceAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/InterfaceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/InterfaceAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/InterfaceAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/InterfaceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/InterfaceAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/InterfaceAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/InterfaceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/InterfaceAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/InterfaceAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/InterfaceDetailsAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/InterfaceDetailsAPI",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "ID"
+              },
+              {
+                "name": "uuid",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/InterfaceDetailsAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/InterfaceDetailsParamAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/InterfaceDetailsParamAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "count",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "is_req",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/InterfaceDetailsParamAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/InterfaceGroupAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/InterfaceGroupAPI"
+          },
+          "docs": "GET /api/InterfaceGroupAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/InterfaceIdentityAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/InterfaceIdentityAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/InterfaceIdentityAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/InterfaceIdentityConfirmAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/InterfaceIdentityConfirmAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/InterfaceIdentityConfirmAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/InterfaceIdentityImportAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/InterfaceIdentityImportAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/InterfaceIdentityImportAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/InterfaceRemarkAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/InterfaceRemarkAPI",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/InterfaceRemarkAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/InterfaceRemarkAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/InterfaceRemarkAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/InterfaceRemarkAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/InterfaceRemarkAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/InterfaceRemarkAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/InterfaceRemarkAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/InterfaceRemarkAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/InterfaceRemarkAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/InterfaceRemarkAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/InterfaceResourceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/InterfaceResourceAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/InterfaceResourceAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/InterfaceResourceRecognitionAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/InterfaceResourceRecognitionAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/InterfaceResourceRecognitionAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/InterfaceResourceRecognitionAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/InterfaceResourceRecognitionAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/InterfaceResourceRecognitionAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/InterfaceResourceRecognitionEnableDisableAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/InterfaceResourceRecognitionEnableDisableAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/InterfaceResourceRecognitionEnableDisableAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/InterfaceSlimAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/InterfaceSlimAPI"
+          },
+          "docs": "GET /api/InterfaceSlimAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/InterfaceStatAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/InterfaceStatAPI"
+          },
+          "docs": "GET /api/InterfaceStatAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/InterfaceStatusAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/InterfaceStatusAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/InterfaceStatusAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/InterfaceStatusAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/InterfaceStatusAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/InterfaceStatusAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/InterfaceSuccessSignAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/InterfaceSuccessSignAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/InterfaceSuccessSignAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/InterfaceSuccessSignConfirmAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/InterfaceSuccessSignConfirmAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/InterfaceSuccessSignConfirmAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/InterfaceSuccessSignImportAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/InterfaceSuccessSignImportAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/InterfaceSuccessSignImportAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/InterfaceSwaggerImportAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/InterfaceSwaggerImportAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/InterfaceSwaggerImportAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/LockInterfaceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/LockInterfaceAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/LockInterfaceAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/MultipleInterfaceSuccessSignAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/MultipleInterfaceSuccessSignAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/MultipleInterfaceSuccessSignAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/RemoveTagAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/RemoveTagAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/RemoveTagAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/ResetAttackTagsModelAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/ResetAttackTagsModelAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/ResetAttackTagsModelAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/ResourceRecognitionBindingAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/ResourceRecognitionBindingAPI"
+          },
+          "docs": "GET /api/ResourceRecognitionBindingAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/ResourceRecognitionBindingAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/ResourceRecognitionBindingAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/ResourceRecognitionBindingAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/ResourceRecognitionEnableDisableAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/ResourceRecognitionEnableDisableAPI"
+          },
+          "docs": "GET /api/ResourceRecognitionEnableDisableAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/ResourceRecognitionEnableDisableAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/ResourceRecognitionEnableDisableAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/ResourceRecognitionEnableDisableAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/SchemaAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SchemaAPI",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/SchemaAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/SchemaAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/SchemaAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/SchemaAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SchemaAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SchemaAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SchemaAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/SchemaAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/SchemaAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/SchemaAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/SchemaFieldAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SchemaFieldAPI",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "is_req",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/SchemaFieldAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SchemaFieldAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SchemaFieldAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SchemaFieldAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/SchemaFieldAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/SchemaFieldAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/SchemaFieldAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/SiteAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SiteAPI",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/SiteAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/SiteAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/SiteAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/SiteAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SiteAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SiteAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SiteAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/SiteAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/SiteAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/SiteAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SiteIdentityAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SiteIdentityAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SiteIdentityAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SiteIdentityConfirmAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SiteIdentityConfirmAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SiteIdentityConfirmAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/SiteInfoAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SiteInfoAPI",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/SiteInfoAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/SiteInfoAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/SiteInfoAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/SiteInfoAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SiteInfoAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SiteInfoAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SiteInfoAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/SiteInfoAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/SiteInfoAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/SiteInfoAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SiteSuccessSignAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SiteSuccessSignAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SiteSuccessSignAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SiteSuccessSignConfirmAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SiteSuccessSignConfirmAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SiteSuccessSignConfirmAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/StaticInfoOcrDetect",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/StaticInfoOcrDetect",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/StaticInfoOcrDetect"
+        },
+        {
+          "info": {
+            "name": "GET /api/SuccessSignAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SuccessSignAPI"
+          },
+          "docs": "GET /api/SuccessSignAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/SuccessSignAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/SuccessSignAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/SuccessSignAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SuccessSignAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SuccessSignAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SuccessSignAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/SuccessSignAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/SuccessSignAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/SuccessSignAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SuccessSignMatchedAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SuccessSignMatchedAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SuccessSignMatchedAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/UserAccountAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/UserAccountAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/UserAccountAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/UserAccountAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/UserAccountAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/UserAccountAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserAccountStatisticsAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserAccountStatisticsAPI",
+            "params": [
+              {
+                "name": "duration",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "username",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/UserAccountStatisticsAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserSrcIpApiRequestTop5API",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserSrcIpApiRequestTop5API"
+          },
+          "docs": "GET /api/UserSrcIpApiRequestTop5API"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserSrcIpAsRequesterAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserSrcIpAsRequesterAPI",
+            "params": [
+              {
+                "name": "ip",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "request_time_tsrange",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/UserSrcIpAsRequesterAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserSrcIpAsResponserAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserSrcIpAsResponserAPI",
+            "params": [
+              {
+                "name": "ip",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "request_time_tsrange",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/UserSrcIpAsResponserAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserSrcIpCountryDistributionPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserSrcIpCountryDistributionPI"
+          },
+          "docs": "GET /api/UserSrcIpCountryDistributionPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserSrcIpDstIpResponseTop10API",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserSrcIpDstIpResponseTop10API"
+          },
+          "docs": "GET /api/UserSrcIpDstIpResponseTop10API"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserSrcIpDstNodeRelationshipGraphTop20API",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserSrcIpDstNodeRelationshipGraphTop20API"
+          },
+          "docs": "GET /api/UserSrcIpDstNodeRelationshipGraphTop20API"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserSrcIpFlowChartAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserSrcIpFlowChartAPI",
+            "params": [
+              {
+                "name": "ip",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "request_time_tsrange",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/UserSrcIpFlowChartAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserSrcIpGroupAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserSrcIpGroupAPI"
+          },
+          "docs": "GET /api/UserSrcIpGroupAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserSrcIpInfoQueryAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserSrcIpInfoQueryAPI",
+            "params": [
+              {
+                "name": "ip",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "request_time_tsrange",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/UserSrcIpInfoQueryAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserSrcIpListAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserSrcIpListAPI"
+          },
+          "docs": "GET /api/UserSrcIpListAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserSrcIpNetworkSegmentPieChartAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserSrcIpNetworkSegmentPieChartAPI"
+          },
+          "docs": "GET /api/UserSrcIpNetworkSegmentPieChartAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserSrcIpNetworkSegmentRequestTop5API",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserSrcIpNetworkSegmentRequestTop5API"
+          },
+          "docs": "GET /api/UserSrcIpNetworkSegmentRequestTop5API"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserSrcIpPerDayRequestInfoAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserSrcIpPerDayRequestInfoAPI"
+          },
+          "docs": "GET /api/UserSrcIpPerDayRequestInfoAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserSrcIpPerHourRequestInfoPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserSrcIpPerHourRequestInfoPI"
+          },
+          "docs": "GET /api/UserSrcIpPerHourRequestInfoPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/WebsiteMoveInAppAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/WebsiteMoveInAppAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/WebsiteMoveInAppAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

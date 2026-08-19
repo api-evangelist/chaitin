@@ -1,0 +1,453 @@
+{
+  "item": [
+    {
+      "id": "3decbd0b-bbab-4745-a042-79e344bbc698",
+      "name": "trigger_rule",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "eab7a923-f47d-46d4-ab1a-d7ee6c27794f",
+          "name": "GET /api/BuildinRuleTemplateAPI",
+          "request": {
+            "name": "GET /api/BuildinRuleTemplateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "BuildinRuleTemplateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a0f6e8de-460f-4719-8c23-415e84553e51",
+          "name": "PUT /api/PushTriggerRuleAPI",
+          "request": {
+            "name": "PUT /api/PushTriggerRuleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PushTriggerRuleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "61f818b0-52e7-4f98-ac9a-3e2e67fa83b4",
+          "name": "POST /api/RuleTemplateAPI",
+          "request": {
+            "name": "POST /api/RuleTemplateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RuleTemplateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"remark\": \"<string>\",\n  \"device_ids\": \"<string>\",\n  \"strategy_id\": \"<integer>\",\n  \"template\": \"<object>\",\n  \"is_enabled\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6446c3c3-4bda-40c3-bdad-24373c38e9e9",
+          "name": "PUT /api/RuleTemplateAPI",
+          "request": {
+            "name": "PUT /api/RuleTemplateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RuleTemplateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"device_ids\": \"<string>\",\n  \"is_enabled\": \"<boolean>\",\n  \"remark\": \"<string>\",\n  \"strategy_id\": \"<integer>\",\n  \"template\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d92a007d-51ac-4927-be8e-90ca197956e5",
+          "name": "DELETE /api/RuleTemplateAPI",
+          "request": {
+            "name": "DELETE /api/RuleTemplateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RuleTemplateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"delete_rules\": \"<boolean>\",\n  \"delete_device_rules\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c988385d-8482-434e-8a4a-474eff90353c",
+          "name": "GET /api/TargetDeviceAPI",
+          "request": {
+            "name": "GET /api/TargetDeviceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "TargetDeviceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "71a81603-5f57-4d59-86e7-af9b6d0f7f3b",
+          "name": "POST /api/TargetDeviceAPI",
+          "request": {
+            "name": "POST /api/TargetDeviceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "TargetDeviceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"address\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"api_token\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "13df4f3e-ee33-44b2-83f5-ba9b3d615a34",
+          "name": "PUT /api/TargetDeviceAPI",
+          "request": {
+            "name": "PUT /api/TargetDeviceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "TargetDeviceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"address\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"api_token\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3526bda6-7b2e-49a2-a4eb-d40c058f43a5",
+          "name": "DELETE /api/TargetDeviceAPI",
+          "request": {
+            "name": "DELETE /api/TargetDeviceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "TargetDeviceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"delete_device_rules\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "40e1aa63-426f-4f78-ba53-d9d94bded1bf",
+          "name": "POST /api/TriggerRuleAPI",
+          "request": {
+            "name": "POST /api/TriggerRuleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "TriggerRuleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"device_id\": \"<integer>\",\n  \"remark\": \"<string>\",\n  \"template\": \"<object>\",\n  \"strategy_id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a3cf38f3-d229-4916-b1f2-bcd4b6f8c7c8",
+          "name": "DELETE /api/TriggerRuleAPI",
+          "request": {
+            "name": "DELETE /api/TriggerRuleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "TriggerRuleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"delete_device_rule\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b3073f91-68d9-4e64-a620-25e5fd6f87af",
+    "name": "APISec Management account trigger_rule API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

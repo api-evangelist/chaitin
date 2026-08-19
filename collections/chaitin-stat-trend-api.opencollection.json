@@ -1,0 +1,74 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account stat/trend API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "stat/trend",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "get advanced access trend",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/stat/advance/trend/access",
+            "params": [
+              {
+                "name": "begin_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "get advanced access trend"
+        },
+        {
+          "info": {
+            "name": "get advanced intercept trend",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/stat/advance/trend/intercept",
+            "params": [
+              {
+                "name": "begin_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "get advanced intercept trend"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

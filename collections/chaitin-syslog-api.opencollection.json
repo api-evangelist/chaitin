@@ -1,0 +1,168 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account Syslog 管理与系统日志 API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Syslog 管理与系统日志",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "syslog配置列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/log/syslog/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "syslog配置列表"
+        },
+        {
+          "info": {
+            "name": "删除syslog配置信息",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/log/syslog/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "删除syslog配置信息"
+        },
+        {
+          "info": {
+            "name": "添加syslog配置信息",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/log/syslog/add",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "添加syslog配置信息"
+        },
+        {
+          "info": {
+            "name": "修改syslog配置信息",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/log/syslog/modify",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "修改syslog配置信息"
+        },
+        {
+          "info": {
+            "name": "kafka配置列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/log/kafka/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "kafka配置列表"
+        },
+        {
+          "info": {
+            "name": "删除kafka配置信息",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/log/kafka/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "删除kafka配置信息"
+        },
+        {
+          "info": {
+            "name": "添加kafka配置信息",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/log/kafka/add",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "添加kafka配置信息"
+        },
+        {
+          "info": {
+            "name": "修改kafka配置信息",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/log/kafka/modify",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "修改kafka配置信息"
+        },
+        {
+          "info": {
+            "name": "系统日志的列表信息",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/log/system_log/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "系统日志的列表信息"
+        },
+        {
+          "info": {
+            "name": "删除系统日志的列表信息",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/log/system_log/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "删除系统日志的列表信息"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

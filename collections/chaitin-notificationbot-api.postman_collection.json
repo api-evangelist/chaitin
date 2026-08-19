@@ -1,0 +1,218 @@
+{
+  "item": [
+    {
+      "id": "e00ce2be-6df4-45c6-ba96-427c752d7ead",
+      "name": "notificationbot",
+      "description": {
+        "content": "通知机器人",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4d88d1a3-3eb4-4ff4-8166-4d5b5d14628e",
+          "name": "新增通知渠道",
+          "request": {
+            "name": "新增通知渠道",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "notificationbot"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"category\": \"<string>\",\n  \"config\": {\n    \"email_notification\": {\n      \"from_user\": \"<string>\",\n      \"user_name\": \"<string>\",\n      \"password\": \"<string>\",\n      \"server\": \"<string>\",\n      \"smtp_port\": \"<integer>\",\n      \"encryption_mode\": \"<integer>\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "70ec08fe-0607-4c2b-a7b1-f61a57764561",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notificationbot"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"邮件机器人\",\n  \"category\": \"email\",\n  \"config\": {\n    \"email_notification\": {\n      \"from_user\": \"xingwang.xu@cyberserval.cn\",\n      \"user_name\": \"邮件告警测试\",\n      \"password\": \"nopassword\",\n      \"server\": \"smtp.feishu.cn\",\n      \"smtp_port\": 465,\n      \"encryption_mode\": 1\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7d4758a1-1211-4ed5-8b0a-7ed6c039dfb8",
+    "name": "APISec Management account notificationbot API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

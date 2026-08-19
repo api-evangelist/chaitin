@@ -1,0 +1,195 @@
+{
+  "item": [
+    {
+      "id": "f5c3c6f4-47c0-4c35-8485-5b4d448b8204",
+      "name": "ueba/staff/getfieldmetadata",
+      "description": {
+        "content": "UEBA 分析/人员/字段元数据",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7ec55204-f13c-4746-a9e0-84688a92effc",
+          "name": "UEBA用户页事件getfieldmetadata",
+          "request": {
+            "name": "UEBA用户页事件getfieldmetadata",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ueba",
+                "staff",
+                "getfieldmetadata"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6d9b55a9-0250-41dd-a528-4119c2059556",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ueba",
+                    "staff",
+                    "getfieldmetadata"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": [\n    {\n      \"field\": \"staff_name\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"员工姓名\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        },\n        {\n          \"name\": \"exists\",\n          \"display_name\": \"存在\",\n          \"value_type\": \"none\",\n          \"description\": \"exists\"\n        },\n        {\n          \"name\": \"not_exists\",\n          \"display_name\": \"不存在\",\n          \"value_type\": \"none\",\n          \"description\": \"not exists\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 0,\n      \"group\": \"员工信息\",\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"dept_names\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"部门名称\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        },\n        {\n          \"name\": \"exists\",\n          \"display_name\": \"存在\",\n          \"value_type\": \"none\",\n          \"description\": \"exists\"\n        },\n        {\n          \"name\": \"not_exists\",\n          \"display_name\": \"不存在\",\n          \"value_type\": \"none\",\n          \"description\": \"not exists\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 1,\n      \"group\": \"员工信息\",\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"device_code\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"终端ID\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": null,\n      \"async_options\": true,\n      \"order\": 2,\n      \"group\": \"终端信息\",\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"ueba_source\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"事件类型\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        },\n        {\n          \"name\": \"match\",\n          \"display_name\": \"包含(字符串)\",\n          \"value_type\": \"single\",\n          \"description\": \"contains\"\n        },\n        {\n          \"name\": \"not_match\",\n          \"display_name\": \"不包含(字符串)\",\n          \"value_type\": \"single\",\n          \"description\": \"not contains\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": [\n        {\n          \"name\": \"policy_channel_log\",\n          \"display_name\": \"渠道管控日志\"\n        },\n        {\n          \"name\": \"policy_network_log\",\n          \"display_name\": \"全局联网日志\"\n        },\n        {\n          \"name\": \"policy_process_log\",\n          \"display_name\": \"进程管控日志\"\n        },\n        {\n          \"name\": \"policy_external_device_log\",\n          \"display_name\": \"外设管控日志\"\n        },\n        {\n          \"name\": \"policy_email_log\",\n          \"display_name\": \"邮件管控日志\"\n        },\n        {\n          \"name\": \"policy_compliance_log\",\n          \"display_name\": \"合规管控日志\"\n        },\n        {\n          \"name\": \"policy_software_log\",\n          \"display_name\": \"软件管控日志\"\n        },\n        {\n          \"name\": \"policy_software_network_log\",\n          \"display_name\": \"进程联网事件\"\n        },\n        {\n          \"name\": \"policy_clipboard_log\",\n          \"display_name\": \"剪贴板风险日志\"\n        },\n        {\n          \"name\": \"policy_im_log\",\n          \"display_name\": \"IM管控日志\"\n        },\n        {\n          \"name\": \"code_control_log\",\n          \"display_name\": \"代码管控事件\"\n        },\n        {\n          \"name\": \"clipboard_behavior_log\",\n          \"display_name\": \"剪贴板行为日志\"\n        },\n        {\n          \"name\": \"behavior_file\",\n          \"display_name\": \"文件行为日志\"\n        }\n      ],\n      \"async_options\": false,\n      \"order\": 3,\n      \"group\": \"默认分组\",\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"field\": \"ueba_category\",\n      \"field_type\": \"keyword\",\n      \"display_name\": \"事件名称\",\n      \"operators\": [\n        {\n          \"name\": \"is\",\n          \"display_name\": \"等于\",\n          \"value_type\": \"single\",\n          \"description\": \"==\"\n        },\n        {\n          \"name\": \"is_not\",\n          \"display_name\": \"不等于\",\n          \"value_type\": \"single\",\n          \"description\": \"!=\"\n        },\n        {\n          \"name\": \"contains\",\n          \"display_name\": \"属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"在...集合\"\n        },\n        {\n          \"name\": \"not_contains\",\n          \"display_name\": \"不属于\",\n          \"value_type\": \"multi\",\n          \"description\": \"不在...集合\"\n        },\n        {\n          \"name\": \"match\",\n          \"display_name\": \"包含(字符串)\",\n          \"value_type\": \"single\",\n          \"description\": \"contains\"\n        },\n        {\n          \"name\": \"not_match\",\n          \"display_name\": \"不包含(字符串)\",\n          \"value_type\": \"single\",\n          \"description\": \"not contains\"\n        }\n      ],\n      \"is_commonly_used\": false,\n      \"options\": [\n        {\n          \"name\": \"outgoing\",\n          \"display_name\": \"外发行为\"\n        },\n        {\n          \"name\": \"concealment\",\n          \"display_name\": \"隐匿行为\"\n        },\n        {\n          \"name\": \"download\",\n          \"display_name\": \"下载行为\"\n        },\n        {\n          \"name\": \"confrontation\",\n          \"display_name\": \"对抗行为\"\n        },\n        {\n          \"name\": \"modify\",\n          \"display_name\": \"修改行为\"\n        }\n      ],\n      \"async_options\": false,\n      \"order\": 4,\n      \"group\": \"默认分组\",\n      \"chart_options\": {\n        \"dimension\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"terms\",\n              \"name\": \"分组聚合\"\n            }\n          ]\n        },\n        \"metric\": {\n          \"status\": true,\n          \"func\": [\n            {\n              \"op\": \"value_count\",\n              \"name\": \"计数\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "bac5ec53-a649-417c-a55f-2cfef0a5e49d",
+    "name": "APISec Management account ueba/staff/getfieldmetadata API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

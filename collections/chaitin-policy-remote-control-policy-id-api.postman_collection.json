@@ -1,0 +1,238 @@
+{
+  "item": [
+    {
+      "id": "57d5f941-1ea1-43c0-8d50-b35336c4688f",
+      "name": "policy/remote_control/{policy_id}",
+      "description": {
+        "content": "策略管理/远程控制/policy_id 参数",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "aa55679d-4ee7-4ae6-8f92-9bda83da0ee3",
+          "name": "更新",
+          "request": {
+            "name": "更新",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "policy",
+                "remote_control",
+                ":policy_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "policy_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"binding_config\": {\n    \"source\": \"<string>\",\n    \"include\": {\n      \"dept_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"staff_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"staff_tag_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"device_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"device_tag_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    \"exclude\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "81772a71-42a7-4097-943c-572985545d61",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "policy",
+                    "remote_control",
+                    ":policy_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "policy_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"binding_config\": {\n    \"source\": \"compliance\",\n    \"include\": {\n      \"dept_ids\": [\n        \"282cfac5-94a1-4d2c-ade8-f8b0538bde11\"\n      ],\n      \"staff_ids\": [\n        \"f38ecdcb-3162-464c-9e56-8102d2c35d0c\"\n      ],\n      \"staff_tag_ids\": [\n        \"cfe7ff47-c180-4b88-9e70-b80feea3f913\"\n      ],\n      \"device_ids\": [\n        \"d1247921-d4fd-4f6c-9f62-504684f8f288\",\n        \"1c16c892242c467cadd48ab0f00f26e9\",\n        \"8464a3c6c8054423acbbc0c9cadb273a\"\n      ],\n      \"device_tag_ids\": [\n        \"4733a46b-2d8a-4506-902d-df81c32406c1\"\n      ]\n    },\n    \"exclude\": {}\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 2358,\n  \"msg\": \"string\",\n  \"data\": {\n    \"index\": [\n      \"string\",\n      \"string\"\n    ],\n    \"page\": 4777,\n    \"limit\": 3555,\n    \"search_total\": 5653,\n    \"total\": 5039,\n    \"search_after\": null,\n    \"results\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "31475d68-92c7-42b8-b438-bfe22378de0b",
+    "name": "APISec Management account policy/remote_control/{policy_id} API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "item": [
+    {
+      "id": "903dd990-ff92-4a37-a6a0-607c08988b35",
+      "name": "installer/simpletask/list",
+      "description": {
+        "content": "终端安装包/简易任务/列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4fff1fe1-3970-4217-b91f-4a757556fcea",
+          "name": "查询个体发布任务列表",
+          "request": {
+            "name": "查询个体发布任务列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "installer",
+                "simpletask",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>",
+                  "description": "(Required) 状态"
+                },
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>",
+                  "description": "(Required) 名称"
+                },
+                {
+                  "disabled": false,
+                  "key": "installer_id",
+                  "value": "<string>",
+                  "description": "(Required) 版本uid"
+                },
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>",
+                  "description": "(Required) 名称模糊匹配"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "76135c4a-9634-4956-ad61-17e627a40265",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "installer",
+                    "simpletask",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "5"
+                    },
+                    {
+                      "key": "status",
+                      "value": "activated"
+                    },
+                    {
+                      "key": "name",
+                      "value": "string"
+                    },
+                    {
+                      "key": "installer_id",
+                      "value": "string"
+                    },
+                    {
+                      "key": "search",
+                      "value": "string"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"total\": 2,\n    \"results\": [\n      {\n        \"uid\": \"b197fe31-77e8-445d-9ef7-23385bafded8\",\n        \"name\": \"个体发布2\",\n        \"current\": 0,\n        \"total\": 0,\n        \"status\": \"deactivated\",\n        \"installer\": {\n          \"uid\": \"07ec5f03-86e9-40fc-91fb-4994da0631ce\",\n          \"name\": \"DDR Windows v3.3.98\",\n          \"version\": \"3.3.98\",\n          \"architecture\": \"x86_64\",\n          \"family\": \"Windows\",\n          \"valid_os\": [\n            \"Win11\",\n            \"Win10\",\n            \"Win8\",\n            \"Win7\"\n          ],\n          \"update_time\": \"2024-07-13T07:04:25.218373Z\"\n        },\n        \"update_time\": \"2024-07-26T10:06:10.618403Z\",\n        \"update_by\": {\n          \"uid\": \"50dcaf08-c0f6-4ffa-8f86-3220e55d4385\",\n          \"name\": \"wly\",\n          \"username\": \"wly\",\n          \"email\": \"wly@wly.com\"\n        }\n      },\n      {\n        \"uid\": \"7549e4a5-6447-4c5d-a03c-648804a93e60\",\n        \"name\": \"全量发布1\",\n        \"current\": 0,\n        \"total\": 0,\n        \"status\": \"deactivated\",\n        \"installer\": {\n          \"uid\": \"07ec5f03-86e9-40fc-91fb-4994da0631ce\",\n          \"name\": \"DDR Windows v3.3.98\",\n          \"version\": \"3.3.98\",\n          \"architecture\": \"x86_64\",\n          \"family\": \"Windows\",\n          \"valid_os\": [\n            \"Win11\",\n            \"Win10\",\n            \"Win8\",\n            \"Win7\"\n          ],\n          \"update_time\": \"2024-07-13T07:04:25.218373Z\"\n        },\n        \"update_time\": \"2024-07-26T10:05:17.694149Z\",\n        \"update_by\": {\n          \"uid\": \"50dcaf08-c0f6-4ffa-8f86-3220e55d4385\",\n          \"name\": \"wly\",\n          \"username\": \"wly\",\n          \"email\": \"wly@wly.com\"\n        }\n      }\n    ],\n    \"page\": 1\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "49b568bf-b570-4907-ba63-59fc81be62f7",
+    "name": "APISec Management account installer/simpletask/list API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

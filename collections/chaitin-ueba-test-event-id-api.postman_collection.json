@@ -1,0 +1,211 @@
+{
+  "item": [
+    {
+      "id": "02d133ba-7725-44f6-b9d2-b1a34cf8bff5",
+      "name": "ueba/test/{event_id}",
+      "description": {
+        "content": "UEBA 分析/测试/event_id 参数",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "06f33c90-0e8b-449d-b7d2-eece3d856791",
+          "name": "测试事件结果",
+          "request": {
+            "name": "测试事件结果",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ueba",
+                "test",
+                ":event_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "event_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4b3f7585-7a3a-44c4-b9dd-13e26370392b",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ueba",
+                    "test",
+                    ":event_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "event_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"status\": \"succeeded\",\n    \"data\": [\n      {\n        \"status\": \"created\",\n        \"comment\": \"\",\n        \"created_timestamp\": \"2023-11-21T03:43:28Z\",\n        \"expand\": {\n          \"compressed_filenames\": \"\",\n          \"dest\": \"\",\n          \"file_source\": \"\",\n          \"rule_version\": {\n            \"cond_ticket\": \"2a563efd44b89f56d69e615c8eda4363\",\n            \"cond_version\": 15,\n            \"dc_ticket\": \"2a563efd44b89f56d69e615c8eda4363\",\n            \"dc_version\": 174,\n            \"filetype_version\": 34,\n            \"im_version\": 63,\n            \"policy_ticket\": \"027af9e67223aeb02434251c1dc8bc4b\",\n            \"policy_version\": 283\n          },\n          \"screen_recording\": false,\n          \"screenshot\": false\n        },\n        \"category\": \"channel\",\n        \"device_id\": \"7b45e606-c7b4-40a2-a08e-4aa9fb0ddcf1\",\n        \"device_code\": \"PC-000006\",\n        \"ip_address\": \"192.168.96.148\",\n        \"console_user\": \"wenghuangge\",\n        \"os_name\": \"macOS\",\n        \"os_friendly_name\": \"macOS 12.6.5\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_code\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"time\": 1700477266000,\n        \"@timestamp\": 1700477266000,\n        \"timestamp\": \"2023-11-20T10:47:46Z\",\n        \"agent_version\": \"3.0.228\",\n        \"event_id\": \"7c708b6c-8e94-4fa3-b71a-9025c26e2a20\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"policy_id\": \"afcf096e-0d7a-4ebf-98f8-6c4aab55bb3f\",\n        \"policy_name\": \"whg_test_01\",\n        \"policy_group_id\": \"ea581dad-40f7-45e0-b37a-f92878876cc9\",\n        \"policy_group_name\": \"默认组\",\n        \"risk_name\": \"高危\",\n        \"risk_level\": 1,\n        \"action\": \"block\",\n        \"is_blocked\": true,\n        \"is_password_protected\": false,\n        \"channel\": \"feishu\",\n        \"channel_name\": \"飞书\",\n        \"operation\": \"outgoing\",\n        \"filename\": \"file_flow_05.docx\",\n        \"filepath\": \"/Users/wenghuangge/Desktop/文件加解密/file_flow_05.docx\",\n        \"filesize\": 12125,\n        \"md5_hash\": \"a7b0a40dc540c02eb4142e159e7ba39f\",\n        \"is_hidden\": false,\n        \"is_compressed\": false,\n        \"sha256_hash\": \"1440e0726ef93b80c16d2d06ee6ec6e3fb8feba4c60d18059b52cce6e8e66020\",\n        \"file_type\": \"Microsoft Word 2007+\",\n        \"file_suffix\": \"docx\",\n        \"file_created_time\": 1700134309775,\n        \"file_created_timestamp\": \"2023-11-16T11:31:49Z\",\n        \"file_updated_time\": 1700475386941,\n        \"file_updated_timestamp\": \"2023-11-20T10:16:26Z\",\n        \"file_type_categories\": [\n          \"Microsoft Word\",\n          \"Word\"\n        ],\n        \"file_description\": \"Microsoft Word 2007+\",\n        \"simhash_value\": \"\",\n        \"file_policies\": [\n          {\n            \"action\": \"block\",\n            \"classifications\": [\n              {\n                \"data_level\": 3,\n                \"data_level_name\": \"保密数据\",\n                \"name\": \"whg_class\",\n                \"uid\": \"f42cba49-cd9a-485f-897a-d118c4b24765\"\n              }\n            ],\n            \"file_created_time\": 1700134309000,\n            \"file_created_timestamp\": \"2023-11-16T11:31:49Z\",\n            \"file_description\": \"Microsoft Word 2007+\",\n            \"file_suffix\": \"docx\",\n            \"file_type\": \"docx\",\n            \"file_type_categories\": [\n              \"Microsoft Word\",\n              \"Word\"\n            ],\n            \"file_updated_time\": 1700475386000,\n            \"file_updated_timestamp\": \"2023-11-20T10:16:26Z\",\n            \"filename\": \"file_flow_05.docx\",\n            \"filepath\": \"/Users/wenghuangge/Desktop/文件加解密/file_flow_05.docx\",\n            \"filesize\": 12125,\n            \"is_compressed\": false,\n            \"is_hidden\": false,\n            \"is_password_protected\": false,\n            \"md5_hash\": \"a7b0a40dc540c02eb4142e159e7ba39f\",\n            \"policy_group_id\": \"ea581dad-40f7-45e0-b37a-f92878876cc9\",\n            \"policy_group_name\": \"默认组\",\n            \"policy_id\": \"afcf096e-0d7a-4ebf-98f8-6c4aab55bb3f\",\n            \"policy_name\": \"whg_test_01\",\n            \"risk_level\": 1,\n            \"risk_name\": \"高危\"\n          }\n        ],\n        \"content_summary_list\": [],\n        \"extract_file\": false,\n        \"cl_id\": \"f42cba49-cd9a-485f-897a-d118c4b24765\",\n        \"cl_name\": \"whg_class\",\n        \"data_level\": 3,\n        \"data_level_name\": \"保密数据\",\n        \"cl_ids\": [\n          \"f42cba49-cd9a-485f-897a-d118c4b24765\"\n        ],\n        \"cl_names\": [\n          \"whg_class\"\n        ],\n        \"data_levels\": [\n          3\n        ],\n        \"data_level_names\": [\n          \"保密数据\"\n        ],\n        \"has_cls\": true,\n        \"metasource\": [\n          {\n            \"original\": {\n              \"data\": \"机密\",\n              \"url\": \"https://twitter.com/\"\n            },\n            \"source\": [\n              {\n                \"name\": \"Chrome\",\n                \"display_name\": \"谷歌浏览器\"\n              }\n            ],\n            \"category\": \"browser\"\n          }\n        ],\n        \"log_cnt\": 27,\n        \"score\": 60,\n        \"cnt\": 276\n      },\n      {\n        \"staff_name\": \"\",\n        \"md5_hash\": \"bf9ea12e04e4d549a7f40d7ce7a0c528\",\n        \"console_user\": \"nanzhi\",\n        \"channel\": \"feishu\",\n        \"has_cls\": false,\n        \"dept_paths\": [],\n        \"data_level\": 0,\n        \"sha256_hash\": \"23cc83f7e81e97e76fb12d95914eda460be3adbf8cc3f043386a4a807a949f84\",\n        \"dept_names\": [],\n        \"filepath\": \"/Users/nanzhi/Downloads/iOS.and.macOS.Performance.Tuning.2017.3.pdf\",\n        \"staff_tags\": [],\n        \"cl_id\": \"\",\n        \"file_type\": \"PDF document, version 1.6, 24 pages\",\n        \"staff_id\": \"\",\n        \"action\": \"approval\",\n        \"channel_account\": \"\",\n        \"os_friendly_name\": \"macOS 12.7\",\n        \"file_updated_timestamp\": \"2023-10-13T10:34:45Z\",\n        \"file_type_categories\": [\n          \"PDF document\"\n        ],\n        \"device_id\": \"1c16c892-242c-467c-add4-8ab0f00f26e9\",\n        \"expand\": {\n          \"rule_version\": {\n            \"policy_version\": 99,\n            \"cond_version\": 13,\n            \"filetype_version\": 2,\n            \"dc_version\": 64,\n            \"dc_ticket\": \"ca798651bccd2e673a55d71557084b28\",\n            \"cond_ticket\": \"ca798651bccd2e673a55d71557084b28\",\n            \"policy_ticket\": \"424ab3962e2c487ef455b709e19d26c3\"\n          },\n          \"compressed_filenames\": \"\",\n          \"screen_recording\": false,\n          \"file_source\": \"未知\",\n          \"screenshot\": false,\n          \"dest\": \"\"\n        },\n        \"filename\": \"iOS.and.macOS.Performance.Tuning.2017.3.pdf\",\n        \"file_suffix\": \"pdf\",\n        \"file_updated_time\": 1697193285442,\n        \"file_policies\": [\n          {\n            \"file_created_timestamp\": \"2023-10-13T10:34:43Z\",\n            \"file_updated_timestamp\": \"2023-10-13T10:34:45Z\",\n            \"md5_hash\": \"bf9ea12e04e4d549a7f40d7ce7a0c528\",\n            \"policy_id\": \"21f9c2cb-5c86-47ab-a514-72bcade6facc\",\n            \"is_hidden\": false,\n            \"policy_name\": \"南测1\",\n            \"filesize\": 8357559,\n            \"policy_group_id\": \"ea581dad-40f7-45e0-b37a-f92878876cc9\",\n            \"policy_group_name\": \"默认组\",\n            \"risk_level\": 1,\n            \"classifications\": [],\n            \"filename\": \"iOS.and.macOS.Performance.Tuning.2017.3.pdf\",\n            \"filepath\": \"/Users/nanzhi/Downloads/iOS.and.macOS.Performance.Tuning.2017.3.pdf\",\n            \"is_compressed\": false,\n            \"file_type\": \"pdf\",\n            \"file_suffix\": \"pdf\",\n            \"file_updated_time\": 1697193285000,\n            \"is_password_protected\": false,\n            \"file_description\": \"\",\n            \"action\": \"approval\",\n            \"risk_name\": \"高危\",\n            \"file_created_time\": 1697193283000\n          }\n        ],\n        \"device_code\": \"PC-000003\",\n        \"extract_file\": false,\n        \"file_description\": \"PDF document, version 1.6, 24 pages\",\n        \"data_level_name\": \"未分级\",\n        \"risk_name\": \"高危\",\n        \"staff_email\": \"\",\n        \"status\": \"created\",\n        \"file_created_time\": 1697193283938,\n        \"file_created_timestamp\": \"2023-10-13T10:34:43Z\",\n        \"policy_id\": \"21f9c2cb-5c86-47ab-a514-72bcade6facc\",\n        \"dept_ids\": [],\n        \"data_level_names\": [\n          \"未分级\"\n        ],\n        \"is_hidden\": false,\n        \"filesize\": 8357559,\n        \"policy_group_id\": \"ea581dad-40f7-45e0-b37a-f92878876cc9\",\n        \"is_compressed\": false,\n        \"data_levels\": [\n          0\n        ],\n        \"timestamp\": \"2023-10-20T05:56:11Z\",\n        \"channel_name\": \"飞书\",\n        \"cl_name\": \"未分类\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"policy_name\": \"南测1\",\n        \"staff_code\": \"\",\n        \"created_timestamp\": \"2023-10-20T05:56:39Z\",\n        \"ip_address\": \"192.168.96.36\",\n        \"cl_ids\": [\n          \"\"\n        ],\n        \"policy_group_name\": \"默认组\",\n        \"risk_level\": 1,\n        \"agent_version\": \"3.0.202\",\n        \"is_blocked\": false,\n        \"event_id\": \"78B0A060-A809-46A8-A605-B35803F4DE32\",\n        \"@timestamp\": 1697781371000,\n        \"is_password_protected\": false,\n        \"os_name\": \"macOS\",\n        \"time\": 1697781371000,\n        \"category\": \"channel\",\n        \"operation\": \"outgoing\",\n        \"staff_tag_ids\": [],\n        \"cl_names\": [\n          \"未分类\"\n        ],\n        \"log_cnt\": 110,\n        \"score\": 60,\n        \"cnt\": 276\n      },\n      {\n        \"is_compressed\": false,\n        \"file_type_categories\": [],\n        \"filename\": \"1-200M.txt\",\n        \"is_hidden\": false,\n        \"file_type\": \"txt\",\n        \"time\": 1701743034240,\n        \"device_code\": \"PC-000024\",\n        \"file_suffix\": \"txt\",\n        \"ip_address\": \"192.168.96.142\",\n        \"operation\": \"outgoing\",\n        \"status\": \"created\",\n        \"event_id\": \"1701743029048054\",\n        \"policy_name\": \"win\",\n        \"file_description\": \"-\",\n        \"agent_version\": \"3.2.12\",\n        \"is_password_protected\": false,\n        \"filesize\": 252776000,\n        \"channel\": \"feishu\",\n        \"os_friendly_name\": \"Windows 10 CoreCountrySpecific (10.0.19045)\",\n        \"file_created_time\": 1701254357000,\n        \"file_updated_time\": 1678192036000,\n        \"extract_file\": true,\n        \"risk_name\": \"中危\",\n        \"policy_group_name\": \"默认组\",\n        \"file_policies\": [\n          {\n            \"is_compressed\": false,\n            \"filename\": \"1-200M.txt\",\n            \"is_hidden\": false,\n            \"file_type\": \"txt\",\n            \"file_suffix\": \"txt\",\n            \"policy_name\": \"win\",\n            \"is_password_protected\": false,\n            \"filesize\": 252776000,\n            \"file_created_time\": 1701254357000,\n            \"file_updated_time\": 1678192036000,\n            \"classifications\": [\n              {\n                \"data_level\": 2,\n                \"data_level_name\": \"内部数据\",\n                \"name\": \"关键词组4\",\n                \"uid\": \"f19a4d58-5211-4311-ab03-f4ebbe65ae25\"\n              }\n            ],\n            \"risk_name\": \"中危\",\n            \"policy_group_name\": \"默认组\",\n            \"risk_level\": 2,\n            \"policy_id\": \"bcddf48c-9b3f-4d00-99bf-9055c9169c83\",\n            \"filepath\": \"D:\\\\测试用例数据\\\\文件大小\\\\1-200M.txt\",\n            \"md5_hash\": \"\",\n            \"policy_group_id\": \"ea581dad-40f7-45e0-b37a-f92878876cc9\",\n            \"action\": \"warning\",\n            \"sha256_hash\": \"\",\n            \"file_created_timestamp\": \"2023-11-29T10:39:17Z\",\n            \"file_updated_timestamp\": \"2023-03-07T12:27:16Z\"\n          }\n        ],\n        \"channel_name\": \"飞书\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"is_blocked\": false,\n        \"os_name\": \"Windows\",\n        \"risk_level\": 2,\n        \"policy_id\": \"bcddf48c-9b3f-4d00-99bf-9055c9169c83\",\n        \"filepath\": \"D:\\\\测试用例数据\\\\文件大小\\\\1-200M.txt\",\n        \"md5_hash\": \"242219800750a7ebe02f41b932679a0e\",\n        \"device_id\": \"995458dd-b5eb-4819-b140-be745b6946fa\",\n        \"expand\": {\n          \"rule_version\": {\n            \"cond_ticket\": \"ff7483ea3c4dfc0eeb253bf6ff8b9569\",\n            \"cond_version\": 20,\n            \"dc_ticket\": \"04ae48da42ecc6e8a66acdc2f181222a\",\n            \"dc_version\": 289,\n            \"filetype_version\": 34,\n            \"ms_version\": -1,\n            \"policy_ticket\": \"3a154ed85c33307c89b93f642e14e9b1\",\n            \"policy_version\": 536\n          },\n          \"screen_recording\": true,\n          \"screenshot\": true\n        },\n        \"policy_group_id\": \"ea581dad-40f7-45e0-b37a-f92878876cc9\",\n        \"action\": \"warning\",\n        \"sha256_hash\": \"\",\n        \"channel_account\": \"-\",\n        \"@timestamp\": 1701743034240,\n        \"timestamp\": \"2023-12-05T02:23:54Z\",\n        \"created_timestamp\": \"2023-12-05T02:23:59Z\",\n        \"file_created_timestamp\": \"2023-11-29T10:39:17Z\",\n        \"file_updated_timestamp\": \"2023-03-07T12:27:16Z\",\n        \"category\": \"channel\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_email\": \"\",\n        \"staff_code\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"has_cls\": true,\n        \"cl_ids\": [\n          \"f19a4d58-5211-4311-ab03-f4ebbe65ae25\"\n        ],\n        \"cl_names\": [\n          \"关键词组4\"\n        ],\n        \"data_levels\": [\n          2\n        ],\n        \"data_level_names\": [\n          \"内部数据\"\n        ],\n        \"cl_id\": \"f19a4d58-5211-4311-ab03-f4ebbe65ae25\",\n        \"cl_name\": \"关键词组4\",\n        \"data_level\": 2,\n        \"data_level_name\": \"内部数据\",\n        \"log_cnt\": 161,\n        \"score\": 60,\n        \"cnt\": 276\n      },\n      {\n        \"is_compressed\": true,\n        \"file_type_categories\": [],\n        \"filename\": \"终端相关信息.zip\",\n        \"is_hidden\": false,\n        \"file_type\": \"zip\",\n        \"time\": 1701743050937,\n        \"device_code\": \"PC-000001\",\n        \"file_suffix\": \"zip\",\n        \"ip_address\": \"192.168.96.211\",\n        \"operation\": \"outgoing\",\n        \"status\": \"created\",\n        \"event_id\": \"1701743048677325\",\n        \"policy_name\": \"高级嘻嘻\",\n        \"file_description\": \"-\",\n        \"agent_version\": \"3.2.12\",\n        \"is_password_protected\": false,\n        \"filesize\": 1576,\n        \"channel\": \"aliyunpan\",\n        \"os_friendly_name\": \"Windows 11 CoreCountrySpecific (10.0.22621)\",\n        \"file_created_time\": 1695020202000,\n        \"file_updated_time\": 1695020202000,\n        \"extract_file\": false,\n        \"risk_name\": \"高危\",\n        \"policy_group_name\": \"默认组\",\n        \"file_policies\": [\n          {\n            \"is_compressed\": true,\n            \"filename\": \"终端相关信息.zip\",\n            \"is_hidden\": false,\n            \"file_type\": \"zip\",\n            \"file_suffix\": \"zip\",\n            \"policy_name\": \"高级嘻嘻\",\n            \"is_password_protected\": false,\n            \"filesize\": 1576,\n            \"file_created_time\": 1695020202000,\n            \"file_updated_time\": 1695020202000,\n            \"classifications\": [\n              {\n                \"data_level\": 2,\n                \"data_level_name\": \"内部数据\",\n                \"name\": \"常见格式文件\",\n                \"uid\": \"32b5ec6f-c624-417e-b906-ec10035ac89c\"\n              },\n              {\n                \"data_level\": 2,\n                \"data_level_name\": \"内部数据\",\n                \"name\": \"文件名-存在\",\n                \"uid\": \"5da9980d-4b3d-402e-913a-60e2bb1cec15\"\n              },\n              {\n                \"data_level\": 2,\n                \"data_level_name\": \"内部数据\",\n                \"name\": \"压缩文件检测\",\n                \"uid\": \"80b037dc-f564-439c-9a54-deadb2367949\"\n              },\n              {\n                \"data_level\": 4,\n                \"data_level_name\": \"机密数据\",\n                \"name\": \"压缩\",\n                \"uid\": \"cb63314b-3a74-43fc-8e16-abd20c52652f\"\n              }\n            ],\n            \"risk_name\": \"高危\",\n            \"policy_group_name\": \"默认组\",\n            \"risk_level\": 1,\n            \"policy_id\": \"4fa1e7d6-fa22-4d95-bdb4-fd1767b3daf2\",\n            \"filepath\": \"C:\\\\Users\\\\sou\\\\Desktop\\\\终端相关信息.zip\",\n            \"md5_hash\": \"28c9ff76d24133eca19ee7839068af4b\",\n            \"policy_group_id\": \"ea581dad-40f7-45e0-b37a-f92878876cc9\",\n            \"action\": \"alert\",\n            \"sha256_hash\": \"c87b12879e535383e0528a95e541c10cc25ac03346bc694ec6eefea796eefcc2\",\n            \"file_created_timestamp\": \"2023-09-18T06:56:42Z\",\n            \"file_updated_timestamp\": \"2023-09-18T06:56:42Z\"\n          },\n          {\n            \"is_compressed\": false,\n            \"filename\": \"终端相关信息.txt\",\n            \"is_hidden\": false,\n            \"file_type\": \"zip\",\n            \"file_suffix\": \"txt\",\n            \"policy_name\": \"高级嘻嘻\",\n            \"is_password_protected\": false,\n            \"filesize\": 0,\n            \"file_created_time\": 0,\n            \"file_updated_time\": 0,\n            \"classifications\": [\n              {\n                \"data_level\": 2,\n                \"data_level_name\": \"内部数据\",\n                \"name\": \"常见格式文件\",\n                \"uid\": \"32b5ec6f-c624-417e-b906-ec10035ac89c\"\n              },\n              {\n                \"data_level\": 3,\n                \"data_level_name\": \"保密数据\",\n                \"name\": \"个人信息-手机号（>10次）\",\n                \"uid\": \"3fda0f39-0d5f-4689-a450-3c4978f7976f\"\n              },\n              {\n                \"data_level\": 1,\n                \"data_level_name\": \"公开数据\",\n                \"name\": \"文件格式\",\n                \"uid\": \"481314d8-c028-41b3-a534-32515fcd4e2f\"\n              },\n              {\n                \"data_level\": 2,\n                \"data_level_name\": \"内部数据\",\n                \"name\": \"文件名-存在\",\n                \"uid\": \"5da9980d-4b3d-402e-913a-60e2bb1cec15\"\n              },\n              {\n                \"data_level\": 2,\n                \"data_level_name\": \"内部数据\",\n                \"name\": \"hu关键词\",\n                \"uid\": \"f6c3f768-c436-4891-9f0d-f9eb4aadfcd4\"\n              }\n            ],\n            \"risk_name\": \"高危\",\n            \"policy_group_name\": \"默认组\",\n            \"risk_level\": 1,\n            \"policy_id\": \"4fa1e7d6-fa22-4d95-bdb4-fd1767b3daf2\",\n            \"filepath\": \"C:\\\\Users\\\\sou\\\\Desktop\\\\终端相关信息.zip\\\\终端相关信息.txt\",\n            \"md5_hash\": \"3c7944d21fb86a26a7561f17ec5f7119\",\n            \"policy_group_id\": \"ea581dad-40f7-45e0-b37a-f92878876cc9\",\n            \"action\": \"alert\",\n            \"sha256_hash\": \"b0123cecf60d4a10942b9bba59c0e3d7be6270050b83f57cdab2cad2a2fc3bd1\",\n            \"file_created_timestamp\": \"1970-01-01T00:00:00Z\",\n            \"file_updated_timestamp\": \"1970-01-01T00:00:00Z\"\n          }\n        ],\n        \"channel_name\": \"阿里云盘\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"console_user\": \"sou@LAPTOP-8R5257U6\",\n        \"is_blocked\": true,\n        \"os_name\": \"Windows\",\n        \"risk_level\": 1,\n        \"policy_id\": \"4fa1e7d6-fa22-4d95-bdb4-fd1767b3daf2\",\n        \"filepath\": \"C:\\\\Users\\\\sou\\\\Desktop\\\\终端相关信息.zip\",\n        \"md5_hash\": \"28c9ff76d24133eca19ee7839068af4b\",\n        \"device_id\": \"c900fbb1-d4ca-4972-aa82-cf5519064187\",\n        \"expand\": {\n          \"compressed_filenames\": [\n            \"终端相关信息.txt\"\n          ],\n          \"rule_version\": {\n            \"cond_ticket\": \"ff7483ea3c4dfc0eeb253bf6ff8b9569\",\n            \"cond_version\": 20,\n            \"dc_ticket\": \"04ae48da42ecc6e8a66acdc2f181222a\",\n            \"dc_version\": 289,\n            \"filetype_version\": 34,\n            \"ms_version\": -1,\n            \"policy_ticket\": \"ffb5cd791103d69e3cca6b46cb6ddb48\",\n            \"policy_version\": 536\n          },\n          \"screen_recording\": false,\n          \"screenshot\": false\n        },\n        \"policy_group_id\": \"ea581dad-40f7-45e0-b37a-f92878876cc9\",\n        \"action\": \"alert\",\n        \"sha256_hash\": \"\",\n        \"channel_account\": \"-\",\n        \"@timestamp\": 1701743050937,\n        \"timestamp\": \"2023-12-05T02:24:10Z\",\n        \"created_timestamp\": \"2023-12-05T02:24:15Z\",\n        \"file_created_timestamp\": \"2023-09-18T06:56:42Z\",\n        \"file_updated_timestamp\": \"2023-09-18T06:56:42Z\",\n        \"category\": \"channel\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_email\": \"\",\n        \"staff_code\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"has_cls\": true,\n        \"cl_ids\": [\n          \"32b5ec6f-c624-417e-b906-ec10035ac89c\",\n          \"3fda0f39-0d5f-4689-a450-3c4978f7976f\",\n          \"481314d8-c028-41b3-a534-32515fcd4e2f\",\n          \"5da9980d-4b3d-402e-913a-60e2bb1cec15\",\n          \"f6c3f768-c436-4891-9f0d-f9eb4aadfcd4\"\n        ],\n        \"cl_names\": [\n          \"常见格式文件\",\n          \"个人信息-手机号（>10次）\",\n          \"文件格式\",\n          \"文件名-存在\",\n          \"hu关键词\"\n        ],\n        \"data_levels\": [\n          2,\n          3,\n          1,\n          2,\n          2\n        ],\n        \"data_level_names\": [\n          \"内部数据\",\n          \"保密数据\",\n          \"公开数据\",\n          \"内部数据\",\n          \"内部数据\"\n        ],\n        \"cl_id\": \"3fda0f39-0d5f-4689-a450-3c4978f7976f\",\n        \"cl_name\": \"个人信息-手机号（>10次）\",\n        \"data_level\": 3,\n        \"data_level_name\": \"保密数据\",\n        \"log_cnt\": 119,\n        \"score\": 60,\n        \"cnt\": 276\n      },\n      {\n        \"file_description\": \"Unicode text, UTF-8 text\",\n        \"file_created_time\": 1700911300990,\n        \"filesize\": 3432819,\n        \"event_id\": \"4ca9f9ac-9220-49ea-98e4-aa92f7c403cd\",\n        \"status\": \"created\",\n        \"risk_name\": \"高危\",\n        \"file_policies\": [\n          {\n            \"file_description\": \"Unicode text, UTF-8 text\",\n            \"file_created_time\": 0,\n            \"filesize\": 3432819,\n            \"risk_name\": \"高危\",\n            \"file_suffix\": \"txt\",\n            \"is_compressed\": false,\n            \"filepath\": \"/home/serval/.config/weixin/wechat/users/2d27d477bfb9f1c8ed5280fee1bacda0/message/cache/31713ee1e8942c61e168094a0ce79ceb/opendata/2023-11/weixin(1).txt\",\n            \"md5_hash\": \"b6234fb2411255c4f078dff448625291\",\n            \"risk_level\": 1,\n            \"action\": \"block\",\n            \"is_hidden\": false,\n            \"policy_group_name\": \"默认组\",\n            \"file_type\": \"txt\",\n            \"policy_id\": \"ebe7578c-1ca0-4a01-8c72-f61bd6b67ec2\",\n            \"classifications\": [\n              {\n                \"name\": \"测试关键词-内容\",\n                \"uid\": \"47778687-933a-4de7-a736-7698f56a2812\",\n                \"data_level_name\": \"公开数据\",\n                \"data_level\": 1\n              }\n            ],\n            \"file_updated_time\": 0,\n            \"file_type_categories\": [\n              \"UTF-8\",\n              \"Unicode text\"\n            ],\n            \"policy_group_id\": \"ea581dad-40f7-45e0-b37a-f92878876cc9\",\n            \"is_password_protected\": false,\n            \"policy_name\": \"高级模式\",\n            \"filename\": \"weixin(1).txt\",\n            \"file_created_timestamp\": \"1970-01-01T00:00:00Z\",\n            \"file_updated_timestamp\": \"1970-01-01T00:00:00Z\"\n          }\n        ],\n        \"console_user\": \"serval-PC\\\\serval\",\n        \"channel_name\": \"微信\",\n        \"is_compressed\": false,\n        \"file_suffix\": \"txt\",\n        \"filepath\": \"/home/serval/.config/weixin/wechat/users/2d27d477bfb9f1c8ed5280fee1bacda0/message/cache/31713ee1e8942c61e168094a0ce79ceb/opendata/2023-11/weixin(1).txt\",\n        \"md5_hash\": \"b6234fb2411255c4f078dff448625291\",\n        \"expand\": {\n          \"rule_version\": {\n            \"cond_ticket\": \"\",\n            \"cond_version\": 21,\n            \"dc_ticket\": \"\",\n            \"dc_version\": 290,\n            \"filetype_version\": 34,\n            \"policy_ticket\": \"\",\n            \"policy_version\": 541\n          }\n        },\n        \"risk_level\": 1,\n        \"action\": \"block\",\n        \"operation\": \"outgoing\",\n        \"is_blocked\": true,\n        \"is_hidden\": false,\n        \"policy_group_name\": \"默认组\",\n        \"file_type\": \"txt\",\n        \"policy_id\": \"ebe7578c-1ca0-4a01-8c72-f61bd6b67ec2\",\n        \"channel\": \"wechat\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"extract_file\": false,\n        \"os_name\": \"UOS\",\n        \"time\": 1700911301000,\n        \"file_updated_time\": 1700911301000,\n        \"file_type_categories\": [],\n        \"os_friendly_name\": \"UnionTech OS Desktop 20 Pro\",\n        \"policy_group_id\": \"ea581dad-40f7-45e0-b37a-f92878876cc9\",\n        \"ip_address\": \"192.168.96.206\",\n        \"is_password_protected\": false,\n        \"device_id\": \"e7fc419d-1627-4cb1-9ccb-5ea22a2b3e51\",\n        \"device_code\": \"PC-000029\",\n        \"agent_version\": \"3.0.4\",\n        \"policy_name\": \"高级模式\",\n        \"filename\": \"weixin(1).txt\",\n        \"@timestamp\": 1700911301000,\n        \"timestamp\": \"2023-11-25T11:21:41Z\",\n        \"created_timestamp\": \"2023-12-05T05:48:34Z\",\n        \"file_created_timestamp\": \"2023-11-25T11:21:40Z\",\n        \"file_updated_timestamp\": \"2023-11-25T11:21:41Z\",\n        \"category\": \"channel\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_email\": \"\",\n        \"staff_code\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"has_cls\": true,\n        \"cl_ids\": [\n          \"47778687-933a-4de7-a736-7698f56a2812\"\n        ],\n        \"cl_names\": [\n          \"测试关键词-内容\"\n        ],\n        \"data_levels\": [\n          1\n        ],\n        \"data_level_names\": [\n          \"公开数据\"\n        ],\n        \"cl_id\": \"47778687-933a-4de7-a736-7698f56a2812\",\n        \"cl_name\": \"测试关键词-内容\",\n        \"data_level\": 1,\n        \"data_level_name\": \"公开数据\",\n        \"log_cnt\": 44,\n        \"score\": 60,\n        \"cnt\": 276\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9ef85f75-ec80-4ae6-adc8-bc98acaf05bc",
+    "name": "APISec Management account ueba/test/{event_id} API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "item": [
+    {
+      "id": "14be056c-000d-4008-a47a-1ddb51a720cf",
+      "name": "merge_api",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "edcd4d3b-4331-4ec1-939a-960ec893d3d8",
+          "name": "GET /api/MergeConfigAPI",
+          "request": {
+            "name": "GET /api/MergeConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "MergeConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "order_by",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b69da7e5-1783-4267-92a5-af615d1a0e8f",
+          "name": "POST /api/MergeConfigAPI",
+          "request": {
+            "name": "POST /api/MergeConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "MergeConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"is_enabled\": \"<boolean>\",\n  \"name\": \"<string>\",\n  \"pattern\": \"<string>\",\n  \"merge\": \"<boolean>\",\n  \"site_id\": \"<string>\",\n  \"comment\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5c6e362a-ca3c-4bc7-85d7-49a3ab2d5dcd",
+          "name": "PUT /api/MergeConfigAPI",
+          "request": {
+            "name": "PUT /api/MergeConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "MergeConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"is_enabled\": \"<boolean>\",\n    \"merge\": \"<boolean>\",\n    \"name\": \"<string>\",\n    \"pattern\": \"<string>\",\n    \"site_id\": \"<string>\",\n    \"uuid\": \"<string>\",\n    \"auto\": \"<boolean>\",\n    \"merge_type\": \"<integer>\",\n    \"strict_length\": \"<integer>\",\n    \"comment\": \"<string>\",\n    \"api_list\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  {\n    \"is_enabled\": \"<boolean>\",\n    \"merge\": \"<boolean>\",\n    \"name\": \"<string>\",\n    \"pattern\": \"<string>\",\n    \"site_id\": \"<string>\",\n    \"uuid\": \"<string>\",\n    \"auto\": \"<boolean>\",\n    \"merge_type\": \"<integer>\",\n    \"strict_length\": \"<integer>\",\n    \"comment\": \"<string>\",\n    \"api_list\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9463713d-e352-4f5a-a4aa-1d2b421ef75f",
+          "name": "GET /api/MergeConfigStatsAPI",
+          "request": {
+            "name": "GET /api/MergeConfigStatsAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "MergeConfigStatsAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "bfb08f6c-4f92-4248-a145-e65213d0b3d2",
+    "name": "APISec Management account merge_api API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

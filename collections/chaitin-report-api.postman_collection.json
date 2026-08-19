@@ -1,0 +1,249 @@
+{
+  "item": [
+    {
+      "id": "d0342d6c-e50c-4657-b89e-c51fb85817a9",
+      "name": "report",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9d0dbb4e-1e24-45bd-bc0b-181f765dd915",
+          "name": "GET /api/ReportTaskPreview",
+          "request": {
+            "name": "GET /api/ReportTaskPreview",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ReportTaskPreview"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "app_ids",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "app_ids",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "custom",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "desensitize_enabled",
+                  "value": "<boolean>",
+                  "description": "(Required) 脱敏开关"
+                },
+                {
+                  "disabled": false,
+                  "key": "end_time",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site_re",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "start_time",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "aa95d0bb-c843-48a7-8a74-6e662fbdd9b0",
+          "name": "GET /api/ReportTemplateAPI",
+          "request": {
+            "name": "GET /api/ReportTemplateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ReportTemplateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b3fd6e48-025c-463b-9a8a-92fa11036d10",
+          "name": "PUT /api/ReportTemplateAPI",
+          "request": {
+            "name": "PUT /api/ReportTemplateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ReportTemplateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"remark\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b7636ea5-5c3c-4954-b219-f6b09f6521d0",
+          "name": "DELETE /api/ReportTemplateAPI",
+          "request": {
+            "name": "DELETE /api/ReportTemplateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ReportTemplateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6d201849-2c3f-486e-bbb2-c4781e639310",
+          "name": "POST /api/UploadReportTemplateAPI",
+          "request": {
+            "name": "POST /api/UploadReportTemplateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UploadReportTemplateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "646c34e4-17da-4f94-b0fd-b1fdf1f0d0aa",
+    "name": "APISec Management account report API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

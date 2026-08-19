@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account dataasset/{md5_hash}/detail API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "dataasset/{md5_hash}/detail",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "记录详情",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/dataasset/:md5_hash/detail",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "md5_hash",
+                "value": "f0d2c755caa848b7151ddc25d2a1f203",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "记录详情"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

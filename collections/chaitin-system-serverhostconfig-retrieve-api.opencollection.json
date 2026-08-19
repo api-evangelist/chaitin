@@ -1,0 +1,87 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account system/serverhostconfig/retrieve API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "system/serverhostconfig/retrieve",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "查看server地址配置",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/system/serverhostconfig/retrieve",
+            "headers": [
+              {
+                "name": "priority",
+                "value": "u=1, i"
+              },
+              {
+                "name": "x-cs-header-app",
+                "value": "qzh"
+              },
+              {
+                "name": "x-cs-header-company",
+                "value": "eeff7c64-5070-4582-8b93-fbcc57db7771"
+              },
+              {
+                "name": "x-cs-header-module",
+                "value": "safety-protect/browser-control/browser-plugin"
+              },
+              {
+                "name": "x-cs-header-timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Cookie",
+                "value": "csrftoken=Pi942VNEP2gusnNinEyv8l3zJlRFnbNp; sid=Fe26.2**4cae0757e52359f1a17e8eb23b1b34c467e927a62a74bee3d61132d876295583*YMOJlirdWSIcliJK9ImtMg*YM5eBt0W6Qs6uQadWaNQ3Q7MMuHmHfIvX47xZ2ohe0RIJKlJZ05LqcsGP3gfxOBZ4JATFrCah4INz4z8PW6-kg4WMdd8lubcER5F3ADRc3DzMYDLrwTi9eHDuyEK3dIoEqIyC36zNOIX7vSbQTJoieflKQNPDHTA-kNHmOy1r8LG-C0Rim8xLkpcXhWMuY5_t76VCVYMRtoi5Z2_-mYX0UkINpRF7m34YdftRiwHRC8**087610b7d1e93e639f44aab457e97b074d7dbf303dfe557d6d9ba83b7a95ab73*5Ugwia8-iEOGhuUyG4pdF_MLVsTnHz86vMrv4F3HAL4"
+              },
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "docs": "查看server地址配置"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

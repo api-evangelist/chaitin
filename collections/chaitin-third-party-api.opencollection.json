@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account third_party API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "third_party",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "PUT /api/SiteFingerprintBindingAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SiteFingerprintBindingAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SiteFingerprintBindingAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account log/audit API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "log/audit",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "get audit logs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/business/audit_log",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "get audit logs"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

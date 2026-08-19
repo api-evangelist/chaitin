@@ -1,0 +1,78 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account discover_data API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "discover_data",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "PUT /api/BuildInDiscoverDataTaskAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/BuildInDiscoverDataTaskAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/BuildInDiscoverDataTaskAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/DiscoverDataTaskAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/DiscoverDataTaskAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/DiscoverDataTaskAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/DiscoverDataTaskAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/DiscoverDataTaskAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/DiscoverDataTaskAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/RefreshDesensitizeCacheAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/RefreshDesensitizeCacheAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/RefreshDesensitizeCacheAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

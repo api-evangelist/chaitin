@@ -1,0 +1,240 @@
+{
+  "item": [
+    {
+      "id": "1e85b00e-4ec6-404a-a1bc-a41b39150692",
+      "name": "ueba/log/{ueba_category}/download",
+      "description": {
+        "content": "UEBA 分析/日志/ueba_category 参数/下载",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "867ac152-3d5f-4998-a78f-35a848840507",
+          "name": "UEBA事件导出",
+          "request": {
+            "name": "UEBA事件导出",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ueba",
+                "log",
+                ":ueba_category",
+                "download"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "ueba_category",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sort\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"search\": \"<string>\",\n  \"time_range\": {\n    \"begin\": \"<string>\",\n    \"end\": \"<string>\"\n  },\n  \"name\": \"<string>\",\n  \"output\": {\n    \"ext\": \"<string>\",\n    \"fields\": [\n      {\n        \"name\": \"<string>\",\n        \"display_name\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"display_name\": \"<string>\"\n      }\n    ]\n  },\n  \"queries\": []\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f7c70f95-802e-44ed-ac11-9daeb410ce55",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ueba",
+                    "log",
+                    ":ueba_category",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "ueba_category",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"sort\": [\n    \"timestamp:desc\"\n  ],\n  \"search\": \"\",\n  \"time_range\": {\n    \"begin\": \"2023-12-20 18:12:21\",\n    \"end\": \"2023-12-21 18:12:21\"\n  },\n  \"name\": \"code\",\n  \"output\": {\n    \"ext\": \"xlsx\",\n    \"fields\": [\n      {\n        \"name\": \"device_code\",\n        \"display_name\": \"终端ID\"\n      },\n      {\n        \"name\": \"staff_name\",\n        \"display_name\": \"员工姓名\"\n      },\n      {\n        \"name\": \"staff_code\",\n        \"display_name\": \"员工账户\"\n      },\n      {\n        \"name\": \"staff_tags\",\n        \"display_name\": \"员工标签\"\n      },\n      {\n        \"name\": \"repo_addr\",\n        \"display_name\": \"仓库地址\"\n      },\n      {\n        \"name\": \"code_path\",\n        \"display_name\": \"代码路径\"\n      },\n      {\n        \"name\": \"policy_name\",\n        \"display_name\": \"策略名称\"\n      },\n      {\n        \"name\": \"dept_names\",\n        \"display_name\": \"部门名称\"\n      },\n      {\n        \"name\": \"dept_paths\",\n        \"display_name\": \"部门路径\"\n      },\n      {\n        \"name\": \"os_name\",\n        \"display_name\": \"操作系统\"\n      },\n      {\n        \"name\": \"console_user\",\n        \"display_name\": \"系统账户\"\n      },\n      {\n        \"name\": \"action\",\n        \"display_name\": \"处置动作\"\n      },\n      {\n        \"name\": \"operation\",\n        \"display_name\": \"管控类型\"\n      },\n      {\n        \"name\": \"metasource.source.display_name\",\n        \"display_name\": \"数据来源\"\n      }\n    ]\n  },\n  \"queries\": []\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"create_by_id\": \"2834ded5-b1c5-49ff-9655-3d4cc842e2b7\",\n    \"compress_category\": null,\n    \"update_by_id\": \"2834ded5-b1c5-49ff-9655-3d4cc842e2b7\",\n    \"create_time\": \"2024-01-31T10:33:39.983494Z\",\n    \"uid\": \"b0d54596-a583-4a2e-90a3-0c28b445ff90\",\n    \"update_time\": \"2024-01-31T10:33:39.983622Z\",\n    \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n    \"ext\": \"xlsx\",\n    \"source_fields\": [\n      {\n        \"name\": \"@timestamp\",\n        \"display_name\": \"发生时间\"\n      },\n      {\n        \"name\": \"device_code\",\n        \"display_name\": \"终端ID\"\n      },\n      {\n        \"name\": \"staff_name\",\n        \"display_name\": \"员工姓名\"\n      },\n      {\n        \"name\": \"staff_code\",\n        \"display_name\": \"员工账户\"\n      }\n    ],\n    \"order_category\": \"desc\",\n    \"quotechar\": \"\",\n    \"end_time\": \"2024-12-21 10:12:21\",\n    \"name\": \"code\",\n    \"state\": \"created\",\n    \"encoding\": \"utf8\",\n    \"count\": 25321,\n    \"begin_time\": \"2023-12-20 10:12:21\",\n    \"category\": \"ueba_event_log\",\n    \"description\": \"\",\n    \"query_params\": {\n      \"queries\": [],\n      \"filters\": {},\n      \"time_range\": {\n        \"begin\": \"2023-12-20 18:12:21\",\n        \"end\": \"2024-12-21 18:12:21\"\n      },\n      \"search\": \"\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7d98845d-9916-48f1-ba0f-7623bdd1c0bd",
+    "name": "APISec Management account ueba/log/{ueba_category}/download API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

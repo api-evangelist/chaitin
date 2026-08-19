@@ -1,0 +1,576 @@
+{
+  "item": [
+    {
+      "id": "7fe260b1-d875-49d3-9ace-d2239b70f438",
+      "name": "web框架",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dc327f5d-065a-498f-a2bc-353b29e99ecc",
+          "name": "web框架-获取web框架总数",
+          "request": {
+            "name": "web框架-获取web框架总数",
+            "description": {},
+            "url": {
+              "path": [
+                "web_framework",
+                "count"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "19fde575-be7d-43b5-a3f0-4757726ec81d",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "web_framework",
+                    "count"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3fd06169-6d43-4499-8a61-ad49fdd66e1a",
+          "name": "web框架-获取web框架详情",
+          "request": {
+            "name": "web框架-获取web框架详情",
+            "description": {},
+            "url": {
+              "path": [
+                "web_framework",
+                "info"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a5f34437-cf4a-4fc7-9377-9e34c759a67f",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "web_framework",
+                    "info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"name\": {},\n    \"language\": {},\n    \"version\": {},\n    \"dir\": {},\n    \"container_name\": {},\n    \"container_id\": {},\n    \"discovery_time\": {},\n    \"service_type\": {},\n    \"cid\": {},\n    \"id\": {}\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fc34da84-12ec-4b74-a8bd-fb791f7c6acd",
+          "name": "web框架-获取web框架列表",
+          "request": {
+            "name": "web框架-获取web框架列表",
+            "description": {},
+            "url": {
+              "path": [
+                "web_framework",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "95f1195c-0727-434f-884f-0d09be05782f",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "web_framework",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "05cd60ac-37cb-4d6a-b676-43e53f7dae85",
+          "name": "web框架-导出web框架列表",
+          "request": {
+            "name": "web框架-导出web框架列表",
+            "description": {},
+            "url": {
+              "path": [
+                "web_framework",
+                "list_export"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ec21e360-5768-4af3-a7c9-138ef0723d91",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "web_framework",
+                    "list_export"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "026f8200-8f10-4d41-8769-d5a66591811f",
+          "name": "web站点-获取web站点详情",
+          "request": {
+            "name": "web站点-获取web站点详情",
+            "description": {},
+            "url": {
+              "path": [
+                "website",
+                "info"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fd6a69c3-e04d-4081-bd2f-eaa1c6c7b764",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "website",
+                    "info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"pod_info\": {\n      \"namespace\": {},\n      \"pod_name\": {}\n    },\n    \"container_info\": {\n      \"container_name\": {},\n      \"container_id\": {},\n      \"cid\": {}\n    },\n    \"base_info\": {\n      \"dir\": {},\n      \"domain\": {},\n      \"ports\": {},\n      \"discovery_time\": {},\n      \"service_type\": {}\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c5250351-223a-44ea-a985-eb71cb378f05",
+          "name": "web站点-获取web站点列表",
+          "request": {
+            "name": "web站点-获取web站点列表",
+            "description": {},
+            "url": {
+              "path": [
+                "website",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c34a1def-3a50-42e8-b319-b335d9a35a3d",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "website",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"list\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f8161fb2-70d0-4da4-b631-e11f1aa777fe",
+          "name": "web站点-获取web站点总数",
+          "request": {
+            "name": "web站点-获取web站点总数",
+            "description": {},
+            "url": {
+              "path": [
+                "website",
+                "list_count"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "087784c7-314c-4b79-955a-af8945bf1422",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "website",
+                    "list_count"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total\": {},\n  \"last_task_success_time\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bbce080c-a8f2-4caf-bca3-248d999eae7e",
+          "name": "web站点-导出web站点列表",
+          "request": {
+            "name": "web站点-导出web站点列表",
+            "description": {},
+            "url": {
+              "path": [
+                "website",
+                "list_export"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b3d9ec6d-93ef-4713-86fd-08973d67e83f",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "website",
+                    "list_export"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "65a8833a-bd46-4af4-8cee-a38ef181d38b",
+    "name": "APISec Management account web框架 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

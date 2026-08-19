@@ -1,0 +1,406 @@
+{
+  "item": [
+    {
+      "id": "a5a68695-e06a-4637-9373-aae021ee1c9f",
+      "name": "ipgroup",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "855e5678-d811-4ce3-8d2c-fac8b2ba1a94",
+          "name": "list ip group",
+          "request": {
+            "name": "list ip group",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "ipgroup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "top",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ff1db5b3-4b65-49c9-8bcb-7a22cbb929fa",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "ipgroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "top",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dd545e98-202f-4c5d-ab08-3af1ce7ce8fc",
+          "name": "create ip group",
+          "request": {
+            "name": "create ip group",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "ipgroup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1f241022-f28a-4f7d-9ed7-267125f8d07c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "ipgroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6d8eb7e0-a9e5-472b-91e5-7eb7e3c9f08b",
+          "name": "update ip group",
+          "request": {
+            "name": "update ip group",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "ipgroup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9a0a9351-4970-423b-b5be-a9da19eefa1f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "ipgroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fa758d4b-63a8-4551-b9d9-e4c1139fb8de",
+          "name": "delete ip group",
+          "request": {
+            "name": "delete ip group",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "ipgroup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4464d1dd-5e9a-4ae9-80a3-ae4d2eb346ca",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "ipgroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "380875f7-6259-468a-922d-edc62e7414c7",
+          "name": "add ip to ip group",
+          "request": {
+            "name": "add ip to ip group",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "ipgroup",
+                "append"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "76c43186-b44a-4ffe-87fb-d8bcf2b23008",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "ipgroup",
+                    "append"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "917c61e1-5f5f-478f-aa8f-2103806ec59c",
+          "name": "get ip group detail",
+          "request": {
+            "name": "get ip group detail",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "ipgroup",
+                "detail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "id",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1ee329c9-cf9d-4a64-95b9-474306e1cc79",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "ipgroup",
+                    "detail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f1cc6f13-c9c1-4e8a-8b61-be771149782b",
+    "name": "APISec Management account ipgroup API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

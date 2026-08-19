@@ -1,0 +1,222 @@
+{
+  "item": [
+    {
+      "id": "912c2c1b-e7e0-4016-b493-061d6481d9e6",
+      "name": "softwaremanager/internalsource/list",
+      "description": {
+        "content": "软件管理/内部来源/列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d05d8c5b-df60-42d3-bbfd-03f69c2215ea",
+          "name": "内置软件源",
+          "request": {
+            "name": "内置软件源",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "softwaremanager",
+                "internalsource",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"page\": \"<integer>\",\n  \"limit\": \"<integer>\",\n  \"search\": \"<string>\",\n  \"queries\": [\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ff8e70a1-da80-4104-a4ac-b8acd8e5207b",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "softwaremanager",
+                    "internalsource",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"page\": 1,\n  \"limit\": 20,\n  \"search\": \"\",\n  \"queries\": [\n    {\n      \"field\": \"software_type\",\n      \"operator\": \"is\",\n      \"value\": \"云存储\"\n    },\n    {\n      \"field\": \"os_name\",\n      \"operator\": \"is\",\n      \"value\": \"macOS\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"page\": 1,\n    \"limit\": 20,\n    \"total\": 44,\n    \"results\": [\n      {\n        \"display_name\": \"淘云盘\",\n        \"software_name\": \"TaoDrive\",\n        \"icon_name\": null,\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": null,\n        \"bundle_id\": \"com.alibaba.AliDrive\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"f6942620-c6d6-4ced-9633-d087437518cc\"\n      },\n      {\n        \"display_name\": \"360云盘\",\n        \"software_name\": \"360Drive\",\n        \"icon_name\": null,\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": null,\n        \"bundle_id\": \"com.360.cloud\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"a01881a9-3771-4a69-a48c-3d27f9ababf1\"\n      },\n      {\n        \"display_name\": \"360云盘\",\n        \"software_name\": \"360Drive\",\n        \"icon_name\": null,\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": null,\n        \"bundle_id\": \"com.360.cloudui\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"903a1bd4-90ac-42b0-a607-14a8d17dfa13\"\n      },\n      {\n        \"display_name\": \"360云盘\",\n        \"software_name\": \"360Drive\",\n        \"icon_name\": null,\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": null,\n        \"bundle_id\": \"com.360.scloud\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"b68c945e-14aa-4436-bcbe-3c2cd3f32f70\"\n      },\n      {\n        \"display_name\": \"360云盘\",\n        \"software_name\": \"360Drive\",\n        \"icon_name\": null,\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": null,\n        \"bundle_id\": \"com.360.ecloud\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"cbe2abbb-21a4-487c-a2bb-936ad8ddb0b5\"\n      },\n      {\n        \"display_name\": \"360云盘\",\n        \"software_name\": \"360Drive\",\n        \"icon_name\": null,\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": null,\n        \"bundle_id\": \"^com\\\\.qihoo\\\\.yunpan.*$\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"049aeff0-bc4a-41d5-a8e8-5db55e0eb335\"\n      },\n      {\n        \"display_name\": \"360云盘\",\n        \"software_name\": \"360Drive\",\n        \"icon_name\": null,\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": null,\n        \"bundle_id\": \"com.qihoo.cloudisk\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"f57b7f88-edd6-4e36-aa41-91abd286c183\"\n      },\n      {\n        \"display_name\": \"天翼云盘\",\n        \"software_name\": \"189Drive\",\n        \"icon_name\": \"ctyun\",\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": \"^.*$\",\n        \"bundle_id\": \"com.cn21.ecloud\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"84927e46-93a7-4f0b-a70a-f3b05e83777b\"\n      },\n      {\n        \"display_name\": \"天翼云盘\",\n        \"software_name\": \"189Drive\",\n        \"icon_name\": \"ctyun\",\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": \"^.*$\",\n        \"bundle_id\": \"21cn.cloud.dist\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"129f976f-e75c-4fd6-9474-adf28622077c\"\n      },\n      {\n        \"display_name\": \"阿里云盘\",\n        \"software_name\": \"AliDrive\",\n        \"icon_name\": \"aliyunpan\",\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": \"^.*$\",\n        \"bundle_id\": \"com.alicloud.smartdrive\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"8e7bddcc-b0d1-4589-a2f5-e5487b076e34\"\n      },\n      {\n        \"display_name\": \"百度网盘\",\n        \"software_name\": \"BaiduDrive\",\n        \"icon_name\": \"baidu_wangpan\",\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": \"^.*$\",\n        \"bundle_id\": \"com.baidu.BaiduNetdisk-mac\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"5629f874-b119-4b97-a54d-d6bfc8b5196b\"\n      },\n      {\n        \"display_name\": \"百度网盘\",\n        \"software_name\": \"BaiduDrive\",\n        \"icon_name\": \"baidu_wangpan\",\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": \"^.*$\",\n        \"bundle_id\": \"com.baidu.netdiskmac\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"4f39abde-276a-42d2-b002-060438a8043c\"\n      },\n      {\n        \"display_name\": \"城通网盘\",\n        \"software_name\": \"400GBDrive\",\n        \"icon_name\": null,\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": \"^.*$\",\n        \"bundle_id\": \"io.ctfile.client\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"7d420f94-c583-4175-9dd3-11bb8ea9f0ee\"\n      },\n      {\n        \"display_name\": \"城通网盘\",\n        \"software_name\": \"400GBDrive\",\n        \"icon_name\": null,\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": \"^.*$\",\n        \"bundle_id\": \"com.ctfile.macapp\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"e360ff6f-232f-4bac-a64d-0e7e15002baa\"\n      },\n      {\n        \"display_name\": \"城通网盘\",\n        \"software_name\": \"400GBDrive\",\n        \"icon_name\": null,\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": \"^.*$\",\n        \"bundle_id\": \"io.nwjs.nwjs\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"b303253a-8536-4383-b8a9-661b7b2c065c\"\n      },\n      {\n        \"display_name\": \"小米云服务\",\n        \"software_name\": \"XiaoMiDrive\",\n        \"icon_name\": null,\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": \"^.*$\",\n        \"bundle_id\": \"micloud.pc.xiaomi\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"ffa9b470-6d35-4346-9f93-5bf8cabec66c\"\n      },\n      {\n        \"display_name\": \"沃家云盘\",\n        \"software_name\": \"WoDrive\",\n        \"icon_name\": null,\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": \"^.*$\",\n        \"bundle_id\": \"com.chinaunicom.wocloud\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"3a778fab-679e-4f80-b555-aa5c78c682aa\"\n      },\n      {\n        \"display_name\": \"微云\",\n        \"software_name\": \"WCloud\",\n        \"icon_name\": \"weiyun\",\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": \"^.*$\",\n        \"bundle_id\": \"com.tencent.mac.weiyun\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"652a8473-6ae7-4f01-bc1e-d4277a56e72f\"\n      },\n      {\n        \"display_name\": \"微云\",\n        \"software_name\": \"WCloud\",\n        \"icon_name\": \"weiyun\",\n        \"os_type\": \"macOS\",\n        \"software_type\": \"云存储\",\n        \"process_name\": null,\n        \"desc_rule\": \"^.*$\",\n        \"bundle_id\": \"com.tencent.WeiyunMac\",\n        \"signature\": null,\n        \"os_name\": \"macOS\",\n        \"os_icon\": \"macOS\",\n        \"uid\": \"e2a23989-6d76-487c-9d6c-68c21d5a6e7b\"\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "788d8f7f-74e7-43fc-927c-aca83153f33c",
+    "name": "APISec Management account softwaremanager/internalsource/list API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

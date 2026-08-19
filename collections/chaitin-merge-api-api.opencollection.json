@@ -1,0 +1,87 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account merge_api API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "merge_api",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /api/MergeConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/MergeConfigAPI",
+            "params": [
+              {
+                "name": "order_by",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/MergeConfigAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/MergeConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/MergeConfigAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/MergeConfigAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/MergeConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/MergeConfigAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/MergeConfigAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/MergeConfigStatsAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/MergeConfigStatsAPI"
+          },
+          "docs": "GET /api/MergeConfigStatsAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

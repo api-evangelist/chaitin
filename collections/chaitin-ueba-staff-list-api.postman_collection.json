@@ -1,0 +1,222 @@
+{
+  "item": [
+    {
+      "id": "49ff2e91-9bde-4478-b8b7-1d8ac9ee237a",
+      "name": "ueba/staff/list",
+      "description": {
+        "content": "UEBA 分析/人员/列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "20b8dec6-9395-49e0-9921-dec5e46b43f3",
+          "name": "UEBA用户页员工列表",
+          "request": {
+            "name": "UEBA用户页员工列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ueba",
+                "staff",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"is_fav\": \"<boolean>\",\n  \"queries\": [\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"time_range\": {\n    \"begin\": \"<string>\",\n    \"end\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9a549577-547a-441f-872b-37aaa994ce31",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ueba",
+                    "staff",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"is_fav\": true,\n  \"queries\": [\n    {\n      \"field\": \"staff_name\",\n      \"operator\": \"is\",\n      \"value\": \"吴贝宁\"\n    }\n  ],\n  \"time_range\": {\n    \"begin\": \"2023-01-01 00:00:00\",\n    \"end\": \"2024-01-01 00:00:00\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"index\": [\n      \"qzhddr_ueba\"\n    ],\n    \"total\": 266,\n    \"search_total\": 266,\n    \"results\": {\n      \"bucket\": {\n        \"doc_count_error_upper_bound\": 0,\n        \"sum_other_doc_count\": 0,\n        \"buckets\": [\n          {\n            \"key\": \"100faf26-d362-4ca2-befb-3ac8c22673eb\",\n            \"doc_count\": 266,\n            \"total_score\": {\n              \"value\": 15960\n            },\n            \"info\": {\n              \"hits\": {\n                \"total\": {\n                  \"value\": 266,\n                  \"relation\": \"eq\"\n                },\n                \"max_score\": 1.000099,\n                \"hits\": [\n                  {\n                    \"_index\": \".ds-qzhddr_ueba_s-2023.12.27-000001\",\n                    \"_type\": \"_doc\",\n                    \"_id\": \"JZOir4wBNV4rKln5VJur\",\n                    \"_score\": 1.000099,\n                    \"_source\": {\n                      \"status\": \"created\",\n                      \"category\": \"channel\",\n                      \"device_id\": \"676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1\",\n                      \"device_code\": \"PC-000005\",\n                      \"ip_address\": \"192.168.96.46\",\n                      \"console_user\": \"jasonlee\",\n                      \"os_name\": \"macOS\",\n                      \"os_friendly_name\": \"macOS 13.5.1\",\n                      \"staff_id\": \"100faf26-d362-4ca2-befb-3ac8c22673eb\",\n                      \"staff_name\": \"何睿\",\n                      \"staff_code\": \"e480e229f4fa3a21\",\n                      \"staff_email\": \"\",\n                      \"staff_description\": \"\",\n                      \"staff_tag_ids\": [],\n                      \"staff_tags\": [],\n                      \"dept_ids\": [\n                        \"6cbf127d-20f5-4322-93b5-e4a515ae356a\"\n                      ],\n                      \"dept_names\": [\n                        \"test\"\n                      ],\n                      \"dept_paths\": [\n                        \"default/test\"\n                      ],\n                      \"event_id\": \"51C58702-0213-462E-951B-1B96388C0325\",\n                      \"agent_version\": \"3.0.303\",\n                      \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n                      \"policy_id\": \"21f9c2cb-5c86-47ab-a514-72bcade6facc\",\n                      \"log_cnt\": 8,\n                      \"timestamp\": \"2023-12-28T08:55:00Z\",\n                      \"@timestamp\": 1703753700430,\n                      \"ueba_id\": \"332d91f9-c264-4192-a6cb-46fdedb3292e\",\n                      \"ueba_status\": \"activated\",\n                      \"ueba_source\": \"policy_channel_log\",\n                      \"ueba_category\": \"outgoing\",\n                      \"ueba_description\": \"\",\n                      \"ueba_expression_fields\": {\n                        \"body\": {\n                          \"aggs\": {\n                            \"count\": {\n                              \"cardinality\": {\n                                \"field\": \"device_id\",\n                                \"precision_threshold\": 40000\n                              }\n                            }\n                          },\n                          \"query\": {\n                            \"bool\": {\n                              \"must\": [\n                                {\n                                  \"term\": {\n                                    \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\"\n                                  }\n                                }\n                              ]\n                            }\n                          },\n                          \"collapse\": {\n                            \"field\": \"device_id\",\n                            \"inner_hits\": {\n                              \"name\": \"device_id\",\n                              \"size\": 100\n                            }\n                          },\n                          \"track_total_hits\": true\n                        },\n                        \"queries\": []\n                      },\n                      \"ueba_expression\": \"SELF\",\n                      \"ueba_score\": 60,\n                      \"ueba_windows_s\": 90000000,\n                      \"ueba_threshold\": 1,\n                      \"time\": 1703753700430,\n                      \"begin_timestamp\": 1700114112000,\n                      \"end_timestamp\": 1698988709000,\n                      \"begin\": \"2023-11-16T05:55:12Z\",\n                      \"end\": \"2023-11-03T05:18:29Z\",\n                      \"ueba_category_display\": \"外发行为\",\n                      \"is_fav\": true\n                    }\n                  }\n                ]\n              }\n            }\n          }\n        ]\n      }\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "810265a8-87a7-43ae-93f9-405f8a8f775e",
+    "name": "APISec Management account ueba/staff/list API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

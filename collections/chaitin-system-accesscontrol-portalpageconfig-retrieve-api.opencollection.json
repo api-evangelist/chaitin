@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account system/accesscontrol/portalpageconfig/retrieve API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "system/accesscontrol/portalpageconfig/retrieve",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "访客portal页面配置查询",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/system/accesscontrol/portalpageconfig/retrieve",
+            "headers": [
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "docs": "访客portal页面配置查询"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

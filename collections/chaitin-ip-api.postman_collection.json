@@ -1,0 +1,1354 @@
+{
+  "item": [
+    {
+      "id": "b24c4842-c1c4-4c2b-a2f3-733b8e54a45d",
+      "name": "资产/IP地址",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6d52900f-c729-48be-a7b3-406a1f481325",
+          "name": "IP地址列表",
+          "request": {
+            "name": "IP地址列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "asset",
+                "ip"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<string>",
+                  "description": "(Required) 空间ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>",
+                  "description": "(Required) 状态"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "排序字段，字段前加-表示降序，默认排序为-id"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "页码"
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<integer>",
+                  "description": "分页大小"
+                },
+                {
+                  "disabled": false,
+                  "key": "ip",
+                  "value": "<string>",
+                  "description": "IP"
+                },
+                {
+                  "disabled": false,
+                  "key": "as_num",
+                  "value": "<string>",
+                  "description": "ASN编号"
+                },
+                {
+                  "disabled": false,
+                  "key": "provider",
+                  "value": "<string>",
+                  "description": "运营商"
+                },
+                {
+                  "disabled": false,
+                  "key": "location",
+                  "value": "<string>",
+                  "description": "位置"
+                },
+                {
+                  "disabled": false,
+                  "key": "source",
+                  "value": "<string>",
+                  "description": "来源"
+                },
+                {
+                  "disabled": false,
+                  "key": "bu",
+                  "value": "<string>",
+                  "description": "分组"
+                },
+                {
+                  "disabled": false,
+                  "key": "tag",
+                  "value": "<string>",
+                  "description": "标签"
+                },
+                {
+                  "disabled": false,
+                  "key": "created_at_after",
+                  "value": "<string>",
+                  "description": "首次发现开始时间，格式为`2023-01-01 00:00:00`，配合created_at_before使用"
+                },
+                {
+                  "disabled": false,
+                  "key": "created_at_before",
+                  "value": "<string>",
+                  "description": "首次发现结束时间，格式为`2023-01-01 00:00:00`，配合created_at_after使用"
+                },
+                {
+                  "disabled": false,
+                  "key": "lastseen_at_after",
+                  "value": "<string>",
+                  "description": "最后发现开始时间，格式为`2023-01-01 00:00:00`，配合lastseen_at_before使用"
+                },
+                {
+                  "disabled": false,
+                  "key": "lastseen_at_before",
+                  "value": "<string>",
+                  "description": "最后发现结束时间，格式为`2023-01-01 00:00:00`，配合lastseen_at_after使用"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "id": "85c1a5f5-6862-491f-97e1-2f778eadd303",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "asset",
+                    "ip"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    },
+                    {
+                      "key": "status",
+                      "value": "valid"
+                    },
+                    {
+                      "key": "sort",
+                      "value": ""
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "size",
+                      "value": "20"
+                    },
+                    {
+                      "key": "ip",
+                      "value": ""
+                    },
+                    {
+                      "key": "as_num",
+                      "value": ""
+                    },
+                    {
+                      "key": "provider",
+                      "value": ""
+                    },
+                    {
+                      "key": "location",
+                      "value": ""
+                    },
+                    {
+                      "key": "source",
+                      "value": "dns"
+                    },
+                    {
+                      "key": "bu",
+                      "value": ""
+                    },
+                    {
+                      "key": "tag",
+                      "value": ""
+                    },
+                    {
+                      "key": "created_at_after",
+                      "value": ""
+                    },
+                    {
+                      "key": "created_at_before",
+                      "value": ""
+                    },
+                    {
+                      "key": "lastseen_at_after",
+                      "value": ""
+                    },
+                    {
+                      "key": "lastseen_at_before",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"current\": 1,\n    \"items\": [\n      {\n        \"as_name\": \"ALIBABA-CN-NET Hangzhou Alibaba Advertising Co.,Ltd., CN\",\n        \"as_num\": \"AS37963\",\n        \"bu\": \"\",\n        \"city\": \"北京市\",\n        \"country\": \"中国\",\n        \"created_at\": \"2025-06-13 11:45:42\",\n        \"id\": 3210499,\n        \"ip\": \"47.95.29.9\",\n        \"lastseen_at\": \"2025-06-13 11:45:42\",\n        \"live_port\": 0,\n        \"location\": \"中国 北京市 北京市\",\n        \"provider\": \"阿里云\",\n        \"province\": \"北京市\",\n        \"sources\": [\n          {\n            \"factor\": \"443,9000\",\n            \"lastseen_at\": \"2025-06-13 11:45:42\",\n            \"reason\": \"chaitin.com\",\n            \"source\": \"证书\"\n          }\n        ],\n        \"status\": \"await\",\n        \"subnet\": \"47.95.29.0/24\",\n        \"tags\": [],\n        \"updated_at\": \"2025-06-13 11:45:42\",\n        \"version\": 4\n      }\n    ],\n    \"size\": 20,\n    \"total\": 1\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cf46be07-7cc2-44fe-8292-bdf68897a8ea",
+          "name": "IP地址批量添加",
+          "request": {
+            "name": "IP地址批量添加",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "asset",
+                "ip",
+                "batch-create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<string>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"assets\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"bu_id\": \"<integer>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "329aadb0-8de1-46dc-a6ab-a59f9efe35fa",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "asset",
+                    "ip",
+                    "batch-create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"assets\": [\n    \"39.99.137.217\"\n  ],\n  \"bu_id\": 4,\n  \"tags\": [\n    \"aaa\",\n    \"bbb\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"affected\": 1,\n    \"ignored\": 0\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7f6e4aac-3ebe-4ca3-b631-2a8477be15f5",
+          "name": "IP地址批量删除",
+          "request": {
+            "name": "IP地址批量删除",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "asset",
+                "ip",
+                "batch-delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "69097b67-8f04-4f30-8861-404ec8cffdcf",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "asset",
+                    "ip",
+                    "batch-delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"affected\": 0,\n    \"ignored\": 1\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "75b60b17-65e1-4ab7-9ce9-9ecd5bbd33f3",
+          "name": "IP地址批量关联分组",
+          "request": {
+            "name": "IP地址批量关联分组",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "asset",
+                "ip",
+                "bu"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<string>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"bu_id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "29a79406-dca1-4436-9295-0c57229a9507",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "asset",
+                    "ip",
+                    "bu"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"bu_id\": 3,\n  \"pk\": [\n    20350,\n    17160\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"affected\": 2,\n    \"ignored\": 0\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0b131206-883b-4489-b8f5-3bdfb1ff63b7",
+          "name": "IP地址批量修改状态",
+          "request": {
+            "name": "IP地址批量修改状态",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "asset",
+                "ip",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b842a120-b0d6-43de-a007-5279749ec5e7",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "asset",
+                    "ip",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pk\": [\n    17160\n  ],\n  \"status\": \"valid\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"affected\": 1,\n    \"ignored\": 0\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d8a95bd9-e91b-4b3f-86f6-8bf984e57814",
+          "name": "IP地址批量解绑标签",
+          "request": {
+            "name": "IP地址批量解绑标签",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "asset",
+                "ip",
+                "tag"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<string>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tag\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7a3206e8-6809-4230-a0d6-5488d399c021",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "asset",
+                    "ip",
+                    "tag"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pk\": [\n    20350,\n    17160\n  ],\n  \"tag\": [\n    \"xxx\",\n    \"yyy\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {},\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0bc7b4da-c6ef-4174-873a-6a09ad197929",
+          "name": "IP地址批量绑定标签",
+          "request": {
+            "name": "IP地址批量绑定标签",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "asset",
+                "ip",
+                "tag"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<string>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tag\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c9ecbd57-0013-4dca-8e82-958519389081",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "asset",
+                    "ip",
+                    "tag"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pk\": [\n    20350,\n    17160\n  ],\n  \"tag\": [\n    \"xxx\",\n    \"yyy\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": 4,\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bb4fdca7-1532-4d5b-8d01-831a3f8bf207",
+          "name": "IP地址更新标签",
+          "request": {
+            "name": "IP地址更新标签",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "asset",
+                "ip",
+                ":pk",
+                "tag"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<string>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "pk",
+                  "description": "(Required) IP ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tag\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f3d8ecab-c409-4cb2-bb75-04e61682d324",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "asset",
+                    "ip",
+                    ":pk",
+                    "tag"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "pk",
+                      "description": "(Required) IP ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"tag\": [\n    \"xxx\",\n    \"yyy\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {},\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ba8be84b-a9a0-4ba1-a397-75035fad292a",
+          "name": "IP地址批量关联分组-v2",
+          "request": {
+            "name": "IP地址批量关联分组-v2",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "asset",
+                "ip",
+                "bu"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<string>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"assets\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"bu_id\": \"<integer>\",\n  \"conflict\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a9849de7-4b99-4290-801d-8de8bd846e58",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "asset",
+                    "ip",
+                    "bu"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"assets\": [\n    \"104.21.86.215\"\n  ],\n  \"bu_id\": 0,\n  \"conflict\": \"submit\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"affected\": 2,\n    \"ignored\": 0\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "593f06c1-2a31-417a-9ed3-c07e92deddd7",
+          "name": "IP地址批量解绑标签-v2",
+          "request": {
+            "name": "IP地址批量解绑标签-v2",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "asset",
+                "ip",
+                "tag"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<string>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"assets\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"tag\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"conflict\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "db172255-0f3e-4b74-87bc-0db7a61740b3",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "asset",
+                    "ip",
+                    "tag"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"assets\": [\n    \"104.21.86.215\"\n  ],\n  \"conflict\": \"submit\",\n  \"tag\": [\n    \"xxx\",\n    \"yyy\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": 4,\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2a4974f8-8af0-446f-99c8-36b73d0179e9",
+          "name": "IP地址批量绑定标签-v2",
+          "request": {
+            "name": "IP地址批量绑定标签-v2",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "asset",
+                "ip",
+                "tag"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<string>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"assets\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"tag\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"conflict\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "60e695c7-ed0f-4556-a6ed-126d8d6f10ac",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "asset",
+                    "ip",
+                    "tag"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"assets\": [\n    \"104.21.86.215\"\n  ],\n  \"conflict\": \"submit\",\n  \"tag\": [\n    \"xxx\",\n    \"yyy\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": 4,\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "82c21e46-f550-411d-9c68-e2054cf9bb2a",
+    "name": "APISec Management account 资产/IP地址 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

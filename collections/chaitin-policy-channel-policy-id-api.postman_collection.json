@@ -1,0 +1,238 @@
+{
+  "item": [
+    {
+      "id": "d1977d24-d82c-4daa-bc5f-53d48633238f",
+      "name": "policy/channel/{policy_id}",
+      "description": {
+        "content": "策略管理/通道/policy_id 参数",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1c2f2f5c-25a1-442d-87f2-03184d74665a",
+          "name": "修改渠道管控",
+          "request": {
+            "name": "修改渠道管控",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "policy",
+                "channel",
+                ":policy_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "policy_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mode\": \"<string>\",\n  \"name\": \"<string>\",\n  \"policy_group_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"description\": \"<null>\",\n  \"risk_level\": \"<integer>\",\n  \"period_category\": \"<string>\",\n  \"run_model\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"scope\": \"<string>\",\n  \"expression_fields\": [\n    {\n      \"field\": \"<string>\",\n      \"value\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"operator\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"value\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"operator\": \"<string>\"\n    }\n  ],\n  \"action\": \"<string>\",\n  \"action_template_id\": \"<string>\",\n  \"extract_file_options\": {\n    \"file_size\": \"<integer>\",\n    \"file_size_measure\": \"<string>\"\n  },\n  \"extract_file\": \"<boolean>\",\n  \"screenshot\": \"<boolean>\",\n  \"screen_recording\": \"<boolean>\",\n  \"notification_config\": [],\n  \"category\": \"<string>\",\n  \"binding_config\": {\n    \"source\": \"<string>\",\n    \"include\": {\n      \"device_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    \"exclude\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "00657793-63c7-4383-8925-5e8a287d2023",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "policy",
+                    "channel",
+                    ":policy_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "policy_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"mode\": \"advanced\",\n  \"name\": \"本地测试2222\",\n  \"policy_group_ids\": [\n    \"a3868332-5995-4e3f-b2e3-fad34bceebd9\"\n  ],\n  \"description\": null,\n  \"risk_level\": 1,\n  \"period_category\": \"permanent\",\n  \"run_model\": [\n    \"online\",\n    \"offline\"\n  ],\n  \"scope\": \"common\",\n  \"expression_fields\": [\n    {\n      \"field\": \"channel\",\n      \"value\": [\n        \"b4ea1e21-dd48-49b4-82e7-37d3f4f12ad9\",\n        \"83236626-c08c-44df-8fc8-5d54d3f9dee2\",\n        \"af0a98b1-426e-4392-a753-a9f2e169b5d7\",\n        \"d72885d9-e023-4293-88d2-ab485b0086d5\",\n        \"f916743b-8c46-4acf-810d-fdcd60d192c7\",\n        \"86af7908-8907-4f7a-ad8a-c17e2a6a2e96\",\n        \"45eee998-91da-4f17-b296-c4b847ef0c42\",\n        \"0aaf1053-1581-47ce-81c7-469bb5d46a26\",\n        \"c892c042-716c-4301-81f9-09671634c2a3\",\n        \"a9b74305-2e8c-4cd6-83bf-c3ab8fdb62c5\",\n        \"bcef3b8d-565c-48cb-87e6-d4ea951a1939\",\n        \"ea409280-f5b4-4c02-8186-5e7a9cceb440\",\n        \"5d788e98-4eb5-4d5f-89a5-ac2f7aa805d8\",\n        \"64e6772f-c869-4f2a-beda-643d32e18539\",\n        \"140afa40-dd49-4a0c-bb27-7232c6eeb9f3\",\n        \"20eb933c-af7d-4aea-b9bb-f77a5e14eaf7\",\n        \"5d830754-cd61-4c1a-b73c-4435baa791d2\",\n        \"9c29b31f-af5f-4dcd-a6a9-e09a2600f775\",\n        \"bfc31e70-0cd0-49a9-9c00-6ce34e4ec07b\",\n        \"4813b5ac-a7bc-420c-9b52-f241faf5de91\",\n        \"4d6c3e0f-c208-4af9-b057-8da04a5d1d8c\",\n        \"88ea7e6e-8f4c-4bc5-83a3-48ed576dc0ae\",\n        \"52c0b3ee-6375-4024-a539-47893d06d1e9\",\n        \"4439c520-a3fe-4468-adc2-d51a918caf78\",\n        \"7cf6a557-e1e5-4cf6-ba27-99f7523867be\",\n        \"bc7ef1e7-f12a-4341-b264-e849d87d825d\",\n        \"8522b720-869c-4eb4-86ec-8d976ab987bf\",\n        \"f80162de-7928-4336-8f1d-13c24142181a\",\n        \"43cf180d-855c-4af7-a103-bbd88ee6ab3b\",\n        \"e65e1ade-50be-4616-83fa-cbc8aa36683d\",\n        \"fe49ed38-5dfb-4b90-9cdc-aac0da96751b\",\n        \"c7f89726-cd46-454e-baf3-71812507a854\",\n        \"aa52214d-54a9-4158-b666-ef0192607697\",\n        \"245befab-6216-48b8-b12c-bf6db1384581\",\n        \"9ba77d96-d1b0-4d28-a367-f78daea8ed09\",\n        \"0ce9e9ec-8d4e-41b1-98ab-ec634b260b82\",\n        \"def671a3-ae9f-4217-b7bd-99c8558915e5\",\n        \"17e21902-ff13-4214-b51e-e4bc3d937f0e\",\n        \"70f9e587-df36-46a1-800a-0c34651eadab\",\n        \"575f3d55-798c-4fa3-8be2-4a31295bcb52\",\n        \"bf5029d5-3a5e-4c98-8d4b-bbbe3911fb67\",\n        \"f0cf9c32-48e5-44fb-9438-1865738b8d27\",\n        \"f7d7e2ea-520c-432a-9845-c9581572ff1a\",\n        \"4ad8000b-e92a-4113-9c88-ada31e97a999\",\n        \"b92232c2-42a6-46b3-a436-2f5873b6b089\",\n        \"0afe6a57-acd5-4e4d-8428-7985e685990c\",\n        \"d1330227-3884-4881-aee6-0dbe31a12cce\",\n        \"0b51b588-76e1-4d0c-9ac7-ccfe0bafa703\",\n        \"70ebdcd9-b54c-448b-b310-7cd0f2d79a11\",\n        \"c3dea1cb-0c2f-4d79-9a26-ac4bc44c709b\",\n        \"7fedbeee-8658-4457-a79a-573d57d05421\",\n        \"10592a88-35a2-4501-9f37-883a7645d1b9\",\n        \"ecbbc471-0c9f-4181-9d9c-56d10b74f2b8\",\n        \"a77149cf-f378-45ff-8557-5749b4682fed\",\n        \"4980dd47-e8b8-4528-aa60-0fe872684a00\",\n        \"cd759aa3-3b75-4cd9-b68b-1eb150537676\",\n        \"a05cc0b0-c9cd-4be2-b82b-6af334fbce8f\",\n        \"3e04c3cb-69d6-4ed1-b7c1-2a82fd06187c\",\n        \"a971d9a6-e2da-45e8-b661-5953fb3f5962\",\n        \"c9ee67bd-a300-4892-8207-220927b18f25\",\n        \"e43ea4ac-c6c9-4944-a196-b588cd298b93\",\n        \"83b806e4-6402-471f-9750-8518be7bce68\",\n        \"c129e75e-2557-4ff0-bac9-090bd3f03107\",\n        \"8388b4d8-d2ec-49b9-9d21-1e061696c30e\",\n        \"58af7359-8401-438d-985a-2ece35e77035\",\n        \"93198e9f-dc00-4f2e-8ee1-c378947899d2\",\n        \"d6dbc4e3-8e72-48f2-ae7a-03452656f7d4\",\n        \"c1b23dc1-eda5-41f3-9c91-e3f899f3f41f\",\n        \"9f396d3e-0520-47d1-83ae-88603cb48557\",\n        \"3f4803db-a444-4853-a5a8-a386e21e9629\",\n        \"29c084e6-9ed4-4ca8-8cf7-637fbb7679d3\",\n        \"f185e6de-b9b7-4114-87f9-56c0b9b1a228\",\n        \"1d413bb5-587d-4a8d-b052-76616fea65c2\",\n        \"77199118-106d-476b-8193-6aa42eac455c\",\n        \"672c79a9-dc9a-4f1d-ad43-8fbdf3cc6a5c\",\n        \"f855878f-dc51-41e9-a49c-c95a3fb7fb78\"\n      ],\n      \"operator\": \"contains\"\n    },\n    {\n      \"field\": \"classification\",\n      \"value\": [\n        \"1cb5a703-8648-4ecd-af9b-bf7aa735918d\"\n      ],\n      \"operator\": \"contains\"\n    }\n  ],\n  \"action\": \"block\",\n  \"action_template_id\": \"25c50e35-443b-4512-ad98-5b526e5fe51d\",\n  \"extract_file_options\": {\n    \"file_size\": 10,\n    \"file_size_measure\": \"MB\"\n  },\n  \"extract_file\": false,\n  \"screenshot\": false,\n  \"screen_recording\": false,\n  \"notification_config\": [],\n  \"category\": \"channel\",\n  \"binding_config\": {\n    \"source\": \"channel\",\n    \"include\": {\n      \"device_ids\": [\n        \"ce2b4c5d-9de7-47ba-aea9-8020489f40e9\"\n      ]\n    },\n    \"exclude\": {}\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "90599c57-bb05-4278-bcb5-aa36489dfc61",
+    "name": "APISec Management account policy/channel/{policy_id} API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

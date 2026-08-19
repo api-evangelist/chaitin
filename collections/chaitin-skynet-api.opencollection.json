@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account skynet API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "skynet",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "get enhance rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/open/skynet/rule"
+          },
+          "docs": "get enhance rule"
+        },
+        {
+          "info": {
+            "name": "update enhance rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/open/skynet/rule"
+          },
+          "docs": "update enhance rule"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

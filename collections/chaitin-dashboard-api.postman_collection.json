@@ -1,0 +1,1398 @@
+{
+  "item": [
+    {
+      "id": "a67f001b-3ccb-4b3f-9749-333c1707c0e8",
+      "name": "dashboard",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1e83dc44-4b53-45bf-b7e6-38f8e3c1d0e3",
+          "name": "GET /api/AssetDashboardDetectEventsAPI",
+          "request": {
+            "name": "GET /api/AssetDashboardDetectEventsAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AssetDashboardDetectEventsAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "47890ee6-e2dd-4389-ab3c-b008e9e5cdf3",
+          "name": "GET /api/AssetDashboardInterfaceTagAPI",
+          "request": {
+            "name": "GET /api/AssetDashboardInterfaceTagAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AssetDashboardInterfaceTagAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7f49f49d-8d0b-430e-82d5-903e4033a831",
+          "name": "GET /api/AssetDashboardLowFrequencyAPI",
+          "request": {
+            "name": "GET /api/AssetDashboardLowFrequencyAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AssetDashboardLowFrequencyAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8bc7b0d5-c1d1-4bb6-b46d-40f6a3835264",
+          "name": "GET /api/AssetDashboardReqFailedAPI",
+          "request": {
+            "name": "GET /api/AssetDashboardReqFailedAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AssetDashboardReqFailedAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "701c72bb-1e2a-4d3b-a879-e6aa1d40bfab",
+          "name": "GET /api/AssetDashboardRequestTrendAPI",
+          "request": {
+            "name": "GET /api/AssetDashboardRequestTrendAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AssetDashboardRequestTrendAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ae551be6-1585-44f7-938c-60862a4264be",
+          "name": "GET /api/AssetDashboardRiskVulnerableAPI",
+          "request": {
+            "name": "GET /api/AssetDashboardRiskVulnerableAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AssetDashboardRiskVulnerableAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "feeec5c5-ef6b-48a0-a75d-ba7c1f6c39c0",
+          "name": "GET /api/AssetDashboardSameUrlAPI",
+          "request": {
+            "name": "GET /api/AssetDashboardSameUrlAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AssetDashboardSameUrlAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d7a1d319-8725-44c8-8ea7-0ede3d639166",
+          "name": "GET /api/AssetDashboardSensitiveDataAPI",
+          "request": {
+            "name": "GET /api/AssetDashboardSensitiveDataAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AssetDashboardSensitiveDataAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e7c9211d-06d9-4c89-8f06-91d45100df68",
+          "name": "GET /api/AssetDashboardSiteInterfaceAPI",
+          "request": {
+            "name": "GET /api/AssetDashboardSiteInterfaceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AssetDashboardSiteInterfaceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2a0ee73a-627c-4109-b505-a90b29cef118",
+          "name": "GET /api/AssetDashboardTrafficCodeAPI",
+          "request": {
+            "name": "GET /api/AssetDashboardTrafficCodeAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AssetDashboardTrafficCodeAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1b137eeb-0e87-42ac-9eb5-669ea0d104af",
+          "name": "GET /api/AssetDashboardTrafficMethodAPI",
+          "request": {
+            "name": "GET /api/AssetDashboardTrafficMethodAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AssetDashboardTrafficMethodAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4b8d848f-f54e-42e6-b9a5-a2127df1fc75",
+          "name": "GET /api/HomeDashBoardOwaspAPI",
+          "request": {
+            "name": "GET /api/HomeDashBoardOwaspAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "HomeDashBoardOwaspAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c69cbbc4-0c17-4a52-8d22-eadd04cffc2f",
+          "name": "GET /api/HomeDashBoardQPSAPI",
+          "request": {
+            "name": "GET /api/HomeDashBoardQPSAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "HomeDashBoardQPSAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "12bcc52a-9a8e-46d2-bb37-058fdf649fe0",
+          "name": "GET /api/HomeDashBoardQPSTrendAPI",
+          "request": {
+            "name": "GET /api/HomeDashBoardQPSTrendAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "HomeDashBoardQPSTrendAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b07ebf84-7750-44c3-94f9-584cd728a692",
+          "name": "GET /api/HomeDashBoardRequestHistory",
+          "request": {
+            "name": "GET /api/HomeDashBoardRequestHistory",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "HomeDashBoardRequestHistory"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "109e33d9-a353-4426-b6af-f4b7fef80650",
+          "name": "GET /api/HomeDashBoardRequestTrendAPI",
+          "request": {
+            "name": "GET /api/HomeDashBoardRequestTrendAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "HomeDashBoardRequestTrendAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "98512c82-e538-4f4e-822c-d056b838761d",
+          "name": "GET /api/HomeDashBoardSensitiveData",
+          "request": {
+            "name": "GET /api/HomeDashBoardSensitiveData",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "HomeDashBoardSensitiveData"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8f3201f3-8f69-4d62-9ff9-4e8742c30ac8",
+          "name": "GET /api/HomeDashBoardSiteInterfaceAPI",
+          "request": {
+            "name": "GET /api/HomeDashBoardSiteInterfaceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "HomeDashBoardSiteInterfaceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "71f057c4-8ed4-4c1a-8a07-d81d90dd71df",
+          "name": "GET /api/HomeDashBoardTotalRequestAPI",
+          "request": {
+            "name": "GET /api/HomeDashBoardTotalRequestAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "HomeDashBoardTotalRequestAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a86c9b85-5e38-4d0f-adee-606d189db05b",
+          "name": "GET /api/RiskEventDashBoardHistoryInfoAPI",
+          "request": {
+            "name": "GET /api/RiskEventDashBoardHistoryInfoAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskEventDashBoardHistoryInfoAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "app",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "detection_module",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "event_description",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "req_start_time",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "risk_model",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "risk_strategy",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9bfc28f8-0608-4d3c-9036-faf474c858ef",
+          "name": "GET /api/RiskEventDashBoardInterfaceInfoAPI",
+          "request": {
+            "name": "GET /api/RiskEventDashBoardInterfaceInfoAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskEventDashBoardInterfaceInfoAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "app",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "detection_module",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "event_description",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "req_start_time",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "risk_model",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "risk_strategy",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4eaa6c60-7a15-427f-b9b9-a2a57e70e1e9",
+          "name": "GET /api/RiskEventDashBoardRiskNumAPI",
+          "request": {
+            "name": "GET /api/RiskEventDashBoardRiskNumAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskEventDashBoardRiskNumAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "app",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "detection_module",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "event_description",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "req_start_time",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "risk_model",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "risk_strategy",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8efbb48b-73f0-49f6-8b77-98ecfa7501a1",
+          "name": "GET /api/RiskEventDashBoardSiteInfoAPI",
+          "request": {
+            "name": "GET /api/RiskEventDashBoardSiteInfoAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskEventDashBoardSiteInfoAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "app",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "app_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "detection_module",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "event_description",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "req_start_time",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "risk_model",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "risk_strategy",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2961d73c-c60d-44b7-8090-0f128b7901b4",
+          "name": "GET /api/SensitiveDataTypeAPI",
+          "request": {
+            "name": "GET /api/SensitiveDataTypeAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveDataTypeAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "desensitization",
+                  "value": "<boolean>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "stage_type",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "tag_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "tag_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "40ac828c-fd2f-46c7-96f1-2a9383edda23",
+          "name": "GET /api/SensitiveInterfaceInfoAPI",
+          "request": {
+            "name": "GET /api/SensitiveInterfaceInfoAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveInterfaceInfoAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "desensitization",
+                  "value": "<boolean>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "stage_type",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "tag_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "tag_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "59965734-74f2-4a0c-88da-e6dc22ace979",
+          "name": "GET /api/SensitiveNewInterfaceAPI",
+          "request": {
+            "name": "GET /api/SensitiveNewInterfaceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveNewInterfaceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "desensitization",
+                  "value": "<boolean>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "stage_type",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "tag_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "tag_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9c1eace0-20f4-4b2f-b911-d1e00b315d2a",
+          "name": "GET /api/SensitiveRequestInfoAPI",
+          "request": {
+            "name": "GET /api/SensitiveRequestInfoAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveRequestInfoAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "datetime",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "desensitization",
+                  "value": "<boolean>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "stage_type",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "tag_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "tag_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "66bcec9e-d186-43c7-a014-227071dbb12b",
+          "name": "GET /api/StrategyAndEventAPI",
+          "request": {
+            "name": "GET /api/StrategyAndEventAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "StrategyAndEventAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e71a2009-11f5-4395-ac5f-67487e4ea494",
+          "name": "GET /api/StrategyOwaspInfoAPI",
+          "request": {
+            "name": "GET /api/StrategyOwaspInfoAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "StrategyOwaspInfoAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "78dff909-3de7-4d61-896b-de2c1ec2dc32",
+          "name": "GET /api/StrategyRunningStateAPI",
+          "request": {
+            "name": "GET /api/StrategyRunningStateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "StrategyRunningStateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d07be6c6-fcb0-4634-8b8c-0a0a19603944",
+    "name": "APISec Management account dashboard API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

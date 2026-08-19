@@ -1,0 +1,175 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account trigger_rule API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "trigger_rule",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /api/BuildinRuleTemplateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/BuildinRuleTemplateAPI"
+          },
+          "docs": "GET /api/BuildinRuleTemplateAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/PushTriggerRuleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/PushTriggerRuleAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/PushTriggerRuleAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/RuleTemplateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/RuleTemplateAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/RuleTemplateAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/RuleTemplateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/RuleTemplateAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/RuleTemplateAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/RuleTemplateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/RuleTemplateAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/RuleTemplateAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/TargetDeviceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/TargetDeviceAPI"
+          },
+          "docs": "GET /api/TargetDeviceAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/TargetDeviceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/TargetDeviceAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/TargetDeviceAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/TargetDeviceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/TargetDeviceAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/TargetDeviceAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/TargetDeviceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/TargetDeviceAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/TargetDeviceAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/TriggerRuleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/TriggerRuleAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/TriggerRuleAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/TriggerRuleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/TriggerRuleAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/TriggerRuleAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,422 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account web框架 API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "web框架",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "web框架-获取web框架总数",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/web_framework/count",
+            "params": [
+              {
+                "name": "order_by",
+                "value": "",
+                "type": "query",
+                "description": "排序字段"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "query",
+                "description": "框架名"
+              },
+              {
+                "name": "container_name",
+                "value": "",
+                "type": "query",
+                "description": "容器名称（完全匹配）"
+              },
+              {
+                "name": "service_type",
+                "value": "",
+                "type": "query",
+                "description": "服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC 19: java"
+              },
+              {
+                "name": "c_id",
+                "value": "",
+                "type": "query",
+                "description": "容器资产id"
+              },
+              {
+                "name": "container_id",
+                "value": "",
+                "type": "query",
+                "description": "容器id"
+              },
+              {
+                "name": "ids",
+                "value": "",
+                "type": "query",
+                "description": "web框架资产id集合"
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "排序:1-增;2-减"
+              },
+              {
+                "name": "offset",
+                "value": "1",
+                "type": "query",
+                "description": "数据启始位置"
+              },
+              {
+                "name": "page_size",
+                "value": "1",
+                "type": "query",
+                "description": "数据页大小"
+              }
+            ]
+          },
+          "docs": "web框架-获取web框架总数"
+        },
+        {
+          "info": {
+            "name": "web框架-获取web框架详情",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/web_framework/info",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "web框架资产id"
+              }
+            ]
+          },
+          "docs": "web框架-获取web框架详情"
+        },
+        {
+          "info": {
+            "name": "web框架-获取web框架列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/web_framework/list",
+            "params": [
+              {
+                "name": "order_by",
+                "value": "",
+                "type": "query",
+                "description": "排序字段"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "query",
+                "description": "框架名"
+              },
+              {
+                "name": "container_name",
+                "value": "",
+                "type": "query",
+                "description": "容器名称（完全匹配）"
+              },
+              {
+                "name": "service_type",
+                "value": "",
+                "type": "query",
+                "description": "服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC 19: java"
+              },
+              {
+                "name": "c_id",
+                "value": "",
+                "type": "query",
+                "description": "容器资产id"
+              },
+              {
+                "name": "container_id",
+                "value": "",
+                "type": "query",
+                "description": "容器id"
+              },
+              {
+                "name": "ids",
+                "value": "",
+                "type": "query",
+                "description": "web框架资产id集合"
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "排序:1-增;2-减"
+              },
+              {
+                "name": "offset",
+                "value": "1",
+                "type": "query",
+                "description": "数据启始位置"
+              },
+              {
+                "name": "page_size",
+                "value": "1",
+                "type": "query",
+                "description": "数据页大小"
+              }
+            ]
+          },
+          "docs": "web框架-获取web框架列表"
+        },
+        {
+          "info": {
+            "name": "web框架-导出web框架列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/web_framework/list_export",
+            "params": [
+              {
+                "name": "order_by",
+                "value": "",
+                "type": "query",
+                "description": "排序字段"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "query",
+                "description": "框架名"
+              },
+              {
+                "name": "container_name",
+                "value": "",
+                "type": "query",
+                "description": "容器名称（完全匹配）"
+              },
+              {
+                "name": "service_type",
+                "value": "",
+                "type": "query",
+                "description": "服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC 19: java"
+              },
+              {
+                "name": "c_id",
+                "value": "",
+                "type": "query",
+                "description": "容器资产id"
+              },
+              {
+                "name": "container_id",
+                "value": "",
+                "type": "query",
+                "description": "容器id"
+              },
+              {
+                "name": "ids",
+                "value": "",
+                "type": "query",
+                "description": "web框架资产id集合"
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "排序:1-增;2-减"
+              },
+              {
+                "name": "offset",
+                "value": "1",
+                "type": "query",
+                "description": "数据启始位置"
+              },
+              {
+                "name": "page_size",
+                "value": "1",
+                "type": "query",
+                "description": "数据页大小"
+              }
+            ]
+          },
+          "docs": "web框架-导出web框架列表"
+        },
+        {
+          "info": {
+            "name": "web站点-获取web站点详情",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/website/info",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "web站点资产id"
+              }
+            ]
+          },
+          "docs": "web站点-获取web站点详情"
+        },
+        {
+          "info": {
+            "name": "web站点-获取web站点列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/website/list",
+            "params": [
+              {
+                "name": "container_id",
+                "value": "",
+                "type": "query",
+                "description": "容器id"
+              },
+              {
+                "name": "container_name",
+                "value": "",
+                "type": "query",
+                "description": "容器名称"
+              },
+              {
+                "name": "order_by",
+                "value": "",
+                "type": "query",
+                "description": "排序字段"
+              },
+              {
+                "name": "service_type",
+                "value": "",
+                "type": "query",
+                "description": "服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC"
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "排序:1-增;2-减"
+              },
+              {
+                "name": "offset",
+                "value": "1",
+                "type": "query",
+                "description": "数据启始位置"
+              },
+              {
+                "name": "page_size",
+                "value": "1",
+                "type": "query",
+                "description": "数据页大小"
+              }
+            ]
+          },
+          "docs": "web站点-获取web站点列表"
+        },
+        {
+          "info": {
+            "name": "web站点-获取web站点总数",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/website/list_count",
+            "params": [
+              {
+                "name": "container_id",
+                "value": "",
+                "type": "query",
+                "description": "容器id"
+              },
+              {
+                "name": "container_name",
+                "value": "",
+                "type": "query",
+                "description": "容器名称"
+              },
+              {
+                "name": "order_by",
+                "value": "",
+                "type": "query",
+                "description": "排序字段"
+              },
+              {
+                "name": "service_type",
+                "value": "",
+                "type": "query",
+                "description": "服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC"
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "排序:1-增;2-减"
+              },
+              {
+                "name": "offset",
+                "value": "1",
+                "type": "query",
+                "description": "数据启始位置"
+              },
+              {
+                "name": "page_size",
+                "value": "1",
+                "type": "query",
+                "description": "数据页大小"
+              }
+            ]
+          },
+          "docs": "web站点-获取web站点总数"
+        },
+        {
+          "info": {
+            "name": "web站点-导出web站点列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/website/list_export",
+            "params": [
+              {
+                "name": "ids",
+                "value": "",
+                "type": "query",
+                "description": "点选导出的Website ID列表"
+              },
+              {
+                "name": "container_id",
+                "value": "",
+                "type": "query",
+                "description": "容器id"
+              },
+              {
+                "name": "container_name",
+                "value": "",
+                "type": "query",
+                "description": "容器名称"
+              },
+              {
+                "name": "service_type",
+                "value": "",
+                "type": "query",
+                "description": "服务类型"
+              }
+            ]
+          },
+          "docs": "web站点-导出web站点列表"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,222 @@
+{
+  "item": [
+    {
+      "id": "24df0b41-66a7-447c-9ad8-a50bd9d18a97",
+      "name": "policylog/code/stafflist",
+      "description": {
+        "content": "日志中心/代码/人员列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "51761713-fb81-4470-b6e1-96a5b01d9853",
+          "name": "代码管控员工列表信息",
+          "request": {
+            "name": "代码管控员工列表信息",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "policylog",
+                "code",
+                "stafflist"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"time_range\": {\n    \"begin\": \"<string>\",\n    \"end\": \"<string>\"\n  },\n  \"search\": \"<string>\",\n  \"queries\": [\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "13fdf8fc-05a8-476d-826f-f4383a3e4a1e",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "policylog",
+                    "code",
+                    "stafflist"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"time_range\": {\n    \"begin\": \"2023-11-14 10:55:38\",\n    \"end\": \"2023-11-14 11:55:38\"\n  },\n  \"search\": \"\",\n  \"queries\": [\n    {\n      \"field\": \"staff_name\",\n      \"operator\": \"is\",\n      \"value\": \"吴贝宁\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"index\": [\n      \"qzhddr_policy_code_control_logs\"\n    ],\n    \"total\": 558,\n    \"search_total\": 558,\n    \"results\": [\n      {\n        \"staff_id\": \"b96cf657-c2c1-4174-bf67-27b4f303dfac\",\n        \"staff_name\": \"hyj\",\n        \"console_user\": \"huyajie\",\n        \"dept_paths\": [\n          \"测试公司\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"macOS\",\n            \"os_name\": \"macOS\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"bae4f6c4-249e-44bf-ad7c-0b8c683e385d\",\n            \"device_code\": \"PC-000082\",\n            \"os_icon\": \"macOS\",\n            \"os_name\": \"macOS\",\n            \"total\": 151\n          },\n          {\n            \"device_id\": \"3bb3f844-b81c-4f28-b2ec-b24fa667e3f7\",\n            \"device_code\": \"PC-000096\",\n            \"os_icon\": \"macOS\",\n            \"os_name\": \"macOS\",\n            \"total\": 10\n          },\n          {\n            \"device_id\": \"9f162d3f-731d-44dc-901b-16a9571ab2df\",\n            \"device_code\": \"PC-000075\",\n            \"os_icon\": \"macOS\",\n            \"os_name\": \"macOS\",\n            \"total\": 8\n          }\n        ],\n        \"device_cnt\": 3\n      },\n      {\n        \"staff_id\": \"90534539-028d-40ea-9e8d-68f1a7b1cc88\",\n        \"staff_name\": \"qewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewq\",\n        \"console_user\": \"lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT\",\n        \"dept_paths\": [],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"a05300b7-7b76-4b54-ad25-a16a9c516c29\",\n            \"device_code\": \"PC-000108\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 56\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"782560d3-5c5e-446d-94cd-b46ca88a6d3f\",\n        \"staff_name\": \"鹿立学\",\n        \"console_user\": \"nanzhi\",\n        \"dept_paths\": [\n          \"测试公司/研发部/macOS终端组\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"macOS\",\n            \"os_name\": \"macOS\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"b33dff9c-6e23-44c6-a914-cc1b1cd04447\",\n            \"device_code\": \"PC-000112\",\n            \"os_icon\": \"macOS\",\n            \"os_name\": \"macOS\",\n            \"total\": 53\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"064092ab-d2c9-4f1f-b7f7-70c788a6fbb1\",\n        \"staff_name\": \"彭柔\",\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"dept_paths\": [\n          \"测试公司/质量保证组\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"a05300b7-7b76-4b54-ad25-a16a9c516c29\",\n            \"device_code\": \"PC-000108\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 18\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"64381e35-7ecc-4892-8d90-f7b52da3ed2b\",\n        \"staff_name\": \"pengrou\",\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"dept_paths\": [],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"a05300b7-7b76-4b54-ad25-a16a9c516c29\",\n            \"device_code\": \"PC-000108\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 13\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"3b926e09-676c-47ac-95b5-adc5fe7777c4\",\n        \"staff_name\": \"彭柔\",\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"dept_paths\": [\n          \"测试公司/质量保证组\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"a05300b7-7b76-4b54-ad25-a16a9c516c29\",\n            \"device_code\": \"PC-000108\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 12\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"3227c4e3-9afd-475e-aefd-86b1afac7439\",\n        \"staff_name\": \"Mercury\",\n        \"console_user\": \"mercury\",\n        \"dept_paths\": [\n          \"测试公司/产品部\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"macOS\",\n            \"os_name\": \"macOS\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"d78ac208-0ddb-4793-b826-b34d54c44bb0\",\n            \"device_code\": \"PC-000007\",\n            \"os_icon\": \"macOS\",\n            \"os_name\": \"macOS\",\n            \"total\": 10\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"7d1f7e9a-4a47-4f3d-9015-99b2852dec49\",\n        \"staff_name\": \"周周\",\n        \"console_user\": \"serval-PC\\\\serval\",\n        \"dept_paths\": [\n          \"测试公司/测试部门\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"UOS\",\n            \"os_name\": \"UOS\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"df5f440d-e7c1-4f40-a9ba-21f9af571f5e\",\n            \"device_code\": \"PC-000064\",\n            \"os_icon\": \"UOS\",\n            \"os_name\": \"UOS\",\n            \"total\": 6\n          },\n          {\n            \"device_id\": \"6590b381-3a3f-44f9-9e5d-684f2e0670cf\",\n            \"device_code\": \"PC-000134\",\n            \"os_icon\": \"UOS\",\n            \"os_name\": \"UOS\",\n            \"total\": 1\n          }\n        ],\n        \"device_cnt\": 2\n      },\n      {\n        \"staff_id\": \"2df26a2d-4b37-4e21-894b-8bf076f175d1\",\n        \"staff_name\": \"clb\",\n        \"console_user\": \"lianb@DESKTOP-PNED9SM@DESKTOP-PNED9SM\",\n        \"dept_paths\": [\n          \"测试公司/测试部门\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"5f46677b-d939-4f28-8209-ffdf14d7316c\",\n            \"device_code\": \"PC-000045\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 6\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"4781671e-4fd6-4702-bdfd-d343c70551e2\",\n        \"staff_name\": \"周紫莹\",\n        \"console_user\": \"serval-PC\\\\serval\",\n        \"dept_paths\": [\n          \"测试公司/研发部\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"UOS\",\n            \"os_name\": \"UOS\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"df5f440d-e7c1-4f40-a9ba-21f9af571f5e\",\n            \"device_code\": \"PC-000064\",\n            \"os_icon\": \"UOS\",\n            \"os_name\": \"UOS\",\n            \"total\": 6\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"83e5499e-d272-40fa-930e-237ce6eac9d2\",\n        \"staff_name\": \"彭柔\",\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"dept_paths\": [\n          \"测试公司/cyberserval\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"a05300b7-7b76-4b54-ad25-a16a9c516c29\",\n            \"device_code\": \"PC-000108\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 4\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"8ccd5a8d-34d9-41d3-b988-f2b0fb9b9cdd\",\n        \"staff_name\": \"周周\",\n        \"console_user\": \"serval-PC\\\\serval\",\n        \"dept_paths\": [\n          \"测试公司/测试部门\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"UOS\",\n            \"os_name\": \"UOS\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"6590b381-3a3f-44f9-9e5d-684f2e0670cf\",\n            \"device_code\": \"PC-000134\",\n            \"os_icon\": \"UOS\",\n            \"os_name\": \"UOS\",\n            \"total\": 3\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"console_user\": \"serval-PC\\\\root\",\n        \"dept_paths\": [],\n        \"os_list\": [\n          {\n            \"os_icon\": \"UOS\",\n            \"os_name\": \"UOS\"\n          },\n          {\n            \"os_icon\": \"macOS\",\n            \"os_name\": \"macOS\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"6590b381-3a3f-44f9-9e5d-684f2e0670cf\",\n            \"device_code\": \"PC-000134\",\n            \"os_icon\": \"UOS\",\n            \"os_name\": \"UOS\",\n            \"total\": 1\n          },\n          {\n            \"device_id\": \"bae4f6c4-249e-44bf-ad7c-0b8c683e385d\",\n            \"device_code\": \"PC-000082\",\n            \"os_icon\": \"macOS\",\n            \"os_name\": \"macOS\",\n            \"total\": 1\n          }\n        ],\n        \"device_cnt\": 2\n      },\n      {\n        \"staff_id\": \"205ec81b-634c-4d58-98df-e77c704b290a\",\n        \"staff_name\": \"test test1\",\n        \"console_user\": \"lianb@DESKTOP-PNED9SM@DESKTOP-PNED9SM\",\n        \"dept_paths\": [\n          \"测试公司\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"5f46677b-d939-4f28-8209-ffdf14d7316c\",\n            \"device_code\": \"PC-000045\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 2\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"62a5e0f8-831b-4ca4-ab18-6760d4773111\",\n        \"staff_name\": \"彭柔\",\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"dept_paths\": [\n          \"测试公司/质量保证组\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"a05300b7-7b76-4b54-ad25-a16a9c516c29\",\n            \"device_code\": \"PC-000108\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 1\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"79ad0694-390b-4378-b1b6-a4ef89ee85c9\",\n        \"staff_name\": \"胡雅杰\",\n        \"console_user\": \"huyajie\",\n        \"dept_paths\": [\n          \"测试公司\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"macOS\",\n            \"os_name\": \"macOS\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"bae4f6c4-249e-44bf-ad7c-0b8c683e385d\",\n            \"device_code\": \"PC-000082\",\n            \"os_icon\": \"macOS\",\n            \"os_name\": \"macOS\",\n            \"total\": 1\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"81f1335c-2f3b-4747-80c7-ef39a075e1bd\",\n        \"staff_name\": \"彭柔\",\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"dept_paths\": [],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"a05300b7-7b76-4b54-ad25-a16a9c516c29\",\n            \"device_code\": \"PC-000108\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 1\n          }\n        ],\n        \"device_cnt\": 1\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6b5b57ab-f2c7-46b1-9c6b-20858a4f6016",
+    "name": "APISec Management account policylog/code/stafflist API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

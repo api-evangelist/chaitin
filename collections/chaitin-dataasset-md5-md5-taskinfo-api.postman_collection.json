@@ -1,0 +1,213 @@
+{
+  "item": [
+    {
+      "id": "16a026f5-5be1-4ddb-8ec1-d853d105175b",
+      "name": "dataasset/md5/{md5}/taskinfo",
+      "description": {
+        "content": "数据资产/MD5/md5 参数/任务信息",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8b7b9d2d-2773-45c8-9ce2-492f660f90c3",
+          "name": "资产扫描文件追溯",
+          "request": {
+            "name": "资产扫描文件追溯",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dataasset",
+                "md5",
+                ":md5",
+                "taskinfo"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "md5",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "931ca166-37e0-4e53-aab1-7e56419685d7",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dataasset",
+                    "md5",
+                    ":md5",
+                    "taskinfo"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "md5",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"正常\",\n  \"data\": {\n    \"index\": [\n      \"qzhddr_file_scan_res\"\n    ],\n    \"total\": 11,\n    \"search_total\": 11,\n    \"results\": {\n      \"first_task\": {\n        \"device_id\": \"7b45e606-c7b4-40a2-a08e-4aa9fb0ddcf1\",\n        \"device_code\": \"PC-000006\",\n        \"ip_address\": \"192.168.96.148\",\n        \"console_user\": \"wenghuangge\",\n        \"os_name\": \"macOS\",\n        \"os_friendly_name\": \"macOS 12.6.5\",\n        \"time\": 1701952378551,\n        \"@timestamp\": 1701952378551,\n        \"timestamp\": \"2023-12-07T12:32:58Z\",\n        \"agent_version\": \"3.1.821\",\n        \"event_id\": \"F28F407E-C362-42E1-8876-F15957D0397E\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"staff_id\": \"\",\n        \"staff_code\": \"\",\n        \"staff_name\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"filename\": \"DDR+macOS+v3.1.821 (2).zip\",\n        \"filepath\": \"/Users/wenghuangge/Desktop/temp/ggg/DDR+macOS+v3.1.821 (2).zip\",\n        \"filesize\": 84516869,\n        \"md5_hash\": \"f87b0979251b97f3ae09f829016237e0\",\n        \"sha256_hash\": \"30bb4628e644d6e77d57617c806790cfec4ee184270ec61c831055c051c595ba\",\n        \"is_password_protected\": false,\n        \"is_hidden\": false,\n        \"file_type\": \"1.zip\",\n        \"file_suffix\": \"zip\",\n        \"file_created_time\": 1701944671000,\n        \"file_created_timestamp\": \"2023-12-07T10:24:31Z\",\n        \"file_updated_time\": 1701944673000,\n        \"file_updated_timestamp\": \"2023-12-07T10:24:33Z\",\n        \"simhash_value\": \"\",\n        \"classifications\": [\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"f00c37d2-33ea-44d4-98e4-660bc37e1e9a\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"541dd2db-160b-46be-bb91-f9b6e30bf810\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"931b2e69-1ffa-40a5-ace9-63391d0ac54b\"\n          },\n          {\n            \"data_level\": 2,\n            \"data_level_name\": \"内部数据\",\n            \"name\": \"压缩文件检测\",\n            \"uid\": \"9f7a9cfe-a415-4dfd-ae3e-b561ec92ea24\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"362bf01d-21f6-4db9-a174-ca471582d915\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"bea6d659-955d-4442-bb90-cda6a8322a9e\"\n          },\n          {\n            \"data_level\": 2,\n            \"data_level_name\": \"内部数据\",\n            \"name\": \"压缩文件检测\",\n            \"uid\": \"fd8846e6-e6a1-4ed0-ab3b-30266b8c4eeb\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"2ed80c94-24f9-4511-8a2c-4884818fe964\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"51f2f41e-9924-4ede-8e6a-c075f8e5f145\"\n          },\n          {\n            \"data_level\": 2,\n            \"data_level_name\": \"内部数据\",\n            \"name\": \"压缩文件检测\",\n            \"uid\": \"80b037dc-f564-439c-9a54-deadb2367949\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"1e90a089-d6a3-42a2-b3fd-89254e1ea47a\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"压缩\",\n            \"uid\": \"cb63314b-3a74-43fc-8e16-abd20c52652f\"\n          },\n          {\n            \"data_level\": 2,\n            \"data_level_name\": \"内部数据\",\n            \"name\": \"文件名-存在\",\n            \"uid\": \"5da9980d-4b3d-402e-913a-60e2bb1cec15\"\n          }\n        ],\n        \"cl_ids\": [\n          \"f00c37d2-33ea-44d4-98e4-660bc37e1e9a\",\n          \"541dd2db-160b-46be-bb91-f9b6e30bf810\",\n          \"931b2e69-1ffa-40a5-ace9-63391d0ac54b\",\n          \"9f7a9cfe-a415-4dfd-ae3e-b561ec92ea24\",\n          \"362bf01d-21f6-4db9-a174-ca471582d915\",\n          \"bea6d659-955d-4442-bb90-cda6a8322a9e\",\n          \"fd8846e6-e6a1-4ed0-ab3b-30266b8c4eeb\",\n          \"2ed80c94-24f9-4511-8a2c-4884818fe964\",\n          \"51f2f41e-9924-4ede-8e6a-c075f8e5f145\",\n          \"80b037dc-f564-439c-9a54-deadb2367949\",\n          \"1e90a089-d6a3-42a2-b3fd-89254e1ea47a\",\n          \"cb63314b-3a74-43fc-8e16-abd20c52652f\",\n          \"5da9980d-4b3d-402e-913a-60e2bb1cec15\"\n        ],\n        \"cl_names\": [\n          \"分类分级次数\",\n          \"分类分级次数\",\n          \"分类分级次数\",\n          \"压缩文件检测\",\n          \"分类分级次数\",\n          \"分类分级次数\",\n          \"压缩文件检测\",\n          \"分类分级次数\",\n          \"分类分级次数\",\n          \"压缩文件检测\",\n          \"分类分级次数\",\n          \"压缩\",\n          \"文件名-存在\"\n        ],\n        \"data_levels\": [\n          4,\n          4,\n          4,\n          2,\n          4,\n          4,\n          2,\n          4,\n          4,\n          2,\n          4,\n          4,\n          2\n        ],\n        \"data_level_names\": [\n          \"机密数据\",\n          \"机密数据\",\n          \"机密数据\",\n          \"内部数据\",\n          \"机密数据\",\n          \"机密数据\",\n          \"内部数据\",\n          \"机密数据\",\n          \"机密数据\",\n          \"内部数据\",\n          \"机密数据\",\n          \"机密数据\",\n          \"内部数据\"\n        ],\n        \"has_cls\": true,\n        \"cl_id\": \"f00c37d2-33ea-44d4-98e4-660bc37e1e9a\",\n        \"cl_name\": \"分类分级次数\",\n        \"data_level\": 4,\n        \"data_level_name\": \"机密数据\",\n        \"content_summary_list\": [],\n        \"task_id\": \"56566d15-2077-463d-8ea2-a64c87de69ce\",\n        \"task_instance_id\": \"8a2ed813-a1b8-4955-ad40-da614d7f5232\",\n        \"scan_version\": 1,\n        \"category\": \"file_scan_task\",\n        \"audit_method\": \"keywords\",\n        \"expand\": {\n          \"compressed_filenames\": [\n            \"Config.json\",\n            \"DDR macOS v3.1.821.pkg\"\n          ],\n          \"rule_version\": {\n            \"cond_version\": 21,\n            \"dc_version\": 301,\n            \"filetype_version\": 34\n          }\n        },\n        \"is_compressed\": true\n      },\n      \"last_task\": {\n        \"device_id\": \"7b45e606-c7b4-40a2-a08e-4aa9fb0ddcf1\",\n        \"device_code\": \"PC-000006\",\n        \"ip_address\": \"192.168.96.149\",\n        \"console_user\": \"wenghuangge\",\n        \"os_name\": \"macOS\",\n        \"os_friendly_name\": \"macOS 12.6.5\",\n        \"time\": 1702277297798,\n        \"@timestamp\": 1702277297798,\n        \"timestamp\": \"2023-12-11T06:48:17Z\",\n        \"agent_version\": \"3.1.821\",\n        \"event_id\": \"EB5F76C1-9B82-4528-A1EF-AF6B24968B0A\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"staff_id\": \"58f89e69-c352-4272-ac47-592f91af32c6\",\n        \"staff_code\": \"+8615658575629\",\n        \"staff_name\": \"翁黄格\",\n        \"staff_email\": \"huangge.weng@cyberserval.cn\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [\n          \"6c59e9bc-d186-4af0-a235-67c01a3f9277\"\n        ],\n        \"dept_names\": [\n          \"macOS终端组\"\n        ],\n        \"dept_paths\": [\n          \"default/产研部/研发部/macOS终端组\"\n        ],\n        \"filename\": \"DDR+macOS+v3.1.821 (2).zip\",\n        \"filepath\": \"/Users/wenghuangge/Desktop/temp/ggg/DDR+macOS+v3.1.821 (2).zip\",\n        \"filesize\": 84516869,\n        \"md5_hash\": \"f87b0979251b97f3ae09f829016237e0\",\n        \"sha256_hash\": \"30bb4628e644d6e77d57617c806790cfec4ee184270ec61c831055c051c595ba\",\n        \"is_password_protected\": false,\n        \"is_hidden\": false,\n        \"file_type\": \"1.zip\",\n        \"file_suffix\": \"zip\",\n        \"file_created_time\": 1701944671000,\n        \"file_created_timestamp\": \"2023-12-07T10:24:31Z\",\n        \"file_updated_time\": 1701944673000,\n        \"file_updated_timestamp\": \"2023-12-07T10:24:33Z\",\n        \"simhash_value\": \"\",\n        \"classifications\": [\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"f00c37d2-33ea-44d4-98e4-660bc37e1e9a\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"541dd2db-160b-46be-bb91-f9b6e30bf810\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"931b2e69-1ffa-40a5-ace9-63391d0ac54b\"\n          },\n          {\n            \"data_level\": 2,\n            \"data_level_name\": \"内部数据\",\n            \"name\": \"压缩文件检测\",\n            \"uid\": \"9f7a9cfe-a415-4dfd-ae3e-b561ec92ea24\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"362bf01d-21f6-4db9-a174-ca471582d915\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"bea6d659-955d-4442-bb90-cda6a8322a9e\"\n          },\n          {\n            \"data_level\": 2,\n            \"data_level_name\": \"内部数据\",\n            \"name\": \"压缩文件检测\",\n            \"uid\": \"fd8846e6-e6a1-4ed0-ab3b-30266b8c4eeb\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"2ed80c94-24f9-4511-8a2c-4884818fe964\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"51f2f41e-9924-4ede-8e6a-c075f8e5f145\"\n          },\n          {\n            \"data_level\": 2,\n            \"data_level_name\": \"内部数据\",\n            \"name\": \"压缩文件检测\",\n            \"uid\": \"80b037dc-f564-439c-9a54-deadb2367949\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"分类分级次数\",\n            \"uid\": \"1e90a089-d6a3-42a2-b3fd-89254e1ea47a\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"数据来源\",\n            \"uid\": \"49ca85a6-c8b0-4fbb-a63c-13a270d33a7d\"\n          },\n          {\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\",\n            \"name\": \"压缩\",\n            \"uid\": \"cb63314b-3a74-43fc-8e16-abd20c52652f\"\n          },\n          {\n            \"data_level\": 2,\n            \"data_level_name\": \"内部数据\",\n            \"name\": \"文件名-存在\",\n            \"uid\": \"5da9980d-4b3d-402e-913a-60e2bb1cec15\"\n          }\n        ],\n        \"cl_ids\": [\n          \"f00c37d2-33ea-44d4-98e4-660bc37e1e9a\",\n          \"541dd2db-160b-46be-bb91-f9b6e30bf810\",\n          \"931b2e69-1ffa-40a5-ace9-63391d0ac54b\",\n          \"9f7a9cfe-a415-4dfd-ae3e-b561ec92ea24\",\n          \"362bf01d-21f6-4db9-a174-ca471582d915\",\n          \"bea6d659-955d-4442-bb90-cda6a8322a9e\",\n          \"fd8846e6-e6a1-4ed0-ab3b-30266b8c4eeb\",\n          \"2ed80c94-24f9-4511-8a2c-4884818fe964\",\n          \"51f2f41e-9924-4ede-8e6a-c075f8e5f145\",\n          \"80b037dc-f564-439c-9a54-deadb2367949\",\n          \"1e90a089-d6a3-42a2-b3fd-89254e1ea47a\",\n          \"49ca85a6-c8b0-4fbb-a63c-13a270d33a7d\",\n          \"cb63314b-3a74-43fc-8e16-abd20c52652f\",\n          \"5da9980d-4b3d-402e-913a-60e2bb1cec15\"\n        ],\n        \"cl_names\": [\n          \"分类分级次数\",\n          \"分类分级次数\",\n          \"分类分级次数\",\n          \"压缩文件检测\",\n          \"分类分级次数\",\n          \"分类分级次数\",\n          \"压缩文件检测\",\n          \"分类分级次数\",\n          \"分类分级次数\",\n          \"压缩文件检测\",\n          \"分类分级次数\",\n          \"数据来源\",\n          \"压缩\",\n          \"文件名-存在\"\n        ],\n        \"data_levels\": [\n          4,\n          4,\n          4,\n          2,\n          4,\n          4,\n          2,\n          4,\n          4,\n          2,\n          4,\n          4,\n          4,\n          2\n        ],\n        \"data_level_names\": [\n          \"机密数据\",\n          \"机密数据\",\n          \"机密数据\",\n          \"内部数据\",\n          \"机密数据\",\n          \"机密数据\",\n          \"内部数据\",\n          \"机密数据\",\n          \"机密数据\",\n          \"内部数据\",\n          \"机密数据\",\n          \"机密数据\",\n          \"机密数据\",\n          \"内部数据\"\n        ],\n        \"has_cls\": true,\n        \"cl_id\": \"f00c37d2-33ea-44d4-98e4-660bc37e1e9a\",\n        \"cl_name\": \"分类分级次数\",\n        \"data_level\": 4,\n        \"data_level_name\": \"机密数据\",\n        \"content_summary_list\": [],\n        \"task_id\": \"e0fc3452-b24a-4239-8241-5e02285d5be7\",\n        \"task_instance_id\": \"737278a7-6f10-452f-b0ea-3f903907d578\",\n        \"scan_version\": 1,\n        \"category\": \"file_scan_task\",\n        \"audit_method\": \"keywords\",\n        \"expand\": {\n          \"rule_version\": {\n            \"cond_version\": 23,\n            \"dc_version\": 303,\n            \"filetype_version\": 34\n          }\n        },\n        \"is_compressed\": true\n      }\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b0c966e9-51a3-46a8-bdc5-c6c2094ff80c",
+    "name": "APISec Management account dataasset/md5/{md5}/taskinfo API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

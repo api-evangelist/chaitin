@@ -1,0 +1,90 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account software/uninstall/instance/{instance_id}/device/{device_id}/uninstallsource/list API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "software/uninstall/instance/{instance_id}/device/{device_id}/uninstallsource/list",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "实例终端卸载源列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/software/uninstall/instance/:instance_id/device/:device_id/uninstallsource/list",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "instance_id",
+                "value": "127dace1-8e71-433d-ba64-2e5530c4c468",
+                "type": "path"
+              },
+              {
+                "name": "device_id",
+                "value": "6453b864-02b3-4e9b-96bf-2814cd912481",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "1",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "10",
+                "type": "query"
+              },
+              {
+                "name": "search",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "实例终端卸载源列表"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

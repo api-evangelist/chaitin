@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account exportrecord/{task_id}/download API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "exportrecord/{task_id}/download",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "导出结果下载",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/exportrecord/:task_id/download",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "task_id",
+                "value": "4854d81d-8cc5-48cf-b092-1a4ade6e6636",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "导出结果下载"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

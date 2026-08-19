@@ -1,0 +1,262 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account label API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "label",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST /api/BusinessTagAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/BusinessTagAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/BusinessTagAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/BusinessTagAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/BusinessTagAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/BusinessTagAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/MarkRuleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/MarkRuleAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/MarkRuleAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/MarkRuleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/MarkRuleAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/MarkRuleAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/SensitiveCategoryAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/SensitiveCategoryAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/SensitiveCategoryAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SensitiveCategoryAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SensitiveCategoryAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SensitiveCategoryAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/SensitiveCategoryAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/SensitiveCategoryAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/SensitiveCategoryAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/SensitiveTemplateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SensitiveTemplateAPI",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "ID"
+              }
+            ]
+          },
+          "docs": "GET /api/SensitiveTemplateAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/SensitiveTemplateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/SensitiveTemplateAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/SensitiveTemplateAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SensitiveTemplateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SensitiveTemplateAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SensitiveTemplateAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/SensitiveTemplateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/SensitiveTemplateAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/SensitiveTemplateAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/SensitiveValueBindingAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/SensitiveValueBindingAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/SensitiveValueBindingAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SensitiveValueBindingAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SensitiveValueBindingAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SensitiveValueBindingAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/SensitiveValueBindingAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/SensitiveValueBindingAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/SensitiveValueBindingAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/ValueCategoryAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/ValueCategoryAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/ValueCategoryAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/ValueCategoryAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/ValueCategoryAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/ValueCategoryAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

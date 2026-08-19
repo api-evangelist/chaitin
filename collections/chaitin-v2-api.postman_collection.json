@@ -1,0 +1,2086 @@
+{
+  "item": [
+    {
+      "id": "201c59d7-e231-4fbc-a870-a31a971b6f48",
+      "name": "任务/任务实例v2",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "05286df6-c9ec-45e3-be50-28a9001951b1",
+          "name": "任务实例列表",
+          "request": {
+            "name": "任务实例列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "instance"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "(Required) 空间ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<string>",
+                  "description": "页码"
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<integer>",
+                  "description": "分页大小"
+                },
+                {
+                  "disabled": false,
+                  "key": "task_status",
+                  "value": "<string>",
+                  "description": "任务状态"
+                },
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>",
+                  "description": "搜索任务信息，任务名称、集群模糊搜索"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "id": "a8fd18fe-e6d2-4eab-97c9-06d8b7e5af35",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "instance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "20"
+                    },
+                    {
+                      "key": "task_status",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "query",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"current\": 1,\n    \"items\": [\n      {\n        \"cluster\": {\n          \"cluster\": \"default\",\n          \"description\": \"默认集群\"\n        },\n        \"created_at\": \"2026-03-17 14:02:10\",\n        \"done\": 17,\n        \"finished_at\": \"2026-03-17 14:15:10\",\n        \"remaining_time\": 0,\n        \"schedule_id\": 0,\n        \"scope\": \"all\",\n        \"scope_data\": [],\n        \"task_id\": 33,\n        \"task_name\": \"人工运行\",\n        \"task_status\": \"finished\",\n        \"total\": 17,\n        \"xapp\": [],\n        \"xpoc\": []\n      }\n    ],\n    \"size\": 10,\n    \"total\": 1\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "28659177-5ed1-46d6-97df-68bac111cdba",
+          "name": "任务实例创建（立即运行）",
+          "request": {
+            "name": "任务实例创建（立即运行）",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "instance"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"task_name\": \"<string>\",\n  \"cluster\": \"<string>\",\n  \"scope\": \"<string>\",\n  \"scope_data\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"xapp\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"xpoc\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "380f6ad2-fcd8-40a6-9409-670ff38be5cf",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "instance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"task_name\": \"<string>\",\n  \"cluster\": \"<string>\",\n  \"scope\": \"<string>\",\n  \"scope_data\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"xapp\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"xpoc\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"scope\": \"all\",\n    \"scope_data\": [],\n    \"task_flow\": \"assets-probe\",\n    \"task_id\": 42,\n    \"xapp\": [],\n    \"xpoc\": []\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "17a17468-818a-4a62-9841-2faebe8895c2",
+          "name": "任务实例批量删除",
+          "request": {
+            "name": "任务实例批量删除",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "instance",
+                "batch-delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "38edd0c9-cb82-46be-81af-832a1fd7ab82",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "instance",
+                    "batch-delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"affected\": 2,\n    \"ignored\": 0\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4349463e-5680-47ea-b775-0ba7a23e3d15",
+          "name": "任务实例批量重跑、暂停",
+          "request": {
+            "name": "任务实例批量重跑、暂停",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "instance",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a0290caf-fa0e-47c7-a03a-290fe0ebe7b1",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "instance",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"status\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"affected\": 1,\n    \"ignored\": 0\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6c9d8573-776f-4729-834e-6411069cb025",
+          "name": "任务实例状态数量",
+          "request": {
+            "name": "任务实例状态数量",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "instance",
+                "status",
+                "count"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "id": "a6e878c2-8ffe-428d-a5a4-b1a7ad9bf765",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "instance",
+                    "status",
+                    "count"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"aborted\": 0,\n    \"deleting\": 0,\n    \"finished\": 1,\n    \"running\": 0,\n    \"waiting\": 0\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0d9aa0a5-4c8e-42e8-b45a-6c28e76406f9",
+          "name": "任务实例查看",
+          "request": {
+            "name": "任务实例查看",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "instance",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "(Required) 空间ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) 任务ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "id": "895f8826-a61e-4dee-a450-eab1b3772cd4",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "instance",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) 任务ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"cluster\": {\n      \"cluster\": \"default\",\n      \"description\": \"默认集群\"\n    },\n    \"created_at\": \"2026-03-19 15:35:37\",\n    \"done\": 9,\n    \"finished_at\": null,\n    \"remaining_time\": 1,\n    \"schedule_id\": 0,\n    \"scope\": \"all\",\n    \"scope_data\": [],\n    \"task_id\": 42,\n    \"task_name\": \"测试\",\n    \"task_status\": \"aborted\",\n    \"total\": 17,\n    \"xapp\": [],\n    \"xpoc\": []\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3e7dbe40-607e-4e34-8289-09f5feba8c03",
+          "name": "指纹分组选项",
+          "request": {
+            "name": "指纹分组选项",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                "attack",
+                "schedule",
+                "xapp",
+                "options"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "id": "2c4165d3-fac1-4520-913b-d80b01118b4f",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    "attack",
+                    "schedule",
+                    "xapp",
+                    "options"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": [\n    {\n      \"name\": \"勒索挖矿\",\n      \"pk\": \"124bc30c-d94d-43f6-af86-59d17a34a09b\"\n    },\n    {\n      \"name\": \"护网行动\",\n      \"pk\": \"2d598441-29cf-4c28-9d23-8e4adcf2fdc8\"\n    },\n    {\n      \"name\": \"代理服务\",\n      \"pk\": \"4d412f7a-8ed0-490f-96d2-1873dfda256d\"\n    },\n    {\n      \"name\": \"信创与国产化\",\n      \"pk\": \"7b6ed73a-7fca-4e11-bc5c-e5f3a6ef5cce\"\n    },\n    {\n      \"name\": \"文件服务\",\n      \"pk\": \"ad05bc0e-ab57-4472-b477-94f57ef83cde\"\n    },\n    {\n      \"name\": \"AI-人工智能\",\n      \"pk\": \"b01acbb7-df79-4184-8654-513cbc558406\"\n    },\n    {\n      \"name\": \"数据库服务\",\n      \"pk\": \"b2bf6e3c-bafb-4bab-a7c5-15ce7d630da0\"\n    },\n    {\n      \"name\": \"两高一弱\",\n      \"pk\": \"c3f3ab62-57c6-43b9-af83-98178f23b0a5\"\n    },\n    {\n      \"name\": \"关键产品\",\n      \"pk\": \"d670e878-f389-459a-9259-c39b5b6b1f50\"\n    },\n    {\n      \"name\": \"实战攻防\",\n      \"pk\": \"eb0b6f32-5b50-4989-915e-eb503511b55e\"\n    },\n    {\n      \"name\": \"调试服务\",\n      \"pk\": \"ec7b06e4-4e48-4c29-ae41-7c849b1fb130\"\n    },\n    {\n      \"name\": \"运维管控\",\n      \"pk\": \"faefd146-9db5-4691-af6b-9a2d383f371d\"\n    }\n  ],\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1d85699e-e7a7-4eaf-8cdd-ebc79bf9e3bc",
+          "name": "漏洞分组选项",
+          "request": {
+            "name": "漏洞分组选项",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                "risk",
+                "schedule",
+                "xpoc",
+                "options"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "id": "82dd3979-481a-49f3-8079-e1eefa95cfa8",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    "risk",
+                    "schedule",
+                    "xpoc",
+                    "options"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": [\n    {\n      \"name\": \"护网实战\",\n      \"pk\": \"00000000-0000-0000-0000-000000000001\"\n    },\n    {\n      \"name\": \"弱口令\",\n      \"pk\": \"00000000-0000-0000-0000-000000000002\"\n    },\n    {\n      \"name\": \"勒索挖矿\",\n      \"pk\": \"00000000-0000-0000-0000-000000000003\"\n    },\n    {\n      \"name\": \"关键漏洞\",\n      \"pk\": \"0ed8b36c-a1af-4790-8d1f-39172dd17a1d\"\n    },\n    {\n      \"name\": \"信创与国产化\",\n      \"pk\": \"5035a73e-fa72-4652-8629-9efd6e44c67e\"\n    },\n    {\n      \"name\": \"2025-两高一弱\",\n      \"pk\": \"ed779525-a0db-4086-b6a7-4df76dc0aefc\"\n    }\n  ],\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7d3d7624-d533-4eec-a82d-985c87ae78c4",
+          "name": "周期任务列表",
+          "request": {
+            "name": "周期任务列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "schedule"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "(Required) 空间ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "页码"
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<integer>",
+                  "description": "分页大小"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>",
+                  "description": "状态"
+                },
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>",
+                  "description": "任务名称，模糊搜索"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "id": "07a4857a-8b85-4789-912b-a89499739d3f",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "schedule"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "size",
+                      "value": "20"
+                    },
+                    {
+                      "key": "status",
+                      "value": "enabled"
+                    },
+                    {
+                      "key": "query",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"current\": 1,\n    \"items\": [\n      {\n        \"cluster\": {\n          \"cluster\": \"default\",\n          \"description\": \"默认集群\"\n        },\n        \"created_at\": \"2026-03-19 10:25:07\",\n        \"crontype\": \"week\",\n        \"id\": 14,\n        \"next_runtime\": \"2026-03-21 00:00:00\",\n        \"scope\": \"all\",\n        \"scope_data\": [],\n        \"start_datetime\": \"00:00:00\",\n        \"start_day\": 6,\n        \"status\": \"enabled\",\n        \"task_flow\": \"assets-probe\",\n        \"task_name\": \"周期任务-0319\",\n        \"xapp\": [],\n        \"xpoc\": []\n      }\n    ],\n    \"size\": 20,\n    \"total\": 1\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "30c64402-85b7-4c6d-92c8-98b2ae92b3ce",
+          "name": "周期任务创建",
+          "request": {
+            "name": "周期任务创建",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "schedule"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"task_name\": \"<string>\",\n  \"cluster\": \"<string>\",\n  \"scope\": \"<string>\",\n  \"scope_data\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"crontype\": \"<string>\",\n  \"start_day\": \"<integer>\",\n  \"start_datetime\": \"<time>\",\n  \"status\": \"<string>\",\n  \"xapp\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"xpoc\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "41e6c041-7f34-4563-984c-fb56859f5037",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "schedule"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"task_name\": \"<string>\",\n  \"cluster\": \"<string>\",\n  \"scope\": \"<string>\",\n  \"scope_data\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"crontype\": \"<string>\",\n  \"start_day\": \"<integer>\",\n  \"start_datetime\": \"<time>\",\n  \"status\": \"<string>\",\n  \"xapp\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"xpoc\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"cluster\": {\n      \"cluster\": \"default\",\n      \"description\": \"默认集群\"\n    },\n    \"created_at\": \"2026-03-19 14:27:58\",\n    \"crontype\": \"month\",\n    \"id\": 20,\n    \"next_runtime\": \"2026-04-11 00:00:00\",\n    \"scope\": \"all\",\n    \"scope_data\": [],\n    \"start_datetime\": \"00:00:00\",\n    \"start_day\": 11,\n    \"status\": \"enabled\",\n    \"task_flow\": \"assets-probe\",\n    \"task_name\": \"测试\",\n    \"xapp\": [],\n    \"xpoc\": []\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2f2802c1-99c1-4e52-b887-5eafd4217f7e",
+          "name": "周期任务批量删除",
+          "request": {
+            "name": "周期任务批量删除",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "schedule",
+                "batch-delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "937d5be5-4d5c-4e79-9c99-6f2fa203d31a",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "schedule",
+                    "batch-delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"affected\": 2,\n    \"ignored\": 0\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4aaaaaf6-5fe6-4a23-b341-74b99287c8ca",
+          "name": "周期任务批量切换状态",
+          "request": {
+            "name": "周期任务批量切换状态",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "schedule",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "fbb30315-d5e9-4745-baa7-7fe0d4ab0c5b",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "schedule",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"status\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"affected\": 1,\n    \"ignored\": 0\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "969e7587-79c7-450f-b894-55d356fa5cad",
+          "name": "周期任务查看",
+          "request": {
+            "name": "周期任务查看",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "schedule",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "(Required) 空间ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) 任务ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "id": "296723c8-0cf5-4f08-bdc9-36f8dcbbce0b",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "schedule",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) 任务ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"cluster\": \"default\",\n    \"created_at\": \"2026-03-19 10:25:07\",\n    \"crontype\": \"week\",\n    \"id\": 14,\n    \"next_runtime\": \"2026-03-21 00:00:00\",\n    \"scope\": \"all\",\n    \"scope_data\": [],\n    \"start_datetime\": \"00:00:00\",\n    \"start_day\": 6,\n    \"status\": \"enabled\",\n    \"task_flow\": \"assets-probe\",\n    \"task_name\": \"周期任务-0319\",\n    \"xapp\": [],\n    \"xpoc\": []\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5a6a0ab9-4e88-41b5-b7aa-d92cb9439ce3",
+          "name": "周期任务编辑",
+          "request": {
+            "name": "周期任务编辑",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "schedule",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) 任务ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"task_name\": \"<string>\",\n  \"cluster\": \"<string>\",\n  \"scope\": \"<string>\",\n  \"scope_data\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"crontype\": \"<string>\",\n  \"start_day\": \"<integer>\",\n  \"start_datetime\": \"<time>\",\n  \"status\": \"<string>\",\n  \"xapp\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"xpoc\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b45ebeb0-318b-408b-9b39-dc98abbedd9c",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "schedule",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) 任务ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"task_name\": \"<string>\",\n  \"cluster\": \"<string>\",\n  \"scope\": \"<string>\",\n  \"scope_data\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"crontype\": \"<string>\",\n  \"start_day\": \"<integer>\",\n  \"start_datetime\": \"<time>\",\n  \"status\": \"<string>\",\n  \"xapp\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"xpoc\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"cluster\": {\n      \"cluster\": \"default\",\n      \"description\": \"默认集群\"\n    },\n    \"created_at\": \"2026-03-19 14:18:47\",\n    \"crontype\": \"month\",\n    \"id\": 18,\n    \"next_runtime\": \"2026-04-11 00:00:00\",\n    \"scope\": \"all\",\n    \"scope_data\": [],\n    \"start_datetime\": \"00:00:00\",\n    \"start_day\": 11,\n    \"status\": \"enabled\",\n    \"task_flow\": \"assets-probe\",\n    \"task_name\": \"测试1\",\n    \"xapp\": [],\n    \"xpoc\": []\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1c152430-cf5c-4b0d-b97b-96a1d909213f",
+          "name": "编排实例列表",
+          "request": {
+            "name": "编排实例列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "flow"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "(Required) 空间ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "task_id",
+                  "value": "<integer>",
+                  "description": "(Required) 任务ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>",
+                  "description": "运行状态"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "id": "23e060b4-f096-41f0-99a4-94e4dac9b8c6",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "flow"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    },
+                    {
+                      "key": "task_id",
+                      "value": "42"
+                    },
+                    {
+                      "key": "status",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"current\": 1,\n    \"items\": [\n      {\n        \"created_at\": \"2026-03-19 15:35:38\",\n        \"id\": 575,\n        \"module\": \"root_domain_icp_zt\",\n        \"name\": \"备案数据发现主域名-企业主体\",\n        \"order_no\": 10,\n        \"progress\": 0,\n        \"status\": \"finished\",\n        \"task_flow\": \"assets-probe\",\n        \"task_id\": 42,\n        \"updated_at\": \"2026-03-19 15:35:41\"\n      },\n      {\n        \"created_at\": \"2026-03-19 15:35:38\",\n        \"id\": 576,\n        \"module\": \"root_domain_whois\",\n        \"name\": \"WHOIS-数据发现主域名\",\n        \"order_no\": 10,\n        \"progress\": 0,\n        \"status\": \"finished\",\n        \"task_flow\": \"assets-probe\",\n        \"task_id\": 42,\n        \"updated_at\": \"2026-03-19 15:35:41\"\n      },\n      {\n        \"created_at\": \"2026-03-19 15:35:38\",\n        \"id\": 577,\n        \"module\": \"root_domain_icp_ym\",\n        \"name\": \"备案数据发现主域名-域名\",\n        \"order_no\": 20,\n        \"progress\": 0,\n        \"status\": \"finished\",\n        \"task_flow\": \"assets-probe\",\n        \"task_id\": 42,\n        \"updated_at\": \"2026-03-19 15:35:43\"\n      },\n      {\n        \"created_at\": \"2026-03-19 15:35:38\",\n        \"id\": 578,\n        \"module\": \"sslcert_from_sonar\",\n        \"name\": \"Sonar-数据发现归属客户证书-SSL\",\n        \"order_no\": 20,\n        \"progress\": 0,\n        \"status\": \"finished\",\n        \"task_flow\": \"assets-probe\",\n        \"task_id\": 42,\n        \"updated_at\": \"2026-03-19 15:35:43\"\n      },\n      {\n        \"created_at\": \"2026-03-19 15:35:38\",\n        \"id\": 579,\n        \"module\": \"root_domain_meta_data\",\n        \"name\": \"API-获取主域名实时数据-META\",\n        \"order_no\": 20,\n        \"progress\": 0,\n        \"status\": \"finished\",\n        \"task_flow\": \"assets-probe\",\n        \"task_id\": 42,\n        \"updated_at\": \"2026-03-19 15:35:44\"\n      },\n      {\n        \"created_at\": \"2026-03-19 15:35:38\",\n        \"id\": 580,\n        \"module\": \"database.assets_filter_status\",\n        \"name\": \"数据一致性校准-已排除、已删除主域名和子域名\",\n        \"order_no\": 30,\n        \"progress\": 0,\n        \"status\": \"finished\",\n        \"task_flow\": \"assets-probe\",\n        \"task_id\": 42,\n        \"updated_at\": \"2026-03-19 15:35:46\"\n      },\n      {\n        \"created_at\": \"2026-03-19 15:35:38\",\n        \"id\": 581,\n        \"module\": \"resolver_root_domain\",\n        \"name\": \"主域名解析记录（NS/MX）\",\n        \"order_no\": 40,\n        \"progress\": 0,\n        \"status\": \"finished\",\n        \"task_flow\": \"assets-probe\",\n        \"task_id\": 42,\n        \"updated_at\": \"2026-03-19 15:35:50\"\n      },\n      {\n        \"created_at\": \"2026-03-19 15:35:38\",\n        \"id\": 582,\n        \"module\": \"subdomain_finder\",\n        \"name\": \"子域名发现任务组\",\n        \"order_no\": 50,\n        \"progress\": 0,\n        \"status\": \"finished\",\n        \"task_flow\": \"assets-probe\",\n        \"task_id\": 42,\n        \"updated_at\": \"2026-03-19 15:39:16\"\n      },\n      {\n        \"created_at\": \"2026-03-19 15:35:38\",\n        \"id\": 583,\n        \"module\": \"resolver_subdomain\",\n        \"name\": \"子域名解析记录（A/AAAA）\",\n        \"order_no\": 60,\n        \"progress\": 0,\n        \"status\": \"finished\",\n        \"task_flow\": \"assets-probe\",\n        \"task_id\": 42,\n        \"updated_at\": \"2026-03-19 15:40:59\"\n      },\n      {\n        \"created_at\": \"2026-03-19 15:35:38\",\n        \"id\": 584,\n        \"module\": \"subdomain_developer\",\n        \"name\": \"开发、测试、预发、生产环境的子域名资产发现\",\n        \"order_no\": 70,\n        \"progress\": 0,\n        \"status\": \"running\",\n        \"task_flow\": \"assets-probe\",\n        \"task_id\": 42,\n        \"updated_at\": \"2026-03-19 15:40:59\"\n      }\n    ],\n    \"size\": 10,\n    \"total\": 17\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "704a6408-d7c2-4e98-91c6-7ecb12627565",
+          "name": "编排实例批量重跑",
+          "request": {
+            "name": "编排实例批量重跑",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "flow",
+                "reboot"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8015f1fe-ec5c-41b4-b427-ef788a69949e",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "flow",
+                    "reboot"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"affected\": 1,\n    \"ignored\": 0\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8fd6f48b-94dd-43e5-acec-092a6588e772",
+          "name": "编排实例状态数量",
+          "request": {
+            "name": "编排实例状态数量",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "task",
+                ":task_type",
+                "flow",
+                "status",
+                "count"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "(Required) 空间ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "task_id",
+                  "value": "<integer>",
+                  "description": "(Required) 任务ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_type",
+                  "description": "(Required) 任务类型"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "id": "4e8a9934-4a02-4215-ab5b-1012a969c127",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "task",
+                    ":task_type",
+                    "flow",
+                    "status",
+                    "count"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "1"
+                    },
+                    {
+                      "key": "task_id",
+                      "value": "42"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_type",
+                      "description": "(Required) 任务类型"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"failed\": 0,\n    \"finished\": 9,\n    \"running\": 1,\n    \"waiting\": 7\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "10b89b85-236a-4e88-b2db-d20ee97f66b6",
+    "name": "APISec Management account 任务/任务实例v2 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,386 @@
+{
+  "item": [
+    {
+      "id": "04331998-a91e-4c14-9e98-b865394f4be5",
+      "name": "policy",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8e7a15f7-cb67-4669-862e-85aeda5e44a5",
+          "name": "POST /api/PolicyRuleAPI",
+          "request": {
+            "name": "POST /api/PolicyRuleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PolicyRuleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pattern\": \"<object>\",\n  \"percentage\": \"<integer>\",\n  \"action\": \"<string>\",\n  \"risk_level\": \"<string>\",\n  \"attack_type\": \"<string>\",\n  \"delay\": \"<integer>\",\n  \"log_option\": \"<string>\",\n  \"forbidden_page_config\": \"<string>\",\n  \"is_enabled\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"expire_time\": \"<string>\",\n  \"is_global\": \"<boolean>\",\n  \"sites\": \"<object>\",\n  \"cron_config\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5cb6b46d-cae2-4d53-a5e3-448932f203fe",
+          "name": "PUT /api/PolicyRuleAPI",
+          "request": {
+            "name": "PUT /api/PolicyRuleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PolicyRuleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"action\": \"<string>\",\n  \"attack_type\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"delay\": \"<integer>\",\n  \"expire_time\": \"<string>\",\n  \"forbidden_page_config\": \"<string>\",\n  \"is_enabled\": \"<boolean>\",\n  \"is_global\": \"<boolean>\",\n  \"log_option\": \"<string>\",\n  \"pattern\": \"<object>\",\n  \"percentage\": \"<integer>\",\n  \"risk_level\": \"<string>\",\n  \"sites\": \"<object>\",\n  \"cron_config\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0149a2e0-8867-4270-961e-0861af5ef08e",
+          "name": "PUT /api/PolicyRulePositionAPI",
+          "request": {
+            "name": "PUT /api/PolicyRulePositionAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PolicyRulePositionAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"position\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c382bbe9-a1de-4ce4-85ed-33883db9fc8b",
+          "name": "PUT /api/PolicyRulePriorityAPI",
+          "request": {
+            "name": "PUT /api/PolicyRulePriorityAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PolicyRulePriorityAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"policy_rule_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"site\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c3b51e50-2709-409c-a7ad-e0575ace3c3d",
+          "name": "POST /api/PolicyRuleSiteBindingAPI",
+          "request": {
+            "name": "POST /api/PolicyRuleSiteBindingAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PolicyRuleSiteBindingAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"site\": \"<integer>\",\n  \"policy_rule_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "04a44097-50ab-432f-8af6-4007fc00cc7e",
+          "name": "DELETE /api/PolicyRuleSiteBindingAPI",
+          "request": {
+            "name": "DELETE /api/PolicyRuleSiteBindingAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PolicyRuleSiteBindingAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"site\": \"<integer>\",\n  \"policy_rule\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3a7164f1-c4f2-4a41-b792-12887ae5539c",
+          "name": "GET /api/SkynetModuleAPI",
+          "request": {
+            "name": "GET /api/SkynetModuleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SkynetModuleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b55a478f-3f08-4321-ab73-7e57333872c4",
+          "name": "PUT /api/SkynetModuleAPI",
+          "request": {
+            "name": "PUT /api/SkynetModuleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SkynetModuleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"high_risk_enable_log\": \"<integer>\",\n  \"medium_risk_enable_log\": \"<integer>\",\n  \"low_risk_enable_log\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "49696901-8c30-409d-ba83-a3511941be9b",
+          "name": "PUT /api/SkynetRuleAPI",
+          "request": {
+            "name": "PUT /api/SkynetRuleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SkynetRuleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"enable_log\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"risk_level\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d9aa9478-c5c0-4801-8f2e-bd79f0bee18c",
+    "name": "APISec Management account policy API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

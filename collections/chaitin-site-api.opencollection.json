@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account site API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "site",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "list web service",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/open/site",
+            "params": [
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sp_enabled",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "stat_enabled",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "list web service"
+        },
+        {
+          "info": {
+            "name": "create web service",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/open/site"
+          },
+          "docs": "create web service"
+        },
+        {
+          "info": {
+            "name": "update web service",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/open/site"
+          },
+          "docs": "update web service"
+        },
+        {
+          "info": {
+            "name": "delete web service",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/open/site"
+          },
+          "docs": "delete web service"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

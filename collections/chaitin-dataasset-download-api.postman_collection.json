@@ -1,0 +1,220 @@
+{
+  "item": [
+    {
+      "id": "7618ef20-8687-4908-b447-ec027761c50b",
+      "name": "dataasset/download",
+      "description": {
+        "content": "数据资产/下载",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d3c131f7-99a5-490d-b7d2-bd7dc1459eda",
+          "name": "资产地图导出",
+          "request": {
+            "name": "资产地图导出",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dataasset",
+                "download"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sort\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"name\": \"<string>\",\n  \"output\": {\n    \"ext\": \"<string>\",\n    \"fields\": [\n      {\n        \"name\": \"<string>\",\n        \"display_name\": \"<string>\"\n      },\n      {\n        \"name\": \"<string>\",\n        \"display_name\": \"<string>\"\n      }\n    ]\n  },\n  \"queries\": []\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2b3a61bb-eca2-4010-91b4-9ae67ff574d4",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dataasset",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"sort\": [\n    \"timestamp:desc\"\n  ],\n  \"name\": \"test\",\n  \"output\": {\n    \"ext\": \"xlsx\",\n    \"fields\": [\n      {\n        \"name\": \"staff_name\",\n        \"display_name\": \"员工姓名\"\n      },\n      {\n        \"name\": \"device_code\",\n        \"display_name\": \"终端ID\"\n      },\n      {\n        \"name\": \"filename\",\n        \"display_name\": \"文件名\"\n      },\n      {\n        \"name\": \"md5_hash\",\n        \"display_name\": \"文件MD5\"\n      },\n      {\n        \"name\": \"cl_name\",\n        \"display_name\": \"数据分类\"\n      },\n      {\n        \"name\": \"category\",\n        \"display_name\": \"发现方式\"\n      },\n      {\n        \"name\": \"data_level\",\n        \"display_name\": \"数据分级\"\n      },\n      {\n        \"name\": \"data_level_name\",\n        \"display_name\": \"数据分级名称\"\n      },\n      {\n        \"name\": \"dept_names\",\n        \"display_name\": \"部门名称\"\n      },\n      {\n        \"name\": \"staff_tags\",\n        \"display_name\": \"员工标签\"\n      },\n      {\n        \"name\": \"console_user\",\n        \"display_name\": \"系统账户\"\n      },\n      {\n        \"name\": \"ip_address\",\n        \"display_name\": \"IP地址\"\n      },\n      {\n        \"name\": \"has_cls\",\n        \"display_name\": \"是否分类\"\n      },\n      {\n        \"name\": \"dept_paths\",\n        \"display_name\": \"部门路径\"\n      },\n      {\n        \"name\": \"filepath\",\n        \"display_name\": \"文件路径\"\n      },\n      {\n        \"name\": \"file_suffix\",\n        \"display_name\": \"文件后缀\"\n      },\n      {\n        \"name\": \"file_type\",\n        \"display_name\": \"文件类型\"\n      }\n    ]\n  },\n  \"queries\": []\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "180197a6-e59d-4dce-ba94-f2144a4592ef",
+    "name": "APISec Management account dataasset/download API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

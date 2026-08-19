@@ -1,0 +1,88 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account installer/list API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "installer/list",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "安装包列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/installer/list",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "page",
+                "value": "1",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "5",
+                "type": "query"
+              },
+              {
+                "name": "status",
+                "value": "published",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "安装包列表"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

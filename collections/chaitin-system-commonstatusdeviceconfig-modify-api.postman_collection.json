@@ -1,0 +1,222 @@
+{
+  "item": [
+    {
+      "id": "dd10fd37-fe67-4a47-ac07-efa80ff8a331",
+      "name": "system/commonstatusdeviceconfig/modify",
+      "description": {
+        "content": "系统配置/常用状态设备配置/修改",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "44c018ae-e9cb-42e9-a63e-592df82f358c",
+          "name": "终端配置 - 浏览器深度管控",
+          "request": {
+            "name": "终端配置 - 浏览器深度管控",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "system",
+                "commonstatusdeviceconfig",
+                "modify"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"browser_depth_control_options\": {\n    \"extension_options\": {\n      \"edge\": {\n        \"ext_id\": \"<string>\"\n      },\n      \"chrome\": {\n        \"ext_id\": \"<string>\"\n      }\n    },\n    \"enable_browser_control_mode\": \"<string>\",\n    \"enable_browser_control_mode__scope\": {\n      \"scope\": \"<string>\",\n      \"binding_config\": {\n        \"include\": {\n          \"devices\": [\n            {\n              \"uid\": \"<string>\",\n              \"name\": \"<string>\",\n              \"code\": \"<string>\"\n            },\n            {\n              \"uid\": \"<string>\",\n              \"name\": \"<string>\",\n              \"code\": \"<string>\"\n            }\n          ]\n        }\n      }\n    }\n  },\n  \"browser_webpost_control_options\": {\n    \"enable_browser_control_mode\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "cb68dbf7-4523-4bbe-b44f-7f3d8466068b",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "system",
+                    "commonstatusdeviceconfig",
+                    "modify"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"browser_depth_control_options\": {\n    \"extension_options\": {\n      \"edge\": {\n        \"ext_id\": \"lchpaajdlbdjnjbeeajicicfikpmdnmj\"\n      },\n      \"chrome\": {\n        \"ext_id\": \"gnofllnnijbicdhkcjhjnieopjgmmncf\"\n      }\n    },\n    \"enable_browser_control_mode\": \"on\",\n    \"enable_browser_control_mode__scope\": {\n      \"scope\": \"common\",\n      \"binding_config\": {\n        \"include\": {\n          \"devices\": [\n            {\n              \"uid\": \"45ad1238-4c99-42a6-85c4-81e77dad60ed\",\n              \"name\": \"DNAME003fdea82b10a7d9\",\n              \"code\": \"PC-000046\"\n            }\n          ]\n        }\n      }\n    }\n  },\n  \"browser_webpost_control_options\": {\n    \"enable_browser_control_mode\": \"on\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b3739523-d286-4236-b5a7-f7017a1b951c",
+    "name": "APISec Management account system/commonstatusdeviceconfig/modify API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

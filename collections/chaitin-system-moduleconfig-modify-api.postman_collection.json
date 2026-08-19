@@ -1,0 +1,222 @@
+{
+  "item": [
+    {
+      "id": "b593e0b9-99bd-46d2-9052-c1fb172fdf0b",
+      "name": "system/moduleconfig/modify",
+      "description": {
+        "content": "系统配置/模块配置/修改",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "003a053a-12f2-444c-8909-8d1d5a2ca44c",
+          "name": "模块管理",
+          "request": {
+            "name": "模块管理",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "system",
+                "moduleconfig",
+                "modify"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"enable_general\": \"<boolean>\",\n  \"sub_module_config\": {\n    \"enable_db_scan\": \"<boolean>\",\n    \"enable_block_agent\": \"<boolean>\",\n    \"enable_log_behavior\": \"<boolean>\",\n    \"enable_policy_email\": \"<boolean>\",\n    \"enable_access_control\": \"<boolean>\",\n    \"enable_policy_channel\": \"<boolean>\",\n    \"enable_policy_network\": \"<boolean>\",\n    \"enable_policy_process\": \"<boolean>\",\n    \"enable_asset_discovery\": \"<boolean>\",\n    \"enable_watermark_screen\": \"<boolean>\",\n    \"enable_watermark_printing\": \"<boolean>\",\n    \"enable_policy_external_device\": \"<boolean>\",\n    \"enable_ueba_check\": \"<boolean>\",\n    \"enable_browser\": \"<boolean>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9af2a422-e448-4f82-9008-7ac14736db12",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "system",
+                    "moduleconfig",
+                    "modify"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"enable_general\": true,\n  \"sub_module_config\": {\n    \"enable_db_scan\": false,\n    \"enable_block_agent\": false,\n    \"enable_log_behavior\": true,\n    \"enable_policy_email\": true,\n    \"enable_access_control\": true,\n    \"enable_policy_channel\": true,\n    \"enable_policy_network\": true,\n    \"enable_policy_process\": true,\n    \"enable_asset_discovery\": true,\n    \"enable_watermark_screen\": true,\n    \"enable_watermark_printing\": true,\n    \"enable_policy_external_device\": true,\n    \"enable_ueba_check\": true,\n    \"enable_browser\": true\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"正常\",\n  \"data\": {\n    \"uid\": \"4ddcd4c1-bdd3-4b44-aff1-5624da58efb3\",\n    \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n    \"name\": \"module_config\",\n    \"display_name\": \"模块配置\",\n    \"description\": \"模块配置\",\n    \"create_time\": \"2024-08-30T19:04:11Z\",\n    \"update_time\": \"2025-04-10T06:42:18.018398Z\",\n    \"config\": {\n      \"enable_general\": true,\n      \"sub_module_config\": {\n        \"enable_av_scan\": false,\n        \"enable_remote_control\": false,\n        \"enable_policy_external_device\": true,\n        \"enable_browser\": false,\n        \"enable_ueba_check\": true,\n        \"enable_ai_content_recognition\": false,\n        \"enable_db_scan\": false,\n        \"enable_network_driver\": true,\n        \"enable_privacy_protection\": false,\n        \"enable_policy_channel\": true,\n        \"enable_policy_software\": true,\n        \"enable_watermark_screen\": true,\n        \"enable_file_encrypt\": false,\n        \"enable_phishing_protection\": false,\n        \"enable_policy_access_control\": false,\n        \"enable_app_driver\": true,\n        \"enable_asset_discovery\": true,\n        \"enable_policy_compliance\": true,\n        \"enable_policy_network\": true,\n        \"enable_block_agent\": false,\n        \"enable_log_behavior\": true\n      }\n    },\n    \"_old_data\": {\n      \"description\": \"模块配置\",\n      \"config\": {\n        \"enable_general\": true,\n        \"sub_module_config\": {\n          \"enable_av_scan\": false,\n          \"enable_db_scan\": false,\n          \"enable_app_driver\": true,\n          \"enable_ueba_check\": true,\n          \"enable_file_encrypt\": true,\n          \"enable_log_behavior\": true,\n          \"enable_network_driver\": true,\n          \"enable_policy_channel\": true,\n          \"enable_policy_network\": true,\n          \"enable_remote_control\": false,\n          \"enable_asset_discovery\": true,\n          \"enable_policy_software\": false,\n          \"enable_watermark_screen\": true,\n          \"enable_policy_compliance\": true,\n          \"enable_privacy_protection\": true,\n          \"enable_phishing_protection\": true,\n          \"enable_policy_external_device\": true\n        }\n      },\n      \"display_name\": \"模块配置\",\n      \"create_time\": \"2024-08-30T19:04:11Z\",\n      \"id\": 30,\n      \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n      \"update_time\": \"2025-04-10T03:35:24.248650Z\",\n      \"category\": \"module_config\",\n      \"create_by_id\": null,\n      \"uid\": \"4ddcd4c1-bdd3-4b44-aff1-5624da58efb3\",\n      \"name\": \"module_config\",\n      \"update_by_id\": null\n    },\n    \"_new_data\": {\n      \"description\": \"模块配置\",\n      \"config\": {\n        \"enable_general\": true,\n        \"sub_module_config\": {\n          \"enable_av_scan\": false,\n          \"enable_remote_control\": false,\n          \"enable_policy_external_device\": true,\n          \"enable_browser\": false,\n          \"enable_ueba_check\": true,\n          \"enable_ai_content_recognition\": false,\n          \"enable_db_scan\": false,\n          \"enable_network_driver\": true,\n          \"enable_privacy_protection\": false,\n          \"enable_policy_channel\": true,\n          \"enable_policy_software\": true,\n          \"enable_watermark_screen\": true,\n          \"enable_file_encrypt\": false,\n          \"enable_phishing_protection\": false,\n          \"enable_policy_access_control\": false,\n          \"enable_app_driver\": true,\n          \"enable_asset_discovery\": true,\n          \"enable_policy_compliance\": true,\n          \"enable_policy_network\": true,\n          \"enable_block_agent\": false,\n          \"enable_log_behavior\": true\n        }\n      },\n      \"display_name\": \"模块配置\",\n      \"create_time\": \"2024-08-30T19:04:11Z\",\n      \"id\": 30,\n      \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n      \"update_time\": \"2025-04-10T06:42:18.018398Z\",\n      \"category\": \"module_config\",\n      \"create_by_id\": null,\n      \"uid\": \"4ddcd4c1-bdd3-4b44-aff1-5624da58efb3\",\n      \"name\": \"module_config\",\n      \"update_by_id\": null\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "95e1f2a2-3a38-489b-9a75-031ca7d78296",
+    "name": "APISec Management account system/moduleconfig/modify API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

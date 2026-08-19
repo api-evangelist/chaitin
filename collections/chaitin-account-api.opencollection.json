@@ -1,0 +1,543 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "account",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST /api/APITokenLoginAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/APITokenLoginAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/APITokenLoginAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/CSRFTokenAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/CSRFTokenAPI"
+          },
+          "docs": "GET /api/CSRFTokenAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/CertLoginAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/CertLoginAPI"
+          },
+          "docs": "GET /api/CertLoginAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/CertLoginAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/CertLoginAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/CertLoginAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/ChangePasswordWithoutLoginAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/ChangePasswordWithoutLoginAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/ChangePasswordWithoutLoginAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/ChangeUserCredentialAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/ChangeUserCredentialAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/ChangeUserCredentialAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/DesensitizeUserAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/DesensitizeUserAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/DesensitizeUserAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/DownloadUserCertAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/DownloadUserCertAPI",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/DownloadUserCertAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/LoginAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/LoginAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/LoginAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/LoginDisplacementAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/LoginDisplacementAPI"
+          },
+          "docs": "GET /api/LoginDisplacementAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/LoginDisplacementAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/LoginDisplacementAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/LoginDisplacementAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/LogoutAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/LogoutAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/LogoutAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/PasswordConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/PasswordConfigAPI"
+          },
+          "docs": "GET /api/PasswordConfigAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/PasswordConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/PasswordConfigAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/PasswordConfigAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/ProfileAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/ProfileAPI"
+          },
+          "docs": "GET /api/ProfileAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/RADIUSConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RADIUSConfigAPI"
+          },
+          "docs": "GET /api/RADIUSConfigAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/RADIUSConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/RADIUSConfigAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/RADIUSConfigAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/ResetUserCredentialAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/ResetUserCredentialAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/ResetUserCredentialAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/RoleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RoleAPI"
+          },
+          "docs": "GET /api/RoleAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/RoleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/RoleAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/RoleAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/RoleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/RoleAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/RoleAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/RoleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/RoleAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/RoleAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/UnlockUserAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/UnlockUserAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/UnlockUserAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserAPI",
+            "params": [
+              {
+                "name": "username",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/UserAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/UserAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/UserAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/UserAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/UserAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/UserAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/UserAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/UserAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/UserAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/UserAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserAPITokenAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserAPITokenAPI"
+          },
+          "docs": "GET /api/UserAPITokenAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/UserAPITokenAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/UserAPITokenAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/UserAPITokenAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/UserAPITokenAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/UserAPITokenAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/UserAPITokenAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/UserAPITokenAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/UserAPITokenAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/UserAPITokenAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserLoginThrottlingAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserLoginThrottlingAPI"
+          },
+          "docs": "GET /api/UserLoginThrottlingAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/UserLoginThrottlingAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/UserLoginThrottlingAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/UserLoginThrottlingAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/UserRoleBindingAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/UserRoleBindingAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/UserRoleBindingAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserTFAConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserTFAConfigAPI"
+          },
+          "docs": "GET /api/UserTFAConfigAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/UserTFAConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/UserTFAConfigAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/UserTFAConfigAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UsernameExistsCheckAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UsernameExistsCheckAPI",
+            "params": [
+              {
+                "name": "username",
+                "value": "",
+                "type": "query",
+                "description": "用户名"
+              }
+            ]
+          },
+          "docs": "GET /api/UsernameExistsCheckAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

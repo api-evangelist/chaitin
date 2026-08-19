@@ -1,0 +1,80 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account policy/webpost_control/list API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "policy/webpost_control/list",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "网页管控策略列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/policy/webpost_control/list",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "search",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "1",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "10",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "网页管控策略列表"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

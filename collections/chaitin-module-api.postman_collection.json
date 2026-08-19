@@ -1,0 +1,156 @@
+{
+  "item": [
+    {
+      "id": "ef8c77c1-a88c-4cc8-8607-124543692f5e",
+      "name": "module",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1bc9fc14-7e77-462f-8b40-1500c561fc36",
+          "name": "Get global semantics",
+          "request": {
+            "name": "Get global semantics",
+            "description": {
+              "content": "Get global semantics",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "open",
+                "global",
+                "mode"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5698a1f2-75ea-4648-a6df-542a7702c5c8",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "global",
+                    "mode"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0d378277-2e3d-47b3-b0d9-06ffbf899d4e",
+          "name": "Update global semantics",
+          "request": {
+            "name": "Update global semantics",
+            "description": {
+              "content": "Update global semantics",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "open",
+                "global",
+                "mode"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "45740f47-6287-48f6-86be-72340b24e568",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "global",
+                    "mode"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c5393573-ad6b-406b-a1f5-fa2675698481",
+    "name": "APISec Management account module API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account discover_api API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "discover_api",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /api/ApplicationAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/ApplicationAPI"
+          },
+          "docs": "GET /api/ApplicationAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/ApplicationAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/ApplicationAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/ApplicationAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/ApplicationAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/ApplicationAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/ApplicationAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/ApplicationAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/ApplicationAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/ApplicationAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/ApplicationPriorityAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/ApplicationPriorityAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/ApplicationPriorityAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/DownloadCSVTemplate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/DownloadCSVTemplate"
+          },
+          "docs": "GET /api/DownloadCSVTemplate"
+        },
+        {
+          "info": {
+            "name": "GET /api/ImportApplication",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/ImportApplication"
+          },
+          "docs": "GET /api/ImportApplication"
+        },
+        {
+          "info": {
+            "name": "POST /api/ImportApplication",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/ImportApplication",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/ImportApplication"
+        },
+        {
+          "info": {
+            "name": "PUT /api/ImportApplication",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/ImportApplication",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/ImportApplication"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/ImportApplication",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/ImportApplication",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/ImportApplication"
+        },
+        {
+          "info": {
+            "name": "POST /api/RelocateSiteAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/RelocateSiteAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/RelocateSiteAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/ScannerFilterAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/ScannerFilterAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/ScannerFilterAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/ScannerFilterTriggerUpdateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/ScannerFilterTriggerUpdateAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/ScannerFilterTriggerUpdateAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/SimpleApplicationAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SimpleApplicationAPI"
+          },
+          "docs": "GET /api/SimpleApplicationAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/WebsiteEnableDisableAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/WebsiteEnableDisableAPI"
+          },
+          "docs": "GET /api/WebsiteEnableDisableAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/WebsiteEnableDisableAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/WebsiteEnableDisableAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/WebsiteEnableDisableAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

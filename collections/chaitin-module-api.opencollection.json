@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account module API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "module",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get global semantics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/open/global/mode"
+          },
+          "docs": "Get global semantics"
+        },
+        {
+          "info": {
+            "name": "Update global semantics",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/open/global/mode"
+          },
+          "docs": "Update global semantics"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

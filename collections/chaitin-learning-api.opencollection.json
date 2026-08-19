@@ -1,0 +1,112 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account learning API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "learning",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /api/UserModelAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserModelAPI",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "ID"
+              }
+            ]
+          },
+          "docs": "GET /api/UserModelAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/UserModelAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/UserModelAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/UserModelAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/UserModelAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/UserModelAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/UserModelAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/UserModelStrategyAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/UserModelStrategyAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/UserModelStrategyAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/UserModelStrategyAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/UserModelStrategyAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/UserModelStrategyAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/UserModelStrategyAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/UserModelStrategyAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/UserModelStrategyAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

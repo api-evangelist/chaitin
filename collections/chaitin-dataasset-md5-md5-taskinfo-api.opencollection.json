@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account dataasset/md5/{md5}/taskinfo API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "dataasset/md5/{md5}/taskinfo",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "资产扫描文件追溯",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/dataasset/md5/:md5/taskinfo",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "md5",
+                "value": "f87b0979251b97f3ae09f829016237e0",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "资产扫描文件追溯"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

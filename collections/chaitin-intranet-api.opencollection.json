@@ -1,0 +1,181 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account intranet API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "intranet",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST /api/EditIntranetGroupItem",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/EditIntranetGroupItem",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/EditIntranetGroupItem"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/EditIntranetGroupItem",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/EditIntranetGroupItem",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/EditIntranetGroupItem"
+        },
+        {
+          "info": {
+            "name": "POST /api/FilterRuleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/FilterRuleAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/FilterRuleAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/FilterRuleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/FilterRuleAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/FilterRuleAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/FilterRulePositionAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/FilterRulePositionAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/FilterRulePositionAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/IntranetGroupConfig",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/IntranetGroupConfig",
+            "params": [
+              {
+                "name": "cidr",
+                "value": "",
+                "type": "query",
+                "description": "CIDR"
+              },
+              {
+                "name": "comment",
+                "value": "",
+                "type": "query",
+                "description": "备注"
+              },
+              {
+                "name": "host",
+                "value": "",
+                "type": "query",
+                "description": "域名"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "query",
+                "description": "名称"
+              },
+              {
+                "name": "network_type",
+                "value": "",
+                "type": "query",
+                "description": "网络属性"
+              }
+            ]
+          },
+          "docs": "GET /api/IntranetGroupConfig"
+        },
+        {
+          "info": {
+            "name": "POST /api/IntranetGroupConfig",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/IntranetGroupConfig",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/IntranetGroupConfig"
+        },
+        {
+          "info": {
+            "name": "PUT /api/IntranetGroupConfig",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/IntranetGroupConfig",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/IntranetGroupConfig"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/IntranetGroupConfig",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/IntranetGroupConfig",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/IntranetGroupConfig"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

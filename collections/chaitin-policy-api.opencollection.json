@@ -1,0 +1,149 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account policy API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "policy",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST /api/PolicyRuleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/PolicyRuleAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/PolicyRuleAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/PolicyRuleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/PolicyRuleAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/PolicyRuleAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/PolicyRulePositionAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/PolicyRulePositionAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/PolicyRulePositionAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/PolicyRulePriorityAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/PolicyRulePriorityAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/PolicyRulePriorityAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/PolicyRuleSiteBindingAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/PolicyRuleSiteBindingAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/PolicyRuleSiteBindingAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/PolicyRuleSiteBindingAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/PolicyRuleSiteBindingAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/PolicyRuleSiteBindingAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/SkynetModuleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SkynetModuleAPI"
+          },
+          "docs": "GET /api/SkynetModuleAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SkynetModuleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SkynetModuleAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SkynetModuleAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/SkynetRuleAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/SkynetRuleAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/SkynetRuleAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

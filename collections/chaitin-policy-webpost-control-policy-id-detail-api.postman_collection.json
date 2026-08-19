@@ -1,0 +1,213 @@
+{
+  "item": [
+    {
+      "id": "1da0b0ca-f6a1-4dbc-bd87-8faad4205755",
+      "name": "policy/webpost_control/{policy_id}/detail",
+      "description": {
+        "content": "策略管理/网页发帖管控/policy_id 参数/详情",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a1335810-2414-4d93-8d49-23677e058572",
+          "name": "网页管控策略详情",
+          "request": {
+            "name": "网页管控策略详情",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "policy",
+                "webpost_control",
+                ":policy_id",
+                "detail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "policy_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b4d35cc8-202a-4565-8b5e-873e80f8e822",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "policy",
+                    "webpost_control",
+                    ":policy_id",
+                    "detail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "policy_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"正常\",\n  \"data\": {\n    \"binding_config\": {\n      \"include\": {\n        \"devices\": [],\n        \"device_tags\": [],\n        \"staffs\": [],\n        \"staff_tags\": [],\n        \"depts\": []\n      },\n      \"exclude\": {\n        \"depts\": [],\n        \"staffs\": [],\n        \"staff_tags\": [],\n        \"devices\": [],\n        \"device_tags\": []\n      }\n    },\n    \"description\": \"网络管控策略描述\",\n    \"control_action\": {\n      \"expression_fields\": [\n        {\n          \"left\": \"XX\",\n          \"value\": [\n            \"XXXX\",\n            \"sdasdas\"\n          ],\n          \"operator\": \"container\"\n        }\n      ],\n      \"category\": \"\"\n    },\n    \"period_category\": \"permanent\",\n    \"period_options\": {\n      \"period_value\": [\n        \"2023-01-01 00:00:00\",\n        \"2023-01-01 00:00:00\"\n      ],\n      \"period_tz_offset\": 28800\n    },\n    \"action\": \"block\",\n    \"action_template_id\": \"b126744d-2154-4b9a-87a9-1456899606e6\",\n    \"scope\": \"global\",\n    \"name\": \"策略名称2\",\n    \"checked_urls_options\": {\n      \"left\": \"XX\",\n      \"value\": [\n        \"XXXX\",\n        \"sdasdas\"\n      ],\n      \"operator\": \"container\"\n    },\n    \"detect_position\": \"form_internal\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5ceb495e-1b81-4bcd-8b86-6cce6ee53c7a",
+    "name": "APISec Management account policy/webpost_control/{policy_id}/detail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

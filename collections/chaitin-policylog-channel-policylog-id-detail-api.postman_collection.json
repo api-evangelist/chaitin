@@ -1,0 +1,272 @@
+{
+  "item": [
+    {
+      "id": "78d90a25-654c-4fb6-8b7b-d439fa4f6a63",
+      "name": "policylog/channel/{policylog_id}/detail",
+      "description": {
+        "content": "日志中心/通道/policylog_id 参数/详情",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3f9b4488-110f-48d7-9337-9ffbef99a21c",
+          "name": "渠道管控详情",
+          "request": {
+            "name": "渠道管控详情",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "policylog",
+                "channel",
+                ":policylog_id",
+                "detail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "policylog_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8b6bca99-b38b-4e54-9ef3-250375a59cb4",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "policylog",
+                    "channel",
+                    ":policylog_id",
+                    "detail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "search",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "policylog_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"uid\": \"sl7574sBD63-jl5k42Rl\",\n    \"status\": \"created\",\n    \"comment\": \"\",\n    \"created_timestamp\": \"2023-11-21T03:43:28Z\",\n    \"expand\": {\n      \"compressed_filenames\": \"\",\n      \"dest\": \"\",\n      \"file_source\": \"\",\n      \"screen_recording\": false,\n      \"screenshot\": false\n    },\n    \"category\": \"channel\",\n    \"device_id\": \"7b45e606-c7b4-40a2-a08e-4aa9fb0ddcf1\",\n    \"device_code\": \"PC-000006\",\n    \"ip_address\": \"192.168.96.148\",\n    \"console_user\": \"wenghuangge\",\n    \"os_name\": \"macOS\",\n    \"os_friendly_name\": \"macOS 12.6.5\",\n    \"staff_id\": \"\",\n    \"staff_name\": \"\",\n    \"staff_code\": \"\",\n    \"staff_tag_ids\": [],\n    \"staff_tags\": [],\n    \"dept_ids\": [],\n    \"dept_names\": [],\n    \"dept_paths\": [],\n    \"time\": 1700477266000,\n    \"@timestamp\": 1700477266000,\n    \"timestamp\": \"2023-11-20T10:47:46Z\",\n    \"agent_version\": \"3.0.228\",\n    \"event_id\": \"7c708b6c-8e94-4fa3-b71a-9025c26e2a20\",\n    \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n    \"policy_id\": \"afcf096e-0d7a-4ebf-98f8-6c4aab55bb3f\",\n    \"policy_name\": \"whg_test_01\",\n    \"policy_group_id\": \"ea581dad-40f7-45e0-b37a-f92878876cc9\",\n    \"policy_group_name\": \"默认组\",\n    \"risk_name\": \"高危\",\n    \"risk_level\": 1,\n    \"action\": \"block\",\n    \"is_blocked\": true,\n    \"is_password_protected\": false,\n    \"channel\": \"feishu\",\n    \"channel_name\": \"飞书\",\n    \"operation\": \"outgoing\",\n    \"filename\": \"file_flow_05.docx\",\n    \"filepath\": \"/Users/wenghuangge/Desktop/文件加解密/file_flow_05.docx\",\n    \"filesize\": 12125,\n    \"md5_hash\": \"a7b0a40dc540c02eb4142e159e7ba39f\",\n    \"is_hidden\": false,\n    \"is_compressed\": false,\n    \"sha256_hash\": \"1440e0726ef93b80c16d2d06ee6ec6e3fb8feba4c60d18059b52cce6e8e66020\",\n    \"file_type\": \"Microsoft Word 2007+\",\n    \"file_suffix\": \"docx\",\n    \"file_created_time\": 1700134309775,\n    \"file_created_timestamp\": \"2023-11-16T11:31:49Z\",\n    \"file_updated_time\": 1700475386941,\n    \"file_updated_timestamp\": \"2023-11-20T10:16:26Z\",\n    \"file_type_categories\": [\n      \"Microsoft Word\",\n      \"Word\"\n    ],\n    \"file_description\": \"Microsoft Word 2007+\",\n    \"simhash_value\": \"\",\n    \"file_policies\": [\n      {\n        \"action\": \"block\",\n        \"classifications\": [\n          {\n            \"data_level\": 3,\n            \"data_level_name\": \"保密数据\",\n            \"name\": \"whg_class\",\n            \"uid\": \"f42cba49-cd9a-485f-897a-d118c4b24765\"\n          }\n        ],\n        \"file_created_time\": 1700134309000,\n        \"file_created_timestamp\": \"2023-11-16T11:31:49Z\",\n        \"file_description\": \"Microsoft Word 2007+\",\n        \"file_suffix\": \"docx\",\n        \"file_type\": \"docx\",\n        \"file_type_categories\": [\n          \"Microsoft Word\",\n          \"Word\"\n        ],\n        \"file_updated_time\": 1700475386000,\n        \"file_updated_timestamp\": \"2023-11-20T10:16:26Z\",\n        \"filename\": \"file_flow_05.docx\",\n        \"filepath\": \"/Users/wenghuangge/Desktop/文件加解密/file_flow_05.docx\",\n        \"filesize\": 12125,\n        \"is_compressed\": false,\n        \"is_hidden\": false,\n        \"is_password_protected\": false,\n        \"md5_hash\": \"a7b0a40dc540c02eb4142e159e7ba39f\",\n        \"policy_group_id\": \"ea581dad-40f7-45e0-b37a-f92878876cc9\",\n        \"policy_group_name\": \"默认组\",\n        \"policy_id\": \"afcf096e-0d7a-4ebf-98f8-6c4aab55bb3f\",\n        \"policy_name\": \"whg_test_01\",\n        \"risk_level\": 1,\n        \"risk_name\": \"高危\",\n        \"action_display_name\": \"阻断\"\n      }\n    ],\n    \"content_summary_list\": [],\n    \"extract_file\": false,\n    \"cl_id\": \"f42cba49-cd9a-485f-897a-d118c4b24765\",\n    \"cl_name\": \"whg_class\",\n    \"data_level\": 3,\n    \"data_level_name\": \"保密数据\",\n    \"cl_ids\": [\n      \"f42cba49-cd9a-485f-897a-d118c4b24765\"\n    ],\n    \"cl_names\": [\n      \"whg_class\"\n    ],\n    \"data_levels\": [\n      3\n    ],\n    \"data_level_names\": [\n      \"保密数据\"\n    ],\n    \"has_cls\": true,\n    \"meta_original\": [\n      {\n        \"process_name\": \"google\",\n        \"urls\": [\n          \"google.com\",\n          \"google1.com\"\n        ],\n        \"hosts\": [\n          \"google.com\",\n          \"google1.com\"\n        ]\n      },\n      {\n        \"process_name\": \"baidu\",\n        \"urls\": [\n          \"https://baidu.com?xxxxxx=2\",\n          \"https://baidu.com?xxxxxx=2\"\n        ],\n        \"hosts\": [\n          \"baidu.com\"\n        ]\n      }\n    ],\n    \"metasource\": [\n      {\n        \"original\": {\n          \"app\": [\n            \"Feishu\"\n          ],\n          \"urls\": []\n        },\n        \"category\": \"app\",\n        \"source\": [\n          {\n            \"name\": \"appfeishu\",\n            \"display_name\": \"app_feishu\"\n          }\n        ],\n        \"version\": 58\n      }\n    ],\n    \"action_display_name\": \"阻断\",\n    \"file_classifications\": [\n      {\n        \"filename\": \"file_flow_05.docx\",\n        \"filepath\": \"/Users/wenghuangge/Desktop/文件加解密/file_flow_05.docx\",\n        \"md5_hash\": \"a7b0a40dc540c02eb4142e159e7ba39f\",\n        \"filesize\": 12125,\n        \"is_password_protected\": false,\n        \"is_hidden\": false,\n        \"is_compressed\": false,\n        \"file_suffix\": \"docx\",\n        \"file_type\": \"docx\",\n        \"classifications\": [\n          {\n            \"data_level\": 3,\n            \"data_level_name\": \"保密数据\",\n            \"name\": \"whg_class\",\n            \"uid\": \"f42cba49-cd9a-485f-897a-d118c4b24765\"\n          }\n        ]\n      }\n    ],\n    \"rule_version\": {\n      \"cond_ticket\": \"2a563efd44b89f56d69e615c8eda4363\",\n      \"cond_version\": 15,\n      \"dc_ticket\": \"2a563efd44b89f56d69e615c8eda4363\",\n      \"dc_version\": 174,\n      \"filetype_version\": 34,\n      \"im_version\": 63,\n      \"policy_ticket\": \"027af9e67223aeb02434251c1dc8bc4b\",\n      \"policy_version\": 283\n    },\n    \"channel_group\": \"im\",\n    \"extended_data\": {}\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f5619f65-1443-4b8f-9d61-49bf35575366",
+    "name": "APISec Management account policylog/channel/{policylog_id}/detail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

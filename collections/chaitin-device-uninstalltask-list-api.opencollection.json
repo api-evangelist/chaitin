@@ -1,0 +1,104 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account device/uninstalltask/list API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "device/uninstalltask/list",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "卸载任务列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/device/uninstalltask/list",
+            "headers": [
+              {
+                "name": "priority",
+                "value": "u=1, i"
+              },
+              {
+                "name": "x-cs-header-app",
+                "value": "qzh"
+              },
+              {
+                "name": "x-cs-header-company",
+                "value": "eeff7c64-5070-4582-8b93-fbcc57db7771"
+              },
+              {
+                "name": "x-cs-header-module",
+                "value": "desktop-management/device/uninstall"
+              },
+              {
+                "name": "x-cs-header-timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Cookie",
+                "value": "sid=Fe26.2**8381d1ad983eda74bd39868aa4ddc3ac8b6bfa06a35e41ed0ef174091df26825*jwQXwnlmCIXpJ3K9p_050Q*Gs8kDt-W-64TCWZHHsIuLcz7rrcIMuX9_ePHDz6Di4GNiDI1LXxmv9dma7VHz2WyWRkKtcxb1S2zGsg_PZhz912eyRF4Q_kWce-giTRpk5-2Y4on6xcax7Kd6J0ajxCsMiFbHEVLefVRFjQ0BBgPAeLkVW5AFyNZbb8Ul8kHIh-Ge1KiVqymF_X-dbBQgvcUgKGeG-ynmmoKhv7HiDEQCux37pEtBVnQ5_8j9GWW9PM**b8bbecfef477c572be283e959eb1e02a8124eefff971ec4c2d22d109b68f1a36*VbDaMM6B7JAaC6823vvj2KWOHJCo0wYJruEIXXv_YDA"
+              },
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "page",
+                "value": "1",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "10",
+                "type": "query"
+              },
+              {
+                "name": "search",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "卸载任务列表"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

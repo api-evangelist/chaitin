@@ -1,0 +1,71 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account report/dashboard/chart/query API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "report/dashboard/chart/query",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "图表数据查询",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/report/dashboard/chart/query",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "时间列聚合支持的间隔：\n1d 1天\n1M 1月\n1h 1小时\n1m 1分钟\n1w 1周"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

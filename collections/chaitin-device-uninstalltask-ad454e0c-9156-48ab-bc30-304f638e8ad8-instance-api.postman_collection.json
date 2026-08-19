@@ -1,0 +1,328 @@
+{
+  "item": [
+    {
+      "id": "027db0a7-8f2f-47b5-883f-3dcff12761eb",
+      "name": "device/uninstalltask/ad454e0c-9156-48ab-bc30-304f638e8ad8/instance",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "281bed54-7b88-46ce-b99c-a2a7905fffa1",
+          "name": "卸载任务实例详情",
+          "request": {
+            "name": "卸载任务实例详情",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "device",
+                "uninstalltask",
+                "ad454e0c-9156-48ab-bc30-304f638e8ad8",
+                "instance"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "priority",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "x-cs-header-app",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "x-cs-header-company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "x-cs-header-module",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "x-cs-header-timezone",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Cookie",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "80c27ba9-f3a3-4236-882c-3aa795ec2a58",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "device",
+                    "uninstalltask",
+                    "ad454e0c-9156-48ab-bc30-304f638e8ad8",
+                    "instance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "search",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "priority",
+                    "value": "u=1, i"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-cs-header-app",
+                    "value": "qzh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-cs-header-company",
+                    "value": "eeff7c64-5070-4582-8b93-fbcc57db7771"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-cs-header-module",
+                    "value": "desktop-management/device/uninstall"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-cs-header-timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Cookie",
+                    "value": "sid=Fe26.2**8381d1ad983eda74bd39868aa4ddc3ac8b6bfa06a35e41ed0ef174091df26825*jwQXwnlmCIXpJ3K9p_050Q*Gs8kDt-W-64TCWZHHsIuLcz7rrcIMuX9_ePHDz6Di4GNiDI1LXxmv9dma7VHz2WyWRkKtcxb1S2zGsg_PZhz912eyRF4Q_kWce-giTRpk5-2Y4on6xcax7Kd6J0ajxCsMiFbHEVLefVRFjQ0BBgPAeLkVW5AFyNZbb8Ul8kHIh-Ge1KiVqymF_X-dbBQgvcUgKGeG-ynmmoKhv7HiDEQCux37pEtBVnQ5_8j9GWW9PM**b8bbecfef477c572be283e959eb1e02a8124eefff971ec4c2d22d109b68f1a36*VbDaMM6B7JAaC6823vvj2KWOHJCo0wYJruEIXXv_YDA"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"正常\",\n  \"data\": {\n    \"total\": 1,\n    \"pages\": {\n      \"page\": 1,\n      \"page_size\": 10\n    },\n    \"results\": [\n      {\n        \"device\": {\n          \"uid\": \"c900fbb1-d4ca-4972-aa82-cf5519064187\",\n          \"name\": \"DNAME7862572f1aff5068\",\n          \"code\": \"PC-000001\",\n          \"status\": \"deactivated\",\n          \"life_status\": \"uninstalled\",\n          \"conn_status\": \"abnormal\",\n          \"family\": \"Windows\",\n          \"agent_version\": \"3.1.7\",\n          \"architecture\": \"x86_64\",\n          \"ip\": \"192.168.96.211\",\n          \"mac\": \"A8:64:F1:DC:F0:14\",\n          \"console_user\": \"sou@LAPTOP-8R5257U6\"\n        },\n        \"staff_info\": {\n          \"create_time\": \"2024-04-15T03:55:41.311224Z\",\n          \"email\": \"beining.wu@cyberserval.cn\",\n          \"uid\": \"eb0f5d99-faad-4831-9d49-a9a5355245e3\",\n          \"name\": \"wbn\",\n          \"description\": \"\",\n          \"code\": \"42448d302c70c3f3\",\n          \"leader_id\": null,\n          \"number\": \"1604c3028ea1f08c\",\n          \"mobile\": \"20020228977\",\n          \"data_category\": 1,\n          \"depts\": [\n            {\n              \"uid\": \"282cfac5-94a1-4d2c-ade8-f8b0538bde11\",\n              \"name\": \"测试集团\",\n              \"leaders\": [],\n              \"path\": \"测试集团\",\n              \"paths\": [\n                \"测试集团\"\n              ],\n              \"ancestor_ids\": [\n                \"282cfac5-94a1-4d2c-ade8-f8b0538bde11\"\n              ]\n            }\n          ],\n          \"direct_dept_leaders\": [],\n          \"direct_dept_leader\": {},\n          \"direct_leader\": {},\n          \"dept_paths\": \"测试集团\",\n          \"tags\": [\n            {\n              \"uid\": \"766b336e-1c00-48d7-9e9a-77c4ae1da89a\",\n              \"name\": \"高风险员工\"\n            },\n            {\n              \"uid\": \"31264859-5f8a-4d61-a2ac-ed0cc0451df5\",\n              \"name\": \"哈哈哈，逗号，\"\n            }\n          ]\n        }\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8445c0be-f534-4056-88d9-176bd7f3b274",
+    "name": "APISec Management account device/uninstalltask/ad454e0c-9156-48ab-bc30-304f638e8ad8/instance API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

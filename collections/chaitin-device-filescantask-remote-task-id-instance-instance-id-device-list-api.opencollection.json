@@ -1,0 +1,75 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account device/filescantask/remote/{task_id}/instance/{instance_id}/device/list API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "device/filescantask/remote/{task_id}/instance/{instance_id}/device/list",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "设备列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/device/filescantask/remote/:task_id/instance/:instance_id/device/list",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "task_id",
+                "value": "1b5dd583-9a20-4c16-b72e-9199f9d5bd89",
+                "type": "path"
+              },
+              {
+                "name": "instance_id",
+                "value": "132b270c-1d1f-4bd6-9687-2f61f68392cd",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "设备列表"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

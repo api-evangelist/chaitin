@@ -1,0 +1,114 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account filter API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "filter",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /api/CSVHeaderAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/CSVHeaderAPI"
+          },
+          "docs": "GET /api/CSVHeaderAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/FilterAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/FilterAPI"
+          },
+          "docs": "GET /api/FilterAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/FilterAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/FilterAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/FilterAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/FilterDownloadAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/FilterDownloadAPI"
+          },
+          "docs": "GET /api/FilterDownloadAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/FilterDownloadAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/FilterDownloadAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/FilterDownloadAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/FilterEnableDisableAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/FilterEnableDisableAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/FilterEnableDisableAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/RemoteFilterableChoiceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RemoteFilterableChoiceAPI",
+            "params": [
+              {
+                "name": "query_field",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/RemoteFilterableChoiceAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,254 @@
+{
+  "item": [
+    {
+      "id": "9ecb9d51-fdb1-40d2-b587-4a641d3aced8",
+      "name": "device/software/list",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a7aa33ed-3686-44e7-8e67-04174ed6459b",
+          "name": "软件详情",
+          "request": {
+            "name": "软件详情",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "device",
+                "software",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"device_id\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4a18f47f-af49-4921-8d1e-c0450b7ed980",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "device",
+                    "software",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "search",
+                      "value": "string"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"device_id\": \"676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"index\": [\n      \"qzhddr_software_manager\"\n    ],\n    \"page\": 1,\n    \"limit\": 10,\n    \"search_total\": 87,\n    \"total\": 87,\n    \"search_after\": [\n      1702576608835\n    ],\n    \"results\": [\n      {\n        \"total_view_digest\": \"b9cb42d205237d84aa9fc4bfb651e471\",\n        \"source_view_digest\": \"4a35965f7403699e7e971c2d9bf25ad6\",\n        \"software_name\": \"LaunchControl\",\n        \"publisher\": \"Copyright © 2013–2022 Robby Pählig. All rights reserved.\",\n        \"os_name\": \"macOS\",\n        \"os_friendly_name\": \"macOS 13.5.1\",\n        \"software_version\": \"1.52.7\",\n        \"software_type\": \"其它\",\n        \"install_path\": \"/Applications/LaunchControl.app/Contents/MacOS/LaunchControl\",\n        \"install_time\": 1693220902000,\n        \"install_timestamp\": \"2023-08-28T11:08:22Z\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_code\": \"\",\n        \"staff_email\": \"\",\n        \"staff_description\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"time\": 1702576608835,\n        \"@timestamp\": 1702576608835,\n        \"timestamp\": \"2023-12-15T01:56:48Z\",\n        \"device_id\": \"676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1\",\n        \"device_code\": \"PC-000005\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"bundle_id\": \"com.soma-zone.LaunchControl\",\n        \"is_piracy\": false,\n        \"event_id\": \"fd443f74-e961-4db4-90bf-5c0c2aaf4422\",\n        \"cd_hash\": \"f8ba41bf185e8ef0c3207ef7a13299580b268310\",\n        \"team_id\": \"\",\n        \"process_name\": \"LaunchControl\",\n        \"console_user\": \"jasonlee\",\n        \"agent_version\": \"3.1.836\",\n        \"ip_address\": \"192.168.96.50\",\n        \"display_name\": \"LaunchControl\",\n        \"uid\": \"f8f54a9ac364516de3afc2f3a5f2b194\",\n        \"_type\": \"_doc\",\n        \"_index\": \"qzhddr_software_manager\"\n      },\n      {\n        \"total_view_digest\": \"aa6ebb29ad93c86dd25b5727c7e77056\",\n        \"source_view_digest\": \"fd288e02c8d108936a839b5ecc0479db\",\n        \"software_name\": \"Wireshark\",\n        \"publisher\": \"4.0.7, Copyright 1998-2023 Wireshark Development Team\",\n        \"os_name\": \"macOS\",\n        \"os_friendly_name\": \"macOS 13.5.1\",\n        \"software_version\": \"4.0.7\",\n        \"software_type\": \"开发工具\",\n        \"install_path\": \"/Applications/Wireshark.app/Contents/MacOS/Wireshark\",\n        \"install_time\": 1693220902000,\n        \"install_timestamp\": \"2023-08-28T11:08:22Z\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_code\": \"\",\n        \"staff_email\": \"\",\n        \"staff_description\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"time\": 1702576608835,\n        \"@timestamp\": 1702576608835,\n        \"timestamp\": \"2023-12-15T01:56:48Z\",\n        \"device_id\": \"676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1\",\n        \"device_code\": \"PC-000005\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"bundle_id\": \"org.wireshark.Wireshark\",\n        \"is_piracy\": false,\n        \"event_id\": \"fd443f74-e961-4db4-90bf-5c0c2aaf4422\",\n        \"cd_hash\": \"21ce53c24a6b8b5ebd317d3f2e0d1a7c14013bc4\",\n        \"team_id\": \"\",\n        \"process_name\": \"Wireshark\",\n        \"console_user\": \"jasonlee\",\n        \"agent_version\": \"3.1.836\",\n        \"ip_address\": \"192.168.96.50\",\n        \"display_name\": \"Wireshark\",\n        \"uid\": \"de25403bc83faa5d88ddcdb085df084d\",\n        \"_type\": \"_doc\",\n        \"_index\": \"qzhddr_software_manager\"\n      },\n      {\n        \"total_view_digest\": \"7a788f165d8734a521d352baca05c5fb\",\n        \"source_view_digest\": \"a160756c94bfe0ba0da9308e0a99d368\",\n        \"software_name\": \"Proxyman\",\n        \"publisher\": \"Copyright © 2022. Proxyman LLC. All rights reserved. https://proxyman.io\",\n        \"os_name\": \"macOS\",\n        \"os_friendly_name\": \"macOS 13.5.1\",\n        \"software_version\": \"4.5.0\",\n        \"software_type\": \"其它\",\n        \"install_path\": \"/Applications/Proxyman.app/Contents/MacOS/Proxyman\",\n        \"install_time\": 1693220902000,\n        \"install_timestamp\": \"2023-08-28T11:08:22Z\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_code\": \"\",\n        \"staff_email\": \"\",\n        \"staff_description\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"time\": 1702576608835,\n        \"@timestamp\": 1702576608835,\n        \"timestamp\": \"2023-12-15T01:56:48Z\",\n        \"device_id\": \"676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1\",\n        \"device_code\": \"PC-000005\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"bundle_id\": \"com.proxyman.NSProxy\",\n        \"is_piracy\": false,\n        \"event_id\": \"fd443f74-e961-4db4-90bf-5c0c2aaf4422\",\n        \"cd_hash\": \"e2e1c5e93cc24bf51520a1ab97b3a719c35b4cc5\",\n        \"team_id\": \"\",\n        \"process_name\": \"Proxyman\",\n        \"console_user\": \"jasonlee\",\n        \"agent_version\": \"3.1.836\",\n        \"ip_address\": \"192.168.96.50\",\n        \"display_name\": \"Proxyman\",\n        \"uid\": \"b542614c513401ff45f8c16feb7075a6\",\n        \"_type\": \"_doc\",\n        \"_index\": \"qzhddr_software_manager\"\n      },\n      {\n        \"total_view_digest\": \"d5be2c46a4034a69cc5002807ec3da99\",\n        \"source_view_digest\": \"3aae0b34482e2dbb1da08552a2191b40\",\n        \"software_name\": \"PasteNow\",\n        \"publisher\": \"Copyright © 2021-2023 Tualatrix Chou. All rights reserved.\",\n        \"os_name\": \"macOS\",\n        \"os_friendly_name\": \"macOS 13.5.1\",\n        \"software_version\": \"2.12\",\n        \"software_type\": \"其它\",\n        \"install_path\": \"/Applications/PasteNow.app/Contents/MacOS/PasteNow\",\n        \"install_time\": 1693220902000,\n        \"install_timestamp\": \"2023-08-28T11:08:22Z\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_code\": \"\",\n        \"staff_email\": \"\",\n        \"staff_description\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"time\": 1702576608835,\n        \"@timestamp\": 1702576608835,\n        \"timestamp\": \"2023-12-15T01:56:48Z\",\n        \"device_id\": \"676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1\",\n        \"device_code\": \"PC-000005\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"bundle_id\": \"app.pastenow.PasteNow\",\n        \"is_piracy\": false,\n        \"event_id\": \"fd443f74-e961-4db4-90bf-5c0c2aaf4422\",\n        \"cd_hash\": \"b256d37cf3dbc678caf14f454a77a965680f1ef6\",\n        \"team_id\": \"KAQ3M6FSM7\",\n        \"process_name\": \"PasteNow\",\n        \"console_user\": \"jasonlee\",\n        \"agent_version\": \"3.1.836\",\n        \"ip_address\": \"192.168.96.50\",\n        \"display_name\": \"PasteNow\",\n        \"uid\": \"72f88a0050e5dcd154a12be3cc97070e\",\n        \"_type\": \"_doc\",\n        \"_index\": \"qzhddr_software_manager\"\n      },\n      {\n        \"total_view_digest\": \"28f94345071003034c2f2927a993c58e\",\n        \"source_view_digest\": \"5640d85eed11a9e119fe9ea278ca7028\",\n        \"software_name\": \"Sophos Scan\",\n        \"publisher\": \"Copyright © 1993-2023 Sophos Ltd. All rights reserved.\",\n        \"os_name\": \"macOS\",\n        \"os_friendly_name\": \"macOS 13.5.1\",\n        \"software_version\": \"10.5.0\",\n        \"software_type\": \"其它\",\n        \"install_path\": \"/Applications/Sophos/Sophos Scan.app/Contents/MacOS/Sophos Scan\",\n        \"install_time\": 1700558610000,\n        \"install_timestamp\": \"2023-11-21T09:23:30Z\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_code\": \"\",\n        \"staff_email\": \"\",\n        \"staff_description\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"time\": 1702576608835,\n        \"@timestamp\": 1702576608835,\n        \"timestamp\": \"2023-12-15T01:56:48Z\",\n        \"device_id\": \"676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1\",\n        \"device_code\": \"PC-000005\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"bundle_id\": \"com.sophos.scan\",\n        \"is_piracy\": false,\n        \"event_id\": \"fd443f74-e961-4db4-90bf-5c0c2aaf4422\",\n        \"cd_hash\": \"ee297eb7d3d41ec6721a46c46e87794d29d39da2\",\n        \"team_id\": \"\",\n        \"process_name\": \"Sophos Scan\",\n        \"console_user\": \"jasonlee\",\n        \"agent_version\": \"3.1.836\",\n        \"ip_address\": \"192.168.96.50\",\n        \"display_name\": \"Sophos Scan\",\n        \"uid\": \"11bbb9254afc1420ab0001514e0617b3\",\n        \"_type\": \"_doc\",\n        \"_index\": \"qzhddr_software_manager\"\n      },\n      {\n        \"total_view_digest\": \"9bf7ac6933cde60ad2c1cc6a50b337e8\",\n        \"source_view_digest\": \"859dc221e4aeedad234cc1c853eafb3f\",\n        \"software_name\": \"Sophos Home\",\n        \"publisher\": \"Copyright © 1993-2023 Sophos Ltd. All rights reserved.\",\n        \"os_name\": \"macOS\",\n        \"os_friendly_name\": \"macOS 13.5.1\",\n        \"software_version\": \"10.4.19\",\n        \"software_type\": \"其它\",\n        \"install_path\": \"/Applications/Sophos/Sophos Home.app/Contents/MacOS/Sophos Home\",\n        \"install_time\": 1700558607000,\n        \"install_timestamp\": \"2023-11-21T09:23:27Z\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_code\": \"\",\n        \"staff_email\": \"\",\n        \"staff_description\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"time\": 1702576608835,\n        \"@timestamp\": 1702576608835,\n        \"timestamp\": \"2023-12-15T01:56:48Z\",\n        \"device_id\": \"676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1\",\n        \"device_code\": \"PC-000005\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"bundle_id\": \"com.sophos.home.ui\",\n        \"is_piracy\": false,\n        \"event_id\": \"fd443f74-e961-4db4-90bf-5c0c2aaf4422\",\n        \"cd_hash\": \"43aa819aee3c480df11b60131f97f918d297ed59\",\n        \"team_id\": \"\",\n        \"process_name\": \"Sophos Home\",\n        \"console_user\": \"jasonlee\",\n        \"agent_version\": \"3.1.836\",\n        \"ip_address\": \"192.168.96.50\",\n        \"display_name\": \"Sophos Home\",\n        \"uid\": \"cab186873122bcd5eb53620be79fc0de\",\n        \"_type\": \"_doc\",\n        \"_index\": \"qzhddr_software_manager\"\n      },\n      {\n        \"total_view_digest\": \"2b629b38a73e909eb9b030474fb68fdf\",\n        \"source_view_digest\": \"8c26cbda29df0b8c39aeb8a93f3599a8\",\n        \"software_name\": \"The Unarchiver\",\n        \"publisher\": \"\",\n        \"os_name\": \"macOS\",\n        \"os_friendly_name\": \"macOS 13.5.1\",\n        \"software_version\": \"4.3.5\",\n        \"software_type\": \"其它\",\n        \"install_path\": \"/Applications/The Unarchiver.app/Contents/MacOS/The Unarchiver\",\n        \"install_time\": 1693220902000,\n        \"install_timestamp\": \"2023-08-28T11:08:22Z\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_code\": \"\",\n        \"staff_email\": \"\",\n        \"staff_description\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"time\": 1702576608835,\n        \"@timestamp\": 1702576608835,\n        \"timestamp\": \"2023-12-15T01:56:48Z\",\n        \"device_id\": \"676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1\",\n        \"device_code\": \"PC-000005\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"bundle_id\": \"com.macpaw.site.theunarchiver\",\n        \"is_piracy\": false,\n        \"event_id\": \"fd443f74-e961-4db4-90bf-5c0c2aaf4422\",\n        \"cd_hash\": \"3d02069ab4eab7356b441f0742b9e4bb6a424c00\",\n        \"team_id\": \"\",\n        \"process_name\": \"The Unarchiver\",\n        \"console_user\": \"jasonlee\",\n        \"agent_version\": \"3.1.836\",\n        \"ip_address\": \"192.168.96.50\",\n        \"display_name\": \"The Unarchiver\",\n        \"uid\": \"566428ea99d866576d50121cfd3c65f1\",\n        \"_type\": \"_doc\",\n        \"_index\": \"qzhddr_software_manager\"\n      },\n      {\n        \"total_view_digest\": \"114826c65ab307e9af61c77e748b1bd8\",\n        \"source_view_digest\": \"27b7e11833cbdef1a06fc65a07864d18\",\n        \"software_name\": \"Microsoft Excel\",\n        \"publisher\": \"© 2023 Microsoft Corporation. All rights reserved.\",\n        \"os_name\": \"macOS\",\n        \"os_friendly_name\": \"macOS 13.5.1\",\n        \"software_version\": \"16.78\",\n        \"software_type\": \"办公类\",\n        \"install_path\": \"/Applications/Microsoft Excel.app/Contents/MacOS/Microsoft Excel\",\n        \"install_time\": 1698043433000,\n        \"install_timestamp\": \"2023-10-23T06:43:53Z\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_code\": \"\",\n        \"staff_email\": \"\",\n        \"staff_description\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"time\": 1702576608835,\n        \"@timestamp\": 1702576608835,\n        \"timestamp\": \"2023-12-15T01:56:48Z\",\n        \"device_id\": \"676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1\",\n        \"device_code\": \"PC-000005\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"bundle_id\": \"com.microsoft.Excel\",\n        \"is_piracy\": false,\n        \"event_id\": \"fd443f74-e961-4db4-90bf-5c0c2aaf4422\",\n        \"cd_hash\": \"f46122a13070053bebbc17bf4b0f6d81f2693c78\",\n        \"team_id\": \"UBF8T346G9\",\n        \"process_name\": \"Microsoft Excel\",\n        \"console_user\": \"jasonlee\",\n        \"agent_version\": \"3.1.836\",\n        \"ip_address\": \"192.168.96.50\",\n        \"display_name\": \"Excel\",\n        \"uid\": \"f3fe47ceb34160f00074efb2972fa7eb\",\n        \"_type\": \"_doc\",\n        \"_index\": \"qzhddr_software_manager\"\n      },\n      {\n        \"total_view_digest\": \"36714a77e5a09bab03d2fc7d2c2199ee\",\n        \"source_view_digest\": \"39905d590f7c98acaa30e3996512bdce\",\n        \"software_name\": \"Uninstall OpenVPN Connect\",\n        \"publisher\": \"OpenVPN Uninstaller\",\n        \"os_name\": \"macOS\",\n        \"os_friendly_name\": \"macOS 13.5.1\",\n        \"software_version\": \"0.1\",\n        \"software_type\": \"其它\",\n        \"install_path\": \"/Applications/OpenVPN Connect/Uninstall OpenVPN Connect.app/Contents/MacOS/uninstaller\",\n        \"install_time\": 1670682527000,\n        \"install_timestamp\": \"2022-12-10T14:28:47Z\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_code\": \"\",\n        \"staff_email\": \"\",\n        \"staff_description\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"time\": 1702576608835,\n        \"@timestamp\": 1702576608835,\n        \"timestamp\": \"2023-12-15T01:56:48Z\",\n        \"device_id\": \"676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1\",\n        \"device_code\": \"PC-000005\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"bundle_id\": \"net.openvpn.uninstaller\",\n        \"is_piracy\": false,\n        \"event_id\": \"fd443f74-e961-4db4-90bf-5c0c2aaf4422\",\n        \"cd_hash\": \"89fb64d63cdc7638230fa81e856041c70f454560\",\n        \"team_id\": \"\",\n        \"process_name\": \"uninstaller\",\n        \"console_user\": \"jasonlee\",\n        \"agent_version\": \"3.1.836\",\n        \"ip_address\": \"192.168.96.50\",\n        \"display_name\": \"Uninstall OpenVPN Connect\",\n        \"uid\": \"7a344ee0d38ff016d34f9d63b6f5073a\",\n        \"_type\": \"_doc\",\n        \"_index\": \"qzhddr_software_manager\"\n      },\n      {\n        \"total_view_digest\": \"2c074bd341a40ee0efd05911188bbe83\",\n        \"source_view_digest\": \"e1da12c8af4bdffcc81a1f69b80dd954\",\n        \"software_name\": \"Python Launcher\",\n        \"publisher\": \"3.8.10, © 2001-2021 Python Software Foundation\",\n        \"os_name\": \"macOS\",\n        \"os_friendly_name\": \"macOS 13.5.1\",\n        \"software_version\": \"3.8.10\",\n        \"software_type\": \"其它\",\n        \"install_path\": \"/Applications/Python 3.8/Python Launcher.app/Contents/MacOS/Python Launcher\",\n        \"install_time\": 1667200303000,\n        \"install_timestamp\": \"2022-10-31T07:11:43Z\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_code\": \"\",\n        \"staff_email\": \"\",\n        \"staff_description\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"time\": 1702576608835,\n        \"@timestamp\": 1702576608835,\n        \"timestamp\": \"2023-12-15T01:56:48Z\",\n        \"device_id\": \"676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1\",\n        \"device_code\": \"PC-000005\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"bundle_id\": \"org.python.PythonLauncher\",\n        \"is_piracy\": false,\n        \"event_id\": \"fd443f74-e961-4db4-90bf-5c0c2aaf4422\",\n        \"cd_hash\": \"be2840a4d8d62bae110c47465f848f767a5df086\",\n        \"team_id\": \"\",\n        \"process_name\": \"Python Launcher\",\n        \"console_user\": \"jasonlee\",\n        \"agent_version\": \"3.1.836\",\n        \"ip_address\": \"192.168.96.50\",\n        \"display_name\": \"Python Launcher\",\n        \"uid\": \"1b83513e70ee01c56e1f7c8b4c62cf00\",\n        \"_type\": \"_doc\",\n        \"_index\": \"qzhddr_software_manager\"\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e58fe8dc-21dc-4fe9-849c-011b6b4ccc34",
+    "name": "APISec Management account device/software/list API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

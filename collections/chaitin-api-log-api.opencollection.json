@@ -1,0 +1,156 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account api_log API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "api_log",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /api/ApiIdContextLogAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/ApiIdContextLogAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "count",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "event_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req_start_time",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/ApiIdContextLogAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/RunStatAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RunStatAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query",
+                "description": "API UUID"
+              },
+              {
+                "name": "duration",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/RunStatAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/SrcIPContextLogAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SrcIPContextLogAPI",
+            "params": [
+              {
+                "name": "count",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "event_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req_start_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "src_ip",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/SrcIPContextLogAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/UserContextLogAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/UserContextLogAPI",
+            "params": [
+              {
+                "name": "count",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "event_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pii_device_id_value",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pii_session_value",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pii_user_id_value",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pii_username_value",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req_start_time",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/UserContextLogAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

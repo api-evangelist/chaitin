@@ -1,0 +1,63 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account system/filebehaviorconfig/retrieve API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "system/filebehaviorconfig/retrieve",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "行为日志配置 - 获取",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/system/filebehaviorconfig/retrieve",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "docs": "行为日志配置 - 获取"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

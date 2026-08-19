@@ -1,0 +1,222 @@
+{
+  "item": [
+    {
+      "id": "e80c00e3-c16c-4eda-b26c-3f17c2d90a7f",
+      "name": "software/uninstall/instance",
+      "description": {
+        "content": "软件分发与卸载/uninstall 接口/实例",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0ba2e62f-59f7-420a-a623-e7ac715a48fc",
+          "name": "实例创建",
+          "request": {
+            "name": "实例创建",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "software",
+                "uninstall",
+                "instance"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"scope\": \"<string>\",\n  \"uninstall_source_list\": [\n    {\n      \"registry_id\": \"<string>\",\n      \"display_name\": \"<string>\",\n      \"uninstall_command\": \"<string>\",\n      \"family\": \"<string>\",\n      \"category\": \"<string>\",\n      \"pkg_id\": \"<string>\",\n      \"bundle_id\": \"<string>\"\n    },\n    {\n      \"registry_id\": \"<string>\",\n      \"display_name\": \"<string>\",\n      \"uninstall_command\": \"<string>\",\n      \"family\": \"<string>\",\n      \"category\": \"<string>\",\n      \"pkg_id\": \"<string>\",\n      \"bundle_id\": \"<string>\"\n    }\n  ],\n  \"binding_config\": {\n    \"source\": \"<string>\",\n    \"include\": {},\n    \"exclude\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "dde600fb-f86e-4ac3-89fd-4a72ed597158",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "software",
+                    "uninstall",
+                    "instance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"测试11\",\n  \"scope\": \"global\",\n  \"uninstall_source_list\": [\n    {\n      \"registry_id\": \"registry_id1\",\n      \"pkg_id\": \"pkg_id\",\n      \"bundle_id\": \"bundle_id\",\n      \"display_name\": \"测试软件1\",\n      \"uninstall_command\": \"删除命令\",\n      \"family\": \"Windows\",\n      \"category\": \"im\"\n    },\n    {\n      \"registry_id\": \"registry_id2\",\n      \"display_name\": \"测试软件2\",\n      \"uninstall_command\": \"删除命令\",\n      \"family\": \"Windows\",\n      \"category\": \"im\"\n    }\n  ],\n  \"binding_config\": {\n    \"source\": \"software_uninstall\",\n    \"include\": {\n      \"device_ids\": [],\n      \"device_tag_ids\": [],\n      \"staff_tag_ids\": [],\n      \"staff_ids\": [],\n      \"dept_ids\": []\n    },\n    \"exclude\": {\n      \"dept_ids\": [],\n      \"staff_ids\": [],\n      \"staff_tag_ids\": [],\n      \"device_ids\": [],\n      \"device_tag_ids\": []\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"Normal\",\n  \"data\": {\n    \"create_time\": \"2024-10-22T05:56:06.416716Z\",\n    \"update_time\": \"2024-10-22T05:56:06.416746Z\",\n    \"scope\": \"global\",\n    \"uninstall_source_list\": [\n      {\n        \"display_category\": \"IM即时通讯\",\n        \"uninstall_command\": \"删除命令\",\n        \"registry_id\": \"registry_id1\",\n        \"family\": \"Windows\",\n        \"display_name\": \"测试软件1\",\n        \"category\": \"im\"\n      },\n      {\n        \"display_category\": \"IM即时通讯\",\n        \"uninstall_command\": \"删除命令\",\n        \"registry_id\": \"registry_id2\",\n        \"family\": \"Windows\",\n        \"display_name\": \"测试软件2\",\n        \"category\": \"im\"\n      }\n    ],\n    \"update_by_id\": \"2834ded5-b1c5-49ff-9655-3d4cc842e2b7\",\n    \"create_by_id\": \"2834ded5-b1c5-49ff-9655-3d4cc842e2b7\",\n    \"id\": 7,\n    \"uid\": \"c0852088-fd19-4697-909c-ae9eccdc5d9b\",\n    \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n    \"status\": \"created\",\n    \"name\": \"测试2\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "008f89e2-f12f-4cfa-8116-280301f82c87",
+    "name": "APISec Management account software/uninstall/instance API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

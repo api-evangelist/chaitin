@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account policy/channel/{policy_id}/detail API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "policy/channel/{policy_id}/detail",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "渠道管控 详情",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/policy/channel/:policy_id/detail",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "policy_id",
+                "value": "76ddc97b-6767-4dc8-864b-ee5653226788",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "渠道管控 详情"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

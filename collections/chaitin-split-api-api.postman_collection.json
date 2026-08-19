@@ -1,0 +1,199 @@
+{
+  "item": [
+    {
+      "id": "bb57e17a-4c7a-4bbb-9c26-12d055d3d07e",
+      "name": "split_api",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b40a3aa4-3205-4c17-a6a7-77b94e562960",
+          "name": "PUT /api/EnableSplitAPI",
+          "request": {
+            "name": "PUT /api/EnableSplitAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "EnableSplitAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"action\": \"<string>\",\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "554197c0-7737-42b0-b274-888b026520b1",
+          "name": "GET /api/SplitConfigAPI",
+          "request": {
+            "name": "GET /api/SplitConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SplitConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "order_by",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1014f6b7-fe1f-4ade-95fa-2bc3b0d6d7f1",
+          "name": "POST /api/SplitConfigAPI",
+          "request": {
+            "name": "POST /api/SplitConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SplitConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"is_enabled\": \"<boolean>\",\n  \"name\": \"<string>\",\n  \"origin\": \"<string>\",\n  \"key\": \"<string>\",\n  \"original_api_id\": \"<string>\",\n  \"comment\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f162e8ab-8774-463b-8fc8-13943c4deec3",
+          "name": "PUT /api/SplitConfigAPI",
+          "request": {
+            "name": "PUT /api/SplitConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SplitConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"is_enabled\": \"<boolean>\",\n    \"key\": \"<string>\",\n    \"name\": \"<string>\",\n    \"origin\": \"<string>\",\n    \"original_api_id\": \"<string>\",\n    \"site_id\": \"<string>\",\n    \"url\": \"<string>\",\n    \"method\": \"<string>\",\n    \"uuid\": \"<string>\",\n    \"auto\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"api_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"sample\": \"<object>\"\n  },\n  {\n    \"is_enabled\": \"<boolean>\",\n    \"key\": \"<string>\",\n    \"name\": \"<string>\",\n    \"origin\": \"<string>\",\n    \"original_api_id\": \"<string>\",\n    \"site_id\": \"<string>\",\n    \"url\": \"<string>\",\n    \"method\": \"<string>\",\n    \"uuid\": \"<string>\",\n    \"auto\": \"<boolean>\",\n    \"comment\": \"<string>\",\n    \"api_list\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"sample\": \"<object>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8849386d-8abf-448a-b286-af36e6f7f272",
+    "name": "APISec Management account split_api API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

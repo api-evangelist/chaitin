@@ -1,0 +1,78 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account ueba/staff/{staff_id}/radar API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ueba/staff/{staff_id}/radar",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "UEBA用户页雷达图",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/ueba/staff/:staff_id/radar",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "staff_id",
+                "value": "100faf26-d362-4ca2-befb-3ac8c22673eb",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "UEBA用户页雷达图"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

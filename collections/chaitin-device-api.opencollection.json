@@ -1,0 +1,288 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account Device API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Device",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "结果列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/device/filescantask/:task_id/instance/:instance_id/results/list",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "Authorization",
+                "value": "SERVAL Y3liZXJzZXJ2YWw6YUthOGxOYXBhMGdpRVFBcEVVdXZZT0FNYlVSdlkwdVZsS2JNRVF3SkVVNUBhTzVwbEwyVkUwd0psS1dORVV3OGxMOXJZMGdRYU5iSGFPOXpZT2JNbEFTUw=="
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              }
+            ],
+            "params": [
+              {
+                "name": "task_id",
+                "value": "string",
+                "type": "path"
+              },
+              {
+                "name": "instance_id",
+                "value": "string",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "1",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "10",
+                "type": "query"
+              },
+              {
+                "name": "search",
+                "value": "14603518636",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "结果列表"
+        },
+        {
+          "info": {
+            "name": "设备列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/device/filescantask/:task_id/instance/:instance_id/device/list",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "Authorization",
+                "value": "SERVAL Y3liZXJzZXJ2YWw6YUthOGxOYXBhMGdpRVFBcEVVdXZZT0FNYlVSdlkwdVZsS2JNRVF3SkVVNUBhTzVwbEwyVkUwd0psS1dORVV3OGxMOXJZMGdRYU5iSGFPOXpZT2JNbEFTUw=="
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              }
+            ],
+            "params": [
+              {
+                "name": "task_id",
+                "value": "1b5dd583-9a20-4c16-b72e-9199f9d5bd89",
+                "type": "path"
+              },
+              {
+                "name": "instance_id",
+                "value": "132b270c-1d1f-4bd6-9687-2f61f68392cd",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "设备列表"
+        },
+        {
+          "info": {
+            "name": "结果列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/device/filescantask/remote/:task_id/instance/:instance_id/results/list",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "Authorization",
+                "value": "SERVAL Y3liZXJzZXJ2YWw6YUthOGxOYXBhMGdpRVFBcEVVdXZZT0FNYlVSdlkwdVZsS2JNRVF3SkVVNUBhTzVwbEwyVkUwd0psS1dORVV3OGxMOXJZMGdRYU5iSGFPOXpZT2JNbEFTUw=="
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              }
+            ],
+            "params": [
+              {
+                "name": "task_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "instance_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "1",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "10",
+                "type": "query"
+              },
+              {
+                "name": "search",
+                "value": "14603518636",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "结果列表"
+        },
+        {
+          "info": {
+            "name": "删除资产扫描任务",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/device/filescantask/:task_id/action/remove",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "Authorization",
+                "value": "SERVAL Y3liZXJzZXJ2YWw6YUthOGxOYXBhMGdpRVFBcEVVdXZZT0FNYlVSdlkwdVZsS2JNRVF3SkVVNUBhTzVwbEwyVkUwd0psS1dORVV3OGxMOXJZMGdRYU5iSGFPOXpZT2JNbEFTUw=="
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              }
+            ],
+            "params": [
+              {
+                "name": "task_id",
+                "value": "f397ad6d-874e-458a-985d-06c781237bfc",
+                "type": "path"
+              },
+              {
+                "name": "delete_logs",
+                "value": "false",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "删除资产扫描任务"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

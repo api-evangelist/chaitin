@@ -1,0 +1,345 @@
+{
+  "item": [
+    {
+      "id": "0ce70a66-8b3b-4171-91f3-f75e8a4e4fa4",
+      "name": "website",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f53b552c-ffe1-4651-8ca3-6faf8f3acc82",
+          "name": "GET /api/CertAPI",
+          "request": {
+            "name": "GET /api/CertAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "CertAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ea7b0f95-be4f-465f-9b16-c905d3db3c8e",
+          "name": "PUT /api/CertAPI",
+          "request": {
+            "name": "PUT /api/CertAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "CertAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "702709bd-f9a8-43f2-88c2-3aa0bfd0d05a",
+          "name": "DELETE /api/CertAPI",
+          "request": {
+            "name": "DELETE /api/CertAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "CertAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"delete_all_resources\": \"<boolean>\",\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "46f51ad3-0152-484f-a461-a74ac55a3238",
+          "name": "POST /api/EditSSLCertAPI",
+          "request": {
+            "name": "POST /api/EditSSLCertAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "EditSSLCertAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "30b8e000-b0b3-45df-81fe-94169dc4486f",
+          "name": "POST /api/UploadSSLCertAPI",
+          "request": {
+            "name": "POST /api/UploadSSLCertAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UploadSSLCertAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b55db0b6-cc19-4f8c-a5e7-16a69d00004b",
+          "name": "POST /api/WebsiteAPI",
+          "request": {
+            "name": "POST /api/WebsiteAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "WebsiteAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"is_enabled\": \"<boolean>\",\n  \"name\": \"<string>\",\n  \"server_names\": \"<string>\",\n  \"ports\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"servers\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"ssl_cert\": \"<integer>\",\n  \"remark\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1572502b-86ec-4476-b98b-855fd0df86e8",
+          "name": "PUT /api/WebsiteAPI",
+          "request": {
+            "name": "PUT /api/WebsiteAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "WebsiteAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"is_enabled\": \"<boolean>\",\n  \"name\": \"<string>\",\n  \"ports\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"server_names\": \"<string>\",\n  \"servers\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"ssl_cert\": \"<integer>\",\n  \"remark\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c68c8e3c-9c33-48b7-8942-1659f7c46cc8",
+          "name": "DELETE /api/WebsiteAPI",
+          "request": {
+            "name": "DELETE /api/WebsiteAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "WebsiteAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"delete_all_resources\": \"<boolean>\",\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "59251cb9-1b14-443e-ad19-80aac1f42c97",
+    "name": "APISec Management account website API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

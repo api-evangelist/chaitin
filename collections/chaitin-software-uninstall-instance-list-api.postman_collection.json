@@ -1,0 +1,229 @@
+{
+  "item": [
+    {
+      "id": "d573d3b4-e849-45eb-8afe-9ab7541f08c5",
+      "name": "software/uninstall/instance/list",
+      "description": {
+        "content": "软件分发与卸载/uninstall 接口/实例/列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e92d2875-b341-4a30-a2cc-0739de3387e6",
+          "name": "实例列表",
+          "request": {
+            "name": "实例列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "software",
+                "uninstall",
+                "instance",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6bc562b5-3018-4e15-9a84-e157a069e6e4",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "software",
+                    "uninstall",
+                    "instance",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "search",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"Normal\",\n  \"data\": {\n    \"total\": 2,\n    \"results\": [\n      {\n        \"uid\": \"127dace1-8e71-433d-ba64-2e5530c4c468\",\n        \"display_status\": \"执行中\",\n        \"scope\": \"global\",\n        \"name\": \"测试6\",\n        \"create_by_id\": \"2834ded5-b1c5-49ff-9655-3d4cc842e2b7\",\n        \"create_time\": \"2024-10-15T10:00:41.167375Z\",\n        \"status\": \"inprogress\",\n        \"id\": 42,\n        \"update_by\": {\n          \"uid\": \"2834ded5-b1c5-49ff-9655-3d4cc842e2b7\",\n          \"name\": \"lbb\",\n          \"username\": \"lbb\",\n          \"email\": \"123@123.com\"\n        },\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"operations\": [\n          {\n            \"name\": \"delete\",\n            \"display_name\": \"删除\"\n          },\n          {\n            \"name\": \"detail\",\n            \"display_name\": \"详情\"\n          },\n          {\n            \"name\": \"copy\",\n            \"display_name\": \"复制\"\n          }\n        ],\n        \"update_time\": \"2024-10-15T10:00:41.958381Z\"\n      },\n      {\n        \"uid\": \"7325d643-ec06-4b40-8297-e8bc142275be\",\n        \"display_status\": \"已完成\",\n        \"scope\": \"common\",\n        \"name\": \"测试5\",\n        \"create_by_id\": \"2834ded5-b1c5-49ff-9655-3d4cc842e2b7\",\n        \"create_time\": \"2024-10-15T09:49:27.470071Z\",\n        \"status\": \"completed\",\n        \"id\": 33,\n        \"update_by\": {\n          \"uid\": \"2834ded5-b1c5-49ff-9655-3d4cc842e2b7\",\n          \"name\": \"lbb\",\n          \"username\": \"lbb\",\n          \"email\": \"123@123.com\"\n        },\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"operations\": [\n          {\n            \"name\": \"delete\",\n            \"display_name\": \"删除\"\n          },\n          {\n            \"name\": \"detail\",\n            \"display_name\": \"详情\"\n          },\n          {\n            \"name\": \"redo\",\n            \"display_name\": \"重试\"\n          }\n        ],\n        \"update_time\": \"2024-10-15T09:49:27.918155Z\"\n      }\n    ],\n    \"page\": 1\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "80938528-c766-411f-86c9-15e9f0151d98",
+    "name": "APISec Management account software/uninstall/instance/list API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

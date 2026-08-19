@@ -1,0 +1,195 @@
+{
+  "item": [
+    {
+      "id": "d48cd926-447f-4675-be57-66b4174fae0c",
+      "name": "system/macosauthconfig/retrieve",
+      "description": {
+        "content": "系统配置/macOS 认证配置/获取",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3900d725-9bb2-4ed3-8201-c90b70b4b6c7",
+          "name": "终端配置查询 - macOS授权",
+          "request": {
+            "name": "终端配置查询 - macOS授权",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "system",
+                "macosauthconfig",
+                "retrieve"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8746d015-06e0-48e9-a00d-72bb92a86051",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "system",
+                    "macosauthconfig",
+                    "retrieve"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"正常\",\n  \"data\": {\n    \"auth_check_options\": {\n      \"network_extension_stay\": \"off\",\n      \"screenshot_noauth_mode\": \"partial\",\n      \"network_extension_mode\": \"on\",\n      \"network_extension_mode__scope\": {\n        \"binding_config\": {},\n        \"scope\": \"global\"\n      },\n      \"screenshot_noauth_mode__scope\": {\n        \"binding_config\": {\n          \"exclude\": {\n            \"devices\": [\n              {\n                \"uid\": \"7b45e606-c7b4-40a2-a08e-4aa9fb0ddcf1\",\n                \"name\": \"DNAME2119dc35896c7863\",\n                \"code\": \"PC-000006\"\n              },\n              {\n                \"uid\": \"676b7ae5-81b1-4cc3-80d2-3fbaffaf56d1\",\n                \"name\": \"DNAME9a67d4d2f718b69e\",\n                \"code\": \"PC-000005\"\n              }\n            ]\n          },\n          \"include\": {\n            \"devices\": [\n              {\n                \"uid\": \"1c16c892-242c-467c-add4-8ab0f00f26e9\",\n                \"name\": \"DNAMEad1ee8a92d1c7eae\",\n                \"code\": \"PC-000003\"\n              },\n              {\n                \"uid\": \"d1247921-d4fd-4f6c-9f62-504684f8f288\",\n                \"name\": \"DNAME89c81639591b3814\",\n                \"code\": \"PC-000002\"\n              }\n            ]\n          }\n        },\n        \"scope\": \"common\"\n      },\n      \"full_disk_access_mode\": \"on\"\n    },\n    \"freq_noauth_alert\": 30,\n    \"freq_noauth_alert_measure\": \"sec\",\n    \"screenshot_noauth_check\": true,\n    \"guide_info\": {\n      \"auth_guide\": {\n        \"en\": \"For any issues, please contact the IT.\",\n        \"zh-cn\": \"遇到问题，请联系IT人员。\",\n        \"zh-hant\": \"遇到問題，請聯繫IT人員。\"\n      },\n      \"uninstall_guide\": {\n        \"en\": \"Before uninstalling, you must enter the login password to ensure complete uninstallation.\",\n        \"zh-cn\": \"卸载前需输入系统登录账户的密码，保证完整卸载。\",\n        \"zh-hant\": \"卸載前需輸入係統登録賬戶的密碼，保証完整卸載。\"\n      }\n    },\n    \"noauth_alert_max_count\": 1,\n    \"network_extension_check\": true,\n    \"full_disk_access\": true,\n    \"notification_config\": [\n      {\n        \"notification_bot_template_id\": \"388f8188-2002-4b3e-b42a-36a2dcbe9705\",\n        \"notification_bot\": {\n          \"uid\": \"11171f87-0140-446d-88b1-6918726f91c8\",\n          \"name\": \"fanhua\",\n          \"category\": \"feishu\",\n          \"config\": {\n            \"im_notification\": {\n              \"webhook\": \"https://open.feishu.cn/open-apis/bot/v2/hook/f5f4a6b6-c3f5-4758-9109-5522bb6d39e3\"\n            }\n          }\n        },\n        \"notification_content_template\": {\n          \"uid\": \"66a67031-d872-48e5-8ee1-9e9e6669fe18\",\n          \"name\": \"示例-macOS未授权通知\",\n          \"template_model\": \"macos_auth\",\n          \"template_value\": \"macOS未授权通知：系统于{{timestamp}}，发现macOS设备:{{device_code}} 触达未授权提醒次数上限，无法对该设备完成数据保护，点击 {{address}} 查看设备详情。\"\n        },\n        \"is_remind\": false,\n        \"email_to_list\": []\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "19bfec61-135f-4f0f-b165-a4c1c9769840",
+    "name": "APISec Management account system/macosauthconfig/retrieve API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

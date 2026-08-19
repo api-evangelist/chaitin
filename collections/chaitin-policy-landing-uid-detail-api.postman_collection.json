@@ -1,0 +1,213 @@
+{
+  "item": [
+    {
+      "id": "dc93cc02-399d-4e1d-aeb6-53913470b9ce",
+      "name": "policy/landing/{uid}/detail",
+      "description": {
+        "content": "策略管理/落地/uid 参数/详情",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d8f3968d-ba8f-423f-bf67-6e45dba85c83",
+          "name": "详情",
+          "request": {
+            "name": "详情",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "policy",
+                "landing",
+                ":uid",
+                "detail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "uid",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7356f2b7-a109-4d46-a7f7-5098632b6f26",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "policy",
+                    "landing",
+                    ":uid",
+                    "detail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "uid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"create_by\": {\n      \"uid\": \"b1c9536d-95af-482e-adb8-03b19677a467\",\n      \"name\": \"xieqing\",\n      \"username\": \"xieqing\",\n      \"email\": \"123@123123.com\"\n    },\n    \"expression\": \"N/A\",\n    \"description\": \"策略描述\",\n    \"scope\": \"common\",\n    \"name\": \"落盘策略\",\n    \"expression_relation\": \"all\",\n    \"create_time\": \"2024-07-29T01:36:38.718298Z\",\n    \"action_template_id\": null,\n    \"action\": \"notify\",\n    \"update_time\": \"2024-07-29T01:36:38.718357Z\",\n    \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n    \"update_by\": {\n      \"uid\": \"b1c9536d-95af-482e-adb8-03b19677a467\",\n      \"name\": \"xieqing\",\n      \"username\": \"xieqing\",\n      \"email\": \"123@123123.com\"\n    },\n    \"expression_fields\": [\n      {\n        \"field\": \"channel\",\n        \"value\": [\n          {\n            \"uid\": \"a5b60b18-c079-4cbf-accb-e94011a4a680\",\n            \"name\": \"feishu\",\n            \"display_name\": \"飞书\",\n            \"source\": \"default\",\n            \"channel_family\": \"application\",\n            \"windows_config_enabled\": true,\n            \"macos_config_enabled\": true,\n            \"webapp_config_enabled\": false,\n            \"linux_config_enabled\": true,\n            \"kylin_config_enabled\": true,\n            \"uos_config_enabled\": false\n          }\n        ],\n        \"operator\": \"contains\"\n      },\n      {\n        \"field\": \"classification\",\n        \"value\": [\n          {\n            \"uid\": \"87b1d4f1-cedf-471a-bf6e-59da4c8e6af7\",\n            \"name\": \"hu加密\",\n            \"detect_method\": \"keywords\",\n            \"code\": \"58d5010d7b27cdf9\",\n            \"scheme_id\": \"2fba9d88-4c45-493d-ae40-bf9573278dbe\",\n            \"hub_id\": \"81cbd7d0-85d2-400d-a1e8-ba9ce263395c\",\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\"\n          },\n          {\n            \"uid\": \"1ac42ef2-1906-4459-9273-aabffa2a50ee\",\n            \"name\": \"hu隐藏\",\n            \"detect_method\": \"keywords\",\n            \"code\": \"13cacf3dd692999f\",\n            \"scheme_id\": \"2fba9d88-4c45-493d-ae40-bf9573278dbe\",\n            \"hub_id\": \"81cbd7d0-85d2-400d-a1e8-ba9ce263395c\",\n            \"data_level\": 4,\n            \"data_level_name\": \"机密数据\"\n          }\n        ],\n        \"operator\": \"contains\"\n      }\n    ],\n    \"status\": \"deactivated\",\n    \"source\": \"added\",\n    \"uid\": \"51adf540-a499-40b2-951a-eac56fd85f77\",\n    \"binding_config\": {\n      \"include\": {\n        \"devices\": [\n          {\n            \"uid\": \"8464a3c6-c805-4423-acbb-c0c9cadb273a\",\n            \"name\": \"DNAMEae305f533d4295cc\",\n            \"code\": \"PC-000004\"\n          }\n        ],\n        \"device_tags\": [\n          {\n            \"uid\": \"ef87e984-d10e-494c-96a5-7f41dbfbd710\",\n            \"name\": \"rwww\"\n          }\n        ],\n        \"staffs\": [\n          {\n            \"uid\": \"100faf26-d362-4ca2-befb-3ac8c22673eb\",\n            \"name\": \"何睿\"\n          }\n        ],\n        \"staff_tags\": [\n          {\n            \"uid\": \"4ca4e3ce-aebe-46f6-ac67-f2d7acbf0a37\",\n            \"name\": \"待离职\"\n          }\n        ],\n        \"depts\": [\n          {\n            \"uid\": \"43a3e1a1-b931-4a82-9480-da8de16047db\",\n            \"name\": \"何睿测试名称更新名称\"\n          }\n        ]\n      },\n      \"exclude\": {\n        \"depts\": [],\n        \"staffs\": [],\n        \"staff_tags\": [],\n        \"devices\": [],\n        \"device_tags\": []\n      }\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e9149df7-689b-48f5-96b2-ca904d7738b1",
+    "name": "APISec Management account policy/landing/{uid}/detail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

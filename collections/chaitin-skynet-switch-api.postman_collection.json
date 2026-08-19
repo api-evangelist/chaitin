@@ -1,0 +1,154 @@
+{
+  "item": [
+    {
+      "id": "6e1a5ba3-ef5a-40a5-b220-607305709c9e",
+      "name": "skynet/switch",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b39beb84-9055-492f-b0d9-627a0958085f",
+          "name": "get enhance rule global status",
+          "request": {
+            "name": "get enhance rule global status",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "skynet",
+                "rule",
+                "switch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "515ea857-5f9a-4b97-8c13-4ad61c71c930",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "skynet",
+                    "rule",
+                    "switch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2ca84a76-2cb9-4869-ab24-6dd2648e0a35",
+          "name": "update enhance rule global status",
+          "request": {
+            "name": "update enhance rule global status",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "skynet",
+                "rule",
+                "switch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a5410474-6bed-412f-abaa-ea759cfeaebc",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "skynet",
+                    "rule",
+                    "switch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c2a9eb21-df94-4714-9f5a-9f3162269621",
+    "name": "APISec Management account skynet/switch API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

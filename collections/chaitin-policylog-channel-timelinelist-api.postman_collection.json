@@ -1,0 +1,222 @@
+{
+  "item": [
+    {
+      "id": "2e24e90d-7c4a-4a15-bc82-c4d773260cd2",
+      "name": "policylog/channel/timelinelist",
+      "description": {
+        "content": "日志中心/通道/时间线列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "67839f46-2346-4414-9af6-c8bc6d2e06ff",
+          "name": "渠道管控时间线",
+          "request": {
+            "name": "渠道管控时间线",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "policylog",
+                "channel",
+                "timelinelist"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"time_range\": {\n    \"begin\": \"<string>\",\n    \"end\": \"<string>\"\n  },\n  \"search\": \"<string>\",\n  \"queries\": [\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "674beaf4-fced-47ac-9948-1c5d6d84a7fa",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "policylog",
+                    "channel",
+                    "timelinelist"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"time_range\": {\n    \"begin\": \"2023-11-14 10:55:38\",\n    \"end\": \"2023-11-14 11:55:38\"\n  },\n  \"search\": \"\",\n  \"queries\": [\n    {\n      \"field\": \"staff_name\",\n      \"operator\": \"is\",\n      \"value\": \"吴贝宁\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"index\": [\n      \"qzhddr_policylog_channel\"\n    ],\n    \"total\": 96,\n    \"search_total\": 96,\n    \"results\": [\n      {\n        \"start\": \"2023-11-12 11:00:00\",\n        \"end\": \"2023-11-12 12:00:00\",\n        \"title\": \"wechat\",\n        \"title_display\": \"微信\",\n        \"list\": [\n          {\n            \"content\": \"0c957b44-a638-47d4-a0c0-7f27e744ccf9\",\n            \"content_display\": \"win\",\n            \"cnt\": 5,\n            \"icon\": 2\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-12 12:00:00\",\n        \"end\": \"2023-11-12 13:00:00\",\n        \"title\": \"wechat\",\n        \"title_display\": \"微信\",\n        \"list\": [\n          {\n            \"content\": \"0c957b44-a638-47d4-a0c0-7f27e744ccf9\",\n            \"content_display\": \"win\",\n            \"cnt\": 1,\n            \"icon\": 2\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-12 18:00:00\",\n        \"end\": \"2023-11-12 19:00:00\",\n        \"title\": \"wechat\",\n        \"title_display\": \"微信\",\n        \"list\": [\n          {\n            \"content\": \"0c957b44-a638-47d4-a0c0-7f27e744ccf9\",\n            \"content_display\": \"win\",\n            \"cnt\": 8,\n            \"icon\": 2\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 09:00:00\",\n        \"end\": \"2023-11-13 10:00:00\",\n        \"title\": \"onedrive\",\n        \"title_display\": \"OneDrive\",\n        \"list\": [\n          {\n            \"content\": \"d202a444-581d-4108-95a6-97d004febd9f\",\n            \"content_display\": \"嘻嘻哈哈\",\n            \"cnt\": 7,\n            \"icon\": 6\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 09:00:00\",\n        \"end\": \"2023-11-13 10:00:00\",\n        \"title\": \"edge\",\n        \"title_display\": \"Edge\",\n        \"list\": [\n          {\n            \"content\": \"d202a444-581d-4108-95a6-97d004febd9f\",\n            \"content_display\": \"嘻嘻哈哈\",\n            \"cnt\": 6,\n            \"icon\": 6\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 10:00:00\",\n        \"end\": \"2023-11-13 11:00:00\",\n        \"title\": \"wechat\",\n        \"title_display\": \"微信\",\n        \"list\": [\n          {\n            \"content\": \"0c957b44-a638-47d4-a0c0-7f27e744ccf9\",\n            \"content_display\": \"win\",\n            \"cnt\": 5,\n            \"icon\": 2\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 10:00:00\",\n        \"end\": \"2023-11-13 11:00:00\",\n        \"title\": \"edge\",\n        \"title_display\": \"Edge\",\n        \"list\": [\n          {\n            \"content\": \"d202a444-581d-4108-95a6-97d004febd9f\",\n            \"content_display\": \"嘻嘻哈哈\",\n            \"cnt\": 1,\n            \"icon\": 6\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 10:00:00\",\n        \"end\": \"2023-11-13 11:00:00\",\n        \"title\": \"wechat_enterprise\",\n        \"title_display\": \"企业微信\",\n        \"list\": [\n          {\n            \"content\": \"1f3a375c-cc73-44c7-bd0a-6614cc033933\",\n            \"content_display\": \"hu分类-审批-全渠道\",\n            \"cnt\": 1,\n            \"icon\": 6\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 11:00:00\",\n        \"end\": \"2023-11-13 12:00:00\",\n        \"title\": \"feishu\",\n        \"title_display\": \"飞书\",\n        \"list\": [\n          {\n            \"content\": \"d202a444-581d-4108-95a6-97d004febd9f\",\n            \"content_display\": \"嘻嘻哈哈\",\n            \"cnt\": 3,\n            \"icon\": 1\n          },\n          {\n            \"content\": \"0c957b44-a638-47d4-a0c0-7f27e744ccf9\",\n            \"content_display\": \"win\",\n            \"cnt\": 1,\n            \"icon\": 2\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 11:00:00\",\n        \"end\": \"2023-11-13 12:00:00\",\n        \"title\": \"wechat\",\n        \"title_display\": \"微信\",\n        \"list\": [\n          {\n            \"content\": \"0c957b44-a638-47d4-a0c0-7f27e744ccf9\",\n            \"content_display\": \"win\",\n            \"cnt\": 3,\n            \"icon\": 2\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 11:00:00\",\n        \"end\": \"2023-11-13 12:00:00\",\n        \"title\": \"baidu_wangpan\",\n        \"title_display\": \"百度网盘\",\n        \"list\": [\n          {\n            \"content\": \"d202a444-581d-4108-95a6-97d004febd9f\",\n            \"content_display\": \"嘻嘻哈哈\",\n            \"cnt\": 1,\n            \"icon\": 7\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 12:00:00\",\n        \"end\": \"2023-11-13 13:00:00\",\n        \"title\": \"onedrive\",\n        \"title_display\": \"OneDrive\",\n        \"list\": [\n          {\n            \"content\": \"d202a444-581d-4108-95a6-97d004febd9f\",\n            \"content_display\": \"嘻嘻哈哈\",\n            \"cnt\": 7,\n            \"icon\": 6\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 14:00:00\",\n        \"end\": \"2023-11-13 15:00:00\",\n        \"title\": \"qq\",\n        \"title_display\": \"QQ\",\n        \"list\": [\n          {\n            \"content\": \"0c957b44-a638-47d4-a0c0-7f27e744ccf9\",\n            \"content_display\": \"win\",\n            \"cnt\": 2,\n            \"icon\": 2\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 14:00:00\",\n        \"end\": \"2023-11-13 15:00:00\",\n        \"title\": \"wechat_enterprise\",\n        \"title_display\": \"企业微信\",\n        \"list\": [\n          {\n            \"content\": \"e3c8d1dd-a34c-4356-b5af-df431bfc281d\",\n            \"content_display\": \"hu渠道手机号\",\n            \"cnt\": 2,\n            \"icon\": 3\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 15:00:00\",\n        \"end\": \"2023-11-13 16:00:00\",\n        \"title\": \"feishu\",\n        \"title_display\": \"飞书\",\n        \"list\": [\n          {\n            \"content\": \"1f3a375c-cc73-44c7-bd0a-6614cc033933\",\n            \"content_display\": \"hu分类-审批-全渠道\",\n            \"cnt\": 11,\n            \"icon\": 6\n          },\n          {\n            \"content\": \"0c957b44-a638-47d4-a0c0-7f27e744ccf9\",\n            \"content_display\": \"win\",\n            \"cnt\": 1,\n            \"icon\": 2\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 15:00:00\",\n        \"end\": \"2023-11-13 16:00:00\",\n        \"title\": \"wps\",\n        \"title_display\": \"WPS Office\",\n        \"list\": [\n          {\n            \"content\": \"0c957b44-a638-47d4-a0c0-7f27e744ccf9\",\n            \"content_display\": \"win\",\n            \"cnt\": 4,\n            \"icon\": 2\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 15:00:00\",\n        \"end\": \"2023-11-13 16:00:00\",\n        \"title\": \"qq\",\n        \"title_display\": \"QQ\",\n        \"list\": [\n          {\n            \"content\": \"0c957b44-a638-47d4-a0c0-7f27e744ccf9\",\n            \"content_display\": \"win\",\n            \"cnt\": 3,\n            \"icon\": 2\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 16:00:00\",\n        \"end\": \"2023-11-13 17:00:00\",\n        \"title\": \"qq\",\n        \"title_display\": \"QQ\",\n        \"list\": [\n          {\n            \"content\": \"0c957b44-a638-47d4-a0c0-7f27e744ccf9\",\n            \"content_display\": \"win\",\n            \"cnt\": 3,\n            \"icon\": 2\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 16:00:00\",\n        \"end\": \"2023-11-13 17:00:00\",\n        \"title\": \"wechat_enterprise\",\n        \"title_display\": \"企业微信\",\n        \"list\": [\n          {\n            \"content\": \"1f3a375c-cc73-44c7-bd0a-6614cc033933\",\n            \"content_display\": \"hu分类词对-审批-全渠道\",\n            \"cnt\": 2,\n            \"icon\": 2\n          },\n          {\n            \"content\": \"4d3cc1e9-b85b-488b-b129-3d3d49e5f83d\",\n            \"content_display\": \"hu极速\",\n            \"cnt\": 1,\n            \"icon\": 0\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 16:00:00\",\n        \"end\": \"2023-11-13 17:00:00\",\n        \"title\": \"feishu\",\n        \"title_display\": \"飞书\",\n        \"list\": [\n          {\n            \"content\": \"1f3a375c-cc73-44c7-bd0a-6614cc033933\",\n            \"content_display\": \"hu分类-审批-全渠道\",\n            \"cnt\": 1,\n            \"icon\": 6\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 17:00:00\",\n        \"end\": \"2023-11-13 18:00:00\",\n        \"title\": \"feishu\",\n        \"title_display\": \"飞书\",\n        \"list\": [\n          {\n            \"content\": \"e3c8d1dd-a34c-4356-b5af-df431bfc281d\",\n            \"content_display\": \"hu渠道手机号\",\n            \"cnt\": 13,\n            \"icon\": 6\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-13 17:00:00\",\n        \"end\": \"2023-11-13 18:00:00\",\n        \"title\": \"dingding\",\n        \"title_display\": \"钉钉\",\n        \"list\": [\n          {\n            \"content\": \"d202a444-581d-4108-95a6-97d004febd9f\",\n            \"content_display\": \"嘻嘻哈哈\",\n            \"cnt\": 2,\n            \"icon\": 3\n          }\n        ]\n      },\n      {\n        \"start\": \"2023-11-14 11:00:00\",\n        \"end\": \"2023-11-14 12:00:00\",\n        \"title\": \"feishu\",\n        \"title_display\": \"飞书\",\n        \"list\": [\n          {\n            \"content\": \"c69e4369-57a9-4c0f-9498-6ab6c55abc9b\",\n            \"content_display\": \"uos-文件内容测试\",\n            \"cnt\": 1,\n            \"icon\": 3\n          },\n          {\n            \"content\": \"e3c8d1dd-a34c-4356-b5af-df431bfc281d\",\n            \"content_display\": \"hu渠道手机号\",\n            \"cnt\": 1,\n            \"icon\": 2\n          }\n        ]\n      }\n    ],\n    \"title_field\": \"channel\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "dad63e5c-dc04-4912-b5c7-8b23d3770b76",
+    "name": "APISec Management account policylog/channel/timelinelist API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,839 @@
+{
+  "item": [
+    {
+      "id": "f7c59824-7f96-4ffe-bb5f-e976261abdb2",
+      "name": "资产/种子/域名 WHOIS",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4e1e8a3d-0e66-4006-8324-884a118a4137",
+          "name": "域名WHOIS列表",
+          "request": {
+            "name": "域名WHOIS列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "seed",
+                "domain"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>",
+                  "description": "种子条目，模糊搜索"
+                },
+                {
+                  "disabled": false,
+                  "key": "enable",
+                  "value": "<boolean>",
+                  "description": "监控是否启用"
+                },
+                {
+                  "disabled": false,
+                  "key": "confidence",
+                  "value": "<string>",
+                  "description": "置信度"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>",
+                  "description": "类型"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "排序字段，字段前加-表示降序，默认排序为-id"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "页码"
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<integer>",
+                  "description": "分页大小"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "id": "e9386b35-0ba3-4714-9ff5-4357be2793ce",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "seed",
+                    "domain"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "enable",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "confidence",
+                      "value": "100"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "id、created_at、updated_at"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "size",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"current\": 1,\n    \"items\": [\n      {\n        \"confidence\": \"100\",\n        \"created_at\": \"2023-08-15 14:25:12\",\n        \"enable\": true,\n        \"id\": 1,\n        \"name\": \"test\",\n        \"type\": \"NS\",\n        \"updated_at\": \"2023-08-15 14:25:17\"\n      }\n    ],\n    \"size\": 20,\n    \"total\": 1\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "04ab1bfc-5952-4ea4-86b9-c61544e6d7c2",
+          "name": "域名WHOS批量添加",
+          "request": {
+            "name": "域名WHOS批量添加",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "seed",
+                "domain",
+                "batch-create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"confidence\": \"<string>\",\n  \"type\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ba579248-b789-4b80-8c30-3ce02734dc16",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "seed",
+                    "domain",
+                    "batch-create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"confidence\": \"<string>\",\n  \"type\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"affected\": 1,\n    \"ignored\": 0\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "aa04d302-9154-4eb1-93ec-28b95f39b60e",
+          "name": "域名WHOS批量删除",
+          "request": {
+            "name": "域名WHOS批量删除",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "seed",
+                "domain",
+                "batch-delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a10607e8-59c1-45f4-806a-f78c6746feb6",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "seed",
+                    "domain",
+                    "batch-delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"affected\": 0,\n    \"ignored\": 1\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c5192d97-5bfe-4ee4-91cc-13f1fa035877",
+          "name": "域名WHOIS批量修改监控开关",
+          "request": {
+            "name": "域名WHOIS批量修改监控开关",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "seed",
+                "domain",
+                "switch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"enable\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a46d6c94-25ef-4958-ace3-c7336c546fcb",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "seed",
+                    "domain",
+                    "switch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"enable\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"affected\": 1,\n    \"ignored\": 0\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "104944b9-add6-4cd1-b6c2-dc61fccb6cc0",
+          "name": "域名WHOIS批量修改置信度",
+          "request": {
+            "name": "域名WHOIS批量修改置信度",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "seed",
+                "domain",
+                "update-confidence"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"confidence\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f0dd9b2a-5e87-41d7-9a25-51ebb50432b4",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "seed",
+                    "domain",
+                    "update-confidence"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pk\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"confidence\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": 1,\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c305c550-5a99-4210-a155-7da22654f676",
+          "name": "域名WHOS获取",
+          "request": {
+            "name": "域名WHOS获取",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "seed",
+                "domain",
+                ":pk"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "pk",
+                  "description": "(Required) 企业主体ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "id": "a37f069d-a1b1-491c-9916-1be61682974b",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "seed",
+                    "domain",
+                    ":pk"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "pk",
+                      "description": "(Required) 企业主体ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"confidence\": \"100\",\n    \"created_at\": \"2023-08-15 14:25:12\",\n    \"enable\": true,\n    \"id\": 1,\n    \"name\": \"test\",\n    \"type\": \"NS\",\n    \"updated_at\": \"2023-08-15 14:25:17\"\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fb668ba2-b5a0-4b8e-9d70-67aebd908f54",
+          "name": "域名WHOIS编辑",
+          "request": {
+            "name": "域名WHOIS编辑",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "seed",
+                "domain",
+                ":pk"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "space",
+                  "value": "<integer>",
+                  "description": "空间ID"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "pk",
+                  "description": "(Required) 企业主体ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"confidence\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c0e0fcdf-e988-406a-8ace-d6206bbba079",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "seed",
+                    "domain",
+                    ":pk"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "space",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "pk",
+                      "description": "(Required) 企业主体ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"confidence\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"data\": {\n    \"confidence\": \"100\",\n    \"created_at\": \"2023-08-15 14:25:12\",\n    \"enable\": true,\n    \"id\": 1,\n    \"name\": \"test1\",\n    \"type\": \"NS\",\n    \"updated_at\": \"2024-05-31 14:30:03\"\n  },\n  \"message\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c06f6a10-9c1c-48dc-ab2b-473eec48f5c1",
+    "name": "APISec Management account 资产/种子/域名 WHOIS API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

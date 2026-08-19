@@ -1,0 +1,115 @@
+{
+  "item": [
+    {
+      "id": "9968e6b6-fdc8-48fa-878b-ddbc9797396d",
+      "name": "log/audit",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "049c341a-b2e6-4f6e-b7f0-2f00f11f9aee",
+          "name": "get audit logs",
+          "request": {
+            "name": "get audit logs",
+            "description": {},
+            "url": {
+              "path": [
+                "business",
+                "audit_log"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "page",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "page_size",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f59d9a3d-77e5-48ad-a33c-7380f9788965",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "business",
+                    "audit_log"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": ""
+                    },
+                    {
+                      "key": "page_size",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ee16176d-47dc-4a95-9fab-085922fdbab3",
+    "name": "APISec Management account log/audit API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

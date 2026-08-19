@@ -1,0 +1,238 @@
+{
+  "item": [
+    {
+      "id": "60147b4e-9ba4-406e-838e-255ec60de221",
+      "name": "browsermanager/{tid}/detail",
+      "description": {
+        "content": "浏览器管理/tid 参数/详情",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "46b95ada-739d-41f8-95e0-e867b6fbe293",
+          "name": "浏览器/插件详情",
+          "request": {
+            "name": "浏览器/插件详情",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "browsermanager",
+                ":tid",
+                "detail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "tid",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"plugin_id\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "19513f62-419f-41b9-99ef-ae59112787db",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "browsermanager",
+                    ":tid",
+                    "detail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "tid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"plugin_id\": \"plugin1 id\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"正常\",\n  \"data\": {\n    \"publisher\": \"Microsoft Corporation\",\n    \"process_name\": \"msedge.exe\",\n    \"install_path\": \"c:\\\\program files (x86)\\\\microsoft\\\\edge\\\\application\",\n    \"browser_desc\": \"browser_desc\",\n    \"is_default\": true,\n    \"bundle_id\": \"aaa\",\n    \"browser_version\": [\n      \"120.0.2210.144\"\n    ],\n    \"browser_name\": \"Microsoft Edge\",\n    \"plugin_status\": \"activate\",\n    \"plugin_version\": \"plugin version\",\n    \"plugin_name\": \"plugin1\",\n    \"plugin_source\": \"external\",\n    \"plugin_desc\": \"plugin desc\",\n    \"plugin_id\": \"plugin1 id\",\n    \"permission\": [\n      {\n        \"name\": \"clipboardRead\",\n        \"is_sensitive\": true\n      },\n      {\n        \"name\": \"audio\",\n        \"is_sensitive\": false\n      }\n    ],\n    \"device_id\": \"b6b80bb2-d8b3-4d04-acd4-490ed606421d\",\n    \"os_name\": \"Windows\",\n    \"os_friendly_name\": \"Windows 10 Professional (10.0.19045)\",\n    \"device_code\": \"PC-000041\",\n    \"console_user\": \"happy@DESKTOP-3QQ22QN\",\n    \"agent_version\": \"1.6.26\",\n    \"ip_address\": \"192.168.96.168\",\n    \"hostname\": \"\",\n    \"mac\": \"\",\n    \"time\": 1743147689168,\n    \"@timestamp\": 1743147689168,\n    \"timestamp\": \"2025-03-28T15:41:29+08:00\",\n    \"staff_id\": \"9c830d69-fe2f-4a75-b17d-94dfa9dda958\",\n    \"staff_name\": \"hyj\",\n    \"staff_email\": \"2196900073@qq.com\",\n    \"staff_code\": \"80e9854fdd406dc0\",\n    \"staff_number\": \"5a8bbec2c949dfd2\",\n    \"staff_tag_ids\": [],\n    \"staff_tags\": [],\n    \"dept_ids\": [\n      \"5073b0bd-d80b-450f-ac72-22ffc074f29f\"\n    ],\n    \"dept_names\": [\n      \"default\"\n    ],\n    \"dept_paths\": [\n      \"default\"\n    ],\n    \"display_name\": \"Edge\",\n    \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n    \"event_id\": \"b9ab7a16-c761-4f0b-82d7-9e9eb4c8a49f\",\n    \"tid\": \"77318ee91f4ec7177bf5f12e43202380\",\n    \"uid\": \"e864f6fe0bf0ebf0ef35300fc3221924\",\n    \"_type\": \"_doc\",\n    \"_index\": \"qzhddr_browser_manager\",\n    \"_score\": null,\n    \"plugin_activate_cnt\": 1,\n    \"os_icon\": \"windows\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "50e0bef8-b6bf-48fd-a401-df6b6972015f",
+    "name": "APISec Management account browsermanager/{tid}/detail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

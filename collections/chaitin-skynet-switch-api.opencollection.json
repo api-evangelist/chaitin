@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account skynet/switch API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "skynet/switch",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "get enhance rule global status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/open/skynet/rule/switch"
+          },
+          "docs": "get enhance rule global status"
+        },
+        {
+          "info": {
+            "name": "update enhance rule global status",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/open/skynet/rule/switch"
+          },
+          "docs": "update enhance rule global status"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

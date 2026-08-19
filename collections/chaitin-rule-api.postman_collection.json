@@ -1,0 +1,430 @@
+{
+  "item": [
+    {
+      "id": "54734c43-5ffd-4933-a479-8353d02966a3",
+      "name": "rule",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ed3d491f-86bf-480c-91fa-06ae43cab48d",
+          "name": "list customized rule",
+          "request": {
+            "name": "list customized rule",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "policy"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "action",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "page",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "page_size",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "63fdcc8c-6892-4035-a60e-a1fe710cd028",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "policy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "action",
+                      "value": ""
+                    },
+                    {
+                      "key": "page",
+                      "value": ""
+                    },
+                    {
+                      "key": "page_size",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "958b4256-0b50-4c82-9f84-393a92238ce2",
+          "name": "create customized rule",
+          "request": {
+            "name": "create customized rule",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "policy"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "217780ad-c700-4e51-989e-fd92f4e16141",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "policy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f9af55ca-109a-4ee9-926b-a07561457ad5",
+          "name": "update customized rule",
+          "request": {
+            "name": "update customized rule",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "policy"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6f29b25b-a7e7-43ad-a54f-246254dcd60e",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "policy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2d44eda4-f24f-43a6-bf01-301fd7356ce7",
+          "name": "delete customized rule",
+          "request": {
+            "name": "delete customized rule",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "policy"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aa4d828d-4c03-44ce-9453-e939a6ae8864",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "policy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "02a1264b-5041-4885-81e1-c3dcdf53e285",
+          "name": "get customized rule detail",
+          "request": {
+            "name": "get customized rule detail",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "policy",
+                "detail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "id",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "251b728b-3126-418f-8315-48194d2ba0fe",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "policy",
+                    "detail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "47378398-09f3-4b13-907e-f3687f8b2fc2",
+          "name": "enable/disable customized rule",
+          "request": {
+            "name": "enable/disable customized rule",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "policy",
+                "switch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "97708cdc-346d-45c1-b6d1-89fb41c6ebd4",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "policy",
+                    "switch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "80f9b5c6-76ac-45e8-93e1-65f955a150e9",
+    "name": "APISec Management account rule API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

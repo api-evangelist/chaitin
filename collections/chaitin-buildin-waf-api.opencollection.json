@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account buildin_waf API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "buildin_waf",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST /api/BuildinWafConfig",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/BuildinWafConfig",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/BuildinWafConfig"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

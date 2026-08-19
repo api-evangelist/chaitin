@@ -1,0 +1,108 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account rule API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "rule",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "list customized rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/open/policy",
+            "params": [
+              {
+                "name": "action",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "list customized rule"
+        },
+        {
+          "info": {
+            "name": "create customized rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/open/policy"
+          },
+          "docs": "create customized rule"
+        },
+        {
+          "info": {
+            "name": "update customized rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/open/policy"
+          },
+          "docs": "update customized rule"
+        },
+        {
+          "info": {
+            "name": "delete customized rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/open/policy"
+          },
+          "docs": "delete customized rule"
+        },
+        {
+          "info": {
+            "name": "get customized rule detail",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/open/policy/detail",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "get customized rule detail"
+        },
+        {
+          "info": {
+            "name": "enable/disable customized rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/open/policy/switch"
+          },
+          "docs": "enable/disable customized rule"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

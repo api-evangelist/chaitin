@@ -1,0 +1,316 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account risk API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "risk",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "PUT /api/EnableDisableRiskStrategyAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/EnableDisableRiskStrategyAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/EnableDisableRiskStrategyAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/EventWhiteListAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/EventWhiteListAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/EventWhiteListAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/EventWhiteListAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/EventWhiteListAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/EventWhiteListAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/EventWhiteListAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/EventWhiteListAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/EventWhiteListAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/RiskEventAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RiskEventAPI",
+            "params": [
+              {
+                "name": "event_aggr_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "strategy_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "strategy_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "strategy_version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/RiskEventAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/RiskEventGroupAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RiskEventGroupAPI",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "ID"
+              }
+            ]
+          },
+          "docs": "GET /api/RiskEventGroupAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/RiskEventGroupAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/RiskEventGroupAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/RiskEventGroupAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/RiskEventGroupAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/RiskEventGroupAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/RiskEventGroupAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/RiskEventGroupStatistics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RiskEventGroupStatistics"
+          },
+          "docs": "GET /api/RiskEventGroupStatistics"
+        },
+        {
+          "info": {
+            "name": "GET /api/RiskEventStatistics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RiskEventStatistics",
+            "params": [
+              {
+                "name": "group_aggr_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/RiskEventStatistics"
+        },
+        {
+          "info": {
+            "name": "GET /api/RiskFunctionStatusAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RiskFunctionStatusAPI"
+          },
+          "docs": "GET /api/RiskFunctionStatusAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/RiskModelConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RiskModelConfigAPI"
+          },
+          "docs": "GET /api/RiskModelConfigAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/RiskModelConfigAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/RiskModelConfigAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/RiskModelConfigAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/RiskStrategyAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/RiskStrategyAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/RiskStrategyAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/RiskStrategyAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/RiskStrategyAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/RiskStrategyAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/RiskStrategyAuxiliaryInfoAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RiskStrategyAuxiliaryInfoAPI",
+            "params": [
+              {
+                "name": "asset_uuids",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "effective_scope",
+                "value": "",
+                "type": "query",
+                "description": "生效范围"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query",
+                "description": "风险类型"
+              }
+            ]
+          },
+          "docs": "GET /api/RiskStrategyAuxiliaryInfoAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/WeakerCipherAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/WeakerCipherAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/WeakerCipherAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/WeakerCipherAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/WeakerCipherAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/WeakerCipherAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

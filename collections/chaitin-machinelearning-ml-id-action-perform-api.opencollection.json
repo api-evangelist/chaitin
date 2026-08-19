@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account machinelearning/{ml_id}/action/perform API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "machinelearning/{ml_id}/action/perform",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "开始机器学习/文件指纹",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/machinelearning/:ml_id/action/perform",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "ml_id",
+                "value": "7995071d-602d-469d-a6ca-3cd4cadc5dc2",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "file",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "开始机器学习/文件指纹"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

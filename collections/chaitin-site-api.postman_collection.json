@@ -1,0 +1,310 @@
+{
+  "item": [
+    {
+      "id": "bfe8300d-c58e-47df-8632-64a1ea49f681",
+      "name": "site",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ee777d8a-1d04-4188-9658-2825954a0d8a",
+          "name": "list web service",
+          "request": {
+            "name": "list web service",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "site"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "group_id",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "site",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "sp_enabled",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "stat_enabled",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "282bb80e-10c3-47b6-97dd-4dcb0805b643",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "site"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "group_id",
+                      "value": ""
+                    },
+                    {
+                      "key": "site",
+                      "value": ""
+                    },
+                    {
+                      "key": "sp_enabled",
+                      "value": ""
+                    },
+                    {
+                      "key": "stat_enabled",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4c2ac54a-589d-4968-aa34-d28bcc06255c",
+          "name": "create web service",
+          "request": {
+            "name": "create web service",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "site"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ba707100-b122-4385-b1cf-dddf0f89c52f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "site"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7f3672b2-24fa-46d1-a7cf-46600c54d64c",
+          "name": "update web service",
+          "request": {
+            "name": "update web service",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "site"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d24fb66b-94f5-46c7-9209-6fa65b5842d1",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "site"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b5a377f9-f6b0-41dd-8480-b28e24dd2d8d",
+          "name": "delete web service",
+          "request": {
+            "name": "delete web service",
+            "description": {},
+            "url": {
+              "path": [
+                "open",
+                "site"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6735d21b-0143-4919-baf9-2a0ea59d5d55",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open",
+                    "site"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "71bd1eff-1636-4572-ae97-337468fcf36e",
+    "name": "APISec Management account site API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

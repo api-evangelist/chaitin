@@ -1,0 +1,283 @@
+{
+  "item": [
+    {
+      "id": "ccc1c91a-1d11-46fe-a2d3-8b5bd0a86186",
+      "name": "stat",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c5a4659d-3776-4d32-9ab2-168558c3d320",
+          "name": "get advanced access",
+          "request": {
+            "name": "get advanced access",
+            "description": {},
+            "url": {
+              "path": [
+                "stat",
+                "advance",
+                "access"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "begin_time",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "end_time",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "site_id",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9c875861-9308-4cf6-9437-d02080b71ddd",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stat",
+                    "advance",
+                    "access"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "begin_time",
+                      "value": ""
+                    },
+                    {
+                      "key": "end_time",
+                      "value": ""
+                    },
+                    {
+                      "key": "site_id",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f3360198-f1fa-477b-856f-bcaa6703bfb2",
+          "name": "get advanced intercept",
+          "request": {
+            "name": "get advanced intercept",
+            "description": {},
+            "url": {
+              "path": [
+                "stat",
+                "advance",
+                "attack"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "begin_time",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "end_time",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "site_id",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0efe9761-50cf-4b6e-aed6-9fd76b45416d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stat",
+                    "advance",
+                    "attack"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "begin_time",
+                      "value": ""
+                    },
+                    {
+                      "key": "end_time",
+                      "value": ""
+                    },
+                    {
+                      "key": "site_id",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1f05a14b-42cc-4dc4-832f-2b21cad061f4",
+          "name": "get qps",
+          "request": {
+            "name": "get qps",
+            "description": {},
+            "url": {
+              "path": [
+                "stat",
+                "qps"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "22e3b355-46df-40c0-871d-4441b716a394",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stat",
+                    "qps"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7abc9716-e26c-4570-b2e0-370d192c0690",
+    "name": "APISec Management account stat API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

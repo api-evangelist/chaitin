@@ -1,0 +1,73 @@
+{
+  "item": [
+    {
+      "id": "81db91c8-2431-433f-bdff-271c6a14fabf",
+      "name": "third_party",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "df16da07-2905-4ea7-af16-765d27eb49e4",
+          "name": "PUT /api/SiteFingerprintBindingAPI",
+          "request": {
+            "name": "PUT /api/SiteFingerprintBindingAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SiteFingerprintBindingAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"site_id\": \"<string>\",\n    \"bindings\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  {\n    \"site_id\": \"<string>\",\n    \"bindings\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b1bad61e-4f2f-4651-9bed-4124fecdda6e",
+    "name": "APISec Management account third_party API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

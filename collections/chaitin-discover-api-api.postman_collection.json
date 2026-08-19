@@ -1,0 +1,613 @@
+{
+  "item": [
+    {
+      "id": "502e204f-c785-4db9-ac86-e0360a76e59d",
+      "name": "discover_api",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "689f4f9d-4dce-47f6-a9a9-af25bc982252",
+          "name": "GET /api/ApplicationAPI",
+          "request": {
+            "name": "GET /api/ApplicationAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ApplicationAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9c89d6cb-7b6a-4389-a84f-89db7f0aff2a",
+          "name": "POST /api/ApplicationAPI",
+          "request": {
+            "name": "POST /api/ApplicationAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ApplicationAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"static_file_handle\": \"<boolean>\",\n  \"business_upload_handle\": \"<boolean>\",\n  \"business_upload_store\": \"<boolean>\",\n  \"business_download_handle\": \"<boolean>\",\n  \"business_download_store\": \"<boolean>\",\n  \"new_api_interval_hours\": \"<integer>\",\n  \"inactive_interval_hours\": \"<integer>\",\n  \"comment\": \"<string>\",\n  \"data_sampling_rate\": \"<integer>\",\n  \"move_in_rules\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"is_default\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b4b1056e-77f0-4351-b1de-80a97f3fa3d3",
+          "name": "PUT /api/ApplicationAPI",
+          "request": {
+            "name": "PUT /api/ApplicationAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ApplicationAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"business_download_handle\": \"<boolean>\",\n  \"business_download_store\": \"<boolean>\",\n  \"business_upload_handle\": \"<boolean>\",\n  \"business_upload_store\": \"<boolean>\",\n  \"inactive_interval_hours\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"new_api_interval_hours\": \"<integer>\",\n  \"static_file_handle\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"data_sampling_rate\": \"<integer>\",\n  \"move_in_rules\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"is_default\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0d0be626-ad89-4599-9e2a-38aa7337b3e1",
+          "name": "DELETE /api/ApplicationAPI",
+          "request": {
+            "name": "DELETE /api/ApplicationAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ApplicationAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d8881446-b348-4dd5-b31a-a2e73e90de42",
+          "name": "PUT /api/ApplicationPriorityAPI",
+          "request": {
+            "name": "PUT /api/ApplicationPriorityAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ApplicationPriorityAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"priority\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "081d2137-a64d-4569-af28-81c3b9033b90",
+          "name": "GET /api/DownloadCSVTemplate",
+          "request": {
+            "name": "GET /api/DownloadCSVTemplate",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "DownloadCSVTemplate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6d670cd8-0f5a-4a3d-af94-f4b2494d2af7",
+          "name": "GET /api/ImportApplication",
+          "request": {
+            "name": "GET /api/ImportApplication",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ImportApplication"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "45795252-2a1d-4b1e-be1f-d5fad95b30dd",
+          "name": "POST /api/ImportApplication",
+          "request": {
+            "name": "POST /api/ImportApplication",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ImportApplication"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "40bdb78f-8abd-49b7-9e4f-0f17f0225379",
+          "name": "PUT /api/ImportApplication",
+          "request": {
+            "name": "PUT /api/ImportApplication",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ImportApplication"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"business_download_handle\": \"<boolean>\",\n  \"business_download_store\": \"<boolean>\",\n  \"business_upload_handle\": \"<boolean>\",\n  \"business_upload_store\": \"<boolean>\",\n  \"inactive_interval_hours\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"new_api_interval_hours\": \"<integer>\",\n  \"static_file_handle\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"data_sampling_rate\": \"<integer>\",\n  \"move_in_rules\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"is_default\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7a9e9022-5c9e-4754-9c0f-d3f48ef356e1",
+          "name": "DELETE /api/ImportApplication",
+          "request": {
+            "name": "DELETE /api/ImportApplication",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ImportApplication"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8e8e19bf-00d8-490b-8f3b-19b0f5c40ec5",
+          "name": "POST /api/RelocateSiteAPI",
+          "request": {
+            "name": "POST /api/RelocateSiteAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RelocateSiteAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sources\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"target\": \"<integer>\",\n  \"include_no_app\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c1d01dd8-0688-4ac2-a96a-437ce9666b17",
+          "name": "PUT /api/ScannerFilterAPI",
+          "request": {
+            "name": "PUT /api/ScannerFilterAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ScannerFilterAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"<string>\",\n  \"filters\": \"<object>\",\n  \"id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6ae018de-a8df-4139-874c-879caae3d7b9",
+          "name": "POST /api/ScannerFilterTriggerUpdateAPI",
+          "request": {
+            "name": "POST /api/ScannerFilterTriggerUpdateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ScannerFilterTriggerUpdateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "87ecda1b-5e84-467d-80e6-a4f6824eb394",
+          "name": "GET /api/SimpleApplicationAPI",
+          "request": {
+            "name": "GET /api/SimpleApplicationAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SimpleApplicationAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "69351f2f-c3c3-401b-bb20-d4263e74f0c4",
+          "name": "GET /api/WebsiteEnableDisableAPI",
+          "request": {
+            "name": "GET /api/WebsiteEnableDisableAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "WebsiteEnableDisableAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "500cc762-827d-44eb-90d4-daa89450f6b5",
+          "name": "PUT /api/WebsiteEnableDisableAPI",
+          "request": {
+            "name": "PUT /api/WebsiteEnableDisableAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "WebsiteEnableDisableAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"is_enabled\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9d1c1223-fc89-4ea6-8a0b-9f9a174bb6c6",
+    "name": "APISec Management account discover_api API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

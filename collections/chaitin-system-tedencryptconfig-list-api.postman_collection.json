@@ -1,0 +1,195 @@
+{
+  "item": [
+    {
+      "id": "1fb20e01-ce5f-48b8-9e00-867c6d6755d6",
+      "name": "system/tedencryptconfig/list",
+      "description": {
+        "content": "系统配置/TED 加密配置/列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "387efab2-89dd-464b-a83a-7ba89d67e267",
+          "name": "列表",
+          "request": {
+            "name": "列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "system",
+                "tedencryptconfig",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "23cbf542-53e5-4a40-88db-83cbe688ebaa",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "system",
+                    "tedencryptconfig",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"total\": 2,\n    \"results\": [\n      {\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"create_time\": \"2024-03-11T02:33:31.522287Z\",\n        \"process_name\": \"进程名称\",\n        \"status\": \"deactivated\",\n        \"update_by\": {\n          \"uid\": \"92a20230-f247-453a-ab14-ca40c6c87e96\",\n          \"name\": \"何睿\",\n          \"username\": \"herui\",\n          \"email\": \"1234@123.com\"\n        },\n        \"family\": \"macOS\",\n        \"update_time\": \"2024-03-11T02:33:31.522430Z\",\n        \"name\": \"TED 加密配置\",\n        \"signatures\": [\n          \"xxx\"\n        ],\n        \"include_file_extensions\": [\n          \"x.txt\"\n        ],\n        \"expand\": {},\n        \"create_by_id\": \"92a20230-f247-453a-ab14-ca40c6c87e96\",\n        \"uid\": \"baa75aa8-344d-4ace-a4ee-fb76c30d670c\",\n        \"enhance_encrypt\": false,\n        \"exclude_file_extensions\": [\n          \"m.jpg\"\n        ]\n      },\n      {\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"create_time\": \"2024-03-11T02:23:55.962034Z\",\n        \"process_name\": \"process_name\",\n        \"status\": \"deactivated\",\n        \"update_by\": {\n          \"uid\": \"92a20230-f247-453a-ab14-ca40c6c87e96\",\n          \"name\": \"何睿\",\n          \"username\": \"herui\",\n          \"email\": \"1234@123.com\"\n        },\n        \"family\": \"macOS\",\n        \"update_time\": \"2024-03-11T02:23:55.962127Z\",\n        \"name\": \"加密配置\",\n        \"signatures\": [\n          \"xxx\"\n        ],\n        \"include_file_extensions\": [\n          \"x.txt\"\n        ],\n        \"expand\": {},\n        \"create_by_id\": \"92a20230-f247-453a-ab14-ca40c6c87e96\",\n        \"uid\": \"37852520-0516-4950-9dc4-80687e979e5d\",\n        \"enhance_encrypt\": false,\n        \"exclude_file_extensions\": [\n          \"m.jpg\"\n        ]\n      }\n    ],\n    \"page\": 1\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c9a64fa1-0340-41cb-8ac5-f317e707ab8c",
+    "name": "APISec Management account system/tedencryptconfig/list API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

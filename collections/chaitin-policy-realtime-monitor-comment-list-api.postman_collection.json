@@ -1,0 +1,224 @@
+{
+  "item": [
+    {
+      "id": "6a2f3281-64b2-44ef-bd78-cf060af0e487",
+      "name": "policy/realtime_monitor/comment/list",
+      "description": {
+        "content": "策略管理/实时监控/评论/列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b508a8a1-089a-4794-9df8-cf0af20deb99",
+          "name": "实时监控评论列表",
+          "request": {
+            "name": "实时监控评论列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "policy",
+                "realtime_monitor",
+                "comment",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"event_id\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "86d4f4be-0899-43c4-bcf7-737a413fe8a6",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "policy",
+                    "realtime_monitor",
+                    "comment",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"event_id\": [\n    \"3FDE9C7D-4029-4DE7-AAE6-76004106BBF1\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"正常\",\n  \"data\": {\n    \"total\": 2,\n    \"results\": [\n      {\n        \"event_id\": \"3FDE9C7D-4029-4DE7-AAE6-76004106BBF1\",\n        \"create_time\": \"2025-03-25T02:39:39.281890Z\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"comment\": \"这是一个评论测试22\",\n        \"update_time\": \"2025-03-25T02:39:39.281912Z\",\n        \"update_by_id\": \"fc1d36eb-98ce-486c-83e7-4f041e22d164\",\n        \"create_by_id\": \"fc1d36eb-98ce-486c-83e7-4f041e22d164\",\n        \"uid\": \"67030587-1e1f-438b-bd97-9a2f1011f8be\",\n        \"id\": 2,\n        \"expand\": {},\n        \"user\": {\n          \"name\": \"xuxingwangusername\",\n          \"username\": \"xuxingwang\",\n          \"dept_name\": \"\"\n        }\n      },\n      {\n        \"event_id\": \"3FDE9C7D-4029-4DE7-AAE6-76004106BBF1\",\n        \"create_time\": \"2025-03-25T02:38:29.439162Z\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"comment\": \"这是一个评论测试\",\n        \"update_time\": \"2025-03-25T02:38:29.439184Z\",\n        \"update_by_id\": \"fc1d36eb-98ce-486c-83e7-4f041e22d164\",\n        \"create_by_id\": \"fc1d36eb-98ce-486c-83e7-4f041e22d164\",\n        \"uid\": \"ee3fd528-025e-49dc-a9ac-348b4332c618\",\n        \"id\": 1,\n        \"expand\": {},\n        \"user\": {\n          \"name\": \"xuxingwangusername\",\n          \"username\": \"xuxingwang\",\n          \"dept_name\": \"\"\n        }\n      }\n    ],\n    \"page\": 1\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5e299dfa-6958-4a86-8992-3d6a64677951",
+    "name": "APISec Management account policy/realtime_monitor/comment/list API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

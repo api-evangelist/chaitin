@@ -1,0 +1,252 @@
+{
+  "item": [
+    {
+      "id": "54bfb57b-47b4-476d-9bf6-bb7508643dee",
+      "name": "filebehavior/list",
+      "description": {
+        "content": "文件行为/列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5d0500db-c6e6-41b5-966a-cc73bd29a079",
+          "name": "数据行为列表",
+          "request": {
+            "name": "数据行为列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "filebehavior",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"time_range\": {\n    \"begin\": \"<string>\",\n    \"end\": \"<string>\"\n  },\n  \"use_default_query\": \"<boolean>\",\n  \"search\": \"<string>\",\n  \"queries\": [\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8288eed3-31f8-4f5b-b70f-eedd80daa1c9",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "filebehavior",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "search",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"time_range\": {\n    \"begin\": \"2023-11-29 00:00:00\",\n    \"end\": \"2023-11-29 01:00:00\"\n  },\n  \"use_default_query\": false,\n  \"search\": \"\",\n  \"queries\": [\n    {\n      \"field\": \"app\",\n      \"operator\": \"is\",\n      \"value\": \"smb\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"index\": [\n      \"qzhddr_behaviors_file\"\n    ],\n    \"page\": 1,\n    \"limit\": 10,\n    \"search_total\": 10000,\n    \"total\": 11013,\n    \"search_after\": [\n      1701684149000\n    ],\n    \"results\": [\n      {\n        \"device_id\": \"da9ea823-3b0b-4d9f-a745-2aad58e0af89\",\n        \"os_name\": \"macOS\",\n        \"app_version\": \"1.0\",\n        \"p_user\": \"soumao\",\n        \"src_files\": [\n          {\n            \"filepath\": \"/Users/soumao/Library/Application Support/LarkShell/sdk_storage/log/netlog/apollo_net_main_20231204.log\",\n            \"is_hidden\": false,\n            \"file_updated_time\": 1701684373529,\n            \"filename\": \"apollo_net_main_20231204.log\",\n            \"file_created_time\": 1701675509086,\n            \"sha256_hash\": null,\n            \"is_password_protected\": false,\n            \"meta_original\": [\n              {\n                \"app\": \"google\",\n                \"urls\": [\n                  \"google.com\",\n                  \"google1.com\"\n                ],\n                \"hosts\": [\n                  \"google.com\",\n                  \"google1.com\"\n                ]\n              },\n              {\n                \"app\": \"baidu\",\n                \"urls\": [\n                  \"https://baidu.com?xxxxxx=2\",\n                  \"https://baidu.com?xxxxxx=2\"\n                ],\n                \"hosts\": [\n                  \"baidu.com\"\n                ]\n              }\n            ],\n            \"metasource\": [\n              {\n                \"original\": {\n                  \"app\": [\n                    \"Feishu\"\n                  ],\n                  \"urls\": []\n                },\n                \"category\": \"app\",\n                \"source\": [\n                  {\n                    \"name\": \"appfeishu\",\n                    \"display_name\": \"app_feishu\"\n                  }\n                ],\n                \"version\": 58\n              }\n            ],\n            \"md5_hash\": \"624e88dcf5381240f12083057efaafd0\",\n            \"file_type\": \"data\",\n            \"filesize\": 2626757,\n            \"is_compressed\": false,\n            \"file_suffix\": \"log\",\n            \"file_created_timestamp\": \"2023-12-04T07:38:29Z\",\n            \"file_updated_timestamp\": \"2023-12-04T10:06:13Z\"\n          }\n        ],\n        \"app_account\": \"\",\n        \"agent_version\": \"3.1.812\",\n        \"p_path\": \"/Applications/Lark.app/Contents/MacOS/Feishu\",\n        \"ip_address\": \"192.168.96.241\",\n        \"is_sign_valid\": true,\n        \"bundle_id\": \"com.electron.lark\",\n        \"operation\": \"edit\",\n        \"p_sha256\": \"202c660d0ba9bfb4bd00dd99fcef6b3bc338c335c35de7ab8248cf68bb56bcc1\",\n        \"status\": \"created\",\n        \"p_md5\": \"694ed5c857811b2cd3a8299382099bef\",\n        \"time\": 1701684373000,\n        \"app\": \"Feishu\",\n        \"p_id\": \"1105\",\n        \"pp_id\": \"1\",\n        \"device_code\": \"PC-000009\",\n        \"event_id\": \"8634AD0A-F869-4DF1-9104-8F715AFB6910\",\n        \"dst_files\": [\n          {\n            \"filepath\": \"/Users/soumao/Library/Application Support/LarkShell/sdk_storage/log/netlog/apollo_net_main_20231204.log\",\n            \"is_hidden\": false,\n            \"file_updated_time\": 1701684373529,\n            \"filename\": \"apollo_net_main_20231204.log\",\n            \"file_created_time\": 1701675509086,\n            \"sha256_hash\": null,\n            \"is_password_protected\": false,\n            \"meta_original\": [\n              {\n                \"app\": \"google\",\n                \"urls\": [\n                  \"google.com\",\n                  \"google1.com\"\n                ],\n                \"hosts\": [\n                  \"google.com\",\n                  \"google1.com\"\n                ]\n              },\n              {\n                \"app\": \"baidu\",\n                \"urls\": [\n                  \"https://baidu.com?xxxxxx=2\",\n                  \"https://baidu.com?xxxxxx=2\"\n                ],\n                \"hosts\": [\n                  \"baidu.com\"\n                ]\n              }\n            ],\n            \"metasource\": [\n              {\n                \"original\": {\n                  \"app\": [\n                    \"Feishu\"\n                  ],\n                  \"urls\": []\n                },\n                \"category\": \"app\",\n                \"source\": [\n                  {\n                    \"name\": \"appfeishu\",\n                    \"display_name\": \"app_feishu\"\n                  }\n                ],\n                \"version\": 58\n              }\n            ],\n            \"md5_hash\": \"ba8d59b71b2fcc682df5cf7da71554cd\",\n            \"file_type\": \"data\",\n            \"filesize\": 2626757,\n            \"is_compressed\": false,\n            \"file_suffix\": \"log\",\n            \"file_created_timestamp\": \"2023-12-04T07:38:29Z\",\n            \"file_updated_timestamp\": \"2023-12-04T10:06:13Z\"\n          }\n        ],\n        \"p_sign\": \"com.electron.lark\",\n        \"pp_name\": \"launchd\",\n        \"p_cmdline\": null,\n        \"os_friendly_name\": \"macOS 14.1.1\",\n        \"console_user\": \"soumao\",\n        \"p_name\": \"Feishu\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"app_name\": \"Feishu\",\n        \"@timestamp\": 1701684373000,\n        \"timestamp\": \"2023-12-04T10:06:13Z\",\n        \"created_timestamp\": \"2023-12-04T10:07:34Z\",\n        \"staff_id\": \"6d2f2c9a-7f13-4d00-b597-ebfc4bc4dbe9\",\n        \"staff_name\": \"hyj\",\n        \"staff_email\": \"\",\n        \"staff_code\": \"7e2360d8e2d5dff3\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [\n          \"6cbf127d-20f5-4322-93b5-e4a515ae356a\"\n        ],\n        \"dept_names\": [\n          \"test\"\n        ],\n        \"dept_paths\": [\n          \"default/test\"\n        ],\n        \"uid\": \"12BMNIwBT5wU9gY2LQJP\",\n        \"_type\": \"_doc\",\n        \"_index\": \".ds-qzhddr_behaviors_file_s-2023.11.15-000003\",\n        \"operation_name\": \"编辑\"\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "73e89c92-2ab1-49d5-8d09-cbe6b7c2dd9b",
+    "name": "APISec Management account filebehavior/list API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

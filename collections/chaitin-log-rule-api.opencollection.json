@@ -1,0 +1,110 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account log/rule API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "log/rule",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "get black or white rule attack log detail",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/open/record/rule/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "log id"
+              }
+            ]
+          },
+          "docs": "get black or white rule attack log detail"
+        },
+        {
+          "info": {
+            "name": "get black or white rule attack logs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/open/records/rule",
+            "params": [
+              {
+                "name": "action",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "attack_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "event_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "host",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ip",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ja4_fingerprint",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "port",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "url",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "get black or white rule attack logs"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

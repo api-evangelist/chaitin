@@ -1,0 +1,866 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account dashboard API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "dashboard",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /api/AssetDashboardDetectEventsAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/AssetDashboardDetectEventsAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/AssetDashboardDetectEventsAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/AssetDashboardInterfaceTagAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/AssetDashboardInterfaceTagAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/AssetDashboardInterfaceTagAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/AssetDashboardLowFrequencyAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/AssetDashboardLowFrequencyAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/AssetDashboardLowFrequencyAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/AssetDashboardReqFailedAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/AssetDashboardReqFailedAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/AssetDashboardReqFailedAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/AssetDashboardRequestTrendAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/AssetDashboardRequestTrendAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/AssetDashboardRequestTrendAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/AssetDashboardRiskVulnerableAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/AssetDashboardRiskVulnerableAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/AssetDashboardRiskVulnerableAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/AssetDashboardSameUrlAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/AssetDashboardSameUrlAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/AssetDashboardSameUrlAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/AssetDashboardSensitiveDataAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/AssetDashboardSensitiveDataAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/AssetDashboardSensitiveDataAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/AssetDashboardSiteInterfaceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/AssetDashboardSiteInterfaceAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/AssetDashboardSiteInterfaceAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/AssetDashboardTrafficCodeAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/AssetDashboardTrafficCodeAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/AssetDashboardTrafficCodeAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/AssetDashboardTrafficMethodAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/AssetDashboardTrafficMethodAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/AssetDashboardTrafficMethodAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/HomeDashBoardOwaspAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/HomeDashBoardOwaspAPI"
+          },
+          "docs": "GET /api/HomeDashBoardOwaspAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/HomeDashBoardQPSAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/HomeDashBoardQPSAPI"
+          },
+          "docs": "GET /api/HomeDashBoardQPSAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/HomeDashBoardQPSTrendAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/HomeDashBoardQPSTrendAPI"
+          },
+          "docs": "GET /api/HomeDashBoardQPSTrendAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/HomeDashBoardRequestHistory",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/HomeDashBoardRequestHistory"
+          },
+          "docs": "GET /api/HomeDashBoardRequestHistory"
+        },
+        {
+          "info": {
+            "name": "GET /api/HomeDashBoardRequestTrendAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/HomeDashBoardRequestTrendAPI"
+          },
+          "docs": "GET /api/HomeDashBoardRequestTrendAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/HomeDashBoardSensitiveData",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/HomeDashBoardSensitiveData"
+          },
+          "docs": "GET /api/HomeDashBoardSensitiveData"
+        },
+        {
+          "info": {
+            "name": "GET /api/HomeDashBoardSiteInterfaceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/HomeDashBoardSiteInterfaceAPI"
+          },
+          "docs": "GET /api/HomeDashBoardSiteInterfaceAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/HomeDashBoardTotalRequestAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/HomeDashBoardTotalRequestAPI"
+          },
+          "docs": "GET /api/HomeDashBoardTotalRequestAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/RiskEventDashBoardHistoryInfoAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RiskEventDashBoardHistoryInfoAPI",
+            "params": [
+              {
+                "name": "api",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "detection_module",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "event_description",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req_start_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "risk_model",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "risk_strategy",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/RiskEventDashBoardHistoryInfoAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/RiskEventDashBoardInterfaceInfoAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RiskEventDashBoardInterfaceInfoAPI",
+            "params": [
+              {
+                "name": "api",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "detection_module",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "event_description",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req_start_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "risk_model",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "risk_strategy",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/RiskEventDashBoardInterfaceInfoAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/RiskEventDashBoardRiskNumAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RiskEventDashBoardRiskNumAPI",
+            "params": [
+              {
+                "name": "api",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "detection_module",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "event_description",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req_start_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "risk_model",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "risk_strategy",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/RiskEventDashBoardRiskNumAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/RiskEventDashBoardSiteInfoAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/RiskEventDashBoardSiteInfoAPI",
+            "params": [
+              {
+                "name": "api",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "app_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "detection_module",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "event_description",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "req_start_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "risk_model",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "risk_strategy",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/RiskEventDashBoardSiteInfoAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/SensitiveDataTypeAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SensitiveDataTypeAPI",
+            "params": [
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "desensitization",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "stage_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "tag_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/SensitiveDataTypeAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/SensitiveInterfaceInfoAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SensitiveInterfaceInfoAPI",
+            "params": [
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "desensitization",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "stage_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "tag_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/SensitiveInterfaceInfoAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/SensitiveNewInterfaceAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SensitiveNewInterfaceAPI",
+            "params": [
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "desensitization",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "stage_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "tag_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/SensitiveNewInterfaceAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/SensitiveRequestInfoAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SensitiveRequestInfoAPI",
+            "params": [
+              {
+                "name": "datetime",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "desensitization",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "stage_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "tag_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/SensitiveRequestInfoAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/StrategyAndEventAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/StrategyAndEventAPI"
+          },
+          "docs": "GET /api/StrategyAndEventAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/StrategyOwaspInfoAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/StrategyOwaspInfoAPI"
+          },
+          "docs": "GET /api/StrategyOwaspInfoAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/StrategyRunningStateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/StrategyRunningStateAPI"
+          },
+          "docs": "GET /api/StrategyRunningStateAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,83 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account dataasset/source/{source}/md5/{md5}/dept/list API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "dataasset/source/{source}/md5/{md5}/dept/list",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "部门列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/dataasset/source/:source/md5/:md5/dept/list",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "source",
+                "value": "policy_landing_log",
+                "type": "path"
+              },
+              {
+                "name": "md5",
+                "value": "258a370dcafa717196366c8d2f9938ac",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "部门列表"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

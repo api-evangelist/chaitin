@@ -1,0 +1,343 @@
+{
+  "item": [
+    {
+      "id": "efdb01ba-b712-4639-bdd3-4f03034f93bc",
+      "name": "plugin",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e32d3172-8ff2-4ea2-86d7-39714b70b1d1",
+          "name": "PUT /api/EnableDisablePreprocessPluginAPI",
+          "request": {
+            "name": "PUT /api/EnableDisablePreprocessPluginAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "EnableDisablePreprocessPluginAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "504d8d27-4175-415f-a9b0-42145fd7047b",
+          "name": "GET /api/PluginPredictResultAPI",
+          "request": {
+            "name": "GET /api/PluginPredictResultAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PluginPredictResultAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "plugin_id",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c64976ea-ccf5-4d3b-9460-b35cf448707b",
+          "name": "POST /api/PluginPredictResultAPI",
+          "request": {
+            "name": "POST /api/PluginPredictResultAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PluginPredictResultAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a1bdd9ec-6452-4501-a8a0-20c346ec9c44",
+          "name": "GET /api/PreprocessPluginAPI",
+          "request": {
+            "name": "GET /api/PreprocessPluginAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PreprocessPluginAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "name__like",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "610b71f4-d2c8-4457-8af1-c8511a6db360",
+          "name": "POST /api/PreprocessPluginAPI",
+          "request": {
+            "name": "POST /api/PreprocessPluginAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PreprocessPluginAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"code\": \"<string>\",\n  \"status\": \"<string>\",\n  \"plugin_type\": \"<string>\",\n  \"comment\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7a86cc98-2057-4f08-8fe1-3caa50795c87",
+          "name": "PUT /api/PreprocessPluginAPI",
+          "request": {
+            "name": "PUT /api/PreprocessPluginAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PreprocessPluginAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code\": \"<string>\",\n  \"name\": \"<string>\",\n  \"plugin_type\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comment\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fb00ed2a-67b3-4b92-9e2b-aeba68c6128a",
+          "name": "DELETE /api/PreprocessPluginAPI",
+          "request": {
+            "name": "DELETE /api/PreprocessPluginAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PreprocessPluginAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "73338ae6-4f58-446d-9de4-7b56d05b0a88",
+          "name": "POST /api/PreprocessPluginStateUpdateAPI",
+          "request": {
+            "name": "POST /api/PreprocessPluginStateUpdateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PreprocessPluginStateUpdateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"timestamp\": \"<number>\",\n    \"id\": \"<string>\",\n    \"state\": \"<string>\"\n  },\n  {\n    \"timestamp\": \"<number>\",\n    \"id\": \"<string>\",\n    \"state\": \"<string>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5a69032d-a99a-4ae4-940e-84b85dfd2993",
+    "name": "APISec Management account plugin API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

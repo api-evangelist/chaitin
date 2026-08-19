@@ -1,0 +1,144 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account plugin API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "plugin",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "PUT /api/EnableDisablePreprocessPluginAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/EnableDisablePreprocessPluginAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/EnableDisablePreprocessPluginAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/PluginPredictResultAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/PluginPredictResultAPI",
+            "params": [
+              {
+                "name": "plugin_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/PluginPredictResultAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/PluginPredictResultAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/PluginPredictResultAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/PluginPredictResultAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/PreprocessPluginAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/PreprocessPluginAPI",
+            "params": [
+              {
+                "name": "name__like",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/PreprocessPluginAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/PreprocessPluginAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/PreprocessPluginAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/PreprocessPluginAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/PreprocessPluginAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/PreprocessPluginAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/PreprocessPluginAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/PreprocessPluginAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/PreprocessPluginAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/PreprocessPluginAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/PreprocessPluginStateUpdateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/PreprocessPluginStateUpdateAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/PreprocessPluginStateUpdateAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

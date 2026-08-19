@@ -1,0 +1,230 @@
+{
+  "item": [
+    {
+      "id": "3b2fb806-0b26-426f-9007-b7188fd2dd47",
+      "name": "stat/trend",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f6d5226c-4f6e-4b37-beb6-b01f4ecadc2b",
+          "name": "get advanced access trend",
+          "request": {
+            "name": "get advanced access trend",
+            "description": {},
+            "url": {
+              "path": [
+                "stat",
+                "advance",
+                "trend",
+                "access"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "begin_time",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "end_time",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "site_id",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c58a2883-82cb-4e5e-ab35-8608b144dc68",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stat",
+                    "advance",
+                    "trend",
+                    "access"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "begin_time",
+                      "value": ""
+                    },
+                    {
+                      "key": "end_time",
+                      "value": ""
+                    },
+                    {
+                      "key": "site_id",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "76e6513d-008b-48c2-a021-e9211026e416",
+          "name": "get advanced intercept trend",
+          "request": {
+            "name": "get advanced intercept trend",
+            "description": {},
+            "url": {
+              "path": [
+                "stat",
+                "advance",
+                "trend",
+                "intercept"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "begin_time",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "end_time",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "site_id",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ec3c8c71-27f9-44c5-acab-cea2629b777c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stat",
+                    "advance",
+                    "trend",
+                    "intercept"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "begin_time",
+                      "value": ""
+                    },
+                    {
+                      "key": "end_time",
+                      "value": ""
+                    },
+                    {
+                      "key": "site_id",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "94391534-ee2c-48aa-b45c-7b24bdd13763",
+    "name": "APISec Management account stat/trend API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

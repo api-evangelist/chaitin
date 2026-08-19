@@ -1,0 +1,213 @@
+{
+  "item": [
+    {
+      "id": "e2736c9f-12ff-4b16-81ac-01add524d6c6",
+      "name": "policy/ted/{uid}/detail",
+      "description": {
+        "content": "策略管理/TED/uid 参数/详情",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8ccda9bd-e68e-4912-8a3c-08e88265acf6",
+          "name": "详情",
+          "request": {
+            "name": "详情",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "policy",
+                "ted",
+                ":uid",
+                "detail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "uid",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a8315a16-c66e-4763-aedd-f104d905c9d4",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "policy",
+                    "ted",
+                    ":uid",
+                    "detail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "uid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 5426,\n  \"msg\": \"string\",\n  \"data\": {\n    \"mode\": \"string\",\n    \"scope\": \"string\",\n    \"period_options\": {},\n    \"description\": \"string\",\n    \"status\": \"string\",\n    \"priority\": 3833,\n    \"expression\": null,\n    \"name\": \"string\",\n    \"encryption_options\": [\n      {\n        \"open\": {\n          \"action\": \"string\",\n          \"action_template_id\": \"string\",\n          \"action_template_name\": \"string\"\n        },\n        \"level\": 9244,\n        \"action\": {\n          \"copy\": true,\n          \"drag\": false,\n          \"save_as\": false\n        },\n        \"backup\": {\n          \"local_backup\": false,\n          \"remote_backup\": true,\n          \"period_options\": {\n            \"day\": null,\n            \"hour\": 5525,\n            \"minute\": 525,\n            \"weekday\": 5912\n          },\n          \"period_category\": \"string\",\n          \"incremental_backup\": false,\n          \"local_warning_storage\": 8007\n        },\n        \"decryption\": {\n          \"action\": \"string\",\n          \"action_template_id\": \"string\",\n          \"action_template_name\": \"string\"\n        }\n      },\n      {\n        \"open\": {\n          \"action\": \"string\",\n          \"action_template_id\": \"string\",\n          \"action_template_name\": \"string\"\n        },\n        \"level\": 1021,\n        \"action\": {\n          \"copy\": true,\n          \"drag\": false,\n          \"save_as\": false\n        },\n        \"backup\": {\n          \"local_backup\": true,\n          \"remote_backup\": true,\n          \"period_options\": {\n            \"day\": null,\n            \"hour\": 2657,\n            \"minute\": 7480,\n            \"weekday\": 7868\n          },\n          \"period_category\": \"string\",\n          \"incremental_backup\": true,\n          \"local_warning_storage\": 4977\n        },\n        \"decryption\": {\n          \"action\": \"string\",\n          \"action_template_id\": \"string\",\n          \"action_template_name\": \"string\"\n        }\n      }\n    ],\n    \"company_id\": \"string\",\n    \"category\": \"string\",\n    \"id\": 8904,\n    \"expand\": {},\n    \"create_by\": {\n      \"uid\": \"string\",\n      \"name\": \"string\",\n      \"username\": \"string\",\n      \"email\": \"string\"\n    },\n    \"create_time\": \"string\",\n    \"update_time\": \"string\",\n    \"source\": \"string\",\n    \"expression_relation\": null,\n    \"action_option\": {\n      \"upgrade\": {\n        \"action\": \"string\",\n        \"action_template_id\": \"string\",\n        \"action_template_name\": \"string\"\n      },\n      \"downgrade\": {\n        \"action\": \"string\",\n        \"action_template_id\": \"string\",\n        \"action_template_name\": \"string\"\n      }\n    },\n    \"expression_fields\": [\n      \"string\",\n      \"string\"\n    ],\n    \"period_category\": \"string\",\n    \"run_model\": [\n      \"string\",\n      \"string\"\n    ],\n    \"uid\": \"string\",\n    \"code\": \"string\",\n    \"update_by\": {\n      \"uid\": \"string\",\n      \"name\": \"string\",\n      \"username\": \"string\",\n      \"email\": \"string\"\n    },\n    \"binding_config\": {\n      \"include\": {\n        \"devices\": [\n          {\n            \"uid\": \"string\",\n            \"name\": \"string\",\n            \"code\": \"string\"\n          },\n          {\n            \"uid\": \"string\",\n            \"name\": \"string\",\n            \"code\": \"string\"\n          }\n        ],\n        \"device_tags\": [\n          \"string\",\n          \"string\"\n        ],\n        \"staffs\": [\n          {\n            \"uid\": \"string\",\n            \"name\": \"string\"\n          },\n          {\n            \"uid\": \"string\",\n            \"name\": \"string\"\n          }\n        ],\n        \"staff_tags\": [\n          {\n            \"uid\": \"string\",\n            \"name\": \"string\"\n          },\n          {\n            \"uid\": \"string\",\n            \"name\": \"string\"\n          }\n        ],\n        \"depts\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"exclude\": {\n        \"depts\": [\n          \"string\",\n          \"string\"\n        ],\n        \"staffs\": [\n          \"string\",\n          \"string\"\n        ],\n        \"staff_tags\": [\n          \"string\",\n          \"string\"\n        ],\n        \"devices\": [\n          \"string\",\n          \"string\"\n        ],\n        \"device_tags\": [\n          \"string\",\n          \"string\"\n        ]\n      }\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2bd29f19-9903-4130-ac68-b15f7850218b",
+    "name": "APISec Management account policy/ted/{uid}/detail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account Count API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Count",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /count",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/count",
+            "params": [
+              {
+                "name": "name",
+                "value": "扫描器名称",
+                "type": "query",
+                "description": "扫描器名称"
+              },
+              {
+                "name": "version",
+                "value": "扫描器版本号",
+                "type": "query",
+                "description": "扫描器版本号"
+              },
+              {
+                "name": "host_name",
+                "value": "主机名称",
+                "type": "query",
+                "description": "主机名称"
+              },
+              {
+                "name": "host_ip",
+                "value": "1.1.1",
+                "type": "query",
+                "description": "主机IP地址"
+              },
+              {
+                "name": "type",
+                "value": "[2]",
+                "type": "query",
+                "description": "探针类型列表 2为本地探针"
+              },
+              {
+                "name": "group_id",
+                "value": "[1,2]",
+                "type": "query",
+                "description": "扫描组ID列表"
+              },
+              {
+                "name": "state",
+                "value": "1",
+                "type": "query",
+                "description": "扫描器状态列表 1 注册 2 在线 3 离线 4 异常"
+              },
+              {
+                "name": "source_type",
+                "value": "",
+                "type": "query",
+                "description": "1本地 2旁路 3集群节点 4集群旁路"
+              },
+              {
+                "name": "cluster_id",
+                "value": "",
+                "type": "query",
+                "description": "集群ID列表"
+              },
+              {
+                "name": "id",
+                "value": "[1,2]",
+                "type": "query",
+                "description": "扫描探针ID"
+              },
+              {
+                "name": "offset",
+                "value": "1",
+                "type": "query",
+                "description": "数据启始位置"
+              },
+              {
+                "name": "page_size",
+                "value": "1",
+                "type": "query",
+                "description": "数据页大小"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /count",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/count",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "PUT /count",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/count",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "PATCH /count",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "{{baseUrl}}/count",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /count",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/count",
+            "params": [
+              {
+                "name": "name",
+                "value": "扫描器名称",
+                "type": "query",
+                "description": "扫描器名称"
+              },
+              {
+                "name": "version",
+                "value": "扫描器版本号",
+                "type": "query",
+                "description": "扫描器版本号"
+              },
+              {
+                "name": "host_name",
+                "value": "主机名称",
+                "type": "query",
+                "description": "主机名称"
+              },
+              {
+                "name": "host_ip",
+                "value": "1.1.1",
+                "type": "query",
+                "description": "主机IP地址"
+              },
+              {
+                "name": "type",
+                "value": "[2]",
+                "type": "query",
+                "description": "探针类型列表 2为本地探针"
+              },
+              {
+                "name": "group_id",
+                "value": "[1,2]",
+                "type": "query",
+                "description": "扫描组ID列表"
+              },
+              {
+                "name": "state",
+                "value": "1",
+                "type": "query",
+                "description": "扫描器状态列表 1 注册 2 在线 3 离线 4 异常"
+              },
+              {
+                "name": "source_type",
+                "value": "",
+                "type": "query",
+                "description": "1本地 2旁路 3集群节点 4集群旁路"
+              },
+              {
+                "name": "cluster_id",
+                "value": "",
+                "type": "query",
+                "description": "集群ID列表"
+              },
+              {
+                "name": "id",
+                "value": "[1,2]",
+                "type": "query",
+                "description": "扫描探针ID"
+              },
+              {
+                "name": "offset",
+                "value": "1",
+                "type": "query",
+                "description": "数据启始位置"
+              },
+              {
+                "name": "page_size",
+                "value": "1",
+                "type": "query",
+                "description": "数据页大小"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "HEAD /count",
+            "type": "http"
+          },
+          "http": {
+            "method": "HEAD",
+            "url": "{{baseUrl}}/count",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "OPTIONS /count",
+            "type": "http"
+          },
+          "http": {
+            "method": "OPTIONS",
+            "url": "{{baseUrl}}/count",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "TRACE /count",
+            "type": "http"
+          },
+          "http": {
+            "method": "TRACE",
+            "url": "{{baseUrl}}/count",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

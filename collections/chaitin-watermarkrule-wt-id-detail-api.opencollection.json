@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account watermarkrule/{wt_id}/detail API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "watermarkrule/{wt_id}/detail",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "水印策略详情",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/watermarkrule/:wt_id/detail",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "wt_id",
+                "value": "594492e0-e46b-4617-a51e-86b548e234f0",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "水印策略详情"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

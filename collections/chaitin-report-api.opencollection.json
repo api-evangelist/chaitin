@@ -1,0 +1,118 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account report API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "report",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /api/ReportTaskPreview",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/ReportTaskPreview",
+            "params": [
+              {
+                "name": "app_ids",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "custom",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "desensitize_enabled",
+                "value": "",
+                "type": "query",
+                "description": "脱敏开关"
+              },
+              {
+                "name": "end_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_re",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_time",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/ReportTaskPreview"
+        },
+        {
+          "info": {
+            "name": "GET /api/ReportTemplateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/ReportTemplateAPI"
+          },
+          "docs": "GET /api/ReportTemplateAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/ReportTemplateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/ReportTemplateAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/ReportTemplateAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/ReportTemplateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/ReportTemplateAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/ReportTemplateAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/UploadReportTemplateAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/UploadReportTemplateAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/UploadReportTemplateAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

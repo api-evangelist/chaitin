@@ -1,0 +1,134 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account website API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "website",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /api/CertAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/CertAPI"
+          },
+          "docs": "GET /api/CertAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/CertAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/CertAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/CertAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/CertAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/CertAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/CertAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/EditSSLCertAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/EditSSLCertAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/EditSSLCertAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/UploadSSLCertAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/UploadSSLCertAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/UploadSSLCertAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/WebsiteAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/WebsiteAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/WebsiteAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/WebsiteAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/WebsiteAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/WebsiteAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/WebsiteAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/WebsiteAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/WebsiteAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

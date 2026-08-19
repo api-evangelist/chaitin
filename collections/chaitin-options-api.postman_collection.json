@@ -1,0 +1,58 @@
+{
+  "item": [
+    {
+      "id": "dae65310-5319-4308-a28e-4ce40b6dd09e",
+      "name": "options",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d5da5e32-0cf9-4f9d-9c05-1cc352ef52f7",
+          "name": "GET /api/ServerControlledConfigAPI",
+          "request": {
+            "name": "GET /api/ServerControlledConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ServerControlledConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "eeb8fa69-8dd0-446b-b78d-f493c66e6ce7",
+    "name": "APISec Management account options API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

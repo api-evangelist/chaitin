@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account policylog/landing/{log_id}/innerfileflow API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "policylog/landing/{log_id}/innerfileflow",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "单机流转图",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/policylog/landing/:log_id/innerfileflow",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "log_id",
+                "value": "PG-rAZQBZcl0n2phb4VM",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "单机流转图"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

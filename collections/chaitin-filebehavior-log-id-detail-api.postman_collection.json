@@ -1,0 +1,211 @@
+{
+  "item": [
+    {
+      "id": "1b5a8e6a-430c-490f-b336-725ef4cdc9c4",
+      "name": "filebehavior/{log_id}/detail",
+      "description": {
+        "content": "文件行为/log_id 参数/详情",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a23c087a-c707-4d8c-8069-10dfce94481c",
+          "name": "数据行为详情",
+          "request": {
+            "name": "数据行为详情",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "filebehavior",
+                ":log_id",
+                "detail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "log_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f60be320-c975-417e-8ec5-68f345494b26",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "filebehavior",
+                    ":log_id",
+                    "detail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "log_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"正常\",\n  \"data\": {\n    \"uid\": \"Ku_2nJEB4rYwLyMOKdyZ\",\n    \"pp_id\": \"1279\",\n    \"mac\": \"C8:89:F3:AB:A3:8E\",\n    \"app_account\": \"\",\n    \"p_user\": \"erevus\",\n    \"app\": \"IPNExtension\",\n    \"time\": 1724915258000,\n    \"p_sha256\": \"\",\n    \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n    \"p_md5\": \"-\",\n    \"p_path\": \"/Applications/Tailscale.app/Contents/PlugIns/IPNExtension.appex/Contents/MacOS/IPNExtension\",\n    \"pp_name\": \"IPNExtension\",\n    \"is_sign_valid\": true,\n    \"p_name\": \"IPNExtension\",\n    \"p_cmdline\": null,\n    \"operation\": \"edit\",\n    \"os_name\": \"macOS\",\n    \"event_id\": \"665C4FFA-B822-48B0-A433-62F4F776463C\",\n    \"p_id\": \"26327\",\n    \"device_code\": \"PC-000007\",\n    \"agent_version\": \"3.4.50\",\n    \"p_sign\": \"io.tailscale.ipn.macos.network-extension\",\n    \"src_files\": [\n      {\n        \"md5_hash\": \"-\",\n        \"file_suffix\": \"txt\",\n        \"file_loc_id\": \"16777232_86853112\",\n        \"meta_original\": [\n          {\n            \"process_name\": \"IPNExtension\",\n            \"urls\": []\n          }\n        ],\n        \"filesize\": 771,\n        \"file_updated_time\": 1724915257000,\n        \"is_compressed\": false,\n        \"is_hidden\": false,\n        \"is_password_protected\": false,\n        \"filename\": \"ipn.log..log2.txt\",\n        \"file_created_time\": 1703078137448,\n        \"filepath\": \"/Users/erevus/Library/Group Containers/W5364U7YZB.group.io.tailscale.ipn.macos/ipn.log..log2.txt\",\n        \"metasource\": [],\n        \"file_type\": \"-\",\n        \"file_created_timestamp\": \"2023-12-20T21:15:37+08:00\",\n        \"file_updated_timestamp\": \"2024-08-29T15:07:37+08:00\"\n      }\n    ],\n    \"hostname\": \"erevusdeMacBook-Pro.local\",\n    \"permission\": {\n      \"screen_record\": false,\n      \"disk\": true,\n      \"network\": false\n    },\n    \"app_version\": \"1.0\",\n    \"app_name\": \"IPNExtension\",\n    \"console_user\": \"erevus\",\n    \"os_friendly_name\": \"macOS 14.1.2\",\n    \"ip_address\": \"192.168.96.9\",\n    \"bundle_id\": \"io.tailscale.ipn.macos.network-extension\",\n    \"dst_files\": [\n      {\n        \"md5_hash\": \"-\",\n        \"file_suffix\": \"txt\",\n        \"file_loc_id\": \"16777232_86853112\",\n        \"meta_original\": [\n          {\n            \"process_name\": \"IPNExtension\",\n            \"urls\": []\n          }\n        ],\n        \"filesize\": 771,\n        \"file_updated_time\": 1724915257000,\n        \"is_compressed\": false,\n        \"is_hidden\": false,\n        \"is_password_protected\": false,\n        \"filename\": \"ipn.log..log2.txt\",\n        \"file_created_time\": 1703078137448,\n        \"filepath\": \"/Users/erevus/Library/Group Containers/W5364U7YZB.group.io.tailscale.ipn.macos/ipn.log..log2.txt\",\n        \"metasource\": [],\n        \"file_type\": \"-\",\n        \"file_created_timestamp\": \"2023-12-20T21:15:37+08:00\",\n        \"file_updated_timestamp\": \"2024-08-29T15:07:37+08:00\"\n      }\n    ],\n    \"status\": \"created\",\n    \"device_id\": \"4131a0de-46ee-4ae6-8003-ded416ed2f86\",\n    \"@timestamp\": 1724915258000,\n    \"timestamp\": \"2024-08-29T15:07:38+08:00\",\n    \"created_timestamp\": \"2024-08-29T15:07:41+08:00\",\n    \"category\": \"behavior_log_file\",\n    \"staff_id\": \"7b5f38b8-8864-43bb-983c-b065c9f092d3\",\n    \"staff_name\": \"吴文灏\",\n    \"staff_email\": \"wenhao.wu@cyberserval.cn\",\n    \"staff_code\": \"+8618515992048\",\n    \"staff_tag_ids\": [],\n    \"staff_tags\": [],\n    \"dept_ids\": [\n      \"9ff46a4b-6fe9-4375-a4db-4fca06cec417\"\n    ],\n    \"dept_names\": [\n      \"产品设计组\"\n    ],\n    \"dept_paths\": [\n      \"薮猫大公司/产研部/产品设计组\"\n    ],\n    \"action_display_name\": \"未知处置\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "efc0691a-906a-4b5e-be73-d6b5e3a2a051",
+    "name": "APISec Management account filebehavior/{log_id}/detail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

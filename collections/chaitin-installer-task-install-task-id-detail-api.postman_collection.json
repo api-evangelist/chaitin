@@ -1,0 +1,240 @@
+{
+  "item": [
+    {
+      "id": "a3ac2528-f861-457d-bd29-cb2cd15480e1",
+      "name": "installer/task/{install_task_id}/detail",
+      "description": {
+        "content": "终端安装包/任务/install_task_id 参数/详情",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8ba872a7-556a-4959-83c9-2faa521f98bb",
+          "name": "查询已发布版本任务详情",
+          "request": {
+            "name": "查询已发布版本任务详情",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "installer",
+                "task",
+                ":install_task_id",
+                "detail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "install_task_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9a5ecbfd-8de4-4c77-9f6f-0314f5f7df26",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "installer",
+                    "task",
+                    ":install_task_id",
+                    "detail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "install_task_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n    \"steps\": [\n      {\n        \"uid\": \"0d0ec64e-3974-46d7-9d39-cc62e612c4fb\",\n        \"step\": 1,\n        \"current\": 0,\n        \"total\": 0,\n        \"stats\": \"init\",\n        \"scope\": \"common\",\n        \"include\": {},\n        \"is_current\": true,\n        \"can_modify\": false\n      },\n      {\n        \"uid\": \"aaa6705d-b523-4e5e-9f93-24832ef802e9\",\n        \"step\": 2,\n        \"current\": 0,\n        \"total\": 0,\n        \"stats\": \"init\",\n        \"scope\": \"common\",\n        \"include\": {},\n        \"is_current\": false,\n        \"can_modify\": true\n      },\n      {\n        \"uid\": \"b84fee30-cd9a-4a05-94a8-b276bc989cd6\",\n        \"step\": 3,\n        \"current\": 0,\n        \"total\": 0,\n        \"stats\": \"init\",\n        \"scope\": \"common\",\n        \"include\": {},\n        \"is_current\": false,\n        \"can_modify\": true\n      },\n      {\n        \"uid\": \"e14829e0-a419-4958-ab31-4e276e6e73e3\",\n        \"step\": 4,\n        \"current\": 0,\n        \"total\": 0,\n        \"stats\": \"init\",\n        \"scope\": \"global\",\n        \"include\": {},\n        \"is_current\": false,\n        \"can_modify\": true\n      }\n    ],\n    \"id\": 5,\n    \"installer\": {\n      \"uid\": \"07ec5f03-86e9-40fc-91fb-4994da0631ce\",\n      \"name\": \"DDR Windows v3.3.98\",\n      \"version\": \"3.3.98\",\n      \"architecture\": \"x86_64\",\n      \"family\": \"Windows\",\n      \"valid_os\": [\n        \"Win11\",\n        \"Win10\",\n        \"Win8\",\n        \"Win7\"\n      ],\n      \"update_time\": \"2024-07-13T07:04:25.218373Z\"\n    },\n    \"period_options\": {\n      \"period_hours_value\": [\n        {\n          \"end\": \"23:59\",\n          \"week\": 1,\n          \"begin\": \"00:00\"\n        },\n        {\n          \"end\": \"23:59\",\n          \"week\": 2,\n          \"begin\": \"00:00\"\n        }\n      ]\n    },\n    \"release_strategy\": \"entity\",\n    \"expand\": {},\n    \"uid\": \"f3637cc0-4b4f-4186-a38a-3c291fd3476f\",\n    \"status\": \"deactivated\",\n    \"name\": \"全量发布1\",\n    \"update_time\": \"2024-07-23T09:59:08.154934Z\",\n    \"create_time\": \"2024-07-23T09:59:08.154886Z\",\n    \"update_by\": {\n      \"uid\": \"50dcaf08-c0f6-4ffa-8f86-3220e55d4385\",\n      \"name\": \"wly\",\n      \"username\": \"wly\",\n      \"email\": \"wly@wly.com\"\n    },\n    \"period_category\": \"permanent\",\n    \"create_by_id\": \"50dcaf08-c0f6-4ffa-8f86-3220e55d4385\",\n    \"stats\": \"paused\",\n    \"next_operations\": [\n      \"redo\",\n      \"restore\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "18ed5c5a-509c-4f57-80c6-36e7ee539684",
+    "name": "APISec Management account installer/task/{install_task_id}/detail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

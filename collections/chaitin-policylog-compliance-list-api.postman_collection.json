@@ -1,0 +1,254 @@
+{
+  "item": [
+    {
+      "id": "c2a9ba25-60b6-4f65-841e-8cebd3161ffb",
+      "name": "policylog/compliance/list",
+      "description": {
+        "content": "日志中心/合规/列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d81da671-faf4-41ef-a819-9fb5204226ce",
+          "name": "列表",
+          "request": {
+            "name": "列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "policylog",
+                "compliance",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"time_range\": {\n    \"begin\": \"<string>\",\n    \"end\": \"<string>\"\n  },\n  \"search\": \"<string>\",\n  \"queries\": [\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\",\n      \"is_order_used\": \"<boolean>\",\n      \"field_type\": \"<string>\",\n      \"is_filter_used\": \"<boolean>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\",\n      \"is_order_used\": \"<boolean>\",\n      \"field_type\": \"<string>\",\n      \"is_filter_used\": \"<boolean>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6b742029-a5a4-491f-93d0-b479811be6b3",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "policylog",
+                    "compliance",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "search",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"time_range\": {\n    \"begin\": \"2024-10-15T10:15:49Z\",\n    \"end\": \"2024-10-16T10:15:49Z\"\n  },\n  \"search\": \"\",\n  \"queries\": [\n    {\n      \"field\": \"policy_name\",\n      \"operator\": \"is\",\n      \"value\": \"win\",\n      \"is_order_used\": false,\n      \"field_type\": \"keyword\",\n      \"is_filter_used\": true\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"Normal\",\n  \"data\": {\n    \"index\": [\n      \"qzhddr_policy_compliance_logs\"\n    ],\n    \"page\": 1,\n    \"limit\": 10,\n    \"search_total\": 365,\n    \"total\": 365,\n    \"search_after\": [\n      1729072418922\n    ],\n    \"results\": [\n      {\n        \"mac\": \"00:0C:29:D7:76:FD\",\n        \"compliance_check_detail\": {\n          \"result\": [\n            \"1. 3306 远程桌面\"\n          ],\n          \"detail\": {\n            \"port_list\": [\n              {\n                \"start\": 3306,\n                \"comment\": \"远程桌面\"\n              }\n            ]\n          }\n        },\n        \"device_code\": \"PC-000208\",\n        \"console_user\": \"chenlei@DESKTOP-JC9DPIH\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"ip_address\": \"192.168.109.131\",\n        \"policy_category\": \"basic\",\n        \"action\": \"warning\",\n        \"event_id\": \"1729073633372037\",\n        \"compliance_check_display_name\": \"操作系统版本检查\",\n        \"scan_time\": 1729073633372,\n        \"os_name\": \"Windows\",\n        \"device_id\": \"53984d54-fcb1-4834-81bf-b19a3013c425\",\n        \"time\": 1729073633372,\n        \"agent_version\": \"3.4.99\",\n        \"risk_level\": 3,\n        \"status\": \"created\",\n        \"policy_name\": \"win-os\",\n        \"compliance_check_name\": \"os_version\",\n        \"hostname\": \"DESKTOP-JC9DPIH\",\n        \"policy_id\": \"90f41d2f-afd2-428b-bb3b-fd27fb1cb21d\",\n        \"os_friendly_name\": \"Windows 10 EnterpriseS (10.0.19044)\",\n        \"@timestamp\": 1729073633372,\n        \"timestamp\": \"2024-10-16T18:13:53+08:00\",\n        \"created_timestamp\": \"2024-10-16T18:13:59+08:00\",\n        \"compliance_check_result\": \"fail\",\n        \"risk_name\": \"低危\",\n        \"category\": \"compliance\",\n        \"staff_id\": \"93ca6f53-d9df-4cc9-a9ad-c78d23ca8b18\",\n        \"staff_name\": \"陈磊\",\n        \"staff_email\": \"chenlei@soumao.com\",\n        \"staff_code\": \"60d4100c843e5bd7\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [\n          \"93f009fb-0759-47aa-86c8-f257329ed7e7\",\n          \"70628140-a776-4101-9e1a-21b5b98fc30d\"\n        ],\n        \"dept_names\": [\n          \"网商银行\",\n          \"信息科技部\"\n        ],\n        \"dept_paths\": [\n          \"薮猫大公司/网商银行\",\n          \"薮猫大公司/网商银行/信息科技部\"\n        ],\n        \"file_suffix\": \"\",\n        \"uid\": \"sEPSlJIB1BSg0pzjCvkN\",\n        \"_type\": \"_doc\",\n        \"_index\": \".ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012\",\n        \"_score\": null,\n        \"action_display_name\": \"Endpoint Reminder\"\n      },\n      {\n        \"device_code\": \"PC-000208\",\n        \"action\": \"notify\",\n        \"ip_address\": \"192.168.109.131\",\n        \"scan_time\": 0,\n        \"console_user\": \"chenlei@DESKTOP-JC9DPIH\",\n        \"mac\": \"00:0C:29:D7:76:FD\",\n        \"event_id\": \"1729073633371022\",\n        \"compliance_check_name\": \"antivirus\",\n        \"status\": \"created\",\n        \"policy_id\": \"9e9c422e-4f55-4247-9b79-d195d9e20a04\",\n        \"compliance_check_detail\": {\n          \"detail\": {\n            \"software\": [\n              {\n                \"name\": \"Windows Defender\",\n                \"process_id_list\": [\n                  \"msmpeng.exe\"\n                ]\n              }\n            ]\n          },\n          \"result\": [\n            \"未安装\\\"Windows Defender\\\"杀毒软件\"\n          ],\n          \"error_message\": \"Antivirus Software Not Meeting Requirements\"\n        },\n        \"os_friendly_name\": \"Windows 10 EnterpriseS (10.0.19044)\",\n        \"agent_version\": \"3.4.99\",\n        \"os_name\": \"Windows\",\n        \"risk_level\": 2,\n        \"policy_name\": \"chenle_test\",\n        \"hostname\": \"DESKTOP-JC9DPIH\",\n        \"time\": 1729073633371,\n        \"device_id\": \"53984d54-fcb1-4834-81bf-b19a3013c425\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"compliance_check_display_name\": \"杀毒软件检查\",\n        \"policy_category\": \"basic\",\n        \"@timestamp\": 1729073633371,\n        \"timestamp\": \"2024-10-16T18:13:53+08:00\",\n        \"created_timestamp\": \"2024-10-16T18:13:58+08:00\",\n        \"compliance_check_result\": \"fail\",\n        \"risk_name\": \"中危\",\n        \"category\": \"compliance\",\n        \"staff_id\": \"93ca6f53-d9df-4cc9-a9ad-c78d23ca8b18\",\n        \"staff_name\": \"陈磊\",\n        \"staff_email\": \"chenlei@soumao.com\",\n        \"staff_code\": \"60d4100c843e5bd7\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [\n          \"93f009fb-0759-47aa-86c8-f257329ed7e7\",\n          \"70628140-a776-4101-9e1a-21b5b98fc30d\"\n        ],\n        \"dept_names\": [\n          \"网商银行\",\n          \"信息科技部\"\n        ],\n        \"dept_paths\": [\n          \"薮猫大公司/网商银行\",\n          \"薮猫大公司/网商银行/信息科技部\"\n        ],\n        \"file_suffix\": \"\",\n        \"uid\": \"qUPSlJIB1BSg0pzjCvkN\",\n        \"_type\": \"_doc\",\n        \"_index\": \".ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012\",\n        \"_score\": null,\n        \"action_display_name\": \"Audit\"\n      },\n      {\n        \"device_code\": \"PC-000208\",\n        \"action\": \"warning\",\n        \"ip_address\": \"192.168.109.131\",\n        \"scan_time\": 1729073633315,\n        \"console_user\": \"chenlei@DESKTOP-JC9DPIH\",\n        \"mac\": \"00:0C:29:D7:76:FD\",\n        \"event_id\": \"1729073633371026\",\n        \"compliance_check_name\": \"ad_domain\",\n        \"status\": \"created\",\n        \"policy_id\": \"9e9c422e-4f55-4247-9b79-d195d9e20a04\",\n        \"compliance_check_detail\": {\n          \"detail\": {\n            \"domains\": [\n              \"hello\"\n            ]\n          },\n          \"result\": [\n            \"未加入\\\"hello\\\"AD域\"\n          ],\n          \"error_message\": \"Not Joined Required Active Directory\"\n        },\n        \"os_friendly_name\": \"Windows 10 EnterpriseS (10.0.19044)\",\n        \"agent_version\": \"3.4.99\",\n        \"os_name\": \"Windows\",\n        \"risk_level\": 2,\n        \"policy_name\": \"chenle_test\",\n        \"hostname\": \"DESKTOP-JC9DPIH\",\n        \"time\": 1729073633371,\n        \"device_id\": \"53984d54-fcb1-4834-81bf-b19a3013c425\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"compliance_check_display_name\": \"AD域检查\",\n        \"policy_category\": \"basic\",\n        \"@timestamp\": 1729073633371,\n        \"timestamp\": \"2024-10-16T18:13:53+08:00\",\n        \"created_timestamp\": \"2024-10-16T18:13:58+08:00\",\n        \"compliance_check_result\": \"fail\",\n        \"risk_name\": \"中危\",\n        \"category\": \"compliance\",\n        \"staff_id\": \"93ca6f53-d9df-4cc9-a9ad-c78d23ca8b18\",\n        \"staff_name\": \"陈磊\",\n        \"staff_email\": \"chenlei@soumao.com\",\n        \"staff_code\": \"60d4100c843e5bd7\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [\n          \"93f009fb-0759-47aa-86c8-f257329ed7e7\",\n          \"70628140-a776-4101-9e1a-21b5b98fc30d\"\n        ],\n        \"dept_names\": [\n          \"网商银行\",\n          \"信息科技部\"\n        ],\n        \"dept_paths\": [\n          \"薮猫大公司/网商银行\",\n          \"薮猫大公司/网商银行/信息科技部\"\n        ],\n        \"file_suffix\": \"\",\n        \"uid\": \"rEPSlJIB1BSg0pzjCvkN\",\n        \"_type\": \"_doc\",\n        \"_index\": \".ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012\",\n        \"_score\": null,\n        \"action_display_name\": \"Endpoint Reminder\"\n      },\n      {\n        \"device_code\": \"PC-000208\",\n        \"action\": \"warning\",\n        \"ip_address\": \"192.168.109.131\",\n        \"scan_time\": 1729073633370,\n        \"console_user\": \"chenlei@DESKTOP-JC9DPIH\",\n        \"mac\": \"00:0C:29:D7:76:FD\",\n        \"event_id\": \"1729073633371027\",\n        \"compliance_check_name\": \"system_lock_screen\",\n        \"status\": \"created\",\n        \"policy_id\": \"9e9c422e-4f55-4247-9b79-d195d9e20a04\",\n        \"compliance_check_detail\": {\n          \"detail\": \"{}\",\n          \"result\": [\n            \"未设置锁屏密码\",\n            \"锁屏时间不符合\\\"1\\\"分钟要求\"\n          ],\n          \"error_message\": \"Screen Lock Check Not Meeting Requirements\"\n        },\n        \"os_friendly_name\": \"Windows 10 EnterpriseS (10.0.19044)\",\n        \"agent_version\": \"3.4.99\",\n        \"os_name\": \"Windows\",\n        \"risk_level\": 2,\n        \"policy_name\": \"chenle_test\",\n        \"hostname\": \"DESKTOP-JC9DPIH\",\n        \"time\": 1729073633371,\n        \"device_id\": \"53984d54-fcb1-4834-81bf-b19a3013c425\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"compliance_check_display_name\": \"系统锁屏检查\",\n        \"policy_category\": \"basic\",\n        \"@timestamp\": 1729073633371,\n        \"timestamp\": \"2024-10-16T18:13:53+08:00\",\n        \"created_timestamp\": \"2024-10-16T18:13:58+08:00\",\n        \"compliance_check_result\": \"fail\",\n        \"risk_name\": \"中危\",\n        \"category\": \"compliance\",\n        \"staff_id\": \"93ca6f53-d9df-4cc9-a9ad-c78d23ca8b18\",\n        \"staff_name\": \"陈磊\",\n        \"staff_email\": \"chenlei@soumao.com\",\n        \"staff_code\": \"60d4100c843e5bd7\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [\n          \"93f009fb-0759-47aa-86c8-f257329ed7e7\",\n          \"70628140-a776-4101-9e1a-21b5b98fc30d\"\n        ],\n        \"dept_names\": [\n          \"网商银行\",\n          \"信息科技部\"\n        ],\n        \"dept_paths\": [\n          \"薮猫大公司/网商银行\",\n          \"薮猫大公司/网商银行/信息科技部\"\n        ],\n        \"file_suffix\": \"\",\n        \"uid\": \"rUPSlJIB1BSg0pzjCvkN\",\n        \"_type\": \"_doc\",\n        \"_index\": \".ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012\",\n        \"_score\": null,\n        \"action_display_name\": \"Endpoint Reminder\"\n      },\n      {\n        \"device_code\": \"PC-000208\",\n        \"action\": \"warning\",\n        \"ip_address\": \"192.168.109.131\",\n        \"scan_time\": 1729073633371,\n        \"console_user\": \"chenlei@DESKTOP-JC9DPIH\",\n        \"mac\": \"00:0C:29:D7:76:FD\",\n        \"event_id\": \"1729073633371029\",\n        \"compliance_check_name\": \"os_version\",\n        \"status\": \"created\",\n        \"policy_id\": \"9e9c422e-4f55-4247-9b79-d195d9e20a04\",\n        \"compliance_check_detail\": {\n          \"detail\": \"{}\",\n          \"result\": [\n            \"操作系统最低要求为Windows 11，当前运行为Windows 10\"\n          ],\n          \"error_message\": \"操作系统版本未达最低配置标准\"\n        },\n        \"os_friendly_name\": \"Windows 10 EnterpriseS (10.0.19044)\",\n        \"agent_version\": \"3.4.99\",\n        \"os_name\": \"Windows\",\n        \"risk_level\": 2,\n        \"policy_name\": \"chenle_test\",\n        \"hostname\": \"DESKTOP-JC9DPIH\",\n        \"time\": 1729073633371,\n        \"device_id\": \"53984d54-fcb1-4834-81bf-b19a3013c425\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"compliance_check_display_name\": \"操作系统版本检查\",\n        \"policy_category\": \"basic\",\n        \"@timestamp\": 1729073633371,\n        \"timestamp\": \"2024-10-16T18:13:53+08:00\",\n        \"created_timestamp\": \"2024-10-16T18:13:58+08:00\",\n        \"compliance_check_result\": \"fail\",\n        \"risk_name\": \"中危\",\n        \"category\": \"compliance\",\n        \"staff_id\": \"93ca6f53-d9df-4cc9-a9ad-c78d23ca8b18\",\n        \"staff_name\": \"陈磊\",\n        \"staff_email\": \"chenlei@soumao.com\",\n        \"staff_code\": \"60d4100c843e5bd7\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [\n          \"93f009fb-0759-47aa-86c8-f257329ed7e7\",\n          \"70628140-a776-4101-9e1a-21b5b98fc30d\"\n        ],\n        \"dept_names\": [\n          \"网商银行\",\n          \"信息科技部\"\n        ],\n        \"dept_paths\": [\n          \"薮猫大公司/网商银行\",\n          \"薮猫大公司/网商银行/信息科技部\"\n        ],\n        \"file_suffix\": \"\",\n        \"uid\": \"r0PSlJIB1BSg0pzjCvkN\",\n        \"_type\": \"_doc\",\n        \"_index\": \".ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012\",\n        \"_score\": null,\n        \"action_display_name\": \"Endpoint Reminder\"\n      },\n      {\n        \"device_code\": \"PC-000044\",\n        \"action\": \"notify\",\n        \"ip_address\": \"192.168.96.141\",\n        \"scan_time\": 1729072418923,\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"mac\": \"64:6E:E0:74:CC:8C\",\n        \"event_id\": \"1729072418924053\",\n        \"compliance_check_name\": \"ad_domain\",\n        \"status\": \"created\",\n        \"policy_id\": \"9303fa90-0b83-418f-bc47-278b93884fcd\",\n        \"compliance_check_detail\": {\n          \"detail\": {\n            \"domains\": [\n              \"111111\"\n            ]\n          },\n          \"result\": [\n            \"未加入\\\"111111\\\"AD域\"\n          ],\n          \"error_message\": \"Not Joined Required Active Directory\"\n        },\n        \"os_friendly_name\": \"Windows 10 CoreCountrySpecific (10.0.19045)\",\n        \"agent_version\": \"3.4.306\",\n        \"os_name\": \"Windows\",\n        \"risk_level\": 2,\n        \"policy_name\": \"2222\",\n        \"hostname\": \"DESKTOP-A0L03FT\",\n        \"time\": 1729072418924,\n        \"device_id\": \"b425f160-dd59-4469-9b06-f6f419193518\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"compliance_check_display_name\": \"AD域检查\",\n        \"policy_category\": \"basic\",\n        \"@timestamp\": 1729072418924,\n        \"timestamp\": \"2024-10-16T17:53:38+08:00\",\n        \"created_timestamp\": \"2024-10-16T17:53:42+08:00\",\n        \"compliance_check_result\": \"fail\",\n        \"risk_name\": \"中危\",\n        \"category\": \"compliance\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_email\": \"\",\n        \"staff_code\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"file_suffix\": \"\",\n        \"uid\": \"e0O_lJIB1BSg0pzjf-Ss\",\n        \"_type\": \"_doc\",\n        \"_index\": \".ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012\",\n        \"_score\": null,\n        \"action_display_name\": \"Audit\"\n      },\n      {\n        \"device_code\": \"PC-000044\",\n        \"action\": \"warning\",\n        \"ip_address\": \"192.168.96.141\",\n        \"scan_time\": 1729072418924,\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"mac\": \"64:6E:E0:74:CC:8C\",\n        \"event_id\": \"1729072418924064\",\n        \"compliance_check_name\": \"os_version\",\n        \"status\": \"created\",\n        \"policy_id\": \"90f41d2f-afd2-428b-bb3b-fd27fb1cb21d\",\n        \"compliance_check_detail\": {\n          \"detail\": \"{}\",\n          \"result\": [\n            \"操作系统最低要求为Windows 11，当前运行为Windows 10\"\n          ],\n          \"error_message\": \"操作系统版本未达最低配置标准\"\n        },\n        \"os_friendly_name\": \"Windows 10 CoreCountrySpecific (10.0.19045)\",\n        \"agent_version\": \"3.4.306\",\n        \"os_name\": \"Windows\",\n        \"risk_level\": 3,\n        \"policy_name\": \"win-os\",\n        \"hostname\": \"DESKTOP-A0L03FT\",\n        \"time\": 1729072418924,\n        \"device_id\": \"b425f160-dd59-4469-9b06-f6f419193518\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"compliance_check_display_name\": \"操作系统版本检查\",\n        \"policy_category\": \"basic\",\n        \"@timestamp\": 1729072418924,\n        \"timestamp\": \"2024-10-16T17:53:38+08:00\",\n        \"created_timestamp\": \"2024-10-16T17:53:42+08:00\",\n        \"compliance_check_result\": \"fail\",\n        \"risk_name\": \"低危\",\n        \"category\": \"compliance\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_email\": \"\",\n        \"staff_code\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"file_suffix\": \"\",\n        \"uid\": \"fEO_lJIB1BSg0pzjf-Ss\",\n        \"_type\": \"_doc\",\n        \"_index\": \".ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012\",\n        \"_score\": null,\n        \"action_display_name\": \"Endpoint Reminder\"\n      },\n      {\n        \"device_code\": \"PC-000044\",\n        \"action\": \"warning\",\n        \"ip_address\": \"192.168.96.141\",\n        \"scan_time\": 0,\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"mac\": \"64:6E:E0:74:CC:8C\",\n        \"event_id\": \"1729072418922041\",\n        \"compliance_check_name\": \"antivirus\",\n        \"status\": \"created\",\n        \"policy_id\": \"d6576955-3fdb-4a06-ba70-808dab4fb9ce\",\n        \"compliance_check_detail\": {\n          \"detail\": {\n            \"software\": [\n              {\n                \"name\": \"Windows Defender\",\n                \"process_id_list\": [\n                  \"msmpeng.exe\"\n                ]\n              },\n              {\n                \"name\": \"McAfee\",\n                \"process_id_list\": [\n                  \"Mcshield.exe\"\n                ]\n              }\n            ]\n          },\n          \"result\": [\n            \"未安装\\\"Windows Defender\\\"杀毒软件\",\n            \"未安装\\\"McAfee\\\"杀毒软件\"\n          ],\n          \"error_message\": \"Antivirus Software Not Meeting Requirements\"\n        },\n        \"os_friendly_name\": \"Windows 10 CoreCountrySpecific (10.0.19045)\",\n        \"agent_version\": \"3.4.306\",\n        \"os_name\": \"Windows\",\n        \"risk_level\": 1,\n        \"policy_name\": \"win\",\n        \"hostname\": \"DESKTOP-A0L03FT\",\n        \"time\": 1729072418922,\n        \"device_id\": \"b425f160-dd59-4469-9b06-f6f419193518\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"compliance_check_display_name\": \"杀毒软件检查\",\n        \"policy_category\": \"basic\",\n        \"@timestamp\": 1729072418922,\n        \"timestamp\": \"2024-10-16T17:53:38+08:00\",\n        \"created_timestamp\": \"2024-10-16T17:53:41+08:00\",\n        \"compliance_check_result\": \"fail\",\n        \"risk_name\": \"高危\",\n        \"category\": \"compliance\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_email\": \"\",\n        \"staff_code\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"file_suffix\": \"\",\n        \"uid\": \"dEO_lJIB1BSg0pzjf-Ss\",\n        \"_type\": \"_doc\",\n        \"_index\": \".ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012\",\n        \"_score\": null,\n        \"action_display_name\": \"Endpoint Reminder\"\n      },\n      {\n        \"device_code\": \"PC-000044\",\n        \"action\": \"warning\",\n        \"ip_address\": \"192.168.96.141\",\n        \"scan_time\": 1729072418921,\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"mac\": \"64:6E:E0:74:CC:8C\",\n        \"event_id\": \"1729072418922042\",\n        \"compliance_check_name\": \"must_run_process\",\n        \"status\": \"created\",\n        \"policy_id\": \"d6576955-3fdb-4a06-ba70-808dab4fb9ce\",\n        \"compliance_check_detail\": {\n          \"detail\": {\n            \"software\": [\n              {\n                \"name\": \"GitHub Desktop\",\n                \"process_id_list\": [\n                  \"githubdesktop.exe\"\n                ]\n              }\n            ]\n          },\n          \"result\": [\n            \"未运行要求的\\\"GitHub Desktop\\\"应用\"\n          ],\n          \"error_message\": \"Key Software Not Running\"\n        },\n        \"os_friendly_name\": \"Windows 10 CoreCountrySpecific (10.0.19045)\",\n        \"agent_version\": \"3.4.306\",\n        \"os_name\": \"Windows\",\n        \"risk_level\": 1,\n        \"policy_name\": \"win\",\n        \"hostname\": \"DESKTOP-A0L03FT\",\n        \"time\": 1729072418922,\n        \"device_id\": \"b425f160-dd59-4469-9b06-f6f419193518\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"compliance_check_display_name\": \"必须运行进程检查\",\n        \"policy_category\": \"basic\",\n        \"@timestamp\": 1729072418922,\n        \"timestamp\": \"2024-10-16T17:53:38+08:00\",\n        \"created_timestamp\": \"2024-10-16T17:53:41+08:00\",\n        \"compliance_check_result\": \"fail\",\n        \"risk_name\": \"高危\",\n        \"category\": \"compliance\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_email\": \"\",\n        \"staff_code\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"file_suffix\": \"\",\n        \"uid\": \"dUO_lJIB1BSg0pzjf-Ss\",\n        \"_type\": \"_doc\",\n        \"_index\": \".ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012\",\n        \"_score\": null,\n        \"action_display_name\": \"Endpoint Reminder\"\n      },\n      {\n        \"device_code\": \"PC-000044\",\n        \"action\": \"warning\",\n        \"ip_address\": \"192.168.96.141\",\n        \"scan_time\": 1729072418895,\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"mac\": \"64:6E:E0:74:CC:8C\",\n        \"event_id\": \"1729072418922043\",\n        \"compliance_check_name\": \"forbid_run_process\",\n        \"status\": \"created\",\n        \"policy_id\": \"d6576955-3fdb-4a06-ba70-808dab4fb9ce\",\n        \"compliance_check_detail\": {\n          \"detail\": {\n            \"software\": [\n              {\n                \"name\": \"ToDesk\",\n                \"process_id_list\": [\n                  \"todesk.exe\"\n                ]\n              },\n              {\n                \"name\": \"WeChat\",\n                \"process_id_list\": [\n                  \"WeChat.exe\"\n                ]\n              }\n            ]\n          },\n          \"result\": [\n            \"运行了禁止的\\\"ToDesk\\\"应用\",\n            \"运行了禁止的\\\"WeChat\\\"应用\"\n          ],\n          \"error_message\": \"Using Non-compliant Software\"\n        },\n        \"os_friendly_name\": \"Windows 10 CoreCountrySpecific (10.0.19045)\",\n        \"agent_version\": \"3.4.306\",\n        \"os_name\": \"Windows\",\n        \"risk_level\": 1,\n        \"policy_name\": \"win\",\n        \"hostname\": \"DESKTOP-A0L03FT\",\n        \"time\": 1729072418922,\n        \"device_id\": \"b425f160-dd59-4469-9b06-f6f419193518\",\n        \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n        \"compliance_check_display_name\": \"禁止运行进程检查\",\n        \"policy_category\": \"basic\",\n        \"@timestamp\": 1729072418922,\n        \"timestamp\": \"2024-10-16T17:53:38+08:00\",\n        \"created_timestamp\": \"2024-10-16T17:53:41+08:00\",\n        \"compliance_check_result\": \"fail\",\n        \"risk_name\": \"高危\",\n        \"category\": \"compliance\",\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"staff_email\": \"\",\n        \"staff_code\": \"\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [],\n        \"dept_names\": [],\n        \"dept_paths\": [],\n        \"file_suffix\": \"\",\n        \"uid\": \"dkO_lJIB1BSg0pzjf-Ss\",\n        \"_type\": \"_doc\",\n        \"_index\": \".ds-qzhddr_policy_compliance_logs_s-2024.08.14-000012\",\n        \"_score\": null,\n        \"action_display_name\": \"Endpoint Reminder\"\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8450764f-67c8-4e58-a8c7-ae4570d3fbef",
+    "name": "APISec Management account policylog/compliance/list API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

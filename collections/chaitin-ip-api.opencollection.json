@@ -1,0 +1,363 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account 资产/IP地址 API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "资产/IP地址",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "IP地址列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/asset/ip",
+            "params": [
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              },
+              {
+                "name": "status",
+                "value": "valid",
+                "type": "query",
+                "description": "状态"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "排序字段，字段前加-表示降序，默认排序为-id"
+              },
+              {
+                "name": "page",
+                "value": "1",
+                "type": "query",
+                "description": "页码"
+              },
+              {
+                "name": "size",
+                "value": "20",
+                "type": "query",
+                "description": "分页大小"
+              },
+              {
+                "name": "ip",
+                "value": "",
+                "type": "query",
+                "description": "IP"
+              },
+              {
+                "name": "as_num",
+                "value": "",
+                "type": "query",
+                "description": "ASN编号"
+              },
+              {
+                "name": "provider",
+                "value": "",
+                "type": "query",
+                "description": "运营商"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "query",
+                "description": "位置"
+              },
+              {
+                "name": "source",
+                "value": "dns",
+                "type": "query",
+                "description": "来源"
+              },
+              {
+                "name": "bu",
+                "value": "",
+                "type": "query",
+                "description": "分组"
+              },
+              {
+                "name": "tag",
+                "value": "",
+                "type": "query",
+                "description": "标签"
+              },
+              {
+                "name": "created_at_after",
+                "value": "",
+                "type": "query",
+                "description": "首次发现开始时间，格式为`2023-01-01 00:00:00`，配合created_at_before使用"
+              },
+              {
+                "name": "created_at_before",
+                "value": "",
+                "type": "query",
+                "description": "首次发现结束时间，格式为`2023-01-01 00:00:00`，配合created_at_after使用"
+              },
+              {
+                "name": "lastseen_at_after",
+                "value": "",
+                "type": "query",
+                "description": "最后发现开始时间，格式为`2023-01-01 00:00:00`，配合lastseen_at_before使用"
+              },
+              {
+                "name": "lastseen_at_before",
+                "value": "",
+                "type": "query",
+                "description": "最后发现结束时间，格式为`2023-01-01 00:00:00`，配合lastseen_at_after使用"
+              }
+            ]
+          },
+          "docs": "IP地址列表"
+        },
+        {
+          "info": {
+            "name": "IP地址批量添加",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/asset/ip/batch-create",
+            "params": [
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "IP地址批量添加"
+        },
+        {
+          "info": {
+            "name": "IP地址批量删除",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/v1/asset/ip/batch-delete",
+            "params": [
+              {
+                "name": "space",
+                "value": "",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "IP地址批量删除"
+        },
+        {
+          "info": {
+            "name": "IP地址批量关联分组",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/asset/ip/bu",
+            "params": [
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "IP地址批量关联分组"
+        },
+        {
+          "info": {
+            "name": "IP地址批量修改状态",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/asset/ip/status",
+            "params": [
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "IP地址批量修改状态"
+        },
+        {
+          "info": {
+            "name": "IP地址批量绑定标签",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/asset/ip/tag",
+            "params": [
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "IP地址批量绑定标签"
+        },
+        {
+          "info": {
+            "name": "IP地址批量解绑标签",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/v1/asset/ip/tag",
+            "params": [
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "IP地址批量解绑标签"
+        },
+        {
+          "info": {
+            "name": "IP地址更新标签",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/asset/ip/:pk/tag",
+            "params": [
+              {
+                "name": "pk",
+                "value": "20350",
+                "type": "path",
+                "description": "IP ID"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "IP地址更新标签"
+        },
+        {
+          "info": {
+            "name": "IP地址批量关联分组-v2",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v2/asset/ip/bu",
+            "params": [
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "IP地址批量关联分组-v2"
+        },
+        {
+          "info": {
+            "name": "IP地址批量绑定标签-v2",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v2/asset/ip/tag",
+            "params": [
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "IP地址批量绑定标签-v2"
+        },
+        {
+          "info": {
+            "name": "IP地址批量解绑标签-v2",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/v2/asset/ip/tag",
+            "params": [
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "IP地址批量解绑标签-v2"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

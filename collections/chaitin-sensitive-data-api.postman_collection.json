@@ -1,0 +1,89 @@
+{
+  "item": [
+    {
+      "id": "2748fe0a-613b-451c-a65e-e46b05cad02a",
+      "name": "sensitive_data",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0432abca-2b59-44c2-bf2d-c883d9b09f15",
+          "name": "GET /api/SensitiveDataCharacteristicAPI",
+          "request": {
+            "name": "GET /api/SensitiveDataCharacteristicAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveDataCharacteristicAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pii_device_id_value",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pii_session_value",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pii_user_id_value",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pii_username_value",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "src_ip",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6c3b6b62-7a40-4cbe-aa35-b86f18caf03c",
+    "name": "APISec Management account sensitive_data API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

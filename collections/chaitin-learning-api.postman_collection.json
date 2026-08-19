@@ -1,0 +1,270 @@
+{
+  "item": [
+    {
+      "id": "d1694ef7-4212-4af1-8870-e171f772759b",
+      "name": "learning",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "81334c86-a07a-410e-ae75-dbbdc4d9bc03",
+          "name": "GET /api/UserModelAPI",
+          "request": {
+            "name": "GET /api/UserModelAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserModelAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<integer>",
+                  "description": "(Required) ID"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dac9709b-8555-4faf-8fd0-846599f9072e",
+          "name": "PUT /api/UserModelAPI",
+          "request": {
+            "name": "PUT /api/UserModelAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserModelAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"strategy_id\": \"<integer>\",\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5a6b6481-b406-4dc4-8db6-4614f664bac1",
+          "name": "DELETE /api/UserModelAPI",
+          "request": {
+            "name": "DELETE /api/UserModelAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserModelAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"strategy_id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "476bdeb6-fae5-42d1-9342-18e2d2928e6f",
+          "name": "POST /api/UserModelStrategyAPI",
+          "request": {
+            "name": "POST /api/UserModelStrategyAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserModelStrategyAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"start_time\": \"<string>\",\n  \"end_time\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7fac36a2-88d6-4810-9c7e-ca053ef7d5ff",
+          "name": "PUT /api/UserModelStrategyAPI",
+          "request": {
+            "name": "PUT /api/UserModelStrategyAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserModelStrategyAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sites\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b8a595cd-5628-413b-8440-753ea954fd7d",
+          "name": "DELETE /api/UserModelStrategyAPI",
+          "request": {
+            "name": "DELETE /api/UserModelStrategyAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserModelStrategyAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "98a112a6-eb51-42f2-aa7b-8f054e575239",
+    "name": "APISec Management account learning API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

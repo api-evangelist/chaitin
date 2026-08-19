@@ -1,0 +1,222 @@
+{
+  "item": [
+    {
+      "id": "9cfa3300-e9fe-4b12-a7f5-8c8678e08511",
+      "name": "policylog/im/stafflist",
+      "description": {
+        "content": "日志中心/即时通讯/人员列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f19e6f87-43d4-4961-9335-0e6d112d09bf",
+          "name": "IM管控员工列表信息",
+          "request": {
+            "name": "IM管控员工列表信息",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "policylog",
+                "im",
+                "stafflist"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"time_range\": {\n    \"begin\": \"<string>\",\n    \"end\": \"<string>\"\n  },\n  \"search\": \"<string>\",\n  \"queries\": [\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ef58d603-55c0-46ba-8911-155a5affc8ad",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "policylog",
+                    "im",
+                    "stafflist"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"time_range\": {\n    \"begin\": \"2023-11-14 10:55:38\",\n    \"end\": \"2023-11-14 11:55:38\"\n  },\n  \"search\": \"\",\n  \"queries\": [\n    {\n      \"field\": \"staff_name\",\n      \"operator\": \"is\",\n      \"value\": \"吴贝宁\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"index\": [\n      \"qzhddr_policy_im_logs\"\n    ],\n    \"total\": 502,\n    \"search_total\": 502,\n    \"results\": [\n      {\n        \"staff_id\": \"\",\n        \"staff_name\": \"\",\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"dept_paths\": [],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"d9671d62-f655-4669-ac14-67b2906b1807\",\n            \"device_code\": \"PC-000140\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 24\n          },\n          {\n            \"device_id\": \"a05300b7-7b76-4b54-ad25-a16a9c516c29\",\n            \"device_code\": \"PC-000108\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 11\n          },\n          {\n            \"device_id\": \"4f56fd8f-411f-4d96-b01f-122fa4a98b97\",\n            \"device_code\": \"PC-000126\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 8\n          },\n          {\n            \"device_id\": \"2dfd92cd-5a9e-4571-afad-b04ff379bef1\",\n            \"device_code\": \"PC-000139\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 5\n          },\n          {\n            \"device_id\": \"7385fd21-bbcc-4562-89fc-4abf8150c462\",\n            \"device_code\": \"PC-000088\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 5\n          },\n          {\n            \"device_id\": \"80630800-f741-443f-9039-96826ed9b73e\",\n            \"device_code\": \"PC-000027\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 4\n          },\n          {\n            \"device_id\": \"5d81e7d3-f6a4-4e1a-9306-654d1e8c77f7\",\n            \"device_code\": \"PC-000116\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 2\n          },\n          {\n            \"device_id\": \"5f46677b-d939-4f28-8209-ffdf14d7316c\",\n            \"device_code\": \"PC-000045\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 1\n          },\n          {\n            \"device_id\": \"bcc990f1-5050-4470-b11d-528246623831\",\n            \"device_code\": \"PC-000099\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 1\n          }\n        ],\n        \"device_cnt\": 9\n      },\n      {\n        \"staff_id\": \"90534539-028d-40ea-9e8d-68f1a7b1cc88\",\n        \"staff_name\": \"qewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewqqewewq\",\n        \"console_user\": \"lianb@DESKTOP-A0L03FT@DESKTOP-A0L03FT\",\n        \"dept_paths\": [\n          \"测试公司/hu_子部门\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"a05300b7-7b76-4b54-ad25-a16a9c516c29\",\n            \"device_code\": \"PC-000108\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 58\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"17f92df1-5f33-445f-a86b-dc506f9baf2e\",\n        \"staff_name\": \"陈半仙\",\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"dept_paths\": [],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"d9671d62-f655-4669-ac14-67b2906b1807\",\n            \"device_code\": \"PC-000140\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 49\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"2491cc30-2f72-418d-8415-4f88fb7f946b\",\n        \"staff_name\": \"程灿亮\",\n        \"console_user\": \"薮猫@@LAPTOP-JTMQ1VG2\",\n        \"dept_paths\": [],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"2dfd92cd-5a9e-4571-afad-b04ff379bef1\",\n            \"device_code\": \"PC-000139\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 13\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"fea88853-f343-4f37-b02e-d948094cc585\",\n        \"staff_name\": \"陈花花\",\n        \"console_user\": \"薮猫@LAPTOP-JTMQ1VG2\",\n        \"dept_paths\": [\n          \"测试公司\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"2dfd92cd-5a9e-4571-afad-b04ff379bef1\",\n            \"device_code\": \"PC-000139\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 6\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"2df26a2d-4b37-4e21-894b-8bf076f175d1\",\n        \"staff_name\": \"clb\",\n        \"console_user\": \"lianb@DESKTOP-PNED9SM@DESKTOP-PNED9SM\",\n        \"dept_paths\": [],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"5f46677b-d939-4f28-8209-ffdf14d7316c\",\n            \"device_code\": \"PC-000045\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 4\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"bf9522a3-82b0-4288-b48e-72791c4afeb5\",\n        \"staff_name\": \"嘭嘭嘭\",\n        \"console_user\": \"lianb@DESKTOP-A0L03FT\",\n        \"dept_paths\": [\n          \"测试公司/技术部\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"d9671d62-f655-4669-ac14-67b2906b1807\",\n            \"device_code\": \"PC-000140\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 4\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"a5b78aa6-dd84-46d9-ab25-aeef14949b1c\",\n        \"staff_name\": \"陈夏天\",\n        \"console_user\": \"薮猫@LAPTOP-JTMQ1VG2\",\n        \"dept_paths\": [\n          \"测试公司/技术部\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"7ab1a532-9a11-4b12-84c1-8a6f32a8b3ce\",\n            \"device_code\": \"PC-000144\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 2\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"89a0061b-0ebe-40ec-8bc9-cfd3e9c2d5c5\",\n        \"staff_name\": \"嘭嘭嘭\",\n        \"console_user\": \"cailianbin@WIN-46Q2HD9NB5N\",\n        \"dept_paths\": [\n          \"测试公司/技术部\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"80630800-f741-443f-9039-96826ed9b73e\",\n            \"device_code\": \"PC-000027\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 1\n          }\n        ],\n        \"device_cnt\": 1\n      },\n      {\n        \"staff_id\": \"b2c11e4a-9b41-46b8-83c6-73353bcdea63\",\n        \"staff_name\": \"连彬\",\n        \"console_user\": \"lianb@@DESKTOP-A0L03FT\",\n        \"dept_paths\": [\n          \"测试公司/SANY/三一重工股份有限公司/工程车辆事业部/泵送公司/研究院/国际产品研究所\"\n        ],\n        \"os_list\": [\n          {\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\"\n          }\n        ],\n        \"device_list\": [\n          {\n            \"device_id\": \"a05300b7-7b76-4b54-ad25-a16a9c516c29\",\n            \"device_code\": \"PC-000108\",\n            \"os_icon\": \"windows\",\n            \"os_name\": \"Windows\",\n            \"total\": 1\n          }\n        ],\n        \"device_cnt\": 1\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7e488541-47be-4b21-a382-9ebfea8aa4a3",
+    "name": "APISec Management account policylog/im/stafflist API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

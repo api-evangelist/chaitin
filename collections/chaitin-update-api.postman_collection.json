@@ -1,0 +1,305 @@
+{
+  "item": [
+    {
+      "id": "77fd2725-fdbf-4115-8553-d857deb71f21",
+      "name": "update",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "47f2700e-8e21-4e21-a125-5c3d120b9175",
+          "name": "GET /api/DownloadSystemUpgradePackage",
+          "request": {
+            "name": "GET /api/DownloadSystemUpgradePackage",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "DownloadSystemUpgradePackage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "64b25c2e-a47c-4f31-8884-754549eaddfc",
+          "name": "GET /api/FirmwareUpdateTimeAPI",
+          "request": {
+            "name": "GET /api/FirmwareUpdateTimeAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "FirmwareUpdateTimeAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "da669e33-7857-4fb5-9277-3e18144b13b4",
+          "name": "GET /api/SystemUpdateLog",
+          "request": {
+            "name": "GET /api/SystemUpdateLog",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SystemUpdateLog"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b47c2c44-dcc1-4709-8c09-d02b864a6a49",
+          "name": "GET /api/SystemUpdateResultLog",
+          "request": {
+            "name": "GET /api/SystemUpdateResultLog",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SystemUpdateResultLog"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "record_id",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cdf11264-73cd-4cf8-9496-10d856b7614b",
+          "name": "POST /api/SystemUpgrade",
+          "request": {
+            "name": "POST /api/SystemUpgrade",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SystemUpgrade"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1baee985-3e84-4b77-a51e-d35f2c71a051",
+          "name": "GET /api/SystemUpgradePackageAPI",
+          "request": {
+            "name": "GET /api/SystemUpgradePackageAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SystemUpgradePackageAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "count",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5a05de98-95cf-488d-9c23-96f20174cad4",
+          "name": "POST /api/TransferUpgradePackage",
+          "request": {
+            "name": "POST /api/TransferUpgradePackage",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "TransferUpgradePackage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ef90534a-e5d0-4962-8346-ffa307e5675b",
+          "name": "POST /api/UploadSystemUpgradePackage",
+          "request": {
+            "name": "POST /api/UploadSystemUpgradePackage",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UploadSystemUpgradePackage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5c1de409-57aa-407a-a064-c85c76d48a97",
+    "name": "APISec Management account update API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

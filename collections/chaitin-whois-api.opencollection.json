@@ -1,0 +1,225 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account 资产/种子/域名 WHOIS API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "资产/种子/域名 WHOIS",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "域名WHOIS列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/seed/domain",
+            "params": [
+              {
+                "name": "space",
+                "value": "",
+                "type": "query",
+                "description": "空间ID"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "query",
+                "description": "种子条目，模糊搜索"
+              },
+              {
+                "name": "enable",
+                "value": "true",
+                "type": "query",
+                "description": "监控是否启用"
+              },
+              {
+                "name": "confidence",
+                "value": "100",
+                "type": "query",
+                "description": "置信度"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query",
+                "description": "类型"
+              },
+              {
+                "name": "sort",
+                "value": "id、created_at、updated_at",
+                "type": "query",
+                "description": "排序字段，字段前加-表示降序，默认排序为-id"
+              },
+              {
+                "name": "page",
+                "value": "1",
+                "type": "query",
+                "description": "页码"
+              },
+              {
+                "name": "size",
+                "value": "20",
+                "type": "query",
+                "description": "分页大小"
+              }
+            ]
+          },
+          "docs": "域名WHOIS列表"
+        },
+        {
+          "info": {
+            "name": "域名WHOS批量添加",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/seed/domain/batch-create",
+            "params": [
+              {
+                "name": "space",
+                "value": "",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "域名WHOS批量添加"
+        },
+        {
+          "info": {
+            "name": "域名WHOS批量删除",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/v1/seed/domain/batch-delete",
+            "params": [
+              {
+                "name": "space",
+                "value": "",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "域名WHOS批量删除"
+        },
+        {
+          "info": {
+            "name": "域名WHOIS批量修改监控开关",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/seed/domain/switch",
+            "params": [
+              {
+                "name": "space",
+                "value": "",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "域名WHOIS批量修改监控开关"
+        },
+        {
+          "info": {
+            "name": "域名WHOIS批量修改置信度",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/seed/domain/update-confidence",
+            "params": [
+              {
+                "name": "space",
+                "value": "",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "域名WHOIS批量修改置信度"
+        },
+        {
+          "info": {
+            "name": "域名WHOS获取",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/seed/domain/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path",
+                "description": "企业主体ID"
+              },
+              {
+                "name": "space",
+                "value": "",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ]
+          },
+          "docs": "域名WHOS获取"
+        },
+        {
+          "info": {
+            "name": "域名WHOIS编辑",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/v1/seed/domain/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path",
+                "description": "企业主体ID"
+              },
+              {
+                "name": "space",
+                "value": "",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "域名WHOIS编辑"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

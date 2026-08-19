@@ -1,0 +1,222 @@
+{
+  "item": [
+    {
+      "id": "45259cae-754a-441c-9e5c-01d019023186",
+      "name": "analyse/expression/classification",
+      "description": {
+        "content": "文件分析/表达式/数据分类分级",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "43cb9174-33eb-45b7-89c6-929e6cdcf07c",
+          "name": "文件分类分级表达式展示",
+          "request": {
+            "name": "文件分类分级表达式展示",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "analyse",
+                "expression",
+                "classification"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rule_version\": {\n    \"cond_ticket\": \"<string>\",\n    \"cond_version\": \"<integer>\",\n    \"dc_ticket\": \"<string>\",\n    \"dc_version\": \"<integer>\",\n    \"filetype_version\": \"<integer>\",\n    \"im_version\": \"<integer>\",\n    \"policy_ticket\": \"<string>\",\n    \"policy_version\": \"<integer>\"\n  },\n  \"event_id\": \"<string>\",\n  \"dc_id\": \"<string>\",\n  \"field\": {\n    \"filename\": \"<string>\",\n    \"filepath\": \"<string>\",\n    \"md5_hash\": \"<string>\",\n    \"is_password_protected\": \"<boolean>\",\n    \"is_hidden\": \"<boolean>\",\n    \"is_compressed\": \"<boolean>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "37df0fc0-f395-4a00-b1c4-3125bcbea663",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "analyse",
+                    "expression",
+                    "classification"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"rule_version\": {\n    \"cond_ticket\": \"2a563efd44b89f56d69e615c8eda4363\",\n    \"cond_version\": 15,\n    \"dc_ticket\": \"2a563efd44b89f56d69e615c8eda4363\",\n    \"dc_version\": 174,\n    \"filetype_version\": 34,\n    \"im_version\": 63,\n    \"policy_ticket\": \"027af9e67223aeb02434251c1dc8bc4b\",\n    \"policy_version\": 283\n  },\n  \"event_id\": \"7c708b6c-8e94-4fa3-b71a-9025c26e2a20\",\n  \"dc_id\": \"f42cba49-cd9a-485f-897a-d118c4b24765\",\n  \"field\": {\n    \"filename\": \"file_flow_05.docx\",\n    \"filepath\": \"/Users/wenghuangge/Desktop/文件加解密/file_flow_05.docx\",\n    \"md5_hash\": \"a7b0a40dc540c02eb4142e159e7ba39f\",\n    \"is_password_protected\": false,\n    \"is_hidden\": false,\n    \"is_compressed\": false\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\\n    \\\"code\\\": 0,\\n    \\\"msg\\\": \\\"success\\\",\\n    \\\"data\\\": {\\n        \\\"name\\\": \\\"whg_class\\\",\\n        \\\"inner_hits\\\": [\\n            \\\"薮猫科技\\\"\\n        ],\\n        \\\"uid\\\": \\\"f42cba49-cd9a-485f-897a-d118c4b24765\\\",\\n        \\\"expression_relation\\\": \\\"logic\\\",\\n        \\\"expression\\\": \\\"A  ||  B\\\",\\n        \\\"expression_fields\\\": [\\n            {\\n                \\\"field\\\": \\\"file_content\\\",\\n                \\\"value\\\": [\\n                    \\\"薮猫科技\\\"\\n                ],\\n                \\\"choice\\\": 1,\\n                \\\"category\\\": \\\"condition\\\",\\n                \\\"operator\\\": \\\"atleast_contains\\\",\\n                \\\"frequency\\\": 1,\\n                \\\"operator_display\\\": \\\"包含(字符串)\\\",\\n                \\\"field_display\\\": \\\"文件内容\\\",\\n                \\\"value_display\\\": [\\n                    {\\n                        \\\"id\\\": 1814,\\n                        \\\"uid\\\": \\\"a2d0fe2e-6da3-4e56-be79-b473f65833f2\\\",\\n                        \\\"name\\\": \\\"薮猫科技\\\",\\n                        \\\"category\\\": \\\"keywords\\\",\\n                        \\\"ticket\\\": \\\"f436477933f2c884e6a77c0e0b9cbea8\\\",\\n                        \\\"value\\\": [\\n                            \\\"薮猫科技\\\"\\n                        ],\\n                        \\\"hit_count\\\": 2,\\n                        \\\"left_value\\\": [\\n                            2\\n                        ]\\n                    }\\n                ],\\n                \\\"is_green\\\": true,\\n                \\\"hit_objects\\\": [\\n                    {\\n                        \\\"uid\\\": \\\"a2d0fe2e-6da3-4e56-be79-b473f65833f2\\\",\\n                        \\\"id\\\": 1814,\\n                        \\\"name\\\": \\\"薮猫科技\\\",\\n                        \\\"category\\\": \\\"keywords\\\",\\n                        \\\"ticket\\\": \\\"f436477933f2c884e6a77c0e0b9cbea8\\\",\\n                        \\\"value\\\": [\\n                            \\\"薮猫科技\\\"\\n                        ]\\n                    }\\n                ],\\n                \\\"left_value\\\": [\\n                    2\\n                ],\\n                \\\"content_hits\\\": [\\n                    {\\n                        \\\"position\\\": [\\n                            0,\\n                            57\\n                        ],\\n                        \\\"content\\\": \\\"薮猫科技，，，，，，薮猫科技。，，，，\\\",\\n                        \\\"inner_hits\\\": [\\n                            {\\n                                \\\"position\\\": [\\n                                    0,\\n                                    12\\n                                ],\\n                                \\\"context_positions\\\": [\\n                                    0,\\n                                    39\\n                                ],\\n                                \\\"key\\\": \\\"薮猫科技\\\",\\n                                \\\"uid\\\": \\\"a2d0fe2e-6da3-4e56-be79-b473f65833f2\\\",\\n                                \\\"name\\\": \\\"薮猫科技\\\",\\n                                \\\"category\\\": \\\"keywords\\\",\\n                                \\\"start\\\": 0,\\n                                \\\"end\\\": 4\\n                            },\\n                            {\\n                                \\\"position\\\": [\\n                                    30,\\n                                    42\\n                                ],\\n                                \\\"context_positions\\\": [\\n                                    0,\\n                                    57\\n                                ],\\n                                \\\"key\\\": \\\"薮猫科技\\\",\\n                                \\\"uid\\\": \\\"a2d0fe2e-6da3-4e56-be79-b473f65833f2\\\",\\n                                \\\"name\\\": \\\"薮猫科技\\\",\\n                                \\\"category\\\": \\\"keywords\\\",\\n                                \\\"start\\\": 10,\\n                                \\\"end\\\": 14\\n                            }\\n                        ]\\n                    }\\n                ],\\n                \\\"_index\\\": \\\"A\\\"\\n            },\\n            {\\n                \\\"field\\\": \\\"metasource\\\",\\n                \\\"value\\\": [\\n                    \\\"456\\\",\\n                    \\\"duide\\\"\\n                ],\\n                \\\"choice\\\": 1,\\n                \\\"category\\\": \\\"metasources\\\",\\n                \\\"operator\\\": \\\"listcontains\\\",\\n                \\\"frequency\\\": 1,\\n                \\\"operator_display\\\": \\\"属于\\\",\\n                \\\"field_display\\\": \\\"数据来源\\\",\\n                \\\"value_display\\\": [\\n                    {\\n                        \\\"id\\\": 21,\\n                        \\\"uid\\\": \\\"15106dfe-20e4-4609-ad8a-8ae71ea3cf8a\\\",\\n                        \\\"name\\\": \\\"456\\\",\\n                        \\\"display_name\\\": \\\"456\\\",\\n                        \\\"description\\\": \\\"\\\",\\n                        \\\"category\\\": \\\"code_repo\\\",\\n                        \\\"source\\\": null,\\n                        \\\"options\\\": {\\n                            \\\"code_repo\\\": {\\n                                \\\"git\\\": {\\n                                    \\\"left\\\": \\\"repo\\\",\\n                                    \\\"value\\\": [\\n                                        \\\"44444\\\"\\n                                    ],\\n                                    \\\"checked\\\": true,\\n                                    \\\"operator\\\": \\\"contains\\\"\\n                                },\\n                                \\\"svn\\\": {\\n                                    \\\"left\\\": \\\"repo\\\",\\n                                    \\\"value\\\": [\\n                                        \\\"44444\\\"\\n                                    ],\\n                                    \\\"checked\\\": true,\\n                                    \\\"operator\\\": \\\"str_contains\\\"\\n                                }\\n                            }\\n                        },\\n                        \\\"mask\\\": 1,\\n                        \\\"is_hit\\\": true\\n                    },\\n                    {\\n                        \\\"id\\\": 18,\\n                        \\\"uid\\\": \\\"a06a68e5-4d9e-4184-9ab7-b6781b1b6c2a\\\",\\n                        \\\"name\\\": \\\"duide\\\",\\n                        \\\"display_name\\\": \\\"对的\\\",\\n                        \\\"description\\\": null,\\n                        \\\"category\\\": \\\"app\\\",\\n                        \\\"source\\\": \\\"default\\\",\\n                        \\\"options\\\": {\\n                            \\\"app\\\": [\\n                                {\\n                                    \\\"key\\\": \\\"0\\\",\\n                                    \\\"family\\\": \\\"Windows\\\",\\n                                    \\\"options\\\": [\\n                                        {\\n                                            \\\"key\\\": \\\"1700311341950\\\",\\n                                            \\\"field\\\": \\\"process_name\\\",\\n                                            \\\"value\\\": \\\"ee.exe\\\"\\n                                        }\\n                                    ],\\n                                    \\\"software_name\\\": \\\"发发11111\\\",\\n                                    \\\"software_type\\\": \\\"im\\\"\\n                                }\\n                            ]\\n                        },\\n                        \\\"mask\\\": 0,\\n                        \\\"is_hit\\\": false\\n                    }\\n                ],\\n                \\\"is_green\\\": true,\\n                \\\"hit_objects\\\": [\\n                    {\\n                        \\\"id\\\": 21,\\n                        \\\"uid\\\": \\\"15106dfe-20e4-4609-ad8a-8ae71ea3cf8a\\\",\\n                        \\\"name\\\": \\\"456\\\",\\n                        \\\"display_name\\\": \\\"456\\\",\\n                        \\\"description\\\": \\\"\\\",\\n                        \\\"category\\\": \\\"code_repo\\\",\\n                        \\\"source\\\": null,\\n                        \\\"options\\\": {\\n                            \\\"code_repo\\\": {\\n                                \\\"git\\\": {\\n                                    \\\"left\\\": \\\"repo\\\",\\n                                    \\\"value\\\": [\\n                                        \\\"44444\\\"\\n                                    ],\\n                                    \\\"checked\\\": true,\\n                                    \\\"operator\\\": \\\"contains\\\"\\n                                },\\n                                \\\"svn\\\": {\\n                                    \\\"left\\\": \\\"repo\\\",\\n                                    \\\"value\\\": [\\n                                        \\\"44444\\\"\\n                                    ],\\n                                    \\\"checked\\\": true,\\n                                    \\\"operator\\\": \\\"str_contains\\\"\\n                                }\\n                            }\\n                        },\\n                        \\\"mask\\\": 1,\\n                        \\\"is_hit\\\": true\\n                    }\\n                ],\\n                \\\"left_value\\\": [\\n                    \\\"456\\\"\\n                ],\\n                \\\"_index\\\": \\\"B\\\"\\n            }\\n        ],\\n        \\\"data_level_name\\\": \\\"保密数据\\\",\\n        \\\"rule_code\\\": \\\"rdc_37813\\\",\\n        \\\"data_level\\\": 3\\n    }\\n}\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "219f05ce-ae71-43fa-b2da-ae776381d5c9",
+    "name": "APISec Management account analyse/expression/classification API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

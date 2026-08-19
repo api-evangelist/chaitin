@@ -1,0 +1,254 @@
+{
+  "item": [
+    {
+      "id": "1bd478ad-e179-459f-8ea7-a2cf41b6ac0e",
+      "name": "whitelist/email/bulkcreate",
+      "description": {
+        "content": "白名单管理/邮件/批量创建",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8c357c75-b244-4b96-ada5-21d245413ba4",
+          "name": "邮件白名单批量创建",
+          "request": {
+            "name": "邮件白名单批量创建",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "whitelist",
+                "email",
+                "bulkcreate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": [\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"value_list\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"value_list\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "36e16826-4d7b-4d7e-9c96-bf9695a41552",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "whitelist",
+                    "email",
+                    "bulkcreate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "search",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"name\": \"name2\",\n      \"description\": \"string\",\n      \"value_list\": [\n        \"av_scan\",\n        \"qwe\"\n      ]\n    },\n    {\n      \"name\": \"name3\",\n      \"description\": \"string\",\n      \"value_list\": [\n        \"av_scan\",\n        \"ewq\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": [\n    {\n      \"update_time\": \"2024-08-04T13:17:34.480264Z\",\n      \"uid\": \"3693878e-31cf-48b8-b13f-f6dbc104b012\",\n      \"name\": \"name2\",\n      \"description\": \"string\",\n      \"create_time\": \"2024-08-04T13:17:34.480234Z\",\n      \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n      \"update_by_id\": \"2834ded5-b1c5-49ff-9655-3d4cc842e2b7\",\n      \"create_by_id\": \"2834ded5-b1c5-49ff-9655-3d4cc842e2b7\",\n      \"id\": 4,\n      \"value_list\": [\n        \"av_scan\",\n        \"qwe\"\n      ]\n    },\n    {\n      \"update_time\": \"2024-08-04T13:17:34.517077Z\",\n      \"uid\": \"75c3f854-353c-488b-9e07-9e74ea64e094\",\n      \"name\": \"name3\",\n      \"description\": \"string\",\n      \"create_time\": \"2024-08-04T13:17:34.517040Z\",\n      \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n      \"update_by_id\": \"2834ded5-b1c5-49ff-9655-3d4cc842e2b7\",\n      \"create_by_id\": \"2834ded5-b1c5-49ff-9655-3d4cc842e2b7\",\n      \"id\": 5,\n      \"value_list\": [\n        \"av_scan\",\n        \"ewq\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "bc770bf1-daaf-4827-bc5d-678c9e8f8ad5",
+    "name": "APISec Management account whitelist/email/bulkcreate API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -2,13 +2,11 @@ generated: '2026-07-18'
 method: derived
 status: candidate
 source: openapi/chaitin-safeline-openapi-original.json
-notes: >-
-  Chaitin ships no official hosted MCP server. It does publish an agent-native
-  surface: the chaitin-cli Agent Skill (npx bzskills add chaitin/chaitin-cli)
-  and OctoBus (github.com/chaitin/OctoBus), "a secure local gateway for AI
-  agents to reliably call approved enterprise APIs, tools, and services." The
-  tool list below is a candidate derived from the SafeLine WAF Open API
-  operations (one tool per operation) as a starting point for an MCP server.
+notes: 'Chaitin ships no official hosted MCP server. It does publish an agent-native surface: the chaitin-cli
+  Agent Skill (npx bzskills add chaitin/chaitin-cli) and OctoBus (github.com/chaitin/OctoBus), "a secure
+  local gateway for AI agents to reliably call approved enterprise APIs, tools, and services." The tool
+  list below is a candidate derived from the SafeLine WAF Open API operations (one tool per operation)
+  as a starting point for an MCP server.'
 related:
   agent_skill: skills/chaitin-cli-SKILL.md
   octobus: https://github.com/chaitin/OctoBus
@@ -44,3 +42,9 @@ tools:
 - name: get_attack_logs
   description: Retrieve attack logs / detection records.
   source_operation: openapi/chaitin-safeline-openapi-original.json#GET /open/records
+deployment:
+  mode: none
+  verified: derived
+  tools: 9
+  checked: '2026-08-12'
+  source: catalog MCP census

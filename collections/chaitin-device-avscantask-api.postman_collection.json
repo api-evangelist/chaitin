@@ -1,0 +1,220 @@
+{
+  "item": [
+    {
+      "id": "9eeb8c17-944b-4c51-9c00-ac2bb4ff5804",
+      "name": "device/avscantask",
+      "description": {
+        "content": "终端管理/杀毒扫描任务",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "34349f25-2e51-4296-a5ba-39d075603ed9",
+          "name": "创建任务",
+          "request": {
+            "name": "创建任务",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "device",
+                "avscantask"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"file_scan_mode\": \"<string>\",\n  \"scope\": \"<string>\",\n  \"scan_mode\": \"<string>\",\n  \"dirs_scan_options\": {\n    \"Windows\": [\n      {\n        \"path\": \"<string>\"\n      },\n      {\n        \"path\": \"<string>\"\n      }\n    ],\n    \"macOS\": [\n      {\n        \"path\": \"<string>\"\n      },\n      {\n        \"path\": \"<string>\"\n      }\n    ],\n    \"Linux\": [\n      {\n        \"path\": \"<string>\"\n      },\n      {\n        \"path\": \"<string>\"\n      }\n    ],\n    \"Kylin\": [\n      {\n        \"path\": \"<string>\"\n      },\n      {\n        \"path\": \"<string>\"\n      }\n    ],\n    \"UOS\": [\n      {\n        \"path\": \"<string>\"\n      },\n      {\n        \"path\": \"<string>\"\n      }\n    ]\n  },\n  \"file_size_lower_measure\": \"<string>\",\n  \"file_size_lower\": \"<integer>\",\n  \"file_size_upper_measure\": \"<string>\",\n  \"file_size_upper\": \"<integer>\",\n  \"advanced_option\": \"<boolean>\",\n  \"file_type_included\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"binding_config\": {\n    \"source\": \"<string>\",\n    \"include\": {\n      \"device_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    \"exclude\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "42b149bb-0494-4a30-8acf-045535e07ca4",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "device",
+                    "avscantask"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"12321321312\",\n  \"file_scan_mode\": \"low_disturb\",\n  \"scope\": \"common\",\n  \"scan_mode\": \"custom\",\n  \"dirs_scan_options\": {\n    \"Windows\": [\n      {\n        \"path\": \"C:\\\\Users\"\n      },\n      {\n        \"path\": \"D:\\\\\"\n      },\n      {\n        \"path\": \"E:\\\\\"\n      }\n    ],\n    \"macOS\": [\n      {\n        \"path\": \"/Library\"\n      },\n      {\n        \"path\": \"/Users\"\n      },\n      {\n        \"path\": \"/private\"\n      },\n      {\n        \"path\": \"/Volumes\"\n      }\n    ],\n    \"Linux\": [\n      {\n        \"path\": \"/home\"\n      },\n      {\n        \"path\": \"/data\"\n      }\n    ],\n    \"Kylin\": [\n      {\n        \"path\": \"/home\"\n      },\n      {\n        \"path\": \"/data\"\n      }\n    ],\n    \"UOS\": [\n      {\n        \"path\": \"/home\"\n      },\n      {\n        \"path\": \"/data\"\n      }\n    ]\n  },\n  \"file_size_lower_measure\": \"MB\",\n  \"file_size_lower\": 0,\n  \"file_size_upper_measure\": \"MB\",\n  \"file_size_upper\": 100,\n  \"advanced_option\": false,\n  \"file_type_included\": [\n    \"compressed\"\n  ],\n  \"binding_config\": {\n    \"source\": \"av_scan\",\n    \"include\": {\n      \"device_ids\": [\n        \"d1247921-d4fd-4f6c-9f62-504684f8f288\",\n        \"1c16c892-242c-467c-add4-8ab0f00f26e9\"\n      ]\n    },\n    \"exclude\": {}\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 3465,\n  \"msg\": \"string\",\n  \"data\": {\n    \"id\": 1696,\n    \"category\": \"string\",\n    \"store_size\": 2857,\n    \"policy_mask\": 9711,\n    \"create_time\": \"string\",\n    \"create_by_id\": \"string\",\n    \"update_by_id\": \"string\",\n    \"expand\": {},\n    \"sn\": \"string\",\n    \"store_uint\": \"string\",\n    \"update_time\": \"string\",\n    \"code\": \"string\",\n    \"latest_used_staff_id\": null,\n    \"description\": null,\n    \"company_id\": \"string\",\n    \"latest_used_device_id\": null,\n    \"uid\": \"string\",\n    \"brand\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e3e3e61b-54de-4e69-bbf9-02f6d05575ae",
+    "name": "APISec Management account device/avscantask API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

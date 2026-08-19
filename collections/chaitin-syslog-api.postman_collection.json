@@ -1,0 +1,962 @@
+{
+  "item": [
+    {
+      "id": "175a200a-01fd-4f8c-bf20-fa3ffc4c5e6f",
+      "name": "Syslog 管理与系统日志",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "01c96416-ba47-4b69-98c8-ba9af04f1043",
+          "name": "syslog配置列表",
+          "request": {
+            "name": "syslog配置列表",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "log",
+                "syslog",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"limit\": \"<integer>\",\n  \"offset\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0e66b3eb-312b-4097-9d20-f0228ad4deb1",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "log",
+                    "syslog",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"limit\": \"<integer>\",\n  \"offset\": 0\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total\": 2636,\n  \"data\": [\n    {\n      \"id\": 5028,\n      \"host\": \"string\",\n      \"port\": 62650,\n      \"encoding\": \"string\",\n      \"socket_type\": \"string\",\n      \"honeypot_event\": false,\n      \"scanner_event\": false,\n      \"portrait_event\": false,\n      \"ping_event\": false,\n      \"arp_event\": true,\n      \"docker_escape\": true,\n      \"agent_status\": true,\n      \"format\": \"rfc5424\",\n      \"is_base64_decode\": false,\n      \"time_diff\": 0\n    },\n    {\n      \"id\": 5839,\n      \"host\": \"string\",\n      \"port\": 28029,\n      \"encoding\": \"string\",\n      \"socket_type\": \"string\",\n      \"honeypot_event\": false,\n      \"scanner_event\": false,\n      \"portrait_event\": true,\n      \"ping_event\": true,\n      \"arp_event\": true,\n      \"docker_escape\": false,\n      \"agent_status\": true,\n      \"format\": \"rfc5424\",\n      \"is_base64_decode\": false,\n      \"time_diff\": 0\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "681fbd0b-3049-4822-9d59-82385ef69aee",
+          "name": "删除syslog配置信息",
+          "request": {
+            "name": "删除syslog配置信息",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "log",
+                "syslog",
+                "delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d1b285dc-7499-4ed7-b08d-00bfaefefea6",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "log",
+                    "syslog",
+                    "delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "18c48212-6a0f-46fb-a0cb-fa53005f9a8a",
+          "name": "添加syslog配置信息",
+          "request": {
+            "name": "添加syslog配置信息",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "log",
+                "syslog",
+                "add"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"host\": \"<string>\",\n  \"port\": \"<integer>\",\n  \"encoding\": \"<string>\",\n  \"honeypot_event\": \"<boolean>\",\n  \"scanner_event\": \"<boolean>\",\n  \"ping_event\": \"<boolean>\",\n  \"portrait_event\": \"<boolean>\",\n  \"arp_event\": \"<boolean>\",\n  \"docker_escape\": \"<boolean>\",\n  \"agent_status\": \"<boolean>\",\n  \"socket_type\": \"<string>\",\n  \"format\": \"rfc5424\",\n  \"is_base64_decode\": false,\n  \"time_diff\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0cf27d0b-d07e-4175-bf1b-3ed0b22173b8",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "log",
+                    "syslog",
+                    "add"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"host\": \"<string>\",\n  \"port\": \"<integer>\",\n  \"encoding\": \"<string>\",\n  \"honeypot_event\": \"<boolean>\",\n  \"scanner_event\": \"<boolean>\",\n  \"ping_event\": \"<boolean>\",\n  \"portrait_event\": \"<boolean>\",\n  \"arp_event\": \"<boolean>\",\n  \"docker_escape\": \"<boolean>\",\n  \"agent_status\": \"<boolean>\",\n  \"socket_type\": \"<string>\",\n  \"format\": \"rfc5424\",\n  \"is_base64_decode\": false,\n  \"time_diff\": 0\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 2459\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c28cba34-777f-465e-a992-242d65741362",
+          "name": "修改syslog配置信息",
+          "request": {
+            "name": "修改syslog配置信息",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "log",
+                "syslog",
+                "modify"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"host\": \"<string>\",\n  \"port\": \"<integer>\",\n  \"encoding\": \"<string>\",\n  \"socket_type\": \"<string>\",\n  \"honeypot_event\": \"<boolean>\",\n  \"scanner_event\": \"<boolean>\",\n  \"portrait_event\": \"<boolean>\",\n  \"ping_event\": \"<boolean>\",\n  \"arp_event\": \"<boolean>\",\n  \"docker_escape\": \"<boolean>\",\n  \"agent_status\": \"<boolean>\",\n  \"format\": \"rfc5424\",\n  \"is_base64_decode\": false,\n  \"time_diff\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ccdd93e4-219c-4eb5-ac63-6e7ec9a38c7a",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "log",
+                    "syslog",
+                    "modify"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"host\": \"<string>\",\n  \"port\": \"<integer>\",\n  \"encoding\": \"<string>\",\n  \"socket_type\": \"<string>\",\n  \"honeypot_event\": \"<boolean>\",\n  \"scanner_event\": \"<boolean>\",\n  \"portrait_event\": \"<boolean>\",\n  \"ping_event\": \"<boolean>\",\n  \"arp_event\": \"<boolean>\",\n  \"docker_escape\": \"<boolean>\",\n  \"agent_status\": \"<boolean>\",\n  \"format\": \"rfc5424\",\n  \"is_base64_decode\": false,\n  \"time_diff\": 0\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c1ad0ba6-0701-4f48-b969-4e32d65168df",
+          "name": "kafka配置列表",
+          "request": {
+            "name": "kafka配置列表",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "log",
+                "kafka",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"limit\": \"<integer>\",\n  \"offset\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5dbf5f35-d628-4826-9fce-2581145d2d66",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "log",
+                    "kafka",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"limit\": \"<integer>\",\n  \"offset\": 0\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total\": 5572,\n  \"data\": [\n    {\n      \"topic_name\": \"string\",\n      \"host\": \"string\",\n      \"port\": 29460,\n      \"encoding\": \"UTF-8\",\n      \"ack_type\": \"wait_leader\",\n      \"config\": [\n        \"arp\",\n        \"arp\"\n      ],\n      \"id\": 9287,\n      \"password\": \"\",\n      \"username\": \"\"\n    },\n    {\n      \"topic_name\": \"string\",\n      \"host\": \"string\",\n      \"port\": 8204,\n      \"encoding\": \"GBK\",\n      \"ack_type\": \"wait_all\",\n      \"config\": [\n        \"arp\",\n        \"arp\"\n      ],\n      \"id\": 4128,\n      \"password\": \"\",\n      \"username\": \"\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8250e050-1324-4104-b960-2a01458fbf22",
+          "name": "删除kafka配置信息",
+          "request": {
+            "name": "删除kafka配置信息",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "log",
+                "kafka",
+                "delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "891cc39e-56c9-4b87-b23f-ac0974549ec2",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "log",
+                    "kafka",
+                    "delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "afe23a0f-2694-4be6-b213-386519e11d99",
+          "name": "添加kafka配置信息",
+          "request": {
+            "name": "添加kafka配置信息",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "log",
+                "kafka",
+                "add"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"topic_name\": \"<string>\",\n  \"host\": \"<string>\",\n  \"port\": \"<integer>\",\n  \"encoding\": \"<string>\",\n  \"ack_type\": \"<string>\",\n  \"config\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<integer>\",\n  \"password\": \"\",\n  \"username\": \"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2dfe826f-bed3-4307-828d-d389d93b968a",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "log",
+                    "kafka",
+                    "add"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"topic_name\": \"<string>\",\n  \"host\": \"<string>\",\n  \"port\": \"<integer>\",\n  \"encoding\": \"<string>\",\n  \"ack_type\": \"<string>\",\n  \"config\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<integer>\",\n  \"password\": \"\",\n  \"username\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 2568\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9651d5d9-b423-4971-befb-2fe1eee98c3c",
+          "name": "修改kafka配置信息",
+          "request": {
+            "name": "修改kafka配置信息",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "log",
+                "kafka",
+                "modify"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"topic_name\": \"<string>\",\n  \"host\": \"<string>\",\n  \"port\": \"<integer>\",\n  \"encoding\": \"<string>\",\n  \"ack_type\": \"<string>\",\n  \"config\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<integer>\",\n  \"password\": \"\",\n  \"username\": \"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5ee85912-527f-4cb1-913a-be6182b4db19",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "log",
+                    "kafka",
+                    "modify"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"topic_name\": \"<string>\",\n  \"host\": \"<string>\",\n  \"port\": \"<integer>\",\n  \"encoding\": \"<string>\",\n  \"ack_type\": \"<string>\",\n  \"config\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"<integer>\",\n  \"password\": \"\",\n  \"username\": \"\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b589bcdf-3a26-418f-b374-4261d7dc947d",
+          "name": "系统日志的列表信息",
+          "request": {
+            "name": "系统日志的列表信息",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "log",
+                "system_log",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"limit\": \"<integer>\",\n  \"not_after\": \"<dateTime>\",\n  \"not_before\": \"<dateTime>\",\n  \"offset\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "497f0391-a6a0-498b-8b6c-48458241b06e",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "log",
+                    "system_log",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"limit\": \"<integer>\",\n  \"not_after\": \"<dateTime>\",\n  \"not_before\": \"<dateTime>\",\n  \"offset\": 0\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"err\": \"\",\n  \"msg\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3dd6aed2-cab9-476b-8ac4-adfbc4de7d56",
+          "name": "删除系统日志的列表信息",
+          "request": {
+            "name": "删除系统日志的列表信息",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "log",
+                "system_log",
+                "delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"not_after\": \"<dateTime>\",\n  \"not_before\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "943fff58-dba2-4e6d-9a3f-0fe16ced2647",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "log",
+                    "system_log",
+                    "delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"not_after\": \"<dateTime>\",\n  \"not_before\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"success\": true\n  },\n  \"err\": \"\",\n  \"msg\": \"\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a1c6e820-72e0-4e35-912f-26dc38167805",
+    "name": "APISec Management account Syslog 管理与系统日志 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

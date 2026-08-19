@@ -1,0 +1,222 @@
+{
+  "item": [
+    {
+      "id": "90f7bcb3-d3ac-48a5-a6fe-a7330a4d02b7",
+      "name": "policy/webpost_control/create",
+      "description": {
+        "content": "策略管理/网页发帖管控/创建",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "39099be4-ac7b-443f-87f2-0a8ab581b25c",
+          "name": "网页管控策略创建",
+          "request": {
+            "name": "网页管控策略创建",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "policy",
+                "webpost_control",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"scope\": \"<string>\",\n  \"period_category\": \"<string>\",\n  \"period_options\": {\n    \"period_hours_value\": [\n      {\n        \"begin\": \"<string>\",\n        \"end\": \"<string>\",\n        \"week\": \"<integer>\"\n      },\n      {\n        \"begin\": \"<string>\",\n        \"end\": \"<string>\",\n        \"week\": \"<integer>\"\n      }\n    ]\n  },\n  \"binding_config\": {\n    \"include\": {},\n    \"exclude\": {},\n    \"source\": \"<string>\"\n  },\n  \"control_action\": {\n    \"expression_fields\": [\n      {\n        \"left\": \"<string>\",\n        \"operator\": \"<string>\",\n        \"value\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"left\": \"<string>\",\n        \"operator\": \"<string>\",\n        \"value\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ]\n  },\n  \"action\": \"<string>\",\n  \"action_template_id\": \"<string>\",\n  \"checked_urls_options\": {\n    \"left\": \"<string>\",\n    \"operator\": \"<string>\",\n    \"value\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"detect_position\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "aae01df8-36bc-4a9f-bba3-c9af2240072a",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "policy",
+                    "webpost_control",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"策略名称\",\n  \"description\": \"网页管控策略描述\",\n  \"scope\": \"global\",\n  \"period_category\": \"permanent\",\n  \"period_options\": {\n    \"period_hours_value\": [\n      {\n        \"begin\": \"00:00\",\n        \"end\": \"23:59\",\n        \"week\": 1\n      },\n      {\n        \"begin\": \"00:00\",\n        \"end\": \"23:59\",\n        \"week\": 2\n      },\n      {\n        \"begin\": \"00:00\",\n        \"end\": \"23:59\",\n        \"week\": 3\n      },\n      {\n        \"begin\": \"00:00\",\n        \"end\": \"23:59\",\n        \"week\": 4\n      },\n      {\n        \"begin\": \"00:00\",\n        \"end\": \"23:59\",\n        \"week\": 5\n      },\n      {\n        \"begin\": \"00:00\",\n        \"end\": \"23:59\",\n        \"week\": 6\n      },\n      {\n        \"begin\": \"00:00\",\n        \"end\": \"23:59\",\n        \"week\": 7\n      },\n      {\n        \"begin\": \"01:00\",\n        \"end\": \"01:59\",\n        \"week\": 1\n      },\n      {\n        \"begin\": \"01:00\",\n        \"end\": \"01:59\",\n        \"week\": 2\n      },\n      {\n        \"begin\": \"01:00\",\n        \"end\": \"01:59\",\n        \"week\": 3\n      },\n      {\n        \"begin\": \"01:00\",\n        \"end\": \"01:59\",\n        \"week\": 4\n      },\n      {\n        \"begin\": \"01:00\",\n        \"end\": \"01:59\",\n        \"week\": 5\n      },\n      {\n        \"begin\": \"01:00\",\n        \"end\": \"01:59\",\n        \"week\": 6\n      },\n      {\n        \"begin\": \"01:00\",\n        \"end\": \"01:59\",\n        \"week\": 7\n      }\n    ]\n  },\n  \"binding_config\": {\n    \"include\": {\n      \"device_ids\": [],\n      \"device_tag_ids\": [],\n      \"staff_ids\": [],\n      \"staff_tag_ids\": [],\n      \"dept_ids\": []\n    },\n    \"exclude\": {},\n    \"source\": \"webpost_control\"\n  },\n  \"control_action\": {\n    \"expression_fields\": [\n      {\n        \"left\": \"XX\",\n        \"operator\": \"container\",\n        \"value\": [\n          \"XXXX\",\n          \"sdasdas\"\n        ]\n      }\n    ]\n  },\n  \"action\": \"notify\",\n  \"action_template_id\": \"3326c43103b6435da23b53af072a9d78\",\n  \"checked_urls_options\": {\n    \"left\": \"XX\",\n    \"operator\": \"container\",\n    \"value\": [\n      \"XXXX\",\n      \"sdasdas\"\n    ]\n  },\n  \"detect_position\": \"form_internal\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7d2937e0-1870-44ef-80a2-268e7fcdcc6e",
+    "name": "APISec Management account policy/webpost_control/create API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

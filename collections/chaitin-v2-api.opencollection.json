@@ -1,0 +1,547 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account 任务/任务实例v2 API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "任务/任务实例v2",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "任务实例列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/task/:task_type/instance",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "asset",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              },
+              {
+                "name": "page",
+                "value": "1",
+                "type": "query",
+                "description": "页码"
+              },
+              {
+                "name": "size",
+                "value": "20",
+                "type": "query",
+                "description": "分页大小"
+              },
+              {
+                "name": "task_status",
+                "value": "",
+                "type": "query",
+                "description": "任务状态"
+              },
+              {
+                "name": "query",
+                "value": "",
+                "type": "query",
+                "description": "搜索任务信息，任务名称、集群模糊搜索"
+              }
+            ]
+          },
+          "docs": "任务实例列表"
+        },
+        {
+          "info": {
+            "name": "任务实例创建（立即运行）",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/task/:task_type/instance",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "asset",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "任务实例创建（立即运行）"
+        },
+        {
+          "info": {
+            "name": "任务实例批量删除",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/v1/task/:task_type/instance/batch-delete",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "asset",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "任务实例批量删除"
+        },
+        {
+          "info": {
+            "name": "任务实例批量重跑、暂停",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/task/:task_type/instance/status",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "asset",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "任务实例批量重跑、暂停"
+        },
+        {
+          "info": {
+            "name": "任务实例状态数量",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/task/:task_type/instance/status/count",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "asset",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ]
+          },
+          "docs": "任务实例状态数量"
+        },
+        {
+          "info": {
+            "name": "任务实例查看",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/task/:task_type/instance/:id",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "asset",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "id",
+                "value": "1",
+                "type": "path",
+                "description": "任务ID"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ]
+          },
+          "docs": "任务实例查看"
+        },
+        {
+          "info": {
+            "name": "指纹分组选项",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/task/attack/schedule/xapp/options",
+            "params": [
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ]
+          },
+          "docs": "指纹分组选项"
+        },
+        {
+          "info": {
+            "name": "漏洞分组选项",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/task/risk/schedule/xpoc/options",
+            "params": [
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ]
+          },
+          "docs": "漏洞分组选项"
+        },
+        {
+          "info": {
+            "name": "周期任务列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/task/:task_type/schedule",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "asset",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              },
+              {
+                "name": "page",
+                "value": "1",
+                "type": "query",
+                "description": "页码"
+              },
+              {
+                "name": "size",
+                "value": "20",
+                "type": "query",
+                "description": "分页大小"
+              },
+              {
+                "name": "status",
+                "value": "enabled",
+                "type": "query",
+                "description": "状态"
+              },
+              {
+                "name": "query",
+                "value": "",
+                "type": "query",
+                "description": "任务名称，模糊搜索"
+              }
+            ]
+          },
+          "docs": "周期任务列表"
+        },
+        {
+          "info": {
+            "name": "周期任务创建",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/task/:task_type/schedule",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "asset",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "周期任务创建"
+        },
+        {
+          "info": {
+            "name": "周期任务批量删除",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/v1/task/:task_type/schedule/batch-delete",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "asset",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "周期任务批量删除"
+        },
+        {
+          "info": {
+            "name": "周期任务批量切换状态",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/task/:task_type/schedule/status",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "asset",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "周期任务批量切换状态"
+        },
+        {
+          "info": {
+            "name": "周期任务查看",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/task/:task_type/schedule/:id",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "任务ID"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ]
+          },
+          "docs": "周期任务查看"
+        },
+        {
+          "info": {
+            "name": "周期任务编辑",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "{{baseUrl}}/v1/task/:task_type/schedule/:id",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "asset",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "任务ID"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "周期任务编辑"
+        },
+        {
+          "info": {
+            "name": "编排实例列表",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/task/:task_type/flow",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "asset",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              },
+              {
+                "name": "task_id",
+                "value": "42",
+                "type": "query",
+                "description": "任务ID"
+              },
+              {
+                "name": "status",
+                "value": "",
+                "type": "query",
+                "description": "运行状态"
+              }
+            ]
+          },
+          "docs": "编排实例列表"
+        },
+        {
+          "info": {
+            "name": "编排实例批量重跑",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/task/:task_type/flow/reboot",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "asset",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "编排实例批量重跑"
+        },
+        {
+          "info": {
+            "name": "编排实例状态数量",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/task/:task_type/flow/status/count",
+            "params": [
+              {
+                "name": "task_type",
+                "value": "asset",
+                "type": "path",
+                "description": "任务类型"
+              },
+              {
+                "name": "space",
+                "value": "1",
+                "type": "query",
+                "description": "空间ID"
+              },
+              {
+                "name": "task_id",
+                "value": "42",
+                "type": "query",
+                "description": "任务ID"
+              }
+            ]
+          },
+          "docs": "编排实例状态数量"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

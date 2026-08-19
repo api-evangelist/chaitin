@@ -1,0 +1,112 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account backup API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "backup",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /api/BackupDownloadAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/BackupDownloadAPI",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "ID"
+              }
+            ]
+          },
+          "docs": "GET /api/BackupDownloadAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/BackupRecordAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/BackupRecordAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/BackupRecordAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/BackupRecordAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/BackupRecordAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/BackupRecordAPI"
+        },
+        {
+          "info": {
+            "name": "DELETE /api/BackupRecordAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/BackupRecordAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "DELETE /api/BackupRecordAPI"
+        },
+        {
+          "info": {
+            "name": "PUT /api/RestoreBackupRecordAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/RestoreBackupRecordAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "PUT /api/RestoreBackupRecordAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/UploadBackupRecordAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/UploadBackupRecordAPI",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/UploadBackupRecordAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

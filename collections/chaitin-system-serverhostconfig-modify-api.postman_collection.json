@@ -1,0 +1,294 @@
+{
+  "item": [
+    {
+      "id": "0d4153df-9782-4b3a-b28a-ec3c572655f8",
+      "name": "system/serverhostconfig/modify",
+      "description": {
+        "content": "系统配置/服务主机配置/修改",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "236256db-37a4-4e02-ad79-3ce07f16da9c",
+          "name": "修改server地址配置",
+          "request": {
+            "name": "修改server地址配置",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "system",
+                "serverhostconfig",
+                "modify"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "priority",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "x-cs-header-app",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "x-cs-header-company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "x-cs-header-module",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "x-cs-header-timezone",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Cookie",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"addresses\": [\n    {\n      \"scheme\": \"<string>\",\n      \"host\": \"<string>\",\n      \"port\": \"<integer>\",\n      \"is_active\": \"<boolean>\"\n    },\n    {\n      \"scheme\": \"<string>\",\n      \"host\": \"<string>\",\n      \"port\": \"<integer>\",\n      \"is_active\": \"<boolean>\"\n    }\n  ],\n  \"operation\": \"<string>\",\n  \"full_addr\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "fa10c969-4d61-4f0a-b80d-4ce996e9b26a",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "system",
+                    "serverhostconfig",
+                    "modify"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "priority",
+                    "value": "u=1, i"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-cs-header-app",
+                    "value": "qzh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-cs-header-company",
+                    "value": "eeff7c64-5070-4582-8b93-fbcc57db7771"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-cs-header-module",
+                    "value": "safety-protect/browser-control/browser-plugin"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "x-cs-header-timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Cookie",
+                    "value": "csrftoken=Pi942VNEP2gusnNinEyv8l3zJlRFnbNp; sid=Fe26.2**4cae0757e52359f1a17e8eb23b1b34c467e927a62a74bee3d61132d876295583*YMOJlirdWSIcliJK9ImtMg*YM5eBt0W6Qs6uQadWaNQ3Q7MMuHmHfIvX47xZ2ohe0RIJKlJZ05LqcsGP3gfxOBZ4JATFrCah4INz4z8PW6-kg4WMdd8lubcER5F3ADRc3DzMYDLrwTi9eHDuyEK3dIoEqIyC36zNOIX7vSbQTJoieflKQNPDHTA-kNHmOy1r8LG-C0Rim8xLkpcXhWMuY5_t76VCVYMRtoi5Z2_-mYX0UkINpRF7m34YdftRiwHRC8**087610b7d1e93e639f44aab457e97b074d7dbf303dfe557d6d9ba83b7a95ab73*5Ugwia8-iEOGhuUyG4pdF_MLVsTnHz86vMrv4F3HAL4"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"addresses\": [\n    {\n      \"scheme\": \"https\",\n      \"host\": \"example.com\",\n      \"port\": 8443,\n      \"is_active\": true\n    },\n    {\n      \"scheme\": \"http\",\n      \"host\": \"test.example.com\",\n      \"port\": 8233,\n      \"is_active\": false\n    }\n  ],\n  \"operation\": \"add/edit/delete\",\n  \"full_addr\": \"http://example.com:8443\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"正常\",\n  \"data\": {\n    \"uid\": \"1affc220-2964-45f9-9d91-a1bd2448bbcd\",\n    \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n    \"name\": \"notification_address_config\",\n    \"display_name\": \"通知地址配置\",\n    \"description\": \"通知地址配置\",\n    \"create_time\": \"2025-07-23T07:04:05.926203Z\",\n    \"update_time\": \"2025-08-14T12:45:20.733272Z\",\n    \"config\": {\n      \"addresses\": [\n        {\n          \"port\": 8443,\n          \"address\": \"example.com\",\n          \"protocol\": \"https\",\n          \"is_active\": true\n        },\n        {\n          \"port\": 823380,\n          \"address\": \"test.example.com\",\n          \"protocol\": \"http\",\n          \"is_active\": false\n        }\n      ]\n    },\n    \"_old_data\": {\n      \"update_time\": \"2025-08-14T12:45:20.733272Z\",\n      \"name\": \"notification_address_config\",\n      \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n      \"display_name\": \"通知地址配置\",\n      \"config\": {\n        \"addresses\": [\n          {\n            \"port\": 8443,\n            \"address\": \"example.com\",\n            \"protocol\": \"https\",\n            \"is_active\": true\n          },\n          {\n            \"port\": 823380,\n            \"address\": \"test.example.com\",\n            \"protocol\": \"http\",\n            \"is_active\": false\n          }\n        ]\n      },\n      \"uid\": \"1affc220-2964-45f9-9d91-a1bd2448bbcd\",\n      \"create_time\": \"2025-07-23T07:04:05.926203Z\",\n      \"id\": 37,\n      \"description\": \"通知地址配置\",\n      \"category\": \"general\",\n      \"update_by_id\": null,\n      \"create_by_id\": null\n    },\n    \"_new_data\": {\n      \"update_time\": \"2025-08-14T12:45:20.733272Z\",\n      \"name\": \"notification_address_config\",\n      \"company_id\": \"eeff7c64-5070-4582-8b93-fbcc57db7771\",\n      \"display_name\": \"通知地址配置\",\n      \"config\": {\n        \"addresses\": [\n          {\n            \"port\": 8443,\n            \"address\": \"example.com\",\n            \"protocol\": \"https\",\n            \"is_active\": true\n          },\n          {\n            \"port\": 823380,\n            \"address\": \"test.example.com\",\n            \"protocol\": \"http\",\n            \"is_active\": false\n          }\n        ]\n      },\n      \"uid\": \"1affc220-2964-45f9-9d91-a1bd2448bbcd\",\n      \"create_time\": \"2025-07-23T07:04:05.926203Z\",\n      \"id\": 37,\n      \"description\": \"通知地址配置\",\n      \"category\": \"general\",\n      \"update_by_id\": null,\n      \"create_by_id\": null\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "781af6d9-9229-463f-a1cc-e0a64be34529",
+    "name": "APISec Management account system/serverhostconfig/modify API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

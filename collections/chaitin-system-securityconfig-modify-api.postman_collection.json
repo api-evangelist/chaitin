@@ -1,0 +1,222 @@
+{
+  "item": [
+    {
+      "id": "dcd7894d-917a-436f-bc43-65a42577fa5e",
+      "name": "system/securityconfig/modify",
+      "description": {
+        "content": "系统配置/安全配置/修改",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ff6be7e1-4d17-4da0-b0e5-ff969dd31539",
+          "name": "安全防护配置Modify",
+          "request": {
+            "name": "安全防护配置Modify",
+            "description": {
+              "content": "[原接口文档](https://servaltech.feishu.cn/docx/NCxMdKr4moDlABxulxicMrItnpb)",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "system",
+                "securityconfig",
+                "modify"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"network_policy_config\": {\n    \"enable_host_control\": \"<boolean>\",\n    \"window_warning_interval\": \"<integer>\"\n  },\n  \"software_scan_config\": {\n    \"enable_cycle_scan\": \"<boolean>\",\n    \"cycle_duration\": \"<integer>\",\n    \"window_warning_interval\": \"<integer>\",\n    \"pirated_software_check\": \"<boolean>\"\n  },\n  \"im_policy_config\": {\n    \"qq\": {\n      \"enable\": \"<boolean>\"\n    },\n    \"wechat\": {\n      \"enable\": \"<boolean>\"\n    },\n    \"dingding\": {\n      \"enabled\": \"<boolean>\"\n    }\n  },\n  \"channel_policy_config\": {\n    \"compress_mode\": \"<string>\",\n    \"enable_screenshot\": \"<boolean>\",\n    \"screenshot_options\": {\n      \"front_screenshot_num\": \"<integer>\",\n      \"back_screenshot_num\": \"<integer>\",\n      \"compressed\": \"<boolean>\"\n    },\n    \"enable_browser_control\": \"<boolean>\",\n    \"enable_open_scan\": \"<boolean>\",\n    \"compress_options\": {\n      \"file_size_limit_in_mb\": \"<integer>\",\n      \"file_count_limit\": \"<integer>\",\n      \"compress_level\": \"<integer>\",\n      \"content_analysis_mode\": \"<string>\",\n      \"enable_decompress_encrypted\": \"<boolean>\"\n    },\n    \"enable_screen_recording\": \"<boolean>\",\n    \"screen_recording_options\": {\n      \"record_duration\": \"<integer>\",\n      \"compressed\": \"<boolean>\"\n    },\n    \"check_timeout_pass\": \"<integer>\",\n    \"parsing_large_file\": \"<integer>\",\n    \"enable_background_outgoing_control\": \"<boolean>\"\n  },\n  \"file_scan_config\": {\n    \"scan_batch_mode\": \"<string>\",\n    \"compress_mode\": \"<string>\",\n    \"compress_options\": {\n      \"content_analysis_mode\": \"<string>\",\n      \"enable_decompress_encrypted\": \"<boolean>\",\n      \"file_size_limit_in_mb\": \"<integer>\",\n      \"file_count_limit\": \"<integer>\",\n      \"compress_level\": \"<integer>\"\n    },\n    \"scan_batch_size\": \"<integer>\",\n    \"task_timeout_in_sec\": \"<integer>\",\n    \"task_timeout\": \"<string>\"\n  },\n  \"clipboard_config\": {\n    \"enable_full_log\": \"<boolean>\",\n    \"content_size_less\": {\n      \"size_in_bytes\": \"<integer>\",\n      \"unit\": \"<string>\",\n      \"size\": \"<integer>\"\n    }\n  },\n  \"advanced_config\": {\n    \"enable_win_safe_mode\": \"<boolean>\",\n    \"compress_mode\": \"<string>\",\n    \"enable_macos_hide_menubar\": \"<boolean>\",\n    \"compress_options\": {\n      \"content_analysis_mode\": \"<string>\",\n      \"enable_decompress_encrypted\": \"<boolean>\",\n      \"file_size_limit_in_mb\": \"<integer>\",\n      \"file_count_limit\": \"<integer>\",\n      \"compress_level\": \"<integer>\"\n    },\n    \"enable_ocr\": \"<boolean>\",\n    \"enable_hide_agent\": \"<boolean>\",\n    \"enable_nac_auth_gui\": \"<boolean>\",\n    \"ocr_options\": {\n      \"scan_mode\": \"<string>\"\n    },\n    \"enable_macos_self_protection\": \"<boolean>\",\n    \"enable_clipboard\": \"<boolean>\"\n  },\n  \"db_scan_config\": {\n    \"task_timeout_options\": {},\n    \"table_timeout_options\": {},\n    \"scan_batch_mode\": \"<string>\",\n    \"table_timeout\": \"<string>\",\n    \"scan_batch_options\": {},\n    \"task_timeout\": \"<string>\",\n    \"scan_mode\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "cc713abb-a4e6-4a7b-b829-f86744df9d12",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "system",
+                    "securityconfig",
+                    "modify"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"network_policy_config\": {\n    \"enable_host_control\": false,\n    \"window_warning_interval\": 600\n  },\n  \"software_scan_config\": {\n    \"enable_cycle_scan\": true,\n    \"cycle_duration\": 720,\n    \"window_warning_interval\": 60,\n    \"pirated_software_check\": true\n  },\n  \"im_policy_config\": {\n    \"qq\": {\n      \"enable\": false\n    },\n    \"wechat\": {\n      \"enable\": false\n    },\n    \"dingding\": {\n      \"enabled\": false\n    }\n  },\n  \"channel_policy_config\": {\n    \"compress_mode\": \"skip\",\n    \"enable_screenshot\": true,\n    \"screenshot_options\": {\n      \"front_screenshot_num\": 2,\n      \"back_screenshot_num\": 2,\n      \"compressed\": true\n    },\n    \"enable_browser_control\": true,\n    \"enable_open_scan\": true,\n    \"compress_options\": {\n      \"file_size_limit_in_mb\": 300,\n      \"file_count_limit\": 200,\n      \"compress_level\": 10,\n      \"content_analysis_mode\": \"intelligent\",\n      \"enable_decompress_encrypted\": false\n    },\n    \"enable_screen_recording\": false,\n    \"screen_recording_options\": {\n      \"record_duration\": 10,\n      \"compressed\": true\n    },\n    \"check_timeout_pass\": 10,\n    \"parsing_large_file\": 200,\n    \"enable_background_outgoing_control\": true\n  },\n  \"file_scan_config\": {\n    \"scan_batch_mode\": \"intelligent\",\n    \"compress_mode\": \"skip\",\n    \"compress_options\": {\n      \"content_analysis_mode\": \"intelligent\",\n      \"enable_decompress_encrypted\": false,\n      \"file_size_limit_in_mb\": 300,\n      \"file_count_limit\": 200,\n      \"compress_level\": 10\n    },\n    \"scan_batch_size\": 50,\n    \"task_timeout_in_sec\": 86400,\n    \"task_timeout\": \"intelligent\"\n  },\n  \"clipboard_config\": {\n    \"enable_full_log\": false,\n    \"content_size_less\": {\n      \"size_in_bytes\": 10240,\n      \"unit\": \"KB\",\n      \"size\": 10\n    }\n  },\n  \"advanced_config\": {\n    \"enable_win_safe_mode\": false,\n    \"compress_mode\": \"skip\",\n    \"enable_macos_hide_menubar\": false,\n    \"compress_options\": {\n      \"content_analysis_mode\": \"intelligent\",\n      \"enable_decompress_encrypted\": false,\n      \"file_size_limit_in_mb\": 300,\n      \"file_count_limit\": 200,\n      \"compress_level\": 10\n    },\n    \"enable_ocr\": true,\n    \"enable_hide_agent\": false,\n    \"enable_nac_auth_gui\": true,\n    \"ocr_options\": {\n      \"scan_mode\": \"cloud\"\n    },\n    \"enable_macos_self_protection\": true,\n    \"enable_clipboard\": true\n  },\n  \"db_scan_config\": {\n    \"task_timeout_options\": {},\n    \"table_timeout_options\": {},\n    \"scan_batch_mode\": \"intelligent\",\n    \"table_timeout\": \"intelligent\",\n    \"scan_batch_options\": {},\n    \"task_timeout\": \"intelligent\",\n    \"scan_mode\": \"moderate\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"advanced_config\": {\n      \"enable_win_safe_mode\": false,\n      \"enable_clipboard\": true,\n      \"compress_options\": {\n        \"content_analysis_mode\": \"intelligent\",\n        \"file_count_limit\": 200,\n        \"file_size_limit_in_mb\": 300,\n        \"enable_decompress_encrypted\": false,\n        \"compress_level\": 10\n      },\n      \"ocr_options\": {\n        \"scan_mode\": \"agent\"\n      },\n      \"enable_hide_agent\": false,\n      \"compress_mode\": \"skip\",\n      \"enable_macos_hide_menubar\": false,\n      \"enable_ocr\": true,\n      \"enable_macos_self_protection\": true\n    },\n    \"file_scan_config\": {\n      \"task_timeout\": \"intelligent\",\n      \"compress_options\": {\n        \"content_analysis_mode\": \"intelligent\",\n        \"file_count_limit\": 200,\n        \"file_size_limit_in_mb\": 300,\n        \"enable_decompress_encrypted\": false,\n        \"compress_level\": 10\n      },\n      \"scan_batch_size\": 50,\n      \"compress_mode\": \"skip\",\n      \"task_timeout_in_sec\": 86400,\n      \"scan_batch_mode\": \"custom\"\n    },\n    \"db_scan_config\": {\n      \"task_timeout\": \"intelligent\",\n      \"table_timeout_options\": {},\n      \"task_timeout_options\": {},\n      \"scan_batch_options\": {},\n      \"table_timeout\": \"intelligent\",\n      \"scan_mode\": \"moderate\",\n      \"scan_batch_mode\": \"intelligent\"\n    },\n    \"im_policy_config\": {\n      \"qq\": {\n        \"enabled\": true\n      },\n      \"dingding\": {\n        \"enabled\": true\n      },\n      \"wechat\": {\n        \"enabled\": false\n      }\n    },\n    \"software_scan_config\": {\n      \"enable_cycle_scan\": true,\n      \"cycle_duration\": 720\n    },\n    \"clipboard_config\": {\n      \"content_size_less\": {\n        \"size_in_bytes\": 10240,\n        \"unit\": \"KB\",\n        \"size\": 10\n      },\n      \"enable_full_log\": false\n    },\n    \"network_policy_config\": {\n      \"enable_host_control\": true\n    },\n    \"channel_policy_config\": {\n      \"compress_mode\": \"skip\",\n      \"enable_screenshot\": true,\n      \"screenshot_options\": {\n        \"front_screenshot_num\": 2,\n        \"back_screenshot_num\": 2,\n        \"compressed\": true\n      },\n      \"enable_browser_control\": true,\n      \"enable_open_scan\": true,\n      \"compress_options\": {\n        \"file_size_limit_in_mb\": 300,\n        \"file_count_limit\": 200,\n        \"compress_level\": 10,\n        \"content_analysis_mode\": \"intelligent\",\n        \"enable_decompress_encrypted\": false\n      },\n      \"check_timeout_pass\": 10,\n      \"parsing_large_file\": 200,\n      \"enable_screen_recording\": false,\n      \"screen_recording_options\": {\n        \"record_duration\": 10,\n        \"compressed\": true\n      },\n      \"enable_background_outgoing_control\": true\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "260ac27d-1c51-4667-9b0b-67d337c314df",
+    "name": "APISec Management account system/securityconfig/modify API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

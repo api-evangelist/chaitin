@@ -1,0 +1,722 @@
+{
+  "item": [
+    {
+      "id": "c6a4dd2f-b4fc-403b-be90-557060020d8d",
+      "name": "risk",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "011e7fe4-ba24-4b12-a00e-e1139a70e6eb",
+          "name": "PUT /api/EnableDisableRiskStrategyAPI",
+          "request": {
+            "name": "PUT /api/EnableDisableRiskStrategyAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "EnableDisableRiskStrategyAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "71b7b5d3-8cd1-454a-9e33-39f52adde7cd",
+          "name": "POST /api/EventWhiteListAPI",
+          "request": {
+            "name": "POST /api/EventWhiteListAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "EventWhiteListAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"effective_scope\": \"<string>\",\n  \"strategy_id\": \"<integer>\",\n  \"effective_uuids\": \"<string>\",\n  \"remark\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "22d2ce02-a8b9-40a5-b331-1732f807e745",
+          "name": "PUT /api/EventWhiteListAPI",
+          "request": {
+            "name": "PUT /api/EventWhiteListAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "EventWhiteListAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"effective_scope\": \"<string>\",\n  \"strategy_id\": \"<integer>\",\n  \"effective_uuids\": \"<string>\",\n  \"remark\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "75cebe4d-be7a-4725-ad5b-c1fd5fb8f09a",
+          "name": "DELETE /api/EventWhiteListAPI",
+          "request": {
+            "name": "DELETE /api/EventWhiteListAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "EventWhiteListAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "367cb714-5037-48bf-b55f-18d6a7219d3d",
+          "name": "GET /api/RiskEventAPI",
+          "request": {
+            "name": "GET /api/RiskEventAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskEventAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "event_aggr_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "strategy_id",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "strategy_type",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "strategy_version",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a2f7d6fe-5c95-453c-83eb-366930bbec6f",
+          "name": "GET /api/RiskEventGroupAPI",
+          "request": {
+            "name": "GET /api/RiskEventGroupAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskEventGroupAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<integer>",
+                  "description": "(Required) ID"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "52b6d50e-c408-4224-9cda-6b07906cf6ee",
+          "name": "POST /api/RiskEventGroupAPI",
+          "request": {
+            "name": "POST /api/RiskEventGroupAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskEventGroupAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"group_aggr_id\": \"<string>\",\n    \"vuln_aggr_id\": \"<string>\",\n    \"strategy_id\": \"<integer>\",\n    \"strategy_version\": \"<integer>\",\n    \"type\": \"<integer>\",\n    \"risk_level\": \"<integer>\",\n    \"risk_event_status\": \"<integer>\",\n    \"create_time\": \"<integer>\",\n    \"update_time\": \"<integer>\",\n    \"app_id\": \"<integer>\",\n    \"site_id\": \"<string>\",\n    \"api_id\": \"<string>\"\n  },\n  {\n    \"group_aggr_id\": \"<string>\",\n    \"vuln_aggr_id\": \"<string>\",\n    \"strategy_id\": \"<integer>\",\n    \"strategy_version\": \"<integer>\",\n    \"type\": \"<integer>\",\n    \"risk_level\": \"<integer>\",\n    \"risk_event_status\": \"<integer>\",\n    \"create_time\": \"<integer>\",\n    \"update_time\": \"<integer>\",\n    \"app_id\": \"<integer>\",\n    \"site_id\": \"<string>\",\n    \"api_id\": \"<string>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "08d5dc27-64a0-4d8b-b5a3-ae7d35b332a7",
+          "name": "PUT /api/RiskEventGroupAPI",
+          "request": {
+            "name": "PUT /api/RiskEventGroupAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskEventGroupAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": \"<object>\",\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2e8458cc-b574-427c-b4d6-3ea0f84aa059",
+          "name": "GET /api/RiskEventGroupStatistics",
+          "request": {
+            "name": "GET /api/RiskEventGroupStatistics",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskEventGroupStatistics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9b0b9584-da95-419a-96b3-cf4b4a2fd9c8",
+          "name": "GET /api/RiskEventStatistics",
+          "request": {
+            "name": "GET /api/RiskEventStatistics",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskEventStatistics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "group_aggr_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8d92e234-9c1c-4d2a-bb1e-ed1869c77b55",
+          "name": "GET /api/RiskFunctionStatusAPI",
+          "request": {
+            "name": "GET /api/RiskFunctionStatusAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskFunctionStatusAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a7b4d231-f36c-48d7-b5ec-47fbc947fe20",
+          "name": "GET /api/RiskModelConfigAPI",
+          "request": {
+            "name": "GET /api/RiskModelConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskModelConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c7f507f9-557e-4f27-9ba1-95085ea768a2",
+          "name": "PUT /api/RiskModelConfigAPI",
+          "request": {
+            "name": "PUT /api/RiskModelConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskModelConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"risk_model_is_enabled\": \"<boolean>\",\n  \"baseline_is_enabled\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bc5c97e9-c8d2-44cf-b0ec-7416b2c23e76",
+          "name": "POST /api/RiskStrategyAPI",
+          "request": {
+            "name": "POST /api/RiskStrategyAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskStrategyAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"effective_scope\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"pattern\": \"<object>\",\n  \"uuids\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"is_enabled\": \"<boolean>\",\n  \"risk_level\": \"<string>\",\n  \"risk_event_status\": \"<string>\",\n  \"log_storage\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3e7e8953-bcdb-4da7-95f0-486a8db6874b",
+          "name": "PUT /api/RiskStrategyAPI",
+          "request": {
+            "name": "PUT /api/RiskStrategyAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskStrategyAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"effective_scope\": \"<string>\",\n  \"name\": \"<string>\",\n  \"pattern\": \"<object>\",\n  \"type\": \"<string>\",\n  \"uuids\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"is_enabled\": \"<boolean>\",\n  \"risk_level\": \"<string>\",\n  \"risk_event_status\": \"<string>\",\n  \"log_storage\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "647ba1b6-22ad-42e4-b158-15c5ab7f3413",
+          "name": "GET /api/RiskStrategyAuxiliaryInfoAPI",
+          "request": {
+            "name": "GET /api/RiskStrategyAuxiliaryInfoAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RiskStrategyAuxiliaryInfoAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "asset_uuids",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "effective_scope",
+                  "value": "<string>",
+                  "description": "(Required) 生效范围"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>",
+                  "description": "(Required) 风险类型"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fea7de83-8b1e-4fec-96fc-ef1ef8d385a6",
+          "name": "POST /api/WeakerCipherAPI",
+          "request": {
+            "name": "POST /api/WeakerCipherAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "WeakerCipherAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"passwords\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5a32f78f-cd14-471d-b940-7208ba278873",
+          "name": "DELETE /api/WeakerCipherAPI",
+          "request": {
+            "name": "DELETE /api/WeakerCipherAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "WeakerCipherAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "1ac9f86a-214a-4ed7-ae71-27d1f2d55890",
+    "name": "APISec Management account risk API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

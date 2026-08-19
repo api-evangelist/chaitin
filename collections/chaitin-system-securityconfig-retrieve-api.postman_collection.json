@@ -1,0 +1,195 @@
+{
+  "item": [
+    {
+      "id": "33385b2e-c6d0-4f95-8a89-fa5d3373d225",
+      "name": "system/securityconfig/retrieve",
+      "description": {
+        "content": "系统配置/安全配置/获取",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3a876fc5-d0b0-4ab2-97f5-93faf73c1e66",
+          "name": "安全防护配置",
+          "request": {
+            "name": "安全防护配置",
+            "description": {
+              "content": "[原接口文档](https://servaltech.feishu.cn/docx/NCxMdKr4moDlABxulxicMrItnpb)",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "system",
+                "securityconfig",
+                "retrieve"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bd4ee14b-7f1b-494d-bad2-4648a8f05773",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "system",
+                    "securityconfig",
+                    "retrieve"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"正常\",\n  \"data\": {\n    \"im_policy_config\": {\n      \"dingding\": {\n        \"enabled\": false\n      },\n      \"wechat\": {\n        \"enable\": false\n      },\n      \"wechat_enterprise\": {\n        \"enable\": false\n      },\n      \"qq\": {\n        \"enable\": false\n      }\n    },\n    \"browser_scan_config\": {\n      \"enable_cycle_scan\": true,\n      \"window_warning_interval\": 60\n    },\n    \"advanced_config\": {\n      \"file_analyse_options\": {\n        \"summary_size_unit\": \"B\",\n        \"summary_size\": 120,\n        \"summary_size_in_bytes\": 120\n      },\n      \"enable_hide_agent\": false,\n      \"enable_macos_self_protection\": true,\n      \"enable_macos_hide_menubar\": false,\n      \"enable_file_classification_big_model\": false,\n      \"enable_binary_scan\": false,\n      \"enable_clipboard\": true,\n      \"agent_temporary_exit_code\": {\n        \"exit_code\": \"\",\n        \"enable\": false\n      },\n      \"port_str\": \"31234,32456,33567\",\n      \"enable_hook_all_mode\": false,\n      \"login_auth_remind\": {\n        \"enabled\": false,\n        \"measure\": \"min\",\n        \"value\": 10,\n        \"interval_s\": 600\n      },\n      \"enable_embedded_image_scan\": true,\n      \"enable_nac_auth_gui\": false,\n      \"compress_options\": {\n        \"content_analysis_mode\": \"intelligent\",\n        \"enable_decompress_encrypted\": false,\n        \"compress_level\": 10,\n        \"file_count_limit\": 200,\n        \"file_size_limit_in_mb\": 15\n      },\n      \"compress_mode\": \"decompress\",\n      \"ocr_options\": {\n        \"scan_mode\": \"agent\",\n        \"agent_engine_options\": {\n          \"run_mode\": \"pipeline\",\n          \"det_db_use_dilate\": true,\n          \"det_db_threshold\": 0.3,\n          \"thread_num\": 1,\n          \"max_side_len\": 960,\n          \"det_db_unclip_ratio\": 1.6,\n          \"det_db_box_thresh\": 0.5,\n          \"rec_image_height\": 32\n        },\n        \"agent_engine_pack\": {\n          \"engine\": {\n            \"Linux\": {\n              \"engine_md5\": \"\",\n              \"engine_url\": \"\"\n            },\n            \"Kylin\": {\n              \"engine_md5\": \"\",\n              \"engine_url\": \"\"\n            },\n            \"UOS\": {\n              \"engine_md5\": \"\",\n              \"engine_url\": \"\"\n            },\n            \"macOS\": {\n              \"engine_md5\": \"\",\n              \"engine_url\": \"\"\n            },\n            \"Windows\": {\n              \"engine_md5\": \"c7d12afa69177edf52d0a8bd25188e89\",\n              \"engine_url\": \"http://127.0.0.1:8443/public-source/ocr/engine/Windows/x64/engine.zip\"\n            }\n          },\n          \"update_time\": \"2025-03-13T09:44:08Z\",\n          \"model\": {\n            \"x86_64\": {\n              \"model_md5\": \"\",\n              \"model_url\": \"\"\n            },\n            \"arm64\": {\n              \"model_md5\": \"\",\n              \"model_url\": \"\"\n            },\n            \"x86\": {\n              \"model_md5\": \"0fb60b724525d67e698c14b2cf5bc165\",\n              \"model_url\": \"http://127.0.0.1:8443/public-source/ocr/model/speed.zip\"\n            },\n            \"Universal\": {\n              \"model_md5\": \"\",\n              \"model_url\": \"\"\n            }\n          }\n        }\n      },\n      \"enable_js_sdk\": false,\n      \"enable_hide_process\": false,\n      \"enable_win_safe_mode\": false,\n      \"enable_ocr\": true,\n      \"ocr_service_enable\": true\n    },\n    \"clipboard_config\": {\n      \"enable_scan_image\": false,\n      \"content_size_less\": {\n        \"size_in_bytes\": 10240,\n        \"unit\": \"KB\",\n        \"size\": 10\n      },\n      \"enable_full_log\": false\n    },\n    \"channel_policy_config\": {\n      \"enable_screen_recording\": false,\n      \"window_warning_interval\": 60,\n      \"disable_full_recording\": false,\n      \"screen_recording_options\": {\n        \"record_duration\": 10,\n        \"freq_in_ms\": 250,\n        \"compressed\": true\n      },\n      \"compress_options\": {\n        \"content_analysis_mode\": \"intelligent\",\n        \"enable_decompress_encrypted\": false,\n        \"compress_level\": 10,\n        \"file_count_limit\": 200,\n        \"file_size_limit_in_mb\": 15\n      },\n      \"compress_mode\": \"skip\",\n      \"enable_screenshot\": true,\n      \"enable_browser_control\": false,\n      \"enable_background_outgoing_control\": false,\n      \"screenshot_options\": {\n        \"freq_in_ms\": 1000,\n        \"back_screenshot_num\": 2,\n        \"front_screenshot_num\": 2,\n        \"compressed\": true\n      },\n      \"enable_browser_ext\": false,\n      \"enable_open_scan\": true,\n      \"check_timeout_pass\": 20,\n      \"parsing_large_file\": 120\n    },\n    \"network_policy_config\": {\n      \"enable_host_control\": true,\n      \"window_warning_interval\": 300\n    },\n    \"compliance_config\": {\n      \"period_scan\": {\n        \"type\": \"intelligent\",\n        \"period_time\": 1440\n      },\n      \"display\": true\n    },\n    \"software_scan_config\": {\n      \"enable_cycle_scan\": true,\n      \"pirated_software_check\": false,\n      \"window_warning_interval\": 60,\n      \"cycle_duration\": 720\n    },\n    \"db_scan_config\": {\n      \"task_timeout\": \"intelligent\",\n      \"task_timeout_options\": {},\n      \"scan_batch_options\": {},\n      \"table_timeout\": \"intelligent\",\n      \"scan_mode\": \"moderate\",\n      \"scan_batch_mode\": \"intelligent\",\n      \"table_timeout_options\": {}\n    },\n    \"ted_policy_config\": {\n      \"log_first_time\": false,\n      \"log_every_time\": false\n    },\n    \"file_scan_config\": {\n      \"task_timeout\": \"intelligent\",\n      \"task_timeout_in_sec\": 86400,\n      \"compress_options\": {\n        \"content_analysis_mode\": \"intelligent\",\n        \"enable_decompress_encrypted\": false,\n        \"compress_level\": 10,\n        \"file_count_limit\": 200,\n        \"file_size_limit_in_mb\": 15\n      },\n      \"display\": true,\n      \"compress_mode\": \"decompress\",\n      \"scan_batch_size\": 50,\n      \"scan_batch_mode\": \"intelligent\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "67410e05-0ab7-4f52-9c48-82c0e139b025",
+    "name": "APISec Management account system/securityconfig/retrieve API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

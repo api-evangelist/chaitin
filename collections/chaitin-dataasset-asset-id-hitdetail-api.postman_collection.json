@@ -1,0 +1,238 @@
+{
+  "item": [
+    {
+      "id": "f8526432-2d8e-4154-ae8b-d863e5533f01",
+      "name": "dataasset/{asset_id}/hitdetail",
+      "description": {
+        "content": "数据资产/asset_id 参数/hitdetail 接口",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e754ba45-6255-422d-9617-5d83144157c0",
+          "name": "资产地图内容摘要",
+          "request": {
+            "name": "资产地图内容摘要",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dataasset",
+                ":asset_id",
+                "hitdetail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "asset_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rule_version\": {\n    \"cond_ticket\": \"<string>\",\n    \"cond_version\": \"<integer>\",\n    \"dc_ticket\": \"<string>\",\n    \"dc_version\": \"<integer>\",\n    \"filetype_version\": \"<integer>\",\n    \"policy_ticket\": \"<string>\",\n    \"policy_version\": \"<integer>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "dee17904-6c58-458c-9a62-5deeb8148cfa",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dataasset",
+                    ":asset_id",
+                    "hitdetail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "asset_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"rule_version\": {\n    \"cond_ticket\": \"\",\n    \"cond_version\": 155,\n    \"dc_ticket\": \"\",\n    \"dc_version\": 1278,\n    \"filetype_version\": 44,\n    \"policy_ticket\": \"\",\n    \"policy_version\": 2763\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"Normal\",\n  \"data\": [\n    {\n      \"position\": [\n        0,\n        6\n      ],\n      \"content\": \"测试\",\n      \"inner_hits\": [\n        {\n          \"position\": [\n            0,\n            6\n          ],\n          \"context_positions\": [\n            0,\n            6\n          ],\n          \"key\": \"测试\",\n          \"uid\": \"db7cce2e-ee93-403b-9d8b-a8ecd648c208\",\n          \"name\": \"测试\",\n          \"category\": \"keywords\",\n          \"start\": 0,\n          \"end\": 2\n        }\n      ],\n      \"cl_id\": \"47778687-933a-4de7-a736-7698f56a2812\",\n      \"cl_name\": \"测试关键词-内容\",\n      \"cl_level\": 1\n    },\n    {\n      \"position\": [\n        0,\n        6\n      ],\n      \"content\": \"测试\",\n      \"inner_hits\": [\n        {\n          \"position\": [\n            0,\n            6\n          ],\n          \"context_positions\": [\n            0,\n            6\n          ],\n          \"key\": \"测试\",\n          \"uid\": \"db7cce2e-ee93-403b-9d8b-a8ecd648c208\",\n          \"name\": \"测试\",\n          \"category\": \"keywords\",\n          \"start\": 0,\n          \"end\": 2\n        }\n      ],\n      \"cl_id\": \"f8382879-894a-4ddd-8375-ff4be46784cd\",\n      \"cl_name\": \"文件内容-测试\",\n      \"cl_level\": 4\n    },\n    {\n      \"position\": [\n        0,\n        6\n      ],\n      \"content\": \"测试\",\n      \"inner_hits\": [\n        {\n          \"position\": [\n            0,\n            6\n          ],\n          \"context_positions\": [\n            0,\n            6\n          ],\n          \"key\": \"测试\",\n          \"uid\": \"db7cce2e-ee93-403b-9d8b-a8ecd648c208\",\n          \"name\": \"测试\",\n          \"category\": \"keywords\",\n          \"start\": 0,\n          \"end\": 2\n        }\n      ],\n      \"cl_id\": \"f8382879-894a-4ddd-8375-ff4be46784cd\",\n      \"cl_name\": \"文件内容-测试\",\n      \"cl_level\": 4\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f75a21a5-b541-4cee-8c03-926266701707",
+    "name": "APISec Management account dataasset/{asset_id}/hitdetail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

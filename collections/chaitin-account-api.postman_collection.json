@@ -1,0 +1,1374 @@
+{
+  "item": [
+    {
+      "id": "e7bb03f4-ea73-46cb-9a47-77b183b47c98",
+      "name": "account",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "31342f0a-d64c-4242-b9df-62c5e975309f",
+          "name": "POST /api/APITokenLoginAPI",
+          "request": {
+            "name": "POST /api/APITokenLoginAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "APITokenLoginAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "53e961c1-fbad-496e-b307-fa83de56c295",
+          "name": "GET /api/CSRFTokenAPI",
+          "request": {
+            "name": "GET /api/CSRFTokenAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "CSRFTokenAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "12e719a7-01c6-423a-a0db-92df0515c0e9",
+          "name": "GET /api/CertLoginAPI",
+          "request": {
+            "name": "GET /api/CertLoginAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "CertLoginAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c6279ada-94da-4563-9a50-cf7d6a217b83",
+          "name": "POST /api/CertLoginAPI",
+          "request": {
+            "name": "POST /api/CertLoginAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "CertLoginAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tfa_token\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5f612f3b-3462-414e-affb-411434a2e5a6",
+          "name": "PUT /api/ChangePasswordWithoutLoginAPI",
+          "request": {
+            "name": "PUT /api/ChangePasswordWithoutLoginAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ChangePasswordWithoutLoginAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"<string>\",\n  \"old_password\": \"<string>\",\n  \"new_password\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "35e720b7-3ffb-4199-b207-a0ae3a6fa90a",
+          "name": "PUT /api/ChangeUserCredentialAPI",
+          "request": {
+            "name": "PUT /api/ChangeUserCredentialAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ChangeUserCredentialAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"authentication_method\": \"<string>\",\n  \"old_password\": \"<string>\",\n  \"new_password\": \"<string>\",\n  \"tfa_token\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fa4d4c44-ee99-410b-89bc-5018e5da5231",
+          "name": "PUT /api/DesensitizeUserAPI",
+          "request": {
+            "name": "PUT /api/DesensitizeUserAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "DesensitizeUserAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"desensitize\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ffc2cb09-aafa-4271-a718-222485b9ecc4",
+          "name": "GET /api/DownloadUserCertAPI",
+          "request": {
+            "name": "GET /api/DownloadUserCertAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "DownloadUserCertAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "token",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7a65e708-e066-4901-bbf9-b115276a3f3b",
+          "name": "POST /api/LoginAPI",
+          "request": {
+            "name": "POST /api/LoginAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "LoginAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"tfa_token\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9d5393b9-9625-4c36-8083-68bc16532433",
+          "name": "GET /api/LoginDisplacementAPI",
+          "request": {
+            "name": "GET /api/LoginDisplacementAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "LoginDisplacementAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "58c4c68b-adca-47ef-bcba-c825f98992e5",
+          "name": "PUT /api/LoginDisplacementAPI",
+          "request": {
+            "name": "PUT /api/LoginDisplacementAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "LoginDisplacementAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"enabled\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "78a02d30-6760-4da9-ba78-96e3f73f26c5",
+          "name": "POST /api/LogoutAPI",
+          "request": {
+            "name": "POST /api/LogoutAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "LogoutAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c674c2e9-d5c0-48c0-bdfd-c3589be89e25",
+          "name": "GET /api/PasswordConfigAPI",
+          "request": {
+            "name": "GET /api/PasswordConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PasswordConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0d1ce2c3-f492-4cd6-8f43-36a16ce51c46",
+          "name": "PUT /api/PasswordConfigAPI",
+          "request": {
+            "name": "PUT /api/PasswordConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "PasswordConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"update\": \"<string>\",\n  \"check\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d9c63ef5-7ddd-46c0-b233-2da45b9c4002",
+          "name": "GET /api/ProfileAPI",
+          "request": {
+            "name": "GET /api/ProfileAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ProfileAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "58d1d46c-9a46-46d2-9d0a-82a55f815f49",
+          "name": "GET /api/RADIUSConfigAPI",
+          "request": {
+            "name": "GET /api/RADIUSConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RADIUSConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3e7b82cd-481a-4177-9f2c-d8c13de54b41",
+          "name": "PUT /api/RADIUSConfigAPI",
+          "request": {
+            "name": "PUT /api/RADIUSConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RADIUSConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"config\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8c0e7d96-054b-4638-9224-4d35831692a6",
+          "name": "PUT /api/ResetUserCredentialAPI",
+          "request": {
+            "name": "PUT /api/ResetUserCredentialAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ResetUserCredentialAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "905a4883-0529-436d-9243-bf4edc23068e",
+          "name": "GET /api/RoleAPI",
+          "request": {
+            "name": "GET /api/RoleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RoleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b6275137-bf77-4257-bacc-cbf26256efbd",
+          "name": "POST /api/RoleAPI",
+          "request": {
+            "name": "POST /api/RoleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RoleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"permissions\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"user_ids\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "22cfdfb6-67ab-4995-be9b-fd0ce806cec8",
+          "name": "PUT /api/RoleAPI",
+          "request": {
+            "name": "PUT /api/RoleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RoleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"permissions\": \"<string>\",\n  \"user_ids\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "54c90181-2af6-436d-9ac7-7ca83e7bb983",
+          "name": "DELETE /api/RoleAPI",
+          "request": {
+            "name": "DELETE /api/RoleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RoleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "def3b0be-0003-43df-8a89-e4f911667c0e",
+          "name": "PUT /api/UnlockUserAPI",
+          "request": {
+            "name": "PUT /api/UnlockUserAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UnlockUserAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "09a3a69b-fcf2-42b9-9957-2dbc3ac74e4a",
+          "name": "GET /api/UserAPI",
+          "request": {
+            "name": "GET /api/UserAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "username",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "680d5dcf-4915-46fd-a38f-076a0c9fbcb0",
+          "name": "POST /api/UserAPI",
+          "request": {
+            "name": "POST /api/UserAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"authentication_method\": \"<string>\",\n  \"ip_policy\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1bfbe487-c7d8-4d12-b5a5-d44331805192",
+          "name": "PUT /api/UserAPI",
+          "request": {
+            "name": "PUT /api/UserAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"comment\": \"<string>\",\n  \"authentication_method\": \"<string>\",\n  \"ip_policy\": \"<string>\",\n  \"is_enabled\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d032bf41-539a-40b8-a7e2-ee0d2b91c678",
+          "name": "DELETE /api/UserAPI",
+          "request": {
+            "name": "DELETE /api/UserAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c55fc2c2-cb6f-44f1-b7ae-917be96af760",
+          "name": "GET /api/UserAPITokenAPI",
+          "request": {
+            "name": "GET /api/UserAPITokenAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserAPITokenAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6236dabe-5582-4077-9684-e1a8f7cc3fa5",
+          "name": "POST /api/UserAPITokenAPI",
+          "request": {
+            "name": "POST /api/UserAPITokenAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserAPITokenAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"ip_policy\": \"<string>\",\n  \"expire_time\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3339bc9b-0328-4dba-9b18-77bd4d8f8f1c",
+          "name": "PUT /api/UserAPITokenAPI",
+          "request": {
+            "name": "PUT /api/UserAPITokenAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserAPITokenAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"expire_time\": \"<string>\",\n  \"ip_policy\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "834885cb-dc5c-459a-8bdb-1858225207c0",
+          "name": "DELETE /api/UserAPITokenAPI",
+          "request": {
+            "name": "DELETE /api/UserAPITokenAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserAPITokenAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "992d98e6-1d0b-4b32-bd88-ef63c10097a4",
+          "name": "GET /api/UserLoginThrottlingAPI",
+          "request": {
+            "name": "GET /api/UserLoginThrottlingAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserLoginThrottlingAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d860f265-9802-41d3-b68f-8f1a739bc1fe",
+          "name": "PUT /api/UserLoginThrottlingAPI",
+          "request": {
+            "name": "PUT /api/UserLoginThrottlingAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserLoginThrottlingAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"enabled\": \"<boolean>\",\n  \"period\": \"<integer>\",\n  \"threshold\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "37996259-9753-40f4-9ce9-ffba0cb60f6c",
+          "name": "POST /api/UserRoleBindingAPI",
+          "request": {
+            "name": "POST /api/UserRoleBindingAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserRoleBindingAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_ids\": \"<string>\",\n  \"role_ids\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3bb776a2-2f0f-4932-bc59-e7b4907b36b8",
+          "name": "GET /api/UserTFAConfigAPI",
+          "request": {
+            "name": "GET /api/UserTFAConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserTFAConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b80b263f-d5d3-4e0b-8c78-7ac1dd3a977c",
+          "name": "POST /api/UserTFAConfigAPI",
+          "request": {
+            "name": "POST /api/UserTFAConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserTFAConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"action\": \"<string>\",\n  \"tfa_token\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f53db799-bd17-4620-b27a-751ae41ba4ec",
+          "name": "GET /api/UsernameExistsCheckAPI",
+          "request": {
+            "name": "GET /api/UsernameExistsCheckAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UsernameExistsCheckAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "username",
+                  "value": "<string>",
+                  "description": "(Required) 用户名"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d91bf847-a05d-44bc-81f1-4f92441343e1",
+    "name": "APISec Management account API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

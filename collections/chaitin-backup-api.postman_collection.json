@@ -1,0 +1,270 @@
+{
+  "item": [
+    {
+      "id": "9056f3ec-7998-4e40-8e99-452f3316cc06",
+      "name": "backup",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "15f49eeb-c0de-4b43-bb1b-afe517c7ed86",
+          "name": "GET /api/BackupDownloadAPI",
+          "request": {
+            "name": "GET /api/BackupDownloadAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "BackupDownloadAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<integer>",
+                  "description": "(Required) ID"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2af5c64f-04c6-4209-9c70-c9f01111a23d",
+          "name": "POST /api/BackupRecordAPI",
+          "request": {
+            "name": "POST /api/BackupRecordAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "BackupRecordAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"targets\": \"<string>\",\n  \"remark\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cc264ff5-2800-4743-913a-b49b132cdf60",
+          "name": "PUT /api/BackupRecordAPI",
+          "request": {
+            "name": "PUT /api/BackupRecordAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "BackupRecordAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"remark\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4f2fdfce-f910-47f2-815a-5d5c76161ac3",
+          "name": "DELETE /api/BackupRecordAPI",
+          "request": {
+            "name": "DELETE /api/BackupRecordAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "BackupRecordAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "db2ff3fc-267a-4df9-b479-b72cfd937fcf",
+          "name": "PUT /api/RestoreBackupRecordAPI",
+          "request": {
+            "name": "PUT /api/RestoreBackupRecordAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RestoreBackupRecordAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8f025bb7-674c-4d62-bd1f-01803ee37af6",
+          "name": "POST /api/UploadBackupRecordAPI",
+          "request": {
+            "name": "POST /api/UploadBackupRecordAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UploadBackupRecordAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "78f8d540-74c8-4725-885b-99e9df91eb10",
+    "name": "APISec Management account backup API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "item": [
+    {
+      "id": "979ea3f4-a9fc-4aa0-9f91-0748772bb883",
+      "name": "whitelist/browserplugin/template",
+      "description": {
+        "content": "白名单管理/浏览器插件/模板",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "108151d2-dafe-4819-9aa9-fa63caa8392e",
+          "name": "管控白名单模版下载",
+          "request": {
+            "name": "管控白名单模版下载",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "whitelist",
+                "browserplugin",
+                "template"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8f2a0999-cab8-418f-b7c9-78a2db59fab7",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "whitelist",
+                    "browserplugin",
+                    "template"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"正常\",\n  \"data\": {\n    \"etag\": \"6b9e4f72af0b9e2f58afc79aced3a48d\",\n    \"relative_path\": \"eeff7c64-5070-4582-8b93-fbcc57db7771/qzh/browser_plugin_whitelist/3.5.0/浏览器插件白名单.xlsx\",\n    \"last_modified\": \"2025-03-21T02:22:11Z\",\n    \"size\": 5510,\n    \"content_type\": \"application/octet-stream\",\n    \"filename\": \"浏览器插件白名单.xlsx\",\n    \"url\": \"https://192.168.89.26:8443/oss-qzh/eeff7c64-5070-4582-8b93-fbcc57db7771/qzh/browser_plugin_whitelist/3.5.0/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E7%99%BD%E5%90%8D%E5%8D%95.xlsx?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20250321%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250321T022211Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27%25E6%25B5%258F%25E8%25A7%2588%25E5%2599%25A8%25E6%258F%2592%25E4%25BB%25B6%25E7%2599%25BD%25E5%2590%258D%25E5%258D%2595.xlsx&X-Amz-Signature=dcf44e64738c2a58703fc852bd1cb4fab7f9e02888504313c689513ce8425f3f\",\n    \"file_system\": \"local\",\n    \"url_path\": \"/oss-qzh/eeff7c64-5070-4582-8b93-fbcc57db7771/qzh/browser_plugin_whitelist/3.5.0/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E7%99%BD%E5%90%8D%E5%8D%95.xlsx?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20250321%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250321T022211Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27%25E6%25B5%258F%25E8%25A7%2588%25E5%2599%25A8%25E6%258F%2592%25E4%25BB%25B6%25E7%2599%25BD%25E5%2590%258D%25E5%258D%2595.xlsx&X-Amz-Signature=dcf44e64738c2a58703fc852bd1cb4fab7f9e02888504313c689513ce8425f3f\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e68b90b3-2fb7-4037-bf56-069a53b773af",
+    "name": "APISec Management account whitelist/browserplugin/template API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

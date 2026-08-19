@@ -1,0 +1,195 @@
+{
+  "item": [
+    {
+      "id": "fafad713-7063-4535-9861-a4151a116558",
+      "name": "installer/downloadmeta/list",
+      "description": {
+        "content": "终端安装包/下载元数据/列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fbc2a8f1-8701-4e99-9a83-0ed3941d213e",
+          "name": "公用安装包配置列表",
+          "request": {
+            "name": "公用安装包配置列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "installer",
+                "downloadmeta",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "58185093-c76e-492f-ae9f-b4c8619d5904",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "installer",
+                    "downloadmeta",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": [\n    {\n      \"title\": \"上海ddr\",\n      \"comment\": \"\",\n      \"address\": {\n        \"scheme\": \"https\",\n        \"port\": 8443,\n        \"name\": \"地址（测试）\",\n        \"env\": \"internal\",\n        \"heartbeat_port\": 13125,\n        \"is_default\": false,\n        \"host\": \"ddr-console.netease.com111\"\n      },\n      \"addr_key\": \"4F47891B22C17F52A83E1E8F403F5A6D\",\n      \"ext_args\": 1,\n      \"data\": [\n        {\n          \"name\": \"DDR Windows v3.2.203\",\n          \"version\": \"3.2.203\",\n          \"architecture\": \"x86_64\",\n          \"family\": \"Windows\",\n          \"os_icon\": \"windows\",\n          \"meta_id\": \"5f0ff03c2a8bee798d9f1c645e3ee20e\"\n        },\n        {\n          \"name\": \"LinuxGuider\",\n          \"version\": null,\n          \"architecture\": null,\n          \"family\": \"LinuxGuider\",\n          \"os_icon\": \"windows\",\n          \"meta_id\": \"263e1487a5ac24fb68b2d84f0ea29293\"\n        }\n      ],\n      \"check_network\": false\n    },\n    {\n      \"title\": \"上海ddr\",\n      \"comment\": \"\",\n      \"address\": {\n        \"env\": \"external\",\n        \"is_default\": false,\n        \"port\": 8443,\n        \"name\": \"测试\",\n        \"host\": \"192.168.89.32\",\n        \"heartbeat_port\": 13125,\n        \"scheme\": \"https\"\n      },\n      \"addr_key\": \"0685FEC5B59D1BA4608EFE8A5911F5FF\",\n      \"ext_args\": 1,\n      \"data\": [\n        {\n          \"name\": \"DDR Windows v3.2.203\",\n          \"version\": \"3.2.203\",\n          \"architecture\": \"x86_64\",\n          \"family\": \"Windows\",\n          \"os_icon\": \"windows\",\n          \"meta_id\": \"1373c57d3521b7cb1a8d5d0d81fe3442\"\n        },\n        {\n          \"name\": \"LinuxGuider\",\n          \"version\": null,\n          \"architecture\": null,\n          \"family\": \"LinuxGuider\",\n          \"os_icon\": \"windows\",\n          \"meta_id\": \"2e4c50400d72d725727edc5aaf867da8\"\n        }\n      ],\n      \"check_network\": false\n    },\n    {\n      \"title\": \"上海ddr买买买\",\n      \"comment\": \"\",\n      \"address\": {\n        \"name\": \"host\",\n        \"host\": \"ddr.soumaotech.cn\",\n        \"port\": 8443,\n        \"heartbeat_port\": 13125,\n        \"scheme\": \"https\",\n        \"is_default\": false,\n        \"env\": \"internal\"\n      },\n      \"addr_key\": \"B261820626F998281325C4FDA13F5F7F\",\n      \"ext_args\": 1,\n      \"data\": [\n        {\n          \"name\": \"DDR Windows v3.2.203\",\n          \"version\": \"3.2.203\",\n          \"architecture\": \"x86_64\",\n          \"family\": \"Windows\",\n          \"os_icon\": \"windows\",\n          \"meta_id\": \"205c8d4d73ddc747442028448a5ad16a\"\n        },\n        {\n          \"name\": \"LinuxGuider\",\n          \"version\": null,\n          \"architecture\": null,\n          \"family\": \"LinuxGuider\",\n          \"os_icon\": \"windows\",\n          \"meta_id\": \"5cfd8c46bb6c8a052c9d2154c4006487\"\n        }\n      ],\n      \"check_network\": false\n    },\n    {\n      \"title\": \"上海ddrssd\",\n      \"comment\": \"\",\n      \"address\": {\n        \"name\": \"地址（测试）\",\n        \"host\": \"ddr-console.netease.com\",\n        \"port\": 8443,\n        \"heartbeat_port\": 13125,\n        \"scheme\": \"https\",\n        \"is_default\": false,\n        \"env\": \"internal\"\n      },\n      \"addr_key\": \"769490B6103A04817A30489D3707831D\",\n      \"ext_args\": 1,\n      \"data\": [\n        {\n          \"name\": \"DDR Windows v3.2.203\",\n          \"version\": \"3.2.203\",\n          \"architecture\": \"x86_64\",\n          \"family\": \"Windows\",\n          \"os_icon\": \"windows\",\n          \"meta_id\": \"9f23279f196cba1a70741685250de2fd\"\n        },\n        {\n          \"name\": \"LinuxGuider\",\n          \"version\": null,\n          \"architecture\": null,\n          \"family\": \"LinuxGuider\",\n          \"os_icon\": \"windows\",\n          \"meta_id\": \"1516fd79c0387511e0d76abc1133f49b\"\n        }\n      ],\n      \"check_network\": false\n    },\n    {\n      \"title\": \"广州aaaa\",\n      \"comment\": \"\",\n      \"address\": {\n        \"heartbeat_port\": 13125,\n        \"host\": \"192.168.89.26\",\n        \"port\": 8443,\n        \"scheme\": \"https\",\n        \"is_default\": true,\n        \"name\": \"内置通信地址\",\n        \"env\": \"internal\"\n      },\n      \"addr_key\": \"6DC70FB520C06642FB2AACFE0A6817F4\",\n      \"ext_args\": 1,\n      \"data\": [\n        {\n          \"name\": \"DDR Windows v3.2.203\",\n          \"version\": \"3.2.203\",\n          \"architecture\": \"x86_64\",\n          \"family\": \"Windows\",\n          \"os_icon\": \"windows\",\n          \"meta_id\": \"1d890acca03ca86858b6e93be4744b49\"\n        },\n        {\n          \"name\": \"LinuxGuider\",\n          \"version\": null,\n          \"architecture\": null,\n          \"family\": \"LinuxGuider\",\n          \"os_icon\": \"windows\",\n          \"meta_id\": \"ea5e555ec824c7deb52564000b78b4f2\"\n        }\n      ],\n      \"check_network\": false\n    },\n    {\n      \"title\": \"广州aaaa\",\n      \"comment\": \"\",\n      \"address\": {\n        \"is_default\": true,\n        \"scheme\": \"https\",\n        \"port\": 8443,\n        \"host\": \"192.168.89.26\",\n        \"heartbeat_port\": 13125,\n        \"env\": \"internal\",\n        \"name\": \"内置通信地址\"\n      },\n      \"ext_args\": 3,\n      \"addr_key\": \"BD4933AEED0FE39657A76A201564AEAB\",\n      \"data\": [\n        {\n          \"name\": \"DDR Windows v3.2.203\",\n          \"version\": \"3.2.203\",\n          \"architecture\": \"x86_64\",\n          \"family\": \"Windows\",\n          \"os_icon\": \"windows\",\n          \"meta_id\": \"db64e224557d61da40e2157d2549cc0f\"\n        },\n        {\n          \"name\": \"LinuxGuider\",\n          \"version\": null,\n          \"architecture\": null,\n          \"family\": \"LinuxGuider\",\n          \"os_icon\": \"windows\",\n          \"meta_id\": \"d75e58b76a5159eae56c1dbdca14470f\"\n        }\n      ],\n      \"check_network\": true\n    },\n    {\n      \"title\": \"啊啊呃呃\",\n      \"comment\": \"鹅鹅鹅饿\",\n      \"address\": {\n        \"heartbeat_port\": 13125,\n        \"name\": \"内置通信地址\",\n        \"env\": \"internal\",\n        \"port\": 8443,\n        \"scheme\": \"https\",\n        \"host\": \"192.168.89.32\",\n        \"is_default\": true\n      },\n      \"ext_args\": 3,\n      \"addr_key\": \"233893180A0BC96B9FFF8F8D5ED6E195\",\n      \"data\": [\n        {\n          \"name\": \"DDR Linux v3.2.33\",\n          \"version\": \"3.2.33\",\n          \"architecture\": \"arm64\",\n          \"family\": \"Linux\",\n          \"os_icon\": \"Linux\",\n          \"meta_id\": \"6d936a931fa13c597855b47c22afb2f0\"\n        },\n        {\n          \"name\": \"DDR UOS v3.2.33\",\n          \"version\": \"3.2.33\",\n          \"architecture\": \"arm64\",\n          \"family\": \"UOS\",\n          \"os_icon\": \"UOS\",\n          \"meta_id\": \"c5f57511f256b77e3464906b19d7edc2\"\n        },\n        {\n          \"name\": \"DDR Kylin v3.2.33\",\n          \"version\": \"3.2.33\",\n          \"architecture\": \"arm64\",\n          \"family\": \"Kylin\",\n          \"os_icon\": \"Kylin\",\n          \"meta_id\": \"eb2b785b09db258c0b8e9fb633f44ecf\"\n        },\n        {\n          \"name\": \"DDR Windows v3.2.203\",\n          \"version\": \"3.2.203\",\n          \"architecture\": \"x86_64\",\n          \"family\": \"Windows\",\n          \"os_icon\": \"windows\",\n          \"meta_id\": \"5d7beb6237927f896783b0ed9f04ca0e\"\n        },\n        {\n          \"name\": \"DDR Kylin v3.2.35\",\n          \"version\": \"3.2.35\",\n          \"architecture\": \"x86_64\",\n          \"family\": \"Kylin\",\n          \"os_icon\": \"Kylin\",\n          \"meta_id\": \"9abeffcafac4e629073508e1fdfc12ae\"\n        },\n        {\n          \"name\": \"DDR Linux v3.2.35\",\n          \"version\": \"3.2.35\",\n          \"architecture\": \"x86_64\",\n          \"family\": \"Linux\",\n          \"os_icon\": \"Linux\",\n          \"meta_id\": \"c70fbec2a98390326b68b216c1f2e7ec\"\n        },\n        {\n          \"name\": \"DDR UOS v3.2.35\",\n          \"version\": \"3.2.35\",\n          \"architecture\": \"x86_64\",\n          \"family\": \"UOS\",\n          \"os_icon\": \"UOS\",\n          \"meta_id\": \"106cf15d55eb759e6872d6d75258a5d7\"\n        },\n        {\n          \"name\": \"DDR macOS v3.2.125\",\n          \"version\": \"3.2.125\",\n          \"architecture\": \"Universal\",\n          \"family\": \"macOS\",\n          \"os_icon\": \"macOS\",\n          \"meta_id\": \"42d572b8c2ce92fb7bd3dc233dc41c75\"\n        },\n        {\n          \"name\": \"LinuxGuider\",\n          \"version\": null,\n          \"architecture\": null,\n          \"family\": \"LinuxGuider\",\n          \"os_icon\": \"windows\",\n          \"meta_id\": \"910c25c4e3fa1ff6c0aaeb874f71a6c8\"\n        }\n      ],\n      \"check_network\": true\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c3e7039a-8834-4461-bb8d-a5c1af906f64",
+    "name": "APISec Management account installer/downloadmeta/list API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

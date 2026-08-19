@@ -1,0 +1,209 @@
+{
+  "item": [
+    {
+      "id": "f4d8b984-31a1-4939-9cbd-d2cded477fe1",
+      "name": "statistic/monitoring/daily/cpu_usage",
+      "description": {
+        "content": "统计分析/监控/每日/CPU 使用率",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b3eee3c7-4ddb-4862-b959-1ca6e505f212",
+          "name": "CPU使用率",
+          "request": {
+            "name": "CPU使用率",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "statistic",
+                "monitoring",
+                "daily",
+                "cpu_usage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Module",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b6ae60fc-418f-4683-832a-3c49015ff83d",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "statistic",
+                    "monitoring",
+                    "daily",
+                    "cpu_usage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Module",
+                    "value": "system/config/export-task"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": [\n    {\n      \"instance\": \"dev-qzh:9100\",\n      \"job\": \"node_exporter\",\n      \"values\": {\n        \"last\": {\n          \"timestamp\": \"11-21 10:00\",\n          \"value\": 22\n        },\n        \"current\": {\n          \"timestamp\": \"11-22 10:00\",\n          \"value\": 159.6\n        }\n      }\n    },\n    {\n      \"instance\": \"dev-qzh:9100\",\n      \"job\": \"physical-machine\",\n      \"values\": {\n        \"last\": {\n          \"timestamp\": \"11-21 10:00\",\n          \"value\": 22.8\n        },\n        \"current\": {\n          \"timestamp\": \"11-22 10:00\",\n          \"value\": 162.1\n        }\n      }\n    },\n    {\n      \"instance\": \"zstack-m:9100\",\n      \"job\": \"physical-machine\",\n      \"values\": {\n        \"last\": {\n          \"timestamp\": \"11-21 10:00\",\n          \"value\": 72.2\n        },\n        \"current\": {\n          \"timestamp\": \"11-22 10:00\",\n          \"value\": 475.8\n        }\n      }\n    },\n    {\n      \"instance\": \"zstack-n1:9100\",\n      \"job\": \"physical-machine\",\n      \"values\": {\n        \"last\": {\n          \"timestamp\": \"11-21 10:00\",\n          \"value\": 70.4\n        },\n        \"current\": {\n          \"timestamp\": \"11-22 10:00\",\n          \"value\": 112.6\n        }\n      }\n    },\n    {\n      \"instance\": \"zstack-n2:9100\",\n      \"job\": \"physical-machine\",\n      \"values\": {\n        \"last\": {\n          \"timestamp\": \"11-21 10:00\",\n          \"value\": 28.6\n        },\n        \"current\": {\n          \"timestamp\": \"11-22 10:00\",\n          \"value\": 384.3\n        }\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "41348b32-5417-4c14-a4a0-6e3ffe471ead",
+    "name": "APISec Management account statistic/monitoring/daily/cpu_usage API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

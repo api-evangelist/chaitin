@@ -1,0 +1,222 @@
+{
+  "item": [
+    {
+      "id": "6dfac52f-bdc8-46ac-9822-e611ea710b01",
+      "name": "dataasset/tracing/list",
+      "description": {
+        "content": "数据资产/溯源/列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f0b2128c-27c3-4d11-aa70-9b0bf2b284e5",
+          "name": "tracing文件列表",
+          "request": {
+            "name": "tracing文件列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dataasset",
+                "tracing",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"time_range\": {\n    \"begin\": \"<string>\",\n    \"end\": \"<string>\"\n  },\n  \"search\": \"<string>\",\n  \"queries\": [\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"file_trace_id\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7032a8f0-32aa-4e0c-adc7-86c09ec8f130",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dataasset",
+                    "tracing",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"time_range\": {\n    \"begin\": \"2023-11-28 20:00:00\",\n    \"end\": \"2023-11-28 21:00:00\"\n  },\n  \"search\": \"\",\n  \"queries\": [\n    {\n      \"field\": \"channel\",\n      \"operator\": \"is\",\n      \"value\": \"feishu\"\n    }\n  ],\n  \"file_trace_id\": \"a341dfca-1bfcfcbe-000000000000000f-00000194455ccdad\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"正常\",\n  \"data\": {\n    \"index\": [\n      \"qzhddr_data_assets\"\n    ],\n    \"page\": 1,\n    \"limit\": 100,\n    \"search_total\": 3,\n    \"total\": 3,\n    \"search_after\": [\n      1736330497000\n    ],\n    \"results\": [\n      {\n        \"staff_name\": \"周周\",\n        \"console_user\": \"serval-L410\\\\root\",\n        \"md5_hash\": \"\",\n        \"channel\": \"feishu\",\n        \"has_cls\": true,\n        \"dept_paths\": [\n          \"default/testcase\"\n        ],\n        \"data_level\": 3,\n        \"staff_number\": \"fff449967e237d65\",\n        \"dept_names\": [\n          \"testcase\"\n        ],\n        \"hostname\": \"serval-L410\",\n        \"filepath\": \"/home/serval/下载/http.docx\",\n        \"staff_tags\": [],\n        \"cl_id\": \"959515cc-75bd-491b-aa4d-083d527233a7\",\n        \"file_type\": \"docx\",\n        \"staff_id\": \"ca20ce1f-8b98-4cb8-ace8-0021e764d9ef\",\n        \"action\": \"alert\",\n        \"app_info\": {},\n        \"file_trace_id\": \"a341dfca-1bfcfcbe-000000000000000f-00000194455ccdad\",\n        \"os_friendly_name\": \"Kylin V10 SP1\",\n        \"file_updated_timestamp\": \"2025-01-08T18:01:37+08:00\",\n        \"file_type_categories\": [],\n        \"device_id\": \"7093837d-3eb9-4d5a-9ddf-44514e62dcd2\",\n        \"meta_original\": [\n          {\n            \"process_name\": \"baidunetdisk\"\n          }\n        ],\n        \"file_trace_flags\": \"CSdGNxmAXOgtas4LIW-oLEnacVg6jIclg@V2_knMRcuPwlf5z9BWQnWsTfeNF9ioQGN9@5@M9MJaLK1ZkV870_yLAJ6jlqsg@3B3GjKbrEE1mrCvJv2-83\",\n        \"simhash\": 4660575572712377000,\n        \"expand\": {\n          \"rule_version\": {\n            \"cond_version\": 37,\n            \"policy_version\": 277,\n            \"filetype_version\": 4,\n            \"dc_version\": 140,\n            \"dc_ticket\": \"\",\n            \"cond_ticket\": \"\",\n            \"policy_ticket\": \"\"\n          },\n          \"evidence_info\": {\n            \"file\": \"oss-qzh/f7007ddf-efb3-4f54-94a7-b440639a4de7/riskwarning/extractfile/7bde4c39-a55b-456c-b572-b5b3d4b3fd1c\",\n            \"screen_recording\": null,\n            \"screenshot\": null\n          }\n        },\n        \"filename\": \"http.docx\",\n        \"file_suffix\": \"docx\",\n        \"file_updated_time\": 1736330497000,\n        \"file_policies\": [\n          {\n            \"file_created_timestamp\": \"1970-01-01T08:00:00+08:00\",\n            \"file_updated_timestamp\": \"1970-01-01T08:00:00+08:00\",\n            \"file_type_categories\": [\n              \"Microsoft OOXML\"\n            ],\n            \"policy_id\": \"c7316fec-9d42-4b8b-b3c8-10307a1246a4\",\n            \"md5_hash\": \"81e4a767e0af6b29ebb14e4409d4897d\",\n            \"is_hidden\": false,\n            \"policy_name\": \"网盘谷歌下载文件\",\n            \"filesize\": 13299,\n            \"policy_group_id\": \"9e06ca28-face-4af4-b6dc-da6aab6da087\",\n            \"policy_group_name\": \"默认组\",\n            \"risk_level\": 3,\n            \"classifications\": [\n              {\n                \"uid\": \"5ae78043-3789-486e-8a2e-7854a9489833\",\n                \"name\": \"常见格式文件\",\n                \"data_level_name\": \"内部数据\",\n                \"data_level\": 2\n              },\n              {\n                \"uid\": \"959515cc-75bd-491b-aa4d-083d527233a7\",\n                \"name\": \"测试策略\",\n                \"data_level_name\": \"保密数据\",\n                \"data_level\": 3\n              }\n            ],\n            \"filename\": \"http.docx\",\n            \"filepath\": \"/home/serval/下载/http.docx\",\n            \"is_compressed\": false,\n            \"file_suffix\": \"docx\",\n            \"file_type\": \"docx\",\n            \"file_updated_time\": 0,\n            \"is_password_protected\": false,\n            \"file_description\": \"Microsoft OOXML\",\n            \"action\": \"alert\",\n            \"risk_name\": \"低危\",\n            \"file_created_time\": 0\n          }\n        ],\n        \"device_code\": \"PC-000015\",\n        \"extract_file\": true,\n        \"file_description\": \"Microsoft OOXML\",\n        \"data_level_name\": \"保密数据\",\n        \"risk_name\": \"低危\",\n        \"staff_email\": \"\",\n        \"status\": \"created\",\n        \"file_created_time\": 1736330496990,\n        \"file_created_timestamp\": \"2025-01-08T18:01:36+08:00\",\n        \"policy_id\": \"c7316fec-9d42-4b8b-b3c8-10307a1246a4\",\n        \"dept_ids\": [\n          \"c5582274-f489-44b0-8d7e-df28ecba6e46\"\n        ],\n        \"data_level_names\": [\n          \"内部数据\",\n          \"保密数据\"\n        ],\n        \"is_hidden\": false,\n        \"filesize\": 13299,\n        \"mac\": \"9C:56:36:58:7C:B4\",\n        \"policy_group_id\": \"9e06ca28-face-4af4-b6dc-da6aab6da087\",\n        \"is_compressed\": false,\n        \"pre_file_trace_id\": \"dc4594c4-8eb41d32-000000000000000c-000001944552c675\",\n        \"data_levels\": [\n          2,\n          3\n        ],\n        \"timestamp\": \"2025-01-09T18:25:47+08:00\",\n        \"channel_name\": \"飞书\",\n        \"file_trace_flags_hash\": \"d18471c8c4d50aa4ccac0bd6cf1029a2\",\n        \"cl_name\": \"测试策略\",\n        \"company_id\": \"f7007ddf-efb3-4f54-94a7-b440639a4de7\",\n        \"policy_name\": \"网盘谷歌下载文件\",\n        \"staff_code\": \"19698314a74d9a8f\",\n        \"created_timestamp\": \"2025-01-09T18:25:48+08:00\",\n        \"ip_address\": \"192.168.96.169\",\n        \"cl_ids\": [\n          \"5ae78043-3789-486e-8a2e-7854a9489833\",\n          \"959515cc-75bd-491b-aa4d-083d527233a7\"\n        ],\n        \"policy_group_name\": \"默认组\",\n        \"agent_version\": \"3.4.515\",\n        \"risk_level\": 3,\n        \"is_blocked\": false,\n        \"event_id\": \"7bde4c39-a55b-456c-b572-b5b3d4b3fd1c\",\n        \"@timestamp\": 1736418347000,\n        \"is_password_protected\": false,\n        \"os_name\": \"Kylin\",\n        \"metasource\": [\n          {\n            \"original\": {\n              \"process_name\": \"baidunetdisk\"\n            },\n            \"source\": [],\n            \"category\": \"app\",\n            \"version\": 24\n          }\n        ],\n        \"time\": 1736418347000,\n        \"category\": \"channel\",\n        \"operation\": \"outgoing\",\n        \"staff_tag_ids\": [],\n        \"cl_names\": [\n          \"常见格式文件\",\n          \"测试策略\"\n        ],\n        \"uid\": \"7mOZSpQBbdgERocfaZ44\",\n        \"_type\": \"_doc\",\n        \"_index\": \".ds-qzhddr_policylog_channel_s-2025.01.06-000010\",\n        \"_score\": null,\n        \"categories\": [\n          \"外发管控\"\n        ],\n        \"devices\": [\n          {\n            \"device_id\": \"7093837d-3eb9-4d5a-9ddf-44514e62dcd2\",\n            \"device_code\": \"PC-000015\",\n            \"ip_address\": \"192.168.96.169\",\n            \"console_user\": \"serval-L410\\\\root\",\n            \"os_name\": \"Kylin\",\n            \"os_icon\": [\n              \"Kylin\"\n            ],\n            \"staff_id\": \"ca20ce1f-8b98-4cb8-ace8-0021e764d9ef\",\n            \"staff_name\": \"周周\",\n            \"dept_names\": [\n              \"testcase\"\n            ],\n            \"dept_paths\": [\n              \"default/testcase\"\n            ]\n          }\n        ],\n        \"classifications\": [\n          {\n            \"uid\": \"959515cc-75bd-491b-aa4d-083d527233a7\",\n            \"name\": \"测试策略\",\n            \"data_level\": 3,\n            \"data_level_name\": \"保密数据\"\n          }\n        ],\n        \"filenames\": [\n          \"http.docx\"\n        ],\n        \"filepaths\": [\n          \"/home/serval/下载/http.docx\"\n        ],\n        \"last_seen\": \"2025-01-09T18:25:47+08:00\",\n        \"first_seen\": \"2025-01-09T18:25:47+08:00\"\n      },\n      {\n        \"staff_name\": \"周周\",\n        \"console_user\": \"serval-L410\\\\root\",\n        \"md5_hash\": \"\",\n        \"channel\": \"feishu\",\n        \"has_cls\": true,\n        \"dept_paths\": [\n          \"default/testcase\"\n        ],\n        \"data_level\": 3,\n        \"staff_number\": \"fff449967e237d65\",\n        \"dept_names\": [\n          \"testcase\"\n        ],\n        \"hostname\": \"serval-L410\",\n        \"filepath\": \"/home/serval/下载/http.docx\",\n        \"staff_tags\": [],\n        \"cl_id\": \"959515cc-75bd-491b-aa4d-083d527233a7\",\n        \"file_type\": \"docx\",\n        \"staff_id\": \"ca20ce1f-8b98-4cb8-ace8-0021e764d9ef\",\n        \"action\": \"alert\",\n        \"app_info\": {},\n        \"file_trace_id\": \"a341dfca-1bfcfcbe-000000000000000f-00000194455ccdad\",\n        \"os_friendly_name\": \"Kylin V10 SP1\",\n        \"file_updated_timestamp\": \"2025-01-08T18:01:37+08:00\",\n        \"file_type_categories\": [],\n        \"device_id\": \"7093837d-3eb9-4d5a-9ddf-44514e62dcd2\",\n        \"meta_original\": [\n          {\n            \"process_name\": \"baidunetdisk\"\n          }\n        ],\n        \"file_trace_flags\": \"CSdGNxmAXOgtas4LIW-oLEnacVg6jIclg@V2_knMRcuPwlf5z9BWQnWsTfeNF9ioQGN9@5@M9MJaLK1ZkV870_yLAJ6jlqsg@3B3GjKbrEE1mrCvJv2-83\",\n        \"simhash\": 4660575572712377000,\n        \"expand\": {\n          \"rule_version\": {\n            \"cond_version\": 37,\n            \"policy_version\": 275,\n            \"filetype_version\": 4,\n            \"dc_version\": 140,\n            \"dc_ticket\": \"\",\n            \"cond_ticket\": \"\",\n            \"policy_ticket\": \"\"\n          },\n          \"evidence_info\": {\n            \"file\": \"oss-qzh/f7007ddf-efb3-4f54-94a7-b440639a4de7/riskwarning/extractfile/4895b7ee-6240-423d-8078-828c9ac63415\",\n            \"screen_recording\": null,\n            \"screenshot\": null\n          }\n        },\n        \"filename\": \"http.docx\",\n        \"file_suffix\": \"docx\",\n        \"device_code\": \"PC-000015\",\n        \"file_policies\": [\n          {\n            \"file_created_timestamp\": \"1970-01-01T08:00:00+08:00\",\n            \"file_updated_timestamp\": \"1970-01-01T08:00:00+08:00\",\n            \"file_type_categories\": [\n              \"Microsoft OOXML\"\n            ],\n            \"md5_hash\": \"81e4a767e0af6b29ebb14e4409d4897d\",\n            \"policy_id\": \"c7316fec-9d42-4b8b-b3c8-10307a1246a4\",\n            \"is_hidden\": false,\n            \"policy_name\": \"网盘谷歌下载文件\",\n            \"filesize\": 13299,\n            \"policy_group_id\": \"9e06ca28-face-4af4-b6dc-da6aab6da087\",\n            \"policy_group_name\": \"默认组\",\n            \"risk_level\": 3,\n            \"classifications\": [\n              {\n                \"uid\": \"5ae78043-3789-486e-8a2e-7854a9489833\",\n                \"name\": \"常见格式文件\",\n                \"data_level_name\": \"内部数据\",\n                \"data_level\": 2\n              },\n              {\n                \"uid\": \"959515cc-75bd-491b-aa4d-083d527233a7\",\n                \"name\": \"测试策略\",\n                \"data_level_name\": \"保密数据\",\n                \"data_level\": 3\n              }\n            ],\n            \"filename\": \"http.docx\",\n            \"filepath\": \"/home/serval/下载/http.docx\",\n            \"is_compressed\": false,\n            \"file_suffix\": \"docx\",\n            \"file_type\": \"docx\",\n            \"file_updated_time\": 0,\n            \"is_password_protected\": false,\n            \"file_description\": \"Microsoft OOXML\",\n            \"action\": \"alert\",\n            \"risk_name\": \"低危\",\n            \"file_created_time\": 0\n          }\n        ],\n        \"file_updated_time\": 1736330497000,\n        \"extract_file\": true,\n        \"file_description\": \"Microsoft OOXML\",\n        \"data_level_name\": \"保密数据\",\n        \"risk_name\": \"低危\",\n        \"staff_email\": \"\",\n        \"file_created_time\": 1736330496990,\n        \"status\": \"created\",\n        \"file_created_timestamp\": \"2025-01-08T18:01:36+08:00\",\n        \"policy_id\": \"c7316fec-9d42-4b8b-b3c8-10307a1246a4\",\n        \"dept_ids\": [\n          \"c5582274-f489-44b0-8d7e-df28ecba6e46\"\n        ],\n        \"data_level_names\": [\n          \"内部数据\",\n          \"保密数据\"\n        ],\n        \"is_hidden\": false,\n        \"filesize\": 13299,\n        \"mac\": \"9C:56:36:58:7C:B4\",\n        \"policy_group_id\": \"9e06ca28-face-4af4-b6dc-da6aab6da087\",\n        \"is_compressed\": false,\n        \"pre_file_trace_id\": \"dc4594c4-8eb41d32-000000000000000c-000001944552c675\",\n        \"data_levels\": [\n          2,\n          3\n        ],\n        \"timestamp\": \"2025-01-09T16:33:37+08:00\",\n        \"channel_name\": \"飞书\",\n        \"file_trace_flags_hash\": \"d18471c8c4d50aa4ccac0bd6cf1029a2\",\n        \"cl_name\": \"测试策略\",\n        \"company_id\": \"f7007ddf-efb3-4f54-94a7-b440639a4de7\",\n        \"policy_name\": \"网盘谷歌下载文件\",\n        \"staff_code\": \"19698314a74d9a8f\",\n        \"created_timestamp\": \"2025-01-09T16:33:37+08:00\",\n        \"ip_address\": \"192.168.96.169\",\n        \"cl_ids\": [\n          \"5ae78043-3789-486e-8a2e-7854a9489833\",\n          \"959515cc-75bd-491b-aa4d-083d527233a7\"\n        ],\n        \"policy_group_name\": \"默认组\",\n        \"risk_level\": 3,\n        \"agent_version\": \"3.4.515\",\n        \"is_blocked\": true,\n        \"event_id\": \"4895b7ee-6240-423d-8078-828c9ac63415\",\n        \"@timestamp\": 1736411617000,\n        \"is_password_protected\": false,\n        \"os_name\": \"Kylin\",\n        \"metasource\": [\n          {\n            \"original\": {\n              \"process_name\": \"baidunetdisk\"\n            },\n            \"source\": [],\n            \"category\": \"app\",\n            \"version\": 24\n          }\n        ],\n        \"time\": 1736411617000,\n        \"category\": \"channel\",\n        \"operation\": \"outgoing\",\n        \"staff_tag_ids\": [],\n        \"cl_names\": [\n          \"常见格式文件\",\n          \"测试策略\"\n        ],\n        \"uid\": \"s2MySpQBbdgERocfo5zx\",\n        \"_type\": \"_doc\",\n        \"_index\": \".ds-qzhddr_policylog_channel_s-2025.01.06-000010\",\n        \"_score\": null,\n        \"categories\": [\n          \"外发管控\"\n        ],\n        \"devices\": [\n          {\n            \"device_id\": \"7093837d-3eb9-4d5a-9ddf-44514e62dcd2\",\n            \"device_code\": \"PC-000015\",\n            \"ip_address\": \"192.168.96.169\",\n            \"console_user\": \"serval-L410\\\\root\",\n            \"os_name\": \"Kylin\",\n            \"os_icon\": [\n              \"Kylin\"\n            ],\n            \"staff_id\": \"ca20ce1f-8b98-4cb8-ace8-0021e764d9ef\",\n            \"staff_name\": \"周周\",\n            \"dept_names\": [\n              \"testcase\"\n            ],\n            \"dept_paths\": [\n              \"default/testcase\"\n            ]\n          }\n        ],\n        \"classifications\": [\n          {\n            \"uid\": \"959515cc-75bd-491b-aa4d-083d527233a7\",\n            \"name\": \"测试策略\",\n            \"data_level\": 3,\n            \"data_level_name\": \"保密数据\"\n          }\n        ],\n        \"filenames\": [\n          \"http.docx\"\n        ],\n        \"filepaths\": [\n          \"/home/serval/下载/http.docx\"\n        ],\n        \"last_seen\": \"2025-01-09T16:33:37+08:00\",\n        \"first_seen\": \"2025-01-09T16:33:37+08:00\"\n      },\n      {\n        \"policy_id\": \"5a87254a-d0ce-4fc7-b7f6-9843894ae9f0\",\n        \"is_password_protected\": false,\n        \"console_user\": \"serval-L410\\\\root\",\n        \"time\": 1736330497000,\n        \"mac\": \"9C:56:36:58:7C:B4\",\n        \"channel_name\": \"\",\n        \"policy_group_name\": null,\n        \"hostname\": \"serval-L410\",\n        \"file_suffix\": \"docx\",\n        \"filesize\": 13299,\n        \"operation\": \"download\",\n        \"file_type\": \"docx\",\n        \"company_id\": \"f7007ddf-efb3-4f54-94a7-b440639a4de7\",\n        \"policy_name\": \"落盘加水印分类\",\n        \"device_id\": \"7093837d-3eb9-4d5a-9ddf-44514e62dcd2\",\n        \"filepath\": \"/home/serval/下载/http.docx\",\n        \"agent_version\": \"3.4.515\",\n        \"is_hidden\": false,\n        \"channel_account\": \"-\",\n        \"status\": \"created\",\n        \"os_name\": \"Kylin\",\n        \"file_created_time\": 1736330496990,\n        \"policy_group_id\": null,\n        \"channel\": \"baidunetdisk\",\n        \"is_compressed\": false,\n        \"action\": \"file_trace\",\n        \"md5_hash\": \"\",\n        \"file_type_categories\": [],\n        \"file_description\": \"Microsoft OOXML\",\n        \"file_updated_time\": 1736330497000,\n        \"device_code\": \"PC-000015\",\n        \"os_friendly_name\": \"Kylin V10 SP1\",\n        \"filename\": \"http.docx\",\n        \"meta_original\": [\n          {\n            \"process_name\": \"baidunetdisk\"\n          }\n        ],\n        \"file_policies\": [\n          {\n            \"policy_id\": \"5a87254a-d0ce-4fc7-b7f6-9843894ae9f0\",\n            \"is_password_protected\": false,\n            \"file_suffix\": \"docx\",\n            \"filesize\": 13278,\n            \"file_type\": \"docx\",\n            \"policy_name\": \"落盘加水印分类\",\n            \"filepath\": \"/home/serval/下载/http.docx\",\n            \"is_hidden\": false,\n            \"file_created_time\": 0,\n            \"is_compressed\": false,\n            \"md5_hash\": \"81e4a767e0af6b29ebb14e4409d4897d\",\n            \"action\": \"file_trace\",\n            \"file_type_categories\": [\n              \"Microsoft OOXML\"\n            ],\n            \"file_description\": \"Microsoft OOXML\",\n            \"file_updated_time\": 0,\n            \"filename\": \"http.docx\",\n            \"classifications\": [\n              {\n                \"data_level_name\": \"保密数据\",\n                \"name\": \"测试策略\",\n                \"data_level\": 3,\n                \"uid\": \"959515cc-75bd-491b-aa4d-083d527233a7\"\n              }\n            ],\n            \"file_created_timestamp\": \"1970-01-01T08:00:00+08:00\",\n            \"file_updated_timestamp\": \"1970-01-01T08:00:00+08:00\"\n          },\n          {\n            \"policy_id\": \"8dd13b3b-c240-4467-aaef-652a39e23374\",\n            \"is_password_protected\": false,\n            \"file_suffix\": \"docx\",\n            \"filesize\": 13278,\n            \"file_type\": \"docx\",\n            \"policy_name\": \"审计\",\n            \"filepath\": \"/home/serval/下载/http.docx\",\n            \"is_hidden\": false,\n            \"file_created_time\": 0,\n            \"is_compressed\": false,\n            \"md5_hash\": \"81e4a767e0af6b29ebb14e4409d4897d\",\n            \"action\": \"notify\",\n            \"file_type_categories\": [\n              \"Microsoft OOXML\"\n            ],\n            \"file_description\": \"Microsoft OOXML\",\n            \"file_updated_time\": 0,\n            \"filename\": \"http.docx\",\n            \"classifications\": [],\n            \"file_created_timestamp\": \"1970-01-01T08:00:00+08:00\",\n            \"file_updated_timestamp\": \"1970-01-01T08:00:00+08:00\"\n          }\n        ],\n        \"ip_address\": \"192.168.96.169\",\n        \"expand\": {\n          \"rule_version\": {\n            \"cond_ticket\": \"\",\n            \"cond_version\": 37,\n            \"dc_ticket\": \"\",\n            \"dc_version\": 140,\n            \"filetype_version\": 4,\n            \"ms_version\": 24,\n            \"policy_ticket\": \"\",\n            \"policy_version\": 165,\n            \"version\": 165\n          },\n          \"screen_recording\": false,\n          \"screenshot\": true,\n          \"evidence_info\": {\n            \"file\": null,\n            \"screenshot\": \"oss-qzh/f7007ddf-efb3-4f54-94a7-b440639a4de7/riskwarning/screenshot/ed4b8cec-44b9-41e2-8e1a-529f29165c51\",\n            \"screen_recording\": null\n          }\n        },\n        \"file_trace_operation\": \"success\",\n        \"metasource\": [\n          {\n            \"category\": \"app\",\n            \"source\": [],\n            \"original\": {\n              \"process_name\": \"baidunetdisk\"\n            },\n            \"version\": 24\n          }\n        ],\n        \"event_id\": \"ed4b8cec-44b9-41e2-8e1a-529f29165c51\",\n        \"@timestamp\": 1736330497000,\n        \"timestamp\": \"2025-01-08T18:01:37+08:00\",\n        \"created_timestamp\": \"2025-01-08T18:01:37+08:00\",\n        \"file_created_timestamp\": \"2025-01-08T18:01:36+08:00\",\n        \"file_updated_timestamp\": \"2025-01-08T18:01:37+08:00\",\n        \"file_trace_flags\": \"CSdGNxmAXOgtas4LIW-oLEnacVg6jIclg@V2_knMRcuPwlf5z9BWQnWsTfeNF9ioQGN9@5@M9MJaLK1ZkV870_yLAJ6jlqsg@3B3GjKbrEE1mrCvJv2-83\",\n        \"file_trace_id\": \"a341dfca-1bfcfcbe-000000000000000f-00000194455ccdad\",\n        \"pre_file_trace_id\": \"dc4594c4-8eb41d32-000000000000000c-000001944552c675\",\n        \"file_trace_flags_hash\": \"d18471c8c4d50aa4ccac0bd6cf1029a2\",\n        \"category\": \"landing\",\n        \"staff_id\": \"ca20ce1f-8b98-4cb8-ace8-0021e764d9ef\",\n        \"staff_name\": \"周周\",\n        \"staff_email\": \"\",\n        \"staff_code\": \"19698314a74d9a8f\",\n        \"staff_number\": \"fff449967e237d65\",\n        \"staff_tag_ids\": [],\n        \"staff_tags\": [],\n        \"dept_ids\": [\n          \"c5582274-f489-44b0-8d7e-df28ecba6e46\"\n        ],\n        \"dept_names\": [\n          \"testcase\"\n        ],\n        \"dept_paths\": [\n          \"default/testcase\"\n        ],\n        \"has_cls\": true,\n        \"cl_ids\": [\n          \"959515cc-75bd-491b-aa4d-083d527233a7\"\n        ],\n        \"cl_names\": [\n          \"测试策略\"\n        ],\n        \"data_levels\": [\n          3\n        ],\n        \"data_level_names\": [\n          \"保密数据\"\n        ],\n        \"cl_id\": \"959515cc-75bd-491b-aa4d-083d527233a7\",\n        \"cl_name\": \"测试策略\",\n        \"data_level\": 3,\n        \"data_level_name\": \"保密数据\",\n        \"uid\": \"VmNcRZQBbdgERocf_TEW\",\n        \"_type\": \"_doc\",\n        \"_index\": \".ds-qzhddr_policy_landing_logs_s-2025.01.06-000007\",\n        \"_score\": null,\n        \"categories\": [\n          \"落盘管控\"\n        ],\n        \"devices\": [\n          {\n            \"device_id\": \"7093837d-3eb9-4d5a-9ddf-44514e62dcd2\",\n            \"device_code\": \"PC-000015\",\n            \"ip_address\": \"192.168.96.169\",\n            \"console_user\": \"serval-L410\\\\root\",\n            \"os_name\": \"Kylin\",\n            \"os_icon\": [\n              \"Kylin\"\n            ],\n            \"staff_id\": \"ca20ce1f-8b98-4cb8-ace8-0021e764d9ef\",\n            \"staff_name\": \"周周\",\n            \"dept_names\": [\n              \"testcase\"\n            ],\n            \"dept_paths\": [\n              \"default/testcase\"\n            ]\n          }\n        ],\n        \"classifications\": [\n          {\n            \"uid\": \"959515cc-75bd-491b-aa4d-083d527233a7\",\n            \"name\": \"测试策略\",\n            \"data_level\": 3,\n            \"data_level_name\": \"保密数据\"\n          }\n        ],\n        \"filenames\": [\n          \"http.docx\"\n        ],\n        \"filepaths\": [\n          \"/home/serval/下载/http.docx\"\n        ],\n        \"last_seen\": \"2025-01-08T18:01:37+08:00\",\n        \"first_seen\": \"2025-01-08T18:01:37+08:00\"\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3e0ae66e-447f-4a43-9cc4-4aef86777b85",
+    "name": "APISec Management account dataasset/tracing/list API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

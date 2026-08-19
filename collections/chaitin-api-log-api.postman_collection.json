@@ -1,0 +1,238 @@
+{
+  "item": [
+    {
+      "id": "e105e2f9-4aac-473b-bbbf-9c04d9a63376",
+      "name": "api_log",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d4ea53b4-c74c-4651-924c-86af4ce2d22b",
+          "name": "GET /api/ApiIdContextLogAPI",
+          "request": {
+            "name": "GET /api/ApiIdContextLogAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ApiIdContextLogAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "count",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "event_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "req_start_time",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f41b29cb-fb67-4d4b-abed-8b5d50721739",
+          "name": "GET /api/RunStatAPI",
+          "request": {
+            "name": "GET /api/RunStatAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RunStatAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>",
+                  "description": "(Required) API UUID"
+                },
+                {
+                  "disabled": false,
+                  "key": "duration",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "736e28be-c8ff-4734-b580-7f1353ef6619",
+          "name": "GET /api/SrcIPContextLogAPI",
+          "request": {
+            "name": "GET /api/SrcIPContextLogAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SrcIPContextLogAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "count",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "event_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "req_start_time",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "src_ip",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5dd827b8-58dc-4498-a126-76b497868e10",
+          "name": "GET /api/UserContextLogAPI",
+          "request": {
+            "name": "GET /api/UserContextLogAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserContextLogAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "count",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "event_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "pii_device_id_value",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pii_session_value",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pii_user_id_value",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pii_username_value",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "req_start_time",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a3b67457-1acf-4c7c-86bd-4e118728fa52",
+    "name": "APISec Management account api_log API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

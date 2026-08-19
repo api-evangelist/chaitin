@@ -1,0 +1,98 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account ipgroup API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ipgroup",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "list ip group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/open/ipgroup",
+            "params": [
+              {
+                "name": "top",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "list ip group"
+        },
+        {
+          "info": {
+            "name": "create ip group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/open/ipgroup"
+          },
+          "docs": "create ip group"
+        },
+        {
+          "info": {
+            "name": "update ip group",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/open/ipgroup"
+          },
+          "docs": "update ip group"
+        },
+        {
+          "info": {
+            "name": "delete ip group",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/open/ipgroup"
+          },
+          "docs": "delete ip group"
+        },
+        {
+          "info": {
+            "name": "add ip to ip group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/open/ipgroup/append"
+          },
+          "docs": "add ip to ip group"
+        },
+        {
+          "info": {
+            "name": "get ip group detail",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/open/ipgroup/detail",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "get ip group detail"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

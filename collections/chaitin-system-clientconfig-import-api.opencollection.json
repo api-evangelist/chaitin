@@ -1,0 +1,82 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account system/clientconfig/import API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "system/clientconfig/import",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "终端GUI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/system/clientconfig/import",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "system_name",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "system_icon",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "终端GUI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

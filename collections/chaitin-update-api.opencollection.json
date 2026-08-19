@@ -1,0 +1,137 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account update API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "update",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /api/DownloadSystemUpgradePackage",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/DownloadSystemUpgradePackage"
+          },
+          "docs": "GET /api/DownloadSystemUpgradePackage"
+        },
+        {
+          "info": {
+            "name": "GET /api/FirmwareUpdateTimeAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/FirmwareUpdateTimeAPI"
+          },
+          "docs": "GET /api/FirmwareUpdateTimeAPI"
+        },
+        {
+          "info": {
+            "name": "GET /api/SystemUpdateLog",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SystemUpdateLog"
+          },
+          "docs": "GET /api/SystemUpdateLog"
+        },
+        {
+          "info": {
+            "name": "GET /api/SystemUpdateResultLog",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SystemUpdateResultLog",
+            "params": [
+              {
+                "name": "record_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/SystemUpdateResultLog"
+        },
+        {
+          "info": {
+            "name": "POST /api/SystemUpgrade",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/SystemUpgrade",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/SystemUpgrade"
+        },
+        {
+          "info": {
+            "name": "GET /api/SystemUpgradePackageAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SystemUpgradePackageAPI",
+            "params": [
+              {
+                "name": "count",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/SystemUpgradePackageAPI"
+        },
+        {
+          "info": {
+            "name": "POST /api/TransferUpgradePackage",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/TransferUpgradePackage",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/TransferUpgradePackage"
+        },
+        {
+          "info": {
+            "name": "POST /api/UploadSystemUpgradePackage",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/UploadSystemUpgradePackage",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "POST /api/UploadSystemUpgradePackage"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

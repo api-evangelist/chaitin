@@ -1,0 +1,3652 @@
+{
+  "item": [
+    {
+      "id": "f8456718-62fa-4cfd-86af-ed6f56b4afcf",
+      "name": "api_assets",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "eb4bf35a-acf0-426c-9c32-13d89fecd2dd",
+          "name": "PUT /api/AssociateUserAccountAPI",
+          "request": {
+            "name": "PUT /api/AssociateUserAccountAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AssociateUserAccountAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f14f1413-cc55-4a53-99d1-dee43ad79e6d",
+          "name": "GET /api/AttackTagsAPI",
+          "request": {
+            "name": "GET /api/AttackTagsAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AttackTagsAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3f7bd9ee-5cc8-4960-955c-86a197161c59",
+          "name": "PUT /api/AttackTagsAPI",
+          "request": {
+            "name": "PUT /api/AttackTagsAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AttackTagsAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": \"<object>\",\n  \"status\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3d2b6d76-1aba-44e1-a6cd-e6852e5e819a",
+          "name": "DELETE /api/AttackTagsAPI",
+          "request": {
+            "name": "DELETE /api/AttackTagsAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "AttackTagsAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bc126197-4b8e-4c27-a132-d2eea6d3bdce",
+          "name": "PUT /api/BatchSchemaFieldAPI",
+          "request": {
+            "name": "PUT /api/BatchSchemaFieldAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "BatchSchemaFieldAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"formats\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5457e923-3aa6-4396-806e-4c8f744c0bbd",
+          "name": "GET /api/DataTagsAPI",
+          "request": {
+            "name": "GET /api/DataTagsAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "DataTagsAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f9066a9b-9253-49ca-8477-6bf9b5e97793",
+          "name": "POST /api/DataTagsAPI",
+          "request": {
+            "name": "POST /api/DataTagsAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "DataTagsAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7e612dc2-93bb-4abf-bce5-21abce549fcc",
+          "name": "PUT /api/DataTagsAPI",
+          "request": {
+            "name": "PUT /api/DataTagsAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "DataTagsAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "34ea97ba-8f83-4a7f-afb1-fe4fbc450aca",
+          "name": "DELETE /api/DataTagsAPI",
+          "request": {
+            "name": "DELETE /api/DataTagsAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "DataTagsAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "994acfed-a0cb-4908-bb32-4cb265218312",
+          "name": "GET /api/DetectorConfigAPI",
+          "request": {
+            "name": "GET /api/DetectorConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "DetectorConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "32395ca4-38bd-4140-847f-d43132459d6d",
+          "name": "PUT /api/DetectorConfigAPI",
+          "request": {
+            "name": "PUT /api/DetectorConfigAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "DetectorConfigAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ip_source\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2e309854-4a56-4d2b-bf86-b5e546707939",
+          "name": "GET /api/EffectiveScopeAPI",
+          "request": {
+            "name": "GET /api/EffectiveScopeAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "EffectiveScopeAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "effective_scope",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d58adcbc-d166-4679-9d9d-4352a7f467fe",
+          "name": "GET /api/IdentityAPI",
+          "request": {
+            "name": "GET /api/IdentityAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "IdentityAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "72111df8-1da4-4613-96d1-6efe7898b7e6",
+          "name": "POST /api/IdentityAPI",
+          "request": {
+            "name": "POST /api/IdentityAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "IdentityAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uuids\": \"<string>\",\n  \"effective_scope\": \"<string>\",\n  \"identity_type\": \"<string>\",\n  \"pattern\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b084237e-8adf-4b85-9a53-2b0995d03e55",
+          "name": "PUT /api/IdentityAPI",
+          "request": {
+            "name": "PUT /api/IdentityAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "IdentityAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"effective_scope\": \"<string>\",\n  \"identity_type\": \"<string>\",\n  \"pattern\": \"<string>\",\n  \"uuids\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9660f8c9-c99e-4950-ac1e-2a480164b9e6",
+          "name": "DELETE /api/IdentityAPI",
+          "request": {
+            "name": "DELETE /api/IdentityAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "IdentityAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2d469635-639b-4409-b94d-5dee1ddd70c1",
+          "name": "PUT /api/IdentityMatchedAPI",
+          "request": {
+            "name": "PUT /api/IdentityMatchedAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "IdentityMatchedAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"identity_group_id\": \"<integer>\",\n    \"identity\": \"<string>\",\n    \"effective_scope\": \"<integer>\",\n    \"create_time\": \"<string>\"\n  },\n  {\n    \"identity_group_id\": \"<integer>\",\n    \"identity\": \"<string>\",\n    \"effective_scope\": \"<integer>\",\n    \"create_time\": \"<string>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5b1b00ca-4789-4be8-ba1a-3fce2156d055",
+          "name": "POST /api/IgnoredInterfaceAPI",
+          "request": {
+            "name": "POST /api/IgnoredInterfaceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "IgnoredInterfaceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"api_id\": \"<string>\",\n  \"status\": \"<string>\",\n  \"reason\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "97410b77-83c3-44be-ae9d-6289e6041940",
+          "name": "PUT /api/IgnoredInterfaceAPI",
+          "request": {
+            "name": "PUT /api/IgnoredInterfaceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "IgnoredInterfaceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "977f7e01-560f-4504-a43b-38d4a9a69807",
+          "name": "GET /api/InterfaceAPI",
+          "request": {
+            "name": "GET /api/InterfaceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d1b7d3f7-95a9-4d7e-909c-a9da5f0907ed",
+          "name": "POST /api/InterfaceAPI",
+          "request": {
+            "name": "POST /api/InterfaceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "34808dc6-8dfe-4503-b6a9-3b30b9a0f1e2",
+          "name": "PUT /api/InterfaceAPI",
+          "request": {
+            "name": "PUT /api/InterfaceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "781803ef-825c-4520-a423-52ef724f7103",
+          "name": "DELETE /api/InterfaceAPI",
+          "request": {
+            "name": "DELETE /api/InterfaceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c8f15770-6d0c-49f7-9192-cef63b25d202",
+          "name": "GET /api/InterfaceDetailsAPI",
+          "request": {
+            "name": "GET /api/InterfaceDetailsAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceDetailsAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<integer>",
+                  "description": "ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "uuid",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2e6e2eec-4993-4f8b-af37-aa2dd542fe52",
+          "name": "GET /api/InterfaceDetailsParamAPI",
+          "request": {
+            "name": "GET /api/InterfaceDetailsParamAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceDetailsParamAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "count",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "is_req",
+                  "value": "<boolean>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0c176a58-6cad-4273-8414-8862dfc80339",
+          "name": "GET /api/InterfaceGroupAPI",
+          "request": {
+            "name": "GET /api/InterfaceGroupAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceGroupAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0336185d-4eee-44ad-8888-a764d51fab66",
+          "name": "PUT /api/InterfaceIdentityAPI",
+          "request": {
+            "name": "PUT /api/InterfaceIdentityAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceIdentityAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asset_uuid\": \"<string>\",\n  \"user_id\": \"<string>\",\n  \"session\": \"<string>\",\n  \"device_id\": \"<string>\",\n  \"username\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5bf4b6f7-2b1b-431a-a856-da8f0e8a05f1",
+          "name": "PUT /api/InterfaceIdentityConfirmAPI",
+          "request": {
+            "name": "PUT /api/InterfaceIdentityConfirmAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceIdentityConfirmAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"<string>\",\n  \"filters\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "35e3b1a7-75c8-4a41-81a2-33e6bc42b732",
+          "name": "POST /api/InterfaceIdentityImportAPI",
+          "request": {
+            "name": "POST /api/InterfaceIdentityImportAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceIdentityImportAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e61f54d7-61f4-43d9-838c-69d7f0d05233",
+          "name": "GET /api/InterfaceRemarkAPI",
+          "request": {
+            "name": "GET /api/InterfaceRemarkAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceRemarkAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ec879000-7def-4c47-9472-74d6c7d33638",
+          "name": "POST /api/InterfaceRemarkAPI",
+          "request": {
+            "name": "POST /api/InterfaceRemarkAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceRemarkAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "432d0b8f-e449-45e1-819e-3217b3e7f37b",
+          "name": "PUT /api/InterfaceRemarkAPI",
+          "request": {
+            "name": "PUT /api/InterfaceRemarkAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceRemarkAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"remark\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "69511e7d-30fb-4b07-ac0e-ea81847fc74a",
+          "name": "DELETE /api/InterfaceRemarkAPI",
+          "request": {
+            "name": "DELETE /api/InterfaceRemarkAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceRemarkAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5619b5e3-5dbc-4d76-bce3-637cb933942a",
+          "name": "POST /api/InterfaceResourceAPI",
+          "request": {
+            "name": "POST /api/InterfaceResourceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceResourceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"api_id\": \"<string>\",\n  \"origin\": \"<string>\",\n  \"key\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comment\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f44ea9fb-c215-4c90-89f6-bc54b9367e88",
+          "name": "PUT /api/InterfaceResourceRecognitionAPI",
+          "request": {
+            "name": "PUT /api/InterfaceResourceRecognitionAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceResourceRecognitionAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": \"<object>\",\n  \"status\": \"<string>\",\n  \"comment\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1fa1ba6d-54e0-4018-a9cc-3a8faa758c9c",
+          "name": "DELETE /api/InterfaceResourceRecognitionAPI",
+          "request": {
+            "name": "DELETE /api/InterfaceResourceRecognitionAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceResourceRecognitionAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3c328f87-cc54-44b8-99a1-2fa2008614a7",
+          "name": "PUT /api/InterfaceResourceRecognitionEnableDisableAPI",
+          "request": {
+            "name": "PUT /api/InterfaceResourceRecognitionEnableDisableAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceResourceRecognitionEnableDisableAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"is_enabled\": \"<boolean>\",\n  \"uuid\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1dfcba44-d29f-4877-9f45-6992c6cc109e",
+          "name": "GET /api/InterfaceSlimAPI",
+          "request": {
+            "name": "GET /api/InterfaceSlimAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceSlimAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2f38fc35-5876-48d8-a863-78047d666b1a",
+          "name": "GET /api/InterfaceStatAPI",
+          "request": {
+            "name": "GET /api/InterfaceStatAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceStatAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1536b3e9-7cb1-427d-a67c-6bbd9e93ef20",
+          "name": "GET /api/InterfaceStatusAPI",
+          "request": {
+            "name": "GET /api/InterfaceStatusAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceStatusAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fe53a87b-4529-494d-8ea1-fc96cb54a96b",
+          "name": "PUT /api/InterfaceStatusAPI",
+          "request": {
+            "name": "PUT /api/InterfaceStatusAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceStatusAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"<string>\",\n  \"filters\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "07fa21ce-2e08-4cc0-9e73-78668504d4aa",
+          "name": "PUT /api/InterfaceSuccessSignAPI",
+          "request": {
+            "name": "PUT /api/InterfaceSuccessSignAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceSuccessSignAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asset_uuid\": \"<string>\",\n  \"success_sign\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "531bbf65-7c66-4ebd-8eb2-8325c43c68d1",
+          "name": "PUT /api/InterfaceSuccessSignConfirmAPI",
+          "request": {
+            "name": "PUT /api/InterfaceSuccessSignConfirmAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceSuccessSignConfirmAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"<string>\",\n  \"filters\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e4f2881a-b08b-4cc4-86c7-26edfdb79c9e",
+          "name": "POST /api/InterfaceSuccessSignImportAPI",
+          "request": {
+            "name": "POST /api/InterfaceSuccessSignImportAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceSuccessSignImportAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "323ad63a-1d13-429e-a70a-c025505cf83e",
+          "name": "POST /api/InterfaceSwaggerImportAPI",
+          "request": {
+            "name": "POST /api/InterfaceSwaggerImportAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "InterfaceSwaggerImportAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fea80e88-1068-4175-9b40-f43af8404868",
+          "name": "PUT /api/LockInterfaceAPI",
+          "request": {
+            "name": "PUT /api/LockInterfaceAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "LockInterfaceAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"locked\": \"<boolean>\",\n  \"all\": \"<boolean>\",\n  \"filters\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "be0760e9-d098-4dcd-8509-a1210c4bbdf8",
+          "name": "PUT /api/MultipleInterfaceSuccessSignAPI",
+          "request": {
+            "name": "PUT /api/MultipleInterfaceSuccessSignAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "MultipleInterfaceSuccessSignAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"success_sign\": \"<string>\",\n  \"filters\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a570775c-bcd7-4939-9244-590382adc4a3",
+          "name": "PUT /api/RemoveTagAPI",
+          "request": {
+            "name": "PUT /api/RemoveTagAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "RemoveTagAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tag_id\": \"<integer>\",\n  \"type\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d42f4611-92ec-4b1a-ae37-0b2a865c86dc",
+          "name": "PUT /api/ResetAttackTagsModelAPI",
+          "request": {
+            "name": "PUT /api/ResetAttackTagsModelAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ResetAttackTagsModelAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4f2aacf0-94fb-45f3-97b2-c6c3864d3f2b",
+          "name": "GET /api/ResourceRecognitionBindingAPI",
+          "request": {
+            "name": "GET /api/ResourceRecognitionBindingAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ResourceRecognitionBindingAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0e60aefe-50dd-4dc5-a26a-e4352a83fd89",
+          "name": "PUT /api/ResourceRecognitionBindingAPI",
+          "request": {
+            "name": "PUT /api/ResourceRecognitionBindingAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ResourceRecognitionBindingAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uuids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "327044f9-5e73-487d-8a2a-e0cfbd83c4d3",
+          "name": "GET /api/ResourceRecognitionEnableDisableAPI",
+          "request": {
+            "name": "GET /api/ResourceRecognitionEnableDisableAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ResourceRecognitionEnableDisableAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1aa32bbc-7895-4b99-bccc-1b9ac922fb17",
+          "name": "PUT /api/ResourceRecognitionEnableDisableAPI",
+          "request": {
+            "name": "PUT /api/ResourceRecognitionEnableDisableAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ResourceRecognitionEnableDisableAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"is_enabled\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0809b388-53c5-473f-99b2-b162ec9f133b",
+          "name": "GET /api/SchemaAPI",
+          "request": {
+            "name": "GET /api/SchemaAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SchemaAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6f880a33-ca3e-45fe-8d54-dd8da3e1fedf",
+          "name": "POST /api/SchemaAPI",
+          "request": {
+            "name": "POST /api/SchemaAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SchemaAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f054fef9-e234-4934-8a9d-2e2e85bdaba4",
+          "name": "PUT /api/SchemaAPI",
+          "request": {
+            "name": "PUT /api/SchemaAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SchemaAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b852242b-ac16-4538-b355-c9fe35e4355c",
+          "name": "DELETE /api/SchemaAPI",
+          "request": {
+            "name": "DELETE /api/SchemaAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SchemaAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "eafbd4fc-18b0-4fa7-9370-35cb7d7706f0",
+          "name": "GET /api/SchemaFieldAPI",
+          "request": {
+            "name": "GET /api/SchemaFieldAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SchemaFieldAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "is_req",
+                  "value": "<boolean>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b4a8a48d-9896-44e3-9b38-109dff286193",
+          "name": "PUT /api/SchemaFieldAPI",
+          "request": {
+            "name": "PUT /api/SchemaFieldAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SchemaFieldAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"is_req\": \"<boolean>\",\n  \"manual_input\": \"<boolean>\",\n  \"format_learning_status\": \"<string>\",\n  \"model_learning_enable\": \"<boolean>\",\n  \"model_detect_enable\": \"<boolean>\",\n  \"model_learning_status\": \"<string>\",\n  \"id\": \"<integer>\",\n  \"api_id\": \"<string>\",\n  \"key\": \"<string>\",\n  \"format\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3f37becb-ca99-4aa6-a5ba-f7dab620c8df",
+          "name": "DELETE /api/SchemaFieldAPI",
+          "request": {
+            "name": "DELETE /api/SchemaFieldAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SchemaFieldAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"all_schema\": \"<boolean>\",\n  \"is_req\": \"<boolean>\",\n  \"schema_id\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "32e4620a-c8a0-45eb-a66d-e8c93c5917d1",
+          "name": "GET /api/SiteAPI",
+          "request": {
+            "name": "GET /api/SiteAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SiteAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5befcedd-19d2-4bf8-82af-1c7849010bed",
+          "name": "POST /api/SiteAPI",
+          "request": {
+            "name": "POST /api/SiteAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SiteAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6ccecb30-878b-4bed-892f-fb94e29071af",
+          "name": "PUT /api/SiteAPI",
+          "request": {
+            "name": "PUT /api/SiteAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SiteAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bae6e017-e492-4fd3-8cb8-6c00398529fb",
+          "name": "DELETE /api/SiteAPI",
+          "request": {
+            "name": "DELETE /api/SiteAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SiteAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "456ea84d-8b98-4c16-b9c6-f880bfd38909",
+          "name": "PUT /api/SiteIdentityAPI",
+          "request": {
+            "name": "PUT /api/SiteIdentityAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SiteIdentityAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asset_uuid\": \"<string>\",\n  \"user_id\": \"<string>\",\n  \"session\": \"<string>\",\n  \"device_id\": \"<string>\",\n  \"username\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bcc62c64-5c74-4575-863b-9b785cb47f05",
+          "name": "PUT /api/SiteIdentityConfirmAPI",
+          "request": {
+            "name": "PUT /api/SiteIdentityConfirmAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SiteIdentityConfirmAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"<string>\",\n  \"filters\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "777d47d8-da4c-4cbc-b40f-574edd971406",
+          "name": "GET /api/SiteInfoAPI",
+          "request": {
+            "name": "GET /api/SiteInfoAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SiteInfoAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4ef1a290-efda-4f64-8aec-14aea2f64248",
+          "name": "POST /api/SiteInfoAPI",
+          "request": {
+            "name": "POST /api/SiteInfoAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SiteInfoAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0387a26a-1f80-492f-bdf6-d9f31a81d5bc",
+          "name": "PUT /api/SiteInfoAPI",
+          "request": {
+            "name": "PUT /api/SiteInfoAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SiteInfoAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"static_file_handle\": \"<string>\",\n  \"business_upload_handle\": \"<string>\",\n  \"business_upload_store\": \"<string>\",\n  \"business_download_handle\": \"<string>\",\n  \"business_download_store\": \"<string>\",\n  \"remark\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c1a9be2d-a5cd-419d-9889-6e2f67bbe595",
+          "name": "DELETE /api/SiteInfoAPI",
+          "request": {
+            "name": "DELETE /api/SiteInfoAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SiteInfoAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "aa54f7e6-e9bc-495c-8f13-b427a2cf1536",
+          "name": "PUT /api/SiteSuccessSignAPI",
+          "request": {
+            "name": "PUT /api/SiteSuccessSignAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SiteSuccessSignAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asset_uuid\": \"<string>\",\n  \"success_sign\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "43a2d1cc-0030-461c-aa68-933d2d853146",
+          "name": "PUT /api/SiteSuccessSignConfirmAPI",
+          "request": {
+            "name": "PUT /api/SiteSuccessSignConfirmAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SiteSuccessSignConfirmAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"<string>\",\n  \"filters\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4bf73ec0-41b5-4c5c-938b-a252de9e6aed",
+          "name": "POST /api/StaticInfoOcrDetect",
+          "request": {
+            "name": "POST /api/StaticInfoOcrDetect",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "StaticInfoOcrDetect"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fid\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2d064405-e8cb-4b39-87e0-f2d7768480e4",
+          "name": "GET /api/SuccessSignAPI",
+          "request": {
+            "name": "GET /api/SuccessSignAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SuccessSignAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0506bb4e-101c-463b-b91a-f1e9a2989b30",
+          "name": "POST /api/SuccessSignAPI",
+          "request": {
+            "name": "POST /api/SuccessSignAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SuccessSignAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uuids\": \"<string>\",\n  \"effective_scope\": \"<string>\",\n  \"pattern\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "78be42f6-3c01-4e32-bd4e-f352e7f0e322",
+          "name": "PUT /api/SuccessSignAPI",
+          "request": {
+            "name": "PUT /api/SuccessSignAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SuccessSignAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"effective_scope\": \"<string>\",\n  \"pattern\": \"<string>\",\n  \"uuids\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4241eae9-46e0-4cc2-827a-4dcd2d02c471",
+          "name": "DELETE /api/SuccessSignAPI",
+          "request": {
+            "name": "DELETE /api/SuccessSignAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SuccessSignAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "30cbcff5-2684-4a95-a3e3-eb9f233b4dd8",
+          "name": "PUT /api/SuccessSignMatchedAPI",
+          "request": {
+            "name": "PUT /api/SuccessSignMatchedAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SuccessSignMatchedAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"success_sign_group_id\": \"<integer>\",\n    \"success_sign\": \"<string>\",\n    \"effective_scope\": \"<integer>\",\n    \"create_time\": \"<string>\"\n  },\n  {\n    \"success_sign_group_id\": \"<integer>\",\n    \"success_sign\": \"<string>\",\n    \"effective_scope\": \"<integer>\",\n    \"create_time\": \"<string>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "20bae547-09e0-4913-b046-f8211fa3d85e",
+          "name": "POST /api/UserAccountAPI",
+          "request": {
+            "name": "POST /api/UserAccountAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserAccountAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"username\": \"<string>\",\n    \"site_id\": \"<string>\",\n    \"api_id\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"nickname\": \"<string>\",\n    \"org_info\": \"<object>\",\n    \"login_info\": \"<object>\",\n    \"user_id\": \"<string>\",\n    \"sessions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"devices\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"pattern\": \"<object>\"\n  },\n  {\n    \"username\": \"<string>\",\n    \"site_id\": \"<string>\",\n    \"api_id\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"nickname\": \"<string>\",\n    \"org_info\": \"<object>\",\n    \"login_info\": \"<object>\",\n    \"user_id\": \"<string>\",\n    \"sessions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"devices\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"pattern\": \"<object>\"\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0ba9dd92-e198-4139-bf6a-311e813ea102",
+          "name": "PUT /api/UserAccountAPI",
+          "request": {
+            "name": "PUT /api/UserAccountAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserAccountAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"comment\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"email\": \"<string>\",\n  \"nickname\": \"<string>\",\n  \"org_info\": \"<object>\",\n  \"sessions\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"devices\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"other_user_accounts\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "15df5ca1-95cb-4c64-ad42-89d026736db3",
+          "name": "GET /api/UserAccountStatisticsAPI",
+          "request": {
+            "name": "GET /api/UserAccountStatisticsAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserAccountStatisticsAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "duration",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "site_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "username",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c8435a6c-5a94-4bd1-9772-84ef8561a4a4",
+          "name": "GET /api/UserSrcIpApiRequestTop5API",
+          "request": {
+            "name": "GET /api/UserSrcIpApiRequestTop5API",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserSrcIpApiRequestTop5API"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b23c8bf1-9bf5-4d68-b14a-e0434a70fc49",
+          "name": "GET /api/UserSrcIpAsRequesterAPI",
+          "request": {
+            "name": "GET /api/UserSrcIpAsRequesterAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserSrcIpAsRequesterAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "ip",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "request_time_tsrange",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a78f11c3-33de-4e54-8f5f-302bef9fea6b",
+          "name": "GET /api/UserSrcIpAsResponserAPI",
+          "request": {
+            "name": "GET /api/UserSrcIpAsResponserAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserSrcIpAsResponserAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "ip",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "request_time_tsrange",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9b71ab0b-3d0a-468e-9383-17414463e8fd",
+          "name": "GET /api/UserSrcIpCountryDistributionPI",
+          "request": {
+            "name": "GET /api/UserSrcIpCountryDistributionPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserSrcIpCountryDistributionPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "11836b32-a079-40ac-88d2-0e1f1f4f0ba7",
+          "name": "GET /api/UserSrcIpDstIpResponseTop10API",
+          "request": {
+            "name": "GET /api/UserSrcIpDstIpResponseTop10API",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserSrcIpDstIpResponseTop10API"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9fac997f-ada1-4d7f-bcd9-ade529a47dc3",
+          "name": "GET /api/UserSrcIpDstNodeRelationshipGraphTop20API",
+          "request": {
+            "name": "GET /api/UserSrcIpDstNodeRelationshipGraphTop20API",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserSrcIpDstNodeRelationshipGraphTop20API"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e4768755-b04b-458d-a672-c93ed707a92a",
+          "name": "GET /api/UserSrcIpFlowChartAPI",
+          "request": {
+            "name": "GET /api/UserSrcIpFlowChartAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserSrcIpFlowChartAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "ip",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "request_time_tsrange",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5498e5ed-4b0a-4cec-be0d-5c97e678de5e",
+          "name": "GET /api/UserSrcIpGroupAPI",
+          "request": {
+            "name": "GET /api/UserSrcIpGroupAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserSrcIpGroupAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "69a5b230-fbb3-4b36-bc01-5f8660cbe65a",
+          "name": "GET /api/UserSrcIpInfoQueryAPI",
+          "request": {
+            "name": "GET /api/UserSrcIpInfoQueryAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserSrcIpInfoQueryAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "ip",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "request_time_tsrange",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "52a452c3-e0f2-4db5-aaf3-be5382590495",
+          "name": "GET /api/UserSrcIpListAPI",
+          "request": {
+            "name": "GET /api/UserSrcIpListAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserSrcIpListAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "116aeaa0-2e91-441a-ad4b-dc558d241af2",
+          "name": "GET /api/UserSrcIpNetworkSegmentPieChartAPI",
+          "request": {
+            "name": "GET /api/UserSrcIpNetworkSegmentPieChartAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserSrcIpNetworkSegmentPieChartAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bc3be7b2-2985-4544-bfb8-f1ba2ebefd53",
+          "name": "GET /api/UserSrcIpNetworkSegmentRequestTop5API",
+          "request": {
+            "name": "GET /api/UserSrcIpNetworkSegmentRequestTop5API",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserSrcIpNetworkSegmentRequestTop5API"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7e680ed3-43a7-42af-8dad-506ddda9c82b",
+          "name": "GET /api/UserSrcIpPerDayRequestInfoAPI",
+          "request": {
+            "name": "GET /api/UserSrcIpPerDayRequestInfoAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserSrcIpPerDayRequestInfoAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "94bc8670-aa6f-49f4-b432-b1e8ea985aff",
+          "name": "GET /api/UserSrcIpPerHourRequestInfoPI",
+          "request": {
+            "name": "GET /api/UserSrcIpPerHourRequestInfoPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "UserSrcIpPerHourRequestInfoPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a0d0ec67-4543-405b-a7e6-a730e655401d",
+          "name": "PUT /api/WebsiteMoveInAppAPI",
+          "request": {
+            "name": "PUT /api/WebsiteMoveInAppAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "WebsiteMoveInAppAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"all\": \"<boolean>\",\n  \"website_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": \"<object>\",\n  \"app_id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "14ca7eba-5218-454d-a5a4-56bb9640d043",
+    "name": "APISec Management account api_assets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

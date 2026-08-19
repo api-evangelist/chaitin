@@ -1,0 +1,61 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account sensitive_data API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "sensitive_data",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /api/SensitiveDataCharacteristicAPI",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/SensitiveDataCharacteristicAPI",
+            "params": [
+              {
+                "name": "api_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pii_device_id_value",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pii_session_value",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pii_user_id_value",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pii_username_value",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "src_ip",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "GET /api/SensitiveDataCharacteristicAPI"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

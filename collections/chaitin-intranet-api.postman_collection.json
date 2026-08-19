@@ -1,0 +1,417 @@
+{
+  "item": [
+    {
+      "id": "91e72a65-e2fc-42dc-a294-8f1f9d7e5f77",
+      "name": "intranet",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "06368afd-8a68-4cf9-8b0e-a3140949b445",
+          "name": "POST /api/EditIntranetGroupItem",
+          "request": {
+            "name": "POST /api/EditIntranetGroupItem",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "EditIntranetGroupItem"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1270adb6-0b25-44ed-8b89-7ad64bbd8707",
+          "name": "DELETE /api/EditIntranetGroupItem",
+          "request": {
+            "name": "DELETE /api/EditIntranetGroupItem",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "EditIntranetGroupItem"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f3e292f9-25fb-4be8-832d-3a6e650eff51",
+          "name": "POST /api/FilterRuleAPI",
+          "request": {
+            "name": "POST /api/FilterRuleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "FilterRuleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"is_enabled\": \"<boolean>\",\n  \"pattern\": \"<object>\",\n  \"drop\": \"<boolean>\",\n  \"comment\": \"<string>\",\n  \"expire_time\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a785df43-1491-4dc3-b8f9-17411788a30f",
+          "name": "PUT /api/FilterRuleAPI",
+          "request": {
+            "name": "PUT /api/FilterRuleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "FilterRuleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"comment\": \"<string>\",\n  \"drop\": \"<boolean>\",\n  \"expire_time\": \"<string>\",\n  \"is_enabled\": \"<boolean>\",\n  \"pattern\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2b846a38-f783-495d-aca8-20bc6cd45eb6",
+          "name": "PUT /api/FilterRulePositionAPI",
+          "request": {
+            "name": "PUT /api/FilterRulePositionAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "FilterRulePositionAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"position\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e7f21a3a-554e-480c-8b5d-f841e0812d13",
+          "name": "GET /api/IntranetGroupConfig",
+          "request": {
+            "name": "GET /api/IntranetGroupConfig",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "IntranetGroupConfig"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cidr",
+                  "value": "<string>",
+                  "description": "CIDR"
+                },
+                {
+                  "disabled": false,
+                  "key": "comment",
+                  "value": "<string>",
+                  "description": "备注"
+                },
+                {
+                  "disabled": false,
+                  "key": "host",
+                  "value": "<string>",
+                  "description": "域名"
+                },
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>",
+                  "description": "名称"
+                },
+                {
+                  "disabled": false,
+                  "key": "network_type",
+                  "value": "<string>",
+                  "description": "网络属性"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f63c5538-f164-4281-8b5a-586bb0fc77d7",
+          "name": "POST /api/IntranetGroupConfig",
+          "request": {
+            "name": "POST /api/IntranetGroupConfig",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "IntranetGroupConfig"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"cidrs\": \"<string>\",\n  \"name\": \"<string>\",\n  \"ip_list\": \"<string>\",\n  \"host_list\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"address_type\": \"<string>\",\n  \"network_type\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c4bd2ba0-e927-4ca6-a240-3a147ae618a6",
+          "name": "PUT /api/IntranetGroupConfig",
+          "request": {
+            "name": "PUT /api/IntranetGroupConfig",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "IntranetGroupConfig"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"comment\": \"<string>\",\n  \"network_type\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "292963fa-deea-4c9b-b3d2-5406b2f57d14",
+          "name": "DELETE /api/IntranetGroupConfig",
+          "request": {
+            "name": "DELETE /api/IntranetGroupConfig",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "IntranetGroupConfig"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id__in\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "1db7fc47-e1b8-475d-8229-86c3520136fe",
+    "name": "APISec Management account intranet API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

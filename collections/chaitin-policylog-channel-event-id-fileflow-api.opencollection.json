@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account policylog/channel/{event_id}/fileflow API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "policylog/channel/{event_id}/fileflow",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "流转分析",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/policylog/channel/:event_id/fileflow",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "event_id",
+                "value": "vi4C94sBgA2us7afst",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "流转分析"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,222 @@
+{
+  "item": [
+    {
+      "id": "1830465a-165e-4cb6-a015-3c0922315736",
+      "name": "classification/init_data/recordlist",
+      "description": {
+        "content": "数据分类分级/初始化数据/记录列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e28b92f3-972a-4c81-b3fb-01dd81e53f91",
+          "name": "导入导出记录",
+          "request": {
+            "name": "导入导出记录",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "classification",
+                "init_data",
+                "recordlist"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"queries\": [\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"operator\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3a4c1aa7-f7d6-4eaf-8ec4-9da7a16b6ad8",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "classification",
+                    "init_data",
+                    "recordlist"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"queries\": [\n    {\n      \"field\": \"action\",\n      \"operator\": \"is\",\n      \"value\": \"download\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"total\": 2,\n    \"results\": [\n      {\n        \"create_time\": \"2023-11-09T06:48:48.285492Z\",\n        \"category\": [\n          {\n            \"name\": \"network\",\n            \"display_name\": \"网络管理\"\n          },\n          {\n            \"name\": \"desktop\",\n            \"display_name\": \"桌面管理\"\n          },\n          {\n            \"name\": \"data_security\",\n            \"display_name\": \"数据安全\"\n          }\n        ],\n        \"action\": \"download\",\n        \"company_id\": \"6b0db7d7-9ddd-4400-b976-2a7c112a4c95\",\n        \"create_by_id\": \"6c06f781-9b74-4059-8673-7581df5c66de\",\n        \"id\": 2,\n        \"url\": \"https://ddr.soumaotech.cn:8443/oss-qzh/6b0db7d7-9ddd-4400-b976-2a7c112a4c95/init_data/%E6%95%B0%E6%8D%AE%E9%BB%98%E8%AE%A4%E6%96%B9%E6%A1%88-5c6eeea11f784bfb9e69181dc1ca9d38.cs?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20231109%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231109T064822Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27%25E6%2595%25B0%25E6%258D%25AE%25E9%25BB%2598%25E8%25AE%25A4%25E6%2596%25B9%25E6%25A1%2588-5c6eeea11f784bfb9e69181dc1ca9d38.cs&X-Amz-Signature=9c0b26c42ff3e6c5d6f5d11cb7172ae408541381d3dc1f8806bf293adb02e73d\",\n        \"filename\": \"数据默认方案-5c6eeea11f784bfb9e69181dc1ca9d38.cs\",\n        \"message\": \"\",\n        \"update_by_id\": \"6c06f781-9b74-4059-8673-7581df5c66de\",\n        \"conflict\": \"\",\n        \"user_name\": \"AuthUser\",\n        \"uid\": \"39bb5590-5095-4ff7-a01a-bb871b2efea8\",\n        \"expand\": {},\n        \"update_time\": \"2023-11-09T06:48:48.285565Z\",\n        \"file_md5\": \"\",\n        \"status\": \"succeed\"\n      },\n      {\n        \"create_time\": \"2023-11-09T06:43:13.362399Z\",\n        \"category\": [\n          {\n            \"name\": \"network\",\n            \"display_name\": \"网络管理\"\n          },\n          {\n            \"name\": \"desktop\",\n            \"display_name\": \"桌面管理\"\n          },\n          {\n            \"name\": \"data_security\",\n            \"display_name\": \"数据安全\"\n          }\n        ],\n        \"action\": \"download\",\n        \"company_id\": \"6b0db7d7-9ddd-4400-b976-2a7c112a4c95\",\n        \"create_by_id\": \"6c06f781-9b74-4059-8673-7581df5c66de\",\n        \"id\": 1,\n        \"url\": \"https://ddr.soumaotech.cn:8443/oss-qzh/6b0db7d7-9ddd-4400-b976-2a7c112a4c95/init_data/%E6%95%B0%E6%8D%AE%E9%BB%98%E8%AE%A4%E6%96%B9%E6%A1%88-9227509f4c70478389a4efa654cc9b6c.cs?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20231109%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231109T064313Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27%25E6%2595%25B0%25E6%258D%25AE%25E9%25BB%2598%25E8%25AE%25A4%25E6%2596%25B9%25E6%25A1%2588-9227509f4c70478389a4efa654cc9b6c.cs&X-Amz-Signature=1cedc05a12ec3169b9336101abbb131f320da5217a7d18147f5c40bcdee05068\",\n        \"filename\": \"数据默认方案-9227509f4c70478389a4efa654cc9b6c.cs\",\n        \"message\": \"\",\n        \"update_by_id\": \"6c06f781-9b74-4059-8673-7581df5c66de\",\n        \"conflict\": \"\",\n        \"user_name\": \"AuthUser\",\n        \"uid\": \"1d25e2ae-93d9-4000-87a8-4f5a6a805909\",\n        \"expand\": {},\n        \"update_time\": \"2023-11-09T06:43:13.362431Z\",\n        \"file_md5\": \"\",\n        \"status\": \"succeed\"\n      }\n    ],\n    \"page\": 1\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "73356586-1336-4780-baa5-2b57a53bb435",
+    "name": "APISec Management account classification/init_data/recordlist API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

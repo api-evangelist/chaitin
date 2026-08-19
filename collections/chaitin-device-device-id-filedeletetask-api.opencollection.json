@@ -1,0 +1,85 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account device/{device_id}/filedeletetask API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "device/{device_id}/filedeletetask",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "文件删除创建",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/device/:device_id/filedeletetask",
+            "headers": [
+              {
+                "name": "X-CS-Header-App",
+                "value": "{{app}}"
+              },
+              {
+                "name": "X-CS-Header-Company",
+                "value": "{{company_id}}"
+              },
+              {
+                "name": "X-CS-Header-Crypt",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": "string"
+              },
+              {
+                "name": "X-CS-Header-Debug",
+                "value": "{{debug}}"
+              },
+              {
+                "name": "Accept-Language",
+                "value": "zh"
+              },
+              {
+                "name": "X-Cs-Header-Timezone",
+                "value": "Asia/Shanghai"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "params": [
+              {
+                "name": "device_id",
+                "value": "244f3e954b8e45619088f3d109e63c5b",
+                "type": "path"
+              },
+              {
+                "name": "file_dir",
+                "value": "%2Froot%2Ftest%2Ftemp",
+                "type": "query"
+              },
+              {
+                "name": "reason",
+                "value": "222",
+                "type": "query"
+              },
+              {
+                "name": "file_md5",
+                "value": "fffecbe9edca8a71524b9918bf71479f",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "文件删除创建"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

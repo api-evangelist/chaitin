@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account cert API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "cert",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "get system info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/open/system"
+          },
+          "docs": "get system info"
+        },
+        {
+          "info": {
+            "name": "update management cert",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/open/system"
+          },
+          "docs": "update management cert"
+        },
+        {
+          "info": {
+            "name": "get license",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/open/system/authorize"
+          },
+          "docs": "get license"
+        },
+        {
+          "info": {
+            "name": "delete license",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/open/system/authorize"
+          },
+          "docs": "delete license"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,224 @@
+{
+  "item": [
+    {
+      "id": "e5460ac1-a60d-4770-8ed1-f214bb4de339",
+      "name": "system/channeldefgroup/email/list",
+      "description": {
+        "content": "系统配置/通道定义组/邮件/列表",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4af0942b-400f-4540-b512-4056e53cbf24",
+          "name": "管控源列表",
+          "request": {
+            "name": "管控源列表",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "system",
+                "channeldefgroup",
+                "email",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) 应用id",
+                "key": "X-CS-Header-App",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 公司id",
+                "key": "X-CS-Header-Company",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                "key": "X-CS-Header-Crypt",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-CS-Header-Debug",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "X-Cs-Header-Timezone",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"page\": \"<integer>\",\n  \"limit\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "91d25eae-e19f-43fd-8b5d-17ab71fc02d7",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "system",
+                    "channeldefgroup",
+                    "email",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) 应用id",
+                    "key": "X-CS-Header-App",
+                    "value": "{{app}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 公司id",
+                    "key": "X-CS-Header-Company",
+                    "value": "{{company_id}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 加密算法，请参考：https://servaltech.feishu.cn/docs/doccnQCZ2cw32uazgNSO0DFwceb",
+                    "key": "X-CS-Header-Crypt",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) 对于支持「ETAG」的接口，将上一次请求的响应header的Etag，填入到下一次请求。若匹配，则返回304（无变更），否则会返回新版本的数据 + 新Etag",
+                    "key": "If-None-Match",
+                    "value": "string"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-CS-Header-Debug",
+                    "value": "{{debug}}"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept-Language",
+                    "value": "zh"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "X-Cs-Header-Timezone",
+                    "value": "Asia/Shanghai"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"page\": 1,\n  \"limit\": 1000\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 0,\n  \"msg\": \"success\",\n  \"data\": {\n    \"total\": 15,\n    \"pages\": {\n      \"page\": 1,\n      \"page_size\": 1000\n    },\n    \"results\": [\n      {\n        \"name\": \"client\",\n        \"display_name\": \"客户端\",\n        \"channel_defs\": [\n          {\n            \"uid\": \"867647a1-189e-45a6-ac87-a080877b0263\",\n            \"name\": \"outlook\",\n            \"display_name\": \"Outlook邮件\",\n            \"source\": \"default\",\n            \"channel_family\": \"application\",\n            \"windows_config_enabled\": true,\n            \"macos_config_enabled\": false,\n            \"webapp_config_enabled\": false,\n            \"linux_config_enabled\": false,\n            \"kylin_config_enabled\": false,\n            \"uos_config_enabled\": false,\n            \"policy_count\": 10,\n            \"is_used\": true,\n            \"only_ref_self_policy_count\": 0,\n            \"supported_form\": [\n              {\n                \"name\": \"Windows\",\n                \"display_name\": \"Windows\",\n                \"icon\": \"windows\"\n              },\n              {\n                \"name\": \"browser\",\n                \"icon\": \"browser\",\n                \"display_name\": \"浏览器\"\n              },\n              {\n                \"name\": \"macOS\",\n                \"display_name\": \"macOS\",\n                \"icon\": \"macOS\"\n              }\n            ],\n            \"app_category\": \"client\"\n          },\n          {\n            \"uid\": \"d5c244a4-dc6a-4450-995b-88bb7892188b\",\n            \"name\": \"foxmail\",\n            \"display_name\": \"Foxmail邮件\",\n            \"source\": \"default\",\n            \"channel_family\": \"application\",\n            \"windows_config_enabled\": true,\n            \"macos_config_enabled\": false,\n            \"webapp_config_enabled\": false,\n            \"linux_config_enabled\": false,\n            \"kylin_config_enabled\": false,\n            \"uos_config_enabled\": false,\n            \"policy_count\": 11,\n            \"is_used\": true,\n            \"only_ref_self_policy_count\": 0,\n            \"supported_form\": [\n              {\n                \"name\": \"Windows\",\n                \"display_name\": \"Windows\",\n                \"icon\": \"windows\"\n              },\n              {\n                \"name\": \"macOS\",\n                \"display_name\": \"macOS\",\n                \"icon\": \"macOS\"\n              }\n            ],\n            \"app_category\": \"client\"\n          }\n        ]\n      },\n      {\n        \"name\": \"web\",\n        \"display_name\": \"网页版\",\n        \"channel_defs\": [\n          {\n            \"uid\": \"5ce36d59-6eaa-4221-9ee7-a3efaefeb928\",\n            \"name\": \"web_gmail\",\n            \"display_name\": \"Gmail网页版\",\n            \"source\": \"default\",\n            \"channel_family\": \"application\",\n            \"windows_config_enabled\": false,\n            \"macos_config_enabled\": false,\n            \"webapp_config_enabled\": false,\n            \"linux_config_enabled\": false,\n            \"kylin_config_enabled\": false,\n            \"uos_config_enabled\": false,\n            \"policy_count\": 2,\n            \"is_used\": true,\n            \"only_ref_self_policy_count\": 0,\n            \"supported_form\": [\n              {\n                \"name\": \"browser\",\n                \"icon\": \"browser\",\n                \"display_name\": \"浏览器\"\n              }\n            ],\n            \"app_category\": \"web\"\n          },\n          {\n            \"uid\": \"374ab4c0-9ae9-47b8-a9fb-7cd979f49807\",\n            \"name\": \"web_email_naver\",\n            \"display_name\": \"NAVER邮箱网页版\",\n            \"source\": \"default\",\n            \"channel_family\": \"application\",\n            \"windows_config_enabled\": false,\n            \"macos_config_enabled\": false,\n            \"webapp_config_enabled\": false,\n            \"linux_config_enabled\": false,\n            \"kylin_config_enabled\": false,\n            \"uos_config_enabled\": false,\n            \"policy_count\": 2,\n            \"is_used\": true,\n            \"only_ref_self_policy_count\": 0,\n            \"supported_form\": [\n              {\n                \"name\": \"browser\",\n                \"icon\": \"browser\",\n                \"display_name\": \"浏览器\"\n              }\n            ],\n            \"app_category\": \"web\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7dbf7f69-12fa-4698-b213-3794d14f1d42",
+    "name": "APISec Management account system/channeldefgroup/email/list API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}

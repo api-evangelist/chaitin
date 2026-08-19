@@ -1,0 +1,85 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "APISec Management account stat API",
+    "version": "26.05"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "stat",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "get advanced access",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/stat/advance/access",
+            "params": [
+              {
+                "name": "begin_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "get advanced access"
+        },
+        {
+          "info": {
+            "name": "get advanced intercept",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/stat/advance/attack",
+            "params": [
+              {
+                "name": "begin_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end_time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "site_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "get advanced intercept"
+        },
+        {
+          "info": {
+            "name": "get qps",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/stat/qps"
+          },
+          "docs": "get qps"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

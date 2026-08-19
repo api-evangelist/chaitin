@@ -1,0 +1,680 @@
+{
+  "item": [
+    {
+      "id": "1b259f52-b54f-41a7-abb2-36859c296f49",
+      "name": "label",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cab5c81d-e95e-4709-9bab-96107cdf16cc",
+          "name": "POST /api/BusinessTagAPI",
+          "request": {
+            "name": "POST /api/BusinessTagAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "BusinessTagAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"mark_rules\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "70f9da6d-5f07-4f8a-8af0-0199bf0c863f",
+          "name": "PUT /api/BusinessTagAPI",
+          "request": {
+            "name": "PUT /api/BusinessTagAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "BusinessTagAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"mark_rules\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0ce6d93f-6691-4843-a180-8e22ebce5353",
+          "name": "POST /api/MarkRuleAPI",
+          "request": {
+            "name": "POST /api/MarkRuleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "MarkRuleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"is_enabled\": \"<boolean>\",\n  \"pattern\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"tags\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b01cd00e-8e03-4175-a191-b42885b8f385",
+          "name": "PUT /api/MarkRuleAPI",
+          "request": {
+            "name": "PUT /api/MarkRuleAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "MarkRuleAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"is_enabled\": \"<boolean>\",\n  \"name\": \"<string>\",\n  \"pattern\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"comment\": \"<string>\",\n  \"tags\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1c69aae5-a384-4aef-a23f-516734c99463",
+          "name": "POST /api/SensitiveCategoryAPI",
+          "request": {
+            "name": "POST /api/SensitiveCategoryAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveCategoryAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"remark\": \"<string>\",\n  \"template_id\": \"<integer>\",\n  \"parent_id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7a486bcc-ad8d-4d16-a111-f1e19f2462a8",
+          "name": "PUT /api/SensitiveCategoryAPI",
+          "request": {
+            "name": "PUT /api/SensitiveCategoryAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveCategoryAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"remark\": \"<string>\",\n  \"template_id\": \"<integer>\",\n  \"parent_id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1645e2f2-4cdc-4b10-a466-5965e4757686",
+          "name": "DELETE /api/SensitiveCategoryAPI",
+          "request": {
+            "name": "DELETE /api/SensitiveCategoryAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveCategoryAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "df4f829d-854b-4dbc-8ded-cad2373454a7",
+          "name": "GET /api/SensitiveTemplateAPI",
+          "request": {
+            "name": "GET /api/SensitiveTemplateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveTemplateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<integer>",
+                  "description": "(Required) ID"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "af079fb7-eb0f-4db1-936a-3348003e4106",
+          "name": "POST /api/SensitiveTemplateAPI",
+          "request": {
+            "name": "POST /api/SensitiveTemplateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveTemplateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"remark\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "00df4eb3-3f3d-46d3-bfc8-8b63b9df629c",
+          "name": "PUT /api/SensitiveTemplateAPI",
+          "request": {
+            "name": "PUT /api/SensitiveTemplateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveTemplateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"remark\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "17c4b5db-ae14-4c69-9b36-8b73e1d30844",
+          "name": "DELETE /api/SensitiveTemplateAPI",
+          "request": {
+            "name": "DELETE /api/SensitiveTemplateAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveTemplateAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "00f8e1d1-4073-4982-a5e7-78ae5e8c4f87",
+          "name": "POST /api/SensitiveValueBindingAPI",
+          "request": {
+            "name": "POST /api/SensitiveValueBindingAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveValueBindingAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"template_id\": \"<integer>\",\n  \"category_id\": \"<integer>\",\n  \"tag_id\": \"<integer>\",\n  \"level\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6677c692-2c89-4328-bae8-948bffbb3968",
+          "name": "PUT /api/SensitiveValueBindingAPI",
+          "request": {
+            "name": "PUT /api/SensitiveValueBindingAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveValueBindingAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"category_id\": \"<integer>\",\n  \"level\": \"<string>\",\n  \"tag_id\": \"<integer>\",\n  \"template_id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "71e2baf8-f776-4796-8822-2295c21e3e14",
+          "name": "DELETE /api/SensitiveValueBindingAPI",
+          "request": {
+            "name": "DELETE /api/SensitiveValueBindingAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "SensitiveValueBindingAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cc40db88-d0a2-46e6-a5e4-b1dd34baee4b",
+          "name": "POST /api/ValueCategoryAPI",
+          "request": {
+            "name": "POST /api/ValueCategoryAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ValueCategoryAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"private\": \"<boolean>\",\n  \"identifiable\": \"<boolean>\",\n  \"unique\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7bf41b71-9252-4c8a-8243-f2a884ab0777",
+          "name": "PUT /api/ValueCategoryAPI",
+          "request": {
+            "name": "PUT /api/ValueCategoryAPI",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "ValueCategoryAPI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"identifiable\": \"<boolean>\",\n  \"name\": \"<string>\",\n  \"private\": \"<boolean>\",\n  \"type\": \"<string>\",\n  \"unique\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "01dd1cac-58b1-4f16-bd91-8b3177f76bb4",
+    "name": "APISec Management account label API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Generated from APISec skyview APIView classes.",
+      "type": "text/plain"
+    }
+  }
+}
