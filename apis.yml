@@ -53,6 +53,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Account
+  tags_raw:
   - account
   properties:
   - type: OpenAPI
@@ -66,7 +68,8 @@ apis:
   description: 员工管理/人员设备/staff_id 参数/新增
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - account/staff_devices/{staff_id}/add
   properties:
   - type: OpenAPI
@@ -80,7 +83,8 @@ apis:
   description: 员工管理/人员设备/staff_id 参数/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - account/staff_devices/{staff_id}/remove
   properties:
   - type: OpenAPI
@@ -108,7 +112,8 @@ apis:
   description: 员工管理/人员/staff_id 参数/收藏
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - account/staff/{staff_id}/fav
   properties:
   - type: OpenAPI
@@ -150,7 +155,8 @@ apis:
   description: 员工管理/人员标签集合/staff_id 参数/绑定
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - account/staff_tags/{staff_id}/bind
   properties:
   - type: OpenAPI
@@ -220,7 +226,8 @@ apis:
   description: The api_assets API from Chaitin Tech — 61 operation(s) for api_assets.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - api_assets
   properties:
   - type: OpenAPI
@@ -234,7 +241,8 @@ apis:
   description: The api_log API from Chaitin Tech — 4 operation(s) for api_log.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - api_log
   properties:
   - type: OpenAPI
@@ -277,6 +285,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Backup
+  tags_raw:
   - backup
   properties:
   - type: OpenAPI
@@ -402,7 +412,8 @@ apis:
   description: 浏览器管理/tid 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - browsermanager/{tid}/detail
   properties:
   - type: OpenAPI
@@ -416,7 +427,8 @@ apis:
   description: 浏览器管理/tid 参数/设备管理/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - browsermanager/{tid}/device/list
   properties:
   - type: OpenAPI
@@ -430,7 +442,8 @@ apis:
   description: 浏览器管理/tid 参数/插件/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - browsermanager/{tid}/plugin/list
   properties:
   - type: OpenAPI
@@ -486,7 +499,8 @@ apis:
   description: The buildin_waf API from Chaitin Tech — 1 operation(s) for buildin_waf.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - buildin_waf
   properties:
   - type: OpenAPI
@@ -501,6 +515,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Cert
+  tags_raw:
   - cert
   properties:
   - type: OpenAPI
@@ -514,7 +530,8 @@ apis:
   description: 数据分类分级/数据分类/cl_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - classification/data_classification/{cl_id}/detail
   properties:
   - type: OpenAPI
@@ -543,7 +560,8 @@ apis:
   description: 数据分类分级/数据分类中心/hub_id 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - classification/data_classification_hub/{hub_id}/action/remove
   properties:
   - type: OpenAPI
@@ -671,6 +689,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Dashboard
+  tags_raw:
   - dashboard
   properties:
   - type: OpenAPI
@@ -698,7 +718,8 @@ apis:
   description: 数据资产/asset_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - dataasset/{asset_id}/detail
   properties:
   - type: OpenAPI
@@ -712,7 +733,8 @@ apis:
   description: 数据资产/asset_id 参数/hitdetail 接口
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - dataasset/{asset_id}/hitdetail
   properties:
   - type: OpenAPI
@@ -768,7 +790,8 @@ apis:
   description: 数据资产/md5_hash 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - dataasset/{md5_hash}/detail
   properties:
   - type: OpenAPI
@@ -782,7 +805,8 @@ apis:
   description: 数据资产/MD5/md5 参数/任务信息
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - dataasset/md5/{md5}/taskinfo
   properties:
   - type: OpenAPI
@@ -796,7 +820,8 @@ apis:
   description: 数据资产/来源/source 参数/MD5/md5 参数/部门/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - dataasset/source/{source}/md5/{md5}/dept/list
   properties:
   - type: OpenAPI
@@ -810,7 +835,8 @@ apis:
   description: 数据资产/来源/source 参数/MD5/md5 参数/设备管理/device_id 参数/文件记录/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - dataasset/source/{source}/md5/{md5}/device/{device_id}/filerecord/list
   properties:
   - type: OpenAPI
@@ -825,7 +851,8 @@ apis:
   description: 数据资产/来源/source 参数/MD5/md5 参数/人员/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - dataasset/source/{source}/md5/{md5}/staff/list
   properties:
   - type: OpenAPI
@@ -923,7 +950,8 @@ apis:
   description: The 数字情报/任务管理 API from Chaitin Tech — 950 operation(s) for 数字情报/任务管理.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - 数字情报/任务管理
   properties:
   - type: OpenAPI
@@ -1011,7 +1039,8 @@ apis:
     The device/avscantask/{task_id}/action/remove API from Chaitin Tech — 1 operation(s) for device/avscantask/{task_id}/action/remove.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/avscantask/{task_id}/action/remove
   properties:
   - type: OpenAPI
@@ -1025,7 +1054,8 @@ apis:
   description: 终端管理/杀毒扫描任务/task_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/avscantask/{task_id}
   properties:
   - type: OpenAPI
@@ -1039,7 +1069,8 @@ apis:
   description: 终端管理/杀毒扫描任务/task_id 参数/实例/instance_id 参数/设备管理/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/avscantask/{task_id}/instance/{instance_id}/device/list
   properties:
   - type: OpenAPI
@@ -1055,7 +1086,8 @@ apis:
     The device/avscantask/{task_id}/instance/list API from Chaitin Tech — 1 operation(s) for device/avscantask/{task_id}/instance/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/avscantask/{task_id}/instance/list
   properties:
   - type: OpenAPI
@@ -1070,7 +1102,8 @@ apis:
     The device/avscantask/{task_id}/updatestatus API from Chaitin Tech — 1 operation(s) for device/avscantask/{task_id}/updatestatus.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/avscantask/{task_id}/updatestatus
   properties:
   - type: OpenAPI
@@ -1100,7 +1133,8 @@ apis:
     The device/{device_id}/detail API from Chaitin Tech — 1 operation(s) for device/{device_id}/detail.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/{device_id}/detail
   properties:
   - type: OpenAPI
@@ -1115,7 +1149,8 @@ apis:
     The device/{device_id}/diagnosistask API from Chaitin Tech — 1 operation(s) for device/{device_id}/diagnosistask.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/{device_id}/diagnosistask
   properties:
   - type: OpenAPI
@@ -1131,7 +1166,8 @@ apis:
     for device/{device_id}/diagnosistask/{task_id}/getfilemetadata.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/{device_id}/diagnosistask/{task_id}/getfilemetadata
   properties:
   - type: OpenAPI
@@ -1146,7 +1182,8 @@ apis:
     The device/{device_id}/filedeletetask API from Chaitin Tech — 1 operation(s) for device/{device_id}/filedeletetask.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/{device_id}/filedeletetask
   properties:
   - type: OpenAPI
@@ -1235,7 +1272,8 @@ apis:
     The device/filescantask/remote/{task_id}/detail API from Chaitin Tech — 1 operation(s) for device/filescantask/remote/{task_id}/detail.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/filescantask/remote/{task_id}/detail
   properties:
   - type: OpenAPI
@@ -1251,7 +1289,8 @@ apis:
     for device/filescantask/remote/{task_id}/instance/{instance_id}/detail.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/filescantask/remote/{task_id}/instance/{instance_id}/detail
   properties:
   - type: OpenAPI
@@ -1268,7 +1307,8 @@ apis:
     — 1 operation(s) for device/filescantask/remote/{task_id}/instance/{instance_id}/device/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/filescantask/remote/{task_id}/instance/{instance_id}/device/list
   properties:
   - type: OpenAPI
@@ -1287,7 +1327,8 @@ apis:
     Tech — 1 operation(s) for device/filescantask/remote/{task_id}/instance/{instance_id}/device/statistic.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/filescantask/remote/{task_id}/instance/{instance_id}/device/statistic
   properties:
   - type: OpenAPI
@@ -1305,7 +1346,8 @@ apis:
     — 1 operation(s) for device/filescantask/remote/{task_id}/instance/{instance_id}/results/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/filescantask/remote/{task_id}/instance/{instance_id}/results/list
   properties:
   - type: OpenAPI
@@ -1322,7 +1364,8 @@ apis:
     device/filescantask/remote/{task_id}/instance/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/filescantask/remote/{task_id}/instance/list
   properties:
   - type: OpenAPI
@@ -1337,7 +1380,8 @@ apis:
     The device/filescantask/remote/{task_id}/operation API from Chaitin Tech — 1 operation(s) for device/filescantask/remote/{task_id}/operation.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/filescantask/remote/{task_id}/operation
   properties:
   - type: OpenAPI
@@ -1352,7 +1396,8 @@ apis:
     The device/filescantask/remote/{task_id}/trigger API from Chaitin Tech — 1 operation(s) for device/filescantask/remote/{task_id}/trigger.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/filescantask/remote/{task_id}/trigger
   properties:
   - type: OpenAPI
@@ -1383,7 +1428,8 @@ apis:
     for device/filescantask/remote/test_connection/{task_id}/result.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/filescantask/remote/test_connection/{task_id}/result
   properties:
   - type: OpenAPI
@@ -1400,7 +1446,8 @@ apis:
     for device/filescantask/remote/test_connection/{task_id}/status.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/filescantask/remote/test_connection/{task_id}/status
   properties:
   - type: OpenAPI
@@ -1431,7 +1478,8 @@ apis:
     The device/filescantask/results/{task_id}/detail API from Chaitin Tech — 1 operation(s) for device/filescantask/results/{task_id}/detail.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/filescantask/results/{task_id}/detail
   properties:
   - type: OpenAPI
@@ -1449,7 +1497,8 @@ apis:
     — 1 operation(s) for device/filescantask/{task_id}/instance/{instance_id}/device/action/download.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/filescantask/{task_id}/instance/{instance_id}/device/action/download
   properties:
   - type: OpenAPI
@@ -1466,7 +1515,8 @@ apis:
     1 operation(s) for device/filescantask/{task_id}/instance/{instance_id}/device/statistic.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/filescantask/{task_id}/instance/{instance_id}/device/statistic
   properties:
   - type: OpenAPI
@@ -1482,7 +1532,8 @@ apis:
     The device/filescantask/{task_id}/instance/list API from Chaitin Tech — 1 operation(s) for device/filescantask/{task_id}/instance/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/filescantask/{task_id}/instance/list
   properties:
   - type: OpenAPI
@@ -1525,7 +1576,8 @@ apis:
     The device/policy/{devic_id}/showtree API from Chaitin Tech — 1 operation(s) for device/policy/{devic_id}/showtree.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/policy/{devic_id}/showtree
   properties:
   - type: OpenAPI
@@ -1540,7 +1592,8 @@ apis:
     The device/policy/{device_id}/list API from Chaitin Tech — 1 operation(s) for device/policy/{device_id}/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/policy/{device_id}/list
   properties:
   - type: OpenAPI
@@ -1599,7 +1652,8 @@ apis:
     for device/uninstalltask/ad454e0c-9156-48ab-bc30-304f638e8ad8/instance.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - device/uninstalltask/ad454e0c-9156-48ab-bc30-304f638e8ad8/instance
   properties:
   - type: OpenAPI
@@ -1716,7 +1770,8 @@ apis:
   description: The discover_api API from Chaitin Tech — 9 operation(s) for discover_api.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - discover_api
   properties:
   - type: OpenAPI
@@ -1730,7 +1785,8 @@ apis:
   description: The discover_data API from Chaitin Tech — 3 operation(s) for discover_data.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - discover_data
   properties:
   - type: OpenAPI
@@ -1814,7 +1870,8 @@ apis:
   description: 导出记录/task_id 参数/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - exportrecord/{task_id}/download
   properties:
   - type: OpenAPI
@@ -1870,7 +1927,8 @@ apis:
   description: 文件行为/log_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - filebehavior/{log_id}/detail
   properties:
   - type: OpenAPI
@@ -1927,6 +1985,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Filter
+  tags_raw:
   - filter
   properties:
   - type: OpenAPI
@@ -1996,7 +2056,8 @@ apis:
   description: 终端安装包/installer_id 参数/getmetadata 接口
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - installer/{installer_id}/getmetadata
   properties:
   - type: OpenAPI
@@ -2024,7 +2085,8 @@ apis:
   description: 终端安装包/meta_id 参数/下载地址
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - installer/{meta_id}/downloadurl
   properties:
   - type: OpenAPI
@@ -2066,7 +2128,8 @@ apis:
   description: 终端安装包/简易任务/simple_task_id 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - installer/simpletask/{simple_task_id}/action
   properties:
   - type: OpenAPI
@@ -2080,7 +2143,8 @@ apis:
   description: 终端安装包/简易任务/simple_task_id 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - installer/simpletask/{simple_task_id}/action/remove
   properties:
   - type: OpenAPI
@@ -2094,7 +2158,8 @@ apis:
   description: 终端安装包/简易任务/simple_task_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - installer/simpletask/{simple_task_id}
   properties:
   - type: OpenAPI
@@ -2108,7 +2173,8 @@ apis:
   description: 终端安装包/简易任务/simple_task_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - installer/simpletask/{simple_task_id}/detail
   properties:
   - type: OpenAPI
@@ -2150,7 +2216,8 @@ apis:
   description: 终端安装包/任务/install_task_id 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - installer/task/{install_task_id}/action
   properties:
   - type: OpenAPI
@@ -2164,7 +2231,8 @@ apis:
   description: 终端安装包/任务/install_task_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - installer/task/{install_task_id}
   properties:
   - type: OpenAPI
@@ -2178,7 +2246,8 @@ apis:
   description: 终端安装包/任务/install_task_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - installer/task/{install_task_id}/detail
   properties:
   - type: OpenAPI
@@ -2220,7 +2289,8 @@ apis:
   description: 终端安装包/任务步骤/step_id 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - installer/taskstep/{step_id}/action
   properties:
   - type: OpenAPI
@@ -2234,7 +2304,8 @@ apis:
   description: 终端安装包/任务步骤/step_id 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - installer/taskstep/{step_id}/action/remove
   properties:
   - type: OpenAPI
@@ -2248,7 +2319,8 @@ apis:
   description: 终端安装包/任务步骤/step_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - installer/taskstep/{step_id}
   properties:
   - type: OpenAPI
@@ -2262,7 +2334,8 @@ apis:
   description: 终端安装包/任务步骤/step_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - installer/taskstep/{step_id}/detail
   properties:
   - type: OpenAPI
@@ -2333,6 +2406,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Intranet
+  tags_raw:
   - intranet
   properties:
   - type: OpenAPI
@@ -2347,6 +2422,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - IP
+  tags_raw:
   - 资产/IP地址
   properties:
   - type: OpenAPI
@@ -2361,6 +2438,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - IPGroup
+  tags_raw:
   - ipgroup
   properties:
   - type: OpenAPI
@@ -2375,6 +2454,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Label
+  tags_raw:
   - label
   properties:
   - type: OpenAPI
@@ -2389,6 +2470,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Learning
+  tags_raw:
   - learning
   properties:
   - type: OpenAPI
@@ -2459,6 +2542,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Machine-Learning
+  tags_raw:
   - machinelearning
   properties:
   - type: OpenAPI
@@ -2486,7 +2571,8 @@ apis:
   description: 机器学习/machine_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - machinelearning/{machine_id}/detail
   properties:
   - type: OpenAPI
@@ -2500,7 +2586,8 @@ apis:
   description: 机器学习/ml_id 参数/操作/执行
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - machinelearning/{ml_id}/action/perform
   properties:
   - type: OpenAPI
@@ -2514,7 +2601,8 @@ apis:
   description: The merge_api API from Chaitin Tech — 2 operation(s) for merge_api.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - merge_api
   properties:
   - type: OpenAPI
@@ -2556,7 +2644,8 @@ apis:
   description: 通知机器人/bot 参数/测试
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - notificationbot/{bot}/test
   properties:
   - type: OpenAPI
@@ -2571,6 +2660,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Options
+  tags_raw:
   - options
   properties:
   - type: OpenAPI
@@ -2585,6 +2676,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Plugin
+  tags_raw:
   - plugin
   properties:
   - type: OpenAPI
@@ -2599,6 +2692,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Policy
+  tags_raw:
   - policy
   properties:
   - type: OpenAPI
@@ -2654,7 +2749,8 @@ apis:
   description: 策略管理/通道/policy_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/channel/{policy_id}
   properties:
   - type: OpenAPI
@@ -2668,7 +2764,8 @@ apis:
   description: 策略管理/通道/policy_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/channel/{policy_id}/detail
   properties:
   - type: OpenAPI
@@ -2696,7 +2793,8 @@ apis:
   description: 策略管理/代码管控/配置白名单/config_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/codecontrol/configwhitelist/{config_id}/detail
   properties:
   - type: OpenAPI
@@ -2710,7 +2808,8 @@ apis:
   description: 策略管理/代码管控/配置白名单/config_id 参数/更新
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/codecontrol/configwhitelist/{config_id}/update
   properties:
   - type: OpenAPI
@@ -2794,7 +2893,8 @@ apis:
   description: 策略管理/代码管控/控制白名单/control_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/codecontrol/controlwhitelist/{control_id}/detail
   properties:
   - type: OpenAPI
@@ -2808,7 +2908,8 @@ apis:
   description: 策略管理/代码管控/控制白名单/control_id 参数/更新
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/codecontrol/controlwhitelist/{control_id}/update
   properties:
   - type: OpenAPI
@@ -2906,7 +3007,8 @@ apis:
   description: 策略管理/代码管控/policy_id 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/codecontrol/{policy_id}/action
   properties:
   - type: OpenAPI
@@ -2920,7 +3022,8 @@ apis:
   description: 策略管理/代码管控/policy_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/codecontrol/{policy_id}/detail
   properties:
   - type: OpenAPI
@@ -2934,7 +3037,8 @@ apis:
   description: 策略管理/代码管控/policy_id 参数/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/codecontrol/{policy_id}/remove
   properties:
   - type: OpenAPI
@@ -2948,7 +3052,8 @@ apis:
   description: 策略管理/代码管控/policy_id 参数/更新
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/codecontrol/{policy_id}/update
   properties:
   - type: OpenAPI
@@ -3032,7 +3137,8 @@ apis:
   description: 策略管理/邮件/uid 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/email/{uid}/action
   properties:
   - type: OpenAPI
@@ -3046,7 +3152,8 @@ apis:
   description: 策略管理/邮件/uid 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/email/{uid}/action/remove
   properties:
   - type: OpenAPI
@@ -3060,7 +3167,8 @@ apis:
   description: 策略管理/邮件/uid 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/email/{uid}
   properties:
   - type: OpenAPI
@@ -3074,7 +3182,8 @@ apis:
   description: 策略管理/邮件/uid 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/email/{uid}/detail
   properties:
   - type: OpenAPI
@@ -3201,7 +3310,8 @@ apis:
   description: 策略管理/落地/uid 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/landing/{uid}/action
   properties:
   - type: OpenAPI
@@ -3215,7 +3325,8 @@ apis:
   description: 策略管理/落地/uid 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/landing/{uid}/action/remove
   properties:
   - type: OpenAPI
@@ -3229,7 +3340,8 @@ apis:
   description: 策略管理/落地/uid 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/landing/{uid}
   properties:
   - type: OpenAPI
@@ -3243,7 +3355,8 @@ apis:
   description: 策略管理/落地/uid 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/landing/{uid}/detail
   properties:
   - type: OpenAPI
@@ -3313,7 +3426,8 @@ apis:
   description: 策略管理/钓鱼防护/policy_id 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/phishing_protection/{policy_id}/action
   properties:
   - type: OpenAPI
@@ -3327,7 +3441,8 @@ apis:
   description: 策略管理/钓鱼防护/policy_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/phishing_protection/{policy_id}/detail
   properties:
   - type: OpenAPI
@@ -3341,7 +3456,8 @@ apis:
   description: 策略管理/钓鱼防护/policy_id 参数/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/phishing_protection/{policy_id}/remove
   properties:
   - type: OpenAPI
@@ -3355,7 +3471,8 @@ apis:
   description: 策略管理/钓鱼防护/policy_id 参数/更新
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/phishing_protection/{policy_id}/update
   properties:
   - type: OpenAPI
@@ -3411,7 +3528,8 @@ apis:
   description: 策略管理/隐私保护/policy_id 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/privacy_protection/{policy_id}/action
   properties:
   - type: OpenAPI
@@ -3425,7 +3543,8 @@ apis:
   description: 策略管理/隐私保护/policy_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/privacy_protection/{policy_id}/detail
   properties:
   - type: OpenAPI
@@ -3439,7 +3558,8 @@ apis:
   description: 策略管理/隐私保护/policy_id 参数/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/privacy_protection/{policy_id}/remove
   properties:
   - type: OpenAPI
@@ -3453,7 +3573,8 @@ apis:
   description: 策略管理/隐私保护/policy_id 参数/更新
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/privacy_protection/{policy_id}/update
   properties:
   - type: OpenAPI
@@ -3467,7 +3588,8 @@ apis:
   description: 策略管理/实时监控/评论/comment_id 参数/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/realtime_monitor/comment/{comment_id}/remove
   properties:
   - type: OpenAPI
@@ -3537,7 +3659,8 @@ apis:
   description: 策略管理/实时监控/policy_id 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/realtime_monitor/{policy_id}/action
   properties:
   - type: OpenAPI
@@ -3551,7 +3674,8 @@ apis:
   description: 策略管理/实时监控/policy_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/realtime_monitor/{policy_id}/detail
   properties:
   - type: OpenAPI
@@ -3565,7 +3689,8 @@ apis:
   description: 策略管理/实时监控/policy_id 参数/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/realtime_monitor/{policy_id}/remove
   properties:
   - type: OpenAPI
@@ -3622,7 +3747,8 @@ apis:
   description: 策略管理/远程控制/policy_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/remote_control/{policy_id}
   properties:
   - type: OpenAPI
@@ -3636,7 +3762,8 @@ apis:
   description: 策略管理/远程控制/policy_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/remote_control/{policy_id}/detail
   properties:
   - type: OpenAPI
@@ -3678,7 +3805,8 @@ apis:
   description: 策略管理/软件联网/policy_id 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/soft_network/{policy_id}/action
   properties:
   - type: OpenAPI
@@ -3692,7 +3820,8 @@ apis:
   description: 策略管理/软件联网/policy_id 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/soft_network/{policy_id}/action/remove
   properties:
   - type: OpenAPI
@@ -3706,7 +3835,8 @@ apis:
   description: 策略管理/软件联网/policy_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/soft_network/{policy_id}
   properties:
   - type: OpenAPI
@@ -3804,7 +3934,8 @@ apis:
   description: 策略管理/TED/uid 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/ted/{uid}/action
   properties:
   - type: OpenAPI
@@ -3818,7 +3949,8 @@ apis:
   description: 策略管理/TED/uid 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/ted/{uid}/action/remove
   properties:
   - type: OpenAPI
@@ -3832,7 +3964,8 @@ apis:
   description: 策略管理/TED/uid 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/ted/{uid}
   properties:
   - type: OpenAPI
@@ -3846,7 +3979,8 @@ apis:
   description: 策略管理/TED/uid 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/ted/{uid}/detail
   properties:
   - type: OpenAPI
@@ -3931,7 +4065,8 @@ apis:
   description: 策略管理/网页发帖管控/policy_id 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/webpost_control/{policy_id}/action
   properties:
   - type: OpenAPI
@@ -3945,7 +4080,8 @@ apis:
   description: 策略管理/网页发帖管控/policy_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/webpost_control/{policy_id}/detail
   properties:
   - type: OpenAPI
@@ -3959,7 +4095,8 @@ apis:
   description: 策略管理/网页发帖管控/policy_id 参数/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/webpost_control/{policy_id}/remove
   properties:
   - type: OpenAPI
@@ -3973,7 +4110,8 @@ apis:
   description: 策略管理/网页发帖管控/policy_id 参数/更新
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/webpost_control/{policy_id}/update
   properties:
   - type: OpenAPI
@@ -4001,7 +4139,8 @@ apis:
   description: 策略管理/网页发帖管控/白名单管理/config_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/webpost_control/whitelist/{config_id}/detail
   properties:
   - type: OpenAPI
@@ -4015,7 +4154,8 @@ apis:
   description: 策略管理/网页发帖管控/白名单管理/config_id 参数/更新
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policy/webpost_control/whitelist/{config_id}/update
   properties:
   - type: OpenAPI
@@ -4169,7 +4309,8 @@ apis:
   description: 日志中心/浏览器插件/log_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policylog/browserplugin/{log_id}/detail
   properties:
   - type: OpenAPI
@@ -4239,7 +4380,8 @@ apis:
   description: 日志中心/通道/event_id 参数/文件流转
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policylog/channel/{event_id}/fileflow
   properties:
   - type: OpenAPI
@@ -4253,7 +4395,8 @@ apis:
   description: 日志中心/通道/event_id 参数/内部文件流转
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policylog/channel/{event_id}/innerfileflow
   properties:
   - type: OpenAPI
@@ -4281,7 +4424,8 @@ apis:
   description: 日志中心/通道/policylog_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policylog/channel/{policylog_id}/detail
   properties:
   - type: OpenAPI
@@ -4617,7 +4761,8 @@ apis:
   description: 日志中心/落地/log_id 参数/内部文件流转
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - policylog/landing/{log_id}/innerfileflow
   properties:
   - type: OpenAPI
@@ -4786,6 +4931,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Report
+  tags_raw:
   - report
   properties:
   - type: OpenAPI
@@ -4827,7 +4974,8 @@ apis:
   description: 报表中心/仪表盘/图表/chart_id 参数/details 接口
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - report/dashboard/chart/{chart_id}/details
   properties:
   - type: OpenAPI
@@ -4841,7 +4989,8 @@ apis:
   description: 报表中心/仪表盘/图表/chart_id 参数/更新
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - report/dashboard/chart/{chart_id}/update
   properties:
   - type: OpenAPI
@@ -4953,7 +5102,8 @@ apis:
   description: 报表中心/仪表盘/dashboard_id 参数/删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - report/dashboard/{dashboard_id}/delete
   properties:
   - type: OpenAPI
@@ -4967,7 +5117,8 @@ apis:
   description: 报表中心/仪表盘/dashboard_id 参数/details 接口
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - report/dashboard/{dashboard_id}/details
   properties:
   - type: OpenAPI
@@ -5079,7 +5230,8 @@ apis:
   description: 报表中心/任务/task_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - report/task/{task_id}
   properties:
   - type: OpenAPI
@@ -5093,7 +5245,8 @@ apis:
   description: 报表中心/任务/task_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - report/task/{task_id}/detail
   properties:
   - type: OpenAPI
@@ -5122,6 +5275,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Risk
+  tags_raw:
   - risk
   properties:
   - type: OpenAPI
@@ -5178,6 +5333,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Sensitive Data
+  tags_raw:
   - sensitive_data
   properties:
   - type: OpenAPI
@@ -5192,6 +5349,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Site
+  tags_raw:
   - site
   properties:
   - type: OpenAPI
@@ -5233,7 +5392,8 @@ apis:
   description: 软件分发与卸载/分布/software_id 参数/实例
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - software/distribution/{software_id}/instance
   properties:
   - type: OpenAPI
@@ -5261,7 +5421,8 @@ apis:
   description: 软件分发与卸载/uninstall 接口/实例/instance_id 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - software/uninstall/instance/{instance_id}/action/remove
   properties:
   - type: OpenAPI
@@ -5275,7 +5436,8 @@ apis:
   description: 软件分发与卸载/uninstall 接口/实例/instance_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - software/uninstall/instance/{instance_id}/detail
   properties:
   - type: OpenAPI
@@ -5291,7 +5453,8 @@ apis:
   description: 软件分发与卸载/uninstall 接口/实例/instance_id 参数/设备管理/device_id 参数/卸载来源/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - software/uninstall/instance/{instance_id}/device/{device_id}/uninstallsource/list
   properties:
   - type: OpenAPI
@@ -5306,7 +5469,8 @@ apis:
   description: 软件分发与卸载/uninstall 接口/实例/instance_id 参数/设备管理/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - software/uninstall/instance/{instance_id}/device/list
   properties:
   - type: OpenAPI
@@ -5432,7 +5596,8 @@ apis:
   description: 软件管理/software_hash 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - softwaremanager/{software_hash}/detail
   properties:
   - type: OpenAPI
@@ -5446,7 +5611,8 @@ apis:
   description: 软件管理/software_hash 参数/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - softwaremanager/{software_hash}/list
   properties:
   - type: OpenAPI
@@ -5502,7 +5668,8 @@ apis:
   description: The split_api API from Chaitin Tech — 2 operation(s) for split_api.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - split_api
   properties:
   - type: OpenAPI
@@ -5517,6 +5684,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Stat
+  tags_raw:
   - stat
   properties:
   - type: OpenAPI
@@ -5572,7 +5741,8 @@ apis:
   description: 统计分析/device_id 参数/磁盘
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - statistic/{device_id}/disk
   properties:
   - type: OpenAPI
@@ -5713,6 +5883,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Syslog
+  tags_raw:
   - Syslog 管理与系统日志
   properties:
   - type: OpenAPI
@@ -5908,7 +6080,8 @@ apis:
   description: 系统配置/通道定义/channel_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - system/channeldef/{channel_id}/detail
   properties:
   - type: OpenAPI
@@ -5922,7 +6095,8 @@ apis:
   description: 系统配置/通道定义/channel_id 参数/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - system/channeldef/{channel_id}/modify
   properties:
   - type: OpenAPI
@@ -5936,7 +6110,8 @@ apis:
   description: 系统配置/通道定义/channel_id 参数/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - system/channeldef/{channel_id}/remove
   properties:
   - type: OpenAPI
@@ -5978,7 +6153,8 @@ apis:
   description: 系统配置/通道定义/上传任务/task_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - system/channeldef/uploadtask/{task_id}/detail
   properties:
   - type: OpenAPI
@@ -5992,7 +6168,8 @@ apis:
   description: 系统配置/通道定义/上传任务/task_id 参数/启动
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - system/channeldef/uploadtask/{task_id}/start
   properties:
   - type: OpenAPI
@@ -6006,7 +6183,8 @@ apis:
   description: 系统配置/通道定义/上传任务/task_id 参数/状态
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - system/channeldef/uploadtask/{task_id}/status
   properties:
   - type: OpenAPI
@@ -6244,7 +6422,8 @@ apis:
   description: 系统配置/文件扫描远程存储/uid 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - system/filescanremotestorage/{uid}
   properties:
   - type: OpenAPI
@@ -6258,7 +6437,8 @@ apis:
   description: 系统配置/文件扫描远程存储/uid 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - system/filescanremotestorage/{uid}/detail
   properties:
   - type: OpenAPI
@@ -6651,7 +6831,8 @@ apis:
   description: 系统配置/TED 备份配置/config_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - system/tedbackupconfig/{config_id}
   properties:
   - type: OpenAPI
@@ -6665,7 +6846,8 @@ apis:
   description: 系统配置/TED 备份配置/config_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - system/tedbackupconfig/{config_id}/detail
   properties:
   - type: OpenAPI
@@ -6835,6 +7017,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Third-Party
+  tags_raw:
   - third_party
   properties:
   - type: OpenAPI
@@ -6848,7 +7032,8 @@ apis:
   description: The trigger_rule API from Chaitin Tech — 5 operation(s) for trigger_rule.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - trigger_rule
   properties:
   - type: OpenAPI
@@ -6863,6 +7048,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - UEBA
+  tags_raw:
   - ueba
   properties:
   - type: OpenAPI
@@ -6974,7 +7161,8 @@ apis:
   description: UEBA 分析/日志/操作/ueba_category 参数/字段值
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - ueba/log/action/{ueba_category}/getfieldvalues
   properties:
   - type: OpenAPI
@@ -6988,7 +7176,8 @@ apis:
   description: UEBA 分析/日志/ueba_category 参数/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - ueba/log/{ueba_category}/download
   properties:
   - type: OpenAPI
@@ -7002,7 +7191,8 @@ apis:
   description: UEBA 分析/日志/ueba_category 参数/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - ueba/log/{ueba_category}/list
   properties:
   - type: OpenAPI
@@ -7058,7 +7248,8 @@ apis:
   description: UEBA 分析/人员/staff_id 参数/日历
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - ueba/staff/{staff_id}/calendar
   properties:
   - type: OpenAPI
@@ -7072,7 +7263,8 @@ apis:
   description: UEBA 分析/人员/staff_id 参数/事件列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - ueba/staff/{staff_id}/eventlist
   properties:
   - type: OpenAPI
@@ -7086,7 +7278,8 @@ apis:
   description: UEBA 分析/人员/staff_id 参数/雷达
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - ueba/staff/{staff_id}/radar
   properties:
   - type: OpenAPI
@@ -7100,7 +7293,8 @@ apis:
   description: UEBA 分析/人员/staff_id 参数/评分
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - ueba/staff/{staff_id}/score
   properties:
   - type: OpenAPI
@@ -7128,7 +7322,8 @@ apis:
   description: UEBA 分析/测试/event_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - ueba/test/{event_id}
   properties:
   - type: OpenAPI
@@ -7142,7 +7337,8 @@ apis:
   description: UEBA 分析/ueba_id 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - ueba/{ueba_id}/action/remove
   properties:
   - type: OpenAPI
@@ -7156,7 +7352,8 @@ apis:
   description: UEBA 分析/ueba_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - ueba/{ueba_id}
   properties:
   - type: OpenAPI
@@ -7170,7 +7367,8 @@ apis:
   description: UEBA 分析/ueba_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - ueba/{ueba_id}/detail
   properties:
   - type: OpenAPI
@@ -7184,7 +7382,8 @@ apis:
   description: The update API from Chaitin Tech — 8 operation(s) for update.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - update
   properties:
   - type: OpenAPI
@@ -7199,6 +7398,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - V2
+  tags_raw:
   - 任务/任务实例v2
   properties:
   - type: OpenAPI
@@ -7213,6 +7414,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Vulnerability
+  tags_raw:
   - vulnerability
   properties:
   - type: OpenAPI
@@ -7226,7 +7429,8 @@ apis:
   description: 水印规则/wr_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - watermarkrule/{wr_id}/detail
   properties:
   - type: OpenAPI
@@ -7240,7 +7444,8 @@ apis:
   description: 水印规则/wt_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - watermarkrule/{wt_id}/detail
   properties:
   - type: OpenAPI
@@ -7255,6 +7460,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Web
+  tags_raw:
   - web框架
   properties:
   - type: OpenAPI
@@ -7269,6 +7476,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Website
+  tags_raw:
   - website
   properties:
   - type: OpenAPI
@@ -7366,7 +7575,8 @@ apis:
   description: 白名单管理/目录/dw_id 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - whitelist/directory/{dw_id}/action/remove
   properties:
   - type: OpenAPI
@@ -7380,7 +7590,8 @@ apis:
   description: 白名单管理/目录/dw_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - whitelist/directory/{dw_id}
   properties:
   - type: OpenAPI
@@ -7394,7 +7605,8 @@ apis:
   description: 白名单管理/目录/dw_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - whitelist/directory/{dw_id}/detail
   properties:
   - type: OpenAPI
@@ -7478,7 +7690,8 @@ apis:
   description: 白名单管理/邮件/ew_id 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - whitelist/email/{ew_id}/action/remove
   properties:
   - type: OpenAPI
@@ -7492,7 +7705,8 @@ apis:
   description: 白名单管理/邮件/ew_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - whitelist/email/{ew_id}
   properties:
   - type: OpenAPI
@@ -7506,7 +7720,8 @@ apis:
   description: 白名单管理/邮件/fw_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - whitelist/email/{fw_id}/detail
   properties:
   - type: OpenAPI
@@ -7576,7 +7791,8 @@ apis:
   description: 白名单管理/文件/fw_id 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - whitelist/file/{fw_id}/action/remove
   properties:
   - type: OpenAPI
@@ -7590,7 +7806,8 @@ apis:
   description: 白名单管理/文件/fw_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - whitelist/file/{fw_id}
   properties:
   - type: OpenAPI
@@ -7604,7 +7821,8 @@ apis:
   description: 白名单管理/文件/fw_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - whitelist/file/{fw_id}/detail
   properties:
   - type: OpenAPI
@@ -7730,7 +7948,8 @@ apis:
   description: 白名单管理/网络/w_id 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - whitelist/network/{w_id}/action/remove
   properties:
   - type: OpenAPI
@@ -7744,7 +7963,8 @@ apis:
   description: 白名单管理/网络/w_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - whitelist/network/{w_id}
   properties:
   - type: OpenAPI
@@ -7828,7 +8048,8 @@ apis:
   description: 白名单管理/签名/sw_id 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - whitelist/sign/{sw_id}/action/remove
   properties:
   - type: OpenAPI
@@ -7842,7 +8063,8 @@ apis:
   description: 白名单管理/签名/sw_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - whitelist/sign/{sw_id}
   properties:
   - type: OpenAPI
@@ -7856,7 +8078,8 @@ apis:
   description: 白名单管理/签名/sw_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
+  tags: []
+  tags_raw:
   - whitelist/sign/{sw_id}/detail
   properties:
   - type: OpenAPI
@@ -7899,6 +8122,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - WHOIS
+  tags_raw:
   - 资产/种子/域名 WHOIS
   properties:
   - type: OpenAPI
