@@ -8149,6 +8149,9 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: CapabilityMap
+  url: capabilities/chaitin-capability-edges.yml
+  name: Chaitin Tech Business Capability Map
 - type: Website
   url: https://www.chaitin.com
 - type: DeveloperPortal
