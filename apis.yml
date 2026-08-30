@@ -526,7 +526,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Cert
+  - cert
   tags_raw:
   - cert
   properties:
@@ -1996,7 +1996,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Filter
+  - filter
   tags_raw:
   - filter
   properties:
@@ -2417,7 +2417,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Intranet
+  - intranet
   tags_raw:
   - intranet
   properties:
@@ -2433,7 +2433,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - IP
+  - 资产/IP地址
   tags_raw:
   - 资产/IP地址
   properties:
@@ -2449,7 +2449,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - IPGroup
+  - ipgroup
   tags_raw:
   - ipgroup
   properties:
@@ -2465,7 +2465,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Label
+  - label
   tags_raw:
   - label
   properties:
@@ -2481,7 +2481,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Learning
+  - learning
   tags_raw:
   - learning
   properties:
@@ -2553,7 +2553,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Machine-Learning
+  - machinelearning
   tags_raw:
   - machinelearning
   properties:
@@ -2628,6 +2628,8 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
+  - Module
+  tags_raw:
   - module
   properties:
   - type: OpenAPI
@@ -5286,7 +5288,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Risk
+  - risk
   tags_raw:
   - risk
   properties:
@@ -5343,8 +5345,7 @@ apis:
   description: The sensitive_data API from Chaitin Tech — 1 operation(s) for sensitive_data.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
-  - Sensitive Data
+  tags: []
   tags_raw:
   - sensitive_data
   properties:
@@ -5695,7 +5696,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Stat
+  - stat
   tags_raw:
   - stat
   properties:
@@ -5894,7 +5895,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Syslog
+  - Syslog 管理与系统日志
   tags_raw:
   - Syslog 管理与系统日志
   properties:
@@ -7027,8 +7028,7 @@ apis:
   description: The third_party API from Chaitin Tech — 1 operation(s) for third_party.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags:
-  - Third-Party
+  tags: []
   tags_raw:
   - third_party
   properties:
@@ -7059,7 +7059,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - UEBA
+  - ueba
   tags_raw:
   - ueba
   properties:
@@ -7409,7 +7409,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - V2
+  - 任务/任务实例v2
   tags_raw:
   - 任务/任务实例v2
   properties:
@@ -7425,7 +7425,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Vulnerability
+  - vulnerability
   tags_raw:
   - vulnerability
   properties:
@@ -7471,7 +7471,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Web
+  - web框架
   tags_raw:
   - web框架
   properties:
@@ -7487,7 +7487,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Website
+  - website
   tags_raw:
   - website
   properties:
@@ -8133,7 +8133,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - WHOIS
+  - 资产/种子/域名 WHOIS
   tags_raw:
   - 资产/种子/域名 WHOIS
   properties:
