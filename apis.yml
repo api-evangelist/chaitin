@@ -526,7 +526,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - cert
+  - Cert
   tags_raw:
   - cert
   properties:
@@ -1996,7 +1996,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - filter
+  - Filter
   tags_raw:
   - filter
   properties:
@@ -2417,7 +2417,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - intranet
+  - Intranet
   tags_raw:
   - intranet
   properties:
@@ -2433,7 +2433,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - 资产/IP地址
+  - IP
   tags_raw:
   - 资产/IP地址
   properties:
@@ -2449,7 +2449,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - ipgroup
+  - IPGroup
   tags_raw:
   - ipgroup
   properties:
@@ -2465,7 +2465,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - label
+  - Label
   tags_raw:
   - label
   properties:
@@ -2481,7 +2481,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - learning
+  - Learning
   tags_raw:
   - learning
   properties:
@@ -2553,7 +2553,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - machinelearning
+  - Machine-Learning
   tags_raw:
   - machinelearning
   properties:
@@ -5288,7 +5288,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - risk
+  - Risk
   tags_raw:
   - risk
   properties:
@@ -5345,7 +5345,8 @@ apis:
   description: The sensitive_data API from Chaitin Tech — 1 operation(s) for sensitive_data.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags: []
+  tags:
+  - Sensitive Data
   tags_raw:
   - sensitive_data
   properties:
@@ -5696,7 +5697,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - stat
+  - Stat
   tags_raw:
   - stat
   properties:
@@ -5895,7 +5896,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Syslog 管理与系统日志
+  - Syslog
   tags_raw:
   - Syslog 管理与系统日志
   properties:
@@ -7028,7 +7029,8 @@ apis:
   description: The third_party API from Chaitin Tech — 1 operation(s) for third_party.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
-  tags: []
+  tags:
+  - Third Party
   tags_raw:
   - third_party
   properties:
@@ -7059,7 +7061,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - ueba
+  - UEBA
   tags_raw:
   - ueba
   properties:
@@ -7409,7 +7411,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - 任务/任务实例v2
+  - v2
   tags_raw:
   - 任务/任务实例v2
   properties:
@@ -7425,7 +7427,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - vulnerability
+  - Vulnerability
   tags_raw:
   - vulnerability
   properties:
@@ -7471,7 +7473,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - web框架
+  - Web
   tags_raw:
   - web框架
   properties:
@@ -7487,7 +7489,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - website
+  - Website
   tags_raw:
   - website
   properties:
@@ -8133,7 +8135,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - 资产/种子/域名 WHOIS
+  - WHOIS
   tags_raw:
   - 资产/种子/域名 WHOIS
   properties:
