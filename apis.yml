@@ -701,7 +701,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Dashboard
+  - Dashboards
   tags_raw:
   - dashboard
   properties:
@@ -2674,7 +2674,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Plugin
+  - Plugins
   tags_raw:
   - plugin
   properties:
@@ -7474,7 +7474,7 @@ apis:
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Website
+  - Websites
   tags_raw:
   - website
   properties:
