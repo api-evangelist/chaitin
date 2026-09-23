@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account softwaremanager/action/getfieldmetadata API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Softwaremanager/action/getfieldmetadata API
+  description: 软件管理/操作/字段元数据
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: softwaremanager/action/getfieldmetadata
   description: 软件管理/操作/字段元数据
@@ -81,3 +83,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postSoftwaremanagerActionGetfieldmetadata
+      x-operation-id-source: derived

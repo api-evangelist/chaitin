@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account device/filescantask/{task_id}/instance/{instance_id}/device/statistic API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device/filescantask/{task Id}/instance/{instance…
+  description: ''
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: device/filescantask/{task_id}/instance/{instance_id}/device/statistic
 paths:
@@ -137,3 +139,5 @@ paths:
                   - total: 1
                     display_status: 失败
       security: []
+      operationId: postDeviceFilescantaskByTaskIdInstanceByInstanceIdDeviceStatistic
+      x-operation-id-source: derived

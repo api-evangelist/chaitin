@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/landing/entitywhitelist API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/landing/entitywhitelist API
+  description: 策略管理/落地/实体白名单
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/landing/entitywhitelist
   description: 策略管理/落地/实体白名单
@@ -121,3 +123,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicyLandingEntitywhitelist
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account deviceuninstall/action/getfieldmetadata API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Deviceuninstall/action/getfieldmetadata API
+  description: ''
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: deviceuninstall/action/getfieldmetadata
 paths:
@@ -80,3 +82,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postDeviceuninstallActionGetfieldmetadata
+      x-operation-id-source: derived

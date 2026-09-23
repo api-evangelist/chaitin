@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/logmirror/update API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/logmirror/update API
+  description: 系统配置/日志镜像/更新
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/logmirror/update
   description: 系统配置/日志镜像/更新
@@ -179,3 +181,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postSystemLogmirrorUpdate
+      x-operation-id-source: derived

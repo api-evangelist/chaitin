@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account browsermanager/action/bulkdestroy API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Browsermanager/action/bulkdestroy API
+  description: 浏览器管理/操作/批量删除
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: browsermanager/action/bulkdestroy
   description: 浏览器管理/操作/批量删除
@@ -134,3 +136,5 @@ paths:
                 msg: 正常
                 data: {}
       security: []
+      operationId: postBrowsermanagerActionBulkdestroy
+      x-operation-id-source: derived

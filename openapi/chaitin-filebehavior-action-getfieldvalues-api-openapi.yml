@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account filebehavior/action/getfieldvalues API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Filebehavior/action/getfieldvalues API
+  description: 文件行为/操作/字段值
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: filebehavior/action/getfieldvalues
   description: 文件行为/操作/字段值
@@ -133,3 +135,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postFilebehaviorActionGetfieldvalues
+      x-operation-id-source: derived

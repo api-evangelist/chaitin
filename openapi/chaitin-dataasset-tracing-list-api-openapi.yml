@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account dataasset/tracing/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Dataasset/tracing/list API
+  description: 数据资产/溯源/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: dataasset/tracing/list
   description: 数据资产/溯源/列表
@@ -262,13 +264,15 @@ paths:
                                   type: object
                                   properties:
                                     file:
-                                      type: string
-                                      nullable: true
+                                      type:
+                                      - string
+                                      - 'null'
                                     screen_recording:
                                       type: 'null'
                                     screenshot:
-                                      type: string
-                                      nullable: true
+                                      type:
+                                      - string
+                                      - 'null'
                                   required:
                                   - file
                                   - screenshot
@@ -416,8 +420,9 @@ paths:
                             mac:
                               type: string
                             policy_group_id:
-                              type: string
-                              nullable: true
+                              type:
+                              - string
+                              - 'null'
                             is_compressed:
                               type: boolean
                             pre_file_trace_id:
@@ -449,8 +454,9 @@ paths:
                               items:
                                 type: string
                             policy_group_name:
-                              type: string
-                              nullable: true
+                              type:
+                              - string
+                              - 'null'
                             agent_version:
                               type: string
                             risk_level:
@@ -1204,3 +1210,5 @@ paths:
                     last_seen: '2025-01-08T18:01:37+08:00'
                     first_seen: '2025-01-08T18:01:37+08:00'
       security: []
+      operationId: postDataassetTracingList
+      x-operation-id-source: derived

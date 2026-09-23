@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account riskwarning/action/screendownload API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Riskwarning/action/screendownload API
+  description: 风险预警/操作/截图下载
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: riskwarning/action/screendownload
   description: 风险预警/操作/截图下载
@@ -104,3 +106,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postRiskwarningActionScreendownload
+      x-operation-id-source: derived

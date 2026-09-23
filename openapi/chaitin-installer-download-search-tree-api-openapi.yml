@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account installer/download/search/tree API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Installer/download/search/tree API
+  description: 终端安装包/下载/search 接口/tree 接口
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: installer/download/search/tree
   description: 终端安装包/下载/search 接口/tree 接口
@@ -81,3 +83,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postInstallerDownloadSearchTree
+      x-operation-id-source: derived

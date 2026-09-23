@@ -1,17 +1,17 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account plugin API
+  title: APISec Management Plugin API
   version: '26.05'
   description: Generated from APISec skyview APIView classes.
 tags:
-- name: plugin
+- name: Plugin
 paths:
   /api/EnableDisablePreprocessPluginAPI:
     put:
       operationId: EnableDisablePreprocessPluginAPI_put
       summary: PUT /api/EnableDisablePreprocessPluginAPI
       tags:
-      - plugin
+      - Plugin
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -30,7 +30,7 @@ paths:
       operationId: PluginPredictResultAPI_get
       summary: GET /api/PluginPredictResultAPI
       tags:
-      - plugin
+      - Plugin
       parameters:
       - name: plugin_id
         in: query
@@ -43,7 +43,7 @@ paths:
       operationId: PluginPredictResultAPI_post
       summary: POST /api/PluginPredictResultAPI
       tags:
-      - plugin
+      - Plugin
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -60,7 +60,7 @@ paths:
       operationId: PreprocessPluginAPI_get
       summary: GET /api/PreprocessPluginAPI
       tags:
-      - plugin
+      - Plugin
       parameters:
       - name: name__like
         in: query
@@ -73,7 +73,7 @@ paths:
       operationId: PreprocessPluginAPI_post
       summary: POST /api/PreprocessPluginAPI
       tags:
-      - plugin
+      - Plugin
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -103,7 +103,7 @@ paths:
       operationId: PreprocessPluginAPI_put
       summary: PUT /api/PreprocessPluginAPI
       tags:
-      - plugin
+      - Plugin
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -133,7 +133,7 @@ paths:
       operationId: PreprocessPluginAPI_delete
       summary: DELETE /api/PreprocessPluginAPI
       tags:
-      - plugin
+      - Plugin
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -151,7 +151,7 @@ paths:
       operationId: PreprocessPluginStateUpdateAPI_post
       summary: POST /api/PreprocessPluginStateUpdateAPI
       tags:
-      - plugin
+      - Plugin
       parameters: []
       x-cli-body-fallback: false
       requestBody:

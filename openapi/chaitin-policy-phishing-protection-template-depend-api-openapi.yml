@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/phishing_protection/template/depend API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/phishing Protection/template/depend API
+  description: 策略管理/钓鱼防护/模板/依赖
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/phishing_protection/template/depend
   description: 策略管理/钓鱼防护/模板/依赖
@@ -164,3 +166,5 @@ paths:
                   uid: 75c17dc7-92a5-442c-b424-332d8546648f
                   update_by_id: null
       security: []
+      operationId: postPolicyPhishingProtectionTemplateDepend
+      x-operation-id-source: derived

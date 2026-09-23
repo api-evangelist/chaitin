@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account whitelist/directory/{dw_id}/action/remove API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Whitelist/directory/{dw Id}/action/remove API
+  description: 白名单管理/目录/dw_id 参数/操作/移除
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: whitelist/directory/{dw_id}/action/remove
   description: 白名单管理/目录/dw_id 参数/操作/移除
@@ -107,3 +109,5 @@ paths:
                 data:
                   event_id: c6ebe968-0da5-4b0c-b80f-18ad17ee302f
       security: []
+      operationId: postWhitelistDirectoryByDwIdActionRemove
+      x-operation-id-source: derived

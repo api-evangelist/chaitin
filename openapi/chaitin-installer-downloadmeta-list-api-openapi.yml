@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account installer/downloadmeta/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Installer/downloadmeta/list API
+  description: 终端安装包/下载元数据/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: installer/downloadmeta/list
   description: 终端安装包/下载元数据/列表
@@ -129,11 +131,13 @@ paths:
                               name:
                                 type: string
                               version:
-                                type: string
-                                nullable: true
+                                type:
+                                - string
+                                - 'null'
                               architecture:
-                                type: string
-                                nullable: true
+                                type:
+                                - string
+                                - 'null'
                               family:
                                 type: string
                               os_icon:
@@ -390,3 +394,5 @@ paths:
                     meta_id: 910c25c4e3fa1ff6c0aaeb874f71a6c8
                   check_network: true
       security: []
+      operationId: postInstallerDownloadmetaList
+      x-operation-id-source: derived

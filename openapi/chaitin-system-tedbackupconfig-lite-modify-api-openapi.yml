@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/tedbackupconfig/lite/modify API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/tedbackupconfig/lite/modify API
+  description: 系统配置/TED 备份配置/轻量配置/修改
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/tedbackupconfig/lite/modify
   description: 系统配置/TED 备份配置/轻量配置/修改
@@ -81,3 +83,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postSystemTedbackupconfigLiteModify
+      x-operation-id-source: derived

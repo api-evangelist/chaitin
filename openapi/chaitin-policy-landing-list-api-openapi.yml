@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/landing/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/landing/list API
+  description: 策略管理/落地/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/landing/list
   description: 策略管理/落地/列表
@@ -170,3 +172,5 @@ paths:
                     update_time: '2024-07-29T01:36:38.718357Z'
                   page: 1
       security: []
+      operationId: postPolicyLandingList
+      x-operation-id-source: derived

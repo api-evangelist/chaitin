@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/accesscontrol/feishu/modify API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/accesscontrol/feishu/modify API
+  description: 系统配置/访问控制/飞书/修改
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/accesscontrol/feishu/modify
   description: 系统配置/访问控制/飞书/修改
@@ -114,3 +116,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postSystemAccesscontrolFeishuModify
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/ted/{uid}/action API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/ted/{uid}/action API
+  description: 策略管理/TED/uid 参数/操作
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/ted/{uid}/action
   description: 策略管理/TED/uid 参数/操作
@@ -157,3 +159,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicyTedByUidAction
+      x-operation-id-source: derived

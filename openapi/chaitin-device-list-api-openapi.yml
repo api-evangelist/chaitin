@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account device/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device/list API
+  description: 终端管理/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: device/list
   description: 终端管理/列表
@@ -102,3 +104,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postDeviceList
+      x-operation-id-source: derived

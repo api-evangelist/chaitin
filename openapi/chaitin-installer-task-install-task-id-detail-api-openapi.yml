@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account installer/task/{install_task_id}/detail API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Installer/task/{install Task Id}/detail API
+  description: 终端安装包/任务/install_task_id 参数/详情
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: installer/task/{install_task_id}/detail
   description: 终端安装包/任务/install_task_id 参数/详情
@@ -337,3 +339,5 @@ paths:
                   - redo
                   - restore
       security: []
+      operationId: postInstallerTaskByInstallTaskIdDetail
+      x-operation-id-source: derived

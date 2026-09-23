@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account device/avscantask/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device/avscantask/list API
+  description: ''
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: device/avscantask/list
 paths:
@@ -8582,3 +8584,5 @@ paths:
                     status: activated
                     risk_count: 0
       security: []
+      operationId: postDeviceAvscantaskList
+      x-operation-id-source: derived

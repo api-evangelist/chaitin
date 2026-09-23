@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account account/staff_devices/{staff_id}/add API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Account/staff Devices/{staff Id}/add API
+  description: 员工管理/人员设备/staff_id 参数/新增
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: account/staff_devices/{staff_id}/add
   description: 员工管理/人员设备/staff_id 参数/新增
@@ -110,3 +112,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postAccountStaffDevicesByStaffIdAdd
+      x-operation-id-source: derived

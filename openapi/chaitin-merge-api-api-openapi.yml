@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account merge_api API
+  title: APISec Management Merge API
   version: '26.05'
   description: Generated from APISec skyview APIView classes.
 tags:

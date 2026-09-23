@@ -1,10 +1,12 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account 资产/种子/域名 WHOIS API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  description: Merged from Apifox shared markdown documents
+  title: Cloud Atlas Open 资产/种子/域名 WHOIS API
+  version: 1.0.0
+security:
+- apikey-header-TOKEN: []
 tags:
-- name: 资产/种子/域名 WHOIS
+- name: WHOIS
 paths:
   /v1/seed/domain:
     get:
@@ -189,10 +191,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 域名WHOIS列表
       tags:
-      - 资产/种子/域名 WHOIS
+      - WHOIS
       x-apifox-folder: 资产/种子/域名 WHOIS
       x-apifox-status: released
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-179816443-run
+      operationId: getV1SeedDomain
+      x-operation-id-source: derived
   /v1/seed/domain/batch-create:
     post:
       deprecated: false
@@ -288,10 +292,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 域名WHOS批量添加
       tags:
-      - 资产/种子/域名 WHOIS
+      - WHOIS
       x-apifox-folder: 资产/种子/域名 WHOIS
       x-apifox-status: released
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-179842699-run
+      operationId: postV1SeedDomainBatchCreate
+      x-operation-id-source: derived
   /v1/seed/domain/batch-delete:
     delete:
       deprecated: false
@@ -368,10 +374,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 域名WHOS批量删除
       tags:
-      - 资产/种子/域名 WHOIS
+      - WHOIS
       x-apifox-folder: 资产/种子/域名 WHOIS
       x-apifox-status: released
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-179949136-run
+      operationId: deleteV1SeedDomainBatchDelete
+      x-operation-id-source: derived
   /v1/seed/domain/switch:
     post:
       deprecated: false
@@ -446,10 +454,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 域名WHOIS批量修改监控开关
       tags:
-      - 资产/种子/域名 WHOIS
+      - WHOIS
       x-apifox-folder: 资产/种子/域名 WHOIS
       x-apifox-status: released
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-179878443-run
+      operationId: postV1SeedDomainSwitch
+      x-operation-id-source: derived
   /v1/seed/domain/update-confidence:
     post:
       deprecated: false
@@ -523,10 +533,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 域名WHOIS批量修改置信度
       tags:
-      - 资产/种子/域名 WHOIS
+      - WHOIS
       x-apifox-folder: 资产/种子/域名 WHOIS
       x-apifox-status: released
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-179847563-run
+      operationId: postV1SeedDomainUpdateConfidence
+      x-operation-id-source: derived
   /v1/seed/domain/{pk}:
     get:
       deprecated: false
@@ -631,10 +643,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 域名WHOS获取
       tags:
-      - 资产/种子/域名 WHOIS
+      - WHOIS
       x-apifox-folder: 资产/种子/域名 WHOIS
       x-apifox-status: released
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-179833205-run
+      operationId: getV1SeedDomainByPk
+      x-operation-id-source: derived
     put:
       deprecated: false
       description: ''
@@ -763,7 +777,15 @@ paths:
       - apikey-header-TOKEN: []
       summary: 域名WHOIS编辑
       tags:
-      - 资产/种子/域名 WHOIS
+      - WHOIS
       x-apifox-folder: 资产/种子/域名 WHOIS
       x-apifox-status: released
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-179838023-run
+      operationId: putV1SeedDomainByPk
+      x-operation-id-source: derived
+components:
+  securitySchemes:
+    apikey-header-TOKEN:
+      in: header
+      name: TOKEN
+      type: apiKey

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/filebehaviorconfig/modify API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/filebehaviorconfig/modify API
+  description: 系统配置/文件行为配置/修改
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/filebehaviorconfig/modify
   description: 系统配置/文件行为配置/修改
@@ -236,3 +238,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postSystemFilebehaviorconfigModify
+      x-operation-id-source: derived

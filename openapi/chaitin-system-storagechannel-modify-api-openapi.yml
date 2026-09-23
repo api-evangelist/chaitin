@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/storagechannel/modify API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/storagechannel/modify API
+  description: 系统配置/存储通道/修改
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/storagechannel/modify
   description: 系统配置/存储通道/修改
@@ -201,3 +203,5 @@ paths:
                     tls_ca_certificate_pem: string
                     bucket: string
       security: []
+      operationId: postSystemStoragechannelModify
+      x-operation-id-source: derived

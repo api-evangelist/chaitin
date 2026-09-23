@@ -1,17 +1,17 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account label API
+  title: APISec Management Label API
   version: '26.05'
   description: Generated from APISec skyview APIView classes.
 tags:
-- name: label
+- name: Label
 paths:
   /api/BusinessTagAPI:
     post:
       operationId: BusinessTagAPI_post
       summary: POST /api/BusinessTagAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -36,7 +36,7 @@ paths:
       operationId: BusinessTagAPI_put
       summary: PUT /api/BusinessTagAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -62,7 +62,7 @@ paths:
       operationId: MarkRuleAPI_post
       summary: POST /api/MarkRuleAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -96,7 +96,7 @@ paths:
       operationId: MarkRuleAPI_put
       summary: PUT /api/MarkRuleAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -131,7 +131,7 @@ paths:
       operationId: SensitiveCategoryAPI_post
       summary: POST /api/SensitiveCategoryAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -157,7 +157,7 @@ paths:
       operationId: SensitiveCategoryAPI_put
       summary: PUT /api/SensitiveCategoryAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -183,7 +183,7 @@ paths:
       operationId: SensitiveCategoryAPI_delete
       summary: DELETE /api/SensitiveCategoryAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -203,7 +203,7 @@ paths:
       operationId: SensitiveTemplateAPI_get
       summary: GET /api/SensitiveTemplateAPI
       tags:
-      - label
+      - Label
       parameters:
       - name: id
         in: query
@@ -217,7 +217,7 @@ paths:
       operationId: SensitiveTemplateAPI_post
       summary: POST /api/SensitiveTemplateAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -238,7 +238,7 @@ paths:
       operationId: SensitiveTemplateAPI_put
       summary: PUT /api/SensitiveTemplateAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -259,7 +259,7 @@ paths:
       operationId: SensitiveTemplateAPI_delete
       summary: DELETE /api/SensitiveTemplateAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -279,7 +279,7 @@ paths:
       operationId: SensitiveValueBindingAPI_post
       summary: POST /api/SensitiveValueBindingAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -306,7 +306,7 @@ paths:
       operationId: SensitiveValueBindingAPI_put
       summary: PUT /api/SensitiveValueBindingAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -333,7 +333,7 @@ paths:
       operationId: SensitiveValueBindingAPI_delete
       summary: DELETE /api/SensitiveValueBindingAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -353,7 +353,7 @@ paths:
       operationId: ValueCategoryAPI_post
       summary: POST /api/ValueCategoryAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -383,7 +383,7 @@ paths:
       operationId: ValueCategoryAPI_put
       summary: PUT /api/ValueCategoryAPI
       tags:
-      - label
+      - Label
       parameters: []
       x-cli-body-fallback: false
       requestBody:

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account whitelist/browserplugin/download API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Whitelist/browserplugin/download API
+  description: 白名单管理/浏览器插件/下载
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: whitelist/browserplugin/download
   description: 白名单管理/浏览器插件/下载
@@ -132,3 +134,5 @@ paths:
                   file_system: local
                   url_path: /oss-qzh/eeff7c64-5070-4582-8b93-fbcc57db7771/browser_plugin_whitelist/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E7%99%BD%E5%90%8D%E5%8D%95-c466e592cf954e72b1a9b4dfd12bca7a.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20250321%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250321T022358Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27%25E6%25B5%258F%25E8%25A7%2588%25E5%2599%25A8%25E6%258F%2592%25E4%25BB%25B6%25E7%2599%25BD%25E5%2590%258D%25E5%258D%2595-c466e592cf954e72b1a9b4dfd12bca7a.zip&X-Amz-Signature=2f3425d83405640fca484bdae4f1791837e92bfbae923aff09726e1c892542d2
       security: []
+      operationId: postWhitelistBrowserpluginDownload
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account browsermanager/action/getfieldvalues API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Browsermanager/action/getfieldvalues API
+  description: 浏览器管理/操作/字段值
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: browsermanager/action/getfieldvalues
   description: 浏览器管理/操作/字段值
@@ -159,3 +161,5 @@ paths:
                   values:
                   - PC-000041
       security: []
+      operationId: postBrowsermanagerActionGetfieldvalues
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/tedencryptconfig/<config_id:str>/action API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/tedencryptconfig//action API
+  description: 系统配置/TED 加密配置/config_id:str 参数/操作
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/tedencryptconfig/<config_id:str>/action
   description: 系统配置/TED 加密配置/config_id:str 参数/操作
@@ -100,3 +102,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postSystemTedencryptconfig<configId:str>Action
+      x-operation-id-source: derived

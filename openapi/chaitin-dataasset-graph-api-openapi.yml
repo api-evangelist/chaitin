@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account dataasset/graph API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Dataasset/graph API
+  description: 数据资产/图谱
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: dataasset/graph
   description: 数据资产/图谱
@@ -131,3 +133,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postDataassetGraph
+      x-operation-id-source: derived

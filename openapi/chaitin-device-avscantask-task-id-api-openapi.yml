@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account device/avscantask/{task_id} API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device/avscantask/{task Id} API
+  description: 终端管理/杀毒扫描任务/task_id 参数
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: device/avscantask/{task_id}
   description: 终端管理/杀毒扫描任务/task_id 参数
@@ -242,3 +244,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postDeviceAvscantaskByTaskId
+      x-operation-id-source: derived

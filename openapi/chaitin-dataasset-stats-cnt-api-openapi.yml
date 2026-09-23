@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account dataasset/stats/cnt API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Dataasset/stats/cnt API
+  description: 数据资产/统计/数量
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: dataasset/stats/cnt
   description: 数据资产/统计/数量
@@ -105,3 +107,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postDataassetStatsCnt
+      x-operation-id-source: derived

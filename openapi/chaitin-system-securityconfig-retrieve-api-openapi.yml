@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/securityconfig/retrieve API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/securityconfig/retrieve API
+  description: 系统配置/安全配置/获取
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/securityconfig/retrieve
   description: 系统配置/安全配置/获取
@@ -11,7 +13,7 @@ paths:
     post:
       summary: 安全防护配置
       deprecated: false
-      description: '[原接口文档](https://servaltech.feishu.cn/docx/NCxMdKr4moDlABxulxicMrItnpb)'
+      description: 原接口文档
       tags:
       - system/securityconfig/retrieve
       parameters:
@@ -817,3 +819,5 @@ paths:
                     scan_batch_size: 50
                     scan_batch_mode: intelligent
       security: []
+      operationId: postSystemSecurityconfigRetrieve
+      x-operation-id-source: derived

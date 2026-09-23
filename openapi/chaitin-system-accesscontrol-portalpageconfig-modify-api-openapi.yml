@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/accesscontrol/portalpageconfig/modify API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/accesscontrol/portalpageconfig/modify API
+  description: 系统配置/访问控制/门户页面配置/修改
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/accesscontrol/portalpageconfig/modify
   description: 系统配置/访问控制/门户页面配置/修改
@@ -169,3 +171,5 @@ paths:
                     logo: base64-image
                     title: 标题名称
       security: []
+      operationId: postSystemAccesscontrolPortalpageconfigModify
+      x-operation-id-source: derived

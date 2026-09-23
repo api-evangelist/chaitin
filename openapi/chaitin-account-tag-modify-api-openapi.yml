@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account account/tag/modify API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Account/tag/modify API
+  description: 员工管理/标签/修改
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: account/tag/modify
   description: 员工管理/标签/修改
@@ -121,3 +123,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postAccountTagModify
+      x-operation-id-source: derived

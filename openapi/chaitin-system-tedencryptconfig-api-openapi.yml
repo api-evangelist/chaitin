@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/tedencryptconfig API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/tedencryptconfig API
+  description: 系统配置/TED 加密配置
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/tedencryptconfig
   description: 系统配置/TED 加密配置
@@ -142,3 +144,5 @@ paths:
                 code: 1
                 msg: error
       security: []
+      operationId: postSystemTedencryptconfig
+      x-operation-id-source: derived

@@ -1,10 +1,9 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account Syslog 管理与系统日志 API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: 产品 API 文档 Syslog 管理与系统日志 API
+  version: 1.0.0
 tags:
-- name: Syslog 管理与系统日志
+- name: Syslog
 paths:
   /api/log/syslog/list:
     post:
@@ -17,10 +16,9 @@ paths:
               properties:
                 limit:
                   description: 最多返回k个满足条件的数据，为None时表示不限制数量
-                  exclusiveMinimum: true
-                  minimum: 0
                   title: limit
                   type: integer
+                  exclusiveMinimum: 0
                 offset:
                   default: 0
                   description: 跳过前k个满足条件的数据
@@ -55,7 +53,7 @@ paths:
           description: ''
       summary: syslog配置列表
       tags:
-      - Syslog 管理与系统日志
+      - Syslog
   /api/log/syslog/delete:
     post:
       operationId: delete_syslog_config
@@ -94,7 +92,7 @@ paths:
           description: ''
       summary: 删除syslog配置信息
       tags:
-      - Syslog 管理与系统日志
+      - Syslog
   /api/log/syslog/add:
     post:
       operationId: add_syslog_config
@@ -202,7 +200,7 @@ paths:
           description: ''
       summary: 添加syslog配置信息
       tags:
-      - Syslog 管理与系统日志
+      - Syslog
   /api/log/syslog/modify:
     post:
       operationId: modify_syslog_config
@@ -318,7 +316,7 @@ paths:
           description: ''
       summary: 修改syslog配置信息
       tags:
-      - Syslog 管理与系统日志
+      - Syslog
   /api/log/kafka/list:
     post:
       operationId: kafka_config_list
@@ -330,10 +328,9 @@ paths:
               properties:
                 limit:
                   description: 最多返回k个满足条件的数据，为None时表示不限制数量
-                  exclusiveMinimum: true
-                  minimum: 0
                   title: limit
                   type: integer
+                  exclusiveMinimum: 0
                 offset:
                   default: 0
                   description: 跳过前k个满足条件的数据
@@ -368,7 +365,7 @@ paths:
           description: ''
       summary: kafka配置列表
       tags:
-      - Syslog 管理与系统日志
+      - Syslog
   /api/log/kafka/delete:
     post:
       operationId: delete_kafka_config
@@ -407,7 +404,7 @@ paths:
           description: ''
       summary: 删除kafka配置信息
       tags:
-      - Syslog 管理与系统日志
+      - Syslog
   /api/log/kafka/add:
     post:
       operationId: add_kafka_config
@@ -501,7 +498,7 @@ paths:
           description: ''
       summary: 添加kafka配置信息
       tags:
-      - Syslog 管理与系统日志
+      - Syslog
   /api/log/kafka/modify:
     post:
       operationId: modify_kafka_config
@@ -598,7 +595,7 @@ paths:
           description: ''
       summary: 修改kafka配置信息
       tags:
-      - Syslog 管理与系统日志
+      - Syslog
   /api/log/system_log/list:
     post:
       operationId: system_log_list
@@ -610,10 +607,9 @@ paths:
               properties:
                 limit:
                   description: 最多返回k个满足条件的数据，为None时表示不限制数量
-                  exclusiveMinimum: true
-                  minimum: 0
                   title: limit
                   type: integer
+                  exclusiveMinimum: 0
                 log_types:
                   default: []
                   description: 系统日志类型, 1 表示系统负载，2 表示docker状态，3 表示探针状态
@@ -671,7 +667,7 @@ paths:
           description: ''
       summary: 系统日志的列表信息
       tags:
-      - Syslog 管理与系统日志
+      - Syslog
   /api/log/system_log/delete:
     post:
       operationId: system_log_delete
@@ -738,117 +734,9 @@ paths:
           description: ''
       summary: 删除系统日志的列表信息
       tags:
-      - Syslog 管理与系统日志
+      - Syslog
 components:
   schemas:
-    SystemLogRet:
-      description: 分页类响应的通用模式
-      properties:
-        data:
-          description: 实际返回的数据
-          items:
-            $ref: '#/components/schemas/SystemLogDetail'
-          title: Data
-          type: array
-        total:
-          description: 满足条件的记录总数
-          minimum: 0
-          title: Total
-          type: integer
-      required:
-      - total
-      - data
-      title: SystemLogRet
-      type: object
-    SyslogConfigDetail:
-      properties:
-        agent_status:
-          description: 是否报告探针连接状态变化
-          title: Agent Status
-          type: boolean
-        arp_event:
-          description: 是否报告ARP攻击
-          title: Arp Event
-          type: boolean
-        docker_escape:
-          description: 是否报告docker逃逸事件
-          title: Docker Escape
-          type: boolean
-        encoding:
-          description: syslog编码方式
-          enum:
-          - Unicode
-          - UTF-8
-          title: Encoding
-        format:
-          default: rfc5424
-          description: syslog格式
-          enum:
-          - rfc3164
-          - rfc5424
-          title: Format
-        honeypot_event:
-          description: 是否报告蜜罐事件
-          title: Honeypot Event
-          type: boolean
-        host:
-          description: syslog服务器地址
-          minLength: 1
-          title: Host
-          type: string
-        id:
-          description: syslog配置的ID
-          title: Id
-          type: integer
-        is_base64_decode:
-          default: false
-          description: 是否base64解码日志中的header
-          title: Is Base64 Decode
-          type: boolean
-        ping_event:
-          description: 是否报告ping事件
-          title: Ping Event
-          type: boolean
-        port:
-          description: syslog服务器端口
-          maximum: 65535
-          minimum: 1
-          title: Port
-          type: integer
-        portrait_event:
-          description: 是否报告溯源事件
-          title: Portrait Event
-          type: boolean
-        scanner_event:
-          description: 是否报告扫描事件
-          title: Scanner Event
-          type: boolean
-        socket_type:
-          description: syslog的网络传输方式
-          enum:
-          - TCP
-          - UDP
-          title: Socket Type
-        time_diff:
-          default: 0
-          description: 自定义加减整数时间差
-          title: Time Diff
-          type: integer
-      required:
-      - id
-      - host
-      - port
-      - encoding
-      - socket_type
-      - honeypot_event
-      - scanner_event
-      - portrait_event
-      - ping_event
-      - arp_event
-      - docker_escape
-      - agent_status
-      title: SyslogConfigDetail
-      type: object
     KafkaConfigDetail:
       properties:
         ack_type:
@@ -962,4 +850,112 @@ components:
       - content
       - crdate
       title: SystemLogDetail
+      type: object
+    SyslogConfigDetail:
+      properties:
+        agent_status:
+          description: 是否报告探针连接状态变化
+          title: Agent Status
+          type: boolean
+        arp_event:
+          description: 是否报告ARP攻击
+          title: Arp Event
+          type: boolean
+        docker_escape:
+          description: 是否报告docker逃逸事件
+          title: Docker Escape
+          type: boolean
+        encoding:
+          description: syslog编码方式
+          enum:
+          - Unicode
+          - UTF-8
+          title: Encoding
+        format:
+          default: rfc5424
+          description: syslog格式
+          enum:
+          - rfc3164
+          - rfc5424
+          title: Format
+        honeypot_event:
+          description: 是否报告蜜罐事件
+          title: Honeypot Event
+          type: boolean
+        host:
+          description: syslog服务器地址
+          minLength: 1
+          title: Host
+          type: string
+        id:
+          description: syslog配置的ID
+          title: Id
+          type: integer
+        is_base64_decode:
+          default: false
+          description: 是否base64解码日志中的header
+          title: Is Base64 Decode
+          type: boolean
+        ping_event:
+          description: 是否报告ping事件
+          title: Ping Event
+          type: boolean
+        port:
+          description: syslog服务器端口
+          maximum: 65535
+          minimum: 1
+          title: Port
+          type: integer
+        portrait_event:
+          description: 是否报告溯源事件
+          title: Portrait Event
+          type: boolean
+        scanner_event:
+          description: 是否报告扫描事件
+          title: Scanner Event
+          type: boolean
+        socket_type:
+          description: syslog的网络传输方式
+          enum:
+          - TCP
+          - UDP
+          title: Socket Type
+        time_diff:
+          default: 0
+          description: 自定义加减整数时间差
+          title: Time Diff
+          type: integer
+      required:
+      - id
+      - host
+      - port
+      - encoding
+      - socket_type
+      - honeypot_event
+      - scanner_event
+      - portrait_event
+      - ping_event
+      - arp_event
+      - docker_escape
+      - agent_status
+      title: SyslogConfigDetail
+      type: object
+    SystemLogRet:
+      description: 分页类响应的通用模式
+      properties:
+        data:
+          description: 实际返回的数据
+          items:
+            $ref: '#/components/schemas/SystemLogDetail'
+          title: Data
+          type: array
+        total:
+          description: 满足条件的记录总数
+          minimum: 0
+          title: Total
+          type: integer
+      required:
+      - total
+      - data
+      title: SystemLogRet
       type: object

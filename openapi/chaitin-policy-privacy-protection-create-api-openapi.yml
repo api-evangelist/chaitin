@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/privacy_protection/create API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/privacy Protection/create API
+  description: 策略管理/隐私保护/创建
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/privacy_protection/create
   description: 策略管理/隐私保护/创建
@@ -165,3 +167,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicyPrivacyProtectionCreate
+      x-operation-id-source: derived

@@ -1,10 +1,12 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account 任务/任务实例v2 API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  description: Merged from Apifox shared markdown documents
+  title: Cloud Atlas Open 任务/任务实例v2 API
+  version: 1.0.0
+security:
+- apikey-header-TOKEN: []
 tags:
-- name: 任务/任务实例v2
+- name: v2
 paths:
   /v1/task/{task_type}/instance:
     get:
@@ -293,10 +295,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 任务实例列表
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/任务实例v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430416697-run
+      operationId: getV1TaskByTaskTypeInstance
+      x-operation-id-source: derived
     post:
       deprecated: false
       description: ''
@@ -474,10 +478,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 任务实例创建（立即运行）
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/任务实例v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430443635-run
+      operationId: postV1TaskByTaskTypeInstance
+      x-operation-id-source: derived
   /v1/task/{task_type}/instance/batch-delete:
     delete:
       deprecated: false
@@ -577,10 +583,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 任务实例批量删除
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/任务实例v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430442238-run
+      operationId: deleteV1TaskByTaskTypeInstanceBatchDelete
+      x-operation-id-source: derived
   /v1/task/{task_type}/instance/status:
     post:
       deprecated: false
@@ -688,10 +696,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 任务实例批量重跑、暂停
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/任务实例v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430458617-run
+      operationId: postV1TaskByTaskTypeInstanceStatus
+      x-operation-id-source: derived
   /v1/task/{task_type}/instance/status/count:
     get:
       deprecated: false
@@ -793,10 +803,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 任务实例状态数量
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/任务实例v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430397358-run
+      operationId: getV1TaskByTaskTypeInstanceStatusCount
+      x-operation-id-source: derived
   /v1/task/{task_type}/instance/{id}:
     get:
       deprecated: false
@@ -891,9 +903,10 @@ paths:
                         title: 完成编排数量
                         type: integer
                       finished_at:
-                        nullable: true
                         title: 完成时间
-                        type: string
+                        type:
+                        - string
+                        - 'null'
                       remaining_time:
                         title: 任务剩余时间
                         type: integer
@@ -1008,10 +1021,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 任务实例查看
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/任务实例v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430496683-run
+      operationId: getV1TaskByTaskTypeInstanceById
+      x-operation-id-source: derived
   /v1/task/attack/schedule/xapp/options:
     get:
       deprecated: false
@@ -1088,10 +1103,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 指纹分组选项
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/周期任务v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430377396-run
+      operationId: getV1TaskAttackScheduleXappOptions
+      x-operation-id-source: derived
   /v1/task/risk/schedule/xpoc/options:
     get:
       deprecated: false
@@ -1156,10 +1173,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 漏洞分组选项
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/周期任务v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430383737-run
+      operationId: getV1TaskRiskScheduleXpocOptions
+      x-operation-id-source: derived
   /v1/task/{task_type}/schedule:
     get:
       deprecated: false
@@ -1443,10 +1462,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 周期任务列表
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/周期任务v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430138885-run
+      operationId: getV1TaskByTaskTypeSchedule
+      x-operation-id-source: derived
     post:
       deprecated: false
       description: ''
@@ -1733,10 +1754,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 周期任务创建
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/周期任务v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430260833-run
+      operationId: postV1TaskByTaskTypeSchedule
+      x-operation-id-source: derived
   /v1/task/{task_type}/schedule/batch-delete:
     delete:
       deprecated: false
@@ -1836,10 +1859,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 周期任务批量删除
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/周期任务v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430362172-run
+      operationId: deleteV1TaskByTaskTypeScheduleBatchDelete
+      x-operation-id-source: derived
   /v1/task/{task_type}/schedule/status:
     post:
       deprecated: false
@@ -1946,10 +1971,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 周期任务批量切换状态
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/周期任务v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430366048-run
+      operationId: postV1TaskByTaskTypeScheduleStatus
+      x-operation-id-source: derived
   /v1/task/{task_type}/schedule/{id}:
     get:
       deprecated: false
@@ -2136,10 +2163,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 周期任务查看
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/周期任务v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430190470-run
+      operationId: getV1TaskByTaskTypeScheduleById
+      x-operation-id-source: derived
     patch:
       deprecated: false
       description: ''
@@ -2431,10 +2460,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 周期任务编辑
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/周期任务v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430351092-run
+      operationId: patchV1TaskByTaskTypeScheduleById
+      x-operation-id-source: derived
   /v1/task/{task_type}/flow:
     get:
       deprecated: false
@@ -2712,10 +2743,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 编排实例列表
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/编排实例v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430476056-run
+      operationId: getV1TaskByTaskTypeFlow
+      x-operation-id-source: derived
   /v1/task/{task_type}/flow/reboot:
     post:
       deprecated: false
@@ -2808,10 +2841,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: 编排实例批量重跑
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/编排实例v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430482598-run
+      operationId: postV1TaskByTaskTypeFlowReboot
+      x-operation-id-source: derived
   /v1/task/{task_type}/flow/status/count:
     get:
       deprecated: false
@@ -2914,7 +2949,15 @@ paths:
       - apikey-header-TOKEN: []
       summary: 编排实例状态数量
       tags:
-      - 任务/任务实例v2
+      - v2
       x-apifox-folder: 任务/编排实例v2
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-430484591-run
+      operationId: getV1TaskByTaskTypeFlowStatusCount
+      x-operation-id-source: derived
+components:
+  securitySchemes:
+    apikey-header-TOKEN:
+      in: header
+      name: TOKEN
+      type: apiKey

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account dataasset/source/{source}/md5/{md5}/staff/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Dataasset/source/{source}/md5/{md5}/staff/list API
+  description: 数据资产/来源/source 参数/MD5/md5 参数/人员/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: dataasset/source/{source}/md5/{md5}/staff/list
   description: 数据资产/来源/source 参数/MD5/md5 参数/人员/列表
@@ -1077,3 +1079,5 @@ paths:
                       data_level: 5
                       data_level_name: '3333'
       security: []
+      operationId: postDataassetSourceBySourceMd5ByMd5StaffList
+      x-operation-id-source: derived

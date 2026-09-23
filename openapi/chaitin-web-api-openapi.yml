@@ -1,10 +1,9 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account web框架 API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: Chaitin Web框架 API
+  version: ''
 tags:
-- name: web框架
+- name: Web
 paths:
   /web_framework/count:
     get:
@@ -143,7 +142,9 @@ paths:
           description: ''
       summary: web框架-获取web框架总数
       tags:
-      - web框架
+      - Web
+      operationId: getWebFrameworkCount
+      x-operation-id-source: derived
   /web_framework/info:
     get:
       parameters:
@@ -165,7 +166,9 @@ paths:
           description: ''
       summary: web框架-获取web框架详情
       tags:
-      - web框架
+      - Web
+      operationId: getWebFrameworkInfo
+      x-operation-id-source: derived
   /web_framework/list:
     get:
       parameters:
@@ -303,7 +306,9 @@ paths:
           description: ''
       summary: web框架-获取web框架列表
       tags:
-      - web框架
+      - Web
+      operationId: getWebFrameworkList
+      x-operation-id-source: derived
   /web_framework/list_export:
     get:
       parameters:
@@ -441,7 +446,9 @@ paths:
           description: ''
       summary: web框架-导出web框架列表
       tags:
-      - web框架
+      - Web
+      operationId: getWebFrameworkListExport
+      x-operation-id-source: derived
   /website/info:
     get:
       parameters:
@@ -463,7 +470,9 @@ paths:
           description: ''
       summary: web站点-获取web站点详情
       tags:
-      - web框架
+      - Web
+      operationId: getWebsiteInfo
+      x-operation-id-source: derived
   /website/list:
     get:
       parameters:
@@ -564,7 +573,9 @@ paths:
           description: ''
       summary: web站点-获取web站点列表
       tags:
-      - web框架
+      - Web
+      operationId: getWebsiteList
+      x-operation-id-source: derived
   /website/list_count:
     get:
       parameters:
@@ -665,7 +676,9 @@ paths:
           description: ''
       summary: web站点-获取web站点总数
       tags:
-      - web框架
+      - Web
+      operationId: getWebsiteListCount
+      x-operation-id-source: derived
   /website/list_export:
     get:
       parameters:
@@ -718,51 +731,39 @@ paths:
           description: ''
       summary: web站点-导出web站点列表
       tags:
-      - web框架
+      - Web
+      operationId: getWebsiteListExport
+      x-operation-id-source: derived
 components:
   schemas:
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListCountRes:
-      properties:
-        total:
-          format: int
-          properties: {}
-          type: integer
-        last_task_success_time:
-          description: 发现时间
-          format: uint
-          properties: {}
-          type: integer
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkListExportRes:
+      properties: {}
       type: object
-    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteBaseInfo:
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkListOne:
       properties:
-        dir:
-          description: 路径
-          format: '[]string'
-          items:
-            format: string
-            properties: {}
-            type: string
+        name:
+          description: 框架名称
+          format: string
           properties: {}
-          type: array
-        domain:
-          description: 域名
-          format: '[]string'
-          items:
-            format: string
-            properties: {}
-            type: string
+          type: string
+        language:
+          description: 框架语言
+          format: string
           properties: {}
-          type: array
-        ports:
-          description: 端口信息
-          format: '[]model.WebsitePortInfo'
-          items:
-            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePortInfo'
+          type: string
+        container_name:
+          description: 容器名称
+          format: string
           properties: {}
-          type: array
+          type: string
+        container_id:
+          description: 容器id
+          format: string
+          properties: {}
+          type: string
         discovery_time:
-          description: 发现时间
-          format: uint64
+          description: 发现时间时间戳
+          format: uint
           properties: {}
           type: integer
         service_type:
@@ -770,9 +771,18 @@ components:
           format: uint
           properties: {}
           type: integer
+        id:
+          description: web框架资产id
+          format: uint64
+          properties: {}
+          type: integer
       type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListExportRes:
-      properties: {}
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkCountRes:
+      properties:
+        total:
+          format: int
+          properties: {}
+          type: integer
       type: object
     git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkListRes:
       properties:
@@ -784,117 +794,10 @@ components:
           properties: {}
           type: array
       type: object
-    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteContainerInfo:
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkInfoRes:
       properties:
-        container_name:
-          description: 容器名称
-          format: string
-          properties: {}
-          type: string
-        container_id:
-          description: 容器id
-          format: string
-          properties: {}
-          type: string
-        cid:
-          description: 主键id
-          format: uint64
-          properties: {}
-          type: integer
-      type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkListExportRes:
-      properties: {}
-      type: object
-    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteListOutItem:
-      properties:
-        container_name:
-          description: 容器名称
-          format: string
-          properties: {}
-          type: string
-        container_id:
-          description: 容器id
-          format: string
-          properties: {}
-          type: string
-        domain:
-          description: 域名
-          format: '[]string'
-          items:
-            format: string
-            properties: {}
-            type: string
-          properties: {}
-          type: array
-        id:
-          description: 主键id
-          format: uint64
-          properties: {}
-          type: integer
-        service_type:
-          description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC'
-          format: uint
-          properties: {}
-          type: integer
-        discovery_time:
-          description: 发现时间，秒
-          format: uint
-          properties: {}
-          type: integer
-      type: object
-    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteInfoOut:
-      properties:
-        pod_info:
-          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePodInfo'
-        container_info:
-          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteContainerInfo'
-        base_info:
-          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteBaseInfo'
-      type: object
-    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePortInfo:
-      properties:
-        protocol:
-          description: 协议
-          format: string
-          properties: {}
-          type: string
-        ip:
-          description: 绑定ip
-          format: string
-          properties: {}
-          type: string
-        host_port:
-          description: 主机端口
-          format: uint64
-          properties: {}
-          type: integer
-        container_port:
-          description: 容器端口
-          format: uint64
-          properties: {}
-          type: integer
-      type: object
-    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePodInfo:
-      properties:
-        namespace:
-          description: 命名空间
-          format: string
-          properties: {}
-          type: string
-        pod_name:
-          description: pod名称
-          format: string
-          properties: {}
-          type: string
-      type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListRes:
-      properties:
-        list:
-          format: '[]model.WebsiteListOutItem'
-          items:
-            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteListOutItem'
-          properties: {}
-          type: array
+        data:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkInfo'
       type: object
     git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkInfo:
       properties:
@@ -949,30 +852,8 @@ components:
           properties: {}
           type: integer
       type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkCountRes:
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteContainerInfo:
       properties:
-        total:
-          format: int
-          properties: {}
-          type: integer
-      type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteInfoRes:
-      properties:
-        data:
-          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteInfoOut'
-      type: object
-    git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkListOne:
-      properties:
-        name:
-          description: 框架名称
-          format: string
-          properties: {}
-          type: string
-        language:
-          description: 框架语言
-          format: string
-          properties: {}
-          type: string
         container_name:
           description: 容器名称
           format: string
@@ -983,9 +864,51 @@ components:
           format: string
           properties: {}
           type: string
+        cid:
+          description: 主键id
+          format: uint64
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListRes:
+      properties:
+        list:
+          format: '[]model.WebsiteListOutItem'
+          items:
+            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteListOutItem'
+          properties: {}
+          type: array
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteBaseInfo:
+      properties:
+        dir:
+          description: 路径
+          format: '[]string'
+          items:
+            format: string
+            properties: {}
+            type: string
+          properties: {}
+          type: array
+        domain:
+          description: 域名
+          format: '[]string'
+          items:
+            format: string
+            properties: {}
+            type: string
+          properties: {}
+          type: array
+        ports:
+          description: 端口信息
+          format: '[]model.WebsitePortInfo'
+          items:
+            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePortInfo'
+          properties: {}
+          type: array
         discovery_time:
-          description: 发现时间时间戳
-          format: uint
+          description: 发现时间
+          format: uint64
           properties: {}
           type: integer
         service_type:
@@ -993,14 +916,106 @@ components:
           format: uint
           properties: {}
           type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteListOutItem:
+      properties:
+        container_name:
+          description: 容器名称
+          format: string
+          properties: {}
+          type: string
+        container_id:
+          description: 容器id
+          format: string
+          properties: {}
+          type: string
+        domain:
+          description: 域名
+          format: '[]string'
+          items:
+            format: string
+            properties: {}
+            type: string
+          properties: {}
+          type: array
         id:
-          description: web框架资产id
+          description: 主键id
+          format: uint64
+          properties: {}
+          type: integer
+        service_type:
+          description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC'
+          format: uint
+          properties: {}
+          type: integer
+        discovery_time:
+          description: 发现时间，秒
+          format: uint
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteInfoOut:
+      properties:
+        pod_info:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePodInfo'
+        container_info:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteContainerInfo'
+        base_info:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteBaseInfo'
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListCountRes:
+      properties:
+        total:
+          format: int
+          properties: {}
+          type: integer
+        last_task_success_time:
+          description: 发现时间
+          format: uint
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListExportRes:
+      properties: {}
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePodInfo:
+      properties:
+        namespace:
+          description: 命名空间
+          format: string
+          properties: {}
+          type: string
+        pod_name:
+          description: pod名称
+          format: string
+          properties: {}
+          type: string
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePortInfo:
+      properties:
+        protocol:
+          description: 协议
+          format: string
+          properties: {}
+          type: string
+        ip:
+          description: 绑定ip
+          format: string
+          properties: {}
+          type: string
+        host_port:
+          description: 主机端口
+          format: uint64
+          properties: {}
+          type: integer
+        container_port:
+          description: 容器端口
           format: uint64
           properties: {}
           type: integer
       type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkInfoRes:
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteInfoRes:
       properties:
         data:
-          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkInfo'
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteInfoOut'
       type: object

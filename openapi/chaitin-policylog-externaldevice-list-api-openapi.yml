@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/externaldevice/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/externaldevice/list API
+  description: 日志中心/外设/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/externaldevice/list
   description: 日志中心/外设/列表
@@ -140,3 +142,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicylogExternaldeviceList
+      x-operation-id-source: derived

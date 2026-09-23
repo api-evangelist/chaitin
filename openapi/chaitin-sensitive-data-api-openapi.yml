@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account sensitive_data API
+  title: APISec Management Sensitive Data API
   version: '26.05'
   description: Generated from APISec skyview APIView classes.
 tags:

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account device/tag/modify API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device/tag/modify API
+  description: ''
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: device/tag/modify
 paths:
@@ -120,3 +122,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postDeviceTagModify
+      x-operation-id-source: derived

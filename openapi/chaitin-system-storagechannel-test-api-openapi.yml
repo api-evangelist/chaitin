@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/storagechannel/test API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/storagechannel/test API
+  description: 系统配置/存储通道/测试
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/storagechannel/test
   description: 系统配置/存储通道/测试
@@ -120,3 +122,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postSystemStoragechannelTest
+      x-operation-id-source: derived

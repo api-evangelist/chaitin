@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account analyse/expression/classification/batch API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Analyse/expression/classification/batch API
+  description: 文件分析/表达式/数据分类分级/批量
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: analyse/expression/classification/batch
   description: 文件分析/表达式/数据分类分级/批量
@@ -529,3 +531,5 @@ paths:
                   inner_hits:
                   - 薮猫科技
       security: []
+      operationId: postAnalyseExpressionClassificationBatch
+      x-operation-id-source: derived

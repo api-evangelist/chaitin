@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account browserplugin/template API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Browserplugin/template API
+  description: 浏览器插件/模板
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: browserplugin/template
   description: 浏览器插件/模板
@@ -132,3 +134,5 @@ paths:
                   file_system: local
                   url_path: /oss-qzh/eeff7c64-5070-4582-8b93-fbcc57db7771/browser_plugin/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.xlsx?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20250321%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250321T025646Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27%25E6%25B5%258F%25E8%25A7%2588%25E5%2599%25A8%25E6%258F%2592%25E4%25BB%25B6%25E5%25AF%25BC%25E5%2585%25A5%25E6%25A8%25A1%25E6%259D%25BF.xlsx&X-Amz-Signature=9dd19fe263afc32004026503414c1be5b610ebe600b0522b7244045e14c0765d
       security: []
+      operationId: postBrowserpluginTemplate
+      x-operation-id-source: derived

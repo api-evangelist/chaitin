@@ -1,335 +1,408 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account rule API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  description: mgt API swagger document.
+  title: mgt Rule API
+  contact: {}
+  version: '2.0'
+servers:
+- url: /api
 tags:
-- name: rule
+- name: Rule
 paths:
   /open/policy:
     get:
-      produces:
-      - application/json
       tags:
-      - rule
+      - Rule
       summary: list customized rule
       parameters:
-      - maximum: 3
-        minimum: -1
-        type: integer
-        name: action
+      - name: action
         in: query
         x-cli-description: 动作类型：0-放行 1-阻断 2-挑战 3-认证防护 4-混淆 5-等待室
-      - minimum: 1
-        type: integer
-        name: page
+        schema:
+          type: integer
+          maximum: 3
+          minimum: -1
+      - name: page
         in: query
         x-cli-description: 页码
-      - maximum: 100
-        minimum: 1
-        type: integer
-        name: page_size
+        schema:
+          type: integer
+          minimum: 1
+      - name: page_size
         in: query
         x-cli-description: 每页数量
+        schema:
+          type: integer
+          maximum: 100
+          minimum: 1
       responses:
         '200':
           description: OK
-          schema:
-            allOf:
-            - $ref: '#/definitions/response.JSONBody'
-            - type: object
-              properties:
-                data:
-                  $ref: '#/definitions/policy.ListPolicyRes'
+          content:
+            application/json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/response.JSONBody'
+                - type: object
+                  properties:
+                    data:
+                      $ref: '#/components/schemas/policy.ListPolicyRes'
       x-cli-summary: 获取自定义规则列表
+      operationId: getOpenPolicy
+      x-operation-id-source: derived
     post:
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
-      - rule
+      - Rule
       summary: create customized rule
-      parameters:
-      - description: request params
-        name: request
-        in: body
-        required: true
-        schema:
-          $ref: '#/definitions/policy.PostPolicyReq'
       responses:
         '200':
           description: OK
-          schema:
-            allOf:
-            - $ref: '#/definitions/response.JSONBody'
-            - type: object
-              properties:
-                data:
-                  type: integer
+          content:
+            application/json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/response.JSONBody'
+                - type: object
+                  properties:
+                    data:
+                      type: integer
       x-cli-summary: 创建自定义规则
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/policy.PostPolicyReq'
+        description: request params
+        required: true
+      operationId: postOpenPolicy
+      x-operation-id-source: derived
     put:
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
-      - rule
+      - Rule
       summary: update customized rule
-      parameters:
-      - description: request params
-        name: request
-        in: body
-        required: true
-        schema:
-          $ref: '#/definitions/policy.PutPolicyReq'
       responses:
         '200':
           description: OK
-          schema:
-            $ref: '#/definitions/response.JSONBody'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response.JSONBody'
       x-cli-summary: 更新自定义规则
-    delete:
-      consumes:
-      - application/json
-      produces:
-      - application/json
-      tags:
-      - rule
-      summary: delete customized rule
-      parameters:
-      - description: request params
-        name: request
-        in: body
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/policy.PutPolicyReq'
+        description: request params
         required: true
-        schema:
-          $ref: '#/definitions/policy.DeletePolicyReq'
+      operationId: putOpenPolicy
+      x-operation-id-source: derived
+    delete:
+      tags:
+      - Rule
+      summary: delete customized rule
       responses:
         '200':
           description: OK
-          schema:
-            $ref: '#/definitions/response.JSONBody'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response.JSONBody'
       x-cli-summary: 删除自定义规则
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/policy.DeletePolicyReq'
+        description: request params
+        required: true
+      operationId: deleteOpenPolicy
+      x-operation-id-source: derived
   /open/policy/detail:
     get:
-      produces:
-      - application/json
       tags:
-      - rule
+      - Rule
       summary: get customized rule detail
       parameters:
-      - type: integer
-        name: id
+      - name: id
         in: query
         x-cli-description: 资源 ID
+        schema:
+          type: integer
       responses:
         '200':
           description: OK
-          schema:
-            allOf:
-            - $ref: '#/definitions/response.JSONBody'
-            - type: object
-              properties:
-                data:
-                  $ref: '#/definitions/policy.GetPolicyRes'
+          content:
+            application/json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/response.JSONBody'
+                - type: object
+                  properties:
+                    data:
+                      $ref: '#/components/schemas/policy.GetPolicyRes'
       x-cli-summary: 获取自定义规则详情
+      operationId: getOpenPolicyDetail
+      x-operation-id-source: derived
   /open/policy/switch:
     put:
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
-      - rule
+      - Rule
       summary: enable/disable customized rule
-      parameters:
-      - description: request params
-        name: request
-        in: body
-        required: true
-        schema:
-          $ref: '#/definitions/policy.PutPolicySwitchReq'
       responses:
         '200':
           description: OK
-          schema:
-            $ref: '#/definitions/response.JSONBody'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response.JSONBody'
       x-cli-summary: 启用/禁用自定义规则
-definitions:
-  response.JSONBody:
-    type: object
-    properties:
-      data: {}
-      err:
-        type: string
-      msg:
-        type: string
-  model.PolicyReview:
-    type: integer
-    enum:
-    - 0
-    - 1
-    x-enum-varnames:
-    - PolicyReviewRequired
-    - PolicyReviewNone
-  model.RulePattern:
-    type: object
-    properties:
-      k:
-        type: string
-      op:
-        type: string
-      sub_k:
-        type: string
-      v:
-        type: array
-        items:
-          type: string
-  model.PolicyAction:
-    type: integer
-    enum:
-    - 0
-    - 1
-    - 2
-    - 3
-    - 4
-    - 5
-    - 999
-    - 999
-    x-enum-varnames:
-    - PolicyActionAllow
-    - PolicyActionDeny
-    - PolicyActionChallenge
-    - PolicyActionAuthDefense
-    - PolicyActionChaos
-    - PolicyActionWaitingRoom
-    - PolicyActionMix
-    - PolicyActionMax
-  policy.ListPolicyRes:
-    type: object
-    properties:
-      data:
-        type: array
-        items:
-          $ref: '#/definitions/policy.GetPolicyRes'
-      total:
-        type: integer
-  policy.PostPolicyReq:
-    type: object
-    properties:
-      action:
-        $ref: '#/definitions/model.PolicyAction'
-      expire:
-        type: integer
-      is_enabled:
-        type: boolean
-      level:
-        type: integer
-      log:
-        type: boolean
-      name:
-        type: string
-      pattern:
-        type: array
-        items:
-          type: array
-          items:
-            $ref: '#/definitions/model.RulePattern'
-  policy.PutPolicySwitchReq:
-    type: object
-    properties:
-      id:
-        type: integer
-      is_enabled:
-        type: boolean
-  policy.GetPolicyRes:
-    type: object
-    properties:
-      action:
-        description: 0 -> allow, 1 -> deny
-        allOf:
-        - $ref: '#/definitions/model.PolicyAction'
-      auth_callback:
-        type: string
-      auth_rule:
-        type: integer
-      auth_source_ids:
-        type: array
-        items:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/policy.PutPolicySwitchReq'
+        description: request params
+        required: true
+      operationId: putOpenPolicySwitch
+      x-operation-id-source: derived
+components:
+  schemas:
+    policy.DeletePolicyReq:
+      type: object
+      properties:
+        id:
           type: integer
-      black_rule:
-        type: integer
-      builtin:
-        type: boolean
-      captcha_rule:
-        type: integer
-      cloud_id:
-        type: integer
-      cloud_total:
-        type: integer
-      compatible:
-        type: integer
-      created_at:
-        type: string
-      expire:
-        type: integer
-      id:
-        type: integer
-      is_enabled:
-        type: boolean
-      level:
-        type: integer
-      log:
-        type: boolean
-      name:
-        type: string
-      negate:
-        type: boolean
-      pass_count:
-        type: integer
-      pattern:
-        type: array
-        items:
+    policy.GetPolicyRes:
+      type: object
+      properties:
+        action:
+          description: 0 -> allow, 1 -> deny
+          allOf:
+          - $ref: '#/components/schemas/model.PolicyAction'
+        auth_callback:
+          type: string
+        auth_rule:
+          type: integer
+        auth_source_ids:
           type: array
           items:
-            $ref: '#/definitions/model.RulePattern'
-      replay:
-        type: boolean
-      req_count:
-        type: integer
-      review:
-        $ref: '#/definitions/model.PolicyReview'
-      tfa_enabled:
-        type: boolean
-      updated_at:
-        type: string
-      white_rule:
-        type: integer
-  policy.DeletePolicyReq:
-    type: object
-    properties:
-      id:
-        type: integer
-  policy.PutPolicyReq:
-    type: object
-    properties:
-      action:
-        $ref: '#/definitions/model.PolicyAction'
-      expire:
-        type: integer
-      id:
-        type: integer
-      is_enabled:
-        type: boolean
-      level:
-        type: integer
-      log:
-        type: boolean
-      name:
-        type: string
-      pattern:
-        type: array
-        items:
+            type: integer
+        black_rule:
+          type: integer
+        builtin:
+          type: boolean
+        captcha_rule:
+          type: integer
+        cloud_id:
+          type: integer
+        cloud_total:
+          type: integer
+        compatible:
+          type: integer
+        created_at:
+          type: string
+        expire:
+          type: integer
+        id:
+          type: integer
+        is_enabled:
+          type: boolean
+        level:
+          type: integer
+        log:
+          type: boolean
+        name:
+          type: string
+        negate:
+          type: boolean
+        pass_count:
+          type: integer
+        pattern:
           type: array
           items:
-            $ref: '#/definitions/model.RulePattern'
+            type: array
+            items:
+              $ref: '#/components/schemas/model.RulePattern'
+        replay:
+          type: boolean
+        req_count:
+          type: integer
+        review:
+          $ref: '#/components/schemas/model.PolicyReview'
+        tfa_enabled:
+          type: boolean
+        updated_at:
+          type: string
+        white_rule:
+          type: integer
+    model.RulePattern:
+      type: object
+      properties:
+        k:
+          type: string
+        op:
+          type: string
+        sub_k:
+          type: string
+        v:
+          type: array
+          items:
+            type: string
+    policy.PutPolicySwitchReq:
+      type: object
+      properties:
+        id:
+          type: integer
+        is_enabled:
+          type: boolean
+    policy.PutPolicyReq:
+      type: object
+      properties:
+        action:
+          $ref: '#/components/schemas/model.PolicyAction'
+        expire:
+          type: integer
+        id:
+          type: integer
+        is_enabled:
+          type: boolean
+        level:
+          type: integer
+        log:
+          type: boolean
+        name:
+          type: string
+        pattern:
+          type: array
+          items:
+            type: array
+            items:
+              $ref: '#/components/schemas/model.RulePattern'
+    policy.ListPolicyRes:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/policy.GetPolicyRes'
+        total:
+          type: integer
+    response.JSONBody:
+      type: object
+      properties:
+        data: {}
+        err:
+          type: string
+        msg:
+          type: string
+    policy.PostPolicyReq:
+      type: object
+      properties:
+        action:
+          $ref: '#/components/schemas/model.PolicyAction'
+        expire:
+          type: integer
+        is_enabled:
+          type: boolean
+        level:
+          type: integer
+        log:
+          type: boolean
+        name:
+          type: string
+        pattern:
+          type: array
+          items:
+            type: array
+            items:
+              $ref: '#/components/schemas/model.RulePattern'
+    model.PolicyAction:
+      type: integer
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 999
+      - 999
+      x-enum-varnames:
+      - PolicyActionAllow
+      - PolicyActionDeny
+      - PolicyActionChallenge
+      - PolicyActionAuthDefense
+      - PolicyActionChaos
+      - PolicyActionWaitingRoom
+      - PolicyActionMix
+      - PolicyActionMax
+    model.PolicyReview:
+      type: integer
+      enum:
+      - 0
+      - 1
+      x-enum-varnames:
+      - PolicyReviewRequired
+      - PolicyReviewNone
+x-cli:
+  tags:
+    site: 防护站点管理
+    cert: 授权与证书管理
+    log: 日志查询
+    stat: 数据统计
+    skynet: 加强规则管理
+    module: 语义分析模块配置
+    rule: 自定义规则管理
+    ipgroup: IP 黑白名单管理
+  children:
+    log/attack: 攻击日志
+    log/audit: 审计日志
+    log/rule: 黑白名单检测日志
+    stat/trend: 趋势统计
+  params:
+    server_names: 域名（多个用逗号分隔）
+    ports: 端口（多个用逗号分隔）
+    upstreams: 后端地址（多个用逗号分隔）
+    cert_id: 证书 ID
+    comment: 备注说明
+    email: 管理员邮箱
+    group_id: 分组 ID
+    health_check: 是否启用健康检查
+    id: 资源 ID
+    ids: 资源 ID（多个用逗号分隔）
+    site: 站点域名
+    sp_enabled: 是否启用语义分析
+    stat_enabled: 是否启用统计
+    load_balance: 负载均衡策略
+    name: 规则名称
+    pattern: 匹配规则（JSON 格式）
+    action: 动作类型：0-放行 1-阻断 2-挑战 3-认证防护 4-混淆 5-等待室
+    level: 风险等级
+    enable: 是否启用
+    mode: 模式：strict/default/dry_run/disable/deny
+    semantics: 语义分析配置
+    use_global: 是否使用全局配置
+    ips: IP 地址（多个用逗号分隔）
+    ip_group_ids: IP Group ID（多个用逗号分隔）
+    page: 页码
+    page_size: 每页数量
+    size: 每页数量
+    start: 开始时间戳（秒）
+    end: 结束时间戳（秒）
+    begin_time: 开始时间戳（秒）
+    end_time: 结束时间戳（秒）
+    site_id: 站点 ID
+    host: 域名
+    ip: IP 地址
+    url: URL 路径
+    port: 端口
+    attack_type: 攻击类型
+    event_id: 事件 ID
+    ja4_fingerprint: JA4 指纹
+    top: 返回前 N 条
+    reference: 引用来源
+    expire: 过期时间
+    log: 是否记录日志
+    is_enabled: 是否启用
+    global: 是否全局

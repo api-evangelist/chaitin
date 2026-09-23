@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/channel API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/channel API
+  description: 策略管理/通道
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/channel
   description: 策略管理/通道
@@ -350,3 +352,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicyChannel
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account browsermanager/download API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Browsermanager/download API
+  description: 浏览器管理/下载
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: browsermanager/download
   description: 浏览器管理/下载
@@ -284,3 +286,5 @@ paths:
                   update_time: '2025-03-13T09:17:17.635180Z'
                   compress_category: null
       security: []
+      operationId: postBrowsermanagerDownload
+      x-operation-id-source: derived

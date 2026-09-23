@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/channel/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/channel/list API
+  description: 日志中心/通道/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/channel/list
   description: 日志中心/通道/列表
@@ -1897,3 +1899,5 @@ paths:
                     _index: .ds-qzhddr_policylog_channel_s-2024.04.28-000007
                     action_display_name: 弹窗提醒
       security: []
+      operationId: postPolicylogChannelList
+      x-operation-id-source: derived

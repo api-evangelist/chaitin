@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/browserplugin/action/bulkdestroy API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/browserplugin/action/bulkdestroy API
+  description: 日志中心/浏览器插件/操作/批量删除
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/browserplugin/action/bulkdestroy
   description: 日志中心/浏览器插件/操作/批量删除
@@ -127,3 +129,5 @@ paths:
                 data:
                   event_id: dd3a895f-5927-43bb-a121-689f37e9fb21
       security: []
+      operationId: postPolicylogBrowserpluginActionBulkdestroy
+      x-operation-id-source: derived

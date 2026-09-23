@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account browsermanager/{tid}/device/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Browsermanager/{tid}/device/list API
+  description: 浏览器管理/tid 参数/设备管理/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: browsermanager/{tid}/device/list
   description: 浏览器管理/tid 参数/设备管理/列表
@@ -356,3 +358,5 @@ paths:
                     _index: qzhddr_browser_manager
                     _score: null
       security: []
+      operationId: postBrowsermanagerByTidDeviceList
+      x-operation-id-source: derived

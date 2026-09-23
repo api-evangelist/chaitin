@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/landing/{uid}/action/remove API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/landing/{uid}/action/remove API
+  description: 策略管理/落地/uid 参数/操作/移除
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/landing/{uid}/action/remove
   description: 策略管理/落地/uid 参数/操作/移除
@@ -157,3 +159,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicyLandingByUidActionRemove
+      x-operation-id-source: derived

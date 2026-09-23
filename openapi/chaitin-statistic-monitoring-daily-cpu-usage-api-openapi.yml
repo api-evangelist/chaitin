@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account statistic/monitoring/daily/cpu_usage API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Statistic/monitoring/daily/cpu Usage API
+  description: 统计分析/监控/每日/CPU 使用率
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: statistic/monitoring/daily/cpu_usage
   description: 统计分析/监控/每日/CPU 使用率
@@ -183,3 +185,5 @@ paths:
                       timestamp: 11-22 10:00
                       value: 384.3
       security: []
+      operationId: postStatisticMonitoringDailyCpuUsage
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account device/filescantask/remote/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device/filescantask/remote/list API
+  description: ''
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: device/filescantask/remote/list
 paths:
@@ -748,3 +750,5 @@ paths:
                   file_size_upper_measure: MB
                   status: activated
       security: []
+      operationId: postDeviceFilescantaskRemoteList
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account filebehavior/stafflist API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Filebehavior/stafflist API
+  description: 文件行为/人员列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: filebehavior/stafflist
   description: 文件行为/人员列表
@@ -2069,3 +2071,5 @@ paths:
                       total: 10
                     device_cnt: 2
       security: []
+      operationId: postFilebehaviorStafflist
+      x-operation-id-source: derived

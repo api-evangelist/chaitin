@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/realtime_monitor/record/action/getscreenshotmetadata API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/realtime Monitor/record/action/getscreenshotm…
+  description: 策略管理/实时监控/记录/操作/截图元数据
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/realtime_monitor/record/action/getscreenshotmetadata
   description: 策略管理/实时监控/记录/操作/截图元数据
@@ -129,3 +131,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicyRealtimeMonitorRecordActionGetscreenshotmetadata
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account installer/simpletask/{simple_task_id}/action/remove API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Installer/simpletask/{simple Task Id}/action/remove…
+  description: 终端安装包/简易任务/simple_task_id 参数/操作/移除
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: installer/simpletask/{simple_task_id}/action/remove
   description: 终端安装包/简易任务/simple_task_id 参数/操作/移除
@@ -121,3 +123,5 @@ paths:
                 data:
                   event_id: eeff7c64-5070-4582-8b93-fbcc57db7771
       security: []
+      operationId: postInstallerSimpletaskBySimpleTaskIdActionRemove
+      x-operation-id-source: derived

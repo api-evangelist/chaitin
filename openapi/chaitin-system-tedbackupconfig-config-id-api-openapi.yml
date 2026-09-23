@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/tedbackupconfig/{config_id} API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/tedbackupconfig/{config Id} API
+  description: 系统配置/TED 备份配置/config_id 参数
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/tedbackupconfig/{config_id}
   description: 系统配置/TED 备份配置/config_id 参数
@@ -178,3 +180,5 @@ paths:
                 msg: string
                 data: null
       security: []
+      operationId: postSystemTedbackupconfigByConfigId
+      x-operation-id-source: derived

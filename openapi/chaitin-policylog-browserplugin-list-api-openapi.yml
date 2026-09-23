@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/browserplugin/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/browserplugin/list API
+  description: 日志中心/浏览器插件/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/browserplugin/list
   description: 日志中心/浏览器插件/列表
@@ -401,3 +403,5 @@ paths:
                     _score: null
                     action_display_name: 阻断运行
       security: []
+      operationId: postPolicylogBrowserpluginList
+      x-operation-id-source: derived

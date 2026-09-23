@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account exportrecord/{task_id}/download API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Exportrecord/{task Id}/download API
+  description: 导出记录/task_id 参数/下载
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: exportrecord/{task_id}/download
   description: 导出记录/task_id 参数/下载
@@ -135,3 +137,5 @@ paths:
                   url: https://192.168.89.26:8443/oss-qzh/eeff7c64-5070-4582-8b93-fbcc57db7771/%7Bcompany_id%7D/download_tmp/ueba/%E6%B5%8B%E8%AF%95-46ef4574aa134f3b80959583ea18794a.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20240226%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240226T063930Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27%25E6%25B5%258B%25E8%25AF%2595-46ef4574aa134f3b80959583ea18794a.zip&X-Amz-Signature=d2f439786b0fae73e11b7b954e932747eaa8b8e39e8edbe39b3fe08871180f3d
                   url_path: /oss-qzh/eeff7c64-5070-4582-8b93-fbcc57db7771/%7Bcompany_id%7D/download_tmp/ueba/%E6%B5%8B%E8%AF%95-46ef4574aa134f3b80959583ea18794a.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20240226%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240226T063930Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27%25E6%25B5%258B%25E8%25AF%2595-46ef4574aa134f3b80959583ea18794a.zip&X-Amz-Signature=d2f439786b0fae73e11b7b954e932747eaa8b8e39e8edbe39b3fe08871180f3d
       security: []
+      operationId: postExportrecordByTaskIdDownload
+      x-operation-id-source: derived

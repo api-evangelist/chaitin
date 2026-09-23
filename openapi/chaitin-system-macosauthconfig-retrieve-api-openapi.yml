@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/macosauthconfig/retrieve API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/macosauthconfig/retrieve API
+  description: 系统配置/macOS 认证配置/获取
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/macosauthconfig/retrieve
   description: 系统配置/macOS 认证配置/获取
@@ -344,3 +346,5 @@ paths:
                     is_remind: false
                     email_to_list: []
       security: []
+      operationId: postSystemMacosauthconfigRetrieve
+      x-operation-id-source: derived

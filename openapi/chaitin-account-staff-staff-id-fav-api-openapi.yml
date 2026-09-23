@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account account/staff/{staff_id}/fav API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Account/staff/{staff Id}/fav API
+  description: 员工管理/人员/staff_id 参数/收藏
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: account/staff/{staff_id}/fav
   description: 员工管理/人员/staff_id 参数/收藏
@@ -121,3 +123,5 @@ paths:
                 msg: success
                 data: {}
       security: []
+      operationId: postAccountStaffByStaffIdFav
+      x-operation-id-source: derived

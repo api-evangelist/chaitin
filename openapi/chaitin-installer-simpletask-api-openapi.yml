@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account installer/simpletask API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Installer/simpletask API
+  description: 终端安装包/简易任务
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: installer/simpletask
   description: 终端安装包/简易任务
@@ -193,3 +195,5 @@ paths:
                   total: 0
                   create_time: '2024-07-26T10:06:10.618342Z'
       security: []
+      operationId: postInstallerSimpletask
+      x-operation-id-source: derived

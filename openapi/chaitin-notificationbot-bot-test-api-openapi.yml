@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account notificationbot/{bot}/test API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Notificationbot/{bot}/test API
+  description: 通知机器人/bot 参数/测试
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: notificationbot/{bot}/test
   description: 通知机器人/bot 参数/测试
@@ -107,3 +109,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postNotificationbotByBotTest
+      x-operation-id-source: derived

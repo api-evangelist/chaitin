@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account report/dashboard/select/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Report/dashboard/select/list API
+  description: 报表中心/仪表盘/选择/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: report/dashboard/select/list
   description: 报表中心/仪表盘/选择/列表
@@ -81,3 +83,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postReportDashboardSelectList
+      x-operation-id-source: derived

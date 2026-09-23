@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account whitelist/network/import API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Whitelist/network/import API
+  description: 白名单管理/网络/导入
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: whitelist/network/import
   description: 白名单管理/网络/导入
@@ -104,3 +106,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postWhitelistNetworkImport
+      x-operation-id-source: derived

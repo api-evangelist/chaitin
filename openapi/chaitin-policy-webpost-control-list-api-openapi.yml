@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/webpost_control/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/webpost Control/list API
+  description: 策略管理/网页发帖管控/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/webpost_control/list
   description: 策略管理/网页发帖管控/列表
@@ -358,3 +360,5 @@ paths:
                     control_category: ''
                   page: 1
       security: []
+      operationId: postPolicyWebpostControlList
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/log_file_similarity/download API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/log File Similarity/download API
+  description: 日志中心/日志文件相似度/下载
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/log_file_similarity/download
   description: 日志中心/日志文件相似度/下载
@@ -223,3 +225,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicylogLogFileSimilarityDownload
+      x-operation-id-source: derived

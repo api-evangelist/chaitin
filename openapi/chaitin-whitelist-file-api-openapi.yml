@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account whitelist/file API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Whitelist/file API
+  description: 白名单管理/文件
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: whitelist/file
   description: 白名单管理/文件
@@ -184,3 +186,5 @@ paths:
                   create_by_id: 2834ded5-b1c5-49ff-9655-3d4cc842e2b7
                   create_time: '2024-07-08T08:33:03.154531Z'
       security: []
+      operationId: postWhitelistFile
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account ueba/log/action/getfieldmetadata API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Ueba/log/action/getfieldmetadata API
+  description: UEBA 分析/日志/操作/字段元数据
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: ueba/log/action/getfieldmetadata
   description: UEBA 分析/日志/操作/字段元数据
@@ -115,7 +117,9 @@ paths:
                         is_commonly_used:
                           type: boolean
                         options:
-                          type: array
+                          type:
+                          - array
+                          - 'null'
                           items:
                             type: object
                             properties:
@@ -126,7 +130,6 @@ paths:
                             required:
                             - name
                             - display_name
-                          nullable: true
                         async_options:
                           type: boolean
                         order:
@@ -476,3 +479,5 @@ paths:
                       - op: avg
                         name: 平均值
       security: []
+      operationId: postUebaLogActionGetfieldmetadata
+      x-operation-id-source: derived

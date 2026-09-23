@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account browsermanager/{tid}/detail API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Browsermanager/{tid}/detail API
+  description: 浏览器管理/tid 参数/详情
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: browsermanager/{tid}/detail
   description: 浏览器管理/tid 参数/详情
@@ -338,3 +340,5 @@ paths:
                   plugin_activate_cnt: 1
                   os_icon: windows
       security: []
+      operationId: postBrowsermanagerByTidDetail
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account dataasset/md5/{md5}/taskinfo API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Dataasset/md5/{md5}/taskinfo API
+  description: 数据资产/MD5/md5 参数/任务信息
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: dataasset/md5/{md5}/taskinfo
   description: 数据资产/MD5/md5 参数/任务信息
@@ -886,3 +888,5 @@ paths:
                           filetype_version: 34
                       is_compressed: true
       security: []
+      operationId: postDataassetMd5ByMd5Taskinfo
+      x-operation-id-source: derived

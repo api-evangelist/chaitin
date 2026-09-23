@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account report/dashboard/getfieldmetadata API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Report/dashboard/getfieldmetadata API
+  description: 报表中心/仪表盘/字段元数据
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: report/dashboard/getfieldmetadata
   description: 报表中心/仪表盘/字段元数据
@@ -100,3 +102,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postReportDashboardGetfieldmetadata
+      x-operation-id-source: derived

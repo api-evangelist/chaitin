@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/browserplugin/download API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/browserplugin/download API
+  description: 日志中心/浏览器插件/下载
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/browserplugin/download
   description: 日志中心/浏览器插件/下载
@@ -286,3 +288,5 @@ paths:
                       begin: '2025-03-20T09:37:38Z'
                       end: '2025-03-21T09:37:38Z'
       security: []
+      operationId: postPolicylogBrowserpluginDownload
+      x-operation-id-source: derived

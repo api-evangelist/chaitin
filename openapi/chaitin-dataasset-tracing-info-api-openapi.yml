@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account dataasset/tracing/info API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Dataasset/tracing/info API
+  description: 数据资产/溯源/信息
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: dataasset/tracing/info
   description: 数据资产/溯源/信息
@@ -123,3 +125,5 @@ paths:
                   file_trace_id: a341dfca-1bfcfcbe-000000000000000f-00000194455ccdad
                   pre_file_trace_id: dc4594c4-8eb41d32-000000000000000c-000001944552c675
       security: []
+      operationId: postDataassetTracingInfo
+      x-operation-id-source: derived

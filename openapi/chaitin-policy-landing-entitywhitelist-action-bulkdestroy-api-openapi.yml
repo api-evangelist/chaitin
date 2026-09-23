@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/landing/entitywhitelist/action/bulkdestroy API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/landing/entitywhitelist/action/bulkdestroy…
+  description: 策略管理/落地/实体白名单/操作/批量删除
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/landing/entitywhitelist/action/bulkdestroy
   description: 策略管理/落地/实体白名单/操作/批量删除
@@ -101,3 +103,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicyLandingEntitywhitelistActionBulkdestroy
+      x-operation-id-source: derived

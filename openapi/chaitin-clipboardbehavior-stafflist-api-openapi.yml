@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account clipboardbehavior/stafflist API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Clipboardbehavior/stafflist API
+  description: 剪贴板行为/人员列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: clipboardbehavior/stafflist
   description: 剪贴板行为/人员列表
@@ -959,3 +961,5 @@ paths:
                       total: 1
                     device_cnt: 1
       security: []
+      operationId: postClipboardbehaviorStafflist
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/guestportalserverconfig/retrieve API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/guestportalserverconfig/retrieve API
+  description: 系统配置/访客门户服务配置/获取
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/guestportalserverconfig/retrieve
   description: 系统配置/访客门户服务配置/获取
@@ -186,3 +188,5 @@ paths:
                   portal_protocol_version: v1
                   user_original_visit_url_field: url
       security: []
+      operationId: postSystemGuestportalserverconfigRetrieve
+      x-operation-id-source: derived

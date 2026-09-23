@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/channeldef/uploadtask/{task_id}/detail API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/channeldef/uploadtask/{task Id}/detail API
+  description: 系统配置/通道定义/上传任务/task_id 参数/详情
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/channeldef/uploadtask/{task_id}/detail
   description: 系统配置/通道定义/上传任务/task_id 参数/详情
@@ -258,3 +260,5 @@ paths:
                   display_name: good
                   kylin_config_enabled: false
       security: []
+      operationId: postSystemChanneldefUploadtaskByTaskIdDetail
+      x-operation-id-source: derived

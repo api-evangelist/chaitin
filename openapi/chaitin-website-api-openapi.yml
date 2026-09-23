@@ -1,24 +1,24 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account website API
+  title: APISec Management Website API
   version: '26.05'
   description: Generated from APISec skyview APIView classes.
 tags:
-- name: website
+- name: Website
 paths:
   /api/CertAPI:
     get:
       operationId: CertAPI_get
       summary: GET /api/CertAPI
       tags:
-      - website
+      - Website
       parameters: []
       x-cli-body-fallback: true
     put:
       operationId: CertAPI_put
       summary: PUT /api/CertAPI
       tags:
-      - website
+      - Website
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -41,7 +41,7 @@ paths:
       operationId: CertAPI_delete
       summary: DELETE /api/CertAPI
       tags:
-      - website
+      - Website
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -64,7 +64,7 @@ paths:
       operationId: EditSSLCertAPI_post
       summary: POST /api/EditSSLCertAPI
       tags:
-      - website
+      - Website
       parameters: []
       x-cli-body-fallback: true
       requestBody:
@@ -78,7 +78,7 @@ paths:
       operationId: UploadSSLCertAPI_post
       summary: POST /api/UploadSSLCertAPI
       tags:
-      - website
+      - Website
       parameters: []
       x-cli-body-fallback: true
       requestBody:
@@ -92,7 +92,7 @@ paths:
       operationId: WebsiteAPI_post
       summary: POST /api/WebsiteAPI
       tags:
-      - website
+      - Website
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -138,7 +138,7 @@ paths:
       operationId: WebsiteAPI_put
       summary: PUT /api/WebsiteAPI
       tags:
-      - website
+      - Website
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -187,7 +187,7 @@ paths:
       operationId: WebsiteAPI_delete
       summary: DELETE /api/WebsiteAPI
       tags:
-      - website
+      - Website
       parameters: []
       x-cli-body-fallback: false
       requestBody:

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/browserplugin/statsbystatus API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/browserplugin/statsbystatus API
+  description: 日志中心/浏览器插件/按状态统计
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/browserplugin/statsbystatus
   description: 日志中心/浏览器插件/按状态统计
@@ -116,3 +118,5 @@ paths:
                   display_name: 误报
                   count: 0
       security: []
+      operationId: postPolicylogBrowserpluginStatsbystatus
+      x-operation-id-source: derived

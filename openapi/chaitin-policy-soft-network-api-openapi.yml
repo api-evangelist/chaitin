@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/soft_network API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/soft Network API
+  description: 策略管理/软件联网
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/soft_network
   description: 策略管理/软件联网
@@ -185,3 +187,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicySoftNetwork
+      x-operation-id-source: derived

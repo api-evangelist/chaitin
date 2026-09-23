@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/software/processwhitelist API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/software/processwhitelist API
+  description: 策略管理/软件分发与卸载/进程白名单
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/software/processwhitelist
   description: 策略管理/软件分发与卸载/进程白名单
@@ -129,3 +131,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicySoftwareProcesswhitelist
+      x-operation-id-source: derived

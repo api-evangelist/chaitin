@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/tedencryptconfig/bulkdestroy API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/tedencryptconfig/bulkdestroy API
+  description: 系统配置/TED 加密配置/批量删除
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/tedencryptconfig/bulkdestroy
   description: 系统配置/TED 加密配置/批量删除
@@ -116,3 +118,5 @@ paths:
                 msg: string
                 data: null
       security: []
+      operationId: postSystemTedencryptconfigBulkdestroy
+      x-operation-id-source: derived

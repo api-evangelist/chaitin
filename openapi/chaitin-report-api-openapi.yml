@@ -1,17 +1,17 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account report API
+  title: APISec Management Report API
   version: '26.05'
   description: Generated from APISec skyview APIView classes.
 tags:
-- name: report
+- name: Report
 paths:
   /api/ReportTaskPreview:
     get:
       operationId: ReportTaskPreview_get
       summary: GET /api/ReportTaskPreview
       tags:
-      - report
+      - Report
       parameters:
       - name: app_ids
         in: query
@@ -58,14 +58,14 @@ paths:
       operationId: ReportTemplateAPI_get
       summary: GET /api/ReportTemplateAPI
       tags:
-      - report
+      - Report
       parameters: []
       x-cli-body-fallback: true
     put:
       operationId: ReportTemplateAPI_put
       summary: PUT /api/ReportTemplateAPI
       tags:
-      - report
+      - Report
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -86,7 +86,7 @@ paths:
       operationId: ReportTemplateAPI_delete
       summary: DELETE /api/ReportTemplateAPI
       tags:
-      - report
+      - Report
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -106,7 +106,7 @@ paths:
       operationId: UploadReportTemplateAPI_post
       summary: POST /api/UploadReportTemplateAPI
       tags:
-      - report
+      - Report
       parameters: []
       x-cli-body-fallback: true
       requestBody:

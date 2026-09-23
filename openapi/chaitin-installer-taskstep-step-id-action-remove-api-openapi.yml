@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account installer/taskstep/{step_id}/action/remove API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Installer/taskstep/{step Id}/action/remove API
+  description: 终端安装包/任务步骤/step_id 参数/操作/移除
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: installer/taskstep/{step_id}/action/remove
   description: 终端安装包/任务步骤/step_id 参数/操作/移除
@@ -121,3 +123,5 @@ paths:
                 data:
                   event_id: eeff7c64-5070-4582-8b93-fbcc57db7771
       security: []
+      operationId: postInstallerTaskstepByStepIdActionRemove
+      x-operation-id-source: derived

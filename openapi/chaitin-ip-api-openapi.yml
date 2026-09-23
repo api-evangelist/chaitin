@@ -1,10 +1,12 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account 资产/IP地址 API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  description: Merged from Apifox shared markdown documents
+  title: Cloud Atlas Open 资产/IP地址 API
+  version: 1.0.0
+security:
+- apikey-header-TOKEN: []
 tags:
-- name: 资产/IP地址
+- name: Ip
 paths:
   /v1/asset/ip:
     get:
@@ -260,9 +262,10 @@ paths:
                               title: 状态
                               type: string
                             subnet:
-                              nullable: true
                               title: 网段
-                              type: string
+                              type:
+                              - string
+                              - 'null'
                             tags:
                               items:
                                 properties:
@@ -366,10 +369,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: IP地址列表
       tags:
-      - 资产/IP地址
+      - Ip
       x-apifox-folder: 资产/IP地址
       x-apifox-status: released
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-181531222-run
+      operationId: getV1AssetIp
+      x-operation-id-source: derived
   /v1/asset/ip/batch-create:
     post:
       deprecated: false
@@ -464,10 +469,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: IP地址批量添加
       tags:
-      - 资产/IP地址
+      - Ip
       x-apifox-folder: 资产/IP地址
       x-apifox-status: released
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-181531489-run
+      operationId: postV1AssetIpBatchCreate
+      x-operation-id-source: derived
   /v1/asset/ip/batch-delete:
     delete:
       deprecated: false
@@ -544,10 +551,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: IP地址批量删除
       tags:
-      - 资产/IP地址
+      - Ip
       x-apifox-folder: 资产/IP地址
       x-apifox-status: released
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-181531310-run
+      operationId: deleteV1AssetIpBatchDelete
+      x-operation-id-source: derived
   /v1/asset/ip/bu:
     post:
       deprecated: true
@@ -635,10 +644,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: IP地址批量关联分组
       tags:
-      - 资产/IP地址
+      - Ip
       x-apifox-folder: 资产/IP地址
       x-apifox-status: deprecated
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-248741022-run
+      operationId: postV1AssetIpBu
+      x-operation-id-source: derived
   /v1/asset/ip/status:
     post:
       deprecated: false
@@ -729,10 +740,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: IP地址批量修改状态
       tags:
-      - 资产/IP地址
+      - Ip
       x-apifox-folder: 资产/IP地址
       x-apifox-status: released
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-181531260-run
+      operationId: postV1AssetIpStatus
+      x-operation-id-source: derived
   /v1/asset/ip/tag:
     delete:
       deprecated: true
@@ -805,10 +818,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: IP地址批量解绑标签
       tags:
-      - 资产/IP地址
+      - Ip
       x-apifox-folder: 资产/IP地址
       x-apifox-status: deprecated
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-248753206-run
+      operationId: deleteV1AssetIpTag
+      x-operation-id-source: derived
     post:
       deprecated: true
       description: ''
@@ -884,10 +899,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: IP地址批量绑定标签
       tags:
-      - 资产/IP地址
+      - Ip
       x-apifox-folder: 资产/IP地址
       x-apifox-status: deprecated
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-248748509-run
+      operationId: postV1AssetIpTag
+      x-operation-id-source: derived
   /v1/asset/ip/{pk}/tag:
     post:
       deprecated: false
@@ -957,10 +974,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: IP地址更新标签
       tags:
-      - 资产/IP地址
+      - Ip
       x-apifox-folder: 资产/IP地址
       x-apifox-status: released
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-248756455-run
+      operationId: postV1AssetIpByPkTag
+      x-operation-id-source: derived
   /v2/asset/ip/bu:
     post:
       deprecated: false
@@ -996,9 +1015,10 @@ paths:
                   description: 反向查询域名解析记录
                   enum:
                   - submit
-                  nullable: true
                   title: 关联域名同步分组
-                  type: string
+                  type:
+                  - string
+                  - 'null'
                   x-apifox-enum:
                   - description: ''
                     name: 反向查询
@@ -1061,10 +1081,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: IP地址批量关联分组-v2
       tags:
-      - 资产/IP地址
+      - Ip
       x-apifox-folder: 资产/IP地址
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-351241227-run
+      operationId: postV2AssetIpBu
+      x-operation-id-source: derived
   /v2/asset/ip/tag:
     delete:
       deprecated: false
@@ -1098,9 +1120,10 @@ paths:
                   description: 反向查询域名解析记录
                   enum:
                   - submit
-                  nullable: true
                   title: 关联域名同步移除标签
-                  type: string
+                  type:
+                  - string
+                  - 'null'
                   x-apifox-enum:
                   - description: ''
                     name: 反向查询
@@ -1153,10 +1176,12 @@ paths:
       - apikey-header-TOKEN: []
       summary: IP地址批量解绑标签-v2
       tags:
-      - 资产/IP地址
+      - Ip
       x-apifox-folder: 资产/IP地址
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-351257751-run
+      operationId: deleteV2AssetIpTag
+      x-operation-id-source: derived
     post:
       deprecated: false
       description: ''
@@ -1189,9 +1214,10 @@ paths:
                   description: 反向查询域名解析记录
                   enum:
                   - submit
-                  nullable: true
                   title: 关联域名同步增加标签
-                  type: string
+                  type:
+                  - string
+                  - 'null'
                   x-apifox-enum:
                   - description: ''
                     name: 反向查询
@@ -1244,7 +1270,15 @@ paths:
       - apikey-header-TOKEN: []
       summary: IP地址批量绑定标签-v2
       tags:
-      - 资产/IP地址
+      - Ip
       x-apifox-folder: 资产/IP地址
       x-apifox-status: developing
       x-run-in-apifox: https://app.apifox.com/web/project/4506488/apis/api-351251215-run
+      operationId: postV2AssetIpTag
+      x-operation-id-source: derived
+components:
+  securitySchemes:
+    apikey-header-TOKEN:
+      in: header
+      name: TOKEN
+      type: apiKey

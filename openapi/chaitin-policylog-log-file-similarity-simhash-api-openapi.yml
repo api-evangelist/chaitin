@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/log_file_similarity/simhash API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/log File Similarity/simhash API
+  description: 日志中心/日志文件相似度/SimHash
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/log_file_similarity/simhash
   description: 日志中心/日志文件相似度/SimHash
@@ -113,3 +115,5 @@ paths:
                 msg: 正常
                 data: '4660575572712376965'
       security: []
+      operationId: postPolicylogLogFileSimilaritySimhash
+      x-operation-id-source: derived

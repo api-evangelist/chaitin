@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account machinelearning API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Machinelearning API
+  description: 机器学习
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: machinelearning
   description: 机器学习
@@ -94,3 +96,5 @@ paths:
                 description: zxc
                 category: 2
       security: []
+      operationId: postMachinelearning
+      x-operation-id-source: derived

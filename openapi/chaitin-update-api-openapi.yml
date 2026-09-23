@@ -1,17 +1,17 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account update API
+  title: APISec Management Update API
   version: '26.05'
   description: Generated from APISec skyview APIView classes.
 tags:
-- name: update
+- name: Update
 paths:
   /api/DownloadSystemUpgradePackage:
     get:
       operationId: DownloadSystemUpgradePackage_get
       summary: GET /api/DownloadSystemUpgradePackage
       tags:
-      - update
+      - Update
       parameters: []
       x-cli-body-fallback: true
   /api/FirmwareUpdateTimeAPI:
@@ -19,7 +19,7 @@ paths:
       operationId: FirmwareUpdateTimeAPI_get
       summary: GET /api/FirmwareUpdateTimeAPI
       tags:
-      - update
+      - Update
       parameters: []
       x-cli-body-fallback: true
   /api/SystemUpdateLog:
@@ -27,7 +27,7 @@ paths:
       operationId: SystemUpdateLog_get
       summary: GET /api/SystemUpdateLog
       tags:
-      - update
+      - Update
       parameters: []
       x-cli-body-fallback: true
   /api/SystemUpdateResultLog:
@@ -35,7 +35,7 @@ paths:
       operationId: SystemUpdateResultLog_get
       summary: GET /api/SystemUpdateResultLog
       tags:
-      - update
+      - Update
       parameters:
       - name: record_id
         in: query
@@ -49,7 +49,7 @@ paths:
       operationId: SystemUpgrade_post
       summary: POST /api/SystemUpgrade
       tags:
-      - update
+      - Update
       parameters: []
       x-cli-body-fallback: true
       requestBody:
@@ -63,7 +63,7 @@ paths:
       operationId: SystemUpgradePackageAPI_get
       summary: GET /api/SystemUpgradePackageAPI
       tags:
-      - update
+      - Update
       parameters:
       - name: count
         in: query
@@ -83,7 +83,7 @@ paths:
       operationId: TransferUpgradePackage_post
       summary: POST /api/TransferUpgradePackage
       tags:
-      - update
+      - Update
       parameters: []
       x-cli-body-fallback: true
       requestBody:
@@ -97,7 +97,7 @@ paths:
       operationId: UploadSystemUpgradePackage_post
       summary: POST /api/UploadSystemUpgradePackage
       tags:
-      - update
+      - Update
       parameters: []
       x-cli-body-fallback: true
       requestBody:

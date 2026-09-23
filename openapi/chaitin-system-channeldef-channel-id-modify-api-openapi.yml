@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/channeldef/{channel_id}/modify API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/channeldef/{channel Id}/modify API
+  description: 系统配置/通道定义/channel_id 参数/修改
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/channeldef/{channel_id}/modify
   description: 系统配置/通道定义/channel_id 参数/修改
@@ -170,3 +172,5 @@ paths:
                 kylin_config_enabled: true
                 uos_config_enabled: false
       security: []
+      operationId: postSystemChanneldefByChannelIdModify
+      x-operation-id-source: derived

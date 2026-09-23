@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account browserplugin/source/browsertypecount API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Browserplugin/source/browsertypecount API
+  description: 浏览器插件/来源/browsertypecount 接口
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: browserplugin/source/browsertypecount
   description: 浏览器插件/来源/browsertypecount 接口
@@ -108,3 +110,5 @@ paths:
                 - display_name: Edge
                   cnt: 1
       security: []
+      operationId: postBrowserpluginSourceBrowsertypecount
+      x-operation-id-source: derived

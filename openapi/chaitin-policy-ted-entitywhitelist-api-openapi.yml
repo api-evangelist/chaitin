@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/ted/entitywhitelist API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/ted/entitywhitelist API
+  description: 策略管理/TED/实体白名单
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/ted/entitywhitelist
   description: 策略管理/TED/实体白名单
@@ -121,3 +123,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicyTedEntitywhitelist
+      x-operation-id-source: derived

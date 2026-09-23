@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account installer/{meta_id}/downloadurl API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Installer/{meta Id}/downloadurl API
+  description: 终端安装包/meta_id 参数/下载地址
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: installer/{meta_id}/downloadurl
   description: 终端安装包/meta_id 参数/下载地址
@@ -150,3 +152,5 @@ paths:
                   filename: LinuxGuider.sh
                   url: https://192.168.89.26:8443/public-source/eeff7c64-5070-4582-8b93-fbcc57db7771/installer/LinuxGuider/6DC70FB520C06642FB2AACFE0A6817F4_linux_online_installer.sh?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20231116%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231116T131002Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27LinuxGuider.sh&X-Amz-Signature=a4a4a09657cb6bbc2864a91cd06c9f6256eeb229af362216277bb9a5f2967d34
       security: []
+      operationId: postInstallerByMetaIdDownloadurl
+      x-operation-id-source: derived

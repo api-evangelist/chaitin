@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account classification/download API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Classification/download API
+  description: 数据分类分级/下载
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: classification/download
   description: 数据分类分级/下载
@@ -100,3 +102,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postClassificationDownload
+      x-operation-id-source: derived

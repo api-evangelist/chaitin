@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account installer/download/config/remove API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Installer/download/config/remove API
+  description: 终端安装包/下载/config 接口/移除
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: installer/download/config/remove
   description: 终端安装包/下载/config 接口/移除
@@ -114,3 +116,5 @@ paths:
                 msg: success
                 data: null
       security: []
+      operationId: postInstallerDownloadConfigRemove
+      x-operation-id-source: derived

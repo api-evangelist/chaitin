@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/clientconfig/import API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/clientconfig/import API
+  description: 系统配置/客户端配置/导入
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/clientconfig/import
   description: 系统配置/客户端配置/导入
@@ -104,3 +106,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postSystemClientconfigImport
+      x-operation-id-source: derived

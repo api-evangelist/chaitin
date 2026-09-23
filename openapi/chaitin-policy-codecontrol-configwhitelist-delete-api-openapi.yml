@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/codecontrol/configwhitelist/delete API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/codecontrol/configwhitelist/delete API
+  description: 策略管理/代码管控/配置白名单/删除
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/codecontrol/configwhitelist/delete
   description: 策略管理/代码管控/配置白名单/删除
@@ -101,3 +103,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicyCodecontrolConfigwhitelistDelete
+      x-operation-id-source: derived

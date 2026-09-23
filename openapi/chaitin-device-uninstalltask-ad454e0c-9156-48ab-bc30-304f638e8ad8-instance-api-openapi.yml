@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account device/uninstalltask/ad454e0c-9156-48ab-bc30-304f638e8ad8/instance API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device/uninstalltask/ad454e0c 9156 48ab Bc30…
+  description: ''
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: device/uninstalltask/ad454e0c-9156-48ab-bc30-304f638e8ad8/instance
 paths:
@@ -364,3 +366,5 @@ paths:
                       - uid: 31264859-5f8a-4d61-a2ac-ed0cc0451df5
                         name: 哈哈哈，逗号，
       security: []
+      operationId: postDeviceUninstalltaskAd454e0c915648abBc30304f638e8ad8Instance
+      x-operation-id-source: derived

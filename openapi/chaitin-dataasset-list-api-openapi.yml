@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account dataasset/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Dataasset/list API
+  description: 数据资产/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: dataasset/list
   description: 数据资产/列表
@@ -73703,3 +73705,5 @@ paths:
                     last_seen: '2025-01-10T00:13:02+08:00'
                     first_seen: '2024-11-11T16:39:25+08:00'
       security: []
+      operationId: postDataassetList
+      x-operation-id-source: derived

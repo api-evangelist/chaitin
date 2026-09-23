@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/channeldefgroup/email/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/channeldefgroup/email/list API
+  description: 系统配置/通道定义组/邮件/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/channeldefgroup/email/list
   description: 系统配置/通道定义组/邮件/列表
@@ -310,3 +312,5 @@ paths:
                         display_name: 浏览器
                       app_category: web
       security: []
+      operationId: postSystemChanneldefgroupEmailList
+      x-operation-id-source: derived

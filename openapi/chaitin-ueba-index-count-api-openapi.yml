@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account ueba/index/count API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Ueba/index/count API
+  description: UEBA 分析/索引/计数
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: ueba/index/count
   description: UEBA 分析/索引/计数
@@ -156,3 +158,5 @@ paths:
                     device:
                       value: 19
       security: []
+      operationId: postUebaIndexCount
+      x-operation-id-source: derived

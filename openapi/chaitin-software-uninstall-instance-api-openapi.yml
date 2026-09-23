@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account software/uninstall/instance API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Software/uninstall/instance API
+  description: 软件分发与卸载/uninstall 接口/实例
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: software/uninstall/instance
   description: 软件分发与卸载/uninstall 接口/实例
@@ -308,3 +310,5 @@ paths:
                   status: created
                   name: 测试2
       security: []
+      operationId: postSoftwareUninstallInstance
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account software/distribution/{software_id}/instance API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Software/distribution/{software Id}/instance API
+  description: 软件分发与卸载/分布/software_id 参数/实例
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: software/distribution/{software_id}/instance
   description: 软件分发与卸载/分布/software_id 参数/实例
@@ -152,3 +154,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postSoftwareDistributionBySoftwareIdInstance
+      x-operation-id-source: derived

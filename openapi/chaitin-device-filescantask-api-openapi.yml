@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account device/filescantask API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device/filescantask API
+  description: 终端管理/文件扫描任务
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: device/filescantask
   description: 终端管理/文件扫描任务
@@ -749,3 +751,5 @@ paths:
                   file_size_upper_measure: MB
                   status: activated
       security: []
+      operationId: postDeviceFilescantask
+      x-operation-id-source: derived

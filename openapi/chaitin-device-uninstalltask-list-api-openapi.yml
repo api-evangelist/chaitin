@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account device/uninstalltask/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device/uninstalltask/list API
+  description: ''
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: device/uninstalltask/list
 paths:
@@ -172,7 +174,9 @@ paths:
                               type: array
                               items: {}
                             create_by:
-                              type: object
+                              type:
+                              - object
+                              - 'null'
                               properties:
                                 uid:
                                   type: string
@@ -187,7 +191,6 @@ paths:
                               - name
                               - username
                               - email
-                              nullable: true
                             id:
                               type: integer
                             departments:
@@ -250,8 +253,9 @@ paths:
                             name:
                               type: string
                             update_by_id:
-                              type: string
-                              nullable: true
+                              type:
+                              - string
+                              - 'null'
                             total_uninstall_count:
                               type: integer
                           required:
@@ -520,3 +524,5 @@ paths:
                     update_by_id: null
                     total_uninstall_count: 0
       security: []
+      operationId: postDeviceUninstalltaskList
+      x-operation-id-source: derived

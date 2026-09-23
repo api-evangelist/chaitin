@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/network/download API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/network/download API
+  description: 日志中心/网络/下载
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/network/download
   description: 日志中心/网络/下载
@@ -146,3 +148,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicylogNetworkDownload
+      x-operation-id-source: derived

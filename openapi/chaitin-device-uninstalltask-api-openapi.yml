@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account device/uninstalltask API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device/uninstalltask API
+  description: ''
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: device/uninstalltask
 paths:
@@ -246,3 +248,5 @@ paths:
                   dept_ids: []
                   device_tag_ids: []
       security: []
+      operationId: postDeviceUninstalltask
+      x-operation-id-source: derived

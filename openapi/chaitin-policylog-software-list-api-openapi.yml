@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/software/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/software/list API
+  description: 日志中心/软件分发与卸载/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/software/list
   description: 日志中心/软件分发与卸载/列表
@@ -140,3 +142,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicylogSoftwareList
+      x-operation-id-source: derived

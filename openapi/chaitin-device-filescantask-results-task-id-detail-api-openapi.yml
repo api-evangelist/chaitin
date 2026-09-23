@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account device/filescantask/results/{task_id}/detail API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device/filescantask/results/{task Id}/detail API
+  description: ''
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: device/filescantask/results/{task_id}/detail
 paths:
@@ -453,3 +455,5 @@ paths:
                     display_name: app_feishu
                   version: 58
       security: []
+      operationId: postDeviceFilescantaskResultsByTaskIdDetail
+      x-operation-id-source: derived

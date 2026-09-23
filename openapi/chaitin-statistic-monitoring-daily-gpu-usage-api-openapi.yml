@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account statistic/monitoring/daily/gpu_usage API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Statistic/monitoring/daily/gpu Usage API
+  description: 统计分析/监控/每日/GPU 使用率
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: statistic/monitoring/daily/gpu_usage
   description: 统计分析/监控/每日/GPU 使用率
@@ -81,3 +83,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postStatisticMonitoringDailyGpuUsage
+      x-operation-id-source: derived

@@ -1,185 +1,256 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account cert API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  description: mgt API swagger document.
+  title: mgt Cert API
+  contact: {}
+  version: '2.0'
+servers:
+- url: /api
 tags:
-- name: cert
+- name: Cert
 paths:
   /open/system:
     get:
-      produces:
-      - application/json
       tags:
-      - cert
+      - Cert
       summary: get system info
       responses:
         '200':
           description: OK
-          schema:
-            allOf:
-            - $ref: '#/definitions/response.JSONBody'
-            - type: object
-              properties:
-                data:
-                  $ref: '#/definitions/system.AboutRes'
+          content:
+            application/json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/response.JSONBody'
+                - type: object
+                  properties:
+                    data:
+                      $ref: '#/components/schemas/system.AboutRes'
       x-cli-summary: 获取系统信息
+      operationId: getOpenSystem
+      x-operation-id-source: derived
     put:
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
-      - cert
+      - Cert
       summary: update management cert
-      parameters:
-      - description: request params
-        name: requests
-        in: body
-        required: true
-        schema:
-          $ref: '#/definitions/system.UpdateReq'
       responses:
         '200':
           description: OK
-          schema:
-            $ref: '#/definitions/response.JSONBody'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response.JSONBody'
       x-cli-summary: 更新管理证书
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/system.UpdateReq'
+        description: request params
+        required: true
+      operationId: putOpenSystem
+      x-operation-id-source: derived
   /open/system/authorize:
     get:
-      produces:
-      - application/json
       tags:
-      - cert
+      - Cert
       summary: get license
       responses:
         '200':
           description: OK
-          schema:
-            allOf:
-            - $ref: '#/definitions/response.JSONBody'
-            - type: object
-              properties:
-                data:
-                  $ref: '#/definitions/system.CodeApplyInfoRes'
+          content:
+            application/json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/response.JSONBody'
+                - type: object
+                  properties:
+                    data:
+                      $ref: '#/components/schemas/system.CodeApplyInfoRes'
       x-cli-summary: 获取授权详情
+      operationId: getOpenSystemAuthorize
+      x-operation-id-source: derived
     delete:
-      produces:
-      - application/json
       tags:
-      - cert
+      - Cert
       summary: delete license
       responses:
         '200':
           description: OK
-          schema:
-            $ref: '#/definitions/response.JSONBody'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response.JSONBody'
       x-cli-summary: 删除授权
-definitions:
-  response.JSONBody:
-    type: object
-    properties:
-      data: {}
-      err:
-        type: string
-      msg:
-        type: string
-  system.CodeApplyInfoRes:
-    type: object
-    properties:
-      expired_at:
-        type: integer
-      org_id:
-        type: string
-      org_name:
-        type: string
-      pwd_updated_at:
-        type: integer
-      river_url:
-        type: string
-      role:
-        $ref: '#/definitions/consts.UserRole'
-      state:
-        type: string
-      timeout:
-        type: boolean
-      user_id:
-        type: integer
-      version:
-        $ref: '#/definitions/river.Edition'
-  system.UpdateReq:
-    type: object
-    properties:
-      cert_id:
-        type: integer
-  system.AboutLicense:
-    type: object
-    properties:
-      valid:
-        type: boolean
-  river.Edition:
-    type: integer
-    format: int32
-    enum:
-    - 0
-    - 1
-    - 2
-    - 3
-    x-enum-comments:
-      Edition_EDITION_ENTERPRISE: 企业版
-      Edition_EDITION_LITE: Lite 版
-      Edition_EDITION_PROFESSIONAL: 专业版
-      Edition_EDITION_UNKOWN: 未知
-    x-enum-descriptions:
-    - 未知
-    - 专业版
-    - 企业版
-    - Lite 版
-    x-enum-varnames:
-    - Edition_EDITION_UNKOWN
-    - Edition_EDITION_PROFESSIONAL
-    - Edition_EDITION_ENTERPRISE
-    - Edition_EDITION_LITE
-  system.AboutRes:
-    type: object
-    properties:
-      cert_id:
-        type: integer
-      created_at:
-        type: integer
-      deprecated:
-        type: boolean
-      license:
-        $ref: '#/definitions/system.AboutLicense'
-      machine_id:
-        type: string
-      outdated:
-        type: boolean
-      oversea:
-        type: boolean
-      password_expire_day:
-        type: integer
-      slave:
-        type: boolean
-      staging:
-        type: boolean
-      time:
-        type: string
-      version:
-        type: string
-  consts.UserRole:
-    type: integer
-    enum:
-    - 0
-    - 1
-    - 2
-    - 3
-    - 4
-    - 5
-    x-enum-varnames:
-    - UserRoleUnknown
-    - UserRoleAdmin
-    - UserRoleManager
-    - UserRoleConfig
-    - UserRoleAudit
-    - UserRoleMax
+      operationId: deleteOpenSystemAuthorize
+      x-operation-id-source: derived
+components:
+  schemas:
+    system.AboutRes:
+      type: object
+      properties:
+        cert_id:
+          type: integer
+        created_at:
+          type: integer
+        deprecated:
+          type: boolean
+        license:
+          $ref: '#/components/schemas/system.AboutLicense'
+        machine_id:
+          type: string
+        outdated:
+          type: boolean
+        oversea:
+          type: boolean
+        password_expire_day:
+          type: integer
+        slave:
+          type: boolean
+        staging:
+          type: boolean
+        time:
+          type: string
+        version:
+          type: string
+    system.AboutLicense:
+      type: object
+      properties:
+        valid:
+          type: boolean
+    river.Edition:
+      type: integer
+      format: int32
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      x-enum-comments:
+        Edition_EDITION_ENTERPRISE: 企业版
+        Edition_EDITION_LITE: Lite 版
+        Edition_EDITION_PROFESSIONAL: 专业版
+        Edition_EDITION_UNKOWN: 未知
+      x-enum-descriptions:
+      - 未知
+      - 专业版
+      - 企业版
+      - Lite 版
+      x-enum-varnames:
+      - Edition_EDITION_UNKOWN
+      - Edition_EDITION_PROFESSIONAL
+      - Edition_EDITION_ENTERPRISE
+      - Edition_EDITION_LITE
+    consts.UserRole:
+      type: integer
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      x-enum-varnames:
+      - UserRoleUnknown
+      - UserRoleAdmin
+      - UserRoleManager
+      - UserRoleConfig
+      - UserRoleAudit
+      - UserRoleMax
+    system.CodeApplyInfoRes:
+      type: object
+      properties:
+        expired_at:
+          type: integer
+        org_id:
+          type: string
+        org_name:
+          type: string
+        pwd_updated_at:
+          type: integer
+        river_url:
+          type: string
+        role:
+          $ref: '#/components/schemas/consts.UserRole'
+        state:
+          type: string
+        timeout:
+          type: boolean
+        user_id:
+          type: integer
+        version:
+          $ref: '#/components/schemas/river.Edition'
+    system.UpdateReq:
+      type: object
+      properties:
+        cert_id:
+          type: integer
+    response.JSONBody:
+      type: object
+      properties:
+        data: {}
+        err:
+          type: string
+        msg:
+          type: string
+x-cli:
+  tags:
+    site: 防护站点管理
+    cert: 授权与证书管理
+    log: 日志查询
+    stat: 数据统计
+    skynet: 加强规则管理
+    module: 语义分析模块配置
+    rule: 自定义规则管理
+    ipgroup: IP 黑白名单管理
+  children:
+    log/attack: 攻击日志
+    log/audit: 审计日志
+    log/rule: 黑白名单检测日志
+    stat/trend: 趋势统计
+  params:
+    server_names: 域名（多个用逗号分隔）
+    ports: 端口（多个用逗号分隔）
+    upstreams: 后端地址（多个用逗号分隔）
+    cert_id: 证书 ID
+    comment: 备注说明
+    email: 管理员邮箱
+    group_id: 分组 ID
+    health_check: 是否启用健康检查
+    id: 资源 ID
+    ids: 资源 ID（多个用逗号分隔）
+    site: 站点域名
+    sp_enabled: 是否启用语义分析
+    stat_enabled: 是否启用统计
+    load_balance: 负载均衡策略
+    name: 规则名称
+    pattern: 匹配规则（JSON 格式）
+    action: 动作类型：0-放行 1-阻断 2-挑战 3-认证防护 4-混淆 5-等待室
+    level: 风险等级
+    enable: 是否启用
+    mode: 模式：strict/default/dry_run/disable/deny
+    semantics: 语义分析配置
+    use_global: 是否使用全局配置
+    ips: IP 地址（多个用逗号分隔）
+    ip_group_ids: IP Group ID（多个用逗号分隔）
+    page: 页码
+    page_size: 每页数量
+    size: 每页数量
+    start: 开始时间戳（秒）
+    end: 结束时间戳（秒）
+    begin_time: 开始时间戳（秒）
+    end_time: 结束时间戳（秒）
+    site_id: 站点 ID
+    host: 域名
+    ip: IP 地址
+    url: URL 路径
+    port: 端口
+    attack_type: 攻击类型
+    event_id: 事件 ID
+    ja4_fingerprint: JA4 指纹
+    top: 返回前 N 条
+    reference: 引用来源
+    expire: 过期时间
+    log: 是否记录日志
+    is_enabled: 是否启用
+    global: 是否全局

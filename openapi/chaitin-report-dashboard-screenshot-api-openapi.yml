@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account report/dashboard/<>/screenshot API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Report/dashboard/<>/screenshot API
+  description: 报表中心/仪表盘/ 参数/screenshot 接口
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: report/dashboard/<>/screenshot
   description: 报表中心/仪表盘/ 参数/screenshot 接口
@@ -100,3 +102,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postReportDashboard<>Screenshot
+      x-operation-id-source: derived

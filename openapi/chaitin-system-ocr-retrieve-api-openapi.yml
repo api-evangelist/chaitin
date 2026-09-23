@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/ocr/retrieve API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/ocr/retrieve API
+  description: 系统配置/OCR/获取
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/ocr/retrieve
   description: 系统配置/OCR/获取
@@ -244,3 +246,5 @@ paths:
                         model_url: ''
                         model_md5: ''
       security: []
+      operationId: postSystemOcrRetrieve
+      x-operation-id-source: derived

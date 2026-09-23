@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account device/filescantask/remote/test_connection/{task_id}/result API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device/filescantask/remote/test Connection/{task…
+  description: ''
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: device/filescantask/remote/test_connection/{task_id}/result
 paths:
@@ -87,3 +89,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postDeviceFilescantaskRemoteTestConnectionByTaskIdResult
+      x-operation-id-source: derived

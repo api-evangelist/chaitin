@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account account/staff_tag API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Account/staff Tag API
+  description: 员工管理/人员标签
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: account/staff_tag
   description: 员工管理/人员标签
@@ -100,3 +102,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postAccountStaffTag
+      x-operation-id-source: derived

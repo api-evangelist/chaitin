@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/filescanremotestorage/{uid} API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/filescanremotestorage/{uid} API
+  description: 系统配置/文件扫描远程存储/uid 参数
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/filescanremotestorage/{uid}
   description: 系统配置/文件扫描远程存储/uid 参数
@@ -101,3 +103,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postSystemFilescanremotestorageByUid
+      x-operation-id-source: derived

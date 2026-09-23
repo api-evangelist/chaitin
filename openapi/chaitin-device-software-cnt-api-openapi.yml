@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account device/software/cnt API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device/software/cnt API
+  description: ''
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: device/software/cnt
 paths:
@@ -126,3 +128,5 @@ paths:
                   pirated_software_count: 0
                   last_time: '2023-12-15T01:56:48.000Z'
       security: []
+      operationId: postDeviceSoftwareCnt
+      x-operation-id-source: derived

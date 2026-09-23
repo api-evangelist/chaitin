@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account account/staff_tags/{staff_id}/bind API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Account/staff Tags/{staff Id}/bind API
+  description: 员工管理/人员标签集合/staff_id 参数/绑定
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: account/staff_tags/{staff_id}/bind
   description: 员工管理/人员标签集合/staff_id 参数/绑定
@@ -150,3 +152,5 @@ paths:
                   - uid: fecad6b1-c9cd-4d6a-95ed-9eab0174cc32
                     name: xxxxxxx
       security: []
+      operationId: postAccountStaffTagsByStaffIdBind
+      x-operation-id-source: derived

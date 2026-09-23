@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/tedconfig/sendout/retrieve API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/tedconfig/sendout/retrieve API
+  description: 系统配置/TED 配置/外发/获取
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/tedconfig/sendout/retrieve
   description: 系统配置/TED 配置/外发/获取
@@ -144,3 +146,5 @@ paths:
                             code: PC-000004
                       scope: common
       security: []
+      operationId: postSystemTedconfigSendoutRetrieve
+      x-operation-id-source: derived

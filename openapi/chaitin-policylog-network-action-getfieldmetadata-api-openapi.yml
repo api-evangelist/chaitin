@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/network/action/getfieldmetadata API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/network/action/getfieldmetadata API
+  description: 日志中心/网络/操作/字段元数据
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/network/action/getfieldmetadata
   description: 日志中心/网络/操作/字段元数据
@@ -81,3 +83,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicylogNetworkActionGetfieldmetadata
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/browserplugin/action/getfieldmetadata API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/browserplugin/action/getfieldmetadata API
+  description: 日志中心/浏览器插件/操作/字段元数据
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/browserplugin/action/getfieldmetadata
   description: 日志中心/浏览器插件/操作/字段元数据
@@ -115,7 +117,9 @@ paths:
                         is_commonly_used:
                           type: boolean
                         options:
-                          type: array
+                          type:
+                          - array
+                          - 'null'
                           items:
                             type: object
                             properties:
@@ -194,10 +198,10 @@ paths:
                             - i18n_template
                             - i18n_display_name
                             - duration
-                          nullable: true
                         async_options:
-                          type: boolean
-                          nullable: true
+                          type:
+                          - boolean
+                          - 'null'
                         order:
                           type: integer
                         group:
@@ -211,7 +215,9 @@ paths:
                         is_filter_used:
                           type: boolean
                         sort_options:
-                          type: array
+                          type:
+                          - array
+                          - 'null'
                           items:
                             type: object
                             properties:
@@ -222,7 +228,6 @@ paths:
                             required:
                             - name
                             - display_name
-                          nullable: true
                         chart_options:
                           type: object
                           properties:
@@ -1336,3 +1341,5 @@ paths:
                       - op: value_count
                         name: 计数
       security: []
+      operationId: postPolicylogBrowserpluginActionGetfieldmetadata
+      x-operation-id-source: derived

@@ -1,17 +1,17 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account dashboard API
+  title: APISec Management Dashboard API
   version: '26.05'
   description: Generated from APISec skyview APIView classes.
 tags:
-- name: dashboard
+- name: Dashboard
 paths:
   /api/AssetDashboardDetectEventsAPI:
     get:
       operationId: AssetDashboardDetectEventsAPI_get
       summary: GET /api/AssetDashboardDetectEventsAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api_id
         in: query
@@ -43,7 +43,7 @@ paths:
       operationId: AssetDashboardInterfaceTagAPI_get
       summary: GET /api/AssetDashboardInterfaceTagAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api_id
         in: query
@@ -75,7 +75,7 @@ paths:
       operationId: AssetDashboardLowFrequencyAPI_get
       summary: GET /api/AssetDashboardLowFrequencyAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api_id
         in: query
@@ -107,7 +107,7 @@ paths:
       operationId: AssetDashboardReqFailedAPI_get
       summary: GET /api/AssetDashboardReqFailedAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api_id
         in: query
@@ -139,7 +139,7 @@ paths:
       operationId: AssetDashboardRequestTrendAPI_get
       summary: GET /api/AssetDashboardRequestTrendAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api_id
         in: query
@@ -171,7 +171,7 @@ paths:
       operationId: AssetDashboardRiskVulnerableAPI_get
       summary: GET /api/AssetDashboardRiskVulnerableAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api_id
         in: query
@@ -203,7 +203,7 @@ paths:
       operationId: AssetDashboardSameUrlAPI_get
       summary: GET /api/AssetDashboardSameUrlAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api_id
         in: query
@@ -235,7 +235,7 @@ paths:
       operationId: AssetDashboardSensitiveDataAPI_get
       summary: GET /api/AssetDashboardSensitiveDataAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api_id
         in: query
@@ -267,7 +267,7 @@ paths:
       operationId: AssetDashboardSiteInterfaceAPI_get
       summary: GET /api/AssetDashboardSiteInterfaceAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api_id
         in: query
@@ -299,7 +299,7 @@ paths:
       operationId: AssetDashboardTrafficCodeAPI_get
       summary: GET /api/AssetDashboardTrafficCodeAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api_id
         in: query
@@ -331,7 +331,7 @@ paths:
       operationId: AssetDashboardTrafficMethodAPI_get
       summary: GET /api/AssetDashboardTrafficMethodAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api_id
         in: query
@@ -363,7 +363,7 @@ paths:
       operationId: HomeDashBoardOwaspAPI_get
       summary: GET /api/HomeDashBoardOwaspAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters: []
       x-cli-body-fallback: true
   /api/HomeDashBoardQPSAPI:
@@ -371,7 +371,7 @@ paths:
       operationId: HomeDashBoardQPSAPI_get
       summary: GET /api/HomeDashBoardQPSAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters: []
       x-cli-body-fallback: true
   /api/HomeDashBoardQPSTrendAPI:
@@ -379,7 +379,7 @@ paths:
       operationId: HomeDashBoardQPSTrendAPI_get
       summary: GET /api/HomeDashBoardQPSTrendAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters: []
       x-cli-body-fallback: true
   /api/HomeDashBoardRequestHistory:
@@ -387,7 +387,7 @@ paths:
       operationId: HomeDashBoardRequestHistory_get
       summary: GET /api/HomeDashBoardRequestHistory
       tags:
-      - dashboard
+      - Dashboard
       parameters: []
       x-cli-body-fallback: true
   /api/HomeDashBoardRequestTrendAPI:
@@ -395,7 +395,7 @@ paths:
       operationId: HomeDashBoardRequestTrendAPI_get
       summary: GET /api/HomeDashBoardRequestTrendAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters: []
       x-cli-body-fallback: true
   /api/HomeDashBoardSensitiveData:
@@ -403,7 +403,7 @@ paths:
       operationId: HomeDashBoardSensitiveData_get
       summary: GET /api/HomeDashBoardSensitiveData
       tags:
-      - dashboard
+      - Dashboard
       parameters: []
       x-cli-body-fallback: true
   /api/HomeDashBoardSiteInterfaceAPI:
@@ -411,7 +411,7 @@ paths:
       operationId: HomeDashBoardSiteInterfaceAPI_get
       summary: GET /api/HomeDashBoardSiteInterfaceAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters: []
       x-cli-body-fallback: true
   /api/HomeDashBoardTotalRequestAPI:
@@ -419,7 +419,7 @@ paths:
       operationId: HomeDashBoardTotalRequestAPI_get
       summary: GET /api/HomeDashBoardTotalRequestAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters: []
       x-cli-body-fallback: true
   /api/RiskEventDashBoardHistoryInfoAPI:
@@ -427,7 +427,7 @@ paths:
       operationId: RiskEventDashBoardHistoryInfoAPI_get
       summary: GET /api/RiskEventDashBoardHistoryInfoAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api
         in: query
@@ -489,7 +489,7 @@ paths:
       operationId: RiskEventDashBoardInterfaceInfoAPI_get
       summary: GET /api/RiskEventDashBoardInterfaceInfoAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api
         in: query
@@ -551,7 +551,7 @@ paths:
       operationId: RiskEventDashBoardRiskNumAPI_get
       summary: GET /api/RiskEventDashBoardRiskNumAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api
         in: query
@@ -613,7 +613,7 @@ paths:
       operationId: RiskEventDashBoardSiteInfoAPI_get
       summary: GET /api/RiskEventDashBoardSiteInfoAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: api
         in: query
@@ -675,7 +675,7 @@ paths:
       operationId: SensitiveDataTypeAPI_get
       summary: GET /api/SensitiveDataTypeAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: datetime
         in: query
@@ -709,7 +709,7 @@ paths:
       operationId: SensitiveInterfaceInfoAPI_get
       summary: GET /api/SensitiveInterfaceInfoAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: datetime
         in: query
@@ -743,7 +743,7 @@ paths:
       operationId: SensitiveNewInterfaceAPI_get
       summary: GET /api/SensitiveNewInterfaceAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: datetime
         in: query
@@ -777,7 +777,7 @@ paths:
       operationId: SensitiveRequestInfoAPI_get
       summary: GET /api/SensitiveRequestInfoAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters:
       - name: datetime
         in: query
@@ -811,7 +811,7 @@ paths:
       operationId: StrategyAndEventAPI_get
       summary: GET /api/StrategyAndEventAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters: []
       x-cli-body-fallback: true
   /api/StrategyOwaspInfoAPI:
@@ -819,7 +819,7 @@ paths:
       operationId: StrategyOwaspInfoAPI_get
       summary: GET /api/StrategyOwaspInfoAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters: []
       x-cli-body-fallback: true
   /api/StrategyRunningStateAPI:
@@ -827,6 +827,6 @@ paths:
       operationId: StrategyRunningStateAPI_get
       summary: GET /api/StrategyRunningStateAPI
       tags:
-      - dashboard
+      - Dashboard
       parameters: []
       x-cli-body-fallback: true

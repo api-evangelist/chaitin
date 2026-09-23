@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account device/filescantask/remote/{task_id}/operation API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device/filescantask/remote/{task Id}/operation API
+  description: ''
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: device/filescantask/remote/{task_id}/operation
 paths:
@@ -100,3 +102,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postDeviceFilescantaskRemoteByTaskIdOperation
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account softwaremanager/internalsource/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Softwaremanager/internalsource/list API
+  description: 软件管理/内部来源/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: softwaremanager/internalsource/list
   description: 软件管理/内部来源/列表
@@ -152,8 +154,9 @@ paths:
                             software_name:
                               type: string
                             icon_name:
-                              type: string
-                              nullable: true
+                              type:
+                              - string
+                              - 'null'
                             os_type:
                               type: string
                             software_type:
@@ -161,8 +164,9 @@ paths:
                             process_name:
                               type: 'null'
                             desc_rule:
-                              type: string
-                              nullable: true
+                              type:
+                              - string
+                              - 'null'
                             bundle_id:
                               type: string
                             signature:
@@ -432,3 +436,5 @@ paths:
                     os_icon: macOS
                     uid: e2a23989-6d76-487c-9d6c-68c21d5a6e7b
       security: []
+      operationId: postSoftwaremanagerInternalsourceList
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account ueba/test/{event_id} API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Ueba/test/{event Id} API
+  description: UEBA 分析/测试/event_id 参数
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: ueba/test/{event_id}
   description: UEBA 分析/测试/event_id 参数
@@ -1128,3 +1130,5 @@ paths:
                     score: 60
                     cnt: 276
       security: []
+      operationId: postUebaTestByEventId
+      x-operation-id-source: derived

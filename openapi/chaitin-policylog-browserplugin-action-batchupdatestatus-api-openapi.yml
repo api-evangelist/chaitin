@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/browserplugin/action/batchupdatestatus API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/browserplugin/action/batchupdatestatus API
+  description: 日志中心/浏览器插件/操作/批量更新状态
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/browserplugin/action/batchupdatestatus
   description: 日志中心/浏览器插件/操作/批量更新状态
@@ -200,3 +202,5 @@ paths:
                   throttled_until_millis: 0
                   failures: []
       security: []
+      operationId: postPolicylogBrowserpluginActionBatchupdatestatus
+      x-operation-id-source: derived

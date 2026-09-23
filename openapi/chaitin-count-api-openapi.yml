@@ -1,8 +1,7 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account Count API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: Chaitin Count API
+  version: ''
 tags:
 - name: Count
 paths:
@@ -165,6 +164,10 @@ paths:
           description: ''
       tags:
       - Count
+      summary: Delete count
+      x-summary-source: derived
+      operationId: deleteCount
+      x-operation-id-source: derived
     get:
       parameters:
       - description: 扫描器名称
@@ -323,6 +326,10 @@ paths:
           description: ''
       tags:
       - Count
+      summary: Get count
+      x-summary-source: derived
+      operationId: getCount
+      x-operation-id-source: derived
     head:
       requestBody:
         required: true
@@ -339,6 +346,10 @@ paths:
           description: ''
       tags:
       - Count
+      summary: Check count
+      x-summary-source: derived
+      operationId: headCount
+      x-operation-id-source: derived
     options:
       requestBody:
         required: true
@@ -355,6 +366,10 @@ paths:
           description: ''
       tags:
       - Count
+      summary: Describe count
+      x-summary-source: derived
+      operationId: optionsCount
+      x-operation-id-source: derived
     patch:
       requestBody:
         required: true
@@ -371,6 +386,10 @@ paths:
           description: ''
       tags:
       - Count
+      summary: Update count
+      x-summary-source: derived
+      operationId: patchCount
+      x-operation-id-source: derived
     post:
       requestBody:
         required: true
@@ -387,6 +406,10 @@ paths:
           description: ''
       tags:
       - Count
+      summary: Create count
+      x-summary-source: derived
+      operationId: postCount
+      x-operation-id-source: derived
     put:
       requestBody:
         required: true
@@ -403,6 +426,10 @@ paths:
           description: ''
       tags:
       - Count
+      summary: Replace count
+      x-summary-source: derived
+      operationId: putCount
+      x-operation-id-source: derived
     trace:
       requestBody:
         required: true
@@ -419,6 +446,10 @@ paths:
           description: ''
       tags:
       - Count
+      summary: Trace count
+      x-summary-source: derived
+      operationId: traceCount
+      x-operation-id-source: derived
 components:
   schemas:
     git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountReq:

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account report/dashboard/<>/update API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Report/dashboard/<>/update API
+  description: 报表中心/仪表盘/ 参数/更新
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: report/dashboard/<>/update
   description: 报表中心/仪表盘/ 参数/更新
@@ -107,3 +109,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postReportDashboard<>Update
+      x-operation-id-source: derived

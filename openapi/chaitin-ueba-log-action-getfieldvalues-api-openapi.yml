@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account ueba/log/action/getfieldvalues API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Ueba/log/action/getfieldvalues API
+  description: UEBA 分析/日志/操作/字段值
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: ueba/log/action/getfieldvalues
   description: UEBA 分析/日志/操作/字段值
@@ -112,3 +114,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postUebaLogActionGetfieldvalues
+      x-operation-id-source: derived

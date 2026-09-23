@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account Device API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Device API
+  description: ''
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: Device
 paths:
@@ -143,6 +145,8 @@ paths:
                 properties: {}
           headers: {}
       security: []
+      operationId: postDeviceFilescantaskByTaskIdInstanceByInstanceIdResultsList
+      x-operation-id-source: derived
   /device/filescantask/{task_id}/instance/{instance_id}/device/list:
     post:
       summary: 设备列表
@@ -233,6 +237,8 @@ paths:
                 properties: {}
           headers: {}
       security: []
+      operationId: postDeviceFilescantaskByTaskIdInstanceByInstanceIdDeviceList
+      x-operation-id-source: derived
   /v1/device/filescantask/remote/{task_id}/instance/{instance_id}/results/list:
     post:
       summary: 结果列表
@@ -370,6 +376,8 @@ paths:
                 properties: {}
           headers: {}
       security: []
+      operationId: postV1DeviceFilescantaskRemoteByTaskIdInstanceByInstanceIdResultsList
+      x-operation-id-source: derived
   /device/filescantask/{task_id}/action/remove:
     post:
       summary: 删除资产扫描任务
@@ -477,3 +485,5 @@ paths:
                 properties: {}
           headers: {}
       security: []
+      operationId: postDeviceFilescantaskByTaskIdActionRemove
+      x-operation-id-source: derived

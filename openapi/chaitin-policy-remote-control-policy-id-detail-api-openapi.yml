@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/remote_control/{policy_id}/detail API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/remote Control/{policy Id}/detail API
+  description: 策略管理/远程控制/policy_id 参数/详情
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/remote_control/{policy_id}/detail
   description: 策略管理/远程控制/policy_id 参数/详情
@@ -414,3 +416,5 @@ paths:
                       devices: []
                       device_tags: []
       security: []
+      operationId: postPolicyRemoteControlByPolicyIdDetail
+      x-operation-id-source: derived

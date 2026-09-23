@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/system/bindingconfig/modify API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/system/bindingconfig/modify API
+  description: 系统配置/系统配置/绑定配置/修改
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/system/bindingconfig/modify
   description: 系统配置/系统配置/绑定配置/修改
@@ -223,3 +225,5 @@ paths:
                       should_overwrite: false
                       should_prompt: true
       security: []
+      operationId: postSystemSystemBindingconfigModify
+      x-operation-id-source: derived

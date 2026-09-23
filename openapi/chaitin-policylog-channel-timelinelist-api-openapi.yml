@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/channel/timelinelist API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/channel/timelinelist API
+  description: 日志中心/通道/时间线列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/channel/timelinelist
   description: 日志中心/通道/时间线列表
@@ -426,3 +428,5 @@ paths:
                       icon: 2
                   title_field: channel
       security: []
+      operationId: postPolicylogChannelTimelinelist
+      x-operation-id-source: derived

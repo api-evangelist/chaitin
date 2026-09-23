@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account whitelist/browserplugin/template API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Whitelist/browserplugin/template API
+  description: 白名单管理/浏览器插件/模板
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: whitelist/browserplugin/template
   description: 白名单管理/浏览器插件/模板
@@ -132,3 +134,5 @@ paths:
                   file_system: local
                   url_path: /oss-qzh/eeff7c64-5070-4582-8b93-fbcc57db7771/qzh/browser_plugin_whitelist/3.5.0/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E7%99%BD%E5%90%8D%E5%8D%95.xlsx?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=private_minio_cluster%2F20250321%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250321T022211Z&X-Amz-Expires=259200&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27%25E6%25B5%258F%25E8%25A7%2588%25E5%2599%25A8%25E6%258F%2592%25E4%25BB%25B6%25E7%2599%25BD%25E5%2590%258D%25E5%258D%2595.xlsx&X-Amz-Signature=dcf44e64738c2a58703fc852bd1cb4fab7f9e02888504313c689513ce8425f3f
       security: []
+      operationId: postWhitelistBrowserpluginTemplate
+      x-operation-id-source: derived

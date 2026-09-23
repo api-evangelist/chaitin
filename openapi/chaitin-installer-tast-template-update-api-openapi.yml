@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account installer/tast_template/update API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Installer/tast Template/update API
+  description: 终端安装包/任务模板/更新
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: installer/tast_template/update
   description: 终端安装包/任务模板/更新
@@ -218,3 +220,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postInstallerTastTemplateUpdate
+      x-operation-id-source: derived

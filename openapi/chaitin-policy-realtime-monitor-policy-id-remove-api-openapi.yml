@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/realtime_monitor/{policy_id}/remove API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/realtime Monitor/{policy Id}/remove API
+  description: 策略管理/实时监控/policy_id 参数/移除
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/realtime_monitor/{policy_id}/remove
   description: 策略管理/实时监控/policy_id 参数/移除
@@ -88,3 +90,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicyRealtimeMonitorByPolicyIdRemove
+      x-operation-id-source: derived

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/codecontrol/controlwhitelist/{control_id}/update API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/codecontrol/controlwhitelist/{control…
+  description: 策略管理/代码管控/控制白名单/control_id 参数/更新
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/codecontrol/controlwhitelist/{control_id}/update
   description: 策略管理/代码管控/控制白名单/control_id 参数/更新
@@ -115,3 +117,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postPolicyCodecontrolControlwhitelistByControlIdUpdate
+      x-operation-id-source: derived

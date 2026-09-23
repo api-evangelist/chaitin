@@ -1,8 +1,7 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account List API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: Chaitin List API
+  version: ''
 tags:
 - name: List
 paths:
@@ -165,6 +164,10 @@ paths:
           description: ''
       tags:
       - List
+      summary: Delete list
+      x-summary-source: derived
+      operationId: deleteList
+      x-operation-id-source: derived
     get:
       parameters:
       - description: 扫描器名称
@@ -323,6 +326,10 @@ paths:
           description: ''
       tags:
       - List
+      summary: Get list
+      x-summary-source: derived
+      operationId: getList
+      x-operation-id-source: derived
     head:
       requestBody:
         required: true
@@ -339,6 +346,10 @@ paths:
           description: ''
       tags:
       - List
+      summary: Check list
+      x-summary-source: derived
+      operationId: headList
+      x-operation-id-source: derived
     options:
       requestBody:
         required: true
@@ -355,6 +366,10 @@ paths:
           description: ''
       tags:
       - List
+      summary: Describe list
+      x-summary-source: derived
+      operationId: optionsList
+      x-operation-id-source: derived
     patch:
       requestBody:
         required: true
@@ -371,6 +386,10 @@ paths:
           description: ''
       tags:
       - List
+      summary: Update list
+      x-summary-source: derived
+      operationId: patchList
+      x-operation-id-source: derived
     post:
       requestBody:
         required: true
@@ -387,6 +406,10 @@ paths:
           description: ''
       tags:
       - List
+      summary: Create list
+      x-summary-source: derived
+      operationId: postList
+      x-operation-id-source: derived
     put:
       requestBody:
         required: true
@@ -403,6 +426,10 @@ paths:
           description: ''
       tags:
       - List
+      summary: Replace list
+      x-summary-source: derived
+      operationId: putList
+      x-operation-id-source: derived
     trace:
       requestBody:
         required: true
@@ -419,8 +446,38 @@ paths:
           description: ''
       tags:
       - List
+      summary: Trace list
+      x-summary-source: derived
+      operationId: traceList
+      x-operation-id-source: derived
 components:
   schemas:
+    git.in.chaitin.net.veinmind.backend.module.agent.model.ClusterNodeInfo:
+      properties:
+        name:
+          description: 集群名称
+          example: 集群名称
+          format: string
+          properties: {}
+          type: string
+        node_name:
+          description: 集群节点名称
+          example: 集群节点名称
+          format: string
+          properties: {}
+          type: string
+        id:
+          description: 集群ID
+          example: 1
+          format: uint
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerListRes:
+      items:
+        $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.agent.model.ScannerListOne'
+      properties: {}
+      type: array
     git.in.chaitin.net.veinmind.backend.module.agent.model.ScannerListOne:
       properties:
         name:
@@ -556,11 +613,6 @@ components:
           properties: {}
           type: integer
       type: object
-    git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerListRes:
-      items:
-        $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.agent.model.ScannerListOne'
-      properties: {}
-      type: array
     git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerListReq:
       properties:
         name:
@@ -662,27 +714,6 @@ components:
           description: 数据页大小
           example: 1
           format: int
-          properties: {}
-          type: integer
-      type: object
-    git.in.chaitin.net.veinmind.backend.module.agent.model.ClusterNodeInfo:
-      properties:
-        name:
-          description: 集群名称
-          example: 集群名称
-          format: string
-          properties: {}
-          type: string
-        node_name:
-          description: 集群节点名称
-          example: 集群节点名称
-          format: string
-          properties: {}
-          type: string
-        id:
-          description: 集群ID
-          example: 1
-          format: uint
           properties: {}
           type: integer
       type: object

@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account statistic/device_info_summary API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Statistic/device Info Summary API
+  description: 统计分析/设备信息汇总
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: statistic/device_info_summary
   description: 统计分析/设备信息汇总
@@ -223,3 +225,5 @@ paths:
                     unhealth_device: 6
                     deactivated_deivce: 1
       security: []
+      operationId: postStatisticDeviceInfoSummary
+      x-operation-id-source: derived

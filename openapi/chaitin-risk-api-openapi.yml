@@ -1,17 +1,17 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account risk API
+  title: APISec Management Risk API
   version: '26.05'
   description: Generated from APISec skyview APIView classes.
 tags:
-- name: risk
+- name: Risk
 paths:
   /api/EnableDisableRiskStrategyAPI:
     put:
       operationId: EnableDisableRiskStrategyAPI_put
       summary: PUT /api/EnableDisableRiskStrategyAPI
       tags:
-      - risk
+      - Risk
       parameters: []
       x-cli-body-fallback: true
       requestBody:
@@ -25,7 +25,7 @@ paths:
       operationId: EventWhiteListAPI_post
       summary: POST /api/EventWhiteListAPI
       tags:
-      - risk
+      - Risk
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -50,7 +50,7 @@ paths:
       operationId: EventWhiteListAPI_put
       summary: PUT /api/EventWhiteListAPI
       tags:
-      - risk
+      - Risk
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -75,7 +75,7 @@ paths:
       operationId: EventWhiteListAPI_delete
       summary: DELETE /api/EventWhiteListAPI
       tags:
-      - risk
+      - Risk
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -93,7 +93,7 @@ paths:
       operationId: RiskEventAPI_get
       summary: GET /api/RiskEventAPI
       tags:
-      - risk
+      - Risk
       parameters:
       - name: event_aggr_id
         in: query
@@ -125,7 +125,7 @@ paths:
       operationId: RiskEventGroupAPI_get
       summary: GET /api/RiskEventGroupAPI
       tags:
-      - risk
+      - Risk
       parameters:
       - name: id
         in: query
@@ -139,7 +139,7 @@ paths:
       operationId: RiskEventGroupAPI_post
       summary: POST /api/RiskEventGroupAPI
       tags:
-      - risk
+      - Risk
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -189,7 +189,7 @@ paths:
       operationId: RiskEventGroupAPI_put
       summary: PUT /api/RiskEventGroupAPI
       tags:
-      - risk
+      - Risk
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -211,7 +211,7 @@ paths:
       operationId: RiskEventGroupStatistics_get
       summary: GET /api/RiskEventGroupStatistics
       tags:
-      - risk
+      - Risk
       parameters: []
       x-cli-body-fallback: true
   /api/RiskEventStatistics:
@@ -219,7 +219,7 @@ paths:
       operationId: RiskEventStatistics_get
       summary: GET /api/RiskEventStatistics
       tags:
-      - risk
+      - Risk
       parameters:
       - name: group_aggr_id
         in: query
@@ -233,7 +233,7 @@ paths:
       operationId: RiskFunctionStatusAPI_get
       summary: GET /api/RiskFunctionStatusAPI
       tags:
-      - risk
+      - Risk
       parameters: []
       x-cli-body-fallback: true
   /api/RiskModelConfigAPI:
@@ -241,14 +241,14 @@ paths:
       operationId: RiskModelConfigAPI_get
       summary: GET /api/RiskModelConfigAPI
       tags:
-      - risk
+      - Risk
       parameters: []
       x-cli-body-fallback: true
     put:
       operationId: RiskModelConfigAPI_put
       summary: PUT /api/RiskModelConfigAPI
       tags:
-      - risk
+      - Risk
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -272,7 +272,7 @@ paths:
       operationId: RiskStrategyAPI_post
       summary: POST /api/RiskStrategyAPI
       tags:
-      - risk
+      - Risk
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -312,7 +312,7 @@ paths:
       operationId: RiskStrategyAPI_put
       summary: PUT /api/RiskStrategyAPI
       tags:
-      - risk
+      - Risk
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -353,7 +353,7 @@ paths:
       operationId: RiskStrategyAuxiliaryInfoAPI_get
       summary: GET /api/RiskStrategyAuxiliaryInfoAPI
       tags:
-      - risk
+      - Risk
       parameters:
       - name: asset_uuids
         in: query
@@ -381,7 +381,7 @@ paths:
       operationId: WeakerCipherAPI_post
       summary: POST /api/WeakerCipherAPI
       tags:
-      - risk
+      - Risk
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -399,7 +399,7 @@ paths:
       operationId: WeakerCipherAPI_delete
       summary: DELETE /api/WeakerCipherAPI
       tags:
-      - risk
+      - Risk
       parameters: []
       x-cli-body-fallback: false
       requestBody:

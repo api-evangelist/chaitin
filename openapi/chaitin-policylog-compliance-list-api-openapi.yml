@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/compliance/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/compliance/list API
+  description: 日志中心/合规/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/compliance/list
   description: 日志中心/合规/列表
@@ -924,3 +926,5 @@ paths:
                     _score: null
                     action_display_name: Endpoint Reminder
       security: []
+      operationId: postPolicylogComplianceList
+      x-operation-id-source: derived

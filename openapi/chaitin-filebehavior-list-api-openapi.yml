@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account filebehavior/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Filebehavior/list API
+  description: 文件行为/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: filebehavior/list
   description: 文件行为/列表
@@ -594,3 +596,5 @@ paths:
                     _index: .ds-qzhddr_behaviors_file_s-2023.11.15-000003
                     operation_name: 编辑
       security: []
+      operationId: postFilebehaviorList
+      x-operation-id-source: derived

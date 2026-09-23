@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account audit/operationlog/action/getfieldmetadata API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Audit/operationlog/action/getfieldmetadata API
+  description: 审计日志/操作日志/操作/字段元数据
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: audit/operationlog/action/getfieldmetadata
   description: 审计日志/操作日志/操作/字段元数据
@@ -164,8 +166,9 @@ paths:
                         options:
                           type: 'null'
                         async_options:
-                          type: boolean
-                          nullable: true
+                          type:
+                          - boolean
+                          - 'null'
                         order:
                           type: integer
                         group:
@@ -178,7 +181,9 @@ paths:
                         is_filter_used:
                           type: boolean
                         sort_options:
-                          type: array
+                          type:
+                          - array
+                          - 'null'
                           items:
                             type: object
                             properties:
@@ -189,7 +194,6 @@ paths:
                             required:
                             - name
                             - display_name
-                          nullable: true
                         chart_options:
                           type: object
                           properties:
@@ -440,3 +444,5 @@ paths:
                       - op: value_count
                         name: 计数
       security: []
+      operationId: postAuditOperationlogActionGetfieldmetadata
+      x-operation-id-source: derived

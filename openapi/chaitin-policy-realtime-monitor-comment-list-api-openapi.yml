@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/realtime_monitor/comment/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/realtime Monitor/comment/list API
+  description: 策略管理/实时监控/评论/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/realtime_monitor/comment/list
   description: 策略管理/实时监控/评论/列表
@@ -207,3 +209,5 @@ paths:
                       dept_name: ''
                   page: 1
       security: []
+      operationId: postPolicyRealtimeMonitorCommentList
+      x-operation-id-source: derived

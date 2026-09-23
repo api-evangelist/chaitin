@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account exportrecord/getfieldmetadata API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Exportrecord/getfieldmetadata API
+  description: 导出记录/字段元数据
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: exportrecord/getfieldmetadata
   description: 导出记录/字段元数据
@@ -100,3 +102,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postExportrecordGetfieldmetadata
+      x-operation-id-source: derived

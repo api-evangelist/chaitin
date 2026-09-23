@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/landing/{log_id}/innerfileflow API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/landing/{log Id}/innerfileflow API
+  description: 日志中心/落地/log_id 参数/内部文件流转
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/landing/{log_id}/innerfileflow
   description: 日志中心/落地/log_id 参数/内部文件流转
@@ -287,3 +289,5 @@ paths:
                       time: '2024-12-26T14:33:07+08:00'
                     children: []
       security: []
+      operationId: postPolicylogLandingByLogIdInnerfileflow
+      x-operation-id-source: derived

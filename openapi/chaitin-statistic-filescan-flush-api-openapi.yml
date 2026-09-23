@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account statistic/filescan/flush API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Statistic/filescan/flush API
+  description: 统计分析/文件扫描/刷新
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: statistic/filescan/flush
   description: 统计分析/文件扫描/刷新
@@ -81,3 +83,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postStatisticFilescanFlush
+      x-operation-id-source: derived

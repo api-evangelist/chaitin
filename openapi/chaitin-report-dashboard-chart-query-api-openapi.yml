@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account report/dashboard/chart/query API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Report/dashboard/chart/query API
+  description: 报表中心/仪表盘/图表/查询
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: report/dashboard/chart/query
   description: 报表中心/仪表盘/图表/查询
@@ -194,3 +196,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postReportDashboardChartQuery
+      x-operation-id-source: derived

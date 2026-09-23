@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policylog/channel/{event_id}/innerfileflow API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policylog/channel/{event Id}/innerfileflow API
+  description: 日志中心/通道/event_id 参数/内部文件流转
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policylog/channel/{event_id}/innerfileflow
   description: 日志中心/通道/event_id 参数/内部文件流转
@@ -337,3 +339,5 @@ paths:
                       node_type: ueba_source
                       app_name: IM应用-2
       security: []
+      operationId: postPolicylogChannelByEventIdInnerfileflow
+      x-operation-id-source: derived

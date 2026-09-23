@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account system/channeldef/uploadtask/{task_id}/status API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api System/channeldef/uploadtask/{task Id}/status API
+  description: 系统配置/通道定义/上传任务/task_id 参数/状态
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: system/channeldef/uploadtask/{task_id}/status
   description: 系统配置/通道定义/上传任务/task_id 参数/状态
@@ -88,3 +90,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postSystemChanneldefUploadtaskByTaskIdStatus
+      x-operation-id-source: derived

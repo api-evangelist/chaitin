@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account policy/remote_control/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Policy/remote Control/list API
+  description: 策略管理/远程控制/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: policy/remote_control/list
   description: 策略管理/远程控制/列表
@@ -148,7 +150,9 @@ paths:
                             name:
                               type: string
                             update_by:
-                              type: object
+                              type:
+                              - object
+                              - 'null'
                               properties:
                                 uid:
                                   type: string
@@ -163,7 +167,6 @@ paths:
                               - name
                               - username
                               - email
-                              nullable: true
                             expression_fields:
                               type: array
                               items: {}
@@ -268,3 +271,5 @@ paths:
                     expand: {}
                   page: 1
       security: []
+      operationId: postPolicyRemoteControlList
+      x-operation-id-source: derived

@@ -1,17 +1,17 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account API
+  title: APISec Management Account API
   version: '26.05'
   description: Generated from APISec skyview APIView classes.
 tags:
-- name: account
+- name: Account
 paths:
   /api/APITokenLoginAPI:
     post:
       operationId: APITokenLoginAPI_post
       summary: POST /api/APITokenLoginAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: true
       requestBody:
@@ -25,7 +25,7 @@ paths:
       operationId: CSRFTokenAPI_get
       summary: GET /api/CSRFTokenAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: true
   /api/CertLoginAPI:
@@ -33,14 +33,14 @@ paths:
       operationId: CertLoginAPI_get
       summary: GET /api/CertLoginAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: true
     post:
       operationId: CertLoginAPI_post
       summary: POST /api/CertLoginAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -58,7 +58,7 @@ paths:
       operationId: ChangePasswordWithoutLoginAPI_put
       summary: PUT /api/ChangePasswordWithoutLoginAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -83,7 +83,7 @@ paths:
       operationId: ChangeUserCredentialAPI_put
       summary: PUT /api/ChangeUserCredentialAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -108,7 +108,7 @@ paths:
       operationId: DesensitizeUserAPI_put
       summary: PUT /api/DesensitizeUserAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -127,7 +127,7 @@ paths:
       operationId: DownloadUserCertAPI_get
       summary: GET /api/DownloadUserCertAPI
       tags:
-      - account
+      - Account
       parameters:
       - name: token
         in: query
@@ -141,7 +141,7 @@ paths:
       operationId: LoginAPI_post
       summary: POST /api/LoginAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -168,14 +168,14 @@ paths:
       operationId: LoginDisplacementAPI_get
       summary: GET /api/LoginDisplacementAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: true
     put:
       operationId: LoginDisplacementAPI_put
       summary: PUT /api/LoginDisplacementAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -194,7 +194,7 @@ paths:
       operationId: LogoutAPI_post
       summary: POST /api/LogoutAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: true
       requestBody:
@@ -208,14 +208,14 @@ paths:
       operationId: PasswordConfigAPI_get
       summary: GET /api/PasswordConfigAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: true
     put:
       operationId: PasswordConfigAPI_put
       summary: PUT /api/PasswordConfigAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -237,7 +237,7 @@ paths:
       operationId: ProfileAPI_get
       summary: GET /api/ProfileAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: true
   /api/RADIUSConfigAPI:
@@ -245,14 +245,14 @@ paths:
       operationId: RADIUSConfigAPI_get
       summary: GET /api/RADIUSConfigAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: true
     put:
       operationId: RADIUSConfigAPI_put
       summary: PUT /api/RADIUSConfigAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -273,7 +273,7 @@ paths:
       operationId: ResetUserCredentialAPI_put
       summary: PUT /api/ResetUserCredentialAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -293,14 +293,14 @@ paths:
       operationId: RoleAPI_get
       summary: GET /api/RoleAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: true
     post:
       operationId: RoleAPI_post
       summary: POST /api/RoleAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -325,7 +325,7 @@ paths:
       operationId: RoleAPI_put
       summary: PUT /api/RoleAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -347,7 +347,7 @@ paths:
       operationId: RoleAPI_delete
       summary: DELETE /api/RoleAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -365,7 +365,7 @@ paths:
       operationId: UnlockUserAPI_put
       summary: PUT /api/UnlockUserAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -385,7 +385,7 @@ paths:
       operationId: UserAPI_get
       summary: GET /api/UserAPI
       tags:
-      - account
+      - Account
       parameters:
       - name: username
         in: query
@@ -398,7 +398,7 @@ paths:
       operationId: UserAPI_post
       summary: POST /api/UserAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -425,7 +425,7 @@ paths:
       operationId: UserAPI_put
       summary: PUT /api/UserAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -452,7 +452,7 @@ paths:
       operationId: UserAPI_delete
       summary: DELETE /api/UserAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -470,14 +470,14 @@ paths:
       operationId: UserAPITokenAPI_get
       summary: GET /api/UserAPITokenAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: true
     post:
       operationId: UserAPITokenAPI_post
       summary: POST /api/UserAPITokenAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -503,7 +503,7 @@ paths:
       operationId: UserAPITokenAPI_put
       summary: PUT /api/UserAPITokenAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -526,7 +526,7 @@ paths:
       operationId: UserAPITokenAPI_delete
       summary: DELETE /api/UserAPITokenAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -546,14 +546,14 @@ paths:
       operationId: UserLoginThrottlingAPI_get
       summary: GET /api/UserLoginThrottlingAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: true
     put:
       operationId: UserLoginThrottlingAPI_put
       summary: PUT /api/UserLoginThrottlingAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -578,7 +578,7 @@ paths:
       operationId: UserRoleBindingAPI_post
       summary: POST /api/UserRoleBindingAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -597,14 +597,14 @@ paths:
       operationId: UserTFAConfigAPI_get
       summary: GET /api/UserTFAConfigAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: true
     post:
       operationId: UserTFAConfigAPI_post
       summary: POST /api/UserTFAConfigAPI
       tags:
-      - account
+      - Account
       parameters: []
       x-cli-body-fallback: false
       requestBody:
@@ -626,7 +626,7 @@ paths:
       operationId: UsernameExistsCheckAPI_get
       summary: GET /api/UsernameExistsCheckAPI
       tags:
-      - account
+      - Account
       parameters:
       - name: username
         in: query

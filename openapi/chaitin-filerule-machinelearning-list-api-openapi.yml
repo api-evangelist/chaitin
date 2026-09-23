@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: APISec Management account filerule/machinelearning/list API
-  version: '26.05'
-  description: Generated from APISec skyview APIView classes.
+  title: ddr-api Filerule/machinelearning/list API
+  description: 文件规则/机器学习/列表
+  version: 1.0.0
+servers: []
+security: []
 tags:
 - name: filerule/machinelearning/list
   description: 文件规则/机器学习/列表
@@ -109,3 +111,5 @@ paths:
                 properties: {}
               example: {}
       security: []
+      operationId: postFileruleMachinelearningList
+      x-operation-id-source: derived
