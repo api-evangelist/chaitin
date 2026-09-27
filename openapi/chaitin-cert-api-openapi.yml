@@ -86,33 +86,22 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    system.AboutRes:
-      type: object
-      properties:
-        cert_id:
-          type: integer
-        created_at:
-          type: integer
-        deprecated:
-          type: boolean
-        license:
-          $ref: '#/components/schemas/system.AboutLicense'
-        machine_id:
-          type: string
-        outdated:
-          type: boolean
-        oversea:
-          type: boolean
-        password_expire_day:
-          type: integer
-        slave:
-          type: boolean
-        staging:
-          type: boolean
-        time:
-          type: string
-        version:
-          type: string
+    consts.UserRole:
+      type: integer
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      x-enum-varnames:
+      - UserRoleUnknown
+      - UserRoleAdmin
+      - UserRoleManager
+      - UserRoleConfig
+      - UserRoleAudit
+      - UserRoleMax
     system.AboutLicense:
       type: object
       properties:
@@ -141,22 +130,33 @@ components:
       - Edition_EDITION_PROFESSIONAL
       - Edition_EDITION_ENTERPRISE
       - Edition_EDITION_LITE
-    consts.UserRole:
-      type: integer
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      x-enum-varnames:
-      - UserRoleUnknown
-      - UserRoleAdmin
-      - UserRoleManager
-      - UserRoleConfig
-      - UserRoleAudit
-      - UserRoleMax
+    system.AboutRes:
+      type: object
+      properties:
+        cert_id:
+          type: integer
+        created_at:
+          type: integer
+        deprecated:
+          type: boolean
+        license:
+          $ref: '#/components/schemas/system.AboutLicense'
+        machine_id:
+          type: string
+        outdated:
+          type: boolean
+        oversea:
+          type: boolean
+        password_expire_day:
+          type: integer
+        slave:
+          type: boolean
+        staging:
+          type: boolean
+        time:
+          type: string
+        version:
+          type: string
     system.CodeApplyInfoRes:
       type: object
       properties:

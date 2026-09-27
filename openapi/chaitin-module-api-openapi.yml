@@ -61,6 +61,15 @@ components:
           $ref: '#/components/schemas/model.SemanticConfig'
         use_global:
           type: boolean
+    skynet.GetGlobalSemanticsRes:
+      type: object
+      properties:
+        semantics:
+          $ref: '#/components/schemas/model.SemanticConfig'
+    model.SemanticConfig:
+      type: object
+      additionalProperties:
+        type: string
     response.JSONBody:
       type: object
       properties:
@@ -69,15 +78,6 @@ components:
           type: string
         msg:
           type: string
-    model.SemanticConfig:
-      type: object
-      additionalProperties:
-        type: string
-    skynet.GetGlobalSemanticsRes:
-      type: object
-      properties:
-        semantics:
-          $ref: '#/components/schemas/model.SemanticConfig'
 x-cli:
   tags:
     site: 防护站点管理

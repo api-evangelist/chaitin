@@ -120,72 +120,17 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    site.WebsiteReq:
+    model.ForwardingRuleConfig:
       type: object
       properties:
-        cert_id:
-          type: integer
-        comment:
-          type: string
-        email:
-          type: string
-        group_id:
-          type: integer
-        health_check:
-          type: boolean
         id:
           type: integer
-        index:
+        path_prefix:
           type: string
-        load_balance:
-          $ref: '#/components/schemas/model.LoadBalanceConfig'
-        ports:
-          type: array
-          items:
-            type: string
-        redirect_status_code:
-          type: integer
-        server_names:
-          type: array
-          items:
-            type: string
-        stat_enabled:
-          type: boolean
-        static_default:
-          type: integer
-        type:
-          type: integer
         upstreams:
           type: array
           items:
             type: string
-    model.LoadBalanceConfig:
-      type: object
-      properties:
-        balance_type:
-          type: integer
-    site.HealthState:
-      type: object
-      properties:
-        error:
-          type: string
-        state:
-          type: integer
-    site.DeleteWebsiteReq:
-      type: object
-      properties:
-        ids:
-          type: array
-          items:
-            type: integer
-    response.JSONBody:
-      type: object
-      properties:
-        data: {}
-        err:
-          type: string
-        msg:
-          type: string
     site.GetWebsiteRes:
       type: object
       properties:
@@ -345,17 +290,72 @@ components:
             type: string
         wr_id:
           type: integer
-    model.ForwardingRuleConfig:
+    site.WebsiteReq:
       type: object
       properties:
+        cert_id:
+          type: integer
+        comment:
+          type: string
+        email:
+          type: string
+        group_id:
+          type: integer
+        health_check:
+          type: boolean
         id:
           type: integer
-        path_prefix:
+        index:
           type: string
+        load_balance:
+          $ref: '#/components/schemas/model.LoadBalanceConfig'
+        ports:
+          type: array
+          items:
+            type: string
+        redirect_status_code:
+          type: integer
+        server_names:
+          type: array
+          items:
+            type: string
+        stat_enabled:
+          type: boolean
+        static_default:
+          type: integer
+        type:
+          type: integer
         upstreams:
           type: array
           items:
             type: string
+    model.LoadBalanceConfig:
+      type: object
+      properties:
+        balance_type:
+          type: integer
+    site.HealthState:
+      type: object
+      properties:
+        error:
+          type: string
+        state:
+          type: integer
+    site.DeleteWebsiteReq:
+      type: object
+      properties:
+        ids:
+          type: array
+          items:
+            type: integer
+    response.JSONBody:
+      type: object
+      properties:
+        data: {}
+        err:
+          type: string
+        msg:
+          type: string
 x-cli:
   tags:
     site: 防护站点管理

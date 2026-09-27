@@ -452,6 +452,15 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountRes:
+      properties:
+        total:
+          description: 总数
+          example: 1
+          format: uint
+          properties: {}
+          type: integer
+      type: object
     git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountReq:
       properties:
         name:
@@ -553,15 +562,6 @@ components:
           description: 数据页大小
           example: 1
           format: int
-          properties: {}
-          type: integer
-      type: object
-    git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerCountRes:
-      properties:
-        total:
-          description: 总数
-          example: 1
-          format: uint
           properties: {}
           type: integer
       type: object

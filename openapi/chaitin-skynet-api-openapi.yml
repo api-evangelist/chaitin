@@ -67,17 +67,6 @@ components:
           type: string
         risk_level:
           type: integer
-    api.PutSkynetRuleReq:
-      type: object
-      properties:
-        global:
-          type: boolean
-        id:
-          type: array
-          items:
-            type: string
-        mode:
-          $ref: '#/components/schemas/detect.Mode'
     api.GetSkynetRuleRes:
       type: object
       properties:
@@ -99,6 +88,17 @@ components:
       - DryRunMode
       - DisableMode
       - DenyMode
+    api.PutSkynetRuleReq:
+      type: object
+      properties:
+        global:
+          type: boolean
+        id:
+          type: array
+          items:
+            type: string
+        mode:
+          $ref: '#/components/schemas/detect.Mode'
     response.JSONBody:
       type: object
       properties:

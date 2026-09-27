@@ -123,14 +123,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    response.JSONBody:
-      type: object
-      properties:
-        data: {}
-        err:
-          type: string
-        msg:
-          type: string
     record.GetRuleDetectLogListRes:
       type: object
       properties:
@@ -228,6 +220,14 @@ components:
         url_path:
           type: string
         website:
+          type: string
+    response.JSONBody:
+      type: object
+      properties:
+        data: {}
+        err:
+          type: string
+        msg:
           type: string
 x-cli:
   tags:

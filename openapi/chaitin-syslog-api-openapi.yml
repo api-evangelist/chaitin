@@ -737,89 +737,6 @@ paths:
       - Syslog
 components:
   schemas:
-    KafkaConfigDetail:
-      properties:
-        ack_type:
-          description: kafka的响应方式
-          enum:
-          - none
-          - wait_leader
-          - wait_all
-          title: Ack Type
-          type: string
-        config:
-          description: kafka的响应方式，honeypot表示是否报告蜜罐事件, scanner:是否报告扫描事件, portrait表示是否报告溯源事件,ping表示是否报告ping事件, arp表示是否报告ARP攻击, docker_escape表示是否报告docker逃逸事件,agent_status表示是否报告探针连接状态变化
-          items:
-            enum:
-            - honeypot
-            - scanner
-            - portrait
-            - ping
-            - arp
-            - docker_escape
-            - agent_status
-            type: string
-          title: Config
-          type: array
-        encoding:
-          description: kafka编码方式
-          enum:
-          - GBK
-          - UTF-8
-          title: Encoding
-          type: string
-        host:
-          description: kafka服务器地址
-          minLength: 1
-          title: Host
-          type: string
-        id:
-          description: 配置的ID
-          title: Id
-          type: integer
-        password:
-          default: ''
-          description: 密码
-          title: Password
-          type: string
-        port:
-          description: kafka服务器端口
-          maximum: 65535
-          minimum: 1
-          title: Port
-          type: integer
-        topic_name:
-          description: topic名称
-          minLength: 1
-          title: Topic Name
-          type: string
-        username:
-          default: ''
-          description: 用户名
-          title: Username
-          type: string
-      required:
-      - topic_name
-      - host
-      - port
-      - encoding
-      - ack_type
-      - config
-      title: KafkaConfigDetail
-      type: object
-    MinimumRet:
-      description: '最小化响应的通用模式
-
-
-        使用该类型作为返回值的API view，一般不会失败(诸如login_required等错误不包含在内)'
-      properties:
-        success:
-          default: true
-          description: 请求成功
-          title: Success
-          type: boolean
-      title: MinimumRet
-      type: object
     SystemLogDetail:
       properties:
         content:
@@ -850,6 +767,19 @@ components:
       - content
       - crdate
       title: SystemLogDetail
+      type: object
+    MinimumRet:
+      description: '最小化响应的通用模式
+
+
+        使用该类型作为返回值的API view，一般不会失败(诸如login_required等错误不包含在内)'
+      properties:
+        success:
+          default: true
+          description: 请求成功
+          title: Success
+          type: boolean
+      title: MinimumRet
       type: object
     SyslogConfigDetail:
       properties:
@@ -939,6 +869,76 @@ components:
       - docker_escape
       - agent_status
       title: SyslogConfigDetail
+      type: object
+    KafkaConfigDetail:
+      properties:
+        ack_type:
+          description: kafka的响应方式
+          enum:
+          - none
+          - wait_leader
+          - wait_all
+          title: Ack Type
+          type: string
+        config:
+          description: kafka的响应方式，honeypot表示是否报告蜜罐事件, scanner:是否报告扫描事件, portrait表示是否报告溯源事件,ping表示是否报告ping事件, arp表示是否报告ARP攻击, docker_escape表示是否报告docker逃逸事件,agent_status表示是否报告探针连接状态变化
+          items:
+            enum:
+            - honeypot
+            - scanner
+            - portrait
+            - ping
+            - arp
+            - docker_escape
+            - agent_status
+            type: string
+          title: Config
+          type: array
+        encoding:
+          description: kafka编码方式
+          enum:
+          - GBK
+          - UTF-8
+          title: Encoding
+          type: string
+        host:
+          description: kafka服务器地址
+          minLength: 1
+          title: Host
+          type: string
+        id:
+          description: 配置的ID
+          title: Id
+          type: integer
+        password:
+          default: ''
+          description: 密码
+          title: Password
+          type: string
+        port:
+          description: kafka服务器端口
+          maximum: 65535
+          minimum: 1
+          title: Port
+          type: integer
+        topic_name:
+          description: topic名称
+          minLength: 1
+          title: Topic Name
+          type: string
+        username:
+          default: ''
+          description: 用户名
+          title: Username
+          type: string
+      required:
+      - topic_name
+      - host
+      - port
+      - encoding
+      - ack_type
+      - config
+      title: KafkaConfigDetail
       type: object
     SystemLogRet:
       description: 分页类响应的通用模式

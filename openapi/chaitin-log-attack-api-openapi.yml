@@ -132,14 +132,6 @@ components:
             $ref: '#/components/schemas/model.DetectLog'
         total:
           type: integer
-    response.JSONBody:
-      type: object
-      properties:
-        data: {}
-        err:
-          type: string
-        msg:
-          type: string
     model.DetectLog:
       type: object
       properties:
@@ -228,6 +220,14 @@ components:
         url_path:
           type: string
         website:
+          type: string
+    response.JSONBody:
+      type: object
+      properties:
+        data: {}
+        err:
+          type: string
+        msg:
           type: string
 x-cli:
   tags:

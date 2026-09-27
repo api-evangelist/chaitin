@@ -168,11 +168,60 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    model.PolicyAction:
+      type: integer
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 999
+      - 999
+      x-enum-varnames:
+      - PolicyActionAllow
+      - PolicyActionDeny
+      - PolicyActionChallenge
+      - PolicyActionAuthDefense
+      - PolicyActionChaos
+      - PolicyActionWaitingRoom
+      - PolicyActionMix
+      - PolicyActionMax
     policy.DeletePolicyReq:
       type: object
       properties:
         id:
           type: integer
+    model.PolicyReview:
+      type: integer
+      enum:
+      - 0
+      - 1
+      x-enum-varnames:
+      - PolicyReviewRequired
+      - PolicyReviewNone
+    policy.PostPolicyReq:
+      type: object
+      properties:
+        action:
+          $ref: '#/components/schemas/model.PolicyAction'
+        expire:
+          type: integer
+        is_enabled:
+          type: boolean
+        level:
+          type: integer
+        log:
+          type: boolean
+        name:
+          type: string
+        pattern:
+          type: array
+          items:
+            type: array
+            items:
+              $ref: '#/components/schemas/model.RulePattern'
     policy.GetPolicyRes:
       type: object
       properties:
@@ -249,13 +298,6 @@ components:
           type: array
           items:
             type: string
-    policy.PutPolicySwitchReq:
-      type: object
-      properties:
-        id:
-          type: integer
-        is_enabled:
-          type: boolean
     policy.PutPolicyReq:
       type: object
       properties:
@@ -288,6 +330,13 @@ components:
             $ref: '#/components/schemas/policy.GetPolicyRes'
         total:
           type: integer
+    policy.PutPolicySwitchReq:
+      type: object
+      properties:
+        id:
+          type: integer
+        is_enabled:
+          type: boolean
     response.JSONBody:
       type: object
       properties:
@@ -296,55 +345,6 @@ components:
           type: string
         msg:
           type: string
-    policy.PostPolicyReq:
-      type: object
-      properties:
-        action:
-          $ref: '#/components/schemas/model.PolicyAction'
-        expire:
-          type: integer
-        is_enabled:
-          type: boolean
-        level:
-          type: integer
-        log:
-          type: boolean
-        name:
-          type: string
-        pattern:
-          type: array
-          items:
-            type: array
-            items:
-              $ref: '#/components/schemas/model.RulePattern'
-    model.PolicyAction:
-      type: integer
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 999
-      - 999
-      x-enum-varnames:
-      - PolicyActionAllow
-      - PolicyActionDeny
-      - PolicyActionChallenge
-      - PolicyActionAuthDefense
-      - PolicyActionChaos
-      - PolicyActionWaitingRoom
-      - PolicyActionMix
-      - PolicyActionMax
-    model.PolicyReview:
-      type: integer
-      enum:
-      - 0
-      - 1
-      x-enum-varnames:
-      - PolicyReviewRequired
-      - PolicyReviewNone
 x-cli:
   tags:
     site: 防护站点管理

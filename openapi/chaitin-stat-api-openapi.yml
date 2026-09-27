@@ -103,6 +103,25 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    api.QpsRes:
+      type: object
+      properties:
+        nodes:
+          type: array
+          items:
+            type: object
+            additionalProperties: {}
+    stat.AdvanceAccessRes:
+      type: object
+      properties:
+        access:
+          type: integer
+        ip:
+          type: integer
+        pv:
+          type: integer
+        session:
+          type: integer
     stat.AdvanceAttackRes:
       type: object
       properties:
@@ -131,25 +150,6 @@ components:
           type: string
         msg:
           type: string
-    stat.AdvanceAccessRes:
-      type: object
-      properties:
-        access:
-          type: integer
-        ip:
-          type: integer
-        pv:
-          type: integer
-        session:
-          type: integer
-    api.QpsRes:
-      type: object
-      properties:
-        nodes:
-          type: array
-          items:
-            type: object
-            additionalProperties: {}
 x-cli:
   tags:
     site: 防护站点管理

@@ -60,7 +60,7 @@ tags:
 - Company
 apis:
 - aid: chaitin:chaitin-account-api
-  name: Chaitin Tech account API
+  name: Chaitin Tech Account API
   description: The account API from Chaitin Tech — 22 operation(s) for account.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -106,7 +106,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-account-staff-list-api
-  name: Chaitin Tech account/staff/list API
+  name: Chaitin Tech Account/staff/list API
   description: 员工管理/人员/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -135,7 +135,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-account-staff-tag-api
-  name: Chaitin Tech account/staff_tag API
+  name: Chaitin Tech Account/staff Tag API
   description: 员工管理/人员标签
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -149,7 +149,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-account-staff-tag-list-api
-  name: Chaitin Tech account/staff_tag/list API
+  name: Chaitin Tech Account/staff Tag/list API
   description: 员工管理/人员标签/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -178,7 +178,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-account-tag-modify-api
-  name: Chaitin Tech account/tag/modify API
+  name: Chaitin Tech Account/tag/modify API
   description: 员工管理/标签/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -192,7 +192,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-analyse-expression-classification-api
-  name: Chaitin Tech analyse/expression/classification API
+  name: Chaitin Tech Analyse/expression/classification API
   description: 文件分析/表达式/数据分类分级
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -206,7 +206,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-analyse-expression-classification-batch-api
-  name: Chaitin Tech analyse/expression/classification/batch API
+  name: Chaitin Tech Analyse/expression/classification/batch API
   description: 文件分析/表达式/数据分类分级/批量
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -220,7 +220,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-analyse-filecut-api
-  name: Chaitin Tech analyse/filecut API
+  name: Chaitin Tech Analyse/filecut API
   description: 文件分析/文件切分
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -234,7 +234,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-api-assets-api
-  name: Chaitin Tech api_assets API
+  name: Chaitin Tech API Assets API
   description: The api_assets API from Chaitin Tech — 61 operation(s) for api_assets.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -249,7 +249,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-api-log-api
-  name: Chaitin Tech api_log API
+  name: Chaitin Tech API Log API
   description: The api_log API from Chaitin Tech — 4 operation(s) for api_log.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -264,7 +264,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-audit-operationlog-action-getfieldmetadata-api
-  name: Chaitin Tech audit/operationlog/action/getfieldmetadata API
+  name: Chaitin Tech Audit/operationlog/action/getfieldmetadata API
   description: 审计日志/操作日志/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -278,7 +278,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-audit-operationlog-action-getfieldvalues-api
-  name: Chaitin Tech audit/operationlog/action/getfieldvalues API
+  name: Chaitin Tech Audit/operationlog/action/getfieldvalues API
   description: 审计日志/操作日志/操作/字段值
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -292,7 +292,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-backup-api
-  name: Chaitin Tech backup API
+  name: Chaitin Tech Backup API
   description: The backup API from Chaitin Tech — 4 operation(s) for backup.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -308,7 +308,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-browsermanager-action-bulkdestroy-api
-  name: Chaitin Tech browsermanager/action/bulkdestroy API
+  name: Chaitin Tech Browsermanager/action/bulkdestroy API
   description: 浏览器管理/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -322,7 +322,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-browsermanager-action-getfieldmetadata-api
-  name: Chaitin Tech browsermanager/action/getfieldmetadata API
+  name: Chaitin Tech Browsermanager/action/getfieldmetadata API
   description: 浏览器管理/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -336,7 +336,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-browsermanager-action-getfieldvalues-api
-  name: Chaitin Tech browsermanager/action/getfieldvalues API
+  name: Chaitin Tech Browsermanager/action/getfieldvalues API
   description: 浏览器管理/操作/字段值
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -350,7 +350,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-browsermanager-download-api
-  name: Chaitin Tech browsermanager/download API
+  name: Chaitin Tech Browsermanager/download API
   description: 浏览器管理/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -364,7 +364,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-browsermanager-list-api
-  name: Chaitin Tech browsermanager/list API
+  name: Chaitin Tech Browsermanager/list API
   description: 浏览器管理/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -378,7 +378,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-browsermanager-plugin-action-getfieldmetadata-api
-  name: Chaitin Tech browsermanager/plugin/action/getfieldmetadata API
+  name: Chaitin Tech Browsermanager/plugin/action/getfieldmetadata API
   description: 浏览器管理/插件/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -392,7 +392,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-browsermanager-plugin-action-getfieldvalues-api
-  name: Chaitin Tech browsermanager/plugin/action/getfieldvalues API
+  name: Chaitin Tech Browsermanager/plugin/action/getfieldvalues API
   description: 浏览器管理/插件/操作/字段值
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -406,7 +406,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-browsermanager-plugin-list-api
-  name: Chaitin Tech browsermanager/plugin/list API
+  name: Chaitin Tech Browsermanager/plugin/list API
   description: 浏览器管理/插件/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -420,7 +420,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-browsermanager-tid-detail-api
-  name: Chaitin Tech browsermanager/{tid}/detail API
+  name: Chaitin Tech Browsermanager/{tid}/detail API
   description: 浏览器管理/tid 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -435,7 +435,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-browsermanager-tid-device-list-api
-  name: Chaitin Tech browsermanager/{tid}/device/list API
+  name: Chaitin Tech Browsermanager/{tid}/device/list API
   description: 浏览器管理/tid 参数/设备管理/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -450,7 +450,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-browsermanager-tid-plugin-list-api
-  name: Chaitin Tech browsermanager/{tid}/plugin/list API
+  name: Chaitin Tech Browsermanager/{tid}/plugin/list API
   description: 浏览器管理/tid 参数/插件/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -465,7 +465,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-browserplugin-extract-api
-  name: Chaitin Tech browserplugin/extract API
+  name: Chaitin Tech Browserplugin/extract API
   description: 浏览器插件/提取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -479,7 +479,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-browserplugin-source-browsertypecount-api
-  name: Chaitin Tech browserplugin/source/browsertypecount API
+  name: Chaitin Tech Browserplugin/source/browsertypecount API
   description: 浏览器插件/来源/browsertypecount 接口
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -493,7 +493,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-browserplugin-template-api
-  name: Chaitin Tech browserplugin/template API
+  name: Chaitin Tech Browserplugin/template API
   description: 浏览器插件/模板
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -507,7 +507,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-buildin-waf-api
-  name: Chaitin Tech buildin_waf API
+  name: Chaitin Tech Buildin Waf API
   description: The buildin_waf API from Chaitin Tech — 1 operation(s) for buildin_waf.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -522,7 +522,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-cert-api
-  name: Chaitin Tech cert API
+  name: Chaitin Tech Cert API
   description: The cert API from Chaitin Tech — 2 operation(s) for cert.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -553,7 +553,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-classification-data-classification-hub-classification-tree-api
-  name: Chaitin Tech classification/data_classification_hub/classification_tree API
+  name: Chaitin Tech Classification/data Classification Hub/classification Tree API
   description: 数据分类分级/数据分类中心/分类树
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -584,7 +584,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-classification-download-api
-  name: Chaitin Tech classification/download API
+  name: Chaitin Tech Classification/download API
   description: 数据分类分级/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -598,7 +598,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-classification-init-data-info-api
-  name: Chaitin Tech classification/init_data/info API
+  name: Chaitin Tech Classification/init Data/info API
   description: 数据分类分级/初始化数据/信息
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -612,7 +612,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-classification-init-data-recordlist-api
-  name: Chaitin Tech classification/init_data/recordlist API
+  name: Chaitin Tech Classification/init Data/recordlist API
   description: 数据分类分级/初始化数据/记录列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -626,7 +626,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-classification-init-data-upload-api
-  name: Chaitin Tech classification/init_data/upload API
+  name: Chaitin Tech Classification/init Data/upload API
   description: 数据分类分级/初始化数据/上传
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -640,7 +640,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-clipboardbehavior-action-getfieldmetadata-api
-  name: Chaitin Tech clipboardbehavior/action/getfieldmetadata API
+  name: Chaitin Tech Clipboardbehavior/action/getfieldmetadata API
   description: 剪贴板行为/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -654,7 +654,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-clipboardbehavior-stafflist-api
-  name: Chaitin Tech clipboardbehavior/stafflist API
+  name: Chaitin Tech Clipboardbehavior/stafflist API
   description: 剪贴板行为/人员列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -668,7 +668,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-clipboardbehavior-timelinelist-api
-  name: Chaitin Tech clipboardbehavior/timelinelist API
+  name: Chaitin Tech Clipboardbehavior/timelinelist API
   description: 剪贴板行为/时间线列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -696,7 +696,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dashboard-api
-  name: Chaitin Tech dashboard API
+  name: Chaitin Tech Dashboard API
   description: The dashboard API from Chaitin Tech — 30 operation(s) for dashboard.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -712,7 +712,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dataasset-action-getfieldmetadata-api
-  name: Chaitin Tech dataasset/action/getfieldmetadata API
+  name: Chaitin Tech Dataasset/action/getfieldmetadata API
   description: 数据资产/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -756,7 +756,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dataasset-download-api
-  name: Chaitin Tech dataasset/download API
+  name: Chaitin Tech Dataasset/download API
   description: 数据资产/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -770,7 +770,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dataasset-graph-api
-  name: Chaitin Tech dataasset/graph API
+  name: Chaitin Tech Dataasset/graph API
   description: 数据资产/图谱
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -784,7 +784,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dataasset-list-api
-  name: Chaitin Tech dataasset/list API
+  name: Chaitin Tech Dataasset/list API
   description: 数据资产/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -798,7 +798,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dataasset-md5-hash-detail-api
-  name: Chaitin Tech dataasset/{md5_hash}/detail API
+  name: Chaitin Tech Dataasset/{md5 Hash}/detail API
   description: 数据资产/md5_hash 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -813,7 +813,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dataasset-md5-md5-taskinfo-api
-  name: Chaitin Tech dataasset/md5/{md5}/taskinfo API
+  name: Chaitin Tech Dataasset/md5/{md5}/taskinfo API
   description: 数据资产/MD5/md5 参数/任务信息
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -828,7 +828,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dataasset-source-source-md5-md5-dept-list-api
-  name: Chaitin Tech dataasset/source/{source}/md5/{md5}/dept/list API
+  name: Chaitin Tech Dataasset/source/{source}/md5/{md5}/dept/list API
   description: 数据资产/来源/source 参数/MD5/md5 参数/部门/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -859,7 +859,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dataasset-source-source-md5-md5-staff-list-api
-  name: Chaitin Tech dataasset/source/{source}/md5/{md5}/staff/list API
+  name: Chaitin Tech Dataasset/source/{source}/md5/{md5}/staff/list API
   description: 数据资产/来源/source 参数/MD5/md5 参数/人员/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -874,7 +874,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dataasset-stats-cnt-api
-  name: Chaitin Tech dataasset/stats/cnt API
+  name: Chaitin Tech Dataasset/stats/cnt API
   description: 数据资产/统计/数量
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -888,7 +888,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dataasset-tracing-download-api
-  name: Chaitin Tech dataasset/tracing/download API
+  name: Chaitin Tech Dataasset/tracing/download API
   description: 数据资产/溯源/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -902,7 +902,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dataasset-tracing-info-api
-  name: Chaitin Tech dataasset/tracing/info API
+  name: Chaitin Tech Dataasset/tracing/info API
   description: 数据资产/溯源/信息
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -916,7 +916,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dataasset-tracing-list-api
-  name: Chaitin Tech dataasset/tracing/list API
+  name: Chaitin Tech Dataasset/tracing/list API
   description: 数据资产/溯源/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -930,7 +930,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dataclassification-clustering-list-api
-  name: Chaitin Tech dataclassification/clustering/list API
+  name: Chaitin Tech Dataclassification/clustering/list API
   description: 数据聚类/聚类/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -944,7 +944,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-dataclassification-clustering-perform-api
-  name: Chaitin Tech dataclassification/clustering/perform API
+  name: Chaitin Tech Dataclassification/clustering/perform API
   description: 数据聚类/聚类/执行
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -973,7 +973,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-agent-version-list-api
-  name: Chaitin Tech device/agent_version/list API
+  name: Chaitin Tech Device/agent Version/list API
   description: >-
     The device/agent_version/list API from Chaitin Tech — 1 operation(s) for device/agent_version/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1002,7 +1002,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-avscantask-api
-  name: Chaitin Tech device/avscantask API
+  name: Chaitin Tech Device/avscantask API
   description: 终端管理/杀毒扫描任务
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1016,7 +1016,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-avscantask-device-list-api
-  name: Chaitin Tech device/avscantask/device/list API
+  name: Chaitin Tech Device/avscantask/device/list API
   description: >-
     The device/avscantask/device/list API from Chaitin Tech — 1 operation(s) for device/avscantask/device/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1031,7 +1031,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-avscantask-list-api
-  name: Chaitin Tech device/avscantask/list API
+  name: Chaitin Tech Device/avscantask/list API
   description: >-
     The device/avscantask/list API from Chaitin Tech — 1 operation(s) for device/avscantask/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1125,7 +1125,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-bindhistory-list-api
-  name: Chaitin Tech device/bindhistory/list API
+  name: Chaitin Tech Device/bindhistory/list API
   description: >-
     The device/bindhistory/list API from Chaitin Tech — 1 operation(s) for device/bindhistory/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1205,7 +1205,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-filedeletetask-list-api
-  name: Chaitin Tech device/filedeletetask/list API
+  name: Chaitin Tech Device/filedeletetask/list API
   description: >-
     The device/filedeletetask/list API from Chaitin Tech — 1 operation(s) for device/filedeletetask/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1220,7 +1220,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-filescantask-api
-  name: Chaitin Tech device/filescantask API
+  name: Chaitin Tech Device/filescantask API
   description: 终端管理/文件扫描任务
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1234,7 +1234,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-filescantask-list-api
-  name: Chaitin Tech device/filescantask/list API
+  name: Chaitin Tech Device/filescantask/list API
   description: >-
     The device/filescantask/list API from Chaitin Tech — 1 operation(s) for device/filescantask/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1249,7 +1249,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-filescantask-remote-api
-  name: Chaitin Tech device/filescantask/remote API
+  name: Chaitin Tech Device/filescantask/remote API
   description: >-
     The device/filescantask/remote API from Chaitin Tech — 1 operation(s) for device/filescantask/remote.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1264,7 +1264,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-filescantask-remote-list-api
-  name: Chaitin Tech device/filescantask/remote/list API
+  name: Chaitin Tech Device/filescantask/remote/list API
   description: >-
     The device/filescantask/remote/list API from Chaitin Tech — 1 operation(s) for device/filescantask/remote/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1419,7 +1419,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-filescantask-remote-test-connection-api
-  name: Chaitin Tech device/filescantask/remote/test_connection API
+  name: Chaitin Tech Device/filescantask/remote/test Connection API
   description: >-
     The device/filescantask/remote/test_connection API from Chaitin Tech — 1 operation(s) for device/filescantask/remote/test_connection.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1470,7 +1470,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-filescantask-remote-validation-api
-  name: Chaitin Tech device/filescantask/remote/validation API
+  name: Chaitin Tech Device/filescantask/remote/validation API
   description: >-
     The device/filescantask/remote/validation API from Chaitin Tech — 1 operation(s) for device/filescantask/remote/validation.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1555,7 +1555,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-list-api
-  name: Chaitin Tech device/list API
+  name: Chaitin Tech Device/list API
   description: 终端管理/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1569,7 +1569,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-plugin-list-api
-  name: Chaitin Tech device/plugin/list API
+  name: Chaitin Tech Device/plugin/list API
   description: The device/plugin/list API from Chaitin Tech — 1 operation(s) for device/plugin/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1615,7 +1615,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-software-cnt-api
-  name: Chaitin Tech device/software/cnt API
+  name: Chaitin Tech Device/software/cnt API
   description: The device/software/cnt API from Chaitin Tech — 1 operation(s) for device/software/cnt.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1629,7 +1629,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-software-list-api
-  name: Chaitin Tech device/software/list API
+  name: Chaitin Tech Device/software/list API
   description: >-
     The device/software/list API from Chaitin Tech — 1 operation(s) for device/software/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1644,7 +1644,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-tag-modify-api
-  name: Chaitin Tech device/tag/modify API
+  name: Chaitin Tech Device/tag/modify API
   description: The device/tag/modify API from Chaitin Tech — 1 operation(s) for device/tag/modify.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1658,7 +1658,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-uninstalltask-ad454e0c-9156-48ab-bc30-304f638e8ad8-instance-api
-  name: Chaitin Tech device/uninstalltask/ad454e0c-9156-48ab-bc30-304f638e8ad8/instance API
+  name: Chaitin Tech Device/uninstalltask/ad454e0c 9156 48ab Bc30 304f638e8ad8/instance API
   description: >-
     The device/uninstalltask/ad454e0c-9156-48ab-bc30-304f638e8ad8/instance API from Chaitin Tech — 1 operation(s)
     for device/uninstalltask/ad454e0c-9156-48ab-bc30-304f638e8ad8/instance.
@@ -1676,7 +1676,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-uninstalltask-api
-  name: Chaitin Tech device/uninstalltask API
+  name: Chaitin Tech Device/uninstalltask API
   description: >-
     The device/uninstalltask API from Chaitin Tech — 1 operation(s) for device/uninstalltask.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1691,7 +1691,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-device-uninstalltask-list-api
-  name: Chaitin Tech device/uninstalltask/list API
+  name: Chaitin Tech Device/uninstalltask/list API
   description: >-
     The device/uninstalltask/list API from Chaitin Tech — 1 operation(s) for device/uninstalltask/list.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1706,7 +1706,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-deviceconn-action-getfieldmetadata-api
-  name: Chaitin Tech deviceconn/action/getfieldmetadata API
+  name: Chaitin Tech Deviceconn/action/getfieldmetadata API
   description: 设备连接/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1720,7 +1720,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-deviceconn-action-offline-list-api
-  name: Chaitin Tech deviceconn/action/offline/list API
+  name: Chaitin Tech Deviceconn/action/offline/list API
   description: 设备连接/操作/离线/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1734,7 +1734,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-devicetag-list-api
-  name: Chaitin Tech devicetag/list API
+  name: Chaitin Tech Devicetag/list API
   description: 设备标签/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1748,7 +1748,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-deviceuninstall-action-getfieldmetadata-api
-  name: Chaitin Tech deviceuninstall/action/getfieldmetadata API
+  name: Chaitin Tech Deviceuninstall/action/getfieldmetadata API
   description: >-
     The deviceuninstall/action/getfieldmetadata API from Chaitin Tech — 1 operation(s) for deviceuninstall/action/getfieldmetadata.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1763,7 +1763,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-deviceuninstall-action-getfieldvalues-api
-  name: Chaitin Tech deviceuninstall/action/getfieldvalues API
+  name: Chaitin Tech Deviceuninstall/action/getfieldvalues API
   description: >-
     The deviceuninstall/action/getfieldvalues API from Chaitin Tech — 1 operation(s) for deviceuninstall/action/getfieldvalues.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
@@ -1778,7 +1778,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-discover-api-api
-  name: Chaitin Tech discover_api API
+  name: Chaitin Tech Discover API
   description: The discover_api API from Chaitin Tech — 9 operation(s) for discover_api.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1793,7 +1793,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-discover-data-api
-  name: Chaitin Tech discover_data API
+  name: Chaitin Tech Discover Data API
   description: The discover_data API from Chaitin Tech — 3 operation(s) for discover_data.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1808,7 +1808,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-disposal-approval-list-api
-  name: Chaitin Tech disposal/approval/list API
+  name: Chaitin Tech Disposal/approval/list API
   description: 审批任务/审批/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1822,7 +1822,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-disposal-approvalinstance-api
-  name: Chaitin Tech disposal/approvalinstance API
+  name: Chaitin Tech Disposal/approvalinstance API
   description: 审批任务/审批实例
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1836,7 +1836,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-disposal-approvalinstance-list-api
-  name: Chaitin Tech disposal/approvalinstance/list API
+  name: Chaitin Tech Disposal/approvalinstance/list API
   description: 审批任务/审批实例/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1850,7 +1850,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-exportrecord-getfieldmetadata-api
-  name: Chaitin Tech exportrecord/getfieldmetadata API
+  name: Chaitin Tech Exportrecord/getfieldmetadata API
   description: 导出记录/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1864,7 +1864,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-exportrecord-list-api
-  name: Chaitin Tech exportrecord/list API
+  name: Chaitin Tech Exportrecord/list API
   description: 导出记录/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1893,7 +1893,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-filebehavior-action-bulkdestroy-api
-  name: Chaitin Tech filebehavior/action/bulkdestroy API
+  name: Chaitin Tech Filebehavior/action/bulkdestroy API
   description: 文件行为/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1907,7 +1907,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-filebehavior-action-getfieldvalues-api
-  name: Chaitin Tech filebehavior/action/getfieldvalues API
+  name: Chaitin Tech Filebehavior/action/getfieldvalues API
   description: 文件行为/操作/字段值
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1921,7 +1921,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-filebehavior-list-api
-  name: Chaitin Tech filebehavior/list API
+  name: Chaitin Tech Filebehavior/list API
   description: 文件行为/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1950,7 +1950,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-filebehavior-stafflist-api
-  name: Chaitin Tech filebehavior/stafflist API
+  name: Chaitin Tech Filebehavior/stafflist API
   description: 文件行为/人员列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1964,7 +1964,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-filebehavior-timelinelist-api
-  name: Chaitin Tech filebehavior/timelinelist API
+  name: Chaitin Tech Filebehavior/timelinelist API
   description: 文件行为/时间线列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1978,7 +1978,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-filerule-machinelearning-list-api
-  name: Chaitin Tech filerule/machinelearning/list API
+  name: Chaitin Tech Filerule/machinelearning/list API
   description: 文件规则/机器学习/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -1992,7 +1992,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-filter-api
-  name: Chaitin Tech filter API
+  name: Chaitin Tech Filter API
   description: The filter API from Chaitin Tech — 5 operation(s) for filter.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2008,7 +2008,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-action-bulkdestroy-api
-  name: Chaitin Tech installer/action/bulkdestroy API
+  name: Chaitin Tech Installer/action/bulkdestroy API
   description: 终端安装包/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2022,7 +2022,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-download-config-remove-api
-  name: Chaitin Tech installer/download/config/remove API
+  name: Chaitin Tech Installer/download/config/remove API
   description: 终端安装包/下载/config 接口/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2036,7 +2036,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-download-search-tree-api
-  name: Chaitin Tech installer/download/search/tree API
+  name: Chaitin Tech Installer/download/search/tree API
   description: 终端安装包/下载/search 接口/tree 接口
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2050,7 +2050,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-downloadmeta-list-api
-  name: Chaitin Tech installer/downloadmeta/list API
+  name: Chaitin Tech Installer/downloadmeta/list API
   description: 终端安装包/下载元数据/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2079,7 +2079,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-list-api
-  name: Chaitin Tech installer/list API
+  name: Chaitin Tech Installer/list API
   description: 终端安装包/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2108,7 +2108,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-simpletask-api
-  name: Chaitin Tech installer/simpletask API
+  name: Chaitin Tech Installer/simpletask API
   description: 终端安装包/简易任务
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2122,7 +2122,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-simpletask-list-api
-  name: Chaitin Tech installer/simpletask/list API
+  name: Chaitin Tech Installer/simpletask/list API
   description: 终端安装包/简易任务/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2136,7 +2136,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-simpletask-simple-task-id-action-api
-  name: Chaitin Tech installer/simpletask/{simple_task_id}/action API
+  name: Chaitin Tech Installer/simpletask/{simple Task Id}/action API
   description: 终端安装包/简易任务/simple_task_id 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2151,7 +2151,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-simpletask-simple-task-id-action-remove-api
-  name: Chaitin Tech installer/simpletask/{simple_task_id}/action/remove API
+  name: Chaitin Tech Installer/simpletask/{simple Task Id}/action/remove API
   description: 终端安装包/简易任务/simple_task_id 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2166,7 +2166,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-simpletask-simple-task-id-api
-  name: Chaitin Tech installer/simpletask/{simple_task_id} API
+  name: Chaitin Tech Installer/simpletask/{simple Task Id} API
   description: 终端安装包/简易任务/simple_task_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2181,7 +2181,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-simpletask-simple-task-id-detail-api
-  name: Chaitin Tech installer/simpletask/{simple_task_id}/detail API
+  name: Chaitin Tech Installer/simpletask/{simple Task Id}/detail API
   description: 终端安装包/简易任务/simple_task_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2196,7 +2196,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-statistic-api
-  name: Chaitin Tech installer/statistic API
+  name: Chaitin Tech Installer/statistic API
   description: 终端安装包/统计分析
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2210,7 +2210,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-task-api
-  name: Chaitin Tech installer/task API
+  name: Chaitin Tech Installer/task API
   description: 终端安装包/任务
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2224,7 +2224,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-task-install-task-id-action-api
-  name: Chaitin Tech installer/task/{install_task_id}/action API
+  name: Chaitin Tech Installer/task/{install Task Id}/action API
   description: 终端安装包/任务/install_task_id 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2239,7 +2239,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-task-install-task-id-api
-  name: Chaitin Tech installer/task/{install_task_id} API
+  name: Chaitin Tech Installer/task/{install Task Id} API
   description: 终端安装包/任务/install_task_id 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2254,7 +2254,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-task-install-task-id-detail-api
-  name: Chaitin Tech installer/task/{install_task_id}/detail API
+  name: Chaitin Tech Installer/task/{install Task Id}/detail API
   description: 终端安装包/任务/install_task_id 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2269,7 +2269,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-task-list-api
-  name: Chaitin Tech installer/task/list API
+  name: Chaitin Tech Installer/task/list API
   description: 终端安装包/任务/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2283,7 +2283,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-taskstep-api
-  name: Chaitin Tech installer/taskstep API
+  name: Chaitin Tech Installer/taskstep API
   description: 终端安装包/任务步骤
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2357,7 +2357,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-tast-template-retrieve-api
-  name: Chaitin Tech installer/tast_template/retrieve API
+  name: Chaitin Tech Installer/tast Template/retrieve API
   description: 终端安装包/任务模板/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2371,7 +2371,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-tast-template-update-api
-  name: Chaitin Tech installer/tast_template/update API
+  name: Chaitin Tech Installer/tast Template/update API
   description: 终端安装包/任务模板/更新
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2385,7 +2385,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-version-device-distribution-api
-  name: Chaitin Tech installer/version/device/distribution API
+  name: Chaitin Tech Installer/version/device/distribution API
   description: 终端安装包/版本/设备管理/分布
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2399,7 +2399,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-installer-version-device-list-api
-  name: Chaitin Tech installer/version/device/list API
+  name: Chaitin Tech Installer/version/device/list API
   description: 终端安装包/版本/设备管理/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2413,7 +2413,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-intranet-api
-  name: Chaitin Tech intranet API
+  name: Chaitin Tech Intranet API
   description: The intranet API from Chaitin Tech — 4 operation(s) for intranet.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2445,7 +2445,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-label-api
-  name: Chaitin Tech label API
+  name: Chaitin Tech Label API
   description: The label API from Chaitin Tech — 6 operation(s) for label.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2461,7 +2461,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-learning-api
-  name: Chaitin Tech learning API
+  name: Chaitin Tech Learning API
   description: The learning API from Chaitin Tech — 2 operation(s) for learning.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2491,7 +2491,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-log-attack-api
-  name: Chaitin Tech log/attack API
+  name: Chaitin Tech Log/attack API
   description: The log/attack API from Chaitin Tech — 2 operation(s) for log/attack.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2505,7 +2505,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-log-audit-api
-  name: Chaitin Tech log/audit API
+  name: Chaitin Tech Log/audit API
   description: The log/audit API from Chaitin Tech — 1 operation(s) for log/audit.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2519,7 +2519,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-log-rule-api
-  name: Chaitin Tech log/rule API
+  name: Chaitin Tech Log/rule API
   description: The log/rule API from Chaitin Tech — 2 operation(s) for log/rule.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2533,14 +2533,15 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-machinelearning-api
-  name: Chaitin Tech machinelearning API
+  name: Chaitin Tech Machinelearning API
   description: 机器学习
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Machine-Learning
+  - Machine Learning
   tags_raw:
   - machinelearning
+  - Machine-Learning
   properties:
   - type: OpenAPI
     url: openapi/chaitin-machinelearning-api-openapi.yml
@@ -2549,7 +2550,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-machinelearning-list-api
-  name: Chaitin Tech machinelearning/list API
+  name: Chaitin Tech Machinelearning/list API
   description: 机器学习/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2593,7 +2594,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-merge-api-api
-  name: Chaitin Tech merge_api API
+  name: Chaitin Tech Merge API
   description: The merge_api API from Chaitin Tech — 2 operation(s) for merge_api.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2608,7 +2609,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-module-api
-  name: Chaitin Tech module API
+  name: Chaitin Tech Module API
   description: The module API from Chaitin Tech — 1 operation(s) for module.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2624,7 +2625,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-notificationbot-api
-  name: Chaitin Tech notificationbot API
+  name: Chaitin Tech Notificationbot API
   description: 通知机器人
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2638,7 +2639,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-notificationbot-bot-test-api
-  name: Chaitin Tech notificationbot/{bot}/test API
+  name: Chaitin Tech Notificationbot/{bot}/test API
   description: 通知机器人/bot 参数/测试
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2653,7 +2654,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-options-api
-  name: Chaitin Tech options API
+  name: Chaitin Tech Options API
   description: The options API from Chaitin Tech — 1 operation(s) for options.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2669,7 +2670,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-plugin-api
-  name: Chaitin Tech plugin API
+  name: Chaitin Tech Plugin API
   description: The plugin API from Chaitin Tech — 4 operation(s) for plugin.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2685,7 +2686,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-api
-  name: Chaitin Tech policy API
+  name: Chaitin Tech Policy API
   description: The policy API from Chaitin Tech — 6 operation(s) for policy.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2701,7 +2702,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-browserplugin-whitelist-api
-  name: Chaitin Tech policy/browserplugin/whitelist API
+  name: Chaitin Tech Policy/browserplugin/whitelist API
   description: 策略管理/浏览器插件/白名单管理
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2715,7 +2716,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-channel-api
-  name: Chaitin Tech policy/channel API
+  name: Chaitin Tech Policy/channel API
   description: 策略管理/通道
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2729,7 +2730,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-channel-entitywhitelist-list-api
-  name: Chaitin Tech policy/channel/entitywhitelist/list API
+  name: Chaitin Tech Policy/channel/entitywhitelist/list API
   description: 策略管理/通道/实体白名单/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2773,7 +2774,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-clipboard-api
-  name: Chaitin Tech policy/clipboard API
+  name: Chaitin Tech Policy/clipboard API
   description: 策略管理/剪贴板
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2817,7 +2818,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-codecontrol-configwhitelist-create-api
-  name: Chaitin Tech policy/codecontrol/configwhitelist/create API
+  name: Chaitin Tech Policy/codecontrol/configwhitelist/create API
   description: 策略管理/代码管控/配置白名单/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2831,7 +2832,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-codecontrol-configwhitelist-delete-api
-  name: Chaitin Tech policy/codecontrol/configwhitelist/delete API
+  name: Chaitin Tech Policy/codecontrol/configwhitelist/delete API
   description: 策略管理/代码管控/配置白名单/删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2845,7 +2846,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-codecontrol-configwhitelist-list-api
-  name: Chaitin Tech policy/codecontrol/configwhitelist/list API
+  name: Chaitin Tech Policy/codecontrol/configwhitelist/list API
   description: 策略管理/代码管控/配置白名单/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2859,7 +2860,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-codecontrol-configwhitelist-synccodecontrolconfig-api
-  name: Chaitin Tech policy/codecontrol/configwhitelist/synccodecontrolconfig API
+  name: Chaitin Tech Policy/codecontrol/configwhitelist/synccodecontrolconfig API
   description: 策略管理/代码管控/配置白名单/同步代码管控配置
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2873,7 +2874,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-codecontrol-controlwhitelist-batchremove-api
-  name: Chaitin Tech policy/codecontrol/controlwhitelist/batchremove API
+  name: Chaitin Tech Policy/codecontrol/controlwhitelist/batchremove API
   description: 策略管理/代码管控/控制白名单/batchremove 接口
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2917,7 +2918,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-codecontrol-controlwhitelist-create-api
-  name: Chaitin Tech policy/codecontrol/controlwhitelist/create API
+  name: Chaitin Tech Policy/codecontrol/controlwhitelist/create API
   description: 策略管理/代码管控/控制白名单/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2931,7 +2932,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-codecontrol-controlwhitelist-list-api
-  name: Chaitin Tech policy/codecontrol/controlwhitelist/list API
+  name: Chaitin Tech Policy/codecontrol/controlwhitelist/list API
   description: 策略管理/代码管控/控制白名单/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2945,7 +2946,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-codecontrol-create-api
-  name: Chaitin Tech policy/codecontrol/create API
+  name: Chaitin Tech Policy/codecontrol/create API
   description: 策略管理/代码管控/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2959,7 +2960,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-codecontrol-entitywhitelist-batchremove-api
-  name: Chaitin Tech policy/codecontrol/entitywhitelist/batchremove API
+  name: Chaitin Tech Policy/codecontrol/entitywhitelist/batchremove API
   description: 策略管理/代码管控/实体白名单/batchremove 接口
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2973,7 +2974,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-codecontrol-entitywhitelist-list-api
-  name: Chaitin Tech policy/codecontrol/entitywhitelist/list API
+  name: Chaitin Tech Policy/codecontrol/entitywhitelist/list API
   description: 策略管理/代码管控/实体白名单/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -2987,7 +2988,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-codecontrol-list-api
-  name: Chaitin Tech policy/codecontrol/list API
+  name: Chaitin Tech Policy/codecontrol/list API
   description: 策略管理/代码管控/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3061,7 +3062,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-email-api
-  name: Chaitin Tech policy/email API
+  name: Chaitin Tech Policy/email API
   description: 策略管理/邮件
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3075,7 +3076,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-email-entitywhitelist-action-bulkdestroy-api
-  name: Chaitin Tech policy/email/entitywhitelist/action/bulkdestroy API
+  name: Chaitin Tech Policy/email/entitywhitelist/action/bulkdestroy API
   description: 策略管理/邮件/实体白名单/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3089,7 +3090,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-email-entitywhitelist-api
-  name: Chaitin Tech policy/email/entitywhitelist API
+  name: Chaitin Tech Policy/email/entitywhitelist API
   description: 策略管理/邮件/实体白名单
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3103,7 +3104,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-email-entitywhitelist-list-api
-  name: Chaitin Tech policy/email/entitywhitelist/list API
+  name: Chaitin Tech Policy/email/entitywhitelist/list API
   description: 策略管理/邮件/实体白名单/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3117,7 +3118,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-email-list-api
-  name: Chaitin Tech policy/email/list API
+  name: Chaitin Tech Policy/email/list API
   description: 策略管理/邮件/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3131,7 +3132,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-email-uid-action-api
-  name: Chaitin Tech policy/email/{uid}/action API
+  name: Chaitin Tech Policy/email/{uid}/action API
   description: 策略管理/邮件/uid 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3146,7 +3147,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-email-uid-action-remove-api
-  name: Chaitin Tech policy/email/{uid}/action/remove API
+  name: Chaitin Tech Policy/email/{uid}/action/remove API
   description: 策略管理/邮件/uid 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3161,7 +3162,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-email-uid-api
-  name: Chaitin Tech policy/email/{uid} API
+  name: Chaitin Tech Policy/email/{uid} API
   description: 策略管理/邮件/uid 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3176,7 +3177,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-email-uid-detail-api
-  name: Chaitin Tech policy/email/{uid}/detail API
+  name: Chaitin Tech Policy/email/{uid}/detail API
   description: 策略管理/邮件/uid 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3191,7 +3192,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-externaldevice-dbc780f7-4099-48e2-8db4-5fe000c2022a-api
-  name: Chaitin Tech policy/externaldevice/dbc780f7-4099-48e2-8db4-5fe000c2022a API
+  name: Chaitin Tech Policy/externaldevice/dbc780f7 4099 48e2 8db4 5fe000c2022a API
   description: 策略管理/外设/指定资源
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3206,7 +3207,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-externaldevice-entitywhitelist-list-api
-  name: Chaitin Tech policy/externaldevice/entitywhitelist/list API
+  name: Chaitin Tech Policy/externaldevice/entitywhitelist/list API
   description: 策略管理/外设/实体白名单/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3220,7 +3221,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-externaldevice-list-api
-  name: Chaitin Tech policy/externaldevice/list API
+  name: Chaitin Tech Policy/externaldevice/list API
   description: 策略管理/外设/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3234,7 +3235,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-landing-api
-  name: Chaitin Tech policy/landing API
+  name: Chaitin Tech Policy/landing API
   description: 策略管理/落地
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3248,7 +3249,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-landing-entitywhitelist-action-bulkdestroy-api
-  name: Chaitin Tech policy/landing/entitywhitelist/action/bulkdestroy API
+  name: Chaitin Tech Policy/landing/entitywhitelist/action/bulkdestroy API
   description: 策略管理/落地/实体白名单/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3262,7 +3263,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-landing-entitywhitelist-api
-  name: Chaitin Tech policy/landing/entitywhitelist API
+  name: Chaitin Tech Policy/landing/entitywhitelist API
   description: 策略管理/落地/实体白名单
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3276,7 +3277,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-landing-entitywhitelist-list-api
-  name: Chaitin Tech policy/landing/entitywhitelist/list API
+  name: Chaitin Tech Policy/landing/entitywhitelist/list API
   description: 策略管理/落地/实体白名单/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3290,7 +3291,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-landing-list-api
-  name: Chaitin Tech policy/landing/list API
+  name: Chaitin Tech Policy/landing/list API
   description: 策略管理/落地/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3304,7 +3305,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-landing-uid-action-api
-  name: Chaitin Tech policy/landing/{uid}/action API
+  name: Chaitin Tech Policy/landing/{uid}/action API
   description: 策略管理/落地/uid 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3319,7 +3320,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-landing-uid-action-remove-api
-  name: Chaitin Tech policy/landing/{uid}/action/remove API
+  name: Chaitin Tech Policy/landing/{uid}/action/remove API
   description: 策略管理/落地/uid 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3334,7 +3335,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-landing-uid-api
-  name: Chaitin Tech policy/landing/{uid} API
+  name: Chaitin Tech Policy/landing/{uid} API
   description: 策略管理/落地/uid 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3349,7 +3350,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-landing-uid-detail-api
-  name: Chaitin Tech policy/landing/{uid}/detail API
+  name: Chaitin Tech Policy/landing/{uid}/detail API
   description: 策略管理/落地/uid 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3364,7 +3365,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-list-api
-  name: Chaitin Tech policy/list API
+  name: Chaitin Tech Policy/list API
   description: 策略管理/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3378,7 +3379,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-network-api
-  name: Chaitin Tech policy/network API
+  name: Chaitin Tech Policy/network API
   description: 策略管理/网络
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3392,7 +3393,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-phishing-protection-create-api
-  name: Chaitin Tech policy/phishing_protection/create API
+  name: Chaitin Tech Policy/phishing Protection/create API
   description: 策略管理/钓鱼防护/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3406,7 +3407,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-phishing-protection-list-api
-  name: Chaitin Tech policy/phishing_protection/list API
+  name: Chaitin Tech Policy/phishing Protection/list API
   description: 策略管理/钓鱼防护/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3480,7 +3481,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-phishing-protection-template-depend-api
-  name: Chaitin Tech policy/phishing_protection/template/depend API
+  name: Chaitin Tech Policy/phishing Protection/template/depend API
   description: 策略管理/钓鱼防护/模板/依赖
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3494,7 +3495,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-privacy-protection-create-api
-  name: Chaitin Tech policy/privacy_protection/create API
+  name: Chaitin Tech Policy/privacy Protection/create API
   description: 策略管理/隐私保护/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3508,7 +3509,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-privacy-protection-list-api
-  name: Chaitin Tech policy/privacy_protection/list API
+  name: Chaitin Tech Policy/privacy Protection/list API
   description: 策略管理/隐私保护/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3597,7 +3598,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-realtime-monitor-comment-create-api
-  name: Chaitin Tech policy/realtime_monitor/comment/create API
+  name: Chaitin Tech Policy/realtime Monitor/comment/create API
   description: 策略管理/实时监控/评论/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3611,7 +3612,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-realtime-monitor-comment-list-api
-  name: Chaitin Tech policy/realtime_monitor/comment/list API
+  name: Chaitin Tech Policy/realtime Monitor/comment/list API
   description: 策略管理/实时监控/评论/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3625,7 +3626,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-realtime-monitor-create-api
-  name: Chaitin Tech policy/realtime_monitor/create API
+  name: Chaitin Tech Policy/realtime Monitor/create API
   description: 策略管理/实时监控/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3639,7 +3640,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-realtime-monitor-list-api
-  name: Chaitin Tech policy/realtime_monitor/list API
+  name: Chaitin Tech Policy/realtime Monitor/list API
   description: 策略管理/实时监控/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3698,7 +3699,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-realtime-monitor-record-action-getscreenshotmetadata-api
-  name: Chaitin Tech policy/realtime_monitor/record/action/getscreenshotmetadata API
+  name: Chaitin Tech Policy/realtime Monitor/record/action/getscreenshotmetadata API
   description: 策略管理/实时监控/记录/操作/截图元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3713,7 +3714,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-realtime-monitor-record-list-api
-  name: Chaitin Tech policy/realtime_monitor/record/list API
+  name: Chaitin Tech Policy/realtime Monitor/record/list API
   description: 策略管理/实时监控/记录/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3727,7 +3728,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-remote-control-list-api
-  name: Chaitin Tech policy/remote_control/list API
+  name: Chaitin Tech Policy/remote Control/list API
   description: 策略管理/远程控制/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3771,7 +3772,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-soft-network-api
-  name: Chaitin Tech policy/soft_network API
+  name: Chaitin Tech Policy/soft Network API
   description: 策略管理/软件联网
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3785,7 +3786,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-soft-network-list-api
-  name: Chaitin Tech policy/soft_network/list API
+  name: Chaitin Tech Policy/soft Network/list API
   description: 策略管理/软件联网/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3844,7 +3845,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-software-processwhitelist-api
-  name: Chaitin Tech policy/software/processwhitelist API
+  name: Chaitin Tech Policy/software/processwhitelist API
   description: 策略管理/软件分发与卸载/进程白名单
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3858,7 +3859,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-ted-api
-  name: Chaitin Tech policy/ted API
+  name: Chaitin Tech Policy/ted API
   description: 策略管理/TED
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3872,7 +3873,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-ted-entitywhitelist-api
-  name: Chaitin Tech policy/ted/entitywhitelist API
+  name: Chaitin Tech Policy/ted/entitywhitelist API
   description: 策略管理/TED/实体白名单
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3886,7 +3887,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-ted-entitywhitelist-batchremove-api
-  name: Chaitin Tech policy/ted/entitywhitelist/batchremove API
+  name: Chaitin Tech Policy/ted/entitywhitelist/batchremove API
   description: 策略管理/TED/实体白名单/batchremove 接口
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3900,7 +3901,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-ted-entitywhitelist-list-api
-  name: Chaitin Tech policy/ted/entitywhitelist/list API
+  name: Chaitin Tech Policy/ted/entitywhitelist/list API
   description: 策略管理/TED/实体白名单/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3914,7 +3915,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-ted-list-api
-  name: Chaitin Tech policy/ted/list API
+  name: Chaitin Tech Policy/ted/list API
   description: 策略管理/TED/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3928,7 +3929,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-ted-uid-action-api
-  name: Chaitin Tech policy/ted/{uid}/action API
+  name: Chaitin Tech Policy/ted/{uid}/action API
   description: 策略管理/TED/uid 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3943,7 +3944,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-ted-uid-action-remove-api
-  name: Chaitin Tech policy/ted/{uid}/action/remove API
+  name: Chaitin Tech Policy/ted/{uid}/action/remove API
   description: 策略管理/TED/uid 参数/操作/移除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3958,7 +3959,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-ted-uid-api
-  name: Chaitin Tech policy/ted/{uid} API
+  name: Chaitin Tech Policy/ted/{uid} API
   description: 策略管理/TED/uid 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3973,7 +3974,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-ted-uid-detail-api
-  name: Chaitin Tech policy/ted/{uid}/detail API
+  name: Chaitin Tech Policy/ted/{uid}/detail API
   description: 策略管理/TED/uid 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -3988,7 +3989,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-webpost-control-create-api
-  name: Chaitin Tech policy/webpost_control/create API
+  name: Chaitin Tech Policy/webpost Control/create API
   description: 策略管理/网页发帖管控/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4002,7 +4003,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-webpost-control-entitywhitelist-action-bulkdestroy-api
-  name: Chaitin Tech policy/webpost_control/entitywhitelist/action/bulkdestroy API
+  name: Chaitin Tech Policy/webpost Control/entitywhitelist/action/bulkdestroy API
   description: 策略管理/网页发帖管控/实体白名单/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4017,7 +4018,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-webpost-control-entitywhitelist-create-api
-  name: Chaitin Tech policy/webpost_control/entitywhitelist/create API
+  name: Chaitin Tech Policy/webpost Control/entitywhitelist/create API
   description: 策略管理/网页发帖管控/实体白名单/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4031,7 +4032,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-webpost-control-entitywhitelist-list-api
-  name: Chaitin Tech policy/webpost_control/entitywhitelist/list API
+  name: Chaitin Tech Policy/webpost Control/entitywhitelist/list API
   description: 策略管理/网页发帖管控/实体白名单/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4045,7 +4046,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-webpost-control-list-api
-  name: Chaitin Tech policy/webpost_control/list API
+  name: Chaitin Tech Policy/webpost Control/list API
   description: 策略管理/网页发帖管控/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4119,7 +4120,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-webpost-control-whitelist-action-bulkdestroy-api
-  name: Chaitin Tech policy/webpost_control/whitelist/action/bulkdestroy API
+  name: Chaitin Tech Policy/webpost Control/whitelist/action/bulkdestroy API
   description: 策略管理/网页发帖管控/白名单管理/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4163,7 +4164,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-webpost-control-whitelist-create-api
-  name: Chaitin Tech policy/webpost_control/whitelist/create API
+  name: Chaitin Tech Policy/webpost Control/whitelist/create API
   description: 策略管理/网页发帖管控/白名单管理/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4177,7 +4178,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policy-webpost-control-whitelist-list-api
-  name: Chaitin Tech policy/webpost_control/whitelist/list API
+  name: Chaitin Tech Policy/webpost Control/whitelist/list API
   description: 策略管理/网页发帖管控/白名单管理/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4191,7 +4192,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-aicls-action-getfieldmetadata-api
-  name: Chaitin Tech policylog/aicls/action/getfieldmetadata API
+  name: Chaitin Tech Policylog/aicls/action/getfieldmetadata API
   description: 日志中心/AI 分类/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4205,7 +4206,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-aicls-action-getfieldvalues-api
-  name: Chaitin Tech policylog/aicls/action/getfieldvalues API
+  name: Chaitin Tech Policylog/aicls/action/getfieldvalues API
   description: 日志中心/AI 分类/操作/字段值
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4219,7 +4220,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-browserplugin-action-batchupdatestatus-api
-  name: Chaitin Tech policylog/browserplugin/action/batchupdatestatus API
+  name: Chaitin Tech Policylog/browserplugin/action/batchupdatestatus API
   description: 日志中心/浏览器插件/操作/批量更新状态
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4233,7 +4234,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-browserplugin-action-bulkdestroy-api
-  name: Chaitin Tech policylog/browserplugin/action/bulkdestroy API
+  name: Chaitin Tech Policylog/browserplugin/action/bulkdestroy API
   description: 日志中心/浏览器插件/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4247,7 +4248,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-browserplugin-action-getfieldmetadata-api
-  name: Chaitin Tech policylog/browserplugin/action/getfieldmetadata API
+  name: Chaitin Tech Policylog/browserplugin/action/getfieldmetadata API
   description: 日志中心/浏览器插件/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4261,7 +4262,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-browserplugin-action-getfieldvalues-api
-  name: Chaitin Tech policylog/browserplugin/action/getfieldvalues API
+  name: Chaitin Tech Policylog/browserplugin/action/getfieldvalues API
   description: 日志中心/浏览器插件/操作/字段值
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4275,7 +4276,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-browserplugin-download-api
-  name: Chaitin Tech policylog/browserplugin/download API
+  name: Chaitin Tech Policylog/browserplugin/download API
   description: 日志中心/浏览器插件/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4289,7 +4290,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-browserplugin-list-api
-  name: Chaitin Tech policylog/browserplugin/list API
+  name: Chaitin Tech Policylog/browserplugin/list API
   description: 日志中心/浏览器插件/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4318,7 +4319,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-browserplugin-statsbystatus-api
-  name: Chaitin Tech policylog/browserplugin/statsbystatus API
+  name: Chaitin Tech Policylog/browserplugin/statsbystatus API
   description: 日志中心/浏览器插件/按状态统计
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4332,7 +4333,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-channel-action-getfieldmetadata-api
-  name: Chaitin Tech policylog/channel/action/getfieldmetadata API
+  name: Chaitin Tech Policylog/channel/action/getfieldmetadata API
   description: 日志中心/通道/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4346,7 +4347,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-channel-action-getfieldvalues-api
-  name: Chaitin Tech policylog/channel/action/getfieldvalues API
+  name: Chaitin Tech Policylog/channel/action/getfieldvalues API
   description: 日志中心/通道/操作/字段值
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4360,7 +4361,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-channel-download-api
-  name: Chaitin Tech policylog/channel/download API
+  name: Chaitin Tech Policylog/channel/download API
   description: 日志中心/通道/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4404,7 +4405,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-channel-list-api
-  name: Chaitin Tech policylog/channel/list API
+  name: Chaitin Tech Policylog/channel/list API
   description: 日志中心/通道/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4433,7 +4434,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-channel-stafflist-api
-  name: Chaitin Tech policylog/channel/stafflist API
+  name: Chaitin Tech Policylog/channel/stafflist API
   description: 日志中心/通道/人员列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4447,7 +4448,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-channel-statsbystatus-api
-  name: Chaitin Tech policylog/channel/statsbystatus API
+  name: Chaitin Tech Policylog/channel/statsbystatus API
   description: 日志中心/通道/按状态统计
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4461,7 +4462,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-channel-timelinelist-api
-  name: Chaitin Tech policylog/channel/timelinelist API
+  name: Chaitin Tech Policylog/channel/timelinelist API
   description: 日志中心/通道/时间线列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4475,7 +4476,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-clipboard-action-getfieldmetadata-api
-  name: Chaitin Tech policylog/clipboard/action/getfieldmetadata API
+  name: Chaitin Tech Policylog/clipboard/action/getfieldmetadata API
   description: 日志中心/剪贴板/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4489,7 +4490,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-clipboard-list-api
-  name: Chaitin Tech policylog/clipboard/list API
+  name: Chaitin Tech Policylog/clipboard/list API
   description: 日志中心/剪贴板/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4503,7 +4504,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-clipboard-stafflist-api
-  name: Chaitin Tech policylog/clipboard/stafflist API
+  name: Chaitin Tech Policylog/clipboard/stafflist API
   description: 日志中心/剪贴板/人员列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4517,7 +4518,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-clipboard-timelinelist-api
-  name: Chaitin Tech policylog/clipboard/timelinelist API
+  name: Chaitin Tech Policylog/clipboard/timelinelist API
   description: 日志中心/剪贴板/时间线列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4531,7 +4532,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-code-action-getfieldmetadata-api
-  name: Chaitin Tech policylog/code/action/getfieldmetadata API
+  name: Chaitin Tech Policylog/code/action/getfieldmetadata API
   description: 日志中心/代码/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4545,7 +4546,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-code-download-api
-  name: Chaitin Tech policylog/code/download API
+  name: Chaitin Tech Policylog/code/download API
   description: 日志中心/代码/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4559,7 +4560,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-code-stafflist-api
-  name: Chaitin Tech policylog/code/stafflist API
+  name: Chaitin Tech Policylog/code/stafflist API
   description: 日志中心/代码/人员列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4573,7 +4574,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-code-timelinelist-api
-  name: Chaitin Tech policylog/code/timelinelist API
+  name: Chaitin Tech Policylog/code/timelinelist API
   description: 日志中心/代码/时间线列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4587,7 +4588,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-compliance-action-getfieldmetadata-api
-  name: Chaitin Tech policylog/compliance/action/getfieldmetadata API
+  name: Chaitin Tech Policylog/compliance/action/getfieldmetadata API
   description: 日志中心/合规/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4601,7 +4602,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-compliance-action-getfieldvalues-api
-  name: Chaitin Tech policylog/compliance/action/getfieldvalues API
+  name: Chaitin Tech Policylog/compliance/action/getfieldvalues API
   description: 日志中心/合规/操作/字段值
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4615,7 +4616,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-compliance-list-api
-  name: Chaitin Tech policylog/compliance/list API
+  name: Chaitin Tech Policylog/compliance/list API
   description: 日志中心/合规/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4629,7 +4630,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-email-action-getfieldmetadata-api
-  name: Chaitin Tech policylog/email/action/getfieldmetadata API
+  name: Chaitin Tech Policylog/email/action/getfieldmetadata API
   description: 日志中心/邮件/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4643,7 +4644,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-email-stafflist-api
-  name: Chaitin Tech policylog/email/stafflist API
+  name: Chaitin Tech Policylog/email/stafflist API
   description: 日志中心/邮件/人员列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4657,7 +4658,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-email-timelinelist-api
-  name: Chaitin Tech policylog/email/timelinelist API
+  name: Chaitin Tech Policylog/email/timelinelist API
   description: 日志中心/邮件/时间线列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4671,7 +4672,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-externaldevice-action-getfieldmetadata-api
-  name: Chaitin Tech policylog/externaldevice/action/getfieldmetadata API
+  name: Chaitin Tech Policylog/externaldevice/action/getfieldmetadata API
   description: 日志中心/外设/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4685,7 +4686,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-externaldevice-list-api
-  name: Chaitin Tech policylog/externaldevice/list API
+  name: Chaitin Tech Policylog/externaldevice/list API
   description: 日志中心/外设/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4699,7 +4700,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-im-action-getfieldmetadata-api
-  name: Chaitin Tech policylog/im/action/getfieldmetadata API
+  name: Chaitin Tech Policylog/im/action/getfieldmetadata API
   description: 日志中心/即时通讯/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4713,7 +4714,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-im-list-api
-  name: Chaitin Tech policylog/im/list API
+  name: Chaitin Tech Policylog/im/list API
   description: 日志中心/即时通讯/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4727,7 +4728,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-im-stafflist-api
-  name: Chaitin Tech policylog/im/stafflist API
+  name: Chaitin Tech Policylog/im/stafflist API
   description: 日志中心/即时通讯/人员列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4741,7 +4742,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-im-timelinelist-api
-  name: Chaitin Tech policylog/im/timelinelist API
+  name: Chaitin Tech Policylog/im/timelinelist API
   description: 日志中心/即时通讯/时间线列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4770,7 +4771,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-log-file-similarity-download-api
-  name: Chaitin Tech policylog/log_file_similarity/download API
+  name: Chaitin Tech Policylog/log File Similarity/download API
   description: 日志中心/日志文件相似度/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4784,7 +4785,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-log-file-similarity-list-api
-  name: Chaitin Tech policylog/log_file_similarity/list API
+  name: Chaitin Tech Policylog/log File Similarity/list API
   description: 日志中心/日志文件相似度/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4798,7 +4799,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-log-file-similarity-simhash-api
-  name: Chaitin Tech policylog/log_file_similarity/simhash API
+  name: Chaitin Tech Policylog/log File Similarity/simhash API
   description: 日志中心/日志文件相似度/SimHash
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4812,7 +4813,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-network-action-getfieldmetadata-api
-  name: Chaitin Tech policylog/network/action/getfieldmetadata API
+  name: Chaitin Tech Policylog/network/action/getfieldmetadata API
   description: 日志中心/网络/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4826,7 +4827,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-network-download-api
-  name: Chaitin Tech policylog/network/download API
+  name: Chaitin Tech Policylog/network/download API
   description: 日志中心/网络/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4840,7 +4841,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-software-action-getfieldmetadata-api
-  name: Chaitin Tech policylog/software/action/getfieldmetadata API
+  name: Chaitin Tech Policylog/software/action/getfieldmetadata API
   description: 日志中心/软件分发与卸载/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4854,7 +4855,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-software-list-api
-  name: Chaitin Tech policylog/software/list API
+  name: Chaitin Tech Policylog/software/list API
   description: 日志中心/软件分发与卸载/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4868,7 +4869,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-softwarenetwork-action-getfieldmetadata-api
-  name: Chaitin Tech policylog/softwarenetwork/action/getfieldmetadata API
+  name: Chaitin Tech Policylog/softwarenetwork/action/getfieldmetadata API
   description: 日志中心/软件联网/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4882,7 +4883,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-softwarenetwork-download-api
-  name: Chaitin Tech policylog/softwarenetwork/download API
+  name: Chaitin Tech Policylog/softwarenetwork/download API
   description: 日志中心/软件联网/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4896,7 +4897,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-softwarenetwork-list-api
-  name: Chaitin Tech policylog/softwarenetwork/list API
+  name: Chaitin Tech Policylog/softwarenetwork/list API
   description: 日志中心/软件联网/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4910,7 +4911,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-policylog-ted-action-getfieldmetadata-api
-  name: Chaitin Tech policylog/ted/action/getfieldmetadata API
+  name: Chaitin Tech Policylog/ted/action/getfieldmetadata API
   description: 日志中心/TED/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4924,7 +4925,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-api
-  name: Chaitin Tech report API
+  name: Chaitin Tech Report API
   description: The report API from Chaitin Tech — 3 operation(s) for report.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4940,7 +4941,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-builtinchart-create-api
-  name: Chaitin Tech report/dashboard/builtinchart/create API
+  name: Chaitin Tech Report/dashboard/builtinchart/create API
   description: 报表中心/仪表盘/内置图表/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4954,7 +4955,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-builtinchart-list-api
-  name: Chaitin Tech report/dashboard/builtinchart/list API
+  name: Chaitin Tech Report/dashboard/builtinchart/list API
   description: 报表中心/仪表盘/内置图表/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -4998,7 +4999,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-chart-copy-api
-  name: Chaitin Tech report/dashboard/chart/<>/copy API
+  name: Chaitin Tech Report/dashboard/chart/<>/copy API
   description: 报表中心/仪表盘/图表/ 参数/copy 接口
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5012,7 +5013,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-chart-create-api
-  name: Chaitin Tech report/dashboard/chart/create API
+  name: Chaitin Tech Report/dashboard/chart/create API
   description: 报表中心/仪表盘/图表/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5026,7 +5027,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-chart-delete-api
-  name: Chaitin Tech report/dashboard/chart/<>/delete API
+  name: Chaitin Tech Report/dashboard/chart/<>/delete API
   description: 报表中心/仪表盘/图表/ 参数/删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5040,7 +5041,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-chart-query-api
-  name: Chaitin Tech report/dashboard/chart/query API
+  name: Chaitin Tech Report/dashboard/chart/query API
   description: 报表中心/仪表盘/图表/查询
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5054,7 +5055,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-chart-select-datasource-list-api
-  name: Chaitin Tech report/dashboard/chart/select/datasource/list API
+  name: Chaitin Tech Report/dashboard/chart/select/datasource/list API
   description: 报表中心/仪表盘/图表/选择/数据源/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5068,7 +5069,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-copy-api
-  name: Chaitin Tech report/dashboard/<>/copy API
+  name: Chaitin Tech Report/dashboard/<>/copy API
   description: 报表中心/仪表盘/ 参数/copy 接口
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5082,7 +5083,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-create-api
-  name: Chaitin Tech report/dashboard/create API
+  name: Chaitin Tech Report/dashboard/create API
   description: 报表中心/仪表盘/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5126,7 +5127,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-getfieldmetadata-api
-  name: Chaitin Tech report/dashboard/getfieldmetadata API
+  name: Chaitin Tech Report/dashboard/getfieldmetadata API
   description: 报表中心/仪表盘/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5140,7 +5141,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-getfieldvalues-api
-  name: Chaitin Tech report/dashboard/getfieldvalues API
+  name: Chaitin Tech Report/dashboard/getfieldvalues API
   description: 报表中心/仪表盘/字段值
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5154,7 +5155,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-list-api
-  name: Chaitin Tech report/dashboard/list API
+  name: Chaitin Tech Report/dashboard/list API
   description: 报表中心/仪表盘/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5168,7 +5169,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-screenshot-api
-  name: Chaitin Tech report/dashboard/<>/screenshot API
+  name: Chaitin Tech Report/dashboard/<>/screenshot API
   description: 报表中心/仪表盘/ 参数/screenshot 接口
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5182,7 +5183,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-select-list-api
-  name: Chaitin Tech report/dashboard/select/list API
+  name: Chaitin Tech Report/dashboard/select/list API
   description: 报表中心/仪表盘/选择/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5196,7 +5197,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-dashboard-update-api
-  name: Chaitin Tech report/dashboard/<>/update API
+  name: Chaitin Tech Report/dashboard/<>/update API
   description: 报表中心/仪表盘/ 参数/更新
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5210,7 +5211,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-task-list-api
-  name: Chaitin Tech report/task/list API
+  name: Chaitin Tech Report/task/list API
   description: 报表中心/任务/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5254,7 +5255,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-report-taskinstance-list-api
-  name: Chaitin Tech report/taskinstance/list API
+  name: Chaitin Tech Report/taskinstance/list API
   description: 报表中心/任务实例/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5268,14 +5269,15 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-risk-api
-  name: Chaitin Tech risk API
+  name: Chaitin Tech Risk API
   description: The risk API from Chaitin Tech — 11 operation(s) for risk.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Risk
+  - Risk Management
   tags_raw:
   - risk
+  - Risk
   properties:
   - type: OpenAPI
     url: openapi/chaitin-risk-api-openapi.yml
@@ -5284,7 +5286,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-riskwarning-action-getscreenshotmetadata-api
-  name: Chaitin Tech riskwarning/action/getscreenshotmetadata API
+  name: Chaitin Tech Riskwarning/action/getscreenshotmetadata API
   description: 风险预警/操作/截图元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5298,7 +5300,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-riskwarning-action-screendownload-api
-  name: Chaitin Tech riskwarning/action/screendownload API
+  name: Chaitin Tech Riskwarning/action/screendownload API
   description: 风险预警/操作/截图下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5312,7 +5314,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-rule-api
-  name: Chaitin Tech rule API
+  name: Chaitin Tech Rule API
   description: The rule API from Chaitin Tech — 3 operation(s) for rule.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5326,7 +5328,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-sensitive-data-api
-  name: Chaitin Tech sensitive_data API
+  name: Chaitin Tech Sensitive Data API
   description: The sensitive_data API from Chaitin Tech — 1 operation(s) for sensitive_data.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5342,7 +5344,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-site-api
-  name: Chaitin Tech site API
+  name: Chaitin Tech Site API
   description: The site API from Chaitin Tech — 1 operation(s) for site.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5358,7 +5360,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-skynet-api
-  name: Chaitin Tech skynet API
+  name: Chaitin Tech Skynet API
   description: The skynet API from Chaitin Tech — 1 operation(s) for skynet.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5372,7 +5374,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-skynet-switch-api
-  name: Chaitin Tech skynet/switch API
+  name: Chaitin Tech Skynet/switch API
   description: The skynet/switch API from Chaitin Tech — 1 operation(s) for skynet/switch.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5401,7 +5403,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-software-uninstall-instance-api
-  name: Chaitin Tech software/uninstall/instance API
+  name: Chaitin Tech Software/uninstall/instance API
   description: 软件分发与卸载/uninstall 接口/实例
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5478,7 +5480,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-software-uninstall-instance-list-api
-  name: Chaitin Tech software/uninstall/instance/list API
+  name: Chaitin Tech Software/uninstall/instance/list API
   description: 软件分发与卸载/uninstall 接口/实例/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5492,7 +5494,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-softwaremanager-action-bulkdestroy-api
-  name: Chaitin Tech softwaremanager/action/bulkdestroy API
+  name: Chaitin Tech Softwaremanager/action/bulkdestroy API
   description: 软件管理/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5506,7 +5508,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-softwaremanager-action-getfieldmetadata-api
-  name: Chaitin Tech softwaremanager/action/getfieldmetadata API
+  name: Chaitin Tech Softwaremanager/action/getfieldmetadata API
   description: 软件管理/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5520,7 +5522,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-softwaremanager-cnt-api
-  name: Chaitin Tech softwaremanager/cnt API
+  name: Chaitin Tech Softwaremanager/cnt API
   description: 软件管理/数量
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5534,7 +5536,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-softwaremanager-download-api
-  name: Chaitin Tech softwaremanager/download API
+  name: Chaitin Tech Softwaremanager/download API
   description: 软件管理/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5548,7 +5550,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-softwaremanager-internalsource-list-api
-  name: Chaitin Tech softwaremanager/internalsource/list API
+  name: Chaitin Tech Softwaremanager/internalsource/list API
   description: 软件管理/内部来源/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5562,7 +5564,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-softwaremanager-internalsource-softwaretypecount-api
-  name: Chaitin Tech softwaremanager/internalsource/softwaretypecount API
+  name: Chaitin Tech Softwaremanager/internalsource/softwaretypecount API
   description: 软件管理/内部来源/软件类型统计
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5576,7 +5578,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-softwaremanager-list-api
-  name: Chaitin Tech softwaremanager/list API
+  name: Chaitin Tech Softwaremanager/list API
   description: 软件管理/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5590,7 +5592,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-softwaremanager-software-hash-detail-api
-  name: Chaitin Tech softwaremanager/{software_hash}/detail API
+  name: Chaitin Tech Softwaremanager/{software Hash}/detail API
   description: 软件管理/software_hash 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5605,7 +5607,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-softwaremanager-software-hash-list-api
-  name: Chaitin Tech softwaremanager/{software_hash}/list API
+  name: Chaitin Tech Softwaremanager/{software Hash}/list API
   description: 软件管理/software_hash 参数/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5620,7 +5622,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-softwaremanager-source-list-api
-  name: Chaitin Tech softwaremanager/source/list API
+  name: Chaitin Tech Softwaremanager/source/list API
   description: 软件管理/来源/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5634,7 +5636,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-softwaremanager-source-softwaretypecount-api
-  name: Chaitin Tech softwaremanager/source/softwaretypecount API
+  name: Chaitin Tech Softwaremanager/source/softwaretypecount API
   description: 软件管理/来源/软件类型统计
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5648,7 +5650,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-softwaremanager-uninstallsource-list-api
-  name: Chaitin Tech softwaremanager/uninstallsource/list API
+  name: Chaitin Tech Softwaremanager/uninstallsource/list API
   description: 软件管理/卸载来源/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5662,7 +5664,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-split-api-api
-  name: Chaitin Tech split_api API
+  name: Chaitin Tech Split API
   description: The split_api API from Chaitin Tech — 2 operation(s) for split_api.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5677,7 +5679,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-stat-api
-  name: Chaitin Tech stat API
+  name: Chaitin Tech Stat API
   description: The stat API from Chaitin Tech — 3 operation(s) for stat.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5693,7 +5695,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-stat-trend-api
-  name: Chaitin Tech stat/trend API
+  name: Chaitin Tech Stat/trend API
   description: The stat/trend API from Chaitin Tech — 2 operation(s) for stat/trend.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5707,7 +5709,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-statistic-device-devicecputotalbytime-api
-  name: Chaitin Tech statistic/device/devicecputotalbytime API
+  name: Chaitin Tech Statistic/device/devicecputotalbytime API
   description: 统计分析/设备管理/设备 CPU 时间序列
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5721,7 +5723,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-statistic-device-devicememtotalbytime-api
-  name: Chaitin Tech statistic/device/devicememtotalbytime API
+  name: Chaitin Tech Statistic/device/devicememtotalbytime API
   description: 统计分析/设备管理/设备内存时间序列
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5750,7 +5752,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-statistic-device-info-summary-api
-  name: Chaitin Tech statistic/device_info_summary API
+  name: Chaitin Tech Statistic/device Info Summary API
   description: 统计分析/设备信息汇总
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5764,7 +5766,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-statistic-filescan-api
-  name: Chaitin Tech statistic/filescan API
+  name: Chaitin Tech Statistic/filescan API
   description: 统计分析/文件扫描
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5778,7 +5780,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-statistic-filescan-flush-api
-  name: Chaitin Tech statistic/filescan/flush API
+  name: Chaitin Tech Statistic/filescan/flush API
   description: 统计分析/文件扫描/刷新
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5792,7 +5794,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-statistic-monitoring-daily-cpu-usage-api
-  name: Chaitin Tech statistic/monitoring/daily/cpu_usage API
+  name: Chaitin Tech Statistic/monitoring/daily/cpu Usage API
   description: 统计分析/监控/每日/CPU 使用率
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5806,7 +5808,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-statistic-monitoring-daily-gpu-mem-usage-api
-  name: Chaitin Tech statistic/monitoring/daily/gpu_mem_usage API
+  name: Chaitin Tech Statistic/monitoring/daily/gpu Mem Usage API
   description: 统计分析/监控/每日/GPU 显存使用率
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5820,7 +5822,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-statistic-monitoring-daily-gpu-usage-api
-  name: Chaitin Tech statistic/monitoring/daily/gpu_usage API
+  name: Chaitin Tech Statistic/monitoring/daily/gpu Usage API
   description: 统计分析/监控/每日/GPU 使用率
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5834,7 +5836,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-statistic-network-access-api
-  name: Chaitin Tech statistic/network/access API
+  name: Chaitin Tech Statistic/network/access API
   description: 统计分析/网络/访问
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5848,7 +5850,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-statistic-riskwarning-risklevelbytime-api
-  name: Chaitin Tech statistic/riskwarning/risklevelbytime API
+  name: Chaitin Tech Statistic/riskwarning/risklevelbytime API
   description: 统计分析/风险预警/risklevelbytime 接口
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5862,7 +5864,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-statistic-userbehavior-outgoingfilebytime-api
-  name: Chaitin Tech statistic/userbehavior/outgoingfilebytime API
+  name: Chaitin Tech Statistic/userbehavior/outgoingfilebytime API
   description: 统计分析/用户行为/外发文件时间序列
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5892,7 +5894,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-accesscontrol-access-control-mgr-modify-api
-  name: Chaitin Tech system/accesscontrol/access_control_mgr/modify API
+  name: Chaitin Tech System/accesscontrol/access Control Mgr/modify API
   description: 系统配置/访问控制/访问控制管理/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5906,7 +5908,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-accesscontrol-access-control-mgr-retrieve-api
-  name: Chaitin Tech system/accesscontrol/access_control_mgr/retrieve API
+  name: Chaitin Tech System/accesscontrol/access Control Mgr/retrieve API
   description: 系统配置/访问控制/访问控制管理/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5920,7 +5922,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-accesscontrol-feishu-modify-api
-  name: Chaitin Tech system/accesscontrol/feishu/modify API
+  name: Chaitin Tech System/accesscontrol/feishu/modify API
   description: 系统配置/访问控制/飞书/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5934,7 +5936,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-accesscontrol-feishu-retrieve-api
-  name: Chaitin Tech system/accesscontrol/feishu/retrieve API
+  name: Chaitin Tech System/accesscontrol/feishu/retrieve API
   description: 系统配置/访问控制/飞书/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5948,7 +5950,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-accesscontrol-portalpageconfig-modify-api
-  name: Chaitin Tech system/accesscontrol/portalpageconfig/modify API
+  name: Chaitin Tech System/accesscontrol/portalpageconfig/modify API
   description: 系统配置/访问控制/门户页面配置/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5962,7 +5964,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-accesscontrol-portalpageconfig-retrieve-api
-  name: Chaitin Tech system/accesscontrol/portalpageconfig/retrieve API
+  name: Chaitin Tech System/accesscontrol/portalpageconfig/retrieve API
   description: 系统配置/访问控制/门户页面配置/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5976,7 +5978,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-accesscontrol-realtimepolicy-modify-api
-  name: Chaitin Tech system/accesscontrol/realtimepolicy/modify API
+  name: Chaitin Tech System/accesscontrol/realtimepolicy/modify API
   description: 系统配置/访问控制/实时策略/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -5990,7 +5992,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-accesscontrol-realtimepolicy-retrieve-api
-  name: Chaitin Tech system/accesscontrol/realtimepolicy/retrieve API
+  name: Chaitin Tech System/accesscontrol/realtimepolicy/retrieve API
   description: 系统配置/访问控制/实时策略/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6004,7 +6006,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-accesscontrolconfig-modify-api
-  name: Chaitin Tech system/accesscontrolconfig/modify API
+  name: Chaitin Tech System/accesscontrolconfig/modify API
   description: 系统配置/访问控制配置/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6018,7 +6020,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-accesscontrolconfig-retrieve-api
-  name: Chaitin Tech system/accesscontrolconfig/retrieve API
+  name: Chaitin Tech System/accesscontrolconfig/retrieve API
   description: 系统配置/访问控制配置/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6032,7 +6034,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-avscan-modify-api
-  name: Chaitin Tech system/avscan/modify API
+  name: Chaitin Tech System/avscan/modify API
   description: 系统配置/杀毒扫描/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6046,7 +6048,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-bindingconfig-retrieve-api
-  name: Chaitin Tech system/bindingconfig/retrieve API
+  name: Chaitin Tech System/bindingconfig/retrieve API
   description: 系统配置/绑定配置/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6060,7 +6062,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-browserplugin-upload-api
-  name: Chaitin Tech system/browserplugin/upload API
+  name: Chaitin Tech System/browserplugin/upload API
   description: 系统配置/浏览器插件/上传
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6119,7 +6121,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-channeldef-uploadtask-create-api
-  name: Chaitin Tech system/channeldef/uploadtask/create API
+  name: Chaitin Tech System/channeldef/uploadtask/create API
   description: 系统配置/通道定义/上传任务/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6133,7 +6135,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-channeldef-uploadtask-list-api
-  name: Chaitin Tech system/channeldef/uploadtask/list API
+  name: Chaitin Tech System/channeldef/uploadtask/list API
   description: 系统配置/通道定义/上传任务/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6192,7 +6194,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-channeldefgroup-action-getsnapshotinfo-api
-  name: Chaitin Tech system/channeldefgroup/action/getsnapshotinfo API
+  name: Chaitin Tech System/channeldefgroup/action/getsnapshotinfo API
   description: 系统配置/通道定义组/操作/快照信息
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6206,7 +6208,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-channeldefgroup-api
-  name: Chaitin Tech system/channeldefgroup API
+  name: Chaitin Tech System/channeldefgroup API
   description: 系统配置/通道定义组
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6220,7 +6222,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-channeldefgroup-email-list-api
-  name: Chaitin Tech system/channeldefgroup/email/list API
+  name: Chaitin Tech System/channeldefgroup/email/list API
   description: 系统配置/通道定义组/邮件/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6234,7 +6236,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-channeldefgroup-landing-list-api
-  name: Chaitin Tech system/channeldefgroup/landing/list API
+  name: Chaitin Tech System/channeldefgroup/landing/list API
   description: 系统配置/通道定义组/落地/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6248,7 +6250,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-channeldefgroup-list-api
-  name: Chaitin Tech system/channeldefgroup/list API
+  name: Chaitin Tech System/channeldefgroup/list API
   description: 系统配置/通道定义组/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6262,7 +6264,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-clientconfig-import-api
-  name: Chaitin Tech system/clientconfig/import API
+  name: Chaitin Tech System/clientconfig/import API
   description: 系统配置/客户端配置/导入
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6276,7 +6278,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-commonstatusdeviceconfig-modify-api
-  name: Chaitin Tech system/commonstatusdeviceconfig/modify API
+  name: Chaitin Tech System/commonstatusdeviceconfig/modify API
   description: 系统配置/常用状态设备配置/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6290,7 +6292,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-commonstatusdeviceconfig-retrieve-api
-  name: Chaitin Tech system/commonstatusdeviceconfig/retrieve API
+  name: Chaitin Tech System/commonstatusdeviceconfig/retrieve API
   description: 系统配置/常用状态设备配置/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6304,7 +6306,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-customconfig-import-api
-  name: Chaitin Tech system/customconfig/import API
+  name: Chaitin Tech System/customconfig/import API
   description: 系统配置/自定义配置/导入
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6318,7 +6320,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-customconfig-reset-api
-  name: Chaitin Tech system/customconfig/reset API
+  name: Chaitin Tech System/customconfig/reset API
   description: 系统配置/自定义配置/重置
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6332,7 +6334,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-customconfig-retrieve-api
-  name: Chaitin Tech system/customconfig/retrieve API
+  name: Chaitin Tech System/customconfig/retrieve API
   description: 系统配置/自定义配置/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6346,7 +6348,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-filebehaviorconfig-modify-api
-  name: Chaitin Tech system/filebehaviorconfig/modify API
+  name: Chaitin Tech System/filebehaviorconfig/modify API
   description: 系统配置/文件行为配置/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6360,7 +6362,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-filebehaviorconfig-retrieve-api
-  name: Chaitin Tech system/filebehaviorconfig/retrieve API
+  name: Chaitin Tech System/filebehaviorconfig/retrieve API
   description: 系统配置/文件行为配置/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6374,7 +6376,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-filescanremotestorage-api
-  name: Chaitin Tech system/filescanremotestorage API
+  name: Chaitin Tech System/filescanremotestorage API
   description: 系统配置/文件扫描远程存储
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6388,7 +6390,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-filescanremotestorage-bulkdestroy-api
-  name: Chaitin Tech system/filescanremotestorage/bulkdestroy API
+  name: Chaitin Tech System/filescanremotestorage/bulkdestroy API
   description: 系统配置/文件扫描远程存储/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6402,7 +6404,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-filescanremotestorage-list-api
-  name: Chaitin Tech system/filescanremotestorage/list API
+  name: Chaitin Tech System/filescanremotestorage/list API
   description: 系统配置/文件扫描远程存储/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6416,7 +6418,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-filescanremotestorage-uid-api
-  name: Chaitin Tech system/filescanremotestorage/{uid} API
+  name: Chaitin Tech System/filescanremotestorage/{uid} API
   description: 系统配置/文件扫描远程存储/uid 参数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6431,7 +6433,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-filescanremotestorage-uid-detail-api
-  name: Chaitin Tech system/filescanremotestorage/{uid}/detail API
+  name: Chaitin Tech System/filescanremotestorage/{uid}/detail API
   description: 系统配置/文件扫描远程存储/uid 参数/详情
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6446,7 +6448,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-generalssidconfig-modify-api
-  name: Chaitin Tech system/generalssidconfig/modify API
+  name: Chaitin Tech System/generalssidconfig/modify API
   description: 系统配置/通用 SSID 配置/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6460,7 +6462,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-generalssidconfig-retrieve-api
-  name: Chaitin Tech system/generalssidconfig/retrieve API
+  name: Chaitin Tech System/generalssidconfig/retrieve API
   description: 系统配置/通用 SSID 配置/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6474,7 +6476,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-guestportalserverconfig-modify-api
-  name: Chaitin Tech system/guestportalserverconfig/modify API
+  name: Chaitin Tech System/guestportalserverconfig/modify API
   description: 系统配置/访客门户服务配置/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6488,7 +6490,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-guestportalserverconfig-password-delivery-test-sms-api
-  name: Chaitin Tech system/guestportalserverconfig/password_delivery/test/sms API
+  name: Chaitin Tech System/guestportalserverconfig/password Delivery/test/sms API
   description: 系统配置/访客门户服务配置/密码投递/测试/短信
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6503,7 +6505,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-guestportalserverconfig-retrieve-api
-  name: Chaitin Tech system/guestportalserverconfig/retrieve API
+  name: Chaitin Tech System/guestportalserverconfig/retrieve API
   description: 系统配置/访客门户服务配置/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6517,7 +6519,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-logmirror-create-api
-  name: Chaitin Tech system/logmirror/create API
+  name: Chaitin Tech System/logmirror/create API
   description: 系统配置/日志镜像/创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6531,7 +6533,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-logmirror-list-api
-  name: Chaitin Tech system/logmirror/list API
+  name: Chaitin Tech System/logmirror/list API
   description: 系统配置/日志镜像/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6545,7 +6547,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-logmirror-test-api
-  name: Chaitin Tech system/logmirror/test API
+  name: Chaitin Tech System/logmirror/test API
   description: 系统配置/日志镜像/测试
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6559,7 +6561,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-logmirror-update-api
-  name: Chaitin Tech system/logmirror/update API
+  name: Chaitin Tech System/logmirror/update API
   description: 系统配置/日志镜像/更新
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6573,7 +6575,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-macosauthconfig-guideinfo-modify-api
-  name: Chaitin Tech system/macosauthconfig/guideinfo/modify API
+  name: Chaitin Tech System/macosauthconfig/guideinfo/modify API
   description: 系统配置/macOS 认证配置/引导信息/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6587,7 +6589,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-macosauthconfig-modify-api
-  name: Chaitin Tech system/macosauthconfig/modify API
+  name: Chaitin Tech System/macosauthconfig/modify API
   description: 系统配置/macOS 认证配置/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6601,7 +6603,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-macosauthconfig-retrieve-api
-  name: Chaitin Tech system/macosauthconfig/retrieve API
+  name: Chaitin Tech System/macosauthconfig/retrieve API
   description: 系统配置/macOS 认证配置/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6615,7 +6617,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-moduleconfig-modify-api
-  name: Chaitin Tech system/moduleconfig/modify API
+  name: Chaitin Tech System/moduleconfig/modify API
   description: 系统配置/模块配置/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6629,7 +6631,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-ocr-modify-api
-  name: Chaitin Tech system/ocr/modify API
+  name: Chaitin Tech System/ocr/modify API
   description: 系统配置/OCR/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6643,7 +6645,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-ocr-retrieve-api
-  name: Chaitin Tech system/ocr/retrieve API
+  name: Chaitin Tech System/ocr/retrieve API
   description: 系统配置/OCR/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6657,7 +6659,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-securityconfig-agenttemporaryexitcode-api
-  name: Chaitin Tech system/securityconfig/agenttemporaryexitcode API
+  name: Chaitin Tech System/securityconfig/agenttemporaryexitcode API
   description: 系统配置/安全配置/客户端临时退出码
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6671,7 +6673,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-securityconfig-js-sdk-p-key-api
-  name: Chaitin Tech system/securityconfig/js_sdk_p_key API
+  name: Chaitin Tech System/securityconfig/js SDK P Key API
   description: 系统配置/安全配置/JS SDK 公钥
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6685,7 +6687,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-securityconfig-modify-api
-  name: Chaitin Tech system/securityconfig/modify API
+  name: Chaitin Tech System/securityconfig/modify API
   description: 系统配置/安全配置/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6699,7 +6701,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-securityconfig-retrieve-api
-  name: Chaitin Tech system/securityconfig/retrieve API
+  name: Chaitin Tech System/securityconfig/retrieve API
   description: 系统配置/安全配置/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6713,7 +6715,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-serverhostconfig-modify-api
-  name: Chaitin Tech system/serverhostconfig/modify API
+  name: Chaitin Tech System/serverhostconfig/modify API
   description: 系统配置/服务主机配置/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6727,7 +6729,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-serverhostconfig-retrieve-api
-  name: Chaitin Tech system/serverhostconfig/retrieve API
+  name: Chaitin Tech System/serverhostconfig/retrieve API
   description: 系统配置/服务主机配置/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6741,7 +6743,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-storagechannel-modify-api
-  name: Chaitin Tech system/storagechannel/modify API
+  name: Chaitin Tech System/storagechannel/modify API
   description: 系统配置/存储通道/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6755,7 +6757,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-storagechannel-retrieve-api
-  name: Chaitin Tech system/storagechannel/retrieve API
+  name: Chaitin Tech System/storagechannel/retrieve API
   description: 系统配置/存储通道/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6769,7 +6771,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-storagechannel-test-api
-  name: Chaitin Tech system/storagechannel/test API
+  name: Chaitin Tech System/storagechannel/test API
   description: 系统配置/存储通道/测试
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6783,7 +6785,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-system-bindingconfig-modify-api
-  name: Chaitin Tech system/system/bindingconfig/modify API
+  name: Chaitin Tech System/system/bindingconfig/modify API
   description: 系统配置/系统配置/绑定配置/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6797,7 +6799,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-tedbackupconfig-api
-  name: Chaitin Tech system/tedbackupconfig API
+  name: Chaitin Tech System/tedbackupconfig API
   description: 系统配置/TED 备份配置
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6811,7 +6813,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-tedbackupconfig-bulkdestroy-api
-  name: Chaitin Tech system/tedbackupconfig/bulkdestroy API
+  name: Chaitin Tech System/tedbackupconfig/bulkdestroy API
   description: 系统配置/TED 备份配置/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6855,7 +6857,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-tedbackupconfig-list-api
-  name: Chaitin Tech system/tedbackupconfig/list API
+  name: Chaitin Tech System/tedbackupconfig/list API
   description: 系统配置/TED 备份配置/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6869,7 +6871,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-tedbackupconfig-lite-modify-api
-  name: Chaitin Tech system/tedbackupconfig/lite/modify API
+  name: Chaitin Tech System/tedbackupconfig/lite/modify API
   description: 系统配置/TED 备份配置/轻量配置/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6883,7 +6885,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-tedbackupconfig-lite-retrieve-api
-  name: Chaitin Tech system/tedbackupconfig/lite/retrieve API
+  name: Chaitin Tech System/tedbackupconfig/lite/retrieve API
   description: 系统配置/TED 备份配置/轻量配置/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6897,7 +6899,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-tedbackupconfig-metadata-api
-  name: Chaitin Tech system/tedbackupconfig/metadata API
+  name: Chaitin Tech System/tedbackupconfig/metadata API
   description: 系统配置/TED 备份配置/元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6911,7 +6913,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-tedconfig-sendout-modify-api
-  name: Chaitin Tech system/tedconfig/sendout/modify API
+  name: Chaitin Tech System/tedconfig/sendout/modify API
   description: 系统配置/TED 配置/外发/修改
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6925,7 +6927,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-tedconfig-sendout-retrieve-api
-  name: Chaitin Tech system/tedconfig/sendout/retrieve API
+  name: Chaitin Tech System/tedconfig/sendout/retrieve API
   description: 系统配置/TED 配置/外发/获取
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6939,7 +6941,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-tedencryptconfig-37852520-0516-4950-9dc4-80687e979e5d-api
-  name: Chaitin Tech system/tedencryptconfig/37852520-0516-4950-9dc4-80687e979e5d API
+  name: Chaitin Tech System/tedencryptconfig/37852520 0516 4950 9dc4 80687e979e5d API
   description: 系统配置/TED 加密配置/指定资源
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6954,7 +6956,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-tedencryptconfig-api
-  name: Chaitin Tech system/tedencryptconfig API
+  name: Chaitin Tech System/tedencryptconfig API
   description: 系统配置/TED 加密配置
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6968,7 +6970,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-tedencryptconfig-bulkdestroy-api
-  name: Chaitin Tech system/tedencryptconfig/bulkdestroy API
+  name: Chaitin Tech System/tedencryptconfig/bulkdestroy API
   description: 系统配置/TED 加密配置/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6982,7 +6984,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-tedencryptconfig-config-id-str-action-api
-  name: Chaitin Tech system/tedencryptconfig/<config_id:str>/action API
+  name: Chaitin Tech System/tedencryptconfig/<config Id:str>/action API
   description: 系统配置/TED 加密配置/config_id:str 参数/操作
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -6996,7 +6998,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-system-tedencryptconfig-list-api
-  name: Chaitin Tech system/tedencryptconfig/list API
+  name: Chaitin Tech System/tedencryptconfig/list API
   description: 系统配置/TED 加密配置/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7010,7 +7012,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-third-party-api
-  name: Chaitin Tech third_party API
+  name: Chaitin Tech Third Party API
   description: The third_party API from Chaitin Tech — 1 operation(s) for third_party.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7026,7 +7028,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-trigger-rule-api
-  name: Chaitin Tech trigger_rule API
+  name: Chaitin Tech Trigger Rule API
   description: The trigger_rule API from Chaitin Tech — 5 operation(s) for trigger_rule.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7041,7 +7043,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-api
-  name: Chaitin Tech ueba API
+  name: Chaitin Tech Ueba API
   description: UEBA 分析
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7057,7 +7059,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-index-aggcount-api
-  name: Chaitin Tech ueba/index/aggcount API
+  name: Chaitin Tech Ueba/index/aggcount API
   description: UEBA 分析/索引/聚合计数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7071,7 +7073,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-index-count-api
-  name: Chaitin Tech ueba/index/count API
+  name: Chaitin Tech Ueba/index/count API
   description: UEBA 分析/索引/计数
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7085,7 +7087,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-index-rank-api
-  name: Chaitin Tech ueba/index/rank API
+  name: Chaitin Tech Ueba/index/rank API
   description: UEBA 分析/索引/排行
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7099,7 +7101,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-list-api
-  name: Chaitin Tech ueba/list API
+  name: Chaitin Tech Ueba/list API
   description: UEBA 分析/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7113,7 +7115,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-log-action-bulkdestroy-api
-  name: Chaitin Tech ueba/log/action/bulkdestroy API
+  name: Chaitin Tech Ueba/log/action/bulkdestroy API
   description: UEBA 分析/日志/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7127,7 +7129,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-log-action-getfieldmetadata-api
-  name: Chaitin Tech ueba/log/action/getfieldmetadata API
+  name: Chaitin Tech Ueba/log/action/getfieldmetadata API
   description: UEBA 分析/日志/操作/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7141,7 +7143,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-log-action-getfieldvalues-api
-  name: Chaitin Tech ueba/log/action/getfieldvalues API
+  name: Chaitin Tech Ueba/log/action/getfieldvalues API
   description: UEBA 分析/日志/操作/字段值
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7155,7 +7157,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-log-action-ueba-category-getfieldvalues-api
-  name: Chaitin Tech ueba/log/action/{ueba_category}/getfieldvalues API
+  name: Chaitin Tech Ueba/log/action/{ueba Category}/getfieldvalues API
   description: UEBA 分析/日志/操作/ueba_category 参数/字段值
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7170,7 +7172,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-log-ueba-category-download-api
-  name: Chaitin Tech ueba/log/{ueba_category}/download API
+  name: Chaitin Tech Ueba/log/{ueba Category}/download API
   description: UEBA 分析/日志/ueba_category 参数/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7185,7 +7187,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-log-ueba-category-list-api
-  name: Chaitin Tech ueba/log/{ueba_category}/list API
+  name: Chaitin Tech Ueba/log/{ueba Category}/list API
   description: UEBA 分析/日志/ueba_category 参数/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7200,7 +7202,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-staff-getfieldmetadata-api
-  name: Chaitin Tech ueba/staff/getfieldmetadata API
+  name: Chaitin Tech Ueba/staff/getfieldmetadata API
   description: UEBA 分析/人员/字段元数据
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7214,7 +7216,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-staff-getfieldvalues-api
-  name: Chaitin Tech ueba/staff/getfieldvalues API
+  name: Chaitin Tech Ueba/staff/getfieldvalues API
   description: UEBA 分析/人员/字段值
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7228,7 +7230,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-staff-list-api
-  name: Chaitin Tech ueba/staff/list API
+  name: Chaitin Tech Ueba/staff/list API
   description: UEBA 分析/人员/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7302,7 +7304,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-ueba-test-api
-  name: Chaitin Tech ueba/test API
+  name: Chaitin Tech Ueba/test API
   description: UEBA 分析/测试
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7376,7 +7378,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-update-api
-  name: Chaitin Tech update API
+  name: Chaitin Tech Update API
   description: The update API from Chaitin Tech — 8 operation(s) for update.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7407,14 +7409,15 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-vulnerability-api
-  name: Chaitin Tech vulnerability API
+  name: Chaitin Tech Vulnerability API
   description: The vulnerability API from Chaitin Tech — 3 operation(s) for vulnerability.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
   tags:
-  - Vulnerability
+  - Vulnerabilities
   tags_raw:
   - vulnerability
+  - Vulnerability
   properties:
   - type: OpenAPI
     url: openapi/chaitin-vulnerability-api-openapi.yml
@@ -7453,7 +7456,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-web-api
-  name: Chaitin Tech web框架 API
+  name: Chaitin Tech Web框架 API
   description: The web框架 API from Chaitin Tech — 8 operation(s) for web框架.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7469,7 +7472,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-website-api
-  name: Chaitin Tech website API
+  name: Chaitin Tech Website API
   description: The website API from Chaitin Tech — 4 operation(s) for website.
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7485,7 +7488,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-browserplugin-download-api
-  name: Chaitin Tech whitelist/browserplugin/download API
+  name: Chaitin Tech Whitelist/browserplugin/download API
   description: 白名单管理/浏览器插件/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7499,7 +7502,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-browserplugin-exists-api
-  name: Chaitin Tech whitelist/browserplugin/exists API
+  name: Chaitin Tech Whitelist/browserplugin/exists API
   description: 白名单管理/浏览器插件/存在性校验
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7513,7 +7516,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-browserplugin-import-api
-  name: Chaitin Tech whitelist/browserplugin/import API
+  name: Chaitin Tech Whitelist/browserplugin/import API
   description: 白名单管理/浏览器插件/导入
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7527,7 +7530,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-browserplugin-template-api
-  name: Chaitin Tech whitelist/browserplugin/template API
+  name: Chaitin Tech Whitelist/browserplugin/template API
   description: 白名单管理/浏览器插件/模板
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7541,7 +7544,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-directory-api
-  name: Chaitin Tech whitelist/directory API
+  name: Chaitin Tech Whitelist/directory API
   description: 白名单管理/目录
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7555,7 +7558,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-directory-download-api
-  name: Chaitin Tech whitelist/directory/download API
+  name: Chaitin Tech Whitelist/directory/download API
   description: 白名单管理/目录/下载
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7614,7 +7617,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-directory-list-api
-  name: Chaitin Tech whitelist/directory/list API
+  name: Chaitin Tech Whitelist/directory/list API
   description: 白名单管理/目录/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7628,7 +7631,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-directory-template-api
-  name: Chaitin Tech whitelist/directory/template API
+  name: Chaitin Tech Whitelist/directory/template API
   description: 白名单管理/目录/模板
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7642,7 +7645,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-email-action-bulkdestroy-api
-  name: Chaitin Tech whitelist/email/action/bulkdestroy API
+  name: Chaitin Tech Whitelist/email/action/bulkdestroy API
   description: 白名单管理/邮件/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7656,7 +7659,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-email-api
-  name: Chaitin Tech whitelist/email API
+  name: Chaitin Tech Whitelist/email API
   description: 白名单管理/邮件
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7670,7 +7673,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-email-bulkcreate-api
-  name: Chaitin Tech whitelist/email/bulkcreate API
+  name: Chaitin Tech Whitelist/email/bulkcreate API
   description: 白名单管理/邮件/批量创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7729,7 +7732,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-email-list-api
-  name: Chaitin Tech whitelist/email/list API
+  name: Chaitin Tech Whitelist/email/list API
   description: 白名单管理/邮件/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7743,7 +7746,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-file-action-bulkdestroy-api
-  name: Chaitin Tech whitelist/file/action/bulkdestroy API
+  name: Chaitin Tech Whitelist/file/action/bulkdestroy API
   description: 白名单管理/文件/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7757,7 +7760,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-file-api
-  name: Chaitin Tech whitelist/file API
+  name: Chaitin Tech Whitelist/file API
   description: 白名单管理/文件
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7771,7 +7774,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-file-bulkcreate-api
-  name: Chaitin Tech whitelist/file/bulkcreate API
+  name: Chaitin Tech Whitelist/file/bulkcreate API
   description: 白名单管理/文件/批量创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7830,7 +7833,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-file-list-api
-  name: Chaitin Tech whitelist/file/list API
+  name: Chaitin Tech Whitelist/file/list API
   description: 白名单管理/文件/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7844,7 +7847,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-file-template-api
-  name: Chaitin Tech whitelist/file/template API
+  name: Chaitin Tech Whitelist/file/template API
   description: 白名单管理/文件/模板
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7858,7 +7861,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-leakage-control-template-api
-  name: Chaitin Tech whitelist/leakage_control/template API
+  name: Chaitin Tech Whitelist/leakage Control/template API
   description: 白名单管理/泄露管控/模板
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7872,7 +7875,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-network-action-bulkdestroy-api
-  name: Chaitin Tech whitelist/network/action/bulkdestroy API
+  name: Chaitin Tech Whitelist/network/action/bulkdestroy API
   description: 白名单管理/网络/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7886,7 +7889,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-network-api
-  name: Chaitin Tech whitelist/network API
+  name: Chaitin Tech Whitelist/network API
   description: 白名单管理/网络
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7900,7 +7903,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-network-import-api
-  name: Chaitin Tech whitelist/network/import API
+  name: Chaitin Tech Whitelist/network/import API
   description: 白名单管理/网络/导入
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7914,7 +7917,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-network-process-action-bulkdestroy-api
-  name: Chaitin Tech whitelist/network/process/action/bulkdestroy API
+  name: Chaitin Tech Whitelist/network/process/action/bulkdestroy API
   description: 白名单管理/网络/进程/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7928,7 +7931,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-network-process-bulkcreate-api
-  name: Chaitin Tech whitelist/network/process/bulkcreate API
+  name: Chaitin Tech Whitelist/network/process/bulkcreate API
   description: 白名单管理/网络/进程/批量创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7972,7 +7975,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-sign-action-bulkdestroy-api
-  name: Chaitin Tech whitelist/sign/action/bulkdestroy API
+  name: Chaitin Tech Whitelist/sign/action/bulkdestroy API
   description: 白名单管理/签名/操作/批量删除
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -7986,7 +7989,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-sign-api
-  name: Chaitin Tech whitelist/sign API
+  name: Chaitin Tech Whitelist/sign API
   description: 白名单管理/签名
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -8000,7 +8003,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-sign-bulkcreate-api
-  name: Chaitin Tech whitelist/sign/bulkcreate API
+  name: Chaitin Tech Whitelist/sign/bulkcreate API
   description: 白名单管理/签名/批量创建
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -8014,7 +8017,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-sign-import-api
-  name: Chaitin Tech whitelist/sign/import API
+  name: Chaitin Tech Whitelist/sign/import API
   description: 白名单管理/签名/导入
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -8028,7 +8031,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-sign-list-api
-  name: Chaitin Tech whitelist/sign/list API
+  name: Chaitin Tech Whitelist/sign/list API
   description: 白名单管理/签名/列表
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -8087,7 +8090,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-sign-template-api
-  name: Chaitin Tech whitelist/sign/template API
+  name: Chaitin Tech Whitelist/sign/template API
   description: 白名单管理/签名/模板
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
@@ -8101,7 +8104,7 @@ apis:
   - type: Documentation
     url: https://docs.waf.chaitin.com/
 - aid: chaitin:chaitin-whitelist-soft-network-exists-api
-  name: Chaitin Tech whitelist/soft_network/exists API
+  name: Chaitin Tech Whitelist/soft Network/exists API
   description: 白名单管理/软件联网/存在性校验
   humanURL: https://docs.waf.chaitin.com/en/tech_docs/OPENAPI
   baseURL: https://docs.waf.chaitin.com
