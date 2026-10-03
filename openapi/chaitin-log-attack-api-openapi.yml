@@ -123,15 +123,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    record.GetDetectLogListRes:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.DetectLog'
-        total:
-          type: integer
     model.DetectLog:
       type: object
       properties:
@@ -221,6 +212,15 @@ components:
           type: string
         website:
           type: string
+    record.GetDetectLogListRes:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.DetectLog'
+        total:
+          type: integer
     response.JSONBody:
       type: object
       properties:

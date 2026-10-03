@@ -737,50 +737,6 @@ paths:
       - Syslog
 components:
   schemas:
-    SystemLogDetail:
-      properties:
-        content:
-          description: 系统日志的内容
-          title: Content
-          type: string
-        crdate:
-          description: 系统日志的时间
-          format: date-time
-          title: Crdate
-          type: string
-        id:
-          description: 系统日志的id
-          title: Id
-          type: integer
-        log_type:
-          description: 系统日志的类型, 1 表示系统负载，2 表示docker状态，3 表示探针状态
-          enum:
-          - 1
-          - 2
-          - 3
-          - 4
-          title: Log Type
-          type: integer
-      required:
-      - id
-      - log_type
-      - content
-      - crdate
-      title: SystemLogDetail
-      type: object
-    MinimumRet:
-      description: '最小化响应的通用模式
-
-
-        使用该类型作为返回值的API view，一般不会失败(诸如login_required等错误不包含在内)'
-      properties:
-        success:
-          default: true
-          description: 请求成功
-          title: Success
-          type: boolean
-      title: MinimumRet
-      type: object
     SyslogConfigDetail:
       properties:
         agent_status:
@@ -940,6 +896,37 @@ components:
       - config
       title: KafkaConfigDetail
       type: object
+    SystemLogDetail:
+      properties:
+        content:
+          description: 系统日志的内容
+          title: Content
+          type: string
+        crdate:
+          description: 系统日志的时间
+          format: date-time
+          title: Crdate
+          type: string
+        id:
+          description: 系统日志的id
+          title: Id
+          type: integer
+        log_type:
+          description: 系统日志的类型, 1 表示系统负载，2 表示docker状态，3 表示探针状态
+          enum:
+          - 1
+          - 2
+          - 3
+          - 4
+          title: Log Type
+          type: integer
+      required:
+      - id
+      - log_type
+      - content
+      - crdate
+      title: SystemLogDetail
+      type: object
     SystemLogRet:
       description: 分页类响应的通用模式
       properties:
@@ -958,4 +945,17 @@ components:
       - total
       - data
       title: SystemLogRet
+      type: object
+    MinimumRet:
+      description: '最小化响应的通用模式
+
+
+        使用该类型作为返回值的API view，一般不会失败(诸如login_required等错误不包含在内)'
+      properties:
+        success:
+          default: true
+          description: 请求成功
+          title: Success
+          type: boolean
+      title: MinimumRet
       type: object

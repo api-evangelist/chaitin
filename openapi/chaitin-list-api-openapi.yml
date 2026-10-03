@@ -452,11 +452,136 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    git.in.chaitin.net.veinmind.backend.module.agent.model.ClusterNodeInfo:
+      properties:
+        name:
+          description: 集群名称
+          example: 集群名称
+          format: string
+          properties: {}
+          type: string
+        node_name:
+          description: 集群节点名称
+          example: 集群节点名称
+          format: string
+          properties: {}
+          type: string
+        id:
+          description: 集群ID
+          example: 1
+          format: uint
+          properties: {}
+          type: integer
+      type: object
     git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerListRes:
       items:
         $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.agent.model.ScannerListOne'
       properties: {}
       type: array
+    git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerListReq:
+      properties:
+        name:
+          description: 扫描器名称
+          example: 扫描器名称
+          format: string
+          properties: {}
+          type: string
+        version:
+          description: 扫描器版本号
+          example: 扫描器版本号
+          format: string
+          properties: {}
+          type: string
+        host_name:
+          description: 主机名称
+          example: 主机名称
+          format: string
+          properties: {}
+          type: string
+        host_ip:
+          description: 主机IP地址
+          example: 1.1.1
+          format: string
+          properties: {}
+          type: string
+        type:
+          description: 探针类型列表 2为本地探针
+          example: '[2]'
+          format: '[]uint'
+          items:
+            enum:
+            - 2
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+        group_id:
+          description: 扫描组ID列表
+          example: '[1,2]'
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+        state:
+          description: 扫描器状态列表 1 注册 2 在线 3 离线 4 异常
+          example: '1'
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+        source_type:
+          description: 1本地 2旁路 3集群节点 4集群旁路
+          format: '[]uint'
+          items:
+            enum:
+            - 1
+            - 2
+            - 3
+            - 4
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+        cluster_id:
+          description: 集群ID列表
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+        id:
+          description: 扫描探针ID
+          example: '[1,2]'
+          format: '[]uint'
+          items:
+            format: uint
+            properties: {}
+            type: integer
+          properties: {}
+          type: array
+        offset:
+          description: 数据启始位置
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+        page_size:
+          description: 数据页大小
+          example: 1
+          format: int
+          properties: {}
+          type: integer
+      type: object
     git.in.chaitin.net.veinmind.backend.module.agent.model.ScannerListOne:
       properties:
         name:
@@ -588,131 +713,6 @@ components:
           type: integer
         log_size:
           description: 日志存储量(MB)'，默认 10MB
-          format: int
-          properties: {}
-          type: integer
-      type: object
-    git.in.chaitin.net.veinmind.backend.module.agent.model.ClusterNodeInfo:
-      properties:
-        name:
-          description: 集群名称
-          example: 集群名称
-          format: string
-          properties: {}
-          type: string
-        node_name:
-          description: 集群节点名称
-          example: 集群节点名称
-          format: string
-          properties: {}
-          type: string
-        id:
-          description: 集群ID
-          example: 1
-          format: uint
-          properties: {}
-          type: integer
-      type: object
-    git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerListReq:
-      properties:
-        name:
-          description: 扫描器名称
-          example: 扫描器名称
-          format: string
-          properties: {}
-          type: string
-        version:
-          description: 扫描器版本号
-          example: 扫描器版本号
-          format: string
-          properties: {}
-          type: string
-        host_name:
-          description: 主机名称
-          example: 主机名称
-          format: string
-          properties: {}
-          type: string
-        host_ip:
-          description: 主机IP地址
-          example: 1.1.1
-          format: string
-          properties: {}
-          type: string
-        type:
-          description: 探针类型列表 2为本地探针
-          example: '[2]'
-          format: '[]uint'
-          items:
-            enum:
-            - 2
-            format: uint
-            properties: {}
-            type: integer
-          properties: {}
-          type: array
-        group_id:
-          description: 扫描组ID列表
-          example: '[1,2]'
-          format: '[]uint'
-          items:
-            format: uint
-            properties: {}
-            type: integer
-          properties: {}
-          type: array
-        state:
-          description: 扫描器状态列表 1 注册 2 在线 3 离线 4 异常
-          example: '1'
-          format: '[]uint'
-          items:
-            format: uint
-            properties: {}
-            type: integer
-          properties: {}
-          type: array
-        source_type:
-          description: 1本地 2旁路 3集群节点 4集群旁路
-          format: '[]uint'
-          items:
-            enum:
-            - 1
-            - 2
-            - 3
-            - 4
-            format: uint
-            properties: {}
-            type: integer
-          properties: {}
-          type: array
-        cluster_id:
-          description: 集群ID列表
-          format: '[]uint'
-          items:
-            format: uint
-            properties: {}
-            type: integer
-          properties: {}
-          type: array
-        id:
-          description: 扫描探针ID
-          example: '[1,2]'
-          format: '[]uint'
-          items:
-            format: uint
-            properties: {}
-            type: integer
-          properties: {}
-          type: array
-        offset:
-          description: 数据启始位置
-          example: 1
-          format: int
-          properties: {}
-          type: integer
-        page_size:
-          description: 数据页大小
-          example: 1
           format: int
           properties: {}
           type: integer

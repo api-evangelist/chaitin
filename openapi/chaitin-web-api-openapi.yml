@@ -736,6 +736,16 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkListRes:
+      properties:
+        data:
+          description: web框架列表
+          format: '[]model.WebFrameworkListOne'
+          items:
+            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkListOne'
+          properties: {}
+          type: array
+      type: object
     git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkCountRes:
       properties:
         total:
@@ -781,23 +791,13 @@ components:
           properties: {}
           type: integer
       type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkListRes:
-      properties:
-        data:
-          description: web框架列表
-          format: '[]model.WebFrameworkListOne'
-          items:
-            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkListOne'
-          properties: {}
-          type: array
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkListExportRes:
+      properties: {}
       type: object
     git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkInfoRes:
       properties:
         data:
           $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkInfo'
-      type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkListExportRes:
-      properties: {}
       type: object
     git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkInfo:
       properties:
@@ -864,9 +864,6 @@ components:
           properties: {}
           type: integer
       type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListExportRes:
-      properties: {}
-      type: object
     git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteListOutItem:
       properties:
         container_name:
@@ -904,6 +901,15 @@ components:
           properties: {}
           type: integer
       type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListRes:
+      properties:
+        list:
+          format: '[]model.WebsiteListOutItem'
+          items:
+            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteListOutItem'
+          properties: {}
+          type: array
+      type: object
     git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteInfoOut:
       properties:
         pod_info:
@@ -912,6 +918,14 @@ components:
           $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteContainerInfo'
         base_info:
           $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteBaseInfo'
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListExportRes:
+      properties: {}
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteInfoRes:
+      properties:
+        data:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteInfoOut'
       type: object
     git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePortInfo:
       properties:
@@ -932,6 +946,24 @@ components:
           type: integer
         container_port:
           description: 容器端口
+          format: uint64
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteContainerInfo:
+      properties:
+        container_name:
+          description: 容器名称
+          format: string
+          properties: {}
+          type: string
+        container_id:
+          description: 容器id
+          format: string
+          properties: {}
+          type: string
+        cid:
+          description: 主键id
           format: uint64
           properties: {}
           type: integer
@@ -986,36 +1018,4 @@ components:
           format: string
           properties: {}
           type: string
-      type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteInfoRes:
-      properties:
-        data:
-          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteInfoOut'
-      type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListRes:
-      properties:
-        list:
-          format: '[]model.WebsiteListOutItem'
-          items:
-            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteListOutItem'
-          properties: {}
-          type: array
-      type: object
-    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteContainerInfo:
-      properties:
-        container_name:
-          description: 容器名称
-          format: string
-          properties: {}
-          type: string
-        container_id:
-          description: 容器id
-          format: string
-          properties: {}
-          type: string
-        cid:
-          description: 主键id
-          format: uint64
-          properties: {}
-          type: integer
       type: object

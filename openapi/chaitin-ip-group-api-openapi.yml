@@ -153,33 +153,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    api.GetIPGroupRes:
-      type: object
-      properties:
-        nodes:
-          type: array
-          items:
-            $ref: '#/components/schemas/ipg.IPGroupVO'
-        total:
-          type: integer
-    api.DeleteIPGroupReq:
-      type: object
-      properties:
-        ids:
-          type: array
-          items:
-            type: integer
-    api.PostAppendIPGroupRequest:
-      type: object
-      properties:
-        ip_group_ids:
-          type: array
-          items:
-            type: integer
-        ips:
-          type: array
-          items:
-            type: string
     ipg.IPGroupVO:
       type: object
       properties:
@@ -204,6 +177,22 @@ components:
       properties:
         data:
           $ref: '#/components/schemas/ipg.IPGroupVO'
+    api.GetIPGroupRes:
+      type: object
+      properties:
+        nodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/ipg.IPGroupVO'
+        total:
+          type: integer
+    api.DeleteIPGroupReq:
+      type: object
+      properties:
+        ids:
+          type: array
+          items:
+            type: integer
     response.JSONBody:
       type: object
       properties:
@@ -212,6 +201,17 @@ components:
           type: string
         msg:
           type: string
+    api.PostAppendIPGroupRequest:
+      type: object
+      properties:
+        ip_group_ids:
+          type: array
+          items:
+            type: integer
+        ips:
+          type: array
+          items:
+            type: string
 x-cli:
   tags:
     site: 防护站点管理

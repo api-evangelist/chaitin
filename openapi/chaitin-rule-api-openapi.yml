@@ -168,6 +168,49 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    policy.PostPolicyReq:
+      type: object
+      properties:
+        action:
+          $ref: '#/components/schemas/model.PolicyAction'
+        expire:
+          type: integer
+        is_enabled:
+          type: boolean
+        level:
+          type: integer
+        log:
+          type: boolean
+        name:
+          type: string
+        pattern:
+          type: array
+          items:
+            type: array
+            items:
+              $ref: '#/components/schemas/model.RulePattern'
+    policy.ListPolicyRes:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/policy.GetPolicyRes'
+        total:
+          type: integer
+    policy.DeletePolicyReq:
+      type: object
+      properties:
+        id:
+          type: integer
+    model.PolicyReview:
+      type: integer
+      enum:
+      - 0
+      - 1
+      x-enum-varnames:
+      - PolicyReviewRequired
+      - PolicyReviewNone
     model.PolicyAction:
       type: integer
       enum:
@@ -188,25 +231,42 @@ components:
       - PolicyActionWaitingRoom
       - PolicyActionMix
       - PolicyActionMax
-    policy.DeletePolicyReq:
+    policy.PutPolicySwitchReq:
       type: object
       properties:
         id:
           type: integer
-    model.PolicyReview:
-      type: integer
-      enum:
-      - 0
-      - 1
-      x-enum-varnames:
-      - PolicyReviewRequired
-      - PolicyReviewNone
-    policy.PostPolicyReq:
+        is_enabled:
+          type: boolean
+    model.RulePattern:
+      type: object
+      properties:
+        k:
+          type: string
+        op:
+          type: string
+        sub_k:
+          type: string
+        v:
+          type: array
+          items:
+            type: string
+    response.JSONBody:
+      type: object
+      properties:
+        data: {}
+        err:
+          type: string
+        msg:
+          type: string
+    policy.PutPolicyReq:
       type: object
       properties:
         action:
           $ref: '#/components/schemas/model.PolicyAction'
         expire:
+          type: integer
+        id:
           type: integer
         is_enabled:
           type: boolean
@@ -285,66 +345,6 @@ components:
           type: string
         white_rule:
           type: integer
-    model.RulePattern:
-      type: object
-      properties:
-        k:
-          type: string
-        op:
-          type: string
-        sub_k:
-          type: string
-        v:
-          type: array
-          items:
-            type: string
-    policy.PutPolicyReq:
-      type: object
-      properties:
-        action:
-          $ref: '#/components/schemas/model.PolicyAction'
-        expire:
-          type: integer
-        id:
-          type: integer
-        is_enabled:
-          type: boolean
-        level:
-          type: integer
-        log:
-          type: boolean
-        name:
-          type: string
-        pattern:
-          type: array
-          items:
-            type: array
-            items:
-              $ref: '#/components/schemas/model.RulePattern'
-    policy.ListPolicyRes:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/policy.GetPolicyRes'
-        total:
-          type: integer
-    policy.PutPolicySwitchReq:
-      type: object
-      properties:
-        id:
-          type: integer
-        is_enabled:
-          type: boolean
-    response.JSONBody:
-      type: object
-      properties:
-        data: {}
-        err:
-          type: string
-        msg:
-          type: string
 x-cli:
   tags:
     site: 防护站点管理

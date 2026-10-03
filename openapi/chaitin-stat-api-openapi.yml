@@ -103,14 +103,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    api.QpsRes:
-      type: object
-      properties:
-        nodes:
-          type: array
-          items:
-            type: object
-            additionalProperties: {}
     stat.AdvanceAccessRes:
       type: object
       properties:
@@ -142,6 +134,14 @@ components:
               type: integer
             rate_limit:
               type: integer
+    api.QpsRes:
+      type: object
+      properties:
+        nodes:
+          type: array
+          items:
+            type: object
+            additionalProperties: {}
     response.JSONBody:
       type: object
       properties:

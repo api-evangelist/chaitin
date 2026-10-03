@@ -61,15 +61,15 @@ components:
           $ref: '#/components/schemas/model.SemanticConfig'
         use_global:
           type: boolean
+    model.SemanticConfig:
+      type: object
+      additionalProperties:
+        type: string
     skynet.GetGlobalSemanticsRes:
       type: object
       properties:
         semantics:
           $ref: '#/components/schemas/model.SemanticConfig'
-    model.SemanticConfig:
-      type: object
-      additionalProperties:
-        type: string
     response.JSONBody:
       type: object
       properties:

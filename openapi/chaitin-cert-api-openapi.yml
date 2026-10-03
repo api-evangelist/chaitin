@@ -107,6 +107,11 @@ components:
       properties:
         valid:
           type: boolean
+    system.UpdateReq:
+      type: object
+      properties:
+        cert_id:
+          type: integer
     river.Edition:
       type: integer
       format: int32
@@ -130,6 +135,14 @@ components:
       - Edition_EDITION_PROFESSIONAL
       - Edition_EDITION_ENTERPRISE
       - Edition_EDITION_LITE
+    response.JSONBody:
+      type: object
+      properties:
+        data: {}
+        err:
+          type: string
+        msg:
+          type: string
     system.AboutRes:
       type: object
       properties:
@@ -180,19 +193,6 @@ components:
           type: integer
         version:
           $ref: '#/components/schemas/river.Edition'
-    system.UpdateReq:
-      type: object
-      properties:
-        cert_id:
-          type: integer
-    response.JSONBody:
-      type: object
-      properties:
-        data: {}
-        err:
-          type: string
-        msg:
-          type: string
 x-cli:
   tags:
     site: 防护站点管理
