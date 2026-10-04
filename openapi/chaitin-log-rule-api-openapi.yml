@@ -123,6 +123,23 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    record.GetRuleDetectLogListRes:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.RuleDetectLog'
+        total:
+          type: integer
+    response.JSONBody:
+      type: object
+      properties:
+        data: {}
+        err:
+          type: string
+        msg:
+          type: string
     model.RuleDetectLog:
       type: object
       properties:
@@ -211,23 +228,6 @@ components:
         url_path:
           type: string
         website:
-          type: string
-    record.GetRuleDetectLogListRes:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.RuleDetectLog'
-        total:
-          type: integer
-    response.JSONBody:
-      type: object
-      properties:
-        data: {}
-        err:
-          type: string
-        msg:
           type: string
 x-cli:
   tags:

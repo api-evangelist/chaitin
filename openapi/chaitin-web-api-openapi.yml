@@ -736,23 +736,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkListRes:
-      properties:
-        data:
-          description: web框架列表
-          format: '[]model.WebFrameworkListOne'
-          items:
-            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkListOne'
-          properties: {}
-          type: array
-      type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkCountRes:
-      properties:
-        total:
-          format: int
-          properties: {}
-          type: integer
-      type: object
     git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkListOne:
       properties:
         name:
@@ -793,11 +776,6 @@ components:
       type: object
     git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkListExportRes:
       properties: {}
-      type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkInfoRes:
-      properties:
-        data:
-          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkInfo'
       type: object
     git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkInfo:
       properties:
@@ -852,6 +830,41 @@ components:
           properties: {}
           type: integer
       type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkListRes:
+      properties:
+        data:
+          description: web框架列表
+          format: '[]model.WebFrameworkListOne'
+          items:
+            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkListOne'
+          properties: {}
+          type: array
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkInfoRes:
+      properties:
+        data:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebFrameworkInfo'
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebFrameworkCountRes:
+      properties:
+        total:
+          format: int
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePodInfo:
+      properties:
+        namespace:
+          description: 命名空间
+          format: string
+          properties: {}
+          type: string
+        pod_name:
+          description: pod名称
+          format: string
+          properties: {}
+          type: string
+      type: object
     git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListCountRes:
       properties:
         total:
@@ -863,69 +876,6 @@ components:
           format: uint
           properties: {}
           type: integer
-      type: object
-    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteListOutItem:
-      properties:
-        container_name:
-          description: 容器名称
-          format: string
-          properties: {}
-          type: string
-        container_id:
-          description: 容器id
-          format: string
-          properties: {}
-          type: string
-        domain:
-          description: 域名
-          format: '[]string'
-          items:
-            format: string
-            properties: {}
-            type: string
-          properties: {}
-          type: array
-        id:
-          description: 主键id
-          format: uint64
-          properties: {}
-          type: integer
-        service_type:
-          description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC'
-          format: uint
-          properties: {}
-          type: integer
-        discovery_time:
-          description: 发现时间，秒
-          format: uint
-          properties: {}
-          type: integer
-      type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListRes:
-      properties:
-        list:
-          format: '[]model.WebsiteListOutItem'
-          items:
-            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteListOutItem'
-          properties: {}
-          type: array
-      type: object
-    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteInfoOut:
-      properties:
-        pod_info:
-          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePodInfo'
-        container_info:
-          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteContainerInfo'
-        base_info:
-          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteBaseInfo'
-      type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListExportRes:
-      properties: {}
-      type: object
-    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteInfoRes:
-      properties:
-        data:
-          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteInfoOut'
       type: object
     git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePortInfo:
       properties:
@@ -949,6 +899,20 @@ components:
           format: uint64
           properties: {}
           type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteInfoOut:
+      properties:
+        pod_info:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePodInfo'
+        container_info:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteContainerInfo'
+        base_info:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteBaseInfo'
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteInfoRes:
+      properties:
+        data:
+          $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteInfoOut'
       type: object
     git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteContainerInfo:
       properties:
@@ -1006,16 +970,52 @@ components:
           properties: {}
           type: integer
       type: object
-    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsitePodInfo:
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListRes:
       properties:
-        namespace:
-          description: 命名空间
+        list:
+          format: '[]model.WebsiteListOutItem'
+          items:
+            $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteListOutItem'
+          properties: {}
+          type: array
+      type: object
+    git.in.chaitin.net.veinmind.backend.module.asset.model.WebsiteListOutItem:
+      properties:
+        container_name:
+          description: 容器名称
           format: string
           properties: {}
           type: string
-        pod_name:
-          description: pod名称
+        container_id:
+          description: 容器id
           format: string
           properties: {}
           type: string
+        domain:
+          description: 域名
+          format: '[]string'
+          items:
+            format: string
+            properties: {}
+            type: string
+          properties: {}
+          type: array
+        id:
+          description: 主键id
+          format: uint64
+          properties: {}
+          type: integer
+        service_type:
+          description: '服务类型: 1:Apache 2:Gunicorn 3:IIS 4:Jetty 5:Mono-Fastcgi 6:Nginx 7:PHP 8:PHPStudy 9:Python 10:Resin 11:Tomcat 12:TongWeb 13:uWSGI 14:WebLogic 15:WebSphere 16:Java Tcp Listen 17:用友U8 Cloud 18:用友NC'
+          format: uint
+          properties: {}
+          type: integer
+        discovery_time:
+          description: 发现时间，秒
+          format: uint
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.asset.WebsiteListExportRes:
+      properties: {}
       type: object

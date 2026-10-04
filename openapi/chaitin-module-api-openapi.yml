@@ -52,19 +52,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    skynet.SemanticsConfigParams:
-      type: object
-      required:
-      - semantics
-      properties:
-        semantics:
-          $ref: '#/components/schemas/model.SemanticConfig'
-        use_global:
-          type: boolean
-    model.SemanticConfig:
-      type: object
-      additionalProperties:
-        type: string
     skynet.GetGlobalSemanticsRes:
       type: object
       properties:
@@ -78,6 +65,19 @@ components:
           type: string
         msg:
           type: string
+    skynet.SemanticsConfigParams:
+      type: object
+      required:
+      - semantics
+      properties:
+        semantics:
+          $ref: '#/components/schemas/model.SemanticConfig'
+        use_global:
+          type: boolean
+    model.SemanticConfig:
+      type: object
+      additionalProperties:
+        type: string
 x-cli:
   tags:
     site: 防护站点管理

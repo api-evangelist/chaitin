@@ -120,68 +120,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    site.WebsiteReq:
-      type: object
-      properties:
-        cert_id:
-          type: integer
-        comment:
-          type: string
-        email:
-          type: string
-        group_id:
-          type: integer
-        health_check:
-          type: boolean
-        id:
-          type: integer
-        index:
-          type: string
-        load_balance:
-          $ref: '#/components/schemas/model.LoadBalanceConfig'
-        ports:
-          type: array
-          items:
-            type: string
-        redirect_status_code:
-          type: integer
-        server_names:
-          type: array
-          items:
-            type: string
-        stat_enabled:
-          type: boolean
-        static_default:
-          type: integer
-        type:
-          type: integer
-        upstreams:
-          type: array
-          items:
-            type: string
-    model.LoadBalanceConfig:
-      type: object
-      properties:
-        balance_type:
-          type: integer
-    site.DeleteWebsiteReq:
-      type: object
-      properties:
-        ids:
-          type: array
-          items:
-            type: integer
-    model.ForwardingRuleConfig:
-      type: object
-      properties:
-        id:
-          type: integer
-        path_prefix:
-          type: string
-        upstreams:
-          type: array
-          items:
-            type: string
     site.GetWebsiteItem:
       type: object
       properties:
@@ -332,14 +270,18 @@ components:
             type: string
         wr_id:
           type: integer
-    response.JSONBody:
+    site.DeleteWebsiteReq:
       type: object
       properties:
-        data: {}
-        err:
-          type: string
-        msg:
-          type: string
+        ids:
+          type: array
+          items:
+            type: integer
+    model.LoadBalanceConfig:
+      type: object
+      properties:
+        balance_type:
+          type: integer
     site.GetWebsiteRes:
       type: object
       properties:
@@ -356,6 +298,64 @@ components:
           type: string
         state:
           type: integer
+    model.ForwardingRuleConfig:
+      type: object
+      properties:
+        id:
+          type: integer
+        path_prefix:
+          type: string
+        upstreams:
+          type: array
+          items:
+            type: string
+    response.JSONBody:
+      type: object
+      properties:
+        data: {}
+        err:
+          type: string
+        msg:
+          type: string
+    site.WebsiteReq:
+      type: object
+      properties:
+        cert_id:
+          type: integer
+        comment:
+          type: string
+        email:
+          type: string
+        group_id:
+          type: integer
+        health_check:
+          type: boolean
+        id:
+          type: integer
+        index:
+          type: string
+        load_balance:
+          $ref: '#/components/schemas/model.LoadBalanceConfig'
+        ports:
+          type: array
+          items:
+            type: string
+        redirect_status_code:
+          type: integer
+        server_names:
+          type: array
+          items:
+            type: string
+        stat_enabled:
+          type: boolean
+        static_default:
+          type: integer
+        type:
+          type: integer
+        upstreams:
+          type: array
+          items:
+            type: string
 x-cli:
   tags:
     site: 防护站点管理

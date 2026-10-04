@@ -86,32 +86,34 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    consts.UserRole:
-      type: integer
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      x-enum-varnames:
-      - UserRoleUnknown
-      - UserRoleAdmin
-      - UserRoleManager
-      - UserRoleConfig
-      - UserRoleAudit
-      - UserRoleMax
     system.AboutLicense:
       type: object
       properties:
         valid:
           type: boolean
-    system.UpdateReq:
+    system.CodeApplyInfoRes:
       type: object
       properties:
-        cert_id:
+        expired_at:
           type: integer
+        org_id:
+          type: string
+        org_name:
+          type: string
+        pwd_updated_at:
+          type: integer
+        river_url:
+          type: string
+        role:
+          $ref: '#/components/schemas/consts.UserRole'
+        state:
+          type: string
+        timeout:
+          type: boolean
+        user_id:
+          type: integer
+        version:
+          $ref: '#/components/schemas/river.Edition'
     river.Edition:
       type: integer
       format: int32
@@ -143,6 +145,27 @@ components:
           type: string
         msg:
           type: string
+    system.UpdateReq:
+      type: object
+      properties:
+        cert_id:
+          type: integer
+    consts.UserRole:
+      type: integer
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      x-enum-varnames:
+      - UserRoleUnknown
+      - UserRoleAdmin
+      - UserRoleManager
+      - UserRoleConfig
+      - UserRoleAudit
+      - UserRoleMax
     system.AboutRes:
       type: object
       properties:
@@ -170,29 +193,6 @@ components:
           type: string
         version:
           type: string
-    system.CodeApplyInfoRes:
-      type: object
-      properties:
-        expired_at:
-          type: integer
-        org_id:
-          type: string
-        org_name:
-          type: string
-        pwd_updated_at:
-          type: integer
-        river_url:
-          type: string
-        role:
-          $ref: '#/components/schemas/consts.UserRole'
-        state:
-          type: string
-        timeout:
-          type: boolean
-        user_id:
-          type: integer
-        version:
-          $ref: '#/components/schemas/river.Edition'
 x-cli:
   tags:
     site: 防护站点管理

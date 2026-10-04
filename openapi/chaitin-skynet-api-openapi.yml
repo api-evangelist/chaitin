@@ -52,6 +52,20 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    detect.Mode:
+      type: string
+      enum:
+      - strict
+      - default
+      - dry_run
+      - disable
+      - deny
+      x-enum-varnames:
+      - StrictMode
+      - DefaultMode
+      - DryRunMode
+      - DisableMode
+      - DenyMode
     api.PutSkynetRuleReq:
       type: object
       properties:
@@ -63,6 +77,14 @@ components:
             type: string
         mode:
           $ref: '#/components/schemas/detect.Mode'
+    response.JSONBody:
+      type: object
+      properties:
+        data: {}
+        err:
+          type: string
+        msg:
+          type: string
     api.GetSkynetRuleRes:
       type: object
       properties:
@@ -85,28 +107,6 @@ components:
           type: string
         risk_level:
           type: integer
-    response.JSONBody:
-      type: object
-      properties:
-        data: {}
-        err:
-          type: string
-        msg:
-          type: string
-    detect.Mode:
-      type: string
-      enum:
-      - strict
-      - default
-      - dry_run
-      - disable
-      - deny
-      x-enum-varnames:
-      - StrictMode
-      - DefaultMode
-      - DryRunMode
-      - DisableMode
-      - DenyMode
 x-cli:
   tags:
     site: 防护站点管理

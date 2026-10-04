@@ -452,32 +452,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    git.in.chaitin.net.veinmind.backend.module.agent.model.ClusterNodeInfo:
-      properties:
-        name:
-          description: 集群名称
-          example: 集群名称
-          format: string
-          properties: {}
-          type: string
-        node_name:
-          description: 集群节点名称
-          example: 集群节点名称
-          format: string
-          properties: {}
-          type: string
-        id:
-          description: 集群ID
-          example: 1
-          format: uint
-          properties: {}
-          type: integer
-      type: object
-    git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerListRes:
-      items:
-        $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.agent.model.ScannerListOne'
-      properties: {}
-      type: array
     git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerListReq:
       properties:
         name:
@@ -717,3 +691,29 @@ components:
           properties: {}
           type: integer
       type: object
+    git.in.chaitin.net.veinmind.backend.module.agent.model.ClusterNodeInfo:
+      properties:
+        name:
+          description: 集群名称
+          example: 集群名称
+          format: string
+          properties: {}
+          type: string
+        node_name:
+          description: 集群节点名称
+          example: 集群节点名称
+          format: string
+          properties: {}
+          type: string
+        id:
+          description: 集群ID
+          example: 1
+          format: uint
+          properties: {}
+          type: integer
+      type: object
+    git.in.chaitin.net.veinmind.backend.api.api.agent.ScannerListRes:
+      items:
+        $ref: '#/components/schemas/git.in.chaitin.net.veinmind.backend.module.agent.model.ScannerListOne'
+      properties: {}
+      type: array
