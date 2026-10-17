@@ -123,15 +123,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    record.GetRuleDetectLogListRes:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.RuleDetectLog'
-        total:
-          type: integer
     response.JSONBody:
       type: object
       properties:
@@ -229,6 +220,15 @@ components:
           type: string
         website:
           type: string
+    record.GetRuleDetectLogListRes:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.RuleDetectLog'
+        total:
+          type: integer
 x-cli:
   tags:
     site: 防护站点管理

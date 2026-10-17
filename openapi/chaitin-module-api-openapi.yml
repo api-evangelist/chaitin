@@ -52,11 +52,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    skynet.GetGlobalSemanticsRes:
-      type: object
-      properties:
-        semantics:
-          $ref: '#/components/schemas/model.SemanticConfig'
     response.JSONBody:
       type: object
       properties:
@@ -65,6 +60,11 @@ components:
           type: string
         msg:
           type: string
+    skynet.GetGlobalSemanticsRes:
+      type: object
+      properties:
+        semantics:
+          $ref: '#/components/schemas/model.SemanticConfig'
     skynet.SemanticsConfigParams:
       type: object
       required:

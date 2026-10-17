@@ -86,11 +86,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    system.AboutLicense:
-      type: object
-      properties:
-        valid:
-          type: boolean
     system.CodeApplyInfoRes:
       type: object
       properties:
@@ -114,6 +109,30 @@ components:
           type: integer
         version:
           $ref: '#/components/schemas/river.Edition'
+    response.JSONBody:
+      type: object
+      properties:
+        data: {}
+        err:
+          type: string
+        msg:
+          type: string
+    consts.UserRole:
+      type: integer
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      x-enum-varnames:
+      - UserRoleUnknown
+      - UserRoleAdmin
+      - UserRoleManager
+      - UserRoleConfig
+      - UserRoleAudit
+      - UserRoleMax
     river.Edition:
       type: integer
       format: int32
@@ -137,35 +156,6 @@ components:
       - Edition_EDITION_PROFESSIONAL
       - Edition_EDITION_ENTERPRISE
       - Edition_EDITION_LITE
-    response.JSONBody:
-      type: object
-      properties:
-        data: {}
-        err:
-          type: string
-        msg:
-          type: string
-    system.UpdateReq:
-      type: object
-      properties:
-        cert_id:
-          type: integer
-    consts.UserRole:
-      type: integer
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      x-enum-varnames:
-      - UserRoleUnknown
-      - UserRoleAdmin
-      - UserRoleManager
-      - UserRoleConfig
-      - UserRoleAudit
-      - UserRoleMax
     system.AboutRes:
       type: object
       properties:
@@ -193,6 +183,16 @@ components:
           type: string
         version:
           type: string
+    system.UpdateReq:
+      type: object
+      properties:
+        cert_id:
+          type: integer
+    system.AboutLicense:
+      type: object
+      properties:
+        valid:
+          type: boolean
 x-cli:
   tags:
     site: 防护站点管理

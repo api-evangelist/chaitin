@@ -52,6 +52,32 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    api.GetSkynetRuleRes:
+      type: object
+      properties:
+        rules:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/detect.SkynetInfo'
+    response.JSONBody:
+      type: object
+      properties:
+        data: {}
+        err:
+          type: string
+        msg:
+          type: string
+    api.PutSkynetRuleReq:
+      type: object
+      properties:
+        global:
+          type: boolean
+        id:
+          type: array
+          items:
+            type: string
+        mode:
+          $ref: '#/components/schemas/detect.Mode'
     detect.Mode:
       type: string
       enum:
@@ -66,32 +92,6 @@ components:
       - DryRunMode
       - DisableMode
       - DenyMode
-    api.PutSkynetRuleReq:
-      type: object
-      properties:
-        global:
-          type: boolean
-        id:
-          type: array
-          items:
-            type: string
-        mode:
-          $ref: '#/components/schemas/detect.Mode'
-    response.JSONBody:
-      type: object
-      properties:
-        data: {}
-        err:
-          type: string
-        msg:
-          type: string
-    api.GetSkynetRuleRes:
-      type: object
-      properties:
-        rules:
-          type: object
-          additionalProperties:
-            $ref: '#/components/schemas/detect.SkynetInfo'
     detect.SkynetInfo:
       type: object
       properties:

@@ -158,6 +158,30 @@ components:
       properties:
         data:
           $ref: '#/components/schemas/ipg.IPGroupVO'
+    response.JSONBody:
+      type: object
+      properties:
+        data: {}
+        err:
+          type: string
+        msg:
+          type: string
+    api.DeleteIPGroupReq:
+      type: object
+      properties:
+        ids:
+          type: array
+          items:
+            type: integer
+    api.GetIPGroupRes:
+      type: object
+      properties:
+        nodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/ipg.IPGroupVO'
+        total:
+          type: integer
     ipg.IPGroupVO:
       type: object
       properties:
@@ -177,21 +201,6 @@ components:
           type: integer
         updated_at:
           type: string
-    api.DeleteIPGroupReq:
-      type: object
-      properties:
-        ids:
-          type: array
-          items:
-            type: integer
-    response.JSONBody:
-      type: object
-      properties:
-        data: {}
-        err:
-          type: string
-        msg:
-          type: string
     api.PostAppendIPGroupRequest:
       type: object
       properties:
@@ -203,15 +212,6 @@ components:
           type: array
           items:
             type: string
-    api.GetIPGroupRes:
-      type: object
-      properties:
-        nodes:
-          type: array
-          items:
-            $ref: '#/components/schemas/ipg.IPGroupVO'
-        total:
-          type: integer
 x-cli:
   tags:
     site: 防护站点管理
